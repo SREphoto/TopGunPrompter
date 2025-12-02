@@ -2,6 +2,9 @@
 
 Cinema Archive is a specialized tool designed to generate high-quality Midjourney prompts for recreating iconic movie scenes. It allows users to combine specific movie scenes with various artistic styles and configuration parameters to create unique AI-generated imagery.
 
+[**View Generated Examples on Midjourney**](https://www.midjourney.com/@srestudios?tab=spotlight)
+
+
 ## Features
 
 - **Movie Selection**: Browse and select from a curated list of movies (e.g., Top Gun).
