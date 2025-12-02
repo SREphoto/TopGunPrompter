@@ -4,6 +4,18 @@ Cinema Archive is a specialized tool designed to generate high-quality Midjourne
 
 [**View Generated Examples on Midjourney**](https://www.midjourney.com/@srestudios?tab=spotlight)
 
+## Gallery
+
+Here are some examples of images generated using prompts from this tool:
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px;">
+  <img src="public/SREstudios_Cinematography_by_Tony_Scott_extreme_golden_hour_sun_4b8a14e2-4b0c-44d8-8149-c41e4e71d783.png" alt="Tony Scott Style" style="width: 100%; border-radius: 8px;">
+  <img src="public/SREstudios_Mid-2000s_action_blockbuster_movie_poster_heavy_teal_fb91eeb6-5f1d-41dc-9391-8793e23a0a8a.png" alt="Action Blockbuster" style="width: 100%; border-radius: 8px;">
+  <img src="public/SREstudios_1980s_music_video_aesthetic_VHS_tape_tracking_glit_e6202d50-91fc-4482-a468-41e8c82a890a_0.png" alt="VHS Aesthetic 1" style="width: 100%; border-radius: 8px;">
+  <img src="public/SREstudios_1980s_music_video_aesthetic_VHS_tape_tracking_glit_0f8191ab-d420-4a80-8bdc-0551e42788f3_0.png" alt="VHS Aesthetic 2" style="width: 100%; border-radius: 8px;">
+  <img src="public/SREstudios_1980s_music_video_aesthetic_VHS_tape_tracking_glit_50c25fbe-0d6b-4acf-9247-dde230505ed0_1.png" alt="VHS Aesthetic 3" style="width: 100%; border-radius: 8px;">
+  <img src="public/SREstudios_Cinematography_by_Tony_Scott_extreme_golden_hour_s_61cde395-0547-4b23-84e1-745e0ee8099b_1 (1).png" alt="Tony Scott Style 2" style="width: 100%; border-radius: 8px;">
+</div>
 
 ## Features
 
