@@ -1,73 +1,73 @@
-# React + TypeScript + Vite
+# Cinema Archive (Top Gun Prompter)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Cinema Archive is a specialized tool designed to generate high-quality Midjourney prompts for recreating iconic movie scenes. It allows users to combine specific movie scenes with various artistic styles and configuration parameters to create unique AI-generated imagery.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Movie Selection**: Browse and select from a curated list of movies (e.g., Top Gun).
+- **Scene Library**: Access a detailed collection of scenes for each movie, complete with descriptions.
+- **Style System**: Apply different artistic styles to your prompts:
+  - **Standard Styles**: Global styles available for all movies.
+  - **Unique Styles**: Custom styles tailored specifically to the selected movie.
+- **Advanced Configuration**:
+  - **Midjourney Version**: Support for v5, v6, v6.1, and v7.
+  - **Aspect Ratio**: Choose from a wide range of aspect ratios (e.g., 16:9, 9:16, 1:1, 2:3).
+  - **Stylize**: Fine-tune the artistic influence with a customizable stylize parameter (0-1000).
+- **Instant Generation**: Real-time prompt construction as you make selections.
+- **One-Click Copy**: Easily copy the generated prompt to your clipboard for use in Midjourney.
 
-## React Compiler
+## How It Works
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1.  **Select a Movie**: Choose a film from the horizontal scroll bar at the top.
+2.  **Select a Scene**: Pick a specific scene from the grid. Each scene includes a title and ID.
+3.  **Choose a Style**: Select an artistic style from the left sidebar. You can choose from "Unique Styles" (specific to the movie) or "Standard Styles".
+4.  **Configure Settings**: Adjust the Midjourney version, aspect ratio, and stylize value in the left sidebar.
+5.  **Generate & Copy**: The prompt is automatically generated in the "Output" terminal on the right. Click "COPY PROMPT" to save it to your clipboard.
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+To run this project locally, follow these steps:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- [Node.js](https://nodejs.org/) (Latest LTS version recommended)
+- npm (comes with Node.js)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Steps
+
+1.  **Clone the repository** (if applicable) or navigate to the project directory.
+
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+
+3.  **Start the development server**:
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open the application**:
+    The terminal will display a local URL (usually `http://localhost:5173`). Open this link in your browser.
+
+## Building for Production
+
+To create a production-ready build:
+
+```bash
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+To preview the production build locally:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run preview
 ```
+
+## Technologies Used
+
+- **Frontend Framework**: [React 19](https://react.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
