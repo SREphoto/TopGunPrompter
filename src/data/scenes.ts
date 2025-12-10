@@ -26,6 +26,13 @@ import { interstellarScenes } from './scenes/interstellar';
 import { theShiningScenes } from './scenes/theShining';
 import { tronLegacyScenes } from './scenes/tronLegacy';
 import { taxiDriverScenes } from './scenes/taxiDriver';
+import {
+    savingPrivateRyanScenes, ironManScenes, starshipTroopersScenes, transformersScenes,
+    deadpoolScenes, johnWick2Scenes, johnWick3Scenes, dieHardScenes, matrixReloadedScenes,
+    matrixRevolutionsScenes, casinoRoyaleScenes, pointBreakScenes, dieHardVengeanceScenes,
+    commandoScenes, badBoysScenes, totalRecallScenes, lastCrusadeScenes, firstBloodScenes,
+    killBillVol2Scenes, jurassicParkScenes, titanicScenes, avatarScenes, theAvengersScenes
+} from './scenes/addedBlockbusters';
 
 export const movieScenes: Record<string, Scene[]> = {
     'top-gun': topGunScenes,
@@ -55,4 +62,27 @@ export const movieScenes: Record<string, Scene[]> = {
     'the-shining': theShiningScenes,
     'tron-legacy': tronLegacyScenes,
     'taxi-driver': taxiDriverScenes,
+    'saving-private-ryan': savingPrivateRyanScenes,
+    'iron-man': ironManScenes,
+    'starship-troopers': starshipTroopersScenes,
+    'transformers': transformersScenes,
+    'deadpool': deadpoolScenes,
+    'john-wick-2': johnWick2Scenes,
+    'john-wick-3': johnWick3Scenes,
+    'die-hard': dieHardScenes,
+    'matrix-reloaded': matrixReloadedScenes,
+    'matrix-revolutions': matrixRevolutionsScenes,
+    'casino-royale': casinoRoyaleScenes,
+    'point-break': pointBreakScenes,
+    'die-hard-vengeance': dieHardVengeanceScenes,
+    'commando': commandoScenes,
+    'bad-boys': badBoysScenes,
+    'total-recall': totalRecallScenes,
+    'last-crusade': lastCrusadeScenes,
+    'first-blood': firstBloodScenes,
+    'kill-bill-vol-2': killBillVol2Scenes,
+    'jurassic-park': jurassicParkScenes,
+    'titanic': titanicScenes,
+    'avatar': avatarScenes,
+    'the-avengers': theAvengersScenes,
 };

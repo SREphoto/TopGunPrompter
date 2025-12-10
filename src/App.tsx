@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import { movieScenes } from './data/scenes';
 import { styles as globalStyles } from './data/styles';
 import { movies } from './data/movies';
-import { Copy, Terminal, Settings, Film } from 'lucide-react';
+import { Copy, Terminal, Settings, Film, ArrowRight, Palette, CheckCircle } from 'lucide-react';
 
 function App() {
   const [selectedMovieId, setSelectedMovieId] = useState<string>('top-gun');
@@ -11,43 +11,57 @@ function App() {
   const [version, setVersion] = useState<string>('7');
   const [ar, setAr] = useState<string>('9:16');
   const [stylize, setStylize] = useState<number>(700);
-  const [generatedPrompt, setGeneratedPrompt] = useState<string>('');
   const [copied, setCopied] = useState(false);
+  const [copyMode, setCopyMode] = useState<'standard' | 'next-scene' | 'next-style'>('standard');
 
-  const currentMovie = movies.find(m => m.id === selectedMovieId) || movies[0];
-  const currentScenes = movieScenes[selectedMovieId] || [];
+  const currentMovie = useMemo(() => movies.find(m => m.id === selectedMovieId) || movies[0], [selectedMovieId]);
+  const currentScenes = useMemo(() => movieScenes[selectedMovieId] || [], [selectedMovieId]);
 
   // Combine movie-specific styles with global styles for lookup
-  const allStyles = [
+  const allStyles = useMemo(() => [
     ...(currentMovie.styles || []),
     ...globalStyles
-  ];
+  ], [currentMovie]);
 
-  useEffect(() => {
-    if (selectedSceneId && selectedStyleName) {
-      const scene = currentScenes.find(s => s.id === selectedSceneId);
-      const style = allStyles.find(s => s.name === selectedStyleName);
+  const generatedPrompt = useMemo(() => {
+    if (!selectedSceneId || !selectedStyleName) return '';
+    const scene = currentScenes.find(s => s.id === selectedSceneId);
+    const style = allStyles.find(s => s.name === selectedStyleName);
 
-      if (scene && style) {
-        const prompt = `${style.promptString}, Subject: ${currentMovie.title} (${currentMovie.year}), Scene: ${scene.promptPayload} --style raw --ar ${ar} --v ${version} --stylize ${stylize}`;
-        setGeneratedPrompt(prompt);
-      }
-    } else {
-      setGeneratedPrompt('');
+    if (scene && style) {
+      // Construct prompt with Scene first (Subject), then visual Style, then Movie Context
+      // Using periods to separate major conceptual blocks for better adherence in recent MJ versions
+      return `${scene.promptPayload}. ${style.promptString}. ESTABLISHING SHOT, cinematic footage from the movie ${currentMovie.title} (${currentMovie.year}) --style raw --ar ${ar} --v ${version} --stylize ${stylize}`;
     }
-  }, [selectedSceneId, selectedStyleName, version, ar, stylize, selectedMovieId, currentMovie, currentScenes, allStyles]);
+    return '';
+  }, [selectedSceneId, selectedStyleName, currentScenes, allStyles, currentMovie, ar, version, stylize]);
 
-  // Reset scene and style selection when movie changes
-  useEffect(() => {
+  const handleMovieSelect = (id: string) => {
+    setSelectedMovieId(id);
     setSelectedSceneId(null);
     setSelectedStyleName(null);
-  }, [selectedMovieId]);
+  };
 
   const handleCopy = () => {
     if (generatedPrompt) {
       navigator.clipboard.writeText(generatedPrompt);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
+
+      // Handle Copy Modes
+      if (copyMode === 'next-scene' && currentScenes.length > 0) {
+        const currentIndex = currentScenes.findIndex(s => s.id === selectedSceneId);
+        if (currentIndex !== -1) {
+          const nextIndex = (currentIndex + 1) % currentScenes.length;
+          setSelectedSceneId(currentScenes[nextIndex].id);
+        }
+      } else if (copyMode === 'next-style' && allStyles.length > 0) {
+        const currentIndex = allStyles.findIndex(s => s.name === selectedStyleName);
+        if (currentIndex !== -1) {
+          const nextIndex = (currentIndex + 1) % allStyles.length;
+          setSelectedStyleName(allStyles[nextIndex].name);
+        }
+      }
     }
   };
 
@@ -100,6 +114,8 @@ function App() {
               <span className="text-xs font-mono text-cyan-400">{stylize}</span>
             </div>
             <select
+              title="Stylize value"
+              aria-label="Stylize value"
               value={stylize}
               onChange={(e) => setStylize(parseInt(e.target.value))}
               className="w-full bg-zinc-900 text-zinc-300 text-xs font-mono p-3 rounded-lg border border-zinc-800 focus:outline-none focus:border-cyan-500 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 appearance-none"
@@ -184,7 +200,7 @@ function App() {
             {movies.map((movie) => (
               <button
                 key={movie.id}
-                onClick={() => setSelectedMovieId(movie.id)}
+                onClick={() => handleMovieSelect(movie.id)}
                 className={`
                   whitespace-nowrap px-4 py-2 rounded-full text-xs font-bold transition-all duration-200 border
                   ${selectedMovieId === movie.id
@@ -262,6 +278,41 @@ function App() {
               Waiting for input... Select a scene and style to generate prompt.
             </p>
           )}
+        </div>
+
+        {/* Copy Mode Selector */}
+        <div className="mb-4">
+          <label className="block text-xs font-mono text-zinc-500 mb-2">COPY MODE</label>
+          <div className="flex bg-zinc-900 p-1 rounded-lg border border-zinc-800 gap-1">
+            <button
+              onClick={() => setCopyMode('standard')}
+              className={`flex-1 py-2 rounded-md flex justify-center items-center transition-all ${copyMode === 'standard' ? 'bg-zinc-700 text-white shadow-sm' : 'text-zinc-500 hover:text-zinc-300'}`}
+              title="Standard Copy"
+            >
+              <CheckCircle className="w-4 h-4" />
+            </button>
+            <button
+              onClick={() => setCopyMode('next-scene')}
+              className={`flex-1 py-2 rounded-md flex justify-center items-center transition-all ${copyMode === 'next-scene' ? 'bg-zinc-700 text-white shadow-sm' : 'text-zinc-500 hover:text-zinc-300'}`}
+              title="Copy & Next Scene"
+            >
+              <Film className="w-4 h-4" />
+              <ArrowRight className="w-3 h-3 ml-0.5" />
+            </button>
+            <button
+              onClick={() => setCopyMode('next-style')}
+              className={`flex-1 py-2 rounded-md flex justify-center items-center transition-all ${copyMode === 'next-style' ? 'bg-zinc-700 text-white shadow-sm' : 'text-zinc-500 hover:text-zinc-300'}`}
+              title="Copy & Next Style"
+            >
+              <Palette className="w-4 h-4" />
+              <ArrowRight className="w-3 h-3 ml-0.5" />
+            </button>
+          </div>
+          <p className="text-[10px] text-zinc-500 font-mono mt-2 text-center h-3">
+            {copyMode === 'standard' && "Standard Copy"}
+            {copyMode === 'next-scene' && "Auto-Advance Scene"}
+            {copyMode === 'next-style' && "Auto-Advance Style"}
+          </p>
         </div>
 
         {/* Copy Button */}
