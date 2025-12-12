@@ -500,5 +500,65 @@ export const movies: Movie[] = [
             { name: 'Helicarrier', promptString: 'clouds, high tech turbines, glass bridge, blue sky, wide shot' },
             { name: 'Stark Tower', promptString: 'iron man suit up, sleek architecture, city view, invasion portal, blue beam' }
         ]
+    },
+    {
+        id: 'the-terminator',
+        title: 'The Terminator',
+        year: '1984',
+        styles: [
+            { name: 'Tech Noir Blue', promptString: 'smoky club atmosphere, lasers, blue lighting, 80s punk hair, sweat, dark shadows, james cameron' },
+            { name: 'Future War', promptString: 'apocalyptic rubble, purple lasers, chrome endoskeletons, blue night, flash forward sequence, gritty' },
+            { name: 'Los Angeles Night', promptString: 'gritty urban street, sodium vapor lights, trash, wet pavement, neo-noir, menacing' }
+        ]
+    },
+    {
+        id: 'robocop',
+        title: 'RoboCop',
+        year: '1987',
+        styles: [
+            { name: 'Detroit Rust', promptString: 'industrial decay, rust, steam, verhoeven satire, daytime grit, broken glass, steel mill' },
+            { name: 'Medi-Break', promptString: 'scanlines, tv static, fake commercial aesthetic, bright colors, satirical news, broadcast quality' },
+            { name: 'Prime Directive HUD', promptString: 'green pixelated vector graphics, scanlines, digital interference, machine vision POV, low resolution' }
+        ]
+    },
+    {
+        id: 'lethal-weapon',
+        title: 'Lethal Weapon',
+        year: '1987',
+        styles: [
+            { name: 'Saxophone Noir', promptString: 'wet city streets, neon reflection, lonely atmosphere, cigarette smoke, bluesy, melancholic night' },
+            { name: 'California Dusk', promptString: 'sunset over LA, palm trees, warm orange glow, heat haze, buddy cop vibe, hazy' },
+            { name: 'Explosive Action', promptString: 'fireball, debris, stunt work, shane black energy, chaotic movement, smoke' }
+        ]
+    },
+    {
+        id: 'escape-from-new-york',
+        title: 'Escape from New York',
+        year: '1981',
+        styles: [
+            { name: 'Grid Map', promptString: 'green wireframe computer graphics, retrofuturism, glowing lines, 80s cgi, tactical display, crt texture' },
+            { name: 'Manhattan Ruins', promptString: 'destroyed city, burning barrels, dark shadows, urban wasteland, graffiti, carpenter synth atmosphere' },
+            { name: 'Chandelier Car', promptString: 'bizarre lighting, lens flares, dirty luxury, punk aesthetic, night ride, weird gangs' }
+        ]
+    },
+    {
+        id: 'bloodsport',
+        title: 'Bloodsport',
+        year: '1988',
+        styles: [
+            { name: 'Kumite Sweat', promptString: 'dark arena, spotlight, oiled skin, muscle definition, bruises, intense focus, underground fight' },
+            { name: 'Flashback Haze', promptString: 'soft focus, dreamlike, training sequence, golden hour, martial arts discipline, sunlight' },
+            { name: 'Hong Kong Neon', promptString: 'narrow alleys, bright neon signs, wet stone, crowded, mysterious atmosphere, night market' }
+        ]
+    },
+    {
+        id: 'big-trouble',
+        title: 'Big Trouble in Little China',
+        year: '1986',
+        styles: [
+            { name: 'Chinatown Magic', promptString: 'neon green lightning, ancient sorcery, smoke, colorful robes, mystical temple, john carpenter' },
+            { name: 'Pork Chop Express', promptString: 'rainy highway, truck cab interior, cb radio, dark night, truckers view, wet asphalt' },
+            { name: 'Creature Feature', promptString: 'practical effects, slime, monster makeup, grotesque, 80s fantasy horror, elaborate costumes' }
+        ]
     }
 ];

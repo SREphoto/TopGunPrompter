@@ -33,6 +33,14 @@ import {
     commandoScenes, badBoysScenes, totalRecallScenes, lastCrusadeScenes, firstBloodScenes,
     killBillVol2Scenes, jurassicParkScenes, titanicScenes, avatarScenes, theAvengersScenes
 } from './scenes/addedBlockbusters';
+import {
+    terminatorScenes,
+    robocopScenes,
+    lethalWeaponScenes,
+    escapeFromNewYorkScenes,
+    bloodsportScenes,
+    bigTroubleScenes
+} from './scenes/eightiesClassics';
 
 export const movieScenes: Record<string, Scene[]> = {
     'top-gun': topGunScenes,
@@ -85,4 +93,10 @@ export const movieScenes: Record<string, Scene[]> = {
     'titanic': titanicScenes,
     'avatar': avatarScenes,
     'the-avengers': theAvengersScenes,
+    'the-terminator': terminatorScenes,
+    'robocop': robocopScenes,
+    'lethal-weapon': lethalWeaponScenes,
+    'escape-from-new-york': escapeFromNewYorkScenes,
+    'bloodsport': bloodsportScenes,
+    'big-trouble': bigTroubleScenes,
 };
