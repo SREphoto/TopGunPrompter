@@ -8,6 +8,9 @@ export interface Movie {
     id: string;
     title: string;
     year: string;
+    genres: string[];
+    director: string;
+    actors: string[];
     styles: Style[];
 }
 
