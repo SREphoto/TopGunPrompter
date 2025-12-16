@@ -1,12 +1,12 @@
 import { useState, useMemo } from 'react';
 import { movieScenes } from './data/scenes';
-import { styles as globalStyles } from './data/styles';
-import { movies } from './data/movies';
+import { styles as globalStyles } from './data/stylesV3';
+import { movies } from './data/moviesV3';
 import { Copy, Terminal, Settings, Film, ArrowRight, Palette, CheckCircle, ChevronDown, ChevronRight, Search, SortAsc, Layers, Maximize2, Minimize2 } from 'lucide-react';
 
 type LayoutMode = 'split' | 'scene-focus' | 'style-focus';
 
-function App() {
+function AppV3() {
   // New UI State
   const [isHeaderOpen, setIsHeaderOpen] = useState(true);
   const [layoutMode, setLayoutMode] = useState<LayoutMode>('split');
@@ -22,16 +22,10 @@ function App() {
   const [selectedSceneId, setSelectedSceneId] = useState<number | null>(null);
   const [selectedStyleName, setSelectedStyleName] = useState<string | null>(null);
   const [version, setVersion] = useState<string>('7');
-  const [ar, setAr] = useState<string>('16:9');
-  const [stylize, setStylize] = useState<number>(300);
+  const [ar, setAr] = useState<string>('9:16');
+  const [stylize, setStylize] = useState<number>(700);
   const [copied, setCopied] = useState(false);
   const [copyMode, setCopyMode] = useState<'standard' | 'next-scene' | 'next-style'>('standard');
-
-  // V7 Features
-  const [compareLenses, setCompareLenses] = useState(false);
-  const [burstMode, setBurstMode] = useState(false);
-  const [cleanUp, setCleanUp] = useState(false);
-  const [draftMode, setDraftMode] = useState(false);
 
   const currentMovie = useMemo(() => movies.find(m => m.id === selectedMovieId) || movies[0], [selectedMovieId]);
   const currentScenes = useMemo(() => movieScenes[selectedMovieId] || [], [selectedMovieId]);
@@ -93,33 +87,10 @@ function App() {
     const style = allStyles.find(s => s.name === selectedStyleName);
 
     if (scene && style) {
-      // 1. Anchor (Context)
-      const anchor = `Cinematic shot from the movie ${currentMovie.title} (${currentMovie.year}) directed by ${currentMovie.director}`;
-
-      // 2. Subject & Action
-      const subject = scene.promptPayload;
-
-      // 3. Visual Style
-      const visualStyle = style.promptString;
-
-      // 4. Technical Specs (Hardware/Lenses)
-      let techSpecs = '';
-      if (compareLenses) {
-        techSpecs += ' {35mm lens, 85mm lens, Fisheye lens} --fast';
-      }
-
-      // 5. Parameters
-      let params = `--ar ${ar} --v ${version} --style raw`;
-      if (stylize > 0) params += ` --stylize ${stylize}`;
-      if (burstMode) params += ' --repeat 5';
-      if (draftMode) params += ' --draft';
-      if (cleanUp) params += ' --no text, watermark, signature, blur, distortion';
-
-      // Assemble: Context + Subject + Style + Tech + Params
-      return `${anchor}. ${subject}. ${visualStyle}.${techSpecs} ${params}`;
+      return `${scene.promptPayload}. ${style.promptString}. ESTABLISHING SHOT, cinematic footage from the movie ${currentMovie.title} (${currentMovie.year}) --style raw --ar ${ar} --v ${version} --stylize ${stylize}`;
     }
     return '';
-  }, [selectedSceneId, selectedStyleName, currentScenes, allStyles, currentMovie, ar, version, stylize, compareLenses, burstMode, draftMode, cleanUp]);
+  }, [selectedSceneId, selectedStyleName, currentScenes, allStyles, currentMovie, ar, version, stylize]);
 
   const handleMovieSelect = (id: string) => {
     setSelectedMovieId(id);
@@ -174,7 +145,7 @@ function App() {
             <h1 className="text-2xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
               CINEMA ARCHIVE
             </h1>
-            <span className="text-xs font-mono text-zinc-500 mt-1 ml-2 border border-zinc-800 px-2 py-0.5 rounded">V7 MASTER</span>
+            <span className="text-xs font-mono text-zinc-500 mt-1 ml-2 border border-zinc-800 px-2 py-0.5 rounded">MASTER EDITION</span>
           </div>
 
           <button
@@ -515,7 +486,7 @@ function App() {
               <div>
                 <label className="block text-[9px] font-mono text-zinc-600 mb-1.5 ml-1">ASPECT RATIO</label>
                 <div className="grid grid-cols-4 gap-1 bg-zinc-900 p-1 rounded-lg border border-zinc-800">
-                  {['16:9', '2.39:1', '1.85:1', '4:3', '3:2', '1:1', '9:16', '2:3'].map((ratio) => (
+                  {['1:2', '9:16', '2:3', '3:4', '5:6', '1:1', '6:5', '4:3', '3:2', '16:9', '2:1'].map((ratio) => (
                     <button key={ratio} onClick={() => setAr(ratio)} className={`py-1.5 text-[9px] font-bold rounded-md transition-all ${ar === ratio ? 'bg-zinc-700 text-white shadow-sm' : 'text-zinc-500 hover:text-zinc-300'}`}>{ratio}</button>
                   ))}
                 </div>
@@ -530,43 +501,6 @@ function App() {
                   className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-cyan-500"
                 />
               </div>
-
-              {/* V7 Features */}
-              <div className="pt-2 border-t border-zinc-900 space-y-2">
-                <label className="block text-[9px] font-mono text-zinc-600 mb-1 uppercase">V7 Features</label>
-
-                <button
-                  onClick={() => setCompareLenses(!compareLenses)}
-                  className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs font-bold border transition-all ${compareLenses ? 'bg-zinc-800 text-cyan-400 border-cyan-500/50' : 'bg-zinc-900 text-zinc-500 border-zinc-800'}`}
-                >
-                  <span>Use Permutations</span>
-                  <span className="text-[9px] font-mono opacity-50">{compareLenses ? 'ON' : 'OFF'}</span>
-                </button>
-
-                <button
-                  onClick={() => setBurstMode(!burstMode)}
-                  className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs font-bold border transition-all ${burstMode ? 'bg-zinc-800 text-green-400 border-green-500/50' : 'bg-zinc-900 text-zinc-500 border-zinc-800'}`}
-                >
-                  <span>Burst Mode (x5)</span>
-                  <span className="text-[9px] font-mono opacity-50">{burstMode ? 'ON' : 'OFF'}</span>
-                </button>
-
-                <button
-                  onClick={() => setCleanUp(!cleanUp)}
-                  className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs font-bold border transition-all ${cleanUp ? 'bg-zinc-800 text-purple-400 border-purple-500/50' : 'bg-zinc-900 text-zinc-500 border-zinc-800'}`}
-                >
-                  <span>Auto Clean Up</span>
-                  <span className="text-[9px] font-mono opacity-50">{cleanUp ? 'ON' : 'OFF'}</span>
-                </button>
-
-                <button
-                  onClick={() => setDraftMode(!draftMode)}
-                  className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs font-bold border transition-all ${draftMode ? 'bg-zinc-800 text-yellow-400 border-yellow-500/50' : 'bg-zinc-900 text-zinc-500 border-zinc-800'}`}
-                >
-                  <span>Draft Mode</span>
-                  <span className="text-[9px] font-mono opacity-50">{draftMode ? 'ON' : 'OFF'}</span>
-                </button>
-              </div>
             </div>
           </div>
         </div>
@@ -575,4 +509,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppV3;

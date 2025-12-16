@@ -1,0 +1,414 @@
+Research completed 251213
+
+Here is the comprehensive Master Implementation Report for the Cinema Archive application.
+This document consolidates all architectural changes, optimized data libraries, and technical instructions required to transition your application to Midjourney V7. It is formatted to be ingested by your AI agent as a definitive rulebook.
+
+--------------------------------------------------------------------------------
+Cinema Archive: Midjourney V7 Master Implementation Guide
+Target Model: Midjourney V7 / Niji 6 Architecture: Anchor-First Protocol (Textual Determinism) Constraint: No Image References (SREF/OREF) currently available.
+
+--------------------------------------------------------------------------------
+Part 1: Core Logic Architecture
+1. The "Anchor-First" Prompt Formula
+Research into V7 confirms a phenomenon called Token Attention Decay. The model prioritizes the first 5–10 words. The previous formula (Scene + Style + Context) is mechanically flawed because it buries the cinematic context at the end.
+The New Generation Rule: The AI Agent must assemble the final prompt string in this exact inverted order:
+[Cinematic Context] + [Subject & Action] + [Visual Style & Lighting] + [Technical Specs] + [Parameters]
+Component Definitions:
+1. [Cinematic Context] (The Anchor): Hard-coded string. Format: Cinematic shot from the movie [Movie Title] ([Year]) directed by [Director Name].
+2. [Subject & Action]: User-selected scene description.
+3. [Visual Style & Lighting]: Aesthetic modifiers and geometric lighting (e.g., "Volumetric beams").
+4. [Technical Specs] (The Fix for No SREF): Specific hardware triggers (e.g., "Shot on Kodak Vision3 500T," "Anamorphic lens").
+5. [Parameters]: --ar 2.39:1 --v 7 --style raw (Mandatory for photorealism).
+
+--------------------------------------------------------------------------------
+Part 2: Optimized Data Libraries (Textual Determinism)
+Replace your current text files with these optimized versions. These strings use Hardware Injection (specific cameras/film stocks) to force styles without needing reference images.
+A. Optimized style_reference.txt (Standard Library)
+Style Name
+V7 Optimized Prompt String
+Cinematic
+cinematic lighting, shallow depth of field, Anamorphic lens, teal and orange color grading, volumetric fog, ultra detailed, Kodak Vision3 stock --ar 2.39:1 --style raw
+Photorealistic
+Shot on Sony A7R IV, 85mm f/1.8 GM lens, sharp focus, natural lighting, skin pores visible, hyperrealistic, high texture fidelity --style raw
+Anime
+anime key visual, Studio Ghibli art style, cel shaded, vibrant colors, hand painted detailed background, 2D animation --niji 6
+Oil Painting
+impasto oil painting, heavy brushstrokes, palette knife texture, classical art, masterpiece, canvas texture, chiaroscuro --stylize 500 --no photo
+Cyberpunk
+cyberpunk aesthetic, neon lighting, wet pavement reflections, chromatic aberration, high tech low life, futuristic, rain, digital noise --style raw
+Noir
+1940s Film Noir, Orthochromatic black and white film stock, hard rim lighting, venetian blind shadows, high contrast, silver screen aesthetic --style raw
+Polaroid
+Polaroid instant film, flash photography, harsh shadows, vignetting, chemical film artifacts, soft focus, color shift --style raw
+3D Render
+3D render, Unreal Engine 5, Octane Render, path tracing, subsurface scattering, ambient occlusion, clean geometry, global illumination
+Sketch
+graphite pencil sketch, rough lines, cross hatching, artistic, monochrome, textured paper background, charcoal smudges --stylize 500
+Watercolor
+watercolor painting, wet on wet technique, soft edges, pastel colors, cotton paper texture, artistic, flowing ink --stylize 500
+Struzan-Illustrated
+Hand-painted movie poster in the style of Drew Struzan, airbrush and colored pencil, gessoed board texture, illustrated realism, collage composition
+Neon Noir
+1980s retro-wave poster, glowing neon pink script, chrome texture, vaporwave grid, silhouette palm trees, synthwave aesthetic
+90s Floating Head
+1990s blockbuster poster, photo collage of floating heads, V-shape composition, high-contrast studio photography, warm explosion background
+90s Prestige (Trajan)
+Minimalist 1990s epic poster, single iconic macro image, Trajan font typography, black negative space, academy award aesthetic
+90s Indie (Grunge)
+1990s indie film poster, grunge aesthetic, photocopy texture, grainy black and white, distressed typewriter font, desaturated, high-contrast
+80s Slasher
+Vintage 1980s horror VHS cover art, airbrushed acrylic, sinister skull in sky, cabin in woods, knife reflection, bold dripping red font
+00s Rom-Com
+Early 2000s romantic comedy poster, high-key studio lighting, pure white background, playful serif typography, pastel palette, soft focus
+Teal & Orange
+Mid-2000s action blockbuster poster, heavy teal and orange color grading, high contrast, sparks and debris, gritty texture, Anamorphic lens flare --style raw
+Grindhouse
+1970s grindhouse exploitation poster, distressed folded paper texture, yellowed tape marks, vintage worn look, halftone print pattern, sensation
+Double Exposure
+Cinematic double exposure poster, silhouette of character profile filled with landscape, surreal artistic style, moody atmosphere, minimalist
+Vintage Pulp
+1950s pulp paperback cover, painted illustration, dramatic shadows, sensationalist text, yellowed paper texture, vivid primary colors
+Minimalist Vector
+Minimalist Saul Bass style poster, flat vector graphics, jagged geometric shapes, monochromatic red or orange, symbolic silhouette
+Japanese Anime
+Japanese anime movie poster, hand-drawn 2D animation, highly detailed background, dynamic pose, Kanji typography, cel shaded --niji 6
+Hammer Horror
+Vintage British Hammer Horror poster, gothic oil painting style, swirling mist, dramatic castle, rich deep colors, serif fonts, foggy
+IMAX Epic
+Modern IMAX poster, ultra-high resolution photography, massive scale, tiny human silhouette, sharp focus, deep blues, sans-serif font
+Punk Collage
+Punk rock fanzine collage, cut-out magazine letters, xerox photocopy texture, messy glue marks, high contrast B&W, neon accents
+Tech Blueprint
+Sci-fi schematic blueprint, white lines on blue grid paper, wireframe 3D model, technical callouts, industrial design
+Criterion Watercolor
+Criterion Collection cover art, soft watercolor painting, wet ink bleed, minimalist composition, elegant serif typography, cream paper
+8-Bit Pixel
+Retro 8-bit pixel art, NES video game box style, limited color palette, blocky pixels, scanline filter, arcade aesthetic
+Charcoal Sketch
+Gritty charcoal sketch poster, rough broad strokes, high contrast shading, smudge textures, hand-drawn artistic look, textured paper
+
+--------------------------------------------------------------------------------
+B. Optimized unique_style_reference.txt (Unique Library)
+These context-aware styles now include "Physics Triggers" (lens compression, shutter angles) to replicate the film's look without reference images.
+Top Gun (1986)
+• 80s Sunset: golden hour, silhouette, intense heat haze distortion, Telephoto lens compression, Kodak 5247 film stock, heavy grain --style raw
+• Cockpit HUD: green digital phosphor glow, HUD reflection on glass, harsh sunlight, claustrophobic framing, high contrast --style raw
+• Volleyball Sweat: glistening oiled skin, hard sunlight, specular highlights, saturated Fujicolor film, slow motion aesthetic --style raw
+Interview with the Vampire (1994)
+• Gothic Candlelight: flickering candlelight, deep shadows, f/1.8 aperture, shallow depth of field, velvet textures, warm glow --style raw
+• New Orleans Decay: foggy streets, gas lamp glow, rotting wood texture, humid atmosphere, wet plate aesthetic, spanish moss --style raw
+• Vampire Pale: alabaster skin, translucent veins, piercing eyes, high contrast, cold blue undertones, subsurface scattering --style raw
+Oldboy (2003)
+• Green Corridor: sickly green fluorescent lighting, flickering tubes, narrow hallway, dirty textures, neo-noir, 35mm film grain --style raw
+• Hammer Grit: extreme close up macro shot, motion blur, visceral violence, blood splatter, raw and gritty texture, high tension --style raw
+• Neon Noir: deep blacks, vibrant neon signs, wet streets, urban isolation, cinematic shadow, low key lighting --style raw
+John Wick (2014)
+• Neon Club: vibrant pink and blue neon, Anamorphic lens flares, wet surface reflections, volumetric smoke, high contrast --style raw
+• Tactical Suit: sharp black suit texture, gun metal grey, clean lines, rim lighting, modern noir, Arri Alexa digital --style raw
+• Rainy NYC: heavy rain, wet pavement, city lights reflecting, dark atmosphere, moody, urban solitude, bokeh --style raw
+American Psycho (2000)
+• Corporate Cold: sterile white environment, minimalism, harsh fluorescent light, expensive suits, emotionless, symmetrical --style raw
+• Blood Splatter: bright red blood on white plastic, shocking contrast, surreal violence, pristine horror, high key lighting --style raw
+• 80s Yuppie: warm upscale restaurant lighting, crystal glasses, designer clothing, excess, superficial beauty, soft focus --style raw
+Gladiator (2000)
+• Roman Dust: sun bleached, floating dust particles, arena sand, ancient stone, epic scale, atmospheric haze --style raw
+• Colosseum Sun: blinding sunlight, harsh shadows, metallic armor reflection, heat waves, intense action, high shutter speed --style raw
+• Wheat Field: golden wheat, soft focus, dreamlike, hand brushing through grain, ethereal light, magic hour --style raw
+Se7en (1995)
+• Gritty Rain: constant downpour, urban decay, bleach bypass process, silver retention, high contrast, desaturated colors --style raw
+• Flashlight Beam: piercing volumetric light beam in darkness, dust motes, claustrophobic, chiaroscuro, shadow play --style raw
+• Desaturated City: sepia tones, grime, peeling paint, oppressive atmosphere, hopelessness, industrial texture, film grain --style raw
+Fight Club (1999)
+• Basement Grime: sweat sheen, blood, concrete texture, sodium vapor lighting, fluorescent green tint, high ISO noise --style raw
+• Soap Pink: bright pink soap, chemical burns, surreal satire, consumerism, pop art contrast, macro photography --style raw
+• Insomnia Blue: cold blue color grading, sterile office lighting, dissociation, anti-glare coating, sleepless atmosphere --style raw
+Aliens (1986)
+• Industrial Blue: cold steel, blue emergency rim lighting, volumetric steam, wet metal textures, James Cameron blue --style raw
+• Xenomorph Slime: organic resin, dripping slime, glistening black surfaces, biomechanical texture, low key lighting --style raw
+• Motion Tracker Green: grainy green screen, CRT scanlines, sonar blips, low light, claustrophobia, tech noir aesthetic --style raw
+Predator (1987)
+• Jungle Heat: dense foliage, sweat, humidity, bright green leaves, dappled sunlight, survival, telephoto lens --style raw
+• Thermal Vision: heat signature spectrum, blue and red and yellow, alien pov, hunting mode, digital processing
+• Mud Camo: covered in mud, blending with nature, primal, dirty textures, stealth, natural lighting --style raw
+Joker (2019)
+• Clown Makeup: smeared greasepaint texture, extreme close up, skin pores, tragic expression, vibrant colors, harsh lighting --style raw
+• Subway Green: flickering fluorescent lights, dirty subway tiles, teal and orange color grading, Arri Alexa digital noise --style raw
+• Talk Show Blue: bright tv studio lighting, retro curtains, saturated blue and red, media spectacle, broadcast look --style raw
+Dune (2021)
+• Arrakis Sand: endless dunes, spice floating in air, heat haze, massive scale, monochromatic beige and gold, IMAX scale --style raw
+• Spice Blue: glowing blue eyes, deep indigo shadows, mystical atmosphere, desert night, cinematic lighting --style raw
+• Ornithopter Steel: brutalist architecture, industrial metal texture, dragonfly wings, dust and machinery, Greig Fraser cinematography --style raw
+The Matrix (1999)
+• Digital Rain: falling green code, phosphor glow, CRT texture, black background, latex texture, 35mm film grain --style raw
+• Bullet Time: frozen time, 360-degree virtual camera, flow motion, ripple distortion, path tracing, fluid simulation --style raw
+• Construct White: infinite white space, clean, sterile, surreal minimalism, ambient occlusion, soft shadows --style raw
+Blade Runner 2049 (2017)
+• Orange Haze: radioactive dust, thick orange fog, atmospheric perspective, silhouette, Roger Deakins cinematography --style raw
+• Hologram Pink: giant holographic projection, neon pink and purple, transparency, rain on glass, volumetric light --style raw
+• Cyberpunk Rain: constant rain, neon reflections on wet pavement, flying cars, dark blue and grey palette, tech noir --style raw
+Mad Max: Fury Road (2015)
+• Chrome & Rust: shiny chrome spray paint, rusted metal, high contrast, overexposed sky, sharp focus, kinetic energy --style raw
+• Desert Storm: massive sandstorm, red lightning, volumetric dust, apocalyptic scale, orange and black contrast --style raw
+• High Octane Blue: day-for-night shooting technique, deep saturated blue, moonlight over desert, cold isolation --style raw
+The Dark Knight (2008)
+• Gotham Night: city skyline at night, skyscrapers, dark blue and black, 70mm IMAX film, urban crime, aerial shot --style raw
+• Joker Purple: purple suit, green hair, chaotic energy, smeared makeup, handheld camera, interrogation lighting --style raw
+• IMAX Blue: cold color temperature, glass and steel, high tech surveillance, sharp focus, 70mm film grain --style raw
+Pulp Fiction (1994)
+• Vintage Diner: red vinyl booths, formica tables, warm lighting, 50s americana, retro cool, wide angle lens --style raw
+• Tarantino Trunk: low angle shot looking up, trunk lid framing, POV, fish-eye lens effect, cinematic signature --style raw
+• Monochrome Suit: black and white suits, thin ties, cool detachment, gangster chic, stylized, high contrast --style raw
+Terminator 2: Judgment Day (1991)
+• Liquid Metal: chrome surface, reflection, shapeshifting, fluid simulation, cold perfection, ray tracing --style raw
+• Nuclear Fire: apocalyptic destruction, burning playground, orange and black, nightmare sequence, high contrast --style raw
+• Steel Blue: cold blue night, industrial steel mill, sparks, James Cameron blue, tech noir, metallic texture --style raw
+Inception (2010)
+• Folding City: bending architecture, defying gravity, surreal cityscape, dream logic, mind bending, anamorphic lens --style raw
+• Dream Layer: rainy city street, slow motion, texture of water, subconscious projection, phantom high speed --style raw
+• Zero Gravity: floating objects, spinning hallway, disorientation, sleek hotel interior, physics defying --style raw
+Kill Bill: Vol. 1 (2003)
+• Yellow Jumpsuit: bright yellow track suit, black stripe, vibrant colors, pop art style, snap zoom aesthetic --style raw
+• Anime Blood: exaggerated blood spray, silhouette, high contrast, stylized violence, cel shaded influence --niji 6
+• Snowy Garden: serene japanese garden, falling snow, white silence, blood on snow, poetic duel, wide shot --style raw
+No Country for Old Men (2007)
+• Desert Silence: vast texas landscape, empty horizon, harsh midday sunlight, isolation, deep depth of field --style raw
+• Motel Shadow: dark motel room, light under the door, suspense, creeping shadow, neo-western, practical lighting --style raw
+• Coin Toss Silver: extreme close up of a silver coin, metallic texture, fate, cold indifference, macro lens --style raw
+Drive (2011)
+• Synthwave Neon: pink and blue neon, retro 80s aesthetic, night driving, sodium vapor streetlights, bokeh --style raw
+• Scorpion Jacket: white satin, golden embroidery, fabric texture, iconic costume, blood stains, high contrast --style raw
+• LA Night: los angeles skyline, streetlights, anamorphic bokeh, lonely atmosphere, noir lighting --style raw
+The Fifth Element (1997)
+• Multipass Orange: bright orange hair, futuristic fashion, Jean Paul Gaultier costumes, vibrant pop colors, sharp focus --style raw
+• Future NYC: flying cars, vertical city, dense traffic, fog, Moebius comic aesthetic, futuristic metropolis --style raw
+• Mondoshawan Gold: ancient alien armor, metallic gold, rusty textures, mystical light, temple setting, volumetric dust --style raw
+Interstellar (2014)
+• Black Hole: gargantua accretion disk, bending light, deep space, cosmic scale, IMAX aspect ratio, gravitational lensing --style raw
+• Dust Bowl: cornfields, dust storms, americana, gritty realism, earth tones, dying earth, particulate matter --style raw
+• Tesseract: fourth dimension, infinite library, strings of time, surreal architecture, abstract, light rays --style raw
+The Shining (1980)
+• Overlook Carpet: hexagonal pattern, one-point perspective, Steadicam tracking shot, geometric symmetry, wide angle lens --style raw
+• Redrum: blood elevator, fluid physics, art deco hotel, psychological horror, symmetrical composition --style raw
+• Snow Maze: frozen hedge maze, blue moonlight, mist, isolation, cold atmosphere, winter night --style raw
+Tron: Legacy (2010)
+• The Grid: neon blue lines, black glass, digital landscape, symmetry, self-illuminated, clean lines --style raw
+• Light Cycle: light trails, motion blur, high speed, sleek vehicles, cybernetic, neon orange and blue --style raw
+• Iso Orange: warm orange neon, contrast against blue, digital dna, organic code, simulation, glow effect --style raw
+Taxi Driver (1976)
+• Yellow Cab: checker cab, steam rising from streets, night city, urban decay, 35mm film grain --style raw
+• Mohawk: military jacket, sunglasses, mohawk haircut, mirror reflection, anti-hero, intense stare --style raw
+• Neon Rain: rain on windshield, blurred neon lights, bokeh, loneliness, jazz atmosphere, sodium vapor lights --style raw
+Saving Private Ryan (1998)
+• Omaha Beach: desaturated, high contrast, 45-degree shutter angle, handheld camera shake, bleach bypass process, film grain --style raw
+• Sniper Bell Tower: rubble texture, soft diffused light, telephoto lens, shallow depth of field, particulate dust --style raw
+• Faded Glory: american flag, backlit sunlight, dust particles, emotional, somber, god rays, atmospheric haze --style raw
+Iron Man (2008)
+• Mark III: hot rod red and gold, automotive paint texture, ray traced reflections, photorealistic, 8k --style raw
+• Arc Reactor: glowing blue light, chest piece, cave darkness, palladium core, industrial contrast, chiaroscuro --style raw
+• Malibu Mansion: futuristic architecture, ocean view, glass walls, wealth, clean lines, morning sun, architectural photography --style raw
+Starship Troopers (1997)
+• Klendathu Drop: chaotic, swarming arachnids, laser fire, desert planet, daylight horror, epic scale, harsh sunlight --style raw
+• Federal Network: propaganda film style, scanlines, bright colors, satire, fascist uniform, broadcast quality --style raw
+• Brain Bug: slimy organic texture, massive, underground cave, grotesque, subsurface scattering, low key lighting --style raw
+Transformers (2007)
+• Transformation: complex mechanical parts shifting, metallic glare, sunset heavily saturated, Anamorphic lens flare, motion blur --style raw
+• City Battle: debris, explosions, giant robots, dust, destruction, low angle, telephoto compression --style raw
+• Bumblebee Garage: yellow camaro, scratched metal, expressive eyes, garage lighting, mist, atmospheric --style raw
+Deadpool (2016)
+• Maximum Effort: red spandex fabric texture, dirty suit, breaking fourth wall, comic book contrast, humor --style raw
+• Highway Fight: overcast day, slow motion violence, bullet casings, destruction, asphalt texture, high shutter speed --style raw
+• X-Mansion: grey sterile halls, emptiness, mockery, bright daylight, architectural symmetry, wide angle --style raw
+John Wick: Chapter 2 (2017)
+• Mirrors Room: multiple reflections, neon lights, confusion, sleek, museum art installation, blue and pink, kaleidoscope --style raw
+• Continental Lounge: warm gold lighting, leather chairs, drinking scotch, luxury, unspoken tension, cinematic lighting --style raw
+• Rome Catacombs: stone walls, dust, flashlight beams, shadows, tactical suit, ancient arches, rim lighting --style raw
+John Wick: Chapter 3 - Parabellum (2019)
+• Glass House: transparent walls, fighting silhouettes, pristine, shattering glass, cool blue light, emptiness --style raw
+• Continental Green: intense green neon, heavy armor, smoke, muzzle flashes, high contrast action, volumetric fog --style raw
+• Desert Walk: vast dunes, bright sun, black suit, high contrast, heat haze, wandering, telephoto lens --style raw
+Die Hard (1988)
+• Air Duct: claustrophobic, silver metal, lighter flame, dirt on face, lighter reflection, macro shot --style raw
+• Nakatomi Plaza: skyscraper at night, broken glass, helicopter spotlight, 80s action, explosion, Anamorphic lens flare --style raw
+• Yippee Ki Yay: bloodied undershirt, desperate, machine gun, sweaty skin, Christmas tape, grimy texture --style raw
+The Matrix Reloaded (2003)
+• Freeway Chase: green tint, speeding cars, agents jumping, concrete, motion blur, overcast, 360-degree shutter --style raw
+• Burly Brawl: hundreds of smiths, black suits, courtyard, surreal, CGI slickness, bowling pin sound, wide angle --style raw
+• Chateau Fight: weapons on walls, grand staircase, marble texture, slow motion, medieval weaponry, cinematic lighting --style raw
+The Matrix Revolutions (2003)
+• Super Brawl: rain, lightning, flying silhouettes, green shockwaves, dark sky, epic scale, fluid simulation --style raw
+• Machine City: biomechanical squids, red eyes, swarms, mechanical coldness, cables, deus ex machina, metallic --style raw
+• Club Hel: leather straps, bondage gear, red laser lighting, gravity defied, upside down, fetish aesthetic --style raw
+Casino Royale (2006)
+• Parkour Chase: construction crane, dust, bright sunlight, sweat, raw physicality, height, handheld camera --style raw
+• Poker Tension: green felt, focus on eyes, chips, tuxedo, smoke, high stakes, warm lighting, macro shot --style raw
+• Venice Sinking: collapsing building, turbulent water, tragedy, iron bars, drowning, underwater distortion --style raw
+Point Break (1991)
+• Ex-Presidents: president masks, sunset waves, bank robbery, adrenaline, wetsuits, beach vibe, handheld camera --style raw
+• Skydiving: blue sky, freefall, wide angle, freedom, adrenaline, holding hands, wind distortion --style raw
+• Foot Chase: Steadicam, alleyways, throwing dogs, shaky cam, pure kinetic energy, fence jumping --style raw
+Die Hard with a Vengeance (1995)
+• Harlem Heat: summer heat, bustling city, sandwich board, sweat, urban grit, yellow filter, heat haze --style raw
+• Gold Vault: heavy gold bars, underground, yellow sheen, greed, dump trucks, industrial lighting --style raw
+• Water Jugs: fountain, park setting, tension, bomb timer, puzzle, daylight, sharp focus --style raw
+Commando (1985)
+• Gear Up: montage style, weapons, black grease paint, muscles, vest, preparation, high contrast --style raw
+• Island Raid: explosions, tropical garden, one man army, mayhem, machine gun hip fire, saturated colors --style raw
+• Log Carry: lumberjack shirt, massive tree trunk, mountains, raw strength, 80s macho, telephoto lens --style raw
+Bad Boys (1995)
+• Porsche 911: miami streets, sunset, shiny black car, banter, Michael Bay 360, lens flare, saturated colors --style raw
+• Club Shootout: strobe lights, slow motion, falling debris, stylish violence, unbuttoned shirts, chaotic --style raw
+• Miami Heat: palm trees, vibrant orange and teal, sweat, sunglasses, cool attitude, warm color grading --style raw
+Total Recall (1990)
+• Mars Red: red atmosphere, domes, mutants, dusty, Verhoeven satire, mining colony, miniature effect --style raw
+• Reactor Start: blinding white light, terraforming, wind, ancient alien tech, melting eyes, practical effects --style raw
+• Rekall Chair: futuristic medical chair, red light, electrodes, mind trip, sci-fi lab, industrial design --style raw
+Indiana Jones and the Last Crusade (1989)
+• Tank Chase: desert dust, nazi uniforms, gritty action, horse vs tank, rocky canyon, motion blur --style raw
+• Leap of Faith: invisible bridge, torchlight, abyss, ancient cave, wonder, painted texture, matte painting aesthetic --style raw
+• Grail Chamber: hundreds of cups, cobwebs, aging knight, gold vs clay, divine light, shafts of light --style raw
+Rambo: First Blood (1982)
+• Forest Hunt: misty woods, survival, green army jacket, knife, booby traps, rain, damp texture --style raw
+• Town Fire: burning gas station, machine gun, night, rain, ptsd rage, destruction, pyrotechnics --style raw
+• Cave Rats: rats, darkness, torch light, wet rocks, claustrophobia, hiding, high contrast --style raw
+Kill Bill: Vol. 2 (2004)
+• Coffin Escape: pitch black, flashlight beam, wood texture, claustrophobia, punches, dirt, extreme close up --style raw
+• Pai Mei Steps: white beard, stone steps, kung fu training, zoom snaps, 70s cinema style, bright sun --style raw
+• Trailer Fight: cramped interior, gritty, close quarters, intense dialogue, western feel, katana, wide angle --style raw
+Jurassic Park (1993)
+• T-Rex Breakout: rain, ripples in water, night, flares, massive dinosaur eye, goat leg, animatronic texture --style raw
+• Gallimimus Valley: green scenery, bright sun, running dinosaurs, sense of scale, flocking, CGI integration --style raw
+• Raptor Kitchen: stainless steel, reflection, stalking, silence, terror, condensation, claustrophobic --style raw
+Titanic (1997)
+• Bow of Ship: sunset, embrace, endless ocean, king of the world, romantic golden hour, wind, panoramic --style raw
+• Grand Staircase: opulence, wood clock, flooding water, destruction of beauty, electric sparks, chaotic motion --style raw
+• Steerage Party: warm irish lighting, spinning, beer, sweat, joy, motion blur, wide angle --style raw
+Avatar (2009)
+• Pandora Night: bioluminescence, glowing plants, blue skin, floating seeds, magical forest, neon, 3D depth --style raw
+• Floating Mountains: vines, waterfalls in sky, clouds, immense scale, 3d depth, green and blue, aerial shot --style raw
+• AMP Suit: mechanical walker, jungle destruction, glass cockpit, industrial grey, heavy metal, photorealistic CGI --style raw
+The Avengers (2012)
+• Circle Shot: heroes assembled, new york rubble, confident stances, comic book splash page, daylight, parallax camera --style raw
+• Helicarrier: clouds, high tech turbines, glass bridge, blue sky, wide shot, industrial design --style raw
+• Stark Tower: iron man suit up, sleek architecture, city view, invasion portal, blue beam, high tech --style raw
+The Terminator (1984)
+• Tech Noir Blue: smoky club atmosphere, lasers, blue lighting, 80s punk hair, sweat, dark shadows, James Cameron --style raw
+• Future War: apocalyptic rubble, purple lasers, chrome endoskeletons, blue night, flash forward sequence, gritty --style raw
+• Los Angeles Night: gritty urban street, sodium vapor lights, trash, wet pavement, neo-noir, menacing, film grain --style raw
+RoboCop (1987)
+• Detroit Rust: industrial decay, rust, steam, Verhoeven satire, daytime grit, broken glass, steel mill --style raw
+• Medi-Break: scanlines, TV static, fake commercial aesthetic, bright colors, satirical news, broadcast quality --style raw
+• Prime Directive HUD: green pixelated vector graphics, scanlines, digital interference, machine vision POV, low resolution --style raw
+Lethal Weapon (1987)
+• Saxophone Noir: wet city streets, neon reflection, lonely atmosphere, cigarette smoke, bluesy, melancholic night, bokeh --style raw
+• California Dusk: sunset over LA, palm trees, warm orange glow, heat haze, buddy cop vibe, hazy atmosphere --style raw
+• Explosive Action: fireball, debris, stunt work, Shane Black energy, chaotic movement, smoke, practical effects --style raw
+Escape from New York (1981)
+• Grid Map: green wireframe computer graphics, retrofuturism, glowing lines, 80s CGI, tactical display, CRT texture --style raw
+• Manhattan Ruins: destroyed city, burning barrels, dark shadows, urban wasteland, graffiti, Carpenter synth atmosphere --style raw
+• Chandelier Car: bizarre lighting, lens flares, dirty luxury, punk aesthetic, night ride, weird gangs, surreal --style raw
+Bloodsport (1988)
+• Kumite Sweat: dark arena, spotlight, oiled skin, muscle definition, bruises, intense focus, underground fight --style raw
+• Flashback Haze: soft focus, dreamlike, training sequence, golden hour, martial arts discipline, sunlight, diffusion filter --style raw
+• Hong Kong Neon: narrow alleys, bright neon signs, wet stone, crowded, mysterious atmosphere, night market --style raw
+Big Trouble in Little China (1986)
+• Chinatown Magic: neon green lightning, ancient sorcery, smoke, colorful robes, mystical temple, John Carpenter --style raw
+• Pork Chop Express: rainy highway, truck cab interior, CB radio, dark night, truckers view, wet asphalt, bokeh --style raw
+• Creature Feature: practical effects, slime, monster makeup, grotesque, 80s fantasy horror, elaborate costumes --style raw
+
+--------------------------------------------------------------------------------
+Part 3: Remastered Sample Prompts (20 Examples)
+Use these templates to validate the V7 logic. Note the placement of the "Context" (Anchor) at the very start.
+1. Top Gun / 80s Sunset
+Cinematic establishing shot from Top Gun (1986) directed by Tony Scott. Silhouette of F-14 Tomcat and crew on flight deck. Intense orange sun on the horizon, steam rising, heat haze distortion. Telephoto lens compression, Kodak 5247 film stock, heavy grain. --ar 2.39:1 --style raw --v 7
+2. Top Gun / Cockpit HUD
+POV shot from inside a fighter jet cockpit from Top Gun. Maverick looking up through glass canopy at MiG-28. Green digital glow of HUD reflecting on glass, harsh sunlight. 35mm film grain, high contrast. --ar 2.39:1 --style raw --v 7
+3. John Wick / Neon Noir
+Cinematic shot from John Wick (2014). John Wick stumbling out of crashed SUV. Gritty urban street at blue hour, rain. Vibrant neon signs reflecting on wet pavement, chiaroscuro. Anamorphic lens flares, digital cinema. --ar 2.39:1 --style raw --v 7 --no bright daylight
+4. John Wick / The Red Circle
+Action shot from John Wick. John Wick moving through crowded dance floor. Volumetric beams of red and blue laser light cutting through steam. Cyberpunk aesthetic, high shutter speed, crisp motion. --ar 2.39:1 --style raw --v 7
+5. Oldboy / Green Corridor
+Wide tracking shot from Oldboy (2003) directed by Park Chan-wook. Oh Dae-su holding hammer in narrow hallway. Sickly green fluorescent tubes flickering overhead. Neo-noir, grimy texture, 35mm film grain. --ar 2.39:1 --style raw --v 7
+6. Interview with the Vampire / Gothic Candlelight
+Cinematic portrait from Interview with the Vampire (1994). Louis de Pointe du Lac sitting in darkened room. Soft flickering candlelight illuminating pale skin. 85mm portrait lens, f/1.8 aperture, shallow depth of field. --ar 1.85:1 --style raw --v 7
+7. Top Gun / Volleyball Sweat
+Low angle action shot from Top Gun. Maverick playing beach volleyball. Hard sunlight creating high contrast specular highlights on glistening oiled skin. Slow motion aesthetic, saturated Fujicolor film stock. --ar 2.39:1 --style raw --v 7
+8. John Wick / 3D Render
+3D render of John Wick in hotel lobby. Unreal Engine 5, Octane Render, ray tracing. Global illumination, warm architectural lighting. Clean, noise-free, 8k resolution. --ar 16:9 --v 7 --stylize 700 --no photo
+9. John Wick / Anime
+Anime key visual of John Wick drifting 1969 Mustang. Production I.G. style, cel shaded, vibrant colors, 2D animation. Speed lines, tire smoke. --ar 16:9 --niji 6
+10. Top Gun / Polaroid
+Vintage Polaroid photo of Maverick riding motorcycle. Sunset light leaking into the lens. Flash photography, vignette, color shift, instant film texture. --ar 1:1 --style raw --v 7
+11. Interview with the Vampire / Oil Painting
+Classical oil painting of Lestat playing piano. Impasto brushstrokes, heavy canvas texture, masterpiece. Chiaroscuro lighting, moonlight. --ar 3:4 --v 7 --stylize 500 --no photo
+12. Oldboy / Hammer Grit
+Macro shot from Oldboy (2003). Extreme close-up of claw hammer dragging on wall. Sparks flying illuminating metal texture. Shallow depth of field, sharp focus on weapon. --ar 2.39:1 --style raw --v 7
+13. John Wick / Pencil Sketch
+Graphite pencil sketch of John Wick fighting. Rough lines, cross hatching, monochrome. Textured paper background, graphite smudges. --ar 16:9 --v 7 --stylize 500
+14. Top Gun / 80s Slasher
+Vintage 1980s horror movie poster of pilot in cockpit. Airbrushed acrylic art, VHS box art aesthetic. Sinister skull in sky, bold red font, tracking static. --ar 2:3 --v 7 --stylize 700
+15. John Wick / Teal & Orange
+Cinematic action blockbuster shot of John Wick firing weapon. Muzzle flash illuminating scene. Heavy teal and orange color grading. Anamorphic lens flare, gritty texture. --ar 2.39:1 --style raw --v 7
+16. Interview with the Vampire / Noir
+Black and white film noir shot of Claudia staring in mirror. Hard rim lighting, dramatic shadows. Orthochromatic film stock, 1940s vintage. --ar 1.85:1 --style raw --v 7 --no color
+17. Oldboy / Vintage Pulp
+Vintage 1950s pulp paperback cover illustration of Woo-jin Lee. Painted illustration, halftone pattern, yellowed paper texture. Noir atmosphere, sensation text. --ar 2:3 --v 7 --stylize 600
+18. John Wick / Struzan-Illustrated
+Hand-painted movie poster of John Wick in style of Drew Struzan. Airbrush and colored pencil, illustrated realism, collage composition. Gessoed board texture. --ar 2:3 --v 7 --stylize 700
+19. Top Gun / Cinematic
+Cinematic hero shot from Top Gun. Pilots walking on tarmac. Backlit by setting sun, heat waves. Anamorphic widescreen lens, shallow depth of field, 8k. --ar 2.39:1 --style raw --v 7
+20. John Wick / Cyberpunk
+Cyberpunk close-up of gold coin. Neon pink and blue lights reflecting on metal. Chromatic aberration, rain droplets, sharp focus. --ar 16:9 --v 7 --stylize 500
+
+--------------------------------------------------------------------------------
+Part 4: Exhaustive Feature Guide (Text-Only Focus)
+Midjourney V7 offers several powerful features that function purely via text parameters, perfect for your app's current limitations.
+1. Batch Runs & Permutations ({})
+Since you cannot iterate via image upload, use Permutations to batch-test text variables. This allows the user to generate multiple variations of a prompt in a single request.
+• Syntax: Enclose comma-separated options in curly braces {}.
+• App Feature: Create a "Compare Lenses" button that injects {35mm lens, 85mm lens, Fisheye lens} into the [Technical Specs] slot.
+• Result: Midjourney will run 3 separate jobs: one for 35mm, one for 85mm, etc.
+• Limit: Fast Mode only (Maximum 40 jobs for Pro users).
+2. Repeat (--repeat)
+Use this to brute-force a "lucky seed." V7's output is deterministic based on the seed, but the initial seed is random.
+• Syntax: Add --repeat [Number] to the end.
+• App Feature: "Burst Mode." Adds --repeat 5 to the prompt.
+• Why: Essential for action shots (e.g., John Wick club scene) where the random placement of smoke/lasers makes or breaks the image. Running it 5 times guarantees at least one good composition.
+3. Negative Prompting (--no)
+This instructs the model on what not to render.
+• Syntax: --no [item1], [item2]
+• Logic: This is mathematically equivalent to weighing a concept at ::-0.5.
+• Constraint: Do not use sentences like "no red cars." The model may see "red car" and generate it. Use list format: --no red cars.
+• App Feature: "Clean Up" toggle. Injects: --no text, watermark, signature, blur, distortion.
+4. Multi-Prompting & Weights (::)
+Use this to separate concepts that are "bleeding" into each other.
+• Syntax: [Concept A]::[Weight] [Concept B]::[Weight]
+• Problem: "Hot Dog" -> Generates a frankfurter.
+• Fix: Hot:: Dog:: -> Generates a dog that is hot.
+• App Feature: Slider for "Atmosphere Strength."
+    ◦ Low: [Scene]::1 [Foggy Atmosphere]::0.5
+    ◦ High: [Scene]::1 [Foggy Atmosphere]::2
+5. Draft Mode (--draft)
+This is the economic engine for V7.
+• Syntax: --draft
+• Benefit: Runs at ~10x speed and consumes ~50% of the GPU minutes.
+• Strategy: Your app should default to --draft for the first generation to allow users to "preview" the composition. Once they like a result, they can re-run the exact same prompt and seed without --draft to get the full V7 quality.
+
+--------------------------------------------------------------------------------
+Part 5: Future Integration (When SREF Works)
+When your app gains the ability to pass Image URLs, implement this section immediately. This is the "Holy Grail" of style consistency.
+1. Style Reference (--sref)
+• Function: Replaces the need for complex style descriptions.
+• Implementation: [Prompt] --sref [URL]
+• Visual Style Weight (--sw): Controls how strong the reference is.
+    ◦ --sw 100 (Default)
+    ◦ --sw 1000 (Max - overrides text prompt style completely).
+2. Omni Reference (--oref)
+• Function: Replaces "Character Reference" (--cref). It locks the identity of a person or an object.
+• Implementation: [Prompt] --oref [URL]
+• Omni Weight (--ow):
+    ◦ --ow 10 (Style transfer only).
+    ◦ --ow 1000 (Strict pixel-perfect structure retention).
+3. SREF Codes (The "Text-Only" Bridge)
+• Tip: You don't actually need to host images to use SREF now. Midjourney supports "SREF Codes" (random seeds that act as styles).
+• Hack: You can hard-code specific "Vibes" using these random numbers.
+• Example: If you discover that `--sref 12345
