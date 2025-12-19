@@ -3,252 +3,252 @@ import type { Scene } from '../types';
 export const theMatrixScenes: Scene[] = [
     {
         id: 1,
-        title: "Trinity's Kick",
-        promptPayload: "Trinity suspended in mid-air, performing the crane kick, bullet time freeze frame, 360-degree camera rotation visualized, green tint, black latex, gritty police station background."
+        title: "Trinity Kick",
+        promptPayload: "Trinity floating in mid-air, frozen time bullet time effect, black latex suit, kicking policeman, 360 degree camera rotation, green tint, gritty room."
     },
     {
         id: 2,
         title: "Follow the White Rabbit",
-        promptPayload: "Neo sleeping at his computer desk, screen glowing green with 'Follow the white rabbit', dark messy apartment, cyberpunk atmosphere, rain on window."
+        promptPayload: "Neo sleeping at computer desk, screen text 'Follow the white rabbit', dark messy hacker apartment, green monitor glow, rain on window, lonely atmosphere."
     },
     {
         id: 3,
-        title: "The Club Scene",
-        promptPayload: "Neo and Trinity meeting at the club, loud industrial music visualized, strobe lights, leather outfits, sweat, 'Hello Neo', intense eye contact."
+        title: "Interrogation Bug",
+        promptPayload: "Agent Smith interrogating Neo, mouth melting shut, mechanical bug robot crawling into belly button, body horror, sterile white interrogation room, high contrast."
     },
     {
         id: 4,
-        title: "The Interrogation",
-        promptPayload: "Agent Smith sitting across from Neo, 'Mr. Anderson', mouth fusing shut, horror, sterile white room, green tint, sunglasses reflection."
+        title: "Red Pill Blue Pill",
+        promptPayload: "Morpheus wearing reflective glasses reflected in glasses are two pills in open palms, red and blue, dark leather armchair, fireplace background, decision moment."
     },
     {
         id: 5,
-        title: "The Bug",
-        promptPayload: "Agents holding Neo down, mechanical bug device entering his navel, body horror, screaming, rain outside, dark noir lighting."
+        title: "Waking Up in Pod",
+        promptPayload: "Neo waking up inside pink gooey pod, wires connected to body, endless fields of harvesting towers, lightning storm, dystopian horror, sludge texture."
     },
     {
         id: 6,
-        title: "Red Pill Blue Pill",
-        promptPayload: "Morpheus holding out two hands, a red pill and a blue pill reflected in his sunglasses, leather armchair, fireplace, 'Welcome to the real world'."
+        title: "Kung Fu Dojo",
+        promptPayload: "Neo vs Morpheus in dojo sparring program, traditional gi, wood floor, blurred action punch, 'I know Kung Fu', wirework, focus on sweat."
     },
     {
         id: 7,
-        title: "The Mirror",
-        promptPayload: "Neo touching the mirror, the liquid mercury substance consuming his hand and arm, distorted reflection, panic, breaking through reality."
+        title: "Jump Program",
+        promptPayload: "Neo failing the jump, falling from skyscraper, motion blur, city below, Morpheus watching calmly, blue sky, concrete impact."
     },
     {
         id: 8,
-        title: "Waking Up",
-        promptPayload: "Neo waking up in the pod, pink goo, cables attached to body, endless fields of pods in background, lightning, dystopian horror."
+        title: "Oracle's Kitchen",
+        promptPayload: "The Oracle baking cookies, warm kitchen, cigarette smoke, Neo looking confused, 'Know Thyself' sign, boy bending spoon in background."
     },
     {
         id: 9,
-        title: "The Construct",
-        promptPayload: "Neo and Morpheus standing in the white void of the Construct, 'This is the Construct', minimalist, pure white background, leather armchairs, TV set."
+        title: "Lobby Shootout",
+        promptPayload: "Neo and Trinity walking into lobby, trench coats, guns drawn, marble pillars shattering, concrete dust, debris flying, slow motion action masterpiece."
     },
     {
         id: 10,
-        title: "Kung Fu Training",
-        promptPayload: "Neo and Morpheus fighting in the dojo, 'I know Kung Fu', motion blur, wooden floor, traditional gi, intense sparring."
+        title: "Rooftop Bullet Dodge",
+        promptPayload: "Neo leaning backward 90 degrees, bullets rippling through air, shockwave trails, green matrix code rain, iconic pose, slow motion."
     },
     {
         id: 11,
-        title: "Jump Program",
-        promptPayload: "Neo jumping between skyscrapers, failing, falling, pavement rushing up, 'Free your mind', defying gravity, blue sky."
+        title: "Helicopter Rescue",
+        promptPayload: "Morpheus breaking chains, jumping towards helicopter skids, glass building shattering, explosion, daring escape, urban skyline."
     },
     {
         id: 12,
-        title: "Woman in Red",
-        promptPayload: "Crowded city street, everyone in black and white suits, Woman in Red walking past, Neo looking back, Agent Smith pointing a gun, simulation glitch."
+        title: "Subway Fight",
+        promptPayload: "Neo vs Agent Smith in subway station, concrete tiles cracking, punches creating shockwaves, dust, gritty green lighting, newspapers flying."
     },
     {
         id: 13,
-        title: "The Oracle's Kitchen",
-        promptPayload: "The Oracle baking cookies, smoking a cigarette, warm lighting, 'Know Thyself' sign, Neo looking confused, spoon bending kid in background."
+        title: "Sentinel Attack",
+        promptPayload: "Nebuchadnezzar interior, Sentinels cutting through hull with lasers, sparks showering, red emergency lights, crew panic, metallic tentacles."
     },
     {
         id: 14,
-        title: "Déjà Vu",
-        promptPayload: "A black cat walking past a doorway, shaking itself, then doing it again exactly the same way, 'Déjà vu is a glitch in the Matrix', ominous."
+        title: "The One Awakening",
+        promptPayload: "Neo standing up after being shot, bullets stopping in mid-air, green code overlaying reality, seeing the Matrix source code, enlightenment, hallway."
     },
     {
         id: 15,
-        title: "Lobby Shootout",
-        promptPayload: "Neo and Trinity entering the lobby, trench coats, guns blazing, marble pillars shattering, debris flying, slow motion, acrobatic violence."
+        title: "Phone Booth Exit",
+        promptPayload: "Neo hanging up phone, looking at camera, flying up into sky, superman exit, rock music vibe, city street, green tint."
     },
     {
         id: 16,
-        title: "Cartwheel Shooting",
-        promptPayload: "Neo doing a cartwheel while firing an M16, shell casings falling in slow motion, guards falling, chaos, stylized action."
+        title: "Woman in Red",
+        promptPayload: "Crowded city street simulation, black and white suits, sudden woman in red dress turning around, distraction, Agent Smith gun pointed."
     },
     {
         id: 17,
-        title: "Rooftop Dodge",
-        promptPayload: "Neo leaning back to dodge bullets, 'bullet time' ripples in the air, camera spinning, green tint, rooftop skyline."
+        title: "Tank and Dozer",
+        promptPayload: "Tank at the operator chairs, looking at falling code screens, grin, industrial ship interior, frayed cables, worn textures."
     },
     {
         id: 18,
-        title: "Trinity's Headshot",
-        promptPayload: "Trinity holding a gun to the Agent's head, 'Dodge this', muzzle flash, glass shattering, close up, fierce expression."
+        title: "Cypher's Steak",
+        promptPayload: "Cypher eating juicy steak, Agent Smith watching, restaurant setting, harp music, betrayal, 'Ignorance is bliss', wine glass."
     },
     {
         id: 19,
-        title: "Helicopter Rescue",
-        promptPayload: "Morpheus hanging from the helicopter skid, Neo holding him, glass skyscraper reflecting the chopper, wind, high altitude tension."
+        title: "Spoon Boy",
+        promptPayload: "Bald child monk holding spoon, spoon bending with mind, 'There is no spoon', reflection in spoon, soft lighting, philosophical moment."
     },
     {
         id: 20,
-        title: "Subway Fight",
-        promptPayload: "Neo and Agent Smith facing off in the subway station, newspapers flying, dust, western standoff vibe, 'He's beginning to believe'."
+        title: "Trinity's Kiss",
+        promptPayload: "Trinity kissing Neo's dead body in the real world, sparks from sentinels nearby, sweat, love resurrecting him, grey ship lighting."
     },
     {
         id: 21,
-        title: "One Handed Fight",
-        promptPayload: "Neo fighting Agent Smith with one hand behind his back, blocking punches effortlessly, speed blur, confidence."
+        title: "Mirror Touch",
+        promptPayload: "Neo touching the mirror, liquid silver spreading up his arm, horror, hallucination, distorted reflection, breaking reality."
     },
     {
         id: 22,
-        title: "Train Impact",
-        promptPayload: "Agent Smith holding Neo in a headlock, subway train approaching, light blinding, sound visualized, impact."
+        title: "Construct White Room",
+        promptPayload: "Infinite white void, Neo and Morpheus standing, leather armchairs, TV with static, 'The Construct', surreal minimalism."
     },
     {
         id: 23,
-        title: "Sentinel Attack",
-        promptPayload: "Sentinels swarming the Nebuchadnezzar, lasers cutting through the hull, sparks, EMP charging, claustrophobic fear."
+        title: "Deja Vu Cat",
+        promptPayload: "Black cat walking past doorway, glitch, repeating movement, Neo noticing, ominous feeling, brick hallway texture."
     },
     {
         id: 24,
-        title: "Neo's Death",
-        promptPayload: "Agent Smith shooting Neo in the chest multiple times, Neo falling against the wall, sliding down, shock, 'It is inevitable'."
+        title: "Wall Run",
+        promptPayload: "Trinity running horizontally along wall, guns firing, slow motion, coat tails flapping, defying gravity, lobby pillars."
     },
     {
         id: 25,
-        title: "Trinity's Kiss",
-        promptPayload: "Trinity kissing Neo's body in the real world, 'The Oracle told me...', sparks flying in background, resurrection, love conquers death."
+        title: "Smith's sunglasses",
+        promptPayload: "Close up of Agent Smith's face, reflection of Neo in sunglasses, stoic expression, earpiece, suit and tie, green tint."
     },
     {
         id: 26,
-        title: "The One",
-        promptPayload: "Neo standing up, bullets stopping in mid-air before him, raising his hand, green code raining down, seeing the Matrix code."
+        title: "Battery Analogy",
+        promptPayload: "Morpheus holding up a Duracell battery, explaining human energy, lightning storm background, grim realization, copper top."
     },
     {
         id: 27,
-        title: "Code Vision",
-        promptPayload: "POV of Neo seeing the hallway as streaming green code, Agents appearing as green silhouettes, mastery of reality."
+        title: "Nebuchadnezzar Ship",
+        promptPayload: "Exterior of the hovercraft Nebuchadnezzar moving through sewer tunnels, electrical lightning, dark industrial textures, steampunk vibes."
     },
     {
         id: 28,
-        title: "Agent Explosion",
-        promptPayload: "Neo diving into Agent Smith's body, Smith exploding from the inside in beams of white light, shattering, victory."
+        title: "Switch's Death",
+        promptPayload: "Switch collapsing as plug is pulled, 'Not like this', fading away, tragedy, white room, betrayal impact."
     },
     {
         id: 29,
-        title: "Phone Booth Flight",
-        promptPayload: "Neo stepping out of a phone booth, putting on sunglasses, looking up, flying into the camera, 'Where we go from there is a choice I leave to you'."
+        title: "Helicopter Minigun",
+        promptPayload: "Brass shell casings raining down in slow motion from minigun, glass shattering, Neo holding gun, ripples in air."
     },
     {
         id: 30,
-        title: "Nebuchadnezzar Crew",
-        promptPayload: "The crew eating slop in the mess hall, 'Tastee Wheat', gritty industrial ship interior, torn clothes, camaraderie."
+        title: "Subway Train Hit",
+        promptPayload: "Agent Smith hit by subway train, impact, dust, Neo jumping away, motion blur, gritty underground lighting."
     },
     {
         id: 31,
-        title: "Cypher's Steak",
-        promptPayload: "Cypher eating a juicy steak in a fancy restaurant with Agent Smith, 'Ignorance is bliss', harp player in background, betrayal."
+        title: "System Failure",
+        promptPayload: "Phone booth ringing, Neo watching, code deconstructing the world, ending logic, green rain accelerating."
     },
     {
         id: 32,
-        title: "Switch's Death",
-        promptPayload: "Switch falling to the ground, 'Not like this', plug pulled in the real world, tragedy, white room."
+        title: "Desert of the Real",
+        promptPayload: "Morpheus showing Neo the ruins of the city, grey scorched sky, lightning, destroyed skyscrapers, bleak future."
     },
     {
         id: 33,
-        title: "Morpheus Torture",
-        promptPayload: "Morpheus in the chair, sweat, Agents injecting serum, 'I can only show you the door', mental fortitude."
+        title: "Window Cleaner",
+        promptPayload: "Neo in high rise office, window cleaners squeaking outside, boss lecturing him, mundane corporate prison, green hue."
     },
     {
         id: 34,
-        title: "Spoon Boy",
-        promptPayload: "Close up of the spoon bending, reflection of Neo in the spoon, 'There is no spoon', child monk, realization."
+        title: "Club Scene",
+        promptPayload: "Trinity whispering to Neo in loud club, Rob Zombie music vibe, dark, sweat, leather, industrial goth aesthetic."
     },
     {
         id: 35,
-        title: "Guns Lots of Guns",
-        promptPayload: "Neo and Trinity standing in the white void, racks of guns rushing in from both sides, 'Guns. Lots of guns.', preparation."
+        title: "Cell Phone Drop",
+        promptPayload: "Nokia phone falling in slow motion from skyscraper, spinning, hitting ground, shatter, extreme height perspective."
     },
     {
         id: 36,
-        title: "Agent Smith's Earpiece",
-        promptPayload: "Close up of Agent Smith adjusting his earpiece, 'It's the smell', disgust on his face, inhuman perfection."
+        title: "Agent Transformation",
+        promptPayload: "Homeless man morphing into Agent Smith, green digital code overlay, seizing control, body snatching, horror."
     },
     {
         id: 37,
-        title: "Squiddies",
-        promptPayload: "Sentinels (Squiddies) swimming through the sewers of the real world, red eyes glowing, metallic tentacles, swarm."
+        title: "Mouse's Last Stand",
+        promptPayload: "Mouse firing automatic shotguns, 'To deny our own impulses', falling backwards through window, slow motion tragedy."
     },
     {
         id: 38,
-        title: "Tank and Dozer",
-        promptPayload: "Tank at the operator chair, screens reflecting on his face, 'Operator', lightning bolt scar, real world tech."
+        title: "EMP Blast",
+        promptPayload: "Morpheus hitting EMP button, white shockwave, lights going out, Sentinels falling dead, silence, darkness."
     },
     {
         id: 39,
-        title: "EMP Blast",
-        promptPayload: "Morpheus hitting the EMP button, wave of blue energy expanding, lights dying, silence, darkness."
+        title: "Code Rain Intro",
+        promptPayload: "Falling green katakana code against black background, glowing trails, digital mystery, cyber aesthetic, iconic opening."
     },
     {
         id: 40,
-        title: "Neo's Office",
-        promptPayload: "Neo in his cubicle, boss lecturing him, 'You have a problem with authority', green tint, corporate prison."
+        title: "Wet Wall Escape",
+        promptPayload: "Neo and Trinity sliding down wet pipe inside wall, dark, cramped, brick texture, escaping agents."
     },
     {
         id: 41,
-        title: "Window Cleaner",
-        promptPayload: "Neo looking out the skyscraper window, window cleaners wiping away suds, squeaking sound, vertigo."
+        title: "Roof Access Door",
+        promptPayload: "Neo opening roof door, blinding white light, entering bullet time scene, contrast between dark stairwell and bright sky."
     },
     {
         id: 42,
-        title: "Nokia Phone",
-        promptPayload: "Close up of the Nokia 8110 sliding open, 'FedEx', envelope drop, 90s tech nostalgia."
+        title: "Download Knowledge",
+        promptPayload: "Tank loading floppy disk, Neo's eyes fluttering, 'I'm going to learn Jujitsu', brain jack connector close up."
     },
     {
         id: 43,
-        title: "Trinity's Whisper",
-        promptPayload: "Trinity whispering in Neo's ear at the club, 'It's the question that drives us', loud music, intimacy."
+        title: "Sentinel Swarm",
+        promptPayload: "Thousands of Sentinels swarming through sewer tunnels, red eyes glowing, metallic ocean, insect-like movement."
     },
     {
         id: 44,
-        title: "Mouse's Death",
-        promptPayload: "Mouse firing dual shotguns, 'Stop!', getting shot by SWAT, slow motion fall, shell casings."
+        title: "Building Jump",
+        promptPayload: "POV looking down from skyscraper, tiny cars, vertigo, preparing to jump, test of faith."
     },
     {
         id: 45,
-        title: "Desert of the Real",
-        promptPayload: "Morpheus showing Neo the ruined real world, scorched sky, lightning, ruins of cities, 'Welcome to the desert of the real'."
+        title: "Neo's Office Cubicle",
+        promptPayload: "Endless rows of grey cubicles, fluorescent lights, Neo hiding under desk, FedEx package, corporate dystopia."
     },
     {
         id: 46,
-        title: "Battery",
-        promptPayload: "Morpheus holding up a Duracell battery, 'To turn a human being into this', shock, revelation."
+        title: "Smith's Punch",
+        promptPayload: "Fist impacting Neo's ribs, x-ray bone ripple effect, brutal impact, shockwave, spit flying, fight choreography."
     },
     {
         id: 47,
-        title: "Code Rain",
-        promptPayload: "The falling green code, digital rain, Japanese katakana characters, iconic intro, abstract data."
+        title: "Elevator Bomb",
+        promptPayload: "Elevator cable snapping, falling, explosion fire ball shooting up shaft, Neo and Trinity swinging away on cable."
     },
     {
         id: 48,
-        title: "Neo's Sunglasses",
-        promptPayload: "Close up of Neo's rimless sunglasses, reflection of Morpheus, cool cyber style."
+        title: "Squiddies on Hull",
+        promptPayload: "Sentinels landing on Nebuchadnezzar hull, lasers cutting, welding sparks, metal melting, terrifying clicking sounds."
     },
     {
         id: 49,
-        title: "Trinity's Bike",
-        promptPayload: "Trinity on a motorcycle (sequel foreshadowing or concept), black leather, speed, sleek design."
+        title: "Trinty's Scorpion Kick",
+        promptPayload: "Trinity's legs rising up behind her back in scorpion pose, slow motion, beginning of movie, police terrified."
     },
     {
         id: 50,
-        title: "System Failure",
-        promptPayload: "Screen showing 'System Failure', glitching, the Matrix rebooting, end of the movie."
+        title: "End Title",
+        promptPayload: "System Failure text in green code, rock music start, Rage Against the Machine vibe, rebellion, ending shot."
     }
 ];

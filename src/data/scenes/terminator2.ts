@@ -3,252 +3,252 @@ import type { Scene } from '../types';
 export const terminator2Scenes: Scene[] = [
     {
         id: 1,
-        title: "Future War",
-        promptPayload: "A T-800 endoskeleton crushing a human skull under its metal foot, purple lasers firing in the background, ruined city, blue night, apocalyptic war."
+        title: "Skull Crush",
+        promptPayload: "Future war battlefield, T-800 metal foot crushing human skull, blue night lasers, rubble, apocalyptic wasteland, grim opening."
     },
     {
         id: 2,
-        title: "Arrival Sphere",
-        promptPayload: "The T-800 (Arnold) arriving in the present, kneeling in a glowing sphere of energy, steam rising, truck cut in half, naked muscle."
+        title: "Barroom Brawl",
+        promptPayload: "Arnold naked in biker bar, grabbing biker by sunglasses, 'I need your clothes, your boots, and your motorcycle', tough atmosphere, muscle definition."
     },
     {
         id: 3,
-        title: "Bar Fight",
-        promptPayload: "The T-800 grabbing a biker by the hand, 'I need your clothes, your boots, and your motorcycle', pool cues breaking, tough atmosphere."
+        title: "Bad to the Bone",
+        promptPayload: "Terminator walking out of bar in leather gear, putting on sunglasses, shotgun, motorcycle, classic rock vibe, confident slow motion."
     },
     {
         id: 4,
-        title: "Bad to the Bone",
-        promptPayload: "The T-800 stepping out of the bar in leather gear, putting on sunglasses, 'Bad to the Bone' playing (implied), cool motorcycle."
+        title: "T-1000 Arrival",
+        promptPayload: "Police car arrival, T-1000 morphing from liquid metal sphere, chrome reflection, naked silhouette, cold expression, electrical sparks."
     },
     {
         id: 5,
-        title: "T-1000 Arrival",
-        promptPayload: "The T-1000 arriving under the bridge, police car pulling up, liquid metal forming into a cop uniform, cold stare."
+        title: "Canal Chase",
+        promptPayload: "Truck chasing dirt bike in LA river canal, massive semi truck jumping from bridge, sparks, John Connor looking back in terror, sunny day action."
     },
     {
         id: 6,
-        title: "Galleria Chase",
-        promptPayload: "John Connor on his dirt bike, T-1000 driving a tow truck, T-800 firing a shotgun from his Harley, slow motion reload, mall corridors."
+        title: "Rosen's Flowers",
+        promptPayload: "T-800 pulling shotgun from box of roses, slow motion walking, mall hallway, 'Get down', impending violence, bouquet falling."
     },
     {
         id: 7,
-        title: "Roses and Shotgun",
-        promptPayload: "The T-800 pulling a shotgun out of a box of roses, slow motion, petals falling, 'Get down!', protecting John."
+        title: "T-1000 vs T-800",
+        promptPayload: "T-800 thrown through window, T-1000 showing no pain, bullet holes in police uniform healing silver, mall brawl, physical power."
     },
     {
         id: 8,
-        title: "T-1000 Walking Through Bars",
-        promptPayload: "The T-1000 walking through the metal bars of the asylum gate, gun getting stuck for a second, liquid metal effect, terrifying silence."
+        title: "Pescadero Asylum",
+        promptPayload: "Sarah Connor doing pull-ups on overturned bed, sweat, muscle definition, intense focus, mental hospital cell, blue cold lighting."
     },
     {
         id: 9,
-        title: "Sarah's Nightmare",
-        promptPayload: "Sarah Connor watching the nuclear explosion at the playground, children burning, skin peeling, fence rattling, orange fire."
+        title: "Lick the Floor",
+        promptPayload: "Guard licking Sarah's face, Sarah spitting, restraints, abuse, anger in eyes, white hospital uniform, tension."
     },
     {
         id: 10,
-        title: "Pescadero Escape",
-        promptPayload: "Sarah Connor beating the orderly with a mop handle, running down the hallway, syringe in neck, desperate escape."
+        title: "Hospital Escape",
+        promptPayload: "Sarah running barefoot, T-800 stepping off elevator, 'Come with me if you want to live', shotgun blast, slow motion realization."
     },
     {
         id: 11,
-        title: "Elevator Head Split",
-        promptPayload: "The T-1000's head split open by a shotgun blast, revealing liquid metal inside, healing instantly, Sarah screaming."
+        title: "Liquid Metal Bars",
+        promptPayload: "T-1000 walking through metal prison bars, gun getting stuck, liquid metal flowing around bars, chrome texture, mind bending VFX."
     },
     {
         id: 12,
-        title: "Come With Me",
-        promptPayload: "The T-800 extending his hand to Sarah, 'Come with me if you want to live', flashback to the first movie, trust."
+        title: "Skull Surgery",
+        promptPayload: "Sarah operating on T-800 head, mirror reflection, CPU chip removal, bloody tools, mechanical skull underneath, gore and tech."
     },
     {
         id: 13,
-        title: "Police Car Escape",
-        promptPayload: "The T-1000 running after the police car, hook arms forming, metal merging with metal, high speed reverse driving."
+        title: "Nuclear Nightmare",
+        promptPayload: "Sarah's dream, playground fence, nuclear explosion, skin burning off skeleton, playground washing away, fiery apocalypse, screaming."
     },
     {
         id: 14,
-        title: "Stitching the Wounds",
-        promptPayload: "Sarah stitching up the T-800's back, revealing the metal chassis underneath the skin, bloody towel, bonding moment."
+        title: "Dyson's House",
+        promptPayload: "Sarah aiming laser sight at Dyson, red dot on forehead, terrified family, home interior, assassination attempt, heavy breathing."
     },
     {
         id: 15,
-        title: "No Fate",
-        promptPayload: "Sarah carving 'NO FATE' into the wooden table with a knife, desert setting, determination, sunset."
+        title: "Revealing the Arm",
+        promptPayload: "T-800 cutting off arm skin to show Dyson the robot hand, bloody skeleton hand moving, shock on Dyson's face, truth revealed."
     },
     {
         id: 16,
-        title: "Minigun at Cyberdyne",
-        promptPayload: "The T-800 firing a minigun from the broken window of Cyberdyne, destroying police cars, 'Human Casualties: 0.0', massive destruction."
+        title: "Cyberdyne Lobby",
+        promptPayload: "T-800 with minigun destroying police cars, 'Human Casualties: 0.0', office glass shattering, massive destruction, smoke and chaos."
     },
     {
         id: 17,
-        title: "Tear Gas Launcher",
-        promptPayload: "The T-800 walking through the tear gas, firing a grenade launcher, police fleeing, unstoppable machine."
+        title: "Tear Gas SWAT",
+        promptPayload: "SWAT team entering through smoke, gas masks, lasers beams cutting fog, T-800 walking through tear gas unaffected, blue lighting."
     },
     {
         id: 18,
-        title: "Helicopter Pilot",
-        promptPayload: "The T-1000 pouring itself into the helicopter cockpit, 'Get out', liquid metal taking form, glass shattering."
+        title: "Helicopter Jump",
+        promptPayload: "T-1000 motorcycle jumping out of building into helicopter, glass shattering, mid-air freeze, liquid metal pilot, insane stunt."
     },
     {
         id: 19,
         title: "Liquid Nitrogen Truck",
-        promptPayload: "The liquid nitrogen truck crashing, freezing gas spilling everywhere, T-1000 freezing solid, 'Hasta la vista, baby'."
+        promptPayload: "Liquid nitrogen tanker leaking, T-1000 freezing solid, statutesque pose, breaking off limbs, 'Hasta la vista, baby', cold blue smoke."
     },
     {
         id: 20,
         title: "Shattered T-1000",
-        promptPayload: "The T-800 shooting the frozen T-1000, shattering into thousands of ice pieces, sliding across the floor."
+        promptPayload: "Frozen T-1000 exploding into thousands of ice shards, sliding across steel mill floor, melting into mercury droplets, reforming."
     },
     {
         id: 21,
-        title: "Melting Together",
-        promptPayload: "The pieces of the T-1000 melting and merging back together, mercury-like liquid pooling, reforming, horror."
+        title: "Steel Mill Finale",
+        promptPayload: "Molten steel vat glowing orange, industrial catwalks, T-800 vs T-1000 fight, heat distortion, sweat, damaged makeup."
     },
     {
         id: 22,
-        title: "Steel Mill Fight",
-        promptPayload: "The T-800 and T-1000 fighting in the steel mill, gears grinding, sparks, T-800 arm getting crushed, industrial setting."
+        title: "Arm in Gear",
+        promptPayload: "T-800 arm trapped in giant gears, crushing metal, sparks flying, struggle, power failing, red eye flickering."
     },
     {
         id: 23,
-        title: "Donut Head",
-        promptPayload: "The T-1000 disguised as Sarah Connor, shotgun blast blowing a hole through its head, metal reforming."
+        title: "Thumbs Up",
+        promptPayload: "T-800 lowering into lava, metal skull burning, final thumbs up hand rising, emotional sacrifice, tearful John Connor, orange glow."
     },
     {
         id: 24,
-        title: "Thumbs Up",
-        promptPayload: "The T-800 being lowered into the molten steel, raising a thumb, 'I know now why you cry', emotional ending."
+        title: "No Fate",
+        promptPayload: "Carving 'NO FATE' into wooden picnic table, knife detail, desert setting, sun flare, Sarah contemplating, knife macro."
     },
     {
         id: 25,
-        title: "Sarah's Pull-ups",
-        promptPayload: "Sarah Connor doing pull-ups in her cell, bed overturned, sweat, muscles, preparation for war."
+        title: "Reloading Shotgun",
+        promptPayload: "T-800 flipping leverage shotgun one-handed on motorcycle, spin cocking mechanism, cool action beat, leather jacket texture."
     },
     {
         id: 26,
-        title: "Dyson's Breath",
-        promptPayload: "Miles Dyson holding the detonator, heavy breathing, SWAT team moving in, sacrifice."
+        title: "Donut Stick",
+        promptPayload: "T-1000 poking finger through guard's head, turning into spike, coffee cup dropping, 'Hey that's a nice bike', liquid metal horror."
     },
     {
         id: 27,
-        title: "Arm and Chip",
-        promptPayload: "The T-800 revealing the preserved arm and chip from the first terminator, glass tube, high tech vault."
+        title: "Floor Tile Camouflage",
+        promptPayload: "T-1000 rising out of checkered floor tile, texture morphing from chaotic to chrome to police uniform, perfect stealth."
     },
     {
         id: 28,
-        title: "Biker Sunglasses",
-        promptPayload: "Close up of the T-800 stealing the sunglasses from the biker, red HUD overlay, acquiring target."
+        title: "Smiling Lesson",
+        promptPayload: "John teaching Terminator to smile, awkward mechanical grin, teeth showing, desert background, bonding moment, humor."
     },
     {
         id: 29,
-        title: "Wolfie",
-        promptPayload: "The T-800 on the phone, 'Your foster parents are dead', dog barking, deception detected."
+        title: "Minigun Bloom",
+        promptPayload: "Muzzle flash of minigun spinning, shell casings pouring out like water, glass shredding, unstoppable force, cinematic slow motion."
     },
     {
         id: 30,
-        title: "High Five",
-        promptPayload: "John teaching the T-800 to high five, 'Too slow', awkward robot learning, desert background."
+        title: "Grenade Launcher",
+        promptPayload: "T-800 firing thumper grenade launcher, smoke trail, explosion, reloading break-action, badass pose, damaged face."
     },
     {
         id: 31,
-        title: "Smile",
-        promptPayload: "The T-800 trying to smile, mechanical and creepy, John laughing, humanizing the machine."
+        title: "Tanker Explosion",
+        promptPayload: "Steel mill truck crash, massive explosion filling screen, T-800 walking away, silhouette, fire dynamics."
     },
     {
         id: 32,
-        title: "T-1000 Floor",
-        promptPayload: "The T-1000 rising from the checkered floor, texture matching, perfect camouflage, stealth attack."
+        title: "Sarah's Sunglasses",
+        promptPayload: "Sarah wearing round sunglasses, smoking cigarette, desert wind, looking at horizon, warrior mother, iconic look."
     },
     {
         id: 33,
-        title: "Grenade Launcher Reload",
-        promptPayload: "The T-800 flipping the grenade launcher one-handed to reload, cool action move, smoke."
+        title: "High Five",
+        promptPayload: "John teaching T-800 to high five, hand missing, looking at hand confused, learning humanity, 'Up high, down low'."
     },
     {
         id: 34,
-        title: "Sarah Sniping",
-        promptPayload: "Sarah aiming a silenced rifle at Dyson's house, laser dot on his head, becoming the terminator."
+        title: "Enrique's Camp",
+        promptPayload: "Underground bunker, weapons cache, cleaning guns, desert heat, military preparation, stockpiling ammo."
     },
     {
         id: 35,
-        title: "Molten Steel",
-        promptPayload: "The T-1000 falling into the molten steel, screaming, face shifting through different forms, dissolving."
+        title: "Phone Booth Trick",
+        promptPayload: "John hacking ATM with Atari portfolio, money spitting out, easy money, 90s tech, young hacker."
     },
     {
         id: 36,
-        title: "Power Cell",
-        promptPayload: "The T-800 removing his power cell (deleted scene), mirror reflection, John connecting the wires."
+        title: "Two Sarahs",
+        promptPayload: "T-1000 mimicking Sarah Connor, real Sarah appearing with shotgun, confusion, doubling effect, steel mill tension."
     },
     {
         id: 37,
-        title: "Canal Jump",
-        promptPayload: "The Harley Davidson jumping into the storm drain, sparks flying, heavy landing, chase continues."
+        title: "Gaping Hole",
+        promptPayload: "T-1000 shot in head, splash of deformations, head split open in donut shape, healing instantly, shock horror."
     },
     {
         id: 38,
-        title: "Finger Blade",
-        promptPayload: "The T-1000 turning its finger into a long metal spike, 'tsk tsk', threatening Sarah."
+        title: "Need a Vacation",
+        promptPayload: "T-800 damaged, steam leaking, 'I need a vacation', half face metal exposed, glowing red eye, battle damage."
     },
     {
         id: 39,
-        title: "Face Lick",
-        promptPayload: "The asylum guard licking Sarah's face, gross, abuse of power, Sarah's cold reaction."
+        title: "Hook Ride",
+        promptPayload: "T-1000 riding on back of tow truck, hook caught in shoulder, ripping metal, uncaring expression, pursuit intensity."
     },
     {
         id: 40,
-        title: "Shotgun Kneecap",
-        promptPayload: "The T-800 shooting the SWAT team in the legs, 'He'll live', following orders not to kill."
+        title: "Elevator Ceiling",
+        promptPayload: "T-1000 head reforming from splash on elevator ceiling, dripping down, liquid horror, claustrophobia."
     },
     {
         id: 41,
-        title: "Truck Crash",
-        promptPayload: "The tow truck crashing off the bridge, explosion, T-1000 walking out of the fire unscathed."
+        title: "Semi-Truck Tires",
+        promptPayload: "Giant truck tires screeching, smoke, turning corner hard, heavy weight, action chase, low angle."
     },
     {
         id: 42,
-        title: "Enrique's Camp",
-        promptPayload: "The weapons cache in the desert, guns piled up, Sarah cleaning weapons, preparing for the apocalypse."
+        title: "Security Guard Coffee",
+        promptPayload: "Guard dropping cup, liquid T-1000 blending with floor, coffee spill, subtle VFX, quiet kill."
     },
     {
         id: 43,
-        title: "T-1000 Motorcycle Jump",
-        promptPayload: "The T-1000 riding a police motorcycle up the stairs, crashing through the window, relentless pursuit."
+        title: "Vault Key",
+        promptPayload: "Key turning in Cyberdyne vault, heavy door opening, revealing CPU arm, blue light, heist vibe."
     },
     {
         id: 44,
-        title: "Reset Switch",
-        promptPayload: "Close up of the chip port on the T-800's head, tweezers, delicate surgery."
+        title: "Police Helicopter Pilot",
+        promptPayload: "T-1000 oozing through helicopter window, telling pilot 'Get out', liquid flows, taking control."
     },
     {
         id: 45,
-        title: "Playground Skeleton",
-        promptPayload: "Sarah holding onto the chain link fence as she burns, turning into a skeleton, nuclear wind."
+        title: "Highway Night",
+        promptPayload: "Road markers passing at speed, headlights, intro narration, dark blue night, destiny, highway hypnosis."
     },
     {
         id: 46,
-        title: "Arcade",
-        promptPayload: "John playing Missile Command in the arcade, 90s nostalgia, unaware of the danger."
+        title: "Wolfie",
+        promptPayload: "T-800 on phone mimicking John's voice, 'Wolfie's fine honey', deception, red HUD text 'Voice ID Match'."
     },
     {
         id: 47,
-        title: "ATM Hack",
-        promptPayload: "John using the Atari Portfolio to hack the ATM, 'Easy money', tech wiz kid."
+        title: "Galleria Mall",
+        promptPayload: "90s mall interior, arcades, neon signs, kids playing, T-800 scanning crowd, Terminator vision overlay."
     },
     {
         id: 48,
-        title: "Swat Van",
-        promptPayload: "The T-800 driving the SWAT van backwards, crashing through the lobby, rescue."
+        title: "Cryogenic Tank",
+        promptPayload: "Tank rolling over, freezing gas spraying everywhere, white out, visibility zero, cold vs hot contrast."
     },
     {
         id: 49,
-        title: "Road at Night",
-        promptPayload: "The dark highway at night, yellow lines passing, 'The unknown future rolls toward us', hope."
+        title: "Hand in Gear",
+        promptPayload: "T-800 crushing T-1000's hand in gear, screeching metal sound visually represented, struggle, mechanical strength."
     },
     {
         id: 50,
-        title: "Metal Man",
-        promptPayload: "The T-1000 fully formed in chrome, walking out of the fire, reflections of flames on the body."
+        title: "Dark Highway Ending",
+        promptPayload: "Camera tracking fast down dark highway, lane lines blurring, unknown future, 'The luxury of hope', black screen fade."
     }
 ];

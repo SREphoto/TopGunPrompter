@@ -2,7 +2,7 @@ import { useState, useMemo } from 'react';
 import { movieScenes } from './data/scenes';
 import { styles as globalStyles } from './data/stylesV3';
 import { movies } from './data/moviesV3';
-import { Copy, Terminal, Settings, Film, ArrowRight, Palette, CheckCircle, ChevronDown, ChevronRight, Search, SortAsc, Layers, Maximize2, Minimize2 } from 'lucide-react';
+import { Copy, Terminal, Film, Palette, CheckCircle, ChevronDown, ChevronRight, Search, SortAsc, Layers, Maximize2, Minimize2 } from 'lucide-react';
 
 type LayoutMode = 'split' | 'scene-focus' | 'style-focus';
 

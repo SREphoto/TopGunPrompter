@@ -3,252 +3,252 @@ import type { Scene } from '../types';
 export const bladeRunner2049Scenes: Scene[] = [
     {
         id: 1,
-        title: "The Protein Farm",
-        promptPayload: "K walking through the grey mist towards Sapper Morton's farm, dead tree in foreground, solar panels, bleak atmosphere, brutalist architecture, pale light."
+        title: "Protein Farm Opening",
+        promptPayload: "Aerial shot of endless circular solar farms, grey sky, mist, Sapper Morton's farm in center, geometric pattern, bleak future, roger deakins cinematography."
     },
     {
         id: 2,
-        title: "Eye Opening",
-        promptPayload: "Extreme close up of an eye opening, green iris, reflecting the lights of Los Angeles 2049, macro photography, cinematic opening shot."
+        title: "K's Kitchen",
+        promptPayload: "Officer K sitting in small apartment kitchen, holographic Joi cooking dinner, blue mood lighting, rain on window, lonely atmosphere, cyberpunk domesticity."
     },
     {
         id: 3,
-        title: "Sapper's Kitchen",
-        promptPayload: "Interior of Sapper Morton's kitchen, boiling pot of garlic, dim natural light, dust motes, K sitting at the table, tension, rustic sci-fi."
+        title: "Baseline Test",
+        promptPayload: "Extreme close up of K's eye, white room, 'Cells interlinked within cells interlinked', physiological response test, sterile white lighting, tension."
     },
     {
         id: 4,
-        title: "Finding the Box",
-        promptPayload: "K scanning the ground near the dead tree, drone view, thermal imaging overlay, buried box revealed, mystery, desolate landscape."
+        title: "Mesa City Flight",
+        promptPayload: "Spinner flying through Los Angeles rain, massive sea walls holding back ocean, neon billboards of Atari and Coca-Cola, dark smog, cityscape scale."
     },
     {
         id: 5,
-        title: "Flight to LA",
-        promptPayload: "K's Spinner flying over the massive sea wall, waves crashing, rain, neon lights of Los Angeles in the distance, cyberpunk cityscape, blue and grey palette."
+        title: "Wallace Corp Archives",
+        promptPayload: "Vast golden room with water reflections on walls, K walking on walkway, infinite rows of memory orbs, warm yellow lighting, brutalist architecture."
     },
     {
         id: 6,
-        title: "LAPD Headquarters",
-        promptPayload: "Massive brutalist LAPD building in the rain, flying cars circling, scale of the city, oppressive atmosphere, monolithic architecture."
+        title: "Memory Lab",
+        promptPayload: "Dr. Ana Stelline creating memories behind glass, forest hologram, snow falling indoors, magical atmosphere, soft lighting, creation."
     },
     {
         id: 7,
-        title: "Baseline Test",
-        promptPayload: "K sitting in a white room, staring at a camera, 'Interlinked', 'Cells', rapid fire questioning, emotional suppression, sterile lighting."
+        title: "San Diego Trash Mesa",
+        promptPayload: "K's spinner flying over endless landscape of trash and scrap metal, scavengers running below, grey overcast sky, industrial wasteland, smoke."
     },
     {
         id: 8,
-        title: "Joi's Hologram",
-        promptPayload: "K in his apartment, Joi's hologram appearing, translucent, glowing, changing outfits, intimacy with technology, rain on window."
+        title: "Las Vegas Ruins",
+        promptPayload: "Bright orange dust storm, giant broken statues of women, empty streets, K walking alone, radioactive haze, surreal visual masterpiece."
     },
     {
         id: 9,
-        title: "Wallace Corp",
-        promptPayload: "Interior of Wallace Corporation, golden water reflections on walls, massive empty spaces, Niander Wallace walking out of shadows, warm yellow lighting."
+        title: "Elvis Show",
+        promptPayload: "Holographic Elvis concert glitching in empty casino, flickering lights, erratic movement, silence, dusty interior, ghosts of the past."
     },
     {
         id: 10,
-        title: "Replicant Birth",
-        promptPayload: "A new replicant falling from a plastic sac, covered in slime, landing on the floor, Wallace examining her, 'Happy Birthday', clinical horror."
+        title: "Deckard's Lounge",
+        promptPayload: "Deckard sitting in shadows, whisky glass, dog nearby, bees flying around, golden dust light streaming through windows, confrontation."
     },
     {
         id: 11,
-        title: "The Wooden Horse",
-        promptPayload: "Close up of the wooden horse toy, carved date '6.10.21', texture of wood, memory trigger, holding it in hand."
+        title: "Sea Wall Fight",
+        promptPayload: "Luv's spinner crashing in waves, K fighting underneath drowning car, night, rain, chaotic water, strobe lights, desperate struggle."
     },
     {
         id: 12,
-        title: "San Diego Trash Mesa",
-        promptPayload: "K flying over the vast trash heaps of San Diego, scavengers below, smoke, industrial waste, post-apocalyptic landscape, grey and brown."
+        title: "Snow Death",
+        promptPayload: "K lying on steps in snow, looking up at sky, snowflakes falling on face, 'Tears in rain' theme, peaceful acceptance, blue cold palette."
     },
     {
         id: 13,
-        title: "Crash Landing",
-        promptPayload: "K's Spinner crash landing in the trash mesa, sparks, metal twisting, scavengers running towards the wreck, chaos."
+        title: "Joi Upgrade",
+        promptPayload: "Joi standing in rain, giant pink hologram, 'emanator' device, merging with reality, rain passing through body, digital love."
     },
     {
         id: 14,
-        title: "Luv's Attack",
-        promptPayload: "Luv descending from the sky, firing missiles, explosions in the trash, precision violence, cold expression, high tech warfare."
+        title: "Replicant Birth",
+        promptPayload: "New replicant falling from plastic sack, covered in goo, Wallace inspecting her, 'Happy Birthday', cruel sterile lighting, disturbing."
     },
     {
         id: 15,
-        title: "The Orphanage",
-        promptPayload: "Interior of the orphanage, hundreds of bald children working at tables, dirty industrial setting, sweat shop, Mister Cotton watching."
+        title: "Wooden Horse",
+        promptPayload: "Toy wooden horse hidden in furnace, date carved on bottom, dust, macro shot, discovery, clue, texture."
     },
     {
         id: 16,
-        title: "The Furnace",
-        promptPayload: "K looking into the furnace, fire reflecting in his eyes, remembering the wooden horse, flashback merging with reality, orange glow."
+        title: "Spinner Crash",
+        promptPayload: "Spinner struck by lightning, plummeting towards ground, electrical sparks, cockpit warning lights, motion blur, desert impact."
     },
     {
         id: 17,
-        title: "Memory Lab",
-        promptPayload: "Dr. Ana Stelline creating a memory, forest hologram surrounding her, blowing out candles, pure light, innocence, glass wall."
+        title: "Orphanage Sweatshop",
+        promptPayload: "Hundreds of children taking apart electronics, dirty fingers, crowded room, Mister Cotton watching, dickensian cyberpunk, gloom."
     },
     {
         id: 18,
-        title: "K's Scream",
-        promptPayload: "K smashing the chair against the glass wall, screaming in frustration, breaking point, emotional release, white room."
+        title: "Giant Pink Joi",
+        promptPayload: "Tiny K standing on bridge looking up at colossal pink holographic Joi advertisement, neon glow, blue night fog, loneliness, scale contrast."
     },
     {
         id: 19,
-        title: "Joi in the Rain",
-        promptPayload: "Joi standing in the rain, digital rain drops hitting her skin, 'I want to be real for you', merging with the environment, blue night."
+        title: "Beehives",
+        promptPayload: "K putting hand into box of bees, bees crawling on hand, orange dust background, nature residing in wasteland, surreal calm."
     },
     {
         id: 20,
-        title: "Las Vegas Ruins",
-        promptPayload: "Wide shot of Las Vegas in ruins, orange dust storm, giant statues of women, empty streets, haunting beauty, radioactive atmosphere."
+        title: "Police Station Roof",
+        promptPayload: "Joshi speaking to K in rain, severe shadows, brutalist concrete architecture, cynical expression, city lights below."
     },
     {
         id: 21,
-        title: "The Beehives",
-        promptPayload: "K walking through rows of beehives in the desert, bees swarming his hand, life in the wasteland, orange haze."
+        title: "Eye Shower",
+        promptPayload: "K in decontamination shower, water hitting face, hidden emotion, tiles, blue lighting, washing away blood."
     },
     {
         id: 22,
-        title: "Deckard's Lounge",
-        promptPayload: "Interior of the casino, holograms of Elvis and showgirls flickering, Deckard pointing a gun from the shadows, retro-futurism."
+        title: "Sapper's Piano",
+        promptPayload: "Old piano in farmhouse, dust motes dancing in light, quiet moment, K touching keys, history, stillness."
     },
     {
         id: 23,
-        title: "Whiskey Dog",
-        promptPayload: "Deckard's dog sitting on the floor, whiskey glass on the table, dust covering everything, silence, companionship."
+        title: "Scanner Device",
+        promptPayload: "Drone scanner floating over bones in box, blue laser grid scanning, digital reconstruction, high tech forensics."
     },
     {
         id: 24,
-        title: "Showroom Fight",
-        promptPayload: "K and Deckard fighting in the hologram showroom, flickering lights, Elvis performing, punches connecting, surreal background."
+        title: "Luv's Manicure",
+        promptPayload: "Luv getting nails done while ordering drone strike, cold detachment, pristine white clothing, juxtaposition of violence and beauty."
     },
     {
         id: 25,
-        title: "Luv Kidnaps Deckard",
-        promptPayload: "Luv capturing Deckard, K beaten on the floor, Joi's emitter being crushed, 'I love you', digital death, tragedy."
+        title: "Marketplace Walk",
+        promptPayload: "K walking through crowded street market, vendors cooking food, steam, neon characters, multi-cultural cyberpunk bustle, rain."
     },
     {
         id: 26,
-        title: "Giant Joi",
-        promptPayload: "K walking on the bridge, looking up at a giant pink holographic Joi advertisement, 'Everything you want to hear', purple and pink neon, loneliness."
+        title: "Mariette's Proposition",
+        promptPayload: "Prostitute replicant approaching spinner window, reflection, neon umbrella, rain dripping, suspicious glance, street level."
     },
     {
         id: 27,
-        title: "Freyja's Revolution",
-        promptPayload: "K meeting the replicant freedom fighters, Freyja standing in the dark, one eye, 'Dying for the right cause', underground rebellion."
+        title: "Syncing Joi",
+        promptPayload: "Joi hologram overlaying onto Mariette's body, visual glitching, four hands, two faces merging, surreal intimacy, digital effects."
     },
     {
         id: 28,
-        title: "Sea Wall Battle",
-        promptPayload: "Three Spinners flying in formation over the ocean at night, waves crashing, rain, Luv piloting, intense chase, blue lighting."
+        title: "Replicant Resistance",
+        promptPayload: "Freysa in underground chamber, one eye, scarred replicants gathering, torchlight, rebellion, sewers."
     },
     {
         id: 29,
-        title: "Drowning Fight",
-        promptPayload: "K and Luv fighting inside the sinking Spinner, water rising, strangulation, desperate struggle for survival, claustrophobia."
+        title: "Wallace's Eyes",
+        promptPayload: "Wallace's cybernetic eyes, small cameras floating, milky blind look, ominous lighting, god complex, texture."
     },
     {
         id: 30,
-        title: "Deckard and Ana",
-        promptPayload: "Deckard placing his hand on the glass wall, looking at Ana Stelline, snow falling inside the chamber, emotional reunion, silence."
+        title: "Deckard's Whiskey",
+        promptPayload: "Glass of whiskey on dusty table, dog resting head, cinematic lighting, orange haze, stillness before storm."
     },
     {
         id: 31,
-        title: "K on the Steps",
-        promptPayload: "K lying on the steps in the snow, looking up at the sky, snowflakes falling on his face, dying peacefully, 'Tears in rain' theme."
+        title: "Rocket Exhaust",
+        promptPayload: "Spinner taking off vertically from trash mesa, thruster blast, debris flying, grey dust swirling, powerful engine."
     },
     {
         id: 32,
-        title: "Spinner Interior",
-        promptPayload: "POV from inside the Spinner cockpit, rain streaking the glass, dashboard lights, city below, flying through the canyon of skyscrapers."
+        title: "Ana's Bubble",
+        promptPayload: "Dr. Stelline inside glass containment bubble, clean sterile environment, looking out with longing, reflection, prisoner."
     },
     {
         id: 33,
-        title: "Atari Neon",
-        promptPayload: "Massive neon Atari logo glowing in the smog, cyberpunk city street, crowds with umbrellas, noodle bar, future noir."
+        title: "Crucified Tree",
+        promptPayload: "Dead tree supported by cables, grey farm field, stark composition, desolation, grave marker at roots."
     },
     {
         id: 34,
-        title: "Wallace's Eyes",
-        promptPayload: "Close up of Niander Wallace's cybernetic eyes, glowing implants, blind but seeing, creepy intensity."
+        title: "K's Bandage",
+        promptPayload: "K applying superglue to wound, bathroom mirror, pain, gritty texture, noir detective trope, green tile light."
     },
     {
         id: 35,
-        title: "Mariette",
-        promptPayload: "Mariette (the replicant prostitute) standing in the rain, neon reflection in her coat, looking at K, mystery."
+        title: "Casino Bar",
+        promptPayload: "Overturned tables, decades of dust, holographic showgirls glitching in background, empty glasses, orange light."
     },
     {
         id: 36,
-        title: "Data Core",
-        promptPayload: "K searching the DNA archive, rows of glass slides, mechanical arm moving, blue light, information overload."
+        title: "Luv's Tears",
+        promptPayload: "Luv crying while killing, single tear, conflict, terrifying strength, close up face, emotional paradox."
     },
     {
         id: 37,
-        title: "Elvis Hologram",
-        promptPayload: "Glitching hologram of Elvis Presley performing, mid-motion, distorted light, ghost of the past."
+        title: "Dog in Car",
+        promptPayload: "Deckard's dog sitting in passenger seat of spinner, looking out at rain, fur texture, cute moment in dark world."
     },
     {
         id: 38,
-        title: "Orange Statues",
-        promptPayload: "Giant erotic statues in the Las Vegas desert, covered in orange dust, Ozymandias vibes, scale of destruction."
+        title: "Underwater Escape",
+        promptPayload: "K swimming underwater to save Deckard, bubbles, murky darkness, drowning car lights, desperation."
     },
     {
         id: 39,
-        title: "Luv's Tears",
-        promptPayload: "Luv crying while watching the replicant birth/death, a single tear, conflict between programming and emotion."
+        title: "Broken Emanator",
+        promptPayload: "Joi freezing as device is crushed, 'I love you', disappearing into static, tragedy, rain falling on empty space."
     },
     {
         id: 40,
-        title: "Piano",
-        promptPayload: "Deckard playing the piano in the casino, dust on the keys, melancholy tune, solitude."
+        title: "Snow Hologram",
+        promptPayload: "Ana Stelline conjuring snow in her hand, digital particles turning to white flakes, wonder, magic of technology."
     },
     {
         id: 41,
-        title: "Sync",
-        promptPayload: "Joi merging with Mariette, double exposure effect, two faces overlapping, synchronization, surreal intimacy."
+        title: "Trash Scavengers",
+        promptPayload: "Hooded figures swarming spinner, metal pipes, grey rags, desperation, blurred movement, attacking K."
     },
     {
         id: 42,
-        title: "Snow Hologram",
-        promptPayload: "Ana Stelline holding out her hand to catch holographic snow, wonder, isolation, creating beauty."
+        title: "Spinner Interior",
+        promptPayload: "POV from cockpit, rain streaking on glass, dashboard lights, wipers moving, city lights below, flying car feel."
     },
     {
         id: 43,
-        title: "K's Coat",
-        promptPayload: "Close up of K's leather trench coat, shearling collar, rain droplets, texture, character icon."
+        title: "Rachel Replica",
+        promptPayload: "Rachel walking out of shadows, perfect recreation of 1982 version, Deckard's shock, green eyes, emotional manipulation."
     },
     {
         id: 44,
-        title: "Biblical Flood",
-        promptPayload: "The sea wall breaking (concept), massive waves hitting the city, nature fighting back, dark blue power."
+        title: "Execution Shot",
+        promptPayload: "Luv shooting Joshi through hand and head, broken glass, sudden violence, cold efficiency, brutalist office."
     },
     {
         id: 45,
-        title: "Rachel's Skull",
-        promptPayload: "Forensic scan of the skull, serial number visible, bone texture, the key to the mystery."
+        title: "K's Holster",
+        promptPayload: "Close up of K's blaster in holster, leather coat texture, rain drops, hand resting on grip, anticipation."
     },
     {
         id: 46,
-        title: "Emanator",
-        promptPayload: "Close up of the Joi emanator device, sleek technology, light projecting, the soul of the machine."
+        title: "Library Dust",
+        promptPayload: "K walking through library in casino, books crumbling to dust, orange light beams, knowledge lost, silence."
     },
     {
         id: 47,
-        title: "Mister Cotton",
-        promptPayload: "Mister Cotton shouting orders, dirty face, industrial grime, Dickensian villain in the future."
+        title: "Sea Wall Waves",
+        promptPayload: "Massive black waves crashing against sea wall, spray, storm, unrelenting nature, dark ominous power."
     },
     {
         id: 48,
-        title: "Cybernetic Hand",
-        promptPayload: "Close up of a hand examining a flower, synthetic skin, contrast between nature and technology."
+        title: "Data Core",
+        promptPayload: "K holding the glass sphere data core, internal light glowing, fragile memory, plot device, macro detail."
     },
     {
         id: 49,
-        title: "Joi's Outfit Change",
-        promptPayload: "Joi cycling through outfits instantly, nurse, housewife, party girl, digital fluidity."
+        title: "Wooden Horse Analysis",
+        promptPayload: "Microscope view of wooden horse, scanning for radiation, green grid overlay, scientific investigation, lab setting."
     },
     {
         id: 50,
-        title: "Final Snow",
-        promptPayload: "Wide shot of the memory lab building in the snow, peaceful, white silence, K resting on the steps."
+        title: "Dying on Steps",
+        promptPayload: "Final shot of K, eyes closing, snow accumulating on coat, peace, 'Time to die', emotional ending."
     }
 ];

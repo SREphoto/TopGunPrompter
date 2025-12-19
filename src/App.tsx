@@ -1,8 +1,22 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef } from 'react';
 import { movieScenes } from './data/scenes';
+import { tvScenes } from './data/tvScenes';
 import { styles as globalStyles } from './data/styles';
 import { movies } from './data/movies';
-import { Copy, Terminal, Settings, Film, ArrowRight, Palette, CheckCircle, ChevronDown, ChevronRight, Search, SortAsc, Layers, Maximize2, Minimize2 } from 'lucide-react';
+import { series } from './data/series';
+import { Copy, Terminal, Film, Palette, CheckCircle, ChevronDown, ChevronRight, Search, SortAsc, Layers, Maximize2, Minimize2, Filter, Dices, Lock, Unlock, Trophy } from 'lucide-react';
+import type { MediaItem } from './data/types';
+import { topMoviesYearly } from './data/topMoviesYearly';
+
+const getTopMovieInfo = (title: string, year: string) => {
+  const entry = topMoviesYearly.find(y => y.year === year);
+  if (!entry) return null;
+  const categories = Object.entries(entry.categories)
+    .filter(([_, t]) => t === title)
+    .map(([c]) => c); // check for exact match
+  if (categories.length === 0) return null;
+  return categories.join(', ');
+};
 
 type LayoutMode = 'split' | 'scene-focus' | 'style-focus';
 
@@ -16,9 +30,15 @@ function App() {
   const [sortBy, setSortBy] = useState<'title' | 'year'>('title');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
   const [groupBy, setGroupBy] = useState<'none' | 'genre' | 'decade'>('none');
+  const sectionRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   // Existing State
+  const [appMode, setAppMode] = useState<'movies' | 'tv'>('movies');
   const [selectedMovieId, setSelectedMovieId] = useState<string>('top-gun');
+  // TV Series State
+  const [selectedSeasonId, setSelectedSeasonId] = useState<number>(1);
+  const [selectedEpisodeId, setSelectedEpisodeId] = useState<number>(1);
+
   const [selectedSceneId, setSelectedSceneId] = useState<number | null>(null);
   const [selectedStyleName, setSelectedStyleName] = useState<string | null>(null);
   const [version, setVersion] = useState<string>('7');
@@ -33,8 +53,50 @@ function App() {
   const [cleanUp, setCleanUp] = useState(false);
   const [draftMode, setDraftMode] = useState(false);
 
-  const currentMovie = useMemo(() => movies.find(m => m.id === selectedMovieId) || movies[0], [selectedMovieId]);
-  const currentScenes = useMemo(() => movieScenes[selectedMovieId] || [], [selectedMovieId]);
+  // Randomizer State
+  const [lockMovie, setLockMovie] = useState(false);
+  const [lockScene, setLockScene] = useState(false);
+  const [lockStyle, setLockStyle] = useState(false);
+
+  // Quick Copy Feedback State
+  const [copiedSceneId, setCopiedSceneId] = useState<number | null>(null);
+  const [copiedStyleName, setCopiedStyleName] = useState<string | null>(null);
+
+  // Unified Media List
+  const allMedia: MediaItem[] = useMemo(() => [...movies, ...series], []);
+
+  // Handlers for interactive cards
+  const handleQuickCopy = async (e: React.MouseEvent, text: string, type: 'scene' | 'style', id: number | string) => {
+    e.stopPropagation();
+    try {
+      await navigator.clipboard.writeText(text);
+      if (type === 'scene') {
+        setCopiedSceneId(id as number);
+        setTimeout(() => setCopiedSceneId(null), 1500);
+      } else {
+        setCopiedStyleName(id as string);
+        setTimeout(() => setCopiedStyleName(null), 1500);
+      }
+    } catch (err) { console.error('Quick copy failed', err); }
+  };
+
+  const handleToggleLock = (e: React.MouseEvent, type: 'scene' | 'style') => {
+    e.stopPropagation();
+    if (type === 'scene') setLockScene(prev => !prev);
+    if (type === 'style') setLockStyle(prev => !prev);
+  };
+
+  const currentMovie = useMemo(() => allMedia.find(m => m.id === selectedMovieId) || allMedia[0], [selectedMovieId, allMedia]);
+  const isChristmas = useMemo(() => currentMovie.genres.includes('Christmas'), [currentMovie]);
+  const isWar = useMemo(() => currentMovie.genres.includes('War'), [currentMovie]);
+
+  // Scenes Logic
+  const currentScenes = useMemo(() => {
+    if (currentMovie.type === 'series') {
+      return tvScenes[currentMovie.id]?.[selectedSeasonId]?.[selectedEpisodeId] || [];
+    }
+    return movieScenes[selectedMovieId] || [];
+  }, [selectedMovieId, currentMovie, selectedSeasonId, selectedEpisodeId]);
 
   // Combine movie-specific styles with global styles for lookup
   const allStyles = useMemo(() => [
@@ -43,7 +105,9 @@ function App() {
   ], [currentMovie]);
 
   // --- Filtering & Sorting Logic ---
+  // --- Filtering & Sorting Logic ---
   const processedMovies = useMemo(() => {
+    // Only process MOVIES here for the main list, we will handle series separately
     let result = [...movies];
 
     if (searchQuery) {
@@ -56,8 +120,8 @@ function App() {
     }
 
     result.sort((a, b) => {
-      let valA = sortBy === 'title' ? a.title : a.year;
-      let valB = sortBy === 'title' ? b.title : b.year;
+      const valA = sortBy === 'title' ? a.title : a.year;
+      const valB = sortBy === 'title' ? b.title : b.year;
 
       if (valA < valB) return sortOrder === 'asc' ? -1 : 1;
       if (valA > valB) return sortOrder === 'asc' ? 1 : -1;
@@ -94,7 +158,7 @@ function App() {
 
     if (scene && style) {
       // 1. Anchor (Context)
-      const anchor = `Cinematic shot from the movie ${currentMovie.title} (${currentMovie.year}) directed by ${currentMovie.director}`;
+      const anchor = `Cinematic shot from the movie ${currentMovie.title} (${currentMovie.year})`;
 
       // 2. Subject & Action
       const subject = scene.promptPayload;
@@ -125,6 +189,28 @@ function App() {
     setSelectedMovieId(id);
     setSelectedSceneId(null);
     setSelectedStyleName(null);
+    // Reset series state if switching
+    const media = allMedia.find(m => m.id === id);
+    if (media?.type === 'series') {
+      setSelectedSeasonId(1);
+      setSelectedEpisodeId(1);
+    }
+  };
+
+  const handleModeSwitch = (mode: 'movies' | 'tv') => {
+    setAppMode(mode);
+    // Reset selection when switching modes
+    if (mode === 'movies') {
+      handleMovieSelect('top-gun');
+    } else {
+      handleMovieSelect('mad-men');
+    }
+  };
+
+  const handleJumpToGenre = (genre: string) => {
+    if (sectionRefs.current[genre]) {
+      sectionRefs.current[genre]?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+    }
   };
 
   const handleCopy = async () => {
@@ -163,18 +249,86 @@ function App() {
     }
   };
 
+  const handleRandomize = () => {
+    // 1. Randomize Movie (if not locked)
+    let newMovieId = selectedMovieId;
+    let newMovie = currentMovie;
+
+    if (!lockMovie) {
+      // Pick random from all media
+      const randomMedia = allMedia[Math.floor(Math.random() * allMedia.length)];
+      newMovieId = randomMedia.id;
+      newMovie = randomMedia;
+      setSelectedMovieId(newMovieId);
+
+      if (randomMedia.type === 'series') {
+        // Randomize season/episode if series
+        // Simplify for now: always S1E1 as we only have that
+        setSelectedSeasonId(1);
+        setSelectedEpisodeId(1);
+      }
+    }
+
+    // 2. Randomize Scene (if not locked, OR if movie changed)
+    // If movie changed, we MUST pick a new scene because scene IDs are not consistent across movies (or logically shouldn't be reused)
+    if (!lockScene || !lockMovie) {
+      let scenes: { id: number; title: string; promptPayload: string }[] = [];
+
+      if (newMovie.type === 'series') {
+        scenes = tvScenes[newMovieId]?.[1]?.[1] || []; // Hardcoded to S1E1 for randomizer for now
+      } else {
+        scenes = movieScenes[newMovieId] || [];
+      }
+
+      if (scenes.length > 0) {
+        const randomScene = scenes[Math.floor(Math.random() * scenes.length)];
+        setSelectedSceneId(randomScene.id);
+      } else {
+        setSelectedSceneId(null);
+      }
+    }
+
+    // 3. Randomize Style (if not locked)
+    if (!lockStyle) {
+      const styles = [
+        ...(newMovie.styles || []),
+        ...globalStyles
+      ];
+      if (styles.length > 0) {
+        const randomStyle = styles[Math.floor(Math.random() * styles.length)];
+        setSelectedStyleName(randomStyle.name);
+      }
+    }
+  };
+
   return (
-    <div className="h-screen w-screen overflow-hidden bg-zinc-900 text-zinc-100 flex flex-col font-sans selection:bg-cyan-500/30">
+    <div className={`h-screen w-screen overflow-hidden text-zinc-100 flex flex-col font-sans selection:bg-cyan-500/30 transition-colors duration-700 ${isChristmas ? 'bg-slate-900' : isWar ? 'bg-stone-950' : 'bg-zinc-900'}`}>
+
+      {isChristmas && (
+        <div className="snow-container pointer-events-none fixed inset-0 z-50 overflow-hidden" aria-hidden="true">
+          {[...Array(12)].map((_, i) => (
+            <div key={i} className="snowflake">❅</div>
+          ))}
+        </div>
+      )}
+
+      {isWar && (
+        <div className="ember-container pointer-events-none fixed inset-0 z-50 overflow-hidden" aria-hidden="true">
+          {[...Array(12)].map((_, i) => (
+            <div key={i} className="ember"></div>
+          ))}
+        </div>
+      )}
 
       {/* HEADER SECTION */}
-      <header className="flex-shrink-0 bg-zinc-950 border-b border-zinc-800 z-50">
+      <header className={`flex-shrink-0 border-b z-50 transition-colors duration-500 ${isWar ? 'bg-stone-900 border-stone-800' : 'bg-zinc-950 border-zinc-800'}`}>
         <div className="flex items-center justify-between px-6 py-4">
           <div className="flex items-center gap-3">
-            <Film className="w-8 h-8 text-cyan-400" />
-            <h1 className="text-2xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
+            <Film className={`w-8 h-8 ${isChristmas ? 'text-red-500' : isWar ? 'text-orange-600' : 'text-cyan-400'} transition-colors duration-500`} />
+            <h1 className={`text-2xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r ${isChristmas ? 'from-red-500 to-green-500' : isWar ? 'from-orange-500 to-stone-400' : 'from-cyan-400 to-blue-600'}`}>
               CINEMA ARCHIVE
             </h1>
-            <span className="text-xs font-mono text-zinc-500 mt-1 ml-2 border border-zinc-800 px-2 py-0.5 rounded">V7 MASTER</span>
+            <span className={`text-xs font-mono mt-1 ml-2 border px-2 py-0.5 rounded ${isWar ? 'text-stone-500 border-stone-800' : 'text-zinc-500 border-zinc-800'}`}>V7 MASTER</span>
           </div>
 
           <button
@@ -194,59 +348,142 @@ function App() {
           overflow-hidden transition-all duration-300 ease-in-out border-b border-zinc-800 bg-zinc-900/50 flex flex-col
           ${isHeaderOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}
         `}>
-          {/* Controls Bar */}
-          <div className="px-6 py-2 flex items-center gap-4 border-b border-zinc-800/50 bg-zinc-900">
-            {/* Search */}
-            <div className="relative group">
-              <Search className="absolute left-2.5 top-2 w-3.5 h-3.5 text-zinc-500 group-focus-within:text-cyan-400" />
-              <input
-                type="text"
-                placeholder="Search movies..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="bg-zinc-950 border border-zinc-800 rounded-md pl-8 pr-3 py-1.5 text-xs text-zinc-200 focus:outline-none focus:border-cyan-500 w-48 placeholder-zinc-600"
-              />
-            </div>
-            <div className="h-4 w-px bg-zinc-800"></div>
-            {/* Sort */}
-            <div className="flex items-center gap-2">
-              <span className="text-[10px] uppercase font-bold text-zinc-500 flex items-center gap-1"><SortAsc className="w-3 h-3" /> Sort</span>
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
-                className="bg-zinc-950 border border-zinc-800 rounded-md px-2 py-1 text-xs text-zinc-300 focus:outline-none focus:border-cyan-500"
-              >
-                <option value="title">Title</option>
-                <option value="year">Year</option>
-              </select>
+          {/* Top Divider with Mode Switch */}
+          <div className="h-px w-full bg-zinc-800 flex justify-center items-center relative my-4">
+            <div className="bg-zinc-950 px-4 flex gap-2">
               <button
-                onClick={() => setSortOrder(prev => prev === 'asc' ? 'desc' : 'asc')}
-                className="p-1 hover:bg-zinc-800 rounded text-zinc-400 text-xs font-mono border border-zinc-800"
+                onClick={() => handleModeSwitch('movies')}
+                className={`text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full transition-all ${appMode === 'movies' ? 'bg-cyan-900 text-cyan-400' : 'text-zinc-600 hover:text-zinc-400'}`}
               >
-                {sortOrder === 'asc' ? 'ASC' : 'DESC'}
+                Movies
+              </button>
+              <button
+                onClick={() => handleModeSwitch('tv')}
+                className={`text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full transition-all ${appMode === 'tv' ? 'bg-cyan-900 text-cyan-400' : 'text-zinc-600 hover:text-zinc-400'}`}
+              >
+                TV Series
               </button>
             </div>
-            <div className="h-4 w-px bg-zinc-800"></div>
-            {/* Group */}
-            <div className="flex items-center gap-2">
-              <span className="text-[10px] uppercase font-bold text-zinc-500 flex items-center gap-1"><Layers className="w-3 h-3" /> Group</span>
-              <select
-                value={groupBy}
-                onChange={(e) => setGroupBy(e.target.value as any)}
-                className="bg-zinc-950 border border-zinc-800 rounded-md px-2 py-1 text-xs text-zinc-300 focus:outline-none focus:border-cyan-500"
-              >
-                <option value="none">None</option>
-                <option value="genre">Genre</option>
-                <option value="decade">Decade</option>
-              </select>
+          </div>
+
+          <div className="flex items-center justify-between px-6 pb-4 pt-2">
+            {/* Left Controls */}
+            <div className="flex items-center gap-4">
+              {/* Search */}
+              {appMode === 'movies' && (
+                <div className="relative group">
+                  <Search className="absolute left-2.5 top-2 w-3.5 h-3.5 text-zinc-500 group-focus-within:text-cyan-400" />
+                  <input
+                    type="text"
+                    placeholder="Search movies..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="bg-zinc-950 border border-zinc-800 rounded-md pl-8 pr-3 py-1.5 text-xs text-zinc-200 focus:outline-none focus:border-cyan-500 w-48 placeholder-zinc-600"
+                  />
+                </div>
+              )}
+              {appMode === 'movies' && (
+                <>
+                  <div className="h-4 w-px bg-zinc-800"></div>
+                  {/* Sort */}
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] uppercase font-bold text-zinc-500 flex items-center gap-1"><SortAsc className="w-3 h-3" /> Sort</span>
+                    <select
+                      aria-label="Sort by"
+                      value={sortBy}
+                      onChange={(e) => setSortBy(e.target.value as 'title' | 'year')}
+                      className="bg-zinc-950 border border-zinc-800 rounded-md px-2 py-1 text-xs text-zinc-300 focus:outline-none focus:border-cyan-500"
+                    >
+                      <option value="title">Title</option>
+                      <option value="year">Year</option>
+                    </select>
+                    <button
+                      onClick={() => setSortOrder(prev => prev === 'asc' ? 'desc' : 'asc')}
+                      className="p-1 hover:bg-zinc-800 rounded text-zinc-400 text-xs font-mono border border-zinc-800"
+                    >
+                      {sortOrder === 'asc' ? 'ASC' : 'DESC'}
+                    </button>
+                  </div>
+                  <div className="h-4 w-px bg-zinc-800"></div>
+                  {/* Group */}
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] uppercase font-bold text-zinc-500 flex items-center gap-1"><Layers className="w-3 h-3" /> Group</span>
+                    <select
+                      aria-label="Group by"
+                      value={groupBy}
+                      onChange={(e) => setGroupBy(e.target.value as 'none' | 'genre' | 'decade')}
+                      className="bg-zinc-950 border border-zinc-800 rounded-md px-2 py-1 text-xs text-zinc-300 focus:outline-none focus:border-cyan-500"
+                    >
+                      <option value="none">None</option>
+                      <option value="genre">Genre</option>
+                      <option value="decade">Decade</option>
+                    </select>
+                  </div>
+                </>
+              )}
+              {appMode === 'movies' && groupBy === 'genre' && (
+                <>
+                  <div className="h-4 w-px bg-zinc-800"></div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] uppercase font-bold text-zinc-500 flex items-center gap-1"><Filter className="w-3 h-3" /> Jump to</span>
+                    <select
+                      aria-label="Jump to Genre"
+                      onChange={(e) => handleJumpToGenre(e.target.value)}
+                      className="bg-zinc-950 border border-zinc-800 rounded-md px-2 py-1 text-xs text-zinc-300 focus:outline-none focus:border-cyan-500"
+                      defaultValue=""
+                    >
+                      <option value="" disabled>Select Genre</option>
+                      {Object.keys(groupedMovies).map((genre) => (
+                        <option key={genre} value={genre}>{genre}</option>
+                      ))}
+                    </select>
+                  </div>
+                </>
+              )}
             </div>
           </div>
 
           {/* Movie Grid */}
           <div className="px-6 py-4 overflow-x-auto pb-6 custom-scrollbar">
             <div className="flex gap-6">
-              {Object.entries(groupedMovies).map(([groupName, groupMovies]) => (
-                <div key={groupName} className="flex-shrink-0 flex flex-col gap-2">
+              {/* TV SERIES GRID */}
+              {appMode === 'tv' && (
+                <div className="flex-shrink-0 flex flex-col gap-2 w-full">
+                  {/* <h3 className="text-xs font-bold text-zinc-500 uppercase tracking-widest pl-1 border-b border-zinc-800 pb-1 mb-1 whitespace-nowrap flex items-center gap-2">
+                        <Tv className="w-3 h-3" /> TV Series
+                    </h3> */}
+                  <div className="flex gap-3">
+                    {series.map(s => (
+                      <button
+                        key={s.id}
+                        onClick={() => handleMovieSelect(s.id)}
+                        className={`
+                                flex-shrink-0 whitespace-nowrap px-5 py-3 rounded-lg text-sm font-bold transition-all duration-200 border relative overflow-hidden w-[180px] text-left
+                                ${selectedMovieId === s.id
+                            ? 'bg-cyan-500/10 border-cyan-500 text-cyan-400 shadow-[0_0_15px_rgba(6,182,212,0.2)] scale-105 z-10'
+                            : 'bg-zinc-800/80 border-zinc-700 text-zinc-400 hover:border-zinc-500 hover:text-zinc-200 hover:bg-zinc-800'}
+                            `}
+                      >
+                        <div className="flex flex-col items-start gap-1 w-full overflow-hidden">
+                          <span className="truncate w-full">{s.title}</span>
+                          <span className="text-[10px] font-mono opacity-50 font-normal flex justify-between w-full">
+                            <span>{s.year}</span>
+                            <span className="opacity-75">Series</span>
+                          </span>
+                        </div>
+                        {selectedMovieId === s.id && (<div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-transparent pointer-events-none"></div>)}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {appMode === 'movies' && Object.entries(groupedMovies).map(([groupName, groupMovies]) => (
+                <div
+                  key={groupName}
+                  ref={(el) => { sectionRefs.current[groupName] = el; }}
+                  className="flex-shrink-0 flex flex-col gap-2"
+                >
                   {groupBy !== 'none' && (
                     <h3 className="text-xs font-bold text-zinc-500 uppercase tracking-widest pl-1 border-b border-zinc-800 pb-1 mb-1 whitespace-nowrap">{groupName}</h3>
                   )}
@@ -263,12 +500,17 @@ function App() {
                         `}
                       >
                         <div className="flex flex-col items-start gap-1 w-full overflow-hidden">
-                          <span className="truncate w-full">{movie.title}</span>
+                          <span className="truncate w-full pr-4">{movie.title}</span>
                           <span className="text-[10px] font-mono opacity-50 font-normal flex justify-between w-full">
                             <span>{movie.year}</span>
                             <span className="opacity-75">{movie.director.split(' ')[0]}</span>
                           </span>
                         </div>
+                        {getTopMovieInfo(movie.title, movie.year) && (
+                          <div className="absolute top-1 right-1" title={`Top Office: ${getTopMovieInfo(movie.title, movie.year)}`}>
+                            <Trophy className="w-3 h-3 text-yellow-500/80" />
+                          </div>
+                        )}
                         {selectedMovieId === movie.id && (<div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-transparent pointer-events-none"></div>)}
                       </button>
                     ))}
@@ -313,30 +555,87 @@ function App() {
               </div>
             </div>
 
+            {/* TV EPISODE SELECTOR */}
+            {currentMovie.type === 'series' && currentMovie.seasons && (
+              <div className="px-4 py-3 bg-zinc-900 border-b border-zinc-800 flex gap-4 items-center">
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-bold text-zinc-500 uppercase">Season</span>
+                  <select
+                    value={selectedSeasonId}
+                    onChange={(e) => setSelectedSeasonId(Number(e.target.value))}
+                    className="bg-black/20 text-sm text-cyan-400 border border-zinc-700 rounded px-2 py-1 outline-none focus:border-cyan-500"
+                    title="Select Season"
+                  >
+                    {currentMovie.seasons.map(s => <option key={s.id} value={s.id}>Season {s.id}</option>)}
+                  </select>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-bold text-zinc-500 uppercase">Episode</span>
+                  <select
+                    value={selectedEpisodeId}
+                    onChange={(e) => setSelectedEpisodeId(Number(e.target.value))}
+                    className="bg-black/20 text-sm text-zinc-200 border border-zinc-700 rounded px-2 py-1 outline-none focus:border-cyan-500"
+                    title="Select Episode"
+                  >
+                    {currentMovie.seasons.find(s => s.id === selectedSeasonId)?.episodes.map(e => (
+                      <option key={e.id} value={e.id}>{e.id}. {e.title}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+            )}
+
             <div className="flex-1 overflow-y-auto custom-scrollbar p-4">
               {currentScenes.length > 0 ? (
-                <div className={`grid gap-3 pb-24 ${layoutMode === 'scene-focus' ? 'grid-cols-4 xl:grid-cols-6' : 'grid-cols-2 xl:grid-cols-3'}`}>
+                <div className={`smart-grid grid gap-3 pb-24 ${layoutMode === 'scene-focus' ? 'grid-cols-4 xl:grid-cols-5' : 'grid-cols-2 xl:grid-cols-3'}`}>
                   {currentScenes.map((scene) => (
                     <button
                       key={scene.id}
                       onClick={() => setSelectedSceneId(scene.id)}
                       className={`
-                        relative p-4 h-32 flex flex-col items-start justify-end text-left transition-all duration-200 border rounded-xl overflow-hidden group
+                        smart-card relative p-4 h-36 flex flex-col text-left overflow-hidden group border
                         ${selectedSceneId === scene.id
-                          ? 'bg-cyan-500/10 border-cyan-500 shadow-[0_0_20px_rgba(6,182,212,0.15)] ring-1 ring-cyan-500/50'
-                          : 'bg-zinc-800/40 border-zinc-700/50 hover:border-zinc-500 hover:bg-zinc-800/80'}
-                      `}
+                          ? 'smart-active z-10'
+                          : 'bg-zinc-900/40 border-zinc-800/50 hover:border-zinc-700'}
+                        `}
                     >
-                      <div className="absolute inset-0 bg-zinc-950/95 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-start z-10 pointer-events-none border border-zinc-800 rounded-xl">
-                        <p className="text-[10px] text-zinc-300 leading-relaxed font-mono overflow-hidden text-ellipsis">{scene.promptPayload}</p>
+                      {/* Header */}
+                      <div className="flex justify-between items-start mb-2">
+                        <span className={`text-[10px] font-mono font-bold ${selectedSceneId === scene.id ? 'text-cyan-500' : 'text-zinc-600'}`}>
+                          SCENE {String(scene.id).padStart(2, '0')}
+                        </span>
+                        {/* Status Dot */}
+                        {selectedSceneId === scene.id && <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]" />}
                       </div>
-                      <span className={`absolute top-3 left-3 text-[10px] font-mono font-bold ${selectedSceneId === scene.id ? 'text-cyan-400' : 'text-zinc-600 group-hover:text-zinc-500'}`}>
-                        SCENE {String(scene.id).padStart(2, '0')}
-                      </span>
-                      <span className={`text-sm font-bold leading-tight line-clamp-2 relative z-0 ${selectedSceneId === scene.id ? 'text-cyan-50' : 'text-zinc-400 group-hover:text-zinc-200'}`}>
-                        {scene.title}
-                      </span>
-                      {selectedSceneId === scene.id && (<div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-full"></div>)}
+
+                      {/* Content */}
+                      <div className="flex-1 min-h-0">
+                        <h3 className={`smart-title text-sm mb-1 line-clamp-1 ${selectedSceneId === scene.id ? 'text-white' : 'text-zinc-300'}`}>
+                          {scene.title}
+                        </h3>
+                        <p className={`smart-detail text-[11px] leading-relaxed ${selectedSceneId === scene.id ? 'line-clamp-none overflow-y-auto max-h-[60px] custom-scrollbar' : 'line-clamp-2'}`}>
+                          {scene.promptPayload}
+                        </p>
+                      </div>
+
+                      {/* Action Bar (Footer) */}
+                      <div className="smart-actions">
+                        <div
+                          onClick={(e) => handleToggleLock(e, 'scene')}
+                          className={`p-1 rounded cursor-pointer transition-colors ${lockScene ? 'text-cyan-400 bg-cyan-950/30' : 'text-zinc-500 hover:text-cyan-400 hover:bg-zinc-800'}`}
+                          title={lockScene ? "Unlock Scene" : "Lock Scene"}
+                        >
+                          {lockScene ? <Lock className="w-3 h-3" /> : <Unlock className="w-3 h-3" />}
+                        </div>
+                        <div
+                          onClick={(e) => handleQuickCopy(e, scene.promptPayload, 'scene', scene.id)}
+                          className={`p-1 rounded cursor-pointer transition-colors ${copiedSceneId === scene.id ? 'text-green-400 bg-green-950/30' : 'text-zinc-500 hover:text-zinc-200 hover:bg-zinc-800'}`}
+                          title="Copy Prompt Only"
+                        >
+                          {copiedSceneId === scene.id ? <CheckCircle className="w-3 h-3" /> : <Copy className="w-3 h-3" />}
+                        </div>
+                      </div>
                     </button>
                   ))}
                 </div>
@@ -373,21 +672,44 @@ function App() {
               {currentMovie.styles && currentMovie.styles.length > 0 && (
                 <div className="mb-8">
                   <h3 className="text-[10px] font-bold text-purple-400 mb-3 px-1 opacity-80 uppercase tracking-wider">Unique to Movie</h3>
-                  <div className={`grid gap-2 ${layoutMode === 'style-focus' ? 'grid-cols-3' : 'grid-cols-1'}`}>
+                  <div className={`smart-grid grid gap-3 ${layoutMode === 'style-focus' ? 'grid-cols-3' : 'grid-cols-1'}`}>
                     {currentMovie.styles.map((style) => (
                       <button
                         key={style.name}
                         onClick={() => setSelectedStyleName(style.name)}
                         className={`
-                            p-4 text-left text-xs font-medium transition-all duration-200 border rounded-lg relative overflow-hidden group
-                            ${selectedStyleName === style.name
-                            ? 'bg-purple-500/10 border-purple-500 text-purple-300 shadow-[0_0_15px_rgba(168,85,247,0.2)]'
-                            : 'bg-zinc-800/50 border-zinc-800/50 text-zinc-400 hover:border-zinc-600 hover:text-zinc-200'}
-                          `}
+                          smart-card relative p-4 text-left min-h-[100px] flex flex-col justify-between border
+                          ${selectedStyleName === style.name
+                            ? 'smart-active style-active z-10'
+                            : 'bg-zinc-900/40 border-zinc-800/50 hover:border-zinc-700'}
+                        `}
                       >
-                        <div className="relative z-10 font-bold mb-1">{style.name}</div>
-                        <div className="relative z-10 text-[10px] opacity-50 line-clamp-2 leading-relaxed">{style.promptString}</div>
-                        <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity bg-gradient-to-r from-purple-500 to-transparent"></div>
+                        <div className="mb-2">
+                          <div className={`smart-title text-xs ${selectedStyleName === style.name ? 'text-purple-300' : 'text-zinc-300'}`}>
+                            {style.name}
+                          </div>
+                          <div className={`smart-detail text-[10px] mt-1 ${selectedStyleName === style.name ? 'opacity-100' : 'opacity-60'}`}>
+                            {style.promptString}
+                          </div>
+                        </div>
+
+                        {/* Action Bar */}
+                        <div className="smart-actions">
+                          <div
+                            onClick={(e) => handleToggleLock(e, 'style')}
+                            className={`p-1 rounded cursor-pointer transition-colors ${lockStyle ? 'text-purple-400 bg-purple-950/30' : 'text-zinc-500 hover:text-purple-400 hover:bg-zinc-800'}`}
+                            title={lockStyle ? "Unlock Style" : "Lock Style"}
+                          >
+                            {lockStyle ? <Lock className="w-3 h-3" /> : <Unlock className="w-3 h-3" />}
+                          </div>
+                          <div
+                            onClick={(e) => handleQuickCopy(e, style.promptString, 'style', style.name)}
+                            className={`p-1 rounded cursor-pointer transition-colors ${copiedStyleName === style.name ? 'text-green-400 bg-green-950/30' : 'text-zinc-500 hover:text-zinc-200 hover:bg-zinc-800'}`}
+                            title="Copy Style Prompt"
+                          >
+                            {copiedStyleName === style.name ? <CheckCircle className="w-3 h-3" /> : <Copy className="w-3 h-3" />}
+                          </div>
+                        </div>
                       </button>
                     ))}
                   </div>
@@ -395,21 +717,41 @@ function App() {
               )}
 
               {/* Standard Styles */}
-              <div>
+              <div className="mt-8">
                 <h3 className="text-[10px] font-bold text-zinc-500 mb-3 px-1 uppercase tracking-wider">Standard Library</h3>
-                <div className={`grid gap-2 ${layoutMode === 'style-focus' ? 'grid-cols-4' : 'grid-cols-2'}`}>
+                <div className={`smart-grid grid gap-3 ${layoutMode === 'style-focus' ? 'grid-cols-4' : 'grid-cols-2'}`}>
                   {globalStyles.map((style) => (
                     <button
                       key={style.name}
                       onClick={() => setSelectedStyleName(style.name)}
                       className={`
-                          p-3 text-left text-[11px] font-medium transition-all duration-200 border rounded-lg h-auto flex flex-col justify-center
+                          smart-card relative p-3 text-left min-h-[90px] flex flex-col justify-between border
                           ${selectedStyleName === style.name
-                          ? 'bg-purple-500/10 border-purple-500 text-purple-400 shadow-[0_0_15px_rgba(168,85,247,0.2)]'
-                          : 'bg-zinc-800/50 border-zinc-800 text-zinc-400 hover:border-zinc-600 hover:text-zinc-200'}
+                          ? 'smart-active style-active z-10'
+                          : 'bg-zinc-900/40 border-zinc-800/50 hover:border-zinc-700'}
                         `}
                     >
-                      <span className="font-bold">{style.name}</span>
+                      <div className={`smart-title text-xs ${selectedStyleName === style.name ? 'text-purple-300' : 'text-zinc-400'}`}>
+                        {style.name}
+                      </div>
+
+                      {/* Action Bar */}
+                      <div className="smart-actions">
+                        <div
+                          onClick={(e) => handleToggleLock(e, 'style')}
+                          className={`p-1 rounded cursor-pointer transition-colors ${lockStyle ? 'text-purple-400 bg-purple-950/30' : 'text-zinc-500 hover:text-purple-400 hover:bg-zinc-800'}`}
+                          title={lockStyle ? "Unlock Style" : "Lock Style"}
+                        >
+                          {lockStyle ? <Lock className="w-3 h-3" /> : <Unlock className="w-3 h-3" />}
+                        </div>
+                        <div
+                          onClick={(e) => handleQuickCopy(e, style.promptString, 'style', style.name)}
+                          className={`p-1 rounded cursor-pointer transition-colors ${copiedStyleName === style.name ? 'text-green-400 bg-green-950/30' : 'text-zinc-500 hover:text-zinc-200 hover:bg-zinc-800'}`}
+                          title="Copy Style Prompt"
+                        >
+                          {copiedStyleName === style.name ? <CheckCircle className="w-3 h-3" /> : <Copy className="w-3 h-3" />}
+                        </div>
+                      </div>
                     </button>
                   ))}
                 </div>
@@ -474,6 +816,45 @@ function App() {
           {/* BOTTOM SECTION: CONFIGURATION */}
           <div className="flex-1 overflow-y-auto custom-scrollbar p-4">
             <h2 className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-4 flex items-center gap-2">Settings</h2>
+
+            {/* Randomizer Section */}
+            <div className="mb-6 border-b border-zinc-900 pb-6">
+              <h2 className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-3 flex items-center gap-2">
+                <Dices className="w-3 h-3 text-pink-500" /> Randomizer
+              </h2>
+              <div className="flex gap-1 mb-3">
+                <button
+                  onClick={() => setLockMovie(!lockMovie)}
+                  className={`flex-1 py-2 rounded-md flex flex-col items-center justify-center gap-1 border transition-all ${lockMovie ? 'bg-zinc-800 border-pink-500/50 text-pink-400' : 'bg-zinc-900 border-zinc-800 text-zinc-500 hover:text-zinc-300'}`}
+                  title={lockMovie ? "Unlock Movie" : "Lock Movie"}
+                >
+                  {lockMovie ? <Lock className="w-3 h-3" /> : <Unlock className="w-3 h-3" />}
+                  <span className="text-[9px] font-bold uppercase">Movie</span>
+                </button>
+                <button
+                  onClick={() => setLockScene(!lockScene)}
+                  className={`flex-1 py-2 rounded-md flex flex-col items-center justify-center gap-1 border transition-all ${lockScene ? 'bg-zinc-800 border-pink-500/50 text-pink-400' : 'bg-zinc-900 border-zinc-800 text-zinc-500 hover:text-zinc-300'}`}
+                  title={lockScene ? "Unlock Scene" : "Lock Scene"}
+                >
+                  {lockScene ? <Lock className="w-3 h-3" /> : <Unlock className="w-3 h-3" />}
+                  <span className="text-[9px] font-bold uppercase">Scene</span>
+                </button>
+                <button
+                  onClick={() => setLockStyle(!lockStyle)}
+                  className={`flex-1 py-2 rounded-md flex flex-col items-center justify-center gap-1 border transition-all ${lockStyle ? 'bg-zinc-800 border-pink-500/50 text-pink-400' : 'bg-zinc-900 border-zinc-800 text-zinc-500 hover:text-zinc-300'}`}
+                  title={lockStyle ? "Unlock Style" : "Lock Style"}
+                >
+                  {lockStyle ? <Lock className="w-3 h-3" /> : <Unlock className="w-3 h-3" />}
+                  <span className="text-[9px] font-bold uppercase">Style</span>
+                </button>
+              </div>
+              <button
+                onClick={handleRandomize}
+                className="w-full py-2.5 rounded-lg font-bold text-xs flex items-center justify-center gap-2 transition-all bg-gradient-to-r from-pink-600 to-purple-600 text-white hover:from-pink-500 hover:to-purple-500 shadow-md hover:shadow-pink-500/20 active:scale-95"
+              >
+                <Dices className="w-4 h-4" /> ROLL THE DICE
+              </button>
+            </div>
 
             {/* Copy Mode - Redesigned for reliability */}
             <div className="mb-6">
