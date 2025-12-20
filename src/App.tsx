@@ -6,7 +6,12 @@ import { movies } from './data/movies';
 import { series } from './data/series';
 import { games } from './data/games';
 import { studioProjects } from './data/projects';
-import { Copy, Terminal, Film, Palette, CheckCircle, ChevronDown, ChevronRight, Search, SortAsc, Layers, Maximize2, Minimize2, Filter, Dices, Lock, Unlock, Trophy, Grid, X, ExternalLink, Shirt, Sword, Car, Rocket } from 'lucide-react';
+import {
+  Copy, Terminal, Film, Palette, CheckCircle, ChevronDown, ChevronRight, Search, SortAsc,
+  Layers, Maximize2, Minimize2, Filter, Dices, Lock, Unlock, Trophy, Grid, X,
+  ExternalLink, Shirt, Sword, Car, Rocket, Flame, Gamepad2, Aperture, Map, Music,
+  Heart, Zap, Waves, BarChart3
+} from 'lucide-react';
 import type { MediaItem } from './data/types';
 import { topMoviesYearly } from './data/topMoviesYearly';
 
@@ -1031,7 +1036,10 @@ function App() {
             <div className="flex-1 overflow-y-auto p-6 custom-scrollbar">
               <div className="space-y-4">
                 {studioProjects.map((project) => {
-                  const IconComponent = { Film, Palette, Shirt, Sword, Car, Rocket }[project.icon] || Grid;
+                  const IconComponent = {
+                    Film, Palette, Shirt, Sword, Car, Rocket, Flame,
+                    Gamepad2, Aperture, Map, Music, Heart, Zap, Waves, BarChart3
+                  }[project.icon] || Grid;
                   return (
                     <a
                       key={project.id}
