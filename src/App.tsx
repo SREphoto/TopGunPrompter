@@ -4,7 +4,9 @@ import { tvScenes } from './data/tvScenes';
 import { styles as globalStyles } from './data/styles';
 import { movies } from './data/movies';
 import { series } from './data/series';
-import { Copy, Terminal, Film, Palette, CheckCircle, ChevronDown, ChevronRight, Search, SortAsc, Layers, Maximize2, Minimize2, Filter, Dices, Lock, Unlock, Trophy } from 'lucide-react';
+import { games } from './data/games';
+import { studioProjects } from './data/projects';
+import { Copy, Terminal, Film, Palette, CheckCircle, ChevronDown, ChevronRight, Search, SortAsc, Layers, Maximize2, Minimize2, Filter, Dices, Lock, Unlock, Trophy, Grid, X, ExternalLink, Shirt, Sword, Car, Rocket } from 'lucide-react';
 import type { MediaItem } from './data/types';
 import { topMoviesYearly } from './data/topMoviesYearly';
 
@@ -33,7 +35,7 @@ function App() {
   const sectionRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   // Existing State
-  const [appMode, setAppMode] = useState<'movies' | 'tv'>('movies');
+  const [appMode, setAppMode] = useState<'movies' | 'tv' | 'games'>('movies');
   const [selectedMovieId, setSelectedMovieId] = useState<string>('top-gun');
   // TV Series State
   const [selectedSeasonId, setSelectedSeasonId] = useState<number>(1);
@@ -59,11 +61,12 @@ function App() {
   const [lockStyle, setLockStyle] = useState(false);
 
   // Quick Copy Feedback State
-  const [copiedSceneId, setCopiedSceneId] = useState<number | null>(null);
+  const [copiedSceneId, setCopiedSceneId] = useState<number | string | null>(null);
   const [copiedStyleName, setCopiedStyleName] = useState<string | null>(null);
+  const [isStudioHubOpen, setIsStudioHubOpen] = useState(false);
 
   // Unified Media List
-  const allMedia: MediaItem[] = useMemo(() => [...movies, ...series], []);
+  const allMedia: MediaItem[] = useMemo(() => [...movies, ...series, ...games], []);
 
   // Handlers for interactive cards
   const handleQuickCopy = async (e: React.MouseEvent, text: string, type: 'scene' | 'style', id: number | string) => {
@@ -158,7 +161,7 @@ function App() {
 
     if (scene && style) {
       // 1. Anchor (Context)
-      const anchor = `Cinematic shot from the movie ${currentMovie.title} (${currentMovie.year})`;
+      const anchor = `Cinematic shot from the ${currentMovie.type === 'series' ? 'TV Series' : currentMovie.type === 'game' ? 'Video Game' : 'movie'} ${currentMovie.title} (${currentMovie.year})`;
 
       // 2. Subject & Action
       const subject = scene.promptPayload;
@@ -197,13 +200,15 @@ function App() {
     }
   };
 
-  const handleModeSwitch = (mode: 'movies' | 'tv') => {
+  const handleModeSwitch = (mode: 'movies' | 'tv' | 'games') => {
     setAppMode(mode);
     // Reset selection when switching modes
     if (mode === 'movies') {
       handleMovieSelect('top-gun');
-    } else {
+    } else if (mode === 'tv') {
       handleMovieSelect('mad-men');
+    } else {
+      handleMovieSelect('the-last-of-us-part-1');
     }
   };
 
@@ -331,16 +336,27 @@ function App() {
             <span className={`text-xs font-mono mt-1 ml-2 border px-2 py-0.5 rounded ${isWar ? 'text-stone-500 border-stone-800' : 'text-zinc-500 border-zinc-800'}`}>V7 MASTER</span>
           </div>
 
-          <button
-            onClick={() => setIsHeaderOpen(!isHeaderOpen)}
-            className={`
-              text-zinc-400 hover:text-white transition-all duration-200 bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-lg flex items-center gap-2 text-xs font-bold uppercase tracking-wider
-              ${isHeaderOpen ? 'bg-zinc-800 text-white border-zinc-700' : ''}
-            `}
-          >
-            {isHeaderOpen ? 'Hide Movies' : 'Select Movie'}
-            {isHeaderOpen ? <ChevronDown className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
-          </button>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => setIsHeaderOpen(!isHeaderOpen)}
+              className={`
+                text-zinc-400 hover:text-white transition-all duration-200 bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-lg flex items-center gap-2 text-xs font-bold uppercase tracking-wider
+                ${isHeaderOpen ? 'bg-zinc-800 text-white border-zinc-700' : ''}
+              `}
+            >
+              {isHeaderOpen ? 'Hide Movies' : 'Select Movie'}
+              {isHeaderOpen ? <ChevronDown className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
+            </button>
+
+            <button
+              onClick={() => setIsStudioHubOpen(true)}
+              className="p-2 text-zinc-500 hover:text-white hover:bg-zinc-800 rounded-lg transition-all group relative"
+              title="Studio Hub"
+            >
+              <Grid className="w-6 h-6" />
+              <div className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-cyan-500 rounded-full border-2 border-zinc-950"></div>
+            </button>
+          </div>
         </div>
 
         {/* Start Collapsible Movie Selector */}
@@ -362,6 +378,12 @@ function App() {
                 className={`text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full transition-all ${appMode === 'tv' ? 'bg-cyan-900 text-cyan-400' : 'text-zinc-600 hover:text-zinc-400'}`}
               >
                 TV Series
+              </button>
+              <button
+                onClick={() => handleModeSwitch('games')}
+                className={`text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full transition-all ${appMode === 'games' ? 'bg-cyan-900 text-cyan-400' : 'text-zinc-600 hover:text-zinc-400'}`}
+              >
+                Video Games
               </button>
             </div>
           </div>
@@ -472,6 +494,35 @@ function App() {
                           </span>
                         </div>
                         {selectedMovieId === s.id && (<div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-transparent pointer-events-none"></div>)}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* VIDEO GAMES GRID */}
+              {appMode === 'games' && (
+                <div className="flex-shrink-0 flex flex-col gap-2 w-full">
+                  <div className="flex gap-3">
+                    {games.map(g => (
+                      <button
+                        key={g.id}
+                        onClick={() => handleMovieSelect(g.id)}
+                        className={`
+                                flex-shrink-0 whitespace-nowrap px-5 py-3 rounded-lg text-sm font-bold transition-all duration-200 border relative overflow-hidden w-[180px] text-left
+                                ${selectedMovieId === g.id
+                            ? 'bg-cyan-500/10 border-cyan-500 text-cyan-400 shadow-[0_0_15px_rgba(6,182,212,0.2)] scale-105 z-10'
+                            : 'bg-zinc-800/80 border-zinc-700 text-zinc-400 hover:border-zinc-500 hover:text-zinc-200 hover:bg-zinc-800'}
+                            `}
+                      >
+                        <div className="flex flex-col items-start gap-1 w-full overflow-hidden">
+                          <span className="truncate w-full">{g.title}</span>
+                          <span className="text-[10px] font-mono opacity-50 font-normal flex justify-between w-full">
+                            <span>{g.year}</span>
+                            <span className="opacity-75">Game</span>
+                          </span>
+                        </div>
+                        {selectedMovieId === g.id && (<div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-transparent pointer-events-none"></div>)}
                       </button>
                     ))}
                   </div>
@@ -671,7 +722,7 @@ function App() {
               {/* Unique Styles */}
               {currentMovie.styles && currentMovie.styles.length > 0 && (
                 <div className="mb-8">
-                  <h3 className="text-[10px] font-bold text-purple-400 mb-3 px-1 opacity-80 uppercase tracking-wider">Unique to Movie</h3>
+                  <h3 className="text-[10px] font-bold text-purple-400 mb-3 px-1 opacity-80 uppercase tracking-wider">Unique to {currentMovie.type === 'series' ? 'Series' : currentMovie.type === 'game' ? 'Game' : 'Movie'}</h3>
                   <div className={`smart-grid grid gap-3 ${layoutMode === 'style-focus' ? 'grid-cols-3' : 'grid-cols-1'}`}>
                     {currentMovie.styles.map((style) => (
                       <button
@@ -904,10 +955,12 @@ function App() {
               <div>
                 <div className="flex justify-between mb-1.5 ml-1">
                   <label className="text-[9px] font-mono text-zinc-600">STYLIZE</label>
-                  <span className="text-[9px] font-mono text-cyan-500">{stylize}</span>
+                  <label htmlFor="stylize-range" className="text-[9px] font-mono text-cyan-500">{stylize}</label>
                 </div>
                 <input
+                  id="stylize-range"
                   type="range" min="0" max="1000" step="50" value={stylize} onChange={(e) => setStylize(parseInt(e.target.value))}
+                  title="Stylize level"
                   className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-cyan-500"
                 />
               </div>
@@ -948,6 +1001,65 @@ function App() {
                   <span className="text-[9px] font-mono opacity-50">{draftMode ? 'ON' : 'OFF'}</span>
                 </button>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* STUDIO HUB DRAWER */}
+      <div className={`fixed inset-0 z-[100] transition-opacity duration-300 ${isStudioHubOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setIsStudioHubOpen(false)} />
+        <div className={`absolute right-0 top-0 bottom-0 w-[400px] bg-zinc-900 border-l border-zinc-800 shadow-2xl transition-transform duration-300 ease-out transform ${isStudioHubOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+          <div className="flex flex-col h-full">
+            <div className="flex items-center justify-between p-6 border-b border-zinc-800">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-zinc-800 rounded-lg">
+                  <Grid className="w-5 h-5 text-cyan-400" />
+                </div>
+                <div>
+                  <h2 className="text-lg font-bold text-white leading-tight">SRE Studio Hub</h2>
+                  <p className="text-xs text-zinc-500 uppercase tracking-widest font-bold mt-0.5">Unified Ecosystem</p>
+                </div>
+              </div>
+              <button
+                onClick={() => setIsStudioHubOpen(false)}
+                className="p-2 hover:bg-zinc-800 rounded-full text-zinc-500 hover:text-white transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="flex-1 overflow-y-auto p-6 custom-scrollbar">
+              <div className="space-y-4">
+                {studioProjects.map((project) => {
+                  const IconComponent = { Film, Palette, Shirt, Sword, Car, Rocket }[project.icon] || Grid;
+                  return (
+                    <a
+                      key={project.id}
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group block p-4 bg-zinc-800/50 border border-zinc-700/50 rounded-xl hover:bg-zinc-800 hover:border-cyan-500/50 transition-all duration-300"
+                    >
+                      <div className="flex items-start gap-4">
+                        <div className={`p-3 bg-zinc-950 rounded-lg group-hover:scale-110 transition-transform duration-300 ${project.color}`}>
+                          <IconComponent className="w-6 h-6" />
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center justify-between">
+                            <h3 className="font-bold text-zinc-100 group-hover:text-cyan-400 transition-colors">{project.title}</h3>
+                            <ExternalLink className="w-3 h-3 text-zinc-600 group-hover:text-cyan-400" />
+                          </div>
+                          <p className="text-xs text-zinc-500 mt-1 leading-relaxed">{project.description}</p>
+                        </div>
+                      </div>
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="p-6 border-t border-zinc-800 bg-zinc-950/50 text-center">
+              <p className="text-[10px] text-zinc-600 uppercase tracking-widest font-bold">© 2025 SRE Studio • All Rights Reserved</p>
             </div>
           </div>
         </div>

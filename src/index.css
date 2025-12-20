@@ -50,8 +50,8 @@
   position: fixed;
   top: -10%;
   z-index: 9999;
-  user-select: none;
   -webkit-user-select: none;
+  user-select: none;
   cursor: default;
   animation-name: snowflakes-fall, snowflakes-shake;
   animation-duration: 10s, 3s;
@@ -153,8 +153,8 @@
   position: fixed;
   bottom: -10%;
   z-index: 9999;
-  user-select: none;
   -webkit-user-select: none;
+  user-select: none;
   cursor: default;
   animation-name: ember-rise, ember-drift;
   animation-duration: 8s, 4s;
@@ -249,10 +249,6 @@
 }
 
 /* --- SMART CARD SYSTEM (Stable utility) --- */
-
-.smart-grid {
-  /* Standard grid, no persective needed */
-}
 
 .smart-card {
   transition: all 0.2s ease-out;

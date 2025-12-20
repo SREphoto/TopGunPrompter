@@ -52,7 +52,19 @@ export const series: MediaItem[] = [
             {
                 id: 1,
                 episodes: [
-                    { id: 1, title: 'The Sopranos' }
+                    { id: 1, title: 'The Sopranos' },
+                    { id: 2, title: '46 Long' },
+                    { id: 3, title: 'Denial, Anger, Acceptance' },
+                    { id: 4, title: 'Meadowlands' },
+                    { id: 5, title: 'College' },
+                    { id: 6, title: 'Pax Soprana' },
+                    { id: 7, title: 'Down Neck' },
+                    { id: 8, title: 'The Legend of Tennessee Moltisanti' },
+                    { id: 9, title: 'Boca' },
+                    { id: 10, title: 'A Hit Is a Hit' },
+                    { id: 11, title: 'Nobody Knows Anything' },
+                    { id: 12, title: 'Isabella' },
+                    { id: 13, title: 'I Dream of Jeannie Cusamano' }
                 ]
             }
         ]

@@ -4,8 +4,10 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: "/TopGunPrompter/",
   server: {
     port: 3020,
+    host: true,
     allowedHosts: true
   }
 })

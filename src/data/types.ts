@@ -27,7 +27,7 @@ export interface MediaItem {
     director: string; // Or Creator for TV
     actors: string[];
     styles: Style[];
-    type: 'movie' | 'series';
+    type: 'movie' | 'series' | 'game';
     seasons?: Season[]; // Only for type === 'series'
 }
 

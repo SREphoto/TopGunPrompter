@@ -114,6 +114,13 @@ import {
     everythingEverywhereScenes, theBatmanScenes, oppenheimerScenes, barbieScenes, pastLivesScenes,
     anatomyFallScenes, zoneInterestScenes, godzillaMinusOneScenes
 } from './scenes/classics2';
+import {
+    theLastOfUsScenes, cyberpunkScenes, rdr2Scenes, eldenRingScenes,
+    controlScenes, deathStrandingScenes, bioshockScenes, bloodborneScenes,
+    godOfWarScenes, horizonScenes, ghostTsushimaScenes, alanWakeScenes,
+    residentEvilScenes, ff7Scenes, hollowKnightScenes, hadesScenes,
+    massEffectScenes, starfieldScenes, baldursGateScenes, spiderManScenes
+} from './scenes/games';
 
 
 export const movieScenes: Record<string, Scene[]> = {
@@ -332,4 +339,25 @@ export const movieScenes: Record<string, Scene[]> = {
     'anatomy-fall': anatomyFallScenes,
     'zone-interest': zoneInterestScenes,
     'godzilla-minus-one': godzillaMinusOneScenes,
+    // GAMES
+    'the-last-of-us-part-1': theLastOfUsScenes,
+    'cyberpunk-2077': cyberpunkScenes,
+    'red-dead-redemption-2': rdr2Scenes,
+    'elden-ring': eldenRingScenes,
+    'control': controlScenes,
+    'death-stranding': deathStrandingScenes,
+    'bioshock': bioshockScenes,
+    'bloodborne': bloodborneScenes,
+    'god-of-war-ragnarok': godOfWarScenes,
+    'horizon-forbidden-west': horizonScenes,
+    'ghost-of-tsushima': ghostTsushimaScenes,
+    'alan-wake-2': alanWakeScenes,
+    'resident-evil-4-remake': residentEvilScenes,
+    'final-fantasy-vii-rebirth': ff7Scenes,
+    'hollow-knight': hollowKnightScenes,
+    'hades': hadesScenes,
+    'mass-effect-legendary-edition': massEffectScenes,
+    'starfield': starfieldScenes,
+    'baldurs-gate-3': baldursGateScenes,
+    'marvels-spider-man-2': spiderManScenes,
 };
