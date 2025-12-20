@@ -5,7 +5,7 @@ import { styles as globalStyles } from './data/styles';
 import { movies } from './data/movies';
 import { series } from './data/series';
 import { games } from './data/games';
-import { studioProjects } from './data/projects';
+import { deployedApps, repoApps, localApps } from './data/projects';
 import {
   Copy, Terminal, Film, Palette, CheckCircle, ChevronDown, ChevronRight, Search, SortAsc,
   Layers, Maximize2, Minimize2, Filter, Dices, Lock, Unlock, Trophy, Grid, X,
@@ -1033,42 +1033,119 @@ function App() {
               </button>
             </div>
 
+
             <div className="flex-1 overflow-y-auto p-6 custom-scrollbar">
-              <div className="space-y-4">
-                {studioProjects.map((project) => {
-                  const IconComponent = {
-                    Film, Palette, Shirt, Sword, Car, Rocket, Flame,
-                    Gamepad2, Aperture, Map, Music, Heart, Zap, Waves, BarChart3,
-                    Skull, Coins, MessageCircle, Video, Citrus
-                  }[project.icon] || Grid;
-                  return (
-                    <a
-                      key={project.id}
-                      href={project.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group block p-4 bg-zinc-800/50 border border-zinc-700/50 rounded-xl hover:bg-zinc-800 hover:border-cyan-500/50 transition-all duration-300"
-                    >
-                      <div className="flex items-start gap-4">
-                        <div className={`p-3 bg-zinc-950 rounded-lg group-hover:scale-110 transition-transform duration-300 ${project.color}`}>
-                          <IconComponent className="w-6 h-6" />
-                        </div>
-                        <div className="flex-1">
-                          <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-2">
-                              <h3 className="font-bold text-zinc-100 group-hover:text-cyan-400 transition-colors">{project.title}</h3>
-                              {project.visibility === 'Private' && (
-                                <span className="text-[8px] bg-zinc-800 text-zinc-500 border border-zinc-700 px-1 py-0.5 rounded uppercase font-black">Private</span>
-                              )}
-                            </div>
-                            <ExternalLink className="w-3 h-3 text-zinc-600 group-hover:text-cyan-400" />
+              {/* Section 1: Working Apps */}
+              <div className="mb-8">
+                <h3 className="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4" /> Live Apps ({deployedApps.length})
+                </h3>
+                <div className="space-y-3">
+                  {deployedApps.map((project) => {
+                    const IconComponent = {
+                      Film, Palette, Shirt, Sword, Car, Rocket, Flame,
+                      Gamepad2, Aperture, Map, Music, Heart, Zap, Waves, BarChart3,
+                      Skull, Coins, MessageCircle, Video, Citrus
+                    }[project.icon] || Grid;
+                    return (
+                      <a
+                        key={project.id}
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group block p-4 bg-emerald-950/30 border border-emerald-700/30 rounded-xl hover:bg-emerald-900/40 hover:border-emerald-500/50 transition-all duration-300"
+                      >
+                        <div className="flex items-start gap-4">
+                          <div className={`p-3 bg-zinc-950 rounded-lg group-hover:scale-110 transition-transform duration-300 ${project.color}`}>
+                            <IconComponent className="w-6 h-6" />
                           </div>
-                          <p className="text-xs text-zinc-500 mt-1 leading-relaxed">{project.description}</p>
+                          <div className="flex-1">
+                            <div className="flex items-center justify-between">
+                              <h3 className="font-bold text-zinc-100 group-hover:text-emerald-400 transition-colors">{project.title}</h3>
+                              <ExternalLink className="w-3 h-3 text-emerald-600 group-hover:text-emerald-400" />
+                            </div>
+                            <p className="text-xs text-zinc-500 mt-1 leading-relaxed">{project.description}</p>
+                          </div>
+                        </div>
+                      </a>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Section 2: GitHub Repos */}
+              <div className="mb-8">
+                <h3 className="text-xs font-bold text-blue-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+                  <Terminal className="w-4 h-4" /> GitHub Repos ({repoApps.length})
+                </h3>
+                <div className="space-y-3">
+                  {repoApps.map((project) => {
+                    const IconComponent = {
+                      Film, Palette, Shirt, Sword, Car, Rocket, Flame,
+                      Gamepad2, Aperture, Map, Music, Heart, Zap, Waves, BarChart3,
+                      Skull, Coins, MessageCircle, Video, Citrus
+                    }[project.icon] || Grid;
+                    return (
+                      <a
+                        key={project.id}
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group block p-4 bg-blue-950/30 border border-blue-700/30 rounded-xl hover:bg-blue-900/40 hover:border-blue-500/50 transition-all duration-300"
+                      >
+                        <div className="flex items-start gap-4">
+                          <div className={`p-3 bg-zinc-950 rounded-lg group-hover:scale-110 transition-transform duration-300 ${project.color}`}>
+                            <IconComponent className="w-6 h-6" />
+                          </div>
+                          <div className="flex-1">
+                            <div className="flex items-center justify-between">
+                              <h3 className="font-bold text-zinc-100 group-hover:text-blue-400 transition-colors">{project.title}</h3>
+                              <ExternalLink className="w-3 h-3 text-blue-600 group-hover:text-blue-400" />
+                            </div>
+                            <p className="text-xs text-zinc-500 mt-1 leading-relaxed">{project.description}</p>
+                          </div>
+                        </div>
+                      </a>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Section 3: Local Only */}
+              <div className="mb-4">
+                <h3 className="text-xs font-bold text-zinc-500 uppercase tracking-wider mb-3 flex items-center gap-2">
+                  <Lock className="w-4 h-4" /> Local Only ({localApps.length})
+                </h3>
+                <div className="space-y-3">
+                  {localApps.map((project) => {
+                    const IconComponent = {
+                      Film, Palette, Shirt, Sword, Car, Rocket, Flame,
+                      Gamepad2, Aperture, Map, Music, Heart, Zap, Waves, BarChart3,
+                      Skull, Coins, MessageCircle, Video, Citrus
+                    }[project.icon] || Grid;
+                    return (
+                      <div
+                        key={project.id}
+                        className="group block p-4 bg-zinc-900/50 border border-zinc-800 rounded-xl opacity-60"
+                      >
+                        <div className="flex items-start gap-4">
+                          <div className={`p-3 bg-zinc-950 rounded-lg ${project.color}`}>
+                            <IconComponent className="w-6 h-6" />
+                          </div>
+                          <div className="flex-1">
+                            <div className="flex items-center justify-between">
+                              <div className="flex items-center gap-2">
+                                <h3 className="font-bold text-zinc-400">{project.title}</h3>
+                                <span className="text-[8px] bg-zinc-800 text-zinc-600 border border-zinc-700 px-1 py-0.5 rounded uppercase font-black">Local</span>
+                              </div>
+                            </div>
+                            <p className="text-xs text-zinc-600 mt-1 leading-relaxed">{project.description}</p>
+                          </div>
                         </div>
                       </div>
-                    </a>
-                  );
-                })}
+                    );
+                  })}
+                </div>
               </div>
             </div>
 
