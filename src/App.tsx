@@ -10,7 +10,7 @@ import {
   Copy, Terminal, Film, Palette, CheckCircle, ChevronDown, ChevronRight, Search, SortAsc,
   Layers, Maximize2, Minimize2, Filter, Dices, Lock, Unlock, Trophy, Grid, X,
   ExternalLink, Shirt, Sword, Car, Rocket, Flame, Gamepad2, Aperture, Map, Music,
-  Heart, Zap, Waves, BarChart3
+  Heart, Zap, Waves, BarChart3, Skull, Coins, MessageCircle, Video, Citrus
 } from 'lucide-react';
 import type { MediaItem } from './data/types';
 import { topMoviesYearly } from './data/topMoviesYearly';
@@ -1038,7 +1038,8 @@ function App() {
                 {studioProjects.map((project) => {
                   const IconComponent = {
                     Film, Palette, Shirt, Sword, Car, Rocket, Flame,
-                    Gamepad2, Aperture, Map, Music, Heart, Zap, Waves, BarChart3
+                    Gamepad2, Aperture, Map, Music, Heart, Zap, Waves, BarChart3,
+                    Skull, Coins, MessageCircle, Video, Citrus
                   }[project.icon] || Grid;
                   return (
                     <a
@@ -1054,7 +1055,12 @@ function App() {
                         </div>
                         <div className="flex-1">
                           <div className="flex items-center justify-between">
-                            <h3 className="font-bold text-zinc-100 group-hover:text-cyan-400 transition-colors">{project.title}</h3>
+                            <div className="flex items-center gap-2">
+                              <h3 className="font-bold text-zinc-100 group-hover:text-cyan-400 transition-colors">{project.title}</h3>
+                              {project.visibility === 'Private' && (
+                                <span className="text-[8px] bg-zinc-800 text-zinc-500 border border-zinc-700 px-1 py-0.5 rounded uppercase font-black">Private</span>
+                              )}
+                            </div>
                             <ExternalLink className="w-3 h-3 text-zinc-600 group-hover:text-cyan-400" />
                           </div>
                           <p className="text-xs text-zinc-500 mt-1 leading-relaxed">{project.description}</p>
