@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   base: "/TopGunPrompter/",
   server: {
-    port: 3020,
+    port: 3026,
     host: true,
     allowedHosts: true
   }

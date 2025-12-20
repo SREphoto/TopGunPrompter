@@ -1,0 +1,397 @@
+/* Mad Men Aesthetic Variables */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  /* Cinematic Palette */
+  --mm-bg: #f8f5f2;
+  /* Cream/Paper */
+  --mm-text: #1a1a1a;
+  /* Ink Black */
+  --mm-accent-red: #8a1c1c;
+  /* Lipstick Red */
+  --mm-accent-gold: #c5a059;
+  /* Whiskey */
+  --mm-secondary: #3a4b5b;
+  /* Slate Suit */
+  --mm-muted: #8c8c8c;
+  /* Cigarette Smoke */
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Lato', sans-serif;
+
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-sharp: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--mm-bg);
+  color: var(--mm-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+.mad-men-app {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background: #fff;
+  padding: 40px 0;
+  text-align: center;
+  border-bottom: 2px solid var(--mm-text);
+  margin-bottom: 60px;
+  position: relative;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 2px;
+  background: var(--mm-accent-gold);
+}
+
+h1 {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: var(--mm-text);
+  text-transform: uppercase;
+}
+
+header div {
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.85rem;
+  margin-top: 10px;
+  color: var(--mm-muted);
+}
+
+/* Main Layout */
+.app-container {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 80px;
+  padding: 0 60px 60px;
+}
+
+/* Sidebar */
+aside {
+  padding-right: 40px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 40px 0 20px;
+  color: var(--mm-secondary);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 15px;
+}
+
+/* Character Grid */
+.char-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.char-btn {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 20px 10px;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.char-btn:hover {
+  border-color: var(--mm-text);
+  transform: translateY(-2px);
+}
+
+.char-btn.active {
+  background: var(--mm-text);
+  color: #fff;
+  border-color: var(--mm-text);
+}
+
+/* Wardrobe List */
+.wardrobe-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item-btn {
+  background: #fff;
+  border: none;
+  border-left: 3px solid transparent;
+  padding: 20px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-btn:hover:not(:disabled) {
+  transform: translateX(5px);
+  border-left-color: var(--mm-accent-gold);
+}
+
+.item-btn.equipped {
+  background: var(--mm-secondary);
+  color: #fff;
+  border-left-color: var(--mm-accent-red);
+}
+
+.item-btn.equipped .item-category {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.item-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #f0f0f0;
+  box-shadow: none;
+}
+
+.item-btn strong {
+  display: block;
+  font-size: 1.1rem;
+  font-family: var(--font-heading);
+}
+
+.item-category {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--mm-muted);
+}
+
+/* Reset Button */
+.reset-btn {
+  width: 100%;
+  margin-top: 60px;
+  padding: 18px;
+  background: transparent;
+  border: 1px solid var(--mm-accent-red);
+  color: var(--mm-accent-red);
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.reset-btn:hover {
+  background: var(--mm-accent-red);
+  color: #fff;
+}
+
+/* Stage */
+.stage {
+  position: relative;
+  background: #fff;
+  height: 850px;
+  border: 15px solid #fff;
+  box-shadow:
+    0 0 0 1px #e0e0e0,
+    0 20px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* Ground the mannequin */
+  padding-bottom: 50px;
+}
+
+/* Debug Panel */
+.debug-panel {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 200px;
+  background: rgba(26, 26, 26, 0.9);
+  color: #fff;
+  padding: 20px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.7rem;
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.debug-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+.debug-panel li {
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+/* Mannequin & Layers */
+.layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.layer-content {
+  background: transparent;
+  /* Remove box for generated assets eventually */
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+/* Placeholder for mannequin if no image */
+.mannequin-placeholder {
+  width: 220px;
+  height: 700px;
+  background: #e6e6e6;
+  border-radius: 110px;
+  /* Cylindrical body */
+  position: relative;
+  border: 2px solid #ccc;
+  background: linear-gradient(to right, #e0e0e0, #f5f5f5, #e0e0e0);
+}
+
+.mannequin-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 100px;
+  background: #dcdcdc;
+  border-radius: 50%;
+}
+
+.mannequin-label {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-style: italic;
+  color: var(--mm-muted);
+}
+
+.empty-stage {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-style: italic;
+  color: var(--mm-muted);
+}
+
+.clothing-layer-label {
+  padding: 10px 20px;
+  border: 1px solid var(--mm-accent-gold);
+  background: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.header-subtitle {
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.85rem;
+  margin-top: 10px;
+  color: var(--mm-muted);
+}
+
+/* Prompt Overlay */
+.prompt-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(26, 26, 26, 0.95) 0%, rgba(26, 26, 26, 0.8) 70%, transparent 100%);
+  padding: 40px 60px 30px;
+  color: #fff;
+  z-index: 1100;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.prompt-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.prompt-label {
+  display: block;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: var(--mm-accent-gold);
+  margin-bottom: 10px;
+}
+
+.prompt-content p {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.copy-btn {
+  background: transparent;
+  border: 1px solid var(--mm-accent-gold);
+  color: var(--mm-accent-gold);
+  padding: 8px 16px;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+  background: var(--mm-accent-gold);
+  color: var(--mm-text);
+}
