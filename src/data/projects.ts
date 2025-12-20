@@ -302,7 +302,7 @@ export const studioProjects: StudioProject[] = [
         id: 'dynamic-prob-calc',
         title: 'Probability Calc',
         description: 'Advanced statistics suite.',
-        url: 'https://github.com/SREphoto/DynamicProbabilityCalculator',
+        url: 'https://srephoto.github.io/dynamic-probability-calculator/',
         icon: 'BarChart3',
         color: 'text-blue-400',
         visibility: 'Public'
