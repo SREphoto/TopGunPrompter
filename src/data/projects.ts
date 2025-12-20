@@ -189,5 +189,122 @@ export const studioProjects: StudioProject[] = [
         icon: 'Citrus',
         color: 'text-sky-400',
         visibility: 'Private'
+    },
+    {
+        id: '3d-asset-studio',
+        title: '3D Asset Studio',
+        description: '3D asset preview & management.',
+        url: 'https://srephoto.github.io/3DAssetStudio/3D-Asset-Studio/',
+        icon: 'Video',
+        color: 'text-blue-500',
+        visibility: 'Public'
+    },
+    {
+        id: 'tetris',
+        title: 'Tetris',
+        description: 'Classic block stacking game.',
+        url: 'https://srephoto.github.io/Tetris/Tetris/',
+        icon: 'Gamepad2',
+        color: 'text-purple-500',
+        visibility: 'Public'
+    },
+    {
+        id: 'fantasy-map-designer',
+        title: 'Fantasy Map Designer',
+        description: 'Create fantasy world maps.',
+        url: 'https://srephoto.github.io/Fantasy%20World%20Map%20Designer/fantasy-map-designer/',
+        icon: 'Map',
+        color: 'text-emerald-600',
+        visibility: 'Public'
+    },
+    {
+        id: 'home-planner',
+        title: 'Home Planner',
+        description: 'Interior design planning tool.',
+        url: 'https://srephoto.github.io/HomePlanner/',
+        icon: 'Heart',
+        color: 'text-orange-400',
+        visibility: 'Public'
+    },
+    {
+        id: 'iconify',
+        title: 'Iconify',
+        description: 'Icon generation management.',
+        url: 'https://srephoto.github.io/Iconify/Iconify-Nov-2025/',
+        icon: 'Palette',
+        color: 'text-cyan-500',
+        visibility: 'Public'
+    },
+    {
+        id: 'punchline-master',
+        title: 'Punchline Master',
+        description: 'AI Punchline Meme Calendar.',
+        url: 'https://srephoto.github.io/Punchline%20Master/AI-Punchline-Meme-Calendar/',
+        icon: 'MessageCircle',
+        color: 'text-pink-500',
+        visibility: 'Public'
+    },
+    {
+        id: 'storyboard-creator',
+        title: 'StoryBoard Creator',
+        description: 'Visual storytelling tool.',
+        url: 'https://srephoto.github.io/StoryBoard%20Creator/StoryBoardCreator/',
+        icon: 'Film',
+        color: 'text-zinc-400',
+        visibility: 'Public'
+    },
+    {
+        id: 'ocr-app',
+        title: 'OCR App',
+        description: 'Optical Character Recognition.',
+        url: 'https://srephoto.github.io/ocr-app/',
+        icon: 'Aperture',
+        color: 'text-green-400',
+        visibility: 'Public'
+    },
+    {
+        id: 'storyweaver',
+        title: 'Story Weaver',
+        description: 'Collaborative story writing.',
+        url: 'https://srephoto.github.io/storyweaver/',
+        icon: 'MessageCircle',
+        color: 'text-indigo-500',
+        visibility: 'Public'
+    },
+    {
+        id: 'word-slide',
+        title: 'Word Slide',
+        description: 'Word puzzle game.',
+        url: 'https://srephoto.github.io/WordSlide/',
+        icon: 'Gamepad2',
+        color: 'text-yellow-500',
+        visibility: 'Public'
+    },
+    {
+        id: 'sre-designs',
+        title: 'SREdesigns',
+        description: 'Professional Portfolio.',
+        url: 'https://srephoto.github.io/SREdesigns/',
+        icon: 'Aperture',
+        color: 'text-white',
+        visibility: 'Public'
+    },
+    {
+        id: 'supertuxkart',
+        title: 'SuperTuxKart',
+        description: 'Open source racing game.',
+        url: 'https://github.com/SREphoto/SuperTuxKart',
+        icon: 'Car',
+        color: 'text-red-500',
+        visibility: 'Public'
+    },
+    {
+        id: 'dynamic-prob-calc',
+        title: 'Probability Calc',
+        description: 'Advanced statistics suite.',
+        url: 'https://github.com/SREphoto/DynamicProbabilityCalculator',
+        icon: 'BarChart3',
+        color: 'text-blue-400',
+        visibility: 'Public'
     }
 ];
