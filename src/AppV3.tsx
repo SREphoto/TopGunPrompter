@@ -2,7 +2,7 @@ import { useState, useMemo } from 'react';
 import { movieScenes } from './data/scenes';
 import { styles as globalStyles } from './data/stylesV3';
 import { movies } from './data/moviesV3';
-import { Copy, Terminal, Settings, Film, ArrowRight, Palette, CheckCircle, ChevronDown, ChevronRight, Search, SortAsc, Layers, Maximize2, Minimize2 } from 'lucide-react';
+import { Copy, Terminal, Film, Palette, CheckCircle, ChevronDown, ChevronRight, Search, SortAsc, Layers, Maximize2, Minimize2 } from 'lucide-react';
 
 type LayoutMode = 'split' | 'scene-focus' | 'style-focus';
 
@@ -50,8 +50,8 @@ function AppV3() {
     }
 
     result.sort((a, b) => {
-      let valA = sortBy === 'title' ? a.title : a.year;
-      let valB = sortBy === 'title' ? b.title : b.year;
+      const valA = sortBy === 'title' ? a.title : a.year;
+      const valB = sortBy === 'title' ? b.title : b.year;
 
       if (valA < valB) return sortOrder === 'asc' ? -1 : 1;
       if (valA > valB) return sortOrder === 'asc' ? 1 : -1;
@@ -184,7 +184,8 @@ function AppV3() {
               <span className="text-[10px] uppercase font-bold text-zinc-500 flex items-center gap-1"><SortAsc className="w-3 h-3" /> Sort</span>
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
+                onChange={(e) => setSortBy(e.target.value as 'title' | 'year')}
+                aria-label="Sort by"
                 className="bg-zinc-950 border border-zinc-800 rounded-md px-2 py-1 text-xs text-zinc-300 focus:outline-none focus:border-cyan-500"
               >
                 <option value="title">Title</option>
@@ -203,7 +204,8 @@ function AppV3() {
               <span className="text-[10px] uppercase font-bold text-zinc-500 flex items-center gap-1"><Layers className="w-3 h-3" /> Group</span>
               <select
                 value={groupBy}
-                onChange={(e) => setGroupBy(e.target.value as any)}
+                onChange={(e) => setGroupBy(e.target.value as 'none' | 'genre' | 'decade')}
+                aria-label="Group by"
                 className="bg-zinc-950 border border-zinc-800 rounded-md px-2 py-1 text-xs text-zinc-300 focus:outline-none focus:border-cyan-500"
               >
                 <option value="none">None</option>
@@ -494,10 +496,12 @@ function AppV3() {
               <div>
                 <div className="flex justify-between mb-1.5 ml-1">
                   <label className="text-[9px] font-mono text-zinc-600">STYLIZE</label>
-                  <span className="text-[9px] font-mono text-cyan-500">{stylize}</span>
+                  <label htmlFor="stylize-range-v3" className="text-[9px] font-mono text-cyan-500">{stylize}</label>
                 </div>
                 <input
+                  id="stylize-range-v3"
                   type="range" min="0" max="1000" step="50" value={stylize} onChange={(e) => setStylize(parseInt(e.target.value))}
+                  title="Stylize level"
                   className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-cyan-500"
                 />
               </div>

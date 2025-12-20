@@ -2,6 +2,7 @@ import type { Movie } from './types';
 
 export const movies: Movie[] = [
     {
+        type: 'movie',
         id: 'top-gun',
         title: 'Top Gun',
         year: '1986',
@@ -15,6 +16,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'interview-vampire',
         title: 'Interview with the Vampire',
         year: '1994',
@@ -28,6 +30,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'oldboy',
         title: 'Oldboy',
         year: '2003',
@@ -41,6 +44,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'john-wick',
         title: 'John Wick',
         year: '2014',
@@ -54,6 +58,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'american-psycho',
         title: 'American Psycho',
         year: '2000',
@@ -67,6 +72,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'gladiator',
         title: 'Gladiator',
         year: '2000',
@@ -80,6 +86,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'seven',
         title: 'Se7en',
         year: '1995',
@@ -93,6 +100,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'fight-club',
         title: 'Fight Club',
         year: '1999',
@@ -106,6 +114,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'aliens',
         title: 'Aliens',
         year: '1986',
@@ -119,6 +128,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'predator',
         title: 'Predator',
         year: '1987',
@@ -132,6 +142,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'joker',
         title: 'Joker',
         year: '2019',
@@ -145,6 +156,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'dune',
         title: 'Dune',
         year: '2021',
@@ -158,6 +170,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'the-matrix',
         title: 'The Matrix',
         year: '1999',
@@ -171,6 +184,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'blade-runner-2049',
         title: 'Blade Runner 2049',
         year: '2017',
@@ -184,6 +198,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'mad-max-fury-road',
         title: 'Mad Max: Fury Road',
         year: '2015',
@@ -197,6 +212,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'the-dark-knight',
         title: 'The Dark Knight',
         year: '2008',
@@ -210,6 +226,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'pulp-fiction',
         title: 'Pulp Fiction',
         year: '1994',
@@ -223,6 +240,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'terminator-2',
         title: 'Terminator 2: Judgment Day',
         year: '1991',
@@ -236,6 +254,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'inception',
         title: 'Inception',
         year: '2010',
@@ -249,6 +268,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'kill-bill-vol-1',
         title: 'Kill Bill: Vol. 1',
         year: '2003',
@@ -262,6 +282,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'no-country-for-old-men',
         title: 'No Country for Old Men',
         year: '2007',
@@ -275,6 +296,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'drive',
         title: 'Drive',
         year: '2011',
@@ -288,6 +310,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'the-fifth-element',
         title: 'The Fifth Element',
         year: '1997',
@@ -301,6 +324,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'interstellar',
         title: 'Interstellar',
         year: '2014',
@@ -314,6 +338,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'the-shining',
         title: 'The Shining',
         year: '1980',
@@ -327,6 +352,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'tron-legacy',
         title: 'Tron: Legacy',
         year: '2010',
@@ -340,6 +366,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'taxi-driver',
         title: 'Taxi Driver',
         year: '1976',
@@ -353,6 +380,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'saving-private-ryan',
         title: 'Saving Private Ryan',
         year: '1998',
@@ -366,6 +394,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'iron-man',
         title: 'Iron Man',
         year: '2008',
@@ -379,6 +408,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'starship-troopers',
         title: 'Starship Troopers',
         year: '1997',
@@ -392,6 +422,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'transformers',
         title: 'Transformers',
         year: '2007',
@@ -405,6 +436,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'deadpool',
         title: 'Deadpool',
         year: '2016',
@@ -418,6 +450,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'john-wick-2',
         title: 'John Wick: Chapter 2',
         year: '2017',
@@ -431,6 +464,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'john-wick-3',
         title: 'John Wick: Chapter 3 - Parabellum',
         year: '2019',
@@ -444,6 +478,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'die-hard',
         title: 'Die Hard',
         year: '1988',
@@ -457,6 +492,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'matrix-reloaded',
         title: 'The Matrix Reloaded',
         year: '2003',
@@ -470,6 +506,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'matrix-revolutions',
         title: 'The Matrix Revolutions',
         year: '2003',
@@ -483,6 +520,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'casino-royale',
         title: 'Casino Royale',
         year: '2006',
@@ -496,6 +534,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'point-break',
         title: 'Point Break',
         year: '1991',
@@ -509,6 +548,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'die-hard-vengeance',
         title: 'Die Hard with a Vengeance',
         year: '1995',
@@ -522,6 +562,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'commando',
         title: 'Commando',
         year: '1985',
@@ -535,6 +576,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'bad-boys',
         title: 'Bad Boys',
         year: '1995',
@@ -548,6 +590,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'total-recall',
         title: 'Total Recall',
         year: '1990',
@@ -561,6 +604,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'last-crusade',
         title: 'Indiana Jones and the Last Crusade',
         year: '1989',
@@ -574,6 +618,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'first-blood',
         title: 'Rambo: First Blood',
         year: '1982',
@@ -587,6 +632,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'kill-bill-vol-2',
         title: 'Kill Bill: Vol. 2',
         year: '2004',
@@ -600,6 +646,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'jurassic-park',
         title: 'Jurassic Park',
         year: '1993',
@@ -613,6 +660,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'titanic',
         title: 'Titanic',
         year: '1997',
@@ -626,6 +674,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'avatar',
         title: 'Avatar',
         year: '2009',
@@ -639,6 +688,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'the-avengers',
         title: 'The Avengers',
         year: '2012',
@@ -652,6 +702,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'the-terminator',
         title: 'The Terminator',
         year: '1984',
@@ -665,6 +716,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'robocop',
         title: 'RoboCop',
         year: '1987',
@@ -678,6 +730,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'lethal-weapon',
         title: 'Lethal Weapon',
         year: '1987',
@@ -691,6 +744,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'escape-from-new-york',
         title: 'Escape from New York',
         year: '1981',
@@ -704,6 +758,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'bloodsport',
         title: 'Bloodsport',
         year: '1988',
@@ -717,6 +772,7 @@ export const movies: Movie[] = [
         ]
     },
     {
+        type: 'movie',
         id: 'big-trouble',
         title: 'Big Trouble in Little China',
         year: '1986',

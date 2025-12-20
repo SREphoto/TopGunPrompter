@@ -3,252 +3,252 @@ import type { Scene } from '../types';
 export const madMaxFuryRoadScenes: Scene[] = [
     {
         id: 1,
-        title: "The Lizard",
-        promptPayload: "Max Rockatansky standing next to his Interceptor in the desert, eating a two-headed lizard, rugged survivalist gear, long hair and beard, vast wasteland background."
+        title: "Lizard Snack",
+        promptPayload: "Max standing by V8 Interceptor, eating a two-headed lizard, desert wasteland, long hair and beard, survival, gritty texture, wide shot."
     },
     {
         id: 2,
-        title: "The Chase Begins",
-        promptPayload: "Max driving the V8 Interceptor, being chased by War Boys in modified vehicles, dust kicking up, explosions, high speed action, wide shot."
+        title: "Capture and Tattoo",
+        promptPayload: "War Boys shaving Max's head, tattooing back 'Universal Donor', muzzle on face, chains, chaotic underground tunnel, frenzy."
     },
     {
         id: 3,
-        title: "Blood Bag",
-        promptPayload: "Max tied to the front of Nux's car as a blood bag, muzzle on his face, IV tube connecting them, chaotic motion, fear in his eyes, chrome spray paint."
+        title: "War Rig Departure",
+        promptPayload: "Furiosa climbing into massive War Rig, engine starting with black smoke, steering wheel with skull, Citadel crowd cheering below, industrial."
     },
     {
         id: 4,
-        title: "Immortan Joe",
-        promptPayload: "Immortan Joe standing on the balcony of the Citadel, wearing his breathing mask and clear plastic armor, masses of pale War Boys below, worship, water flowing."
+        title: "Doof Warrior",
+        promptPayload: "Blind guitarist bungee corded to speaker truck, playing flamethrower guitar, red pajamas, speakers pulsing, insane energy, wide shot."
     },
     {
         id: 5,
-        title: "The War Rig",
-        promptPayload: "Furiosa driving the massive War Rig, mechanical arm gripping the wheel, black war paint on forehead, determination, desert landscape reflecting in sunglasses."
+        title: "Blood Bag",
+        promptPayload: "Nux driving car, Max chained to hood efficiently blood transfusion line connected, blood pumping, crazy eyes, high speed, desert blur."
     },
     {
         id: 6,
-        title: "Into the Storm",
-        promptPayload: "The War Rig driving into a massive sandstorm, red lightning, tornadoes of sand, apocalyptic scale, vehicles flying in the wind, orange and black palette."
+        title: "Sandstorm Wall",
+        promptPayload: "Massive electrical sandstorm filling horizon, tornadoes, red lightning, cars driving into it, apocalyptic scale, awe inspiring."
     },
     {
         id: 7,
-        title: "Nux's Witness",
-        promptPayload: "Nux spraying chrome paint on his mouth, 'Witness me!', ecstatic expression, driving into the storm, religious fervor, high contrast."
+        title: "Car Tornado",
+        promptPayload: "Vehicles flying up into tornado, debris spinning, fire, lightning strikes, chaos inside the storm, cinematic destruction."
     },
     {
         id: 8,
-        title: "Max Wakes Up",
-        promptPayload: "Max waking up buried in sand after the crash, chain still attached to Nux, struggling to breathe, gritty texture, bright sunlight."
+        title: "Waking in Sand",
+        promptPayload: "Max waking up buried in sand, dunes stretching forever, silence after storm, shotgun malfunction, blue sky, survival."
     },
     {
         id: 9,
-        title: "The Wives",
-        promptPayload: "The five wives standing in the desert, wearing white muslin cloths, cutting off chastity belts, water hose, contrast of beauty and harsh environment."
+        title: "Water Hose Fight",
+        promptPayload: "Max fighting Furiosa and Wives, chained to Nux, wrestling for water hose, desperation, intense choreography, water spraying, glistening skin."
     },
     {
         id: 10,
-        title: "Max vs Furiosa",
-        promptPayload: "Max and Furiosa fighting in the sand, brutal hand-to-hand combat, desperation, Nux and the wives watching, chain weapon."
+        title: "Splendid's Leg",
+        promptPayload: "Splendid showing leg out of War Rig door to distract enemies, white fabric blowing, sheer cliff drop, high speed chase tension."
     },
     {
         id: 11,
-        title: "The Doof Warrior",
-        promptPayload: "The Doof Warrior playing a flame-throwing electric guitar on top of a moving truck, wall of speakers, red onesie, bungee cords, pure madness."
+        title: "The Wives",
+        promptPayload: "Five wives cutting off chastity belts, washing off with hose, white muslin clothes, contrast against dirty war rig, beauty in wasteland."
     },
     {
         id: 12,
-        title: "Canyon Chase",
-        promptPayload: "Bikers jumping over the War Rig in a narrow canyon, throwing grenades, explosions, aerial acrobatics, dust and smoke."
+        title: "Chrome Spray",
+        promptPayload: "Nux spraying mouth with silver chrome paint, 'Witness me!', wide eyed fanaticism, steering wheel, preparations for sacrifice."
     },
     {
         id: 13,
-        title: "Nux's Failure",
-        promptPayload: "Nux curling up in the back of the War Rig, crying, 'He looked at me', failure to die historically, vulnerability, pale skin."
+        title: "Canyon Arch",
+        promptPayload: "Rock riders jumping motorcycles over the War Rig, dropping bombs, narrow canyon pass, explosions, vertical action."
     },
     {
         id: 14,
-        title: "The Bog",
-        promptPayload: "The War Rig stuck in the mud at night, blue moonlight, silence, trees on stilts (The Crow Fishers) in the background, eerie atmosphere."
+        title: "Rig Repair",
+        promptPayload: "Max and Furiosa fixing engine while driving, climbing on side of truck, high speed blur below, mechanical details, grease."
     },
     {
         id: 15,
-        title: "The Bullet Farmer",
-        promptPayload: "The Bullet Farmer firing machine guns into the dark, 'I am the scales of justice!', blindfolded, muzzle flashes illuminating the fog."
+        title: "Green Place Discovery",
+        promptPayload: "Vuvalini motorcycle women interacting with Furiosa, realization that the Green Place is gone, emotional devastation, vast salt flats."
     },
     {
         id: 16,
-        title: "Max Returns",
-        promptPayload: "Max walking back out of the fog, carrying a bag of weapons and ammo, covered in blood (not his own), silent badassery."
+        title: "Bog Stuck",
+        promptPayload: "War Rig stuck in mud, tree used as winch, spinning tires spraying muck, tension rising, Bullet Farmer approaching in distance."
     },
     {
         id: 17,
-        title: "The Green Place",
-        promptPayload: "Furiosa realizing the Green Place is gone, falling to her knees in the dunes, screaming, vast emptiness, heartbreaking realization."
+        title: "Max's Thumb",
+        promptPayload: "Max giving thumbs up after sniper shot, silence, off-screen kill implied, cool protagonist moment, night blue filter."
     },
     {
         id: 18,
-        title: "The Vuvalini",
-        promptPayload: "The Vuvalini (Many Mothers) on their motorcycles, weathered faces, goggles, ancient weapons, tough survivalists."
+        title: "Pole Cats",
+        promptPayload: "War Boys swinging on giant poles from moving cars, grabbing victims, acrobatics, explosions in background, cirque du soleil from hell."
     },
     {
         id: 19,
-        title: "The Plan",
-        promptPayload: "Max mapping out the plan in the sand, 'We go back', Furiosa looking at him, hope rekindled, group huddled together."
+        title: "Steering Wheel Shrine",
+        promptPayload: "Collection of steering wheels in Citadel shrine, religious lighting, worship of V8 engine, metal and bone textures."
     },
     {
         id: 20,
-        title: "Pole Cats",
-        promptPayload: "War Boys swinging on long poles from moving cars, snatching people, acrobatic warfare, blue sky background, kinetic energy."
+        title: "Mother's Milk",
+        promptPayload: "Milking machines attached to large women, industrial pipes, Immortan Joe drinking glass of white milk, grotesque luxury."
     },
     {
         id: 21,
-        title: "Furiosa's Stab",
-        promptPayload: "Furiosa stabbed in the side, pulling the knife out, grimacing, continuing to drive, sheer will."
+        title: "Gigahorse",
+        promptPayload: "Immortan Joe's double-stacked Cadillac vehicle, massive wheels, gold trim, roaring engine, desert dust, villain presence."
     },
     {
         id: 22,
         title: "Nux's Sacrifice",
-        promptPayload: "Nux driving the War Rig, 'Witness me', crashing the truck to block the canyon, peaceful smile, Capable watching, redemption."
+        promptPayload: "Nux driving rig into canyon wall to block pass, serene smile, 'Witness me', crashing metal, massive pileup."
     },
     {
         id: 23,
-        title: "Immortan Joe's Death",
-        promptPayload: "Furiosa ripping Immortan Joe's mask off with the wheel, jaw tearing away, gore, poetic justice, speed blur."
+        title: "Rictus Erectus",
+        promptPayload: "Giant muscleman Rictus ripping engine block out of car with bare hands, screaming, veins popping, brute force."
     },
     {
         id: 24,
-        title: "Ascension",
-        promptPayload: "Furiosa, Max, and the Wives rising up on the platform at the Citadel, water released, people cheering, Max disappearing into the crowd."
+        title: "Splendid's Death",
+        promptPayload: "Pregnant Splendid falling from rig, run over by wheels, Joe's reaction, tragedy amidst chaos, white cloth floating."
     },
     {
         id: 25,
-        title: "Chrome Spray",
-        promptPayload: "Close up of a War Boy spraying silver chrome paint on his teeth, eyes wide, drug-induced euphoria."
+        title: "Night Bog",
+        promptPayload: "Blue night filter, War Rig passing through swamp, stilt walkers in distance, eerie crows, mist, horror atmosphere."
     },
     {
         id: 26,
-        title: "Steering Wheel Shrine",
-        promptPayload: "Interior of the Citadel temple, steering wheels displayed as religious icons, candlelight, worship of the machine."
+        title: "Bullet Farmer",
+        promptPayload: "Blind Bullet Farmer firing machine guns into the dark, 'I am the scales of justice', muzzle flashes illuminating madness."
     },
     {
         id: 27,
-        title: "Breast Milk Farm",
-        promptPayload: "Large women hooked up to milking machines, 'Mother's Milk', industrial commodification of life, grotesque imagery."
+        title: "Crow Keeper",
+        promptPayload: "Strange figures on stilts in the bog, keeping crows, foggy background, surreal world building, eerie silence."
     },
     {
         id: 28,
-        title: "Gigahorse",
-        promptPayload: "Immortan Joe's car (The Gigahorse), two Cadillacs stacked on top of each other, massive wheels, exhaust pipes, monster truck aesthetic."
+        title: "V8 Engine Close Up",
+        promptPayload: "Macro shot of air intake scoop opening, supercharger whining, chrome vibrating, raw mechanical power, gasoline aesthetic."
     },
     {
         id: 29,
-        title: "Rictus Erectus",
-        promptPayload: "Rictus Erectus flexing his muscles, holding a machine gun, giant baby man, engine block chest piece."
+        title: "Furiosa's Arm",
+        promptPayload: "Furiosa attaching mechanical prosthetic arm, leather straps, grease, determination, warrior preparation, intimate moment."
     },
     {
         id: 30,
-        title: "Splendid's Death",
-        promptPayload: "Angharad falling from the War Rig, pregnant belly, white cloth fluttering, tragedy, Immortan Joe swerving."
+        title: "Salt Flats",
+        promptPayload: "Endless white salt flat, motorcycles riding into horizon, stark minimalism, blue sky, hopelessness."
     },
     {
         id: 31,
-        title: "Max's Muzzle",
-        promptPayload: "Close up of the metal garden fork muzzle on Max's face, rust, sweat, eyes darting, trapped animal."
+        title: "Seed Bag",
+        promptPayload: "One of the wives showing bag of heirloom seeds, hope for future, delicate hands, dirty background, contrast."
     },
     {
         id: 32,
-        title: "War Boy Tumor",
-        promptPayload: "Nux drawing a smiley face on his tumor 'Larry and Barry', dark humor, acceptance of death."
+        title: "Max's Face Mask",
+        promptPayload: "Close up of metal garden fork mask on Max's face, rusty texture, eyes darting, trapped animal vibe."
     },
     {
         id: 33,
-        title: "V8 Engine",
-        promptPayload: "Close up of a V8 engine roaring, chrome shaking, fire spitting from exhaust, power visualized."
+        title: "Harpoon Shot",
+        promptPayload: "War Boy firing explosive harpoon, spear flying through air, impact, smoke trail, vehicle combat."
     },
     {
         id: 34,
-        title: "Furiosa's Arm",
-        promptPayload: "Close up of Furiosa's mechanical prosthetic arm, improvised metal parts, grease, functionality over form."
+        title: "Immortan's Face",
+        promptPayload: "Immortan Joe putting on skeletal breathing mask, clear plastic armor, white hair, terrifying leader, villain intro."
     },
     {
         id: 35,
-        title: "Capable and Nux",
-        promptPayload: "Capable touching Nux's face, a moment of tenderness amidst war, red hair, white skin, connection."
+        title: "U-Turn",
+        promptPayload: "Wide shot of War Rig turning around in desert, dust kicking up, 'We go back', strategic decision, massive vehicle maneuver."
     },
     {
         id: 36,
-        title: "The Seed Bag",
-        promptPayload: "The Keeper of the Seeds showing her bag of heirloom seeds, 'Trees, flowers, fruit', hope for the future."
+        title: "Guitar Flame",
+        promptPayload: "Close up of guitar neck spewing fire, Doof Warrior screaming, distortion, heat haze, rock and roll apocalypse."
     },
     {
         id: 37,
-        title: "Crow Fishers",
-        promptPayload: "Silhouettes of the Crow Fishers on stilts in the bog, misty background, surreal horror."
+        title: "People Eater",
+        promptPayload: "Obese People Eater in limousine truck, counting gas, wearing suit, grotesque capitalism, explosion reflection in glasses."
     },
     {
         id: 38,
-        title: "Max's Thumb",
-        promptPayload: "Max giving a thumbs up to Furiosa, a sign of respect, understated emotion, dusty face."
+        title: "War Boy Pups",
+        promptPayload: "Young white painted boys climbing down scaffolding, eager to join chase, cult indoctrination, industrial hive."
     },
     {
         id: 39,
-        title: "Blood Transfusion",
-        promptPayload: "Max giving blood to Furiosa in the moving car, needle in arm, 'Max. My name is Max', saving her life."
+        title: "Joe's Jaw",
+        promptPayload: "Furiosa ripping Joe's mask off with wheel, jaw tearing away, gross gore, death of tyrant, shock."
     },
     {
         id: 40,
-        title: "War Rig Interior",
-        promptPayload: "Inside the cab of the War Rig, switches, levers, skulls, Furiosa driving, industrial cockpit."
+        title: "Platform Rise",
+        promptPayload: "Max and Furiosa rising up on Citadel platform, people cheering, water released, redemption, looking down at crowd."
     },
     {
         id: 41,
-        title: "People Eater",
-        promptPayload: "The People Eater in his limousine, wearing a suit, counting gas, grotesque capitalist caricature."
+        title: "Interceptor Crash",
+        promptPayload: "Max's car rolling over in opening scene, metal crunching, dust cloud, abrupt end to freedom, capture."
     },
     {
         id: 42,
-        title: "Exploding Spear",
-        promptPayload: "A thunderstick (explosive spear) hitting a car, massive explosion, debris flying, kamikaze attack."
+        title: "Branding Iron",
+        promptPayload: "Glowing red branding iron, smoke, preparing to mark Max, torture device, extreme heat detail."
     },
     {
         id: 43,
-        title: "Sand Goggles",
-        promptPayload: "Close up of Max's goggles reflecting the desert, dust coating the lens, survival gear."
+        title: "Chainsaw Combat",
+        promptPayload: "Max using chainsaw to block attack, sparks flying, defensive fighting, frantic energy, close quarters on truck."
     },
     {
         id: 44,
-        title: "Water Release",
-        promptPayload: "Massive pipes opening at the Citadel, water cascading down to the thirsty masses, salvation."
+        title: "Nux's Tumor",
+        promptPayload: "Nux drawing smiley face on his tumor 'Larry and Barry', dark humor, sickness, acceptance of death."
     },
     {
         id: 45,
-        title: "Dead Tree",
-        promptPayload: "A single dead tree in the desert, twisted branches, symbol of the wasteland."
+        title: "Water Release",
+        promptPayload: "Massive waterfalls cascading from Citadel pipes, thirsty crowd below reaching up, rainbow in mist, salvation."
     },
     {
         id: 46,
-        title: "Interceptor Wreck",
-        promptPayload: "The V8 Interceptor rolling and crashing, metal crunching, the end of an icon."
+        title: "Wife's Pregnancy",
+        promptPayload: "Splendid holding pregnant belly, protecting unborn child, white dress, vulnerability in war zone."
     },
     {
         id: 47,
-        title: "Guitar Flame",
-        promptPayload: "Close up of the guitar neck spewing fire, heat distortion, rock and roll apocalypse."
+        title: "Furiosa's Eyes",
+        promptPayload: "Extreme close up of Furiosa's eyes, black war paint on forehead, intensity, searching horizon, determination."
     },
     {
         id: 48,
-        title: "Valkyrie",
-        promptPayload: "The Valkyrie screaming from her tower, naked, calling for help, trap."
+        title: "Dead Tree",
+        promptPayload: "Twisted dead tree in middle of salt flat, surreal landmark, bleakness, emptiness, stark shadow."
     },
     {
         id: 49,
-        title: "Nux's Wheel",
-        promptPayload: "Nux holding his steering wheel, 'It's my wheel!', possession, pride."
+        title: "Explosion Chain",
+        promptPayload: "Chain reaction of cars exploding in canyon, fireballs rolling, debris flying, symphonic destruction."
     },
     {
         id: 50,
-        title: "Final Look",
-        promptPayload: "Max disappearing into the crowd, exchanging a final look with Furiosa, the wanderer moves on."
+        title: "Max Disappears in Crowd",
+        promptPayload: "Final shot of Max nodding to Furiosa, walking away into crowd, drifter lifestyle, disappearing, bittersweet ending."
     }
 ];
