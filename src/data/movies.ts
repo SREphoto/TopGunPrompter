@@ -2945,4 +2945,816 @@ export const movies: Movie[] = [
             { name: 'Salute', promptString: 'pilots saluting, emotional finale, sunset, sacrifice, redemption, tearful, hero shot' }
         ]
     },
+    {
+        id: 'raiders-lost-ark',
+        title: 'Raiders of the Lost Ark',
+        year: '1981',
+        genres: ['Action', 'Adventure'],
+        director: 'Steven Spielberg',
+        actors: ['Harrison Ford', 'Karen Allen', 'Paul Freeman'],
+        type: 'movie',
+        styles: [
+            { name: 'Golden Idol', promptString: 'golden light, ancient temple shadows, dust motes, trap mechanisms, jungle exterior, cinematic adventure' },
+            { name: 'Desert Dig', promptString: 'blinding sun, tan colors, desert landscape, map room, beam of light, archaeological grit' },
+            { name: 'Map Room Beam', promptString: 'god rays, dusty air, ancient miniature city, staff of ra, glowing medallion, mystery' }
+        ]
+    },
+    {
+        id: 'temple-of-doom',
+        title: 'Indiana Jones and the Temple of Doom',
+        year: '1984',
+        genres: ['Action', 'Adventure'],
+        director: 'Steven Spielberg',
+        actors: ['Harrison Ford', 'Kate Capshaw', 'Ke Huy Quan'],
+        type: 'movie',
+        styles: [
+            { name: 'Lava Glow', promptString: 'intense red and orange glow, firelight, cult ritual, dark cavern, underground temple, heat distortion' },
+            { name: 'Mine Cart', promptString: 'fast motion, industrial rail, wooden supports, torches, rock walls, dynamic action, sparks' },
+            { name: 'Shanghai Night', promptString: 'white tuxedo, cabaret lights, 30s glamour, shadows, car chase, club interior' }
+        ]
+    },
+    {
+        id: 'crystal-skull',
+        title: 'Indiana Jones and the Kingdom of the Crystal Skull',
+        year: '2008',
+        genres: ['Action', 'Adventure'],
+        director: 'Steven Spielberg',
+        actors: ['Harrison Ford', 'Cate Blanchett', 'Shia LaBeouf'],
+        type: 'movie',
+        styles: [
+            { name: 'Jungle Convoy', promptString: 'vibrant green jungle, military trucks, dust, duck-tail hair, 50s aesthetic, sharp focus' },
+            { name: 'Crystal Glow', promptString: 'translucent crystal skull, internal refraction, magnetic energy, alien technology, bioluminescence' },
+            { name: 'Hangar 51', promptString: 'massive warehouse, crates, Roswell mystery, government shadows, 50s atomic age' }
+        ]
+    },
+    {
+        id: 'dial-of-destiny',
+        title: 'Indiana Jones and the Dial of Destiny',
+        year: '2023',
+        genres: ['Action', 'Adventure'],
+        director: 'James Mangold',
+        actors: ['Harrison Ford', 'Phoebe Waller-Bridge', 'Mads Mikkelsen'],
+        type: 'movie',
+        styles: [
+            { name: 'Antique Gold', promptString: 'aged bronze texture, mechanical gears, sun-drenched sicily, gritty realism, digital clarity, old world charm' },
+            { name: 'Young Indy CGI', promptString: '80s indy face, sharp lighting, night train, nazi fortress, vintage action feel' },
+            { name: 'Ancient Siege', promptString: 'classical era, stone towers, fire arrows, historical epic scale, dusty, mediterranean blue' }
+        ]
+    },
+    {
+        id: 'matrix-resurrections',
+        title: 'The Matrix Resurrections',
+        year: '2021',
+        genres: ['Action', 'Sci-Fi'],
+        director: 'Lana Wachowski',
+        actors: ['Keanu Reeves', 'Carrie-Anne Moss', 'Yahya Abdul-Mateen II'],
+        type: 'movie',
+        styles: [
+            { name: 'Digital Sun', promptString: 'vibrant warm color palette, digital clarity, modern San Francisco, sleek technology, meta commentary' },
+            { name: 'Modal Glitch', promptString: 'glitching reality, code bleed, recursive loops, dark green and black, cybernetic evolution' },
+            { name: 'Human Battery', promptString: 'pods, cables, machine city evolution, red glow, advanced robotics, biological interface' }
+        ]
+    },
+    {
+        id: 'john-wick-4',
+        title: 'John Wick: Chapter 4',
+        year: '2023',
+        genres: ['Action', 'Crime', 'Thriller'],
+        director: 'Chad Stahelski',
+        actors: ['Keanu Reeves', 'Donnie Yen', 'Bill Skarsgård'],
+        type: 'movie',
+        styles: [
+            { name: 'Osaka Neon', promptString: 'vibrant pink and blue, traditional japanese architecture, modern neon, swords and guns, high contrast' },
+            { name: 'Dragon\'s Breath', promptString: 'overhead shot, fire bullets, sparks, orange glow in darkness, top-down perspective, intense violence' },
+            { name: 'Arc de Triomphe', promptString: 'Paris night, swirling cars, rain, high speed action, headlights, chaotic beauty' }
+        ]
+    },
+    {
+        id: 'fast-furious-1',
+        title: 'The Fast and the Furious',
+        year: '2001',
+        genres: ['Action', 'Crime'],
+        director: 'Rob Cohen',
+        actors: ['Paul Walker', 'Vin Diesel', 'Michelle Rodriguez'],
+        type: 'movie',
+        styles: [
+            { name: 'Street Race', promptString: 'nitrous oxide blue flames, night city streets, blurred lights, roaring engines, highly tuned import cars' },
+            { name: 'Toretto Backyard', promptString: 'golden hour, family barbecue, warm sunlight, corona beers, muscle cars in the driveway, 2000s haze' }
+        ]
+    },
+    {
+        id: 'fast-furious-2',
+        title: '2 Fast 2 Furious',
+        year: '2003',
+        genres: ['Action', 'Crime'],
+        director: 'John Singleton',
+        actors: ['Paul Walker', 'Tyrese Gibson', 'Eva Mendes'],
+        type: 'movie',
+        styles: [
+            { name: 'Miami Neon', promptString: 'vibrant neon colors, pink and blue lighting, wet streets, silver skyline, luxury tuner cars, high speed bridge jump' }
+        ]
+    },
+    {
+        id: 'fast-furious-3',
+        title: 'The Fast and the Furious: Tokyo Drift',
+        year: '2006',
+        genres: ['Action', 'Crime'],
+        director: 'Justin Lin',
+        actors: ['Lucas Black', 'Sung Kang', 'Bow Wow'],
+        type: 'movie',
+        styles: [
+            { name: 'Shibuya Drift', promptString: 'drifting around Shibuya Crossing, neon billboards, smoke from tires, Japanese tuner culture, night aesthetics' }
+        ]
+    },
+    {
+        id: 'fast-furious-4',
+        title: 'Fast & Furious',
+        year: '2009',
+        genres: ['Action', 'Crime'],
+        director: 'Justin Lin',
+        actors: ['Vin Diesel', 'Paul Walker', 'Jordana Brewster'],
+        type: 'movie',
+        styles: [
+            { name: 'Desert Tunnel', promptString: 'dusty tunnels, high beams, claustrophobic chase, muscle cars, desert heat haze' }
+        ]
+    },
+    {
+        id: 'fast-furious-5',
+        title: 'Fast Five',
+        year: '2011',
+        genres: ['Action', 'Crime', 'Thriller'],
+        director: 'Justin Lin',
+        actors: ['Vin Diesel', 'Paul Walker', 'Dwayne Johnson'],
+        type: 'movie',
+        styles: [
+            { name: 'Rio Vault Chase', promptString: 'two Chargers towing a massive vault through Rio streets, destruction, dust, kinetic energy, sun-drenched city' }
+        ]
+    },
+    {
+        id: 'fast-furious-6',
+        title: 'Fast & Furious 6',
+        year: '2013',
+        genres: ['Action', 'Crime', 'Thriller'],
+        director: 'Justin Lin',
+        actors: ['Vin Diesel', 'Paul Walker', 'Dwayne Johnson'],
+        type: 'movie',
+        styles: [
+            { name: 'London Night Chase', promptString: 'sleek supercars on London streets at night, cold blue tones, wet pavement, high precision driving' }
+        ]
+    },
+    {
+        id: 'fast-furious-7',
+        title: 'Furious 7',
+        year: '2015',
+        genres: ['Action', 'Crime', 'Thriller'],
+        director: 'James Wan',
+        actors: ['Vin Diesel', 'Paul Walker', 'Jason Statham'],
+        type: 'movie',
+        styles: [
+            { name: 'Abu Dhabi Skyscrapers', promptString: 'lykan hypersport jumping between skyscrapers, sunset glow, glass shattering, luxury desert city' }
+        ]
+    },
+    {
+        id: 'fast-furious-8',
+        title: 'The Fate of the Furious',
+        year: '2017',
+        genres: ['Action', 'Crime', 'Thriller'],
+        director: 'F. Gary Gray',
+        actors: ['Vin Diesel', 'Dwayne Johnson', 'Charlize Theron'],
+        type: 'movie',
+        styles: [
+            { name: 'Ice Submarine Chase', promptString: 'cars racing on a frozen lake, massive submarine breaking the ice, explosions, cold blue and white tones' }
+        ]
+    },
+    {
+        id: 'fast-furious-9',
+        title: 'F9: The Fast Saga',
+        year: '2021',
+        genres: ['Action', 'Crime', 'Thriller'],
+        director: 'Justin Lin',
+        actors: ['Vin Diesel', 'John Cena', 'Michelle Rodriguez'],
+        type: 'movie',
+        styles: [
+            { name: 'Magnet Chaos', promptString: 'cars being pulled through buildings by magnets, urban destruction, high-octane physics defying action' }
+        ]
+    },
+    {
+        id: 'fast-furious-10',
+        title: 'Fast X',
+        year: '2023',
+        genres: ['Action', 'Crime', 'Thriller'],
+        director: 'Louis Leterrier',
+        actors: ['Vin Diesel', 'Jason Momoa', 'Brie Larson'],
+        type: 'movie',
+        styles: [
+            { name: 'Rome Bomb', promptString: 'massive spherical bomb rolling through Rome, Vatican in distance, warm Italian sunlight, chaos' }
+        ]
+    },
+    {
+        id: 'hobbs-shaw',
+        title: 'Fast & Furious Presents: Hobbs & Shaw',
+        year: '2019',
+        genres: ['Action', 'Sci-Fi'],
+        director: 'David Leitch',
+        actors: ['Dwayne Johnson', 'Jason Statham', 'Idris Elba'],
+        type: 'movie',
+        styles: [
+            { name: 'Samoan Sunset', promptString: 'golden hour on the beach, traditional warriors, muscle trucks, palm trees, warm orange glow' }
+        ]
+    },
+    {
+        id: 'pirates-1',
+        title: 'Pirates of the Caribbean: The Curse of the Black Pearl',
+        year: '2003',
+        genres: ['Action', 'Adventure', 'Fantasy'],
+        director: 'Gore Verbinski',
+        actors: ['Johnny Depp', 'Geoffrey Rush', 'Orlando Bloom'],
+        type: 'movie',
+        styles: [
+            { name: 'Moonlight Skeletons', promptString: 'undead pirates under the moonlight, skeleton forms visible through skin, eerie blue light, ocean spray' },
+            { name: 'Port Royal', promptString: 'colonial port town, wooden ships, sunset, dusty streets, golden age of piracy' }
+        ]
+    },
+    {
+        id: 'pirates-2',
+        title: 'Pirates of the Caribbean: Dead Man\'s Chest',
+        year: '2006',
+        genres: ['Action', 'Adventure', 'Fantasy'],
+        director: 'Gore Verbinski',
+        actors: ['Johnny Depp', 'Orlando Bloom', 'Keira Knightley'],
+        type: 'movie',
+        styles: [
+            { name: 'Kraken Attack', promptString: 'massive tentacles crushing a ship, sea foam, rainy ocean, dark green water, terror' }
+        ]
+    },
+    {
+        id: 'pirates-3',
+        title: 'Pirates of the Caribbean: At World\'s End',
+        year: '2007',
+        genres: ['Action', 'Adventure', 'Fantasy'],
+        director: 'Gore Verbinski',
+        actors: ['Johnny Depp', 'Geoffrey Rush', 'Orlando Bloom'],
+        type: 'movie',
+        styles: [
+            { name: 'Edge of the World', promptString: 'ship sailing off a massive waterfall, white void, surreal sky, ice and stars' }
+        ]
+    },
+    {
+        id: 'pirates-4',
+        title: 'Pirates of the Caribbean: On Stranger Tides',
+        year: '2011',
+        genres: ['Action', 'Adventure', 'Fantasy'],
+        director: 'Rob Marshall',
+        actors: ['Johnny Depp', 'Penélope Cruz', 'Ian McShane'],
+        type: 'movie',
+        styles: [
+            { name: 'Fountain of Youth', promptString: 'jungle cave, magical glowing water, silver chalices, lush greenery, humid atmosphere' }
+        ]
+    },
+    {
+        id: 'pirates-5',
+        title: 'Pirates of the Caribbean: Dead Men Tell No Tales',
+        year: '2017',
+        genres: ['Action', 'Adventure', 'Fantasy'],
+        director: 'Joachim Rønning, Espen Sandberg',
+        actors: ['Johnny Depp', 'Javier Bardem', 'Geoffrey Rush'],
+        type: 'movie',
+        styles: [
+            { name: 'Ghost Shark', promptString: 'undead skeletal sharks in the water, glowing embers, dark ocean, supernatural horror' }
+        ]
+    },
+    {
+        id: 'karate-kid',
+        title: 'The Karate Kid',
+        year: '1984',
+        genres: ['Action', 'Drama', 'Sport'],
+        director: 'John G. Avildsen',
+        actors: ['Ralph Macchio', 'Pat Morita', 'Elisabeth Shue'],
+        type: 'movie',
+        styles: [
+            { name: 'Crane Kick', promptString: 'standing on one leg, balancing on a wooden post, beach sunset, silhouette, martial arts pose' },
+            { name: 'Mr. Miyagi Garden', promptString: 'zen garden, bonsai trees, wooden fence, warm afternoon light, peaceful atmosphere' }
+        ]
+    },
+    {
+        id: 'league-own',
+        title: 'A League of Their Own',
+        year: '1992',
+        genres: ['Comedy', 'Drama', 'Sport'],
+        director: 'Penny Marshall',
+        actors: ['Tom Hanks', 'Geena Davis', 'Madonna'],
+        type: 'movie',
+        styles: [
+            { name: 'Baseball Dirt', promptString: 'sliding into home plate, dust cloud, vintage baseball uniforms, bright sunlight, 1940s aesthetic' }
+        ]
+    },
+    {
+        id: 'slap-shot',
+        title: 'Slap Shot',
+        year: '1977',
+        genres: ['Comedy', 'Drama', 'Sport'],
+        director: 'George Roy Hill',
+        actors: ['Paul Newman', 'Michael Ontkean', 'Strother Martin'],
+        type: 'movie',
+        styles: [
+            { name: 'Ice Brawl', promptString: 'hockey players fighting on ice, gritty industrial arena, 70s aesthetics, missing teeth, blood on ice' }
+        ]
+    },
+    {
+        id: 'sandlot',
+        title: 'The Sandlot',
+        year: '1993',
+        genres: ['Comedy', 'Drama', 'Sport'],
+        director: 'David Mickey Evans',
+        actors: ['Tom Guiry', 'Mike Vitar', 'Patrick Renna'],
+        type: 'movie',
+        styles: [
+            { name: 'Summer Baseball', promptString: 'dusty sandlot field, kids in caps, golden hour, wooden fence, heavy nostalgia haze' }
+        ]
+    },
+    {
+        id: 'major-league',
+        title: 'Major League',
+        year: '1989',
+        genres: ['Comedy', 'Sport'],
+        director: 'David S. Ward',
+        actors: ['Tom Berenger', 'Charlie Sheen', 'Corbin Bernsen'],
+        type: 'movie',
+        styles: [
+            { name: 'Wild Thing', promptString: 'Charlie Sheen with glasses, stadium lights at night, roaring crowd, intense focus on the mound' }
+        ]
+    },
+    {
+        id: 'natural',
+        title: 'The Natural',
+        year: '1984',
+        genres: ['Drama', 'Sport'],
+        director: 'Barry Levinson',
+        actors: ['Robert Redford', 'Robert Duvall', 'Glenn Close'],
+        type: 'movie',
+        styles: [
+            { name: 'Lightning Strike', promptString: 'hitting a home run, stadium lights exploding, sparks falling, slow motion, epic hero lighting' }
+        ]
+    },
+    {
+        id: 'rudy',
+        title: 'Rudy',
+        year: '1993',
+        genres: ['Biography', 'Drama', 'Sport'],
+        director: 'David Anspaugh',
+        actors: ['Sean Astin', 'Jon Favreau', 'Ned Beatty'],
+        type: 'movie',
+        styles: [
+            { name: 'Notre Dame Tunnel', promptString: 'running out onto the field, stadium roar, golden helmets, green grass, high emotional triumph' }
+        ]
+    },
+    {
+        id: 'field-dreams',
+        title: 'Field of Dreams',
+        year: '1989',
+        genres: ['Drama', 'Family', 'Fantasy'],
+        director: 'Phil Alden Robinson',
+        actors: ['Kevin Costner', 'James Earl Jones', 'Ray Liotta'],
+        type: 'movie',
+        styles: [
+            { name: 'Cornfield Ballpark', promptString: 'ghostly baseball players emerging from tall corn stalks, twilight, soft fog, magical atmosphere' }
+        ]
+    },
+    {
+        id: 'mighty-ducks',
+        title: 'The Mighty Ducks',
+        year: '1992',
+        genres: ['Comedy', 'Drama', 'Family'],
+        director: 'Stephen Herek',
+        actors: ['Emilio Estevez', 'Joss Ackland', 'Lane Smith'],
+        type: 'movie',
+        styles: [
+            { name: 'Flying V', promptString: 'hockey team in formation, bright uniforms, outdoor ice rink, childhood enthusiasm' }
+        ]
+    },
+    {
+        id: 'longest-yard',
+        title: 'The Longest Yard',
+        year: '2005',
+        genres: ['Comedy', 'Sport'],
+        director: 'Peter Segal',
+        actors: ['Adam Sandler', 'Burt Reynolds', 'Chris Rock'],
+        type: 'movie',
+        styles: [
+            { name: 'Prison Football', promptString: 'muddy football field, prison walls in background, grit, intense tackling, sun-drenched yard' }
+        ]
+    },
+    {
+        id: 'invincible',
+        title: 'Invincible',
+        year: '2006',
+        genres: ['Biography', 'Drama', 'Sport'],
+        director: 'Ericson Core',
+        actors: ['Mark Wahlberg', 'Greg Kinnear', 'Elizabeth Banks'],
+        type: 'movie',
+        styles: [
+            { name: 'Philly Grit', promptString: '70s Philadelphia, blue collar aesthetic, muddy tryouts, stadium lights, gritty textures' }
+        ]
+    },
+    {
+        id: 'few-good-men',
+        title: 'A Few Good Men',
+        year: '1992',
+        genres: ['Drama', 'Thriller'],
+        director: 'Rob Reiner',
+        actors: ['Tom Cruise', 'Jack Nicholson', 'Demi Moore'],
+        type: 'movie',
+        styles: [
+            { name: 'Courtroom Confrontation', promptString: 'Jack Nicholson in dress blues, shouting "You can\'t handle the truth!", sharp lighting, military formality' }
+        ]
+    },
+    {
+        id: 'nosferatu-2024',
+        title: 'Nosferatu (2024)',
+        year: '2024',
+        genres: ['Horror', 'Fantasy'],
+        director: 'Robert Eggers',
+        actors: ['Bill Skarsgård', 'Nicholas Hoult', 'Lily-Rose Depp'],
+        type: 'movie',
+        styles: [
+            { name: 'Eggers Gothic', promptString: 'bleak desaturated palette, candlelit shadows, high contrast, 19th century gothic aesthetic, macabre' }
+        ]
+    },
+    {
+        id: 'dracula-2025',
+        title: 'Dracula (2025)',
+        year: '2025',
+        genres: ['Horror', 'Drama'],
+        director: 'Luc Besson',
+        actors: ['Caleb Landry Jones', 'Christoph Waltz'],
+        type: 'movie',
+        styles: [
+            { name: 'Besson Baroque', promptString: 'opulent costumes, dramatic lighting, vibrant but dark colors, visual flair, high fashion horror' }
+        ]
+    },
+    {
+        id: 'the-chosen',
+        title: 'The Chosen',
+        year: '2019',
+        genres: ['Drama', 'History'],
+        director: 'Dallas Jenkins',
+        actors: ['Jonathan Roumie', 'Shahar Isaac'],
+        type: 'series',
+        styles: [
+            { name: 'Biblical Realism', promptString: 'dusty desert roads, linen robes, warm natural sunlight, ancient city of Galilee, cinematic lighting' }
+        ]
+    },
+    {
+        id: 'ripley',
+        title: 'Ripley',
+        year: '2024',
+        genres: ['Crime', 'Drama', 'Thriller'],
+        director: 'Steven Zaillian',
+        actors: ['Andrew Scott', 'Dakota Fanning'],
+        type: 'series',
+        styles: [
+            { name: 'High Contrast Noir', promptString: 'stark black and white, deep shadows, Italian coastal architecture, 1960s style, atmospheric' }
+        ]
+    },
+    {
+        id: 'hamlet',
+        title: 'Hamlet',
+        year: '1996',
+        genres: ['Drama'],
+        director: 'Kenneth Branagh',
+        actors: ['Kenneth Branagh', 'Julie Christie', 'Derek Jacobi'],
+        type: 'movie',
+        styles: [
+            { name: 'Royal Grandeur', promptString: 'elaborate palace interiors, snow covered courtyard, vibrant colors, 70mm film aesthetic, dramatic staging' }
+        ]
+    },
+    {
+        id: 'rocky-2',
+        title: 'Rocky II',
+        year: '1979',
+        genres: ['Drama', 'Sport'],
+        director: 'Sylvester Stallone',
+        actors: ['Sylvester Stallone', 'Talia Shire', 'Burt Young'],
+        type: 'movie',
+        styles: [
+            { name: 'Training Run', promptString: 'Rocky running through Philadelphia streets, children following, grey sweatsuit, urban triumph, soft sunlight' }
+        ]
+    },
+    {
+        id: 'rocky-3',
+        title: 'Rocky III',
+        year: '1982',
+        genres: ['Drama', 'Sport'],
+        director: 'Sylvester Stallone',
+        actors: ['Sylvester Stallone', 'Talia Shire', 'Mr. T'],
+        type: 'movie',
+        styles: [
+            { name: 'Eye of the Tiger', promptString: 'Clubber Lang glaring, intensity, gold chains, boxing ring, high contrast action, 80s grit' }
+        ]
+    },
+    {
+        id: 'rocky-4',
+        title: 'Rocky IV',
+        year: '1985',
+        genres: ['Drama', 'Sport'],
+        director: 'Sylvester Stallone',
+        actors: ['Sylvester Stallone', 'Talia Shire', 'Dolph Lundgren'],
+        type: 'movie',
+        styles: [
+            { name: 'Siberian Training', promptString: 'training in the snow, lifting logs, beard, cold breath, rural Russia, blue and white tones' },
+            { name: 'Drago Coldness', promptString: 'Ivan Drago, flat top haircut, Soviet imagery, high tech gym, sterile, red and yellow lighting' }
+        ]
+    },
+    {
+        id: 'rocky-5',
+        title: 'Rocky V',
+        year: '1990',
+        genres: ['Drama', 'Sport'],
+        director: 'John G. Avildsen',
+        actors: ['Sylvester Stallone', 'Talia Shire', 'Sage Stallone'],
+        type: 'movie',
+        styles: [
+            { name: 'Street Fight', promptString: 'fighting in an alleyway at night, city grit, rain, shadows, raw and unpolished' }
+        ]
+    },
+    {
+        id: 'rocky-balboa',
+        title: 'Rocky Balboa',
+        year: '2006',
+        genres: ['Drama', 'Sport'],
+        director: 'Sylvester Stallone',
+        actors: ['Sylvester Stallone', 'Burt Young', 'Milo Ventimiglia'],
+        type: 'movie',
+        styles: [
+            { name: 'Aging Champ', promptString: 'overcast Philadelphia, Adrian\'s restaurant, soft melancholic lighting, emotional weight, grey hair' }
+        ]
+    },
+    {
+        id: 'creed-1',
+        title: 'Creed',
+        year: '2015',
+        genres: ['Action', 'Drama', 'Sport'],
+        director: 'Ryan Coogler',
+        actors: ['Michael B. Jordan', 'Sylvester Stallone', 'Tessa Thompson'],
+        type: 'movie',
+        styles: [
+            { name: 'One Take Fight', promptString: 'dynamic long take in the ring, sweat spraying, blood, intense movement, modern cinematic lighting' }
+        ]
+    },
+    {
+        id: 'creed-2',
+        title: 'Creed II',
+        year: '2018',
+        genres: ['Action', 'Drama', 'Sport'],
+        director: 'Steven Caple Jr.',
+        actors: ['Michael B. Jordan', 'Sylvester Stallone', 'Tessa Thompson'],
+        type: 'movie',
+        styles: [
+            { name: 'Desert Training', promptString: 'training in the harsh desert sun, dust, heat haze, tires and sledgehammers, orange and teal' }
+        ]
+    },
+    {
+        id: 'creed-3',
+        title: 'Creed III',
+        year: '2023',
+        genres: ['Action', 'Drama', 'Sport'],
+        director: 'Michael B. Jordan',
+        actors: ['Michael B. Jordan', 'Jonathan Majors', 'Tessa Thompson'],
+        type: 'movie',
+        styles: [
+            { name: 'The Void', promptString: 'boxers in a dark void, stylized psychological focus, high contrast, anime-influenced visuals' }
+        ]
+    },
+    {
+        id: 'bttf-1',
+        title: 'Back to the Future',
+        year: '1985',
+        genres: ['Adventure', 'Comedy', 'Sci-Fi'],
+        director: 'Robert Zemeckis',
+        actors: ['Michael J. Fox', 'Christopher Lloyd', 'Lea Thompson'],
+        type: 'movie',
+        styles: [
+            { name: '88 MPH', promptString: 'Delorean with fire trails, electrical arcs, night parking lot, orange and blue sparks, 80s glow' },
+            { name: 'Hill Valley 1955', promptString: 'pastel colors, 50s cars, clean town square, bright sunlight, nostalgic charm' }
+        ]
+    },
+    {
+        id: 'bttf-2',
+        title: 'Back to the Future Part II',
+        year: '1989',
+        genres: ['Adventure', 'Comedy', 'Sci-Fi'],
+        director: 'Robert Zemeckis',
+        actors: ['Michael J. Fox', 'Christopher Lloyd', 'Thomas F. Wilson'],
+        type: 'movie',
+        styles: [
+            { name: 'Hill Valley 2015', promptString: 'vibrant neon colors, flying cars, holographic shark, hoverboards, futuristic 80s aesthetic' }
+        ]
+    },
+    {
+        id: 'bttf-3',
+        title: 'Back to the Future Part III',
+        year: '1990',
+        genres: ['Adventure', 'Comedy', 'Sci-Fi'],
+        director: 'Robert Zemeckis',
+        actors: ['Michael J. Fox', 'Christopher Lloyd', 'Mary Steenburgen'],
+        type: 'movie',
+        styles: [
+            { name: 'Clock Tower Wild West', promptString: '1885 Hill Valley, steam train, dusty streets, western aesthetic, golden afternoon sun' }
+        ]
+    },
+    {
+        id: 'the-rock',
+        title: 'The Rock',
+        year: '1996',
+        genres: ['Action', 'Adventure', 'Thriller'],
+        director: 'Michael Bay',
+        actors: ['Sean Connery', 'Nicolas Cage', 'Ed Harris'],
+        type: 'movie',
+        styles: [
+            { name: 'Green Smoke', promptString: 'green gas spheres, Alcatraz tunnels, flares, wet concrete, intense action, high saturation' }
+        ]
+    },
+    {
+        id: 'con-air',
+        title: 'Con Air',
+        year: '1997',
+        genres: ['Action', 'Crime', 'Thriller'],
+        director: 'Simon West',
+        actors: ['Nicolas Cage', 'John Cusack', 'John Malkovich'],
+        type: 'movie',
+        styles: [
+            { name: 'Caged Hair', promptString: 'Cameron Poe with long hair blowing in wind, sunset, explosions, desert landing, 90s action' }
+        ]
+    },
+    {
+        id: 'face-off',
+        title: 'Face/Off',
+        year: '1997',
+        genres: ['Action', 'Crime', 'Sci-Fi'],
+        director: 'John Woo',
+        actors: ['John Travolta', 'Nicolas Cage'],
+        type: 'movie',
+        styles: [
+            { name: 'John Woo Ballistic', promptString: 'doves flying, dual wielding pistols, slow motion, trench coats, sparks, high stylistic violence' }
+        ]
+    },
+    {
+        id: 'national-treasure-1',
+        title: 'National Treasure',
+        year: '2004',
+        genres: ['Action', 'Adventure', 'Mystery'],
+        director: 'Jon Turteltaub',
+        actors: ['Nicolas Cage', 'Diane Kruger', 'Justin Bartha'],
+        type: 'movie',
+        styles: [
+            { name: 'Declaration Heist', promptString: 'back of the declaration of independence, invisible ink, lemon juice, blue light, historic archives' }
+        ]
+    },
+    {
+        id: 'mandy',
+        title: 'Mandy',
+        year: '2018',
+        genres: ['Action', 'Fantasy', 'Horror'],
+        director: 'Panos Cosmatos',
+        actors: ['Nicolas Cage', 'Andrea Riseborough', 'Linus Roache'],
+        type: 'movie',
+        styles: [
+            { name: 'Psychedelic Blood', promptString: 'deep red and purple saturated lighting, heavy grainy texture, demonic bike gang, surreal horror, chromatic aberration' }
+        ]
+    },
+    {
+        id: 'pig',
+        title: 'Pig',
+        year: '2021',
+        genres: ['Drama', 'Thriller'],
+        director: 'Michael Sarnoski',
+        actors: ['Nicolas Cage', 'Alex Wolff'],
+        type: 'movie',
+        styles: [
+            { name: 'Woodland Solitude', promptString: 'Pacific Northwest forest, mossy trees, soft morning fog, dirty face, truffle pig, melancholic' }
+        ]
+    },
+    {
+        id: 'longlegs',
+        title: 'Longlegs',
+        year: '2024',
+        genres: ['Horror', 'Mystery', 'Thriller'],
+        director: 'Osgood Perkins',
+        actors: ['Maika Monroe', 'Nicolas Cage'],
+        type: 'movie',
+        styles: [
+            { name: 'Uncanny Pale', promptString: 'uncanny valley makeup, pale white skin, grainy 70s film look, disturbing stillness, occult symbols' }
+        ]
+    },
+    {
+        id: 'raising-arizona',
+        title: 'Raising Arizona',
+        year: '1987',
+        genres: ['Comedy', 'Crime'],
+        director: 'Joel Coen, Ethan Coen',
+        actors: ['Nicolas Cage', 'Holly Hunter'],
+        type: 'movie',
+        styles: [
+            { name: 'Coen Kinetic', promptString: 'dynamic tracking shots, vibrant desert colors, diaper chase, slapstick crime, wide angle distortion' }
+        ]
+    },
+    {
+        id: 'leaving-las-vegas',
+        title: 'Leaving Las Vegas',
+        year: '1995',
+        genres: ['Drama', 'Romance'],
+        director: 'Mike Figgis',
+        actors: ['Nicolas Cage', 'Elisabeth Shue'],
+        type: 'movie',
+        styles: [
+            { name: 'Vegas Neon Blur', promptString: 'blurry neon lights, motel room, whiskey, 16mm film grain, handheld, desperate intimacy' }
+        ]
+    },
+    {
+        id: 'grand-prix',
+        title: 'Grand Prix',
+        year: '1966',
+        genres: ['Drama', 'Sport'],
+        director: 'John Frankenheimer',
+        actors: ['James Garner', 'Eva Marie Saint'],
+        type: 'movie',
+        styles: [
+            { name: '60s Racing', promptString: 'vintage F1 cars, split screen shots, Monaco streets, high speed blur, Super Panavision 70, vibrant 60s color' }
+        ]
+    },
+    {
+        id: 'rendezvous',
+        title: 'C\'était un rendez-vous (Rendezvous)',
+        year: '1976',
+        genres: ['Short', 'Action'],
+        director: 'Claude Lelouch',
+        actors: [],
+        type: 'movie',
+        styles: [
+            { name: 'Paris POV', promptString: 'low angle car mount POV, high speed through early morning Paris, blur of city streets, red lights, engine roar' }
+        ]
+    },
+    {
+        id: 'days-heaven',
+        title: 'Days of Heaven',
+        year: '1978',
+        genres: ['Drama', 'Romance'],
+        director: 'Terrence Malick',
+        actors: ['Richard Gere', 'Brooke Adams', 'Sam Shepard'],
+        type: 'movie',
+        styles: [
+            { name: 'Magic Hour', promptString: 'golden hour, silhouettes against orange sky, wheat fields, soft natural light, painterly composition, prairie' }
+        ]
+    },
+    {
+        id: 'moulin-rouge',
+        title: 'Moulin Rouge!',
+        year: '2001',
+        genres: ['Drama', 'Musical', 'Romance'],
+        director: 'Baz Luhrmann',
+        actors: ['Nicole Kidman', 'Ewan McGregor'],
+        type: 'movie',
+        styles: [
+            { name: 'Luhrmann Opulence', promptString: 'theatrical red lighting, glitter falling, frantic editing, bohemian Paris, vibrant saturated colors' }
+        ]
+    },
+    {
+        id: 'mulholland-drive',
+        title: 'Mulholland Drive',
+        year: '2001',
+        genres: ['Drama', 'Mystery', 'Thriller'],
+        director: 'David Lynch',
+        actors: ['Naomi Watts', 'Laura Harring'],
+        type: 'movie',
+        styles: [
+            { name: 'Lynchian Dream', promptString: 'blue key, mysterious box, smoke, surreal Hollywood, soft focus, uncanny atmosphere, deep shadows' }
+        ]
+    },
+    {
+        id: 'dead-poets-society',
+        title: 'Dead Poets Society',
+        year: '1989',
+        genres: ['Comedy', 'Drama'],
+        director: 'Peter Weir',
+        actors: ['Robin Williams', 'Robert Sean Leonard', 'Ethan Hawke'],
+        type: 'movie',
+        styles: [
+            { name: 'O Captain My Captain', promptString: 'standing on desks, classroom setting, warm wooden textures, prep school uniforms, emotional triumph' }
+        ]
+    },
+    {
+        id: 'passion-christ',
+        title: 'The Passion of the Christ',
+        year: '2004',
+        genres: ['Drama'],
+        director: 'Mel Gibson',
+        actors: ['Jim Caviezel'],
+        type: 'movie',
+        styles: [
+            { name: 'Caravaggio Lighting', promptString: 'chiaroscuro, deep shadows, warm candlelight, earthy tones, visceral texture, high dramatic contrast' }
+        ]
+    }
 ];
+
+
+

@@ -76,7 +76,7 @@ export const deployedApps: StudioProject[] = [
         id: 'storyweaver',
         title: 'Story Weaver',
         description: 'Collaborative AI story writing platform.',
-        url: 'https://srephoto.github.io/storyweaver/',
+        url: 'https://srephoto.github.io/storyweaver/#/',
         icon: 'MessageCircle',
         color: 'text-indigo-500',
         visibility: 'Public',

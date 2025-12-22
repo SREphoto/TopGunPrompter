@@ -4,7 +4,6 @@ import { interviewVampireScenes } from './scenes/interviewVampire';
 import { oldboyScenes } from './scenes/oldboy';
 import { johnWickScenes } from './scenes/johnWick';
 import { americanPsychoScenes } from './scenes/americanPsycho';
-import { gladiatorScenes } from './scenes/gladiator';
 import { sevenScenes } from './scenes/seven';
 import { fightClubScenes } from './scenes/fightClub';
 import { aliensScenes } from './scenes/aliens';
@@ -12,7 +11,6 @@ import { predatorScenes } from './scenes/predator';
 import { jokerScenes } from './scenes/joker';
 import { duneScenes } from './scenes/dune';
 import { theMatrixScenes } from './scenes/theMatrix';
-import { bladeRunner2049Scenes } from './scenes/bladeRunner2049';
 import { madMaxFuryRoadScenes } from './scenes/madMaxFuryRoad';
 import { theDarkKnightScenes } from './scenes/theDarkKnight';
 import { pulpFictionScenes } from './scenes/pulpFiction';
@@ -23,97 +21,77 @@ import { noCountryForOldMenScenes } from './scenes/noCountryForOldMen';
 import { driveScenes } from './scenes/drive';
 import { theFifthElementScenes } from './scenes/theFifthElement';
 import { interstellarScenes } from './scenes/interstellar';
-import { theShiningScenes } from './scenes/theShining';
 import { tronLegacyScenes } from './scenes/tronLegacy';
 import { taxiDriverScenes } from './scenes/taxiDriver';
+
 import {
-    savingPrivateRyanScenes, ironManScenes, starshipTroopersScenes, transformersScenes,
+    starshipTroopersScenes, transformersScenes,
     deadpoolScenes, johnWick2Scenes, johnWick3Scenes, dieHardScenes, matrixReloadedScenes,
     matrixRevolutionsScenes, casinoRoyaleScenes, pointBreakScenes, dieHardVengeanceScenes,
     commandoScenes, badBoysScenes, totalRecallScenes, lastCrusadeScenes, firstBloodScenes,
-    killBillVol2Scenes, jurassicParkScenes, titanicScenes, avatarScenes, theAvengersScenes
+    killBillVol2Scenes
 } from './scenes/addedBlockbusters';
+
 import {
-    terminatorScenes,
-    robocopScenes,
-    lethalWeaponScenes,
-    escapeFromNewYorkScenes,
-    bloodsportScenes,
-    bigTroubleScenes
+    terminatorScenes, robocopScenes, lethalWeaponScenes,
+    escapeFromNewYorkScenes, bloodsportScenes, bigTroubleScenes
 } from './scenes/eightiesClassics';
+
 import {
     theThingScenes, nightmareOnElmStreetScenes, hellraiserScenes, theFlyScenes, evilDeadIIScenes,
     poltergeistScenes, reAnimatorScenes, videodromeScenes, theLostBoysScenes, americanWerewolfScenes,
     screamScenes, silenceOfTheLambsScenes, candymanScenes, draculaScenes, miseryScenes,
     blairWitchScenes, eventHorizonScenes, jacobsLadderScenes, fromDuskTillDawnScenes, sleepyHollowScenes
 } from './scenes/horrorClassics';
+
 import {
-    itsAWonderfulLifeScenes,
-    homeAloneScenes,
-    elfScenes,
-    christmasVacationScenes,
-    nightmareBeforeChristmasScenes
+    itsAWonderfulLifeScenes, homeAloneScenes, elfScenes,
+    christmasVacationScenes, nightmareBeforeChristmasScenes
 } from './scenes/christmasClassics';
+
 import {
-    miracleScenes,
-    christmasStoryScenes,
-    grinchScenes,
-    muppetCarolScenes,
-    loveActuallyScenes
+    miracleScenes, christmasStoryScenes, grinchScenes,
+    muppetCarolScenes, loveActuallyScenes
 } from './scenes/christmasClassics2';
+
 import {
-    whiteChristmasScenes,
-    badSantaScenes,
-    theSantaClauseScenes,
-    scroogedScenes,
-    gremlinsScenes,
-    polarExpressScenes,
-    jingleAllTheWayScenes,
-    klausScenes,
-    christmasInConnecticutScenes,
+    whiteChristmasScenes, badSantaScenes, theSantaClauseScenes,
+    scroogedScenes, gremlinsScenes, polarExpressScenes,
+    jingleAllTheWayScenes, klausScenes, christmasInConnecticutScenes,
     batmanReturnsScenes
 } from './scenes/christmasClassics3';
+
 import {
-    thinRedLineScenes,
-    stripedPajamasScenes,
-    inglouriousBasterdsScenes,
-    furyScenes,
-    kingdomOfHeavenScenes,
-    braveheartScenes,
-    apocalypseNowScenes
+    thinRedLineScenes, stripedPajamasScenes, inglouriousBasterdsScenes,
+    furyScenes, kingdomOfHeavenScenes, braveheartScenes
 } from './scenes/warClassics1';
+
 import {
-    pansLabyrinthScenes,
-    thePatriotScenes,
-    theMissionScenes,
-    platoonScenes,
-    dunkirkScenes,
-    greyhoundScenes,
-    tropicThunderScenes
+    pansLabyrinthScenes, thePatriotScenes, theMissionScenes,
+    platoonScenes, dunkirkScenes, greyhoundScenes, tropicThunderScenes
 } from './scenes/warClassics2';
+
 import {
     metropolisScenes, cabinetCaligariScenes, nosferatuScenes, mScenes, citizenKaneScenes,
     casablancaScenes, theThirdManScenes, rearWindowScenes, vertigoScenes, northByNorthwestScenes,
     psychoScenes, twelveAngryMenScenes, sevenSamuraiScenes, rashomonScenes, spaceOdysseyScenes,
     drStrangeloveScenes, clockworkOrangeScenes, theGodfatherScenes, chinatownScenes, ragingBullScenes,
     annieHallScenes, starWarsNewHopeScenes, empireStrikesBackScenes, jawsScenes, closeEncountersScenes,
-    alienScenes, rockyScenes, theExorcistScenes, bladeRunnerScenes, etScenes, ghostbustersScenes,
+    alienScenes, rockyScenes, theExorcistScenes, etScenes, ghostbustersScenes,
     amadeusScenes, brazilScenes, scarfaceScenes, untouchablesScenes, standByMeScenes, blueVelvetScenes,
-    parisTexasScenes, fullMetalJacketScenes, wingsOfDesireScenes, ranScenes, cinemaParadisoScenes
+    parisTexasScenes, wingsOfDesireScenes, ranScenes, cinemaParadisoScenes
 } from './scenes/classics1';
+
 import {
     goodfellasScenes, schindlersListScenes, thePianistScenes, shawshankRedemptionScenes, reservoirDogsScenes,
     fargoScenes, bigLebowskiScenes, trainspottingScenes, princessBrideScenes, akiraScenes, unforgivenScenes,
     lionKingScenes, heatScenes, toyStoryScenes, princessMononokeScenes, trumanShowScenes, americanBeautyScenes,
     crouchingTigerScenes, spiritedAwayScenes, amelieScenes, cityOfGodScenes, lostInTranslationScenes,
-    eternalSunshineScenes, shaunOfTheDeadScenes, theIncrediblesScenes, vForVendettaScenes, childrenOfMenScenes,
+    eternalSunshineScenes, shaunOfTheDeadScenes, theIncrediblesScenes, childrenOfMenScenes,
     thereWillBeBloodScenes, wallEScenes, district9Scenes, blackSwanScenes, socialNetworkScenes, herScenes,
-    whiplashScenes, laLaLandScenes, grandBudapestHotelScenes, birdmanScenes, exMachinaScenes, theRevenantScenes,
-    moonlightScenes, getOutScenes, ladyBirdScenes, callMeByYourNameScenes, spiderVerseScenes, parasiteScenes,
-    midsommarScenes, lighthouseScenes, ladyOnFireScenes, uncutGemsScenes, nineteenSeventeenScenes,
-    everythingEverywhereScenes, theBatmanScenes, oppenheimerScenes, barbieScenes, pastLivesScenes,
-    anatomyFallScenes, zoneInterestScenes, godzillaMinusOneScenes
+    whiplashScenes, laLaLandScenes
 } from './scenes/classics2';
+
 import {
     theLastOfUsScenes, cyberpunkScenes, rdr2Scenes, eldenRingScenes,
     controlScenes, deathStrandingScenes, bioshockScenes, bloodborneScenes,
@@ -122,6 +100,66 @@ import {
     massEffectScenes, starfieldScenes, baldursGateScenes, spiderManScenes
 } from './scenes/games';
 
+import { raidersOfTheLostArkScenes } from './scenes/raidersOfTheLostArk';
+import { templeOfDoomScenes } from './scenes/templeOfDoom';
+import { crystalSkullScenes } from './scenes/crystalSkull';
+import { dialOfDestinyScenes } from './scenes/dialOfDestiny';
+import { matrixResurrectionsScenes } from './scenes/matrixResurrections';
+import { johnWick4Scenes } from './scenes/johnWick4';
+
+import {
+    fastFurious1Scenes, fastFurious2Scenes, fastFurious3Scenes, fastFurious4Scenes, fastFurious5Scenes
+} from './scenes/fastFurious1_5';
+import {
+    fastFurious6Scenes, fastFurious7Scenes, fastFurious8Scenes, fastFurious9Scenes, fastFurious10Scenes
+} from './scenes/fastFurious6_10';
+import {
+    bttf1Scenes, bttf2Scenes, bttf3Scenes
+} from './scenes/adventureMovies';
+import {
+    karateKid1Scenes, rocky1ExpandedScenes, creed1ExpandedScenes
+} from './scenes/sportsMovies';
+import {
+    rocky2Scenes, rocky3Scenes, rocky4Scenes, rocky5Scenes, rockyBalboaScenes,
+    creed2Scenes, creed3Scenes, moreSportsScenes
+} from './scenes/sportsMovies2';
+import {
+    pirates1Scenes as pirates1ExpandedScenes, pirates2Scenes as pirates2ExpandedScenes
+} from './scenes/cageAndPirates';
+import {
+    pirates3Scenes as pirates3ExpandedScenes, pirates4Scenes as pirates4ExpandedScenes, pirates5Scenes as pirates5ExpandedScenes
+} from './scenes/piratesAndClassics';
+import {
+    fullMetalJacketExpandedScenes, apocalypseNowExpandedScenes, fewGoodMenExpandedScenes,
+    gladiatorExpandedScenes, bladeRunnerExpandedScenes
+} from './scenes/expandedClassics';
+import {
+    br2049ExpandedScenes, theShiningExpandedScenes, vForVendettaExpandedScenes
+} from './scenes/modernClassicsExpanded';
+import {
+    lighthouseExpandedScenes, nosferatu2024ExpandedScenes, dracula2025ExpandedScenes,
+    hamletExpandedScenes, ripleyExpandedScenes, chosenExpandedScenes
+} from './scenes/horrorAndDramaExpanded';
+import {
+    grandPrixExpandedScenes, rendezvousExpandedScenes,
+    theRockExpandedScenes, conAirExpandedScenes, faceOffExpandedScenes
+} from './scenes/cageAndVisualClassics';
+import {
+    daysOfHeavenExpandedScenes, moulinRougeExpandedScenes, grandBudapestExpandedScenes
+} from './scenes/remainingVisualClassics';
+import {
+    mandyExpandedScenes, pigExpandedScenes, longlegsExpandedScenes,
+    raisingArizonaExpandedScenes, leavingLasVegasExpandedScenes,
+    mulhollandDriveExpandedScenes, deadPoetsSocietyExpandedScenes,
+    passionChristExpandedScenes
+} from './scenes/modernCageAndClassics';
+import {
+    nationalTreasure1Scenes, nationalTreasure2Scenes
+} from './scenes/nationalTreasure';
+import {
+    savingPrivateRyanScenes, ironManScenes, jurassicParkScenes as jurassicParkBlockbusterScenes,
+    titanicScenes, avatarScenes, theAvengersScenes
+} from './scenes/addedBlockbusters';
 
 export const movieScenes: Record<string, Scene[]> = {
     'top-gun': topGunScenes,
@@ -129,7 +167,6 @@ export const movieScenes: Record<string, Scene[]> = {
     'oldboy': oldboyScenes,
     'john-wick': johnWickScenes,
     'american-psycho': americanPsychoScenes,
-    'gladiator': gladiatorScenes,
     'seven': sevenScenes,
     'fight-club': fightClubScenes,
     'aliens': aliensScenes,
@@ -137,7 +174,6 @@ export const movieScenes: Record<string, Scene[]> = {
     'joker': jokerScenes,
     'dune': duneScenes,
     'the-matrix': theMatrixScenes,
-    'blade-runner-2049': bladeRunner2049Scenes,
     'mad-max-fury-road': madMaxFuryRoadScenes,
     'the-dark-knight': theDarkKnightScenes,
     'pulp-fiction': pulpFictionScenes,
@@ -148,11 +184,8 @@ export const movieScenes: Record<string, Scene[]> = {
     'drive': driveScenes,
     'the-fifth-element': theFifthElementScenes,
     'interstellar': interstellarScenes,
-    'the-shining': theShiningScenes,
     'tron-legacy': tronLegacyScenes,
     'taxi-driver': taxiDriverScenes,
-    'saving-private-ryan': savingPrivateRyanScenes,
-    'iron-man': ironManScenes,
     'starship-troopers': starshipTroopersScenes,
     'transformers': transformersScenes,
     'deadpool': deadpoolScenes,
@@ -170,17 +203,12 @@ export const movieScenes: Record<string, Scene[]> = {
     'last-crusade': lastCrusadeScenes,
     'first-blood': firstBloodScenes,
     'kill-bill-vol-2': killBillVol2Scenes,
-    'jurassic-park': jurassicParkScenes,
-    'titanic': titanicScenes,
-    'avatar': avatarScenes,
-    'the-avengers': theAvengersScenes,
     'the-terminator': terminatorScenes,
     'robocop': robocopScenes,
     'lethal-weapon': lethalWeaponScenes,
     'escape-from-new-york': escapeFromNewYorkScenes,
     'bloodsport': bloodsportScenes,
     'big-trouble': bigTroubleScenes,
-    // HORROR CLASSICS
     'the-thing': theThingScenes,
     'nightmare-elm-street': nightmareOnElmStreetScenes,
     'hellraiser': hellraiserScenes,
@@ -201,7 +229,6 @@ export const movieScenes: Record<string, Scene[]> = {
     'jacobs-ladder': jacobsLadderScenes,
     'from-dusk-till-dawn': fromDuskTillDawnScenes,
     'sleepy-hollow': sleepyHollowScenes,
-    // CHRISTMAS CLASSICS
     'its-a-wonderful-life': itsAWonderfulLifeScenes,
     'home-alone': homeAloneScenes,
     'elf': elfScenes,
@@ -228,7 +255,7 @@ export const movieScenes: Record<string, Scene[]> = {
     'fury': furyScenes,
     'kingdom-of-heaven': kingdomOfHeavenScenes,
     'braveheart': braveheartScenes,
-    'apocalypse-now': apocalypseNowScenes,
+    'apocalypse-now': apocalypseNowExpandedScenes,
     'pans-labyrinth': pansLabyrinthScenes,
     'the-patriot': thePatriotScenes,
     'the-mission': theMissionScenes,
@@ -236,7 +263,6 @@ export const movieScenes: Record<string, Scene[]> = {
     'dunkirk': dunkirkScenes,
     'greyhound': greyhoundScenes,
     'tropic-thunder': tropicThunderScenes,
-    // CLASSICS 1
     'metropolis': metropolisScenes,
     'cabinet-caligari': cabinetCaligariScenes,
     'nosferatu': nosferatuScenes,
@@ -265,7 +291,7 @@ export const movieScenes: Record<string, Scene[]> = {
     'alien': alienScenes,
     'rocky': rockyScenes,
     'the-exorcist': theExorcistScenes,
-    'blade-runner': bladeRunnerScenes,
+    'blade-runner': bladeRunnerExpandedScenes,
     'et-extra-terrestrial': etScenes,
     'ghostbusters': ghostbustersScenes,
     'amadeus': amadeusScenes,
@@ -275,12 +301,10 @@ export const movieScenes: Record<string, Scene[]> = {
     'stand-by-me': standByMeScenes,
     'blue-velvet': blueVelvetScenes,
     'paris-texas': parisTexasScenes,
-    'full-metal-jacket': fullMetalJacketScenes,
+    'full-metal-jacket': fullMetalJacketExpandedScenes,
     'wings-of-desire': wingsOfDesireScenes,
     'ran': ranScenes,
     'cinema-paradiso': cinemaParadisoScenes,
-
-    // CLASSICS 2
     'goodfellas': goodfellasScenes,
     'schindlers-list': schindlersListScenes,
     'the-pianist': thePianistScenes,
@@ -306,7 +330,7 @@ export const movieScenes: Record<string, Scene[]> = {
     'eternal-sunshine': eternalSunshineScenes,
     'shaun-of-the-dead': shaunOfTheDeadScenes,
     'the-incredibles': theIncrediblesScenes,
-    'v-for-vendetta': vForVendettaScenes,
+    'v-for-vendetta': vForVendettaExpandedScenes,
     'children-of-men': childrenOfMenScenes,
     'there-will-be-blood': thereWillBeBloodScenes,
     'wall-e': wallEScenes,
@@ -316,30 +340,6 @@ export const movieScenes: Record<string, Scene[]> = {
     'her': herScenes,
     'whiplash': whiplashScenes,
     'la-la-land': laLaLandScenes,
-    'grand-budapest-hotel': grandBudapestHotelScenes,
-    'birdman': birdmanScenes,
-    'ex-machina': exMachinaScenes,
-    'the-revenant': theRevenantScenes,
-    'moonlight': moonlightScenes,
-    'get-out': getOutScenes,
-    'lady-bird': ladyBirdScenes,
-    'call-me-by-your-name': callMeByYourNameScenes,
-    'spider-verse': spiderVerseScenes,
-    'parasite': parasiteScenes,
-    'midsommar': midsommarScenes,
-    'lighthouse': lighthouseScenes,
-    'lady-on-fire': ladyOnFireScenes,
-    'uncut-gems': uncutGemsScenes,
-    '1917': nineteenSeventeenScenes,
-    'everything-everywhere': everythingEverywhereScenes,
-    'the-batman': theBatmanScenes,
-    'oppenheimer': oppenheimerScenes,
-    'barbie': barbieScenes,
-    'past-lives': pastLivesScenes,
-    'anatomy-fall': anatomyFallScenes,
-    'zone-interest': zoneInterestScenes,
-    'godzilla-minus-one': godzillaMinusOneScenes,
-    // GAMES
     'the-last-of-us-part-1': theLastOfUsScenes,
     'cyberpunk-2077': cyberpunkScenes,
     'red-dead-redemption-2': rdr2Scenes,
@@ -360,4 +360,82 @@ export const movieScenes: Record<string, Scene[]> = {
     'starfield': starfieldScenes,
     'baldurs-gate-3': baldursGateScenes,
     'marvels-spider-man-2': spiderManScenes,
+    'raiders-lost-ark': raidersOfTheLostArkScenes,
+    'temple-of-doom': templeOfDoomScenes,
+    'crystal-skull': crystalSkullScenes,
+    'dial-of-destiny': dialOfDestinyScenes,
+    'matrix-resurrections': matrixResurrectionsScenes,
+    'john-wick-4': johnWick4Scenes,
+    'fast-furious-1': fastFurious1Scenes,
+    'fast-furious-2': fastFurious2Scenes,
+    'fast-furious-3': fastFurious3Scenes,
+    'fast-furious-4': fastFurious4Scenes,
+    'fast-furious-5': fastFurious5Scenes,
+    'fast-furious-6': fastFurious6Scenes,
+    'fast-furious-7': fastFurious7Scenes,
+    'fast-furious-8': fastFurious8Scenes,
+    'fast-furious-9': fastFurious9Scenes,
+    'fast-furious-10': fastFurious10Scenes,
+    'saving-private-ryan': savingPrivateRyanScenes,
+    'iron-man': ironManScenes,
+    'titanic': titanicScenes,
+    'avatar': avatarScenes,
+    'the-avengers': theAvengersScenes,
+    'jurassic-park': jurassicParkBlockbusterScenes,
+    'bttf-1': bttf1Scenes,
+    'bttf-2': bttf2Scenes,
+    'bttf-3': bttf3Scenes,
+    'rocky-1': rocky1ExpandedScenes,
+    'rocky-2': rocky2Scenes,
+    'rocky-3': rocky3Scenes,
+    'rocky-4': rocky4Scenes,
+    'rocky-5': rocky5Scenes,
+    'rocky-balboa': rockyBalboaScenes,
+    'creed-1': creed1ExpandedScenes,
+    'creed-2': creed2Scenes,
+    'creed-3': creed3Scenes,
+    'national-treasure-1': nationalTreasure1Scenes,
+    'national-treasure-2': nationalTreasure2Scenes,
+    'pirates-1': pirates1ExpandedScenes,
+    'pirates-2': pirates2ExpandedScenes,
+    'pirates-3': pirates3ExpandedScenes,
+    'pirates-4': pirates4ExpandedScenes,
+    'pirates-5': pirates5ExpandedScenes,
+    'the-rock': theRockExpandedScenes,
+    'con-air': conAirExpandedScenes,
+    'face-off': faceOffExpandedScenes,
+    'gladiator': gladiatorExpandedScenes,
+    'blade-runner-2049': br2049ExpandedScenes,
+    'the-shining': theShiningExpandedScenes,
+    'lighthouse': lighthouseExpandedScenes,
+    'nosferatu-2024': nosferatu2024ExpandedScenes,
+    'dracula-2025': dracula2025ExpandedScenes,
+    'hamlet': hamletExpandedScenes,
+    'ripley': ripleyExpandedScenes,
+    'the-chosen': chosenExpandedScenes,
+    'grand-prix': grandPrixExpandedScenes,
+    'rendezvous': rendezvousExpandedScenes,
+    'days-heaven': daysOfHeavenExpandedScenes,
+    'moulin-rouge': moulinRougeExpandedScenes,
+    'grand-budapest-hotel': grandBudapestExpandedScenes,
+    'mandy': mandyExpandedScenes,
+    'pig': pigExpandedScenes,
+    'longlegs': longlegsExpandedScenes,
+    'raising-arizona': raisingArizonaExpandedScenes,
+    'leaving-las-vegas': leavingLasVegasExpandedScenes,
+    'mulholland-drive': mulhollandDriveExpandedScenes,
+    'dead-poets-society': deadPoetsSocietyExpandedScenes,
+    'passion-christ': passionChristExpandedScenes,
+    'few-good-men': fewGoodMenExpandedScenes,
+    'karate-kid-1': karateKid1Scenes,
+    'league-of-their-own': moreSportsScenes,
+    'slap-shot': moreSportsScenes,
+    'the-sandlot': moreSportsScenes,
+    'major-league': moreSportsScenes,
+    'the-natural': moreSportsScenes,
+    'rudy': moreSportsScenes,
+    'field-of-dreams': moreSportsScenes,
+    'mighty-ducks': moreSportsScenes,
+    'longest-yard': moreSportsScenes,
+    'invincible': moreSportsScenes,
 };
