@@ -40,13 +40,13 @@ import {
 import {
     theThingScenes, nightmareOnElmStreetScenes, hellraiserScenes, theFlyScenes, evilDeadIIScenes,
     poltergeistScenes, reAnimatorScenes, videodromeScenes, theLostBoysScenes, americanWerewolfScenes,
-    screamScenes, silenceOfTheLambsScenes, candymanScenes, draculaScenes, miseryScenes,
+    screamScenes, candymanScenes, draculaScenes, miseryScenes,
     blairWitchScenes, eventHorizonScenes, jacobsLadderScenes, fromDuskTillDawnScenes, sleepyHollowScenes
 } from './scenes/horrorClassics';
 
 import {
     itsAWonderfulLifeScenes, homeAloneScenes, elfScenes,
-    christmasVacationScenes, nightmareBeforeChristmasScenes
+    nightmareBeforeChristmasScenes
 } from './scenes/christmasClassics';
 
 import {
@@ -74,11 +74,11 @@ import {
 import {
     metropolisScenes, cabinetCaligariScenes, nosferatuScenes, mScenes, citizenKaneScenes,
     casablancaScenes, theThirdManScenes, rearWindowScenes, vertigoScenes, northByNorthwestScenes,
-    psychoScenes, twelveAngryMenScenes, sevenSamuraiScenes, rashomonScenes, spaceOdysseyScenes,
+    twelveAngryMenScenes, sevenSamuraiScenes, rashomonScenes, spaceOdysseyScenes,
     drStrangeloveScenes, clockworkOrangeScenes, theGodfatherScenes, chinatownScenes, ragingBullScenes,
-    annieHallScenes, starWarsNewHopeScenes, empireStrikesBackScenes, jawsScenes, closeEncountersScenes,
+    annieHallScenes, starWarsNewHopeScenes, empireStrikesBackScenes, closeEncountersScenes,
     alienScenes, rockyScenes, theExorcistScenes, etScenes, ghostbustersScenes,
-    amadeusScenes, brazilScenes, scarfaceScenes, untouchablesScenes, standByMeScenes, blueVelvetScenes,
+    amadeusScenes, brazilScenes, untouchablesScenes, standByMeScenes, blueVelvetScenes,
     parisTexasScenes, wingsOfDesireScenes, ranScenes, cinemaParadisoScenes
 } from './scenes/classics1';
 
@@ -161,6 +161,40 @@ import {
     titanicScenes, avatarScenes, theAvengersScenes
 } from './scenes/addedBlockbusters';
 
+import {
+    adaptationScenes, familyManScenes, fearAndLoathingScenes, jawsScenes as jawsExpandedScenes
+} from './scenes/cageAndOthers';
+
+import {
+    coherenceScenes, ikiruScenes, scarfaceExpandedScenes,
+    longDaysJourneyScenes, flashdanceScenes
+} from './scenes/expandedBatch1';
+
+import {
+    inTheMoodForLoveScenes, starIsBornScenes, longGoodbyeScenes,
+    allAboutEveScenes, bodyHeatScenes
+} from './scenes/expandedBatch2';
+
+import {
+    psychoExpandedScenes, talentedMrRipleyExpandedScenes,
+    warOfTheWorldsScenes, halloweenExpandedScenes
+} from './scenes/expandedBatch3';
+
+import {
+    christmasVacationExpandedScenes, thisIsTheEndScenes,
+    prettyInPinkScenes, singingInTheRainScenes, eyesWideShutExpandedScenes
+} from './scenes/expandedBatch4';
+
+import {
+    anyGivenSundayScenes, silenceOfTheLambsExpandedScenes,
+    redDragonScenes, hannibalScenes, almostFamousScenes
+} from './scenes/expandedBatch5';
+
+import {
+    edwardScissorhandsScenes, cocktailScenes,
+    wolfOfWallStreetScenes, bigShortScenes
+} from './scenes/expandedBatch6';
+
 export const movieScenes: Record<string, Scene[]> = {
     'top-gun': topGunScenes,
     'interview-vampire': interviewVampireScenes,
@@ -220,7 +254,7 @@ export const movieScenes: Record<string, Scene[]> = {
     'the-lost-boys': theLostBoysScenes,
     'american-werewolf': americanWerewolfScenes,
     'scream': screamScenes,
-    'silence-of-lambs': silenceOfTheLambsScenes,
+    'silence-of-lambs': silenceOfTheLambsExpandedScenes,
     'candyman': candymanScenes,
     'dracula': draculaScenes,
     'misery': miseryScenes,
@@ -232,7 +266,7 @@ export const movieScenes: Record<string, Scene[]> = {
     'its-a-wonderful-life': itsAWonderfulLifeScenes,
     'home-alone': homeAloneScenes,
     'elf': elfScenes,
-    'christmas-vacation': christmasVacationScenes,
+    'christmas-vacation': christmasVacationExpandedScenes,
     'nightmare-before-christmas': nightmareBeforeChristmasScenes,
     'miracle-34th-street': miracleScenes,
     'christmas-story': christmasStoryScenes,
@@ -273,7 +307,7 @@ export const movieScenes: Record<string, Scene[]> = {
     'rear-window': rearWindowScenes,
     'vertigo': vertigoScenes,
     'north-by-northwest': northByNorthwestScenes,
-    'psycho': psychoScenes,
+    'psycho': psychoExpandedScenes,
     '12-angry-men': twelveAngryMenScenes,
     'seven-samurai': sevenSamuraiScenes,
     'rashomon': rashomonScenes,
@@ -286,7 +320,7 @@ export const movieScenes: Record<string, Scene[]> = {
     'annie-hall': annieHallScenes,
     'star-wars-new-hope': starWarsNewHopeScenes,
     'empire-strikes-back': empireStrikesBackScenes,
-    'jaws': jawsScenes,
+    'jaws': jawsExpandedScenes,
     'close-encounters': closeEncountersScenes,
     'alien': alienScenes,
     'rocky': rockyScenes,
@@ -296,7 +330,7 @@ export const movieScenes: Record<string, Scene[]> = {
     'ghostbusters': ghostbustersScenes,
     'amadeus': amadeusScenes,
     'brazil': brazilScenes,
-    'scarface': scarfaceScenes,
+    'scarface': scarfaceExpandedScenes,
     'untouchables': untouchablesScenes,
     'stand-by-me': standByMeScenes,
     'blue-velvet': blueVelvetScenes,
@@ -305,6 +339,29 @@ export const movieScenes: Record<string, Scene[]> = {
     'wings-of-desire': wingsOfDesireScenes,
     'ran': ranScenes,
     'cinema-paradiso': cinemaParadisoScenes,
+    'adaptation': adaptationScenes,
+    'family-man': familyManScenes,
+    'fear-and-loathing': fearAndLoathingScenes,
+    'coherence': coherenceScenes,
+    'ikiru': ikiruScenes,
+    'long-days-journey': longDaysJourneyScenes,
+    'flashdance': flashdanceScenes,
+    'in-the-mood-for-love': inTheMoodForLoveScenes,
+    'star-is-born': starIsBornScenes,
+    'the-long-goodbye': longGoodbyeScenes,
+    'all-about-eve': allAboutEveScenes,
+    'body-heat': bodyHeatScenes,
+    'talented-mr-ripley': talentedMrRipleyExpandedScenes,
+    'war-of-the-worlds': warOfTheWorldsScenes,
+    'this-is-the-end': thisIsTheEndScenes,
+    'any-given-sunday': anyGivenSundayScenes,
+    'red-dragon': redDragonScenes,
+    'hannibal': hannibalScenes,
+    'almost-famous': almostFamousScenes,
+    'edward-scissorhands': edwardScissorhandsScenes,
+    'cocktail': cocktailScenes,
+    'wolf-of-wall-street': wolfOfWallStreetScenes,
+    'the-big-short': bigShortScenes,
     'goodfellas': goodfellasScenes,
     'schindlers-list': schindlersListScenes,
     'the-pianist': thePianistScenes,
@@ -407,6 +464,9 @@ export const movieScenes: Record<string, Scene[]> = {
     'gladiator': gladiatorExpandedScenes,
     'blade-runner-2049': br2049ExpandedScenes,
     'the-shining': theShiningExpandedScenes,
+    'pretty-in-pink': prettyInPinkScenes,
+    'singing-in-the-rain': singingInTheRainScenes,
+    'eyes-wide-shut': eyesWideShutExpandedScenes,
     'lighthouse': lighthouseExpandedScenes,
     'nosferatu-2024': nosferatu2024ExpandedScenes,
     'dracula-2025': dracula2025ExpandedScenes,
@@ -438,4 +498,5 @@ export const movieScenes: Record<string, Scene[]> = {
     'mighty-ducks': moreSportsScenes,
     'longest-yard': moreSportsScenes,
     'invincible': moreSportsScenes,
+    'halloween': halloweenExpandedScenes,
 };

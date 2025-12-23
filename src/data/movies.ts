@@ -4114,6 +4114,305 @@ export const movies: Movie[] = [
         styles: [
             { name: 'Neon Underworld', promptString: 'saturated red lighting, sweat, close-up frantic movement, gritty urban texture, vibrant chaos' }
         ]
+    },
+    {
+        id: 'adaptation',
+        title: 'Adaptation',
+        year: '2002',
+        genres: ['Comedy', 'Drama'],
+        director: 'Spike Jonze',
+        actors: ['Nicolas Cage', 'Meryl Streep', 'Chris Cooper'],
+        type: 'movie',
+        styles: [
+            { name: 'Swamp Poetics', promptString: 'humid Florida Everglades, lush green foliage, misty air, macro orchid focus, sunlight through cypress trees' },
+            { name: 'Neurotic Noir', promptString: 'low light, clutteredwriter desk, shadow play on face, intense close-up, dusty atmosphere' }
+        ]
+    },
+    {
+        id: 'family-man',
+        title: 'The Family Man',
+        year: '2000',
+        genres: ['Comedy', 'Drama', 'Fantasy'],
+        director: 'Brett Ratner',
+        actors: ['Nicolas Cage', 'Tea Leoni'],
+        type: 'movie',
+        styles: [
+            { name: 'Manhattan Chrome', promptString: 'cold blue steel, floor-to-ceiling glass, city lights, luxury Ferrari reflection, penthouse aesthetic' },
+            { name: 'Suburban Warmth', promptString: 'warm incandescent light, messy living room, snow-covered neighborhood, holiday decorations, domestic comfort' }
+        ]
+    },
+    {
+        id: 'fear-and-loathing',
+        title: 'Fear and Loathing in Las Vegas',
+        year: '1998',
+        genres: ['Adventure', 'Comedy', 'Drama'],
+        director: 'Terry Gilliam',
+        actors: ['Johnny Depp', 'Benicio Del Toro'],
+        type: 'movie',
+        styles: [
+            { name: 'Gonzo Vision', promptString: 'distorted wide angle lens, Dutch tilt, vibrant psychedelic colors, desert heat haze, hallucinogenic motion blur' },
+            { name: 'Vegas Neon Night', promptString: 'flickering neon, blurry hotel bar, lizard-like shadows, excessive smoke, chaos' }
+        ]
+    },
+    {
+        id: 'coherence',
+        title: 'Coherence',
+        year: '2013',
+        genres: ['Mystery', 'Sci-Fi', 'Thriller'],
+        director: 'James Ward Byrkit',
+        actors: ['Emily Foxler', 'Maury Sterling'],
+        type: 'movie',
+        styles: [
+            { name: 'Glow Stick Haze', promptString: 'blue and red glow sticks, lighting from below, pitch black environment, handheld camera, high contrast' },
+            { name: 'Parallel Tension', promptString: 'split focus, reflection in glass, dark neighborhood, strobe-like flickering, paranoid atmosphere' }
+        ]
+    },
+    {
+        id: 'ikiru',
+        title: 'Ikiru',
+        year: '1952',
+        genres: ['Drama'],
+        director: 'Akira Kurosawa',
+        actors: ['Takashi Shimura'],
+        type: 'movie',
+        styles: [
+            { name: 'Kurosawa Monochrome', promptString: 'high contrast black and white, deep focus, Japanese office bureaucracy, rain and mud, snow on a swing' },
+            { name: 'Metropolitan Melancholy', promptString: '1952 Tokyo streets, crowded bars, smoke trails, spiritual awakening' }
+        ]
+    },
+    {
+        id: 'long-days-journey',
+        title: 'Long Day\'s Journey into Night',
+        year: '2018',
+        genres: ['Drama', 'Mystery'],
+        director: 'Bi Gan',
+        actors: ['Huang Jue', 'Tang Wei'],
+        type: 'movie',
+        styles: [
+            { name: 'Emerald Dream', promptString: 'sickly emerald green lighting, wet cave walls, 3D long take effect, floating movement, magical realism' },
+            { name: 'Kaili Noir', promptString: 'damp urban decay, neon reflections in puddles, blue night sky, cinematic drone shots, foggy landscape' }
+        ]
+    },
+    {
+        id: 'flashdance',
+        title: 'Flashdance',
+        year: '1983',
+        genres: ['Drama', 'Music', 'Romance'],
+        director: 'Adrian Lyne',
+        actors: ['Jennifer Beals'],
+        type: 'movie',
+        styles: [
+            { name: 'Steel Mill Grit', promptString: 'welding sparks, orange fire, blue collar industrial texture, sweat on skin, grit' },
+            { name: 'Spotlight Silhouette', promptString: 'water drenching, stage spotlight, strobe light, high energy dance, 80s aerobics aesthetic' }
+        ]
+    },
+    {
+        id: 'in-the-mood-for-love',
+        title: 'In the Mood for Love',
+        year: '2000',
+        genres: ['Drama', 'Romance'],
+        director: 'Wong Kar-wai',
+        actors: ['Tony Leung', 'Maggie Cheung'],
+        type: 'movie',
+        styles: [
+            { name: 'Wong Kar-wai Glow', promptString: 'saturated red and green palette, step printing motion blur, narrow hallways, cigarette smoke trails, qipao patterns' },
+            { name: 'Hong Kong Noir', promptString: 'rain-soaked alleys, tungsten street lamps, reflective puddles, 1960s nostalgia, repressed emotion' }
+        ]
+    },
+    {
+        id: 'star-is-born',
+        title: 'A Star Is Born',
+        year: '2018',
+        genres: ['Drama', 'Music', 'Romance'],
+        director: 'Bradley Cooper',
+        actors: ['Lady Gaga', 'Bradley Cooper'],
+        type: 'movie',
+        styles: [
+            { name: 'Stage Glare', promptString: 'blinding white spotlights, lens flare, sweat and hair, roaring crowd, intimate close-up' },
+            { name: 'Sunset Rock', promptString: 'golden hour, desert studio, dusty warm lighting, blue and orange color grade, raw emotion' }
+        ]
+    },
+    {
+        id: 'the-long-goodbye',
+        title: 'The Long Goodbye',
+        year: '1973',
+        genres: ['Comedy', 'Crime', 'Drama'],
+        director: 'Robert Altman',
+        actors: ['Elliott Gould'],
+        type: 'movie',
+        styles: [
+            { name: 'Altman Haze', promptString: '70s film grain, constant camera movement, sun-bleached Malibu, tobacco smoke, hazy blue and orange' },
+            { name: 'California Noir', promptString: 'beach house glass reflections, 1970s cars, relaxed gumshoe aesthetic, neon in the fog' }
+        ]
+    },
+    {
+        id: 'all-about-eve',
+        title: 'All About Eve',
+        year: '1950',
+        genres: ['Drama'],
+        director: 'Joseph L. Mankiewicz',
+        actors: ['Bette Davis', 'Anne Baxter'],
+        type: 'movie',
+        styles: [
+            { name: 'Margo\'s Martini', promptString: 'crisp 1950 black and white, martini glass, elegant evening gowns, cigarette smoke in a crowded room, sharp focus' },
+            { name: 'Backstage Shadows', promptString: 'theater wings, stage lights, ambitious glint in eyes, dramatic shadows, Hollywood golden era' }
+        ]
+    },
+    {
+        id: 'body-heat',
+        title: 'Body Heat',
+        year: '1981',
+        genres: ['Crime', 'Drama', 'Romance'],
+        director: 'Lawrence Kasdan',
+        actors: ['William Hurt', 'Kathleen Turner'],
+        type: 'movie',
+        styles: [
+            { name: 'Florida Sweat', promptString: 'humid night, amber and orange glow, spinning fans, skin sheen, tropical moisture, 80s noir' },
+            { name: 'Lady in White', promptString: 'white dress silhouette, moonlit beach, breaking glass, intense shadows, dangerous mystery' }
+        ]
+    },
+    {
+        id: 'talented-mr-ripley',
+        title: 'The Talented Mr. Ripley',
+        year: '1999',
+        genres: ['Crime', 'Drama', 'Thriller'],
+        director: 'Anthony Minghella',
+        actors: ['Matt Damon', 'Gwyneth Paltrow', 'Jude Law'],
+        type: 'movie',
+        styles: [
+            { name: 'Mediterranean Bliss', promptString: 'sun-drenched Italy, turquoise water, yellow sun, 1950s linen fashion, vintage boat, luxury' },
+            { name: 'Ripley\'s Shadow', promptString: 'dark Venetian canals, moody evening light, mirror forgeries, cold blue and gold, obsession' }
+        ]
+    },
+    {
+        id: 'war-of-the-worlds',
+        title: 'War of the Worlds',
+        year: '2005',
+        genres: ['Action', 'Adventure', 'Sci-Fi'],
+        director: 'Steven Spielberg',
+        actors: ['Tom Cruise', 'Dakota Fanning'],
+        type: 'movie',
+        styles: [
+            { name: 'Tripod Terror', promptString: 'massive alien machinery, red pulse, urban dust and ash, lightning strikes, Spielberg scale, blue-grey palette' },
+            { name: 'Technicolor Invasion', promptString: '1953 technicolor, glowing green forcefields, heat ray beams, retro-futuristic ships, vibrant chaos' }
+        ]
+    },
+    {
+        id: 'this-is-the-end',
+        title: 'This Is The End',
+        year: '2013',
+        genres: ['Comedy', 'Fantasy'],
+        director: 'Seth Rogen, Evan Goldberg',
+        actors: ['James Franco', 'Seth Rogen', 'Jonah Hill'],
+        type: 'movie',
+        styles: [
+            { name: 'Hollywood Rapture', promptString: 'blue heavenly beams, Hollywood hills on fire, burning mansion, neon party, apocalyptic chaos' },
+            { name: 'Heavenly Glow', promptString: 'infinite white space, golden details, bright lens flare, ethereal music video aesthetic' }
+        ]
+    },
+    {
+        id: 'any-given-sunday',
+        title: 'Any Given Sunday',
+        year: '1999',
+        genres: ['Drama', 'Sport'],
+        director: 'Oliver Stone',
+        actors: ['Al Pacino', 'Cameron Diaz', 'Jamie Foxx'],
+        type: 'movie',
+        styles: [
+            { name: 'Gridiron Grit', promptString: 'muddy uniforms, rain, sweat, aggressive handheld shots, high shutter speed, gritty texture, stadium lights' },
+            { name: 'Miami Glitz', promptString: 'vibrant 90s colors, luxury offices, neon nightlife, fast-paced editing, power dynamics' }
+        ]
+    },
+    {
+        id: 'red-dragon',
+        title: 'Red Dragon',
+        year: '2002',
+        genres: ['Crime', 'Drama', 'Thriller'],
+        director: 'Brett Ratner',
+        actors: ['Edward Norton', 'Anthony Hopkins', 'Ralph Fiennes'],
+        type: 'movie',
+        styles: [
+            { name: 'Tooth Fairy Glow', promptString: 'dark lunar lighting, Red Dragon tattoo, full moon, museum shadows, intense close-up on eyes' },
+            { name: 'Hannibal\'s Study', promptString: 'refined leather and wood, warm amber lighting, intellectual horror, meticulous detail' }
+        ]
+    },
+    {
+        id: 'hannibal',
+        title: 'Hannibal',
+        year: '2001',
+        genres: ['Crime', 'Drama', 'Thriller'],
+        director: 'Ridley Scott',
+        actors: ['Anthony Hopkins', 'Julianne Moore'],
+        type: 'movie',
+        styles: [
+            { name: 'Florence Elegance', promptString: 'warm Italian sunset, Palazzo architecture, leather coat, refined violence, Tuscan palette' },
+            { name: 'Boar Pen Horror', promptString: 'muddy ground, grey misty light, gothic atmosphere, high contrast, industrial farming grit' }
+        ]
+    },
+    {
+        id: 'almost-famous',
+        title: 'Almost Famous',
+        year: '2000',
+        genres: ['Adventure', 'Comedy', 'Drama'],
+        director: 'Cameron Crowe',
+        actors: ['Billy Crudup', 'Patrick Fugit', 'Kate Hudson'],
+        type: 'movie',
+        styles: [
+            { name: 'Band-Aid Gold', promptString: 'warm golden hour, 1970s sun-bleached look, fur collar, round sunglasses, backstage glow' },
+            { name: 'Tour Bus Haze', promptString: '70s film grain, smoky bus interior, American landscape out window, nostalgic rock vibe' }
+        ]
+    },
+    {
+        id: 'edward-scissorhands',
+        title: 'Edward Scissorhands',
+        year: '1990',
+        genres: ['Drama', 'Fantasy', 'Romance'],
+        director: 'Tim Burton',
+        actors: ['Johnny Depp', 'Winona Ryder'],
+        type: 'movie',
+        styles: [
+            { name: 'Gothic Winter', promptString: 'dark castle silhouette, blue starlight, ice sculpture shavings, pale skin, Tim Burton contrast' },
+            { name: 'Pastel Suburbia', promptString: 'candy-colored houses, perfectly manicured lawns, topiary bushes, 1950s aesthetic, vibrant saturation' }
+        ]
+    },
+    {
+        id: 'cocktail',
+        title: 'Cocktail',
+        year: '1988',
+        genres: ['Comedy', 'Drama', 'Romance'],
+        director: 'Roger Donaldson',
+        actors: ['Tom Cruise', 'Bryan Brown'],
+        type: 'movie',
+        styles: [
+            { name: '80s Flair', promptString: 'spinning bottles, neon blue and pink bar, sweat, 80s glam, high energy motion blur' },
+            { name: 'Jamaica Beach', promptString: 'turquoise water, white sand, tiki bar, tropical sunrise, vibrant 80s island look' }
+        ]
+    },
+    {
+        id: 'wolf-of-wall-street',
+        title: 'The Wolf of Wall Street',
+        year: '2013',
+        genres: ['Biography', 'Comedy', 'Crime'],
+        director: 'Martin Scorsese',
+        actors: ['Leonardo DiCaprio', 'Jonah Hill', 'Margot Robbie'],
+        type: 'movie',
+        styles: [
+            { name: 'Broker Chaos', promptString: 'hectic office BULLPEN, flying papers, sweat, wide angle lens, 90s corporate excess, vibrant satire' },
+            { name: 'Duchess Pink', promptString: 'opulent white mansion, high-end fashion, yacht in a storm, Ferrari 512 TR, sheer decadence' }
+        ]
+    },
+    {
+        id: 'the-big-short',
+        title: 'The Big Short',
+        year: '2015',
+        genres: ['Biography', 'Comedy', 'Drama'],
+        director: 'Adam McKay',
+        actors: ['Christian Bale', 'Steve Carell', 'Ryan Gosling'],
+        type: 'movie',
+        styles: [
+            { name: 'Wall Street Ticker', promptString: 'clinical office lighting, stock market numbers, handheld camera, fourth wall break, 2008 urban grit' },
+            { name: 'Vegas Boom', promptString: 'neon casino floor, poolside greed, desert heat, vibrant and cynical documentary style' }
+        ]
     }
 ];
 
