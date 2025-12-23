@@ -3751,7 +3751,368 @@ export const movies: Movie[] = [
         actors: ['Jim Caviezel'],
         type: 'movie',
         styles: [
-            { name: 'Caravaggio Lighting', promptString: 'chiaroscuro, deep shadows, warm candlelight, earthy tones, visceral texture, high dramatic contrast' }
+        ]
+    },
+    {
+        id: 'vampires-kiss',
+        title: 'Vampire\'s Kiss',
+        year: '1988',
+        genres: ['Comedy', 'Crime', 'Horror'],
+        director: 'Robert Bierman',
+        actors: ['Nicolas Cage', 'Maria Conchita Alonso', 'Jennifer Beals'],
+        type: 'movie',
+        styles: [
+            { name: 'Unhinged Mania', promptString: 'Nicolas Cage extreme facial expression, wild eyes, sweaty skin, office lighting, surreal descent into madness' },
+            { name: 'NYC 80s Grime', promptString: 'dirty streets, neon signs, harsh shadows, film grain, urban isolation, 80s aesthetic' }
+        ]
+    },
+    {
+        id: 'wild-at-heart',
+        title: 'Wild at Heart',
+        year: '1990',
+        genres: ['Action', 'Crime', 'Drama'],
+        director: 'David Lynch',
+        actors: ['Nicolas Cage', 'Laura Dern', 'Willem Dafoe'],
+        type: 'movie',
+        styles: [
+            { name: 'Snake Skin Jacket', promptString: 'snakeskin pattern texture, fire in background, high contrast, lynchian surrealism, saturated colors, romantic rebellion' },
+            { name: 'Roadside Nightmare', promptString: 'dark highway, car headlights, strange characters, dream-like atmosphere, high dramatic lighting' }
+        ]
+    },
+    {
+        id: 'red-rock-west',
+        title: 'Red Rock West',
+        year: '1993',
+        genres: ['Crime', 'Drama', 'Thriller'],
+        director: 'John Dahl',
+        actors: ['Nicolas Cage', 'Dennis Hopper', 'Lara Flynn Boyle'],
+        type: 'movie',
+        styles: [
+            { name: 'Neo-Noir Desert', promptString: 'dusty roads, pale blue moonlight, shadows of silhouettes, diner interior, desolate landscape, suspenseful' }
+        ]
+    },
+    {
+        id: 'willys-wonderland',
+        title: 'Willy\'s Wonderland',
+        year: '2021',
+        genres: ['Action', 'Comedy', 'Horror'],
+        director: 'Kevin Lewis',
+        actors: ['Nicolas Cage', 'Emily Tosta'],
+        type: 'movie',
+        styles: [
+            { name: 'Animatronic Night', promptString: 'neon purple and pink glow, oil-slicked floor, demonic mechanical creatures, intense silent focus, arcade lighting' }
+        ]
+    },
+    {
+        id: 'color-out-of-space',
+        title: 'Color Out of Space',
+        year: '2019',
+        genres: ['Horror', 'Sci-Fi'],
+        director: 'Richard Stanley',
+        actors: ['Nicolas Cage', 'Joely Richardson'],
+        type: 'movie',
+        styles: [
+            { name: 'Eldritch Magenta', promptString: 'vibrant unearthly purple and magenta light, swirling nebula textures, biological mutation, cosmic horror, high saturation' }
+        ]
+    },
+    {
+        id: 'unbearable-weight',
+        title: 'The Unbearable Weight of Massive Talent',
+        year: '2022',
+        genres: ['Action', 'Comedy', 'Crime'],
+        director: 'Tom Gormican',
+        actors: ['Nicolas Cage', 'Pedro Pascal'],
+        type: 'movie',
+        styles: [
+            { name: 'Meta Meta', promptString: 'bright Mediterranean sunlight, high-end villa, gold statues of self, cinematic warmth, friendship' }
+        ]
+    },
+    {
+        id: 'dream-scenario',
+        title: 'Dream Scenario',
+        year: '2023',
+        genres: ['Comedy', 'Fantasy'],
+        director: 'Kristoffer Borgli',
+        actors: ['Nicolas Cage', 'Julianne Nicholson'],
+        type: 'movie',
+        styles: [
+            { name: 'Dream Logic', promptString: 'surreal suburban setting, muted colors, soft focus background, awkward presence, uncanny atmosphere' }
+        ]
+    },
+    {
+        id: 'arcadian',
+        title: 'Arcadian',
+        year: '2024',
+        genres: ['Action', 'Horror', 'Sci-Fi'],
+        director: 'Ben Brewer',
+        actors: ['Nicolas Cage', 'Jaeden Martell'],
+        type: 'movie',
+        styles: [
+            { name: 'Twilight Defense', promptString: 'cold blue dusk, farmhouse fortifications, flickering candlelight, creature shadows, survival grit' }
+        ]
+    },
+    {
+        id: 'valley-girl',
+        title: 'Valley Girl',
+        year: '1983',
+        genres: ['Comedy', 'Romance'],
+        director: 'Martha Coolidge',
+        actors: ['Nicolas Cage', 'Deborah Foreman'],
+        type: 'movie',
+        styles: [
+            { name: 'Punk 80s', promptString: 'skinny ties, bright makeup, neon club lighting, soft focus romance, vibrant 80s fashion' }
+        ]
+    },
+    {
+        id: 'the-trust',
+        title: 'The Trust',
+        year: '2016',
+        genres: ['Crime', 'Thriller'],
+        director: 'Alex Brewer, Benjamin Brewer',
+        actors: ['Nicolas Cage', 'Elijah Wood'],
+        type: 'movie',
+        styles: [
+            { name: 'Heist Static', promptString: 'cramped vault interior, industrial masks, mechanical tools, cold lighting, clinical crime aesthetic' }
+        ]
+    },
+    {
+        id: 'the-prestige',
+        title: 'The Prestige',
+        year: '2006',
+        genres: ['Drama', 'Mystery', 'Sci-Fi'],
+        director: 'Christopher Nolan',
+        actors: ['Christian Bale', 'Hugh Jackman', 'Scarlett Johansson'],
+        type: 'movie',
+        styles: [
+            { name: 'Tesla Glow', promptString: 'electrical arcs, mechanical stage props, Victorian textures, deep shadows, amber and blue light' }
+        ]
+    },
+    {
+        id: 'arrival',
+        title: 'Arrival',
+        year: '2016',
+        genres: ['Drama', 'Sci-Fi'],
+        director: 'Denis Villeneuve',
+        actors: ['Amy Adams', 'Jeremy Renner', 'Forest Whitaker'],
+        type: 'movie',
+        styles: [
+            { name: 'Monolith Mist', promptString: 'grey foggy landscape, giant sleek alien ship silhouette, volumetric lighting, minimal design, cold atmosphere' }
+        ]
+    },
+    {
+        id: 'sicario',
+        title: 'Sicario',
+        year: '2015',
+        genres: ['Action', 'Crime', 'Drama'],
+        director: 'Denis Villeneuve',
+        actors: ['Emily Blunt', 'Josh Brolin', 'Benicio del Toro'],
+        type: 'movie',
+        styles: [
+            { name: 'Border Heat', promptString: 'harsh yellow sunlight, dust trails, shadows across faces, gritty textures, high contrast military gear' }
+        ]
+    },
+    {
+        id: 'the-northman',
+        title: 'The Northman',
+        year: '2022',
+        genres: ['Action', 'Adventure', 'Drama'],
+        director: 'Robert Eggers',
+        actors: ['Alexander Skarsgård', 'Nicole Kidman', 'Claes Bang'],
+        type: 'movie',
+        styles: [
+            { name: 'Viking Ritual', promptString: 'cold grey rain, fire embers, blood-soaked skin, monochromatic blues, mud and steel texture' }
+        ]
+    },
+    {
+        id: 'the-witch',
+        title: 'The Witch',
+        year: '2015',
+        genres: ['Horror', 'Mystery'],
+        director: 'Robert Eggers',
+        actors: ['Anya Taylor-Joy', 'Ralph Ineson'],
+        type: 'movie',
+        styles: [
+            { name: 'Folklore Gloom', promptString: 'desaturated grey tones, natural lighting, dark forest edge, wooden textures, oppressive atmosphere' }
+        ]
+    },
+    {
+        id: 'django-unchained',
+        title: 'Django Unchained',
+        year: '2012',
+        genres: ['Drama', 'Western'],
+        director: 'Quentin Tarantino',
+        actors: ['Jamie Foxx', 'Christoph Waltz', 'Leonardo DiCaprio'],
+        type: 'movie',
+        styles: [
+            { name: 'Candyland Red', promptString: 'bright red blood spray, white cotton fields, saturated primary colors, high contrast western sun' }
+        ]
+    },
+    {
+        id: 'the-hateful-eight',
+        title: 'The Hateful Eight',
+        year: '2015',
+        genres: ['Crime', 'Drama', 'Mystery'],
+        director: 'Quentin Tarantino',
+        actors: ['Samuel L. Jackson', 'Kurt Russell', 'Jennifer Jason Leigh'],
+        type: 'movie',
+        styles: [
+            { name: 'Blizzard Interior', promptString: 'warm cabin glow, wood texture, snow particles in air, ultra-wide 70mm lens, shallow depth of field' }
+        ]
+    },
+    {
+        id: 'nightcrawler',
+        title: 'Nightcrawler',
+        year: '2014',
+        genres: ['Crime', 'Drama', 'Thriller'],
+        director: 'Dan Gilroy',
+        actors: ['Jake Gyllenhaal', 'Rene Russo'],
+        type: 'movie',
+        styles: [
+            { name: 'LA Night Glare', promptString: 'sodium vapor yellow streetlights, digital camera glare, city at night, cold clinical focus, sweat' }
+        ]
+    },
+    {
+        id: 'american-gangster',
+        title: 'American Gangster',
+        year: '2007',
+        genres: ['Biography', 'Crime', 'Drama'],
+        director: 'Ridley Scott',
+        actors: ['Denzel Washington', 'Russell Crowe'],
+        type: 'movie',
+        styles: [
+            { name: '70s Harlem', promptString: 'sepia tones, fur coats, period nyc streets, soft film grain, cool luxury aesthetic' }
+        ]
+    },
+    {
+        id: 'last-mohicans',
+        title: 'The Last of the Mohicans',
+        year: '1992',
+        genres: ['Action', 'Adventure', 'Drama'],
+        director: 'Michael Mann',
+        actors: ['Daniel Day-Lewis', 'Madeleine Stowe'],
+        type: 'movie',
+        styles: [
+            { name: 'Wilderness Epic', promptString: 'lush blue forests, golden hour, firelight silhouettes, running through nature, cinematic landscape' }
+        ]
+    },
+    {
+        id: 'master-commander',
+        title: 'Master and Commander: The Far Side of the World',
+        year: '2003',
+        genres: ['Action', 'Adventure', 'Drama'],
+        director: 'Peter Weir',
+        actors: ['Russell Crowe', 'Paul Bettany'],
+        type: 'movie',
+        styles: [
+            { name: 'Age of Sail', promptString: 'wooden ship deck, sea salt spray, fog, dawn light, candlelit cabin, intricate rope and wood texture' }
+        ]
+    },
+    {
+        id: 'the-green-knight',
+        title: 'The Green Knight',
+        year: '2021',
+        genres: ['Adventure', 'Drama', 'Fantasy'],
+        director: 'David Lowery',
+        actors: ['Dev Patel', 'Alicia Vikander'],
+        type: 'movie',
+        styles: [
+            { name: 'Medieval Psychedelia', promptString: 'glowing green moss, golden sunlight filtering through fog, giant silhouettes, painterly textures' }
+        ]
+    },
+    {
+        id: '12-years-slave',
+        title: '12 Years a Slave',
+        year: '2013',
+        genres: ['Biography', 'Drama', 'History'],
+        director: 'Steve McQueen',
+        actors: ['Chiwetel Ejiofor', 'Michael Fassbender'],
+        type: 'movie',
+        styles: [
+            { name: 'McQueen Realism', promptString: 'sharp natural lighting, sweltering heat haze, heavy textures of cotton and wood, long focus shots' }
+        ]
+    },
+    {
+        id: 'gravity',
+        title: 'Gravity',
+        year: '2013',
+        genres: ['Action', 'Drama', 'Sci-Fi'],
+        director: 'Alfonso Cuarón',
+        actors: ['Sandra Bullock', 'George Clooney'],
+        type: 'movie',
+        styles: [
+            { name: 'Earth Glow', promptString: 'blinding white sunlight from the earth, pitch black space, lens flare, visor reflections, isolation' }
+        ]
+    },
+    {
+        id: 'poor-things',
+        title: 'Poor Things',
+        year: '2023',
+        genres: ['Comedy', 'Drama', 'Romance'],
+        director: 'Yorgos Lanthimos',
+        actors: ['Emma Stone', 'Mark Ruffalo', 'Willem Dafoe'],
+        type: 'movie',
+        styles: [
+            { name: 'Surreal Fisheye', promptString: 'vivid saturated color, Victorian steampunk, fisheye lens distortion, ornate costumes, dreamlike sets' }
+        ]
+    },
+    {
+        id: 'civil-war',
+        title: 'Civil War',
+        year: '2024',
+        genres: ['Action', 'Thriller'],
+        director: 'Alex Garland',
+        actors: ['Kirsten Dunst', 'Wagner Moura'],
+        type: 'movie',
+        styles: [
+            { name: 'War Photojournalism', promptString: 'digital grain, desaturated colors, modern urban ruins, smoke, intense combat chaos, sharp focus' }
+        ]
+    },
+    {
+        id: 'furiosa',
+        title: 'Furiosa: A Mad Max Saga',
+        year: '2024',
+        genres: ['Action', 'Adventure', 'Sci-Fi'],
+        director: 'George Miller',
+        actors: ['Anya Taylor-Joy', 'Chris Hemsworth'],
+        type: 'movie',
+        styles: [
+            { name: 'Chrome & Dust', promptString: 'vibrant orange desert, deep blue sky, metallic reflections, massive war rigs, fire explosions, high contrast' }
+        ]
+    },
+    {
+        id: 'the-holdovers',
+        title: 'The Holdovers',
+        year: '2023',
+        genres: ['Comedy', 'Drama'],
+        director: 'Alexander Payne',
+        actors: ['Paul Giamatti', 'Dominic Sessa'],
+        type: 'movie',
+        styles: [
+            { name: '70s Film Stock', promptString: 'warm autumn palette, heavy film grain, boarding school interior, soft lighting, 1970s aesthetic' }
+        ]
+    },
+    {
+        id: 'killers-flower-moon',
+        title: 'Killers of the Flower Moon',
+        year: '2023',
+        genres: ['Crime', 'Drama', 'History'],
+        director: 'Martin Scorsese',
+        actors: ['Leonardo DiCaprio', 'Robert De Niro', 'Lily Gladstone'],
+        type: 'movie',
+        styles: [
+            { name: 'Osage Hills', promptString: 'vast Oklahoma sunset, period accurate oil fields, shadows in shadows, rich earth tones, epic scale' }
+        ]
+    },
+    {
+        id: 'monkey-man',
+        title: 'Monkey Man',
+        year: '2024',
+        genres: ['Action', 'Thriller'],
+        director: 'Dev Patel',
+        actors: ['Dev Patel', 'Sharlto Copley'],
+        type: 'movie',
+        styles: [
+            { name: 'Neon Underworld', promptString: 'saturated red lighting, sweat, close-up frantic movement, gritty urban texture, vibrant chaos' }
         ]
     }
 ];
