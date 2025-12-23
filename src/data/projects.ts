@@ -101,58 +101,98 @@ export const deployedApps: StudioProject[] = [
         color: 'text-purple-400',
         visibility: 'Public',
         status: 'deployed'
+    },
+    {
+        id: 'sprite-forge',
+        title: 'SpriteForge',
+        description: 'AI-powered sprite generation tool.',
+        url: 'https://srephoto.github.io/SpriteForge/',
+        icon: 'Palette',
+        color: 'text-orange-400',
+        visibility: 'Public',
+        status: 'deployed'
+    },
+    {
+        id: 'diablo-js',
+        title: 'Diablo JS',
+        description: 'Isometric RPG engine recreation.',
+        url: 'https://srephoto.github.io/diablo-js/',
+        icon: 'Flame',
+        color: 'text-red-600',
+        visibility: 'Public',
+        status: 'deployed'
+    },
+    {
+        id: 'pixel-art-pro',
+        title: 'PixelArt Pro',
+        description: 'Professional suite for pixel artists.',
+        url: 'https://srephoto.github.io/PixelArtPro/',
+        icon: 'Aperture',
+        color: 'text-cyan-500',
+        visibility: 'Public',
+        status: 'deployed'
+    },
+    {
+        id: 'treasure-map',
+        title: 'Local Treasure Map',
+        description: 'Garage sale routing and local sales.',
+        url: 'https://srephoto.github.io/Local-Treasure-Map/',
+        icon: 'Map',
+        color: 'text-emerald-500',
+        visibility: 'Public',
+        status: 'deployed'
+    },
+    {
+        id: 'wellnest',
+        title: 'WellNest',
+        description: 'Wellness and health tracking platform.',
+        url: 'https://srephoto.github.io/WellNest/',
+        icon: 'Heart',
+        color: 'text-rose-400',
+        visibility: 'Public',
+        status: 'deployed'
+    },
+    {
+        id: 'iodine-gba',
+        title: 'IodineGBA',
+        description: 'JavaScript GameBoy Advance emulator.',
+        url: 'https://srephoto.github.io/IodineGBA/',
+        icon: 'Gamepad2',
+        color: 'text-fuchsia-500',
+        visibility: 'Public',
+        status: 'deployed'
+    },
+    {
+        id: 'punchline-master',
+        title: 'Punchline Master',
+        description: 'Social party game.',
+        url: 'https://srephoto.github.io/Punchline-Master/',
+        icon: 'MessageCircle',
+        color: 'text-lime-400',
+        visibility: 'Public',
+        status: 'deployed'
     }
 ];
 
 // SECTION 2: GitHub Repos (Source code - click to view on GitHub)
 export const repoApps: StudioProject[] = [
     {
-        id: 'sprite-forge',
-        title: 'SpriteForge',
-        description: 'AI-powered sprite generation tool.',
-        url: 'https://github.com/SREphoto/SpriteForge',
-        icon: 'Palette',
-        color: 'text-orange-400',
+        id: 'outrun',
+        title: 'Outrun Port',
+        description: 'Classic arcade racing game port.',
+        url: 'https://github.com/SREphoto/Outrun',
+        icon: 'Car',
+        color: 'text-pink-500',
         visibility: 'Public',
         status: 'repo'
     },
     {
-        id: 'diablo-js',
-        title: 'Diablo JS',
-        description: 'Isometric RPG engine recreation.',
-        url: 'https://github.com/SREphoto/diablo-js',
-        icon: 'Flame',
-        color: 'text-red-600',
-        visibility: 'Public',
-        status: 'repo'
-    },
-    {
-        id: 'pixel-art-pro',
-        title: 'PixelArt Pro',
-        description: 'Professional suite for pixel artists.',
-        url: 'https://github.com/SREphoto/PixelArtPro',
-        icon: 'Aperture',
-        color: 'text-cyan-500',
-        visibility: 'Public',
-        status: 'repo'
-    },
-    {
-        id: 'treasure-map',
-        title: 'Local Treasure Map',
-        description: 'Garage sale routing and local sales.',
-        url: 'https://github.com/SREphoto/Local-Treasure-Map',
-        icon: 'Map',
-        color: 'text-emerald-500',
-        visibility: 'Public',
-        status: 'repo'
-    },
-    {
-        id: 'wellnest',
-        title: 'WellNest',
-        description: 'Wellness and health tracking platform.',
-        url: 'https://github.com/SREphoto/WellNest',
-        icon: 'Heart',
-        color: 'text-rose-400',
+        id: 'vibe-check',
+        title: 'VibeCheck',
+        description: 'Vibe analysis tool.',
+        url: 'https://github.com/SREphoto/VibeCheck_V0.3',
+        icon: 'Waves',
+        color: 'text-purple-400',
         visibility: 'Public',
         status: 'repo'
     }
