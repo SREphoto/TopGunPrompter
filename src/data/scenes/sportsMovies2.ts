@@ -183,9 +183,11 @@ export const rocky5Scenes: Scene[] = [
     { id: 21, title: 'Rocky 5 End Silhouette', promptPayload: 'Rocky walking away into the Philly night.' },
     { id: 22, title: 'The Brain Scan Results', promptPayload: 'Clinical, cold, tragedy of the sport.' },
     {
-        id: 23, title: 'Adrian\'s Plea', promptPayload: '"You're losing your son!", emotional breakthrough.' },
+        id: 23, title: 'Adrian\'s Plea', promptPayload: '"You\'re losing your son!", emotional breakthrough.'
+    },
     {
-            id: 24, title: 'Tommy\'s Championship win', promptPayload: 'Hollow victory, being boo'ed by the crowd.' },
+        id: 24, title: 'Tommy\'s Championship win', promptPayload: 'Hollow victory, being booed by the crowd.'
+    },
     { id: 25, title: 'The Promoter\'s Cigar', promptPayload: 'Symbol of the corporate parasite.' },
     { id: 26, title: 'Rocky\'s Old Trunks', promptPayload: 'Finding them in a box, memories.' },
     { id: 27, title: 'The Training Montage (5)', promptPayload: 'Intercutting Rocky and Tommy, street vs ring.' },
@@ -202,7 +204,8 @@ export const rocky5Scenes: Scene[] = [
     { id: 38, title: 'Rocky and Adrian\'s Kitchen conversation', promptPayload: 'Truth.' },
     { id: 39, title: 'The Young Boxer\'s Hunger', promptPayload: 'Tommy at the start.' },
     {
-        id: 40, title: 'The Promoters Office', promptPayload: 'Chrome and luxury, the "devil's" lair.' },
+        id: 40, title: 'The Promoters Office', promptPayload: 'Chrome and luxury, the devil\'s lair.'
+    },
     { id: 41, title: 'Rocky\'s Hand on his Son\'s shoulder', promptPayload: 'Reconnection.' },
     { id: 42, title: 'The Street Fight Finishing move', promptPayload: 'Vindicated.' },
     { id: 43, title: 'The End Credits Slideshow', promptPayload: 'History of the series.' },
@@ -223,7 +226,7 @@ export const rockyBalboaScenes: Scene[] = [
     { id: 5, title: 'The Vegas Match', promptPayload: 'Mason "The Line" Dixon vs Rocky, high definition bright lights, modern arena, Rocky in black trunks, the physical toll, dignity in the ring.' },
     { id: 6, title: 'The Final Standing Ovation', promptPayload: 'Rocky leaving the ring for the last time, crowd chanting "Rocky!", sunset-like arena glow, emotional closure.' },
     { id: 7, title: 'Paulie\'s Retirement', promptPayload: 'Sadness, the end of the meat plant, 2000s Philly grit.' },
-    { id: 8, title: 'Rocky Jr. and the Shadow', promptPayload: 'Talking in the street, personal conflict, "It ain't about how hard you hit...".' },
+    { id: 8, title: 'Rocky Jr. and the Shadow', promptPayload: 'Talking in the street, personal conflict, "It airnt about how hard you hit...".' },
     { id: 9, title: 'The Meat Locker (Final)', promptPayload: 'A return to the iconic training, the weight of the past.' },
     { id: 10, title: 'Rocky Balboa Logo', promptPayload: 'Sleek, respectful, the final chapter theme.' },
     { id: 11, title: 'Mason Dixon\'s Speed', promptPayload: 'Modern athlete, precision, cold focus.' },
@@ -231,7 +234,8 @@ export const rockyBalboaScenes: Scene[] = [
     { id: 13, title: 'Rocky at Adrian\'s Grave', promptPayload: 'Emotional core, the reason he fights.' },
     { id: 14, title: 'The Exhibition Match Glitz', promptPayload: 'Vegas night, neon, excitement.' },
     {
-        id: 15, title: 'Rocky\'s Heavy Bag punch', promptPayload: "You still got it, kid".' },
+        id: 15, title: 'Rocky\'s Heavy Bag punch', promptPayload: 'You still got it, kid.'
+    },
     { id: 16, title: 'Mason Dixon\'s Confusion', promptPayload: 'Being hit by the "old man" for the first time.' },
     { id: 17, title: 'The Standing 10 Count', promptPayload: 'Rocky rising once more, the spirit of the character.' },
     { id: 18, title: 'Philly Market (Modern)', promptPayload: 'Updating the setting to the 2000s.' },
@@ -263,7 +267,8 @@ export const rockyBalboaScenes: Scene[] = [
     { id: 44, title: 'The Museum Steps Perspective', promptPayload: 'Looking down at the city.' },
     { id: 45, title: 'Rocky Jr. and the turtles', promptPayload: 'Family connection.' },
     {
-        id: 46, title: 'The Final Walk to the Grave', promptPayload: "We did it, Adrian".' },
+        id: 46, title: 'The Final Walk to the Grave', promptPayload: 'We did it, Adrian.'
+    },
     { id: 47, title: 'The Rocky Theme Piano version', promptPayload: 'Emotional and soft.' },
     { id: 48, title: 'The Final Frame of the Saga', promptPayload: 'Rocky waving goodbye.' },
     { id: 49, title: 'The Balboa Crest', promptPayload: 'Symbolic power.' },
@@ -296,7 +301,8 @@ export const creed2Scenes: Scene[] = [
     { id: 23, title: 'The Drago Train Ride', promptPayload: 'Cold, grey, the journey of the outcasts.' },
     { id: 24, title: 'Adonis\' Victory Roar (Moscow)', promptPayload: 'Release of the burden.' },
     {
-        id: 25, title: 'Rocky\'s Final Nod to Adonis', promptPayload: "It's your time".' },
+        id: 25, title: 'Rocky\'s Final Nod to Adonis', promptPayload: 'It\'s your time.'
+    },
     { id: 26, title: 'The Moscow Arena Lights', promptPayload: 'Beam of light, smoke, atmosphere.' },
     { id: 27, title: 'Viktor\'s Hands on the Ropes', promptPayload: 'Despair and exhaustion.' },
     { id: 28, title: 'Adonis and Bianca\'s Wedding', promptPayload: 'Simple, intimate, love.' },
@@ -329,18 +335,6 @@ export const creed3Scenes: Scene[] = [
     { id: 2, title: 'Adonis as Promoter', promptPayload: 'Suave suits, luxury office, height of success, retired from boxing, warm affluent lighting.' },
     { id: 3, title: 'The Gym Confrontation', promptPayload: 'Dame appearing at the gym, the old friend, "You owe me", tension, gym shadows.' },
     { id: 4, title: 'Dame vs Drago (Exhibition)', promptPayload: 'Dame\'s brutal, "dirty" style, knocking out Viktor Drago, shock of the crowd, high contrast.' },
-    { id: 5, title: 'Creed vs Dame: The Void Fight', promptPayload: 'Anime-inspired sequence, the crowd disappearing, just two men in a dark void, stylized hits, emotional struggle.' },
-    { id: 6, title: 'Amara\'s Boxing Lesson', promptPayload: 'Adonis teaching his daughter to punch in the gym, soft lighting, family connection, the next generation.' },
-    { id: 7, title: 'The Training Montage (Creed 3)', promptPayload: 'High tech vs street, hill sprints, mountain climbing, intense focus, modern athletic aesthetic.' },
-    { id: 8, title: 'The Final Duel in LA', promptPayload: 'Dodger Stadium? No, massive arena, "The Battle for LA", high stakes, personal redemption.' },
-    {
-        id: 9, title: 'Adonis and Dame Reconciliation', promptPayload: 'In the locker room after the fight, mutual understanding, "I'm still here", emotional closure.' },
-    { id: 10, title: 'Creed 3 Logo', promptPayload: 'Sharp, modern, with a dark gritty edge.' },
-    { id: 11, title: 'Dame\'s Handwraps', promptPayload: 'Close up, the ritual of the fighter.' },
-    { id: 12, title: 'Adonis\' Mansion luxury', promptPayload: 'Soft focus, the life he built.' },
-    { id: 13, title: 'Young Adonis and Dame', promptPayload: 'Flashback, the incident at the liquor store, grey and grainy, 90s Philly.' },
-    { id: 14, title: 'Dame\'s Prison training', promptPayload: 'Using whatever he has, raw and aggressive.' },
-    { id: 15, title: 'Bianca\'s Career (Creed 3)', promptPayload: 'Successful producer, office interior, soft light.' },
     { id: 16, title: 'The LA Skyline (Creed 3)', promptPayload: 'Vibrant, sun-drenched, modern.' },
     { id: 17, title: 'Dame\'s Brutal Knockout', promptPayload: 'The violence he brought from the streets.' },
     { id: 18, title: 'Adonis\' Inner Conflict', promptPayload: 'Reflected in a dark window, the past catching up.' },
