@@ -2,7 +2,7 @@ import type { Scene } from '../types';
 
 export const warAndDramaScenes: Scene[] = [
     { id: 1, title: 'Full Metal Jacket: Drill Sergeant Hartamn', promptPayload: 'Sgt. Hartman shouting inches from a recruit\'s face, barracks bathroom, sterile white lighting, high tension, Kubrick stare.' },
-    { id: 2: title: 'Full Metal Jacket: The Sniper in Hue', promptPayload: 'Ruined city of Hue, smoke, fires, a young female sniper in the window, gritty textures, sniper scope POV.' },
+    { id: 2, title: 'Full Metal Jacket: The Sniper in Hue', promptPayload: 'Ruined city of Hue, smoke, fires, a young female sniper in the window, gritty textures, sniper scope POV.' },
     { id: 3, title: 'Apocalypse Now: Napalm in the Morning', promptPayload: 'Kilgore on the beach, massive fireballs behind him, helicopters in the air, "I love the smell of napalm in the morning", orange and teal.' },
     { id: 4, title: 'Apocalypse Now: Colonel Kurtz in the Shadows', promptPayload: 'Marlon Brando in the dark, only half his face visible, water dripping, jungle temple, ominous whisper.' },
     { id: 5, title: 'A Few Good Men: The Courtroom Confrontation', promptPayload: 'Jack Nicholson in dress blues, shouting "You can\'t handle the truth!", sharp lighting, military formality, intense close up.' },
@@ -48,7 +48,8 @@ export const warAndDramaScenes: Scene[] = [
     { id: 45, title: 'Pulp Fiction: The Wallet "Bad Motherf***er"', promptPayload: 'Iconic prop shot, 90s Tarantino style.' },
     { id: 46, title: 'The Shawshank Redemption: The Opera on the Speakers', promptPayload: 'The moment of beauty in a grey world.' },
     {
-        id: 47, title: 'Mulholland Drive: The Silent Theatre', promptPayload: "No hay banda", the blue light of the dream.' },
+        id: 47, title: 'Mulholland Drive: The Silent Theatre', promptPayload: 'No hay banda, the blue light of the dream.'
+    },
     { id: 48, title: 'Dead Poets Society: The School Gates', promptPayload: 'Tradition, Honor, Discipline, Excellence.' },
     { id: 49, title: 'Stand By Me: The Boy\'s Hike', promptPayload: 'Railway tracks stretching into the forest.' },
     { id: 50, title: 'Drama Movie Legacy Logo', promptPayload: 'A mix of these classic titles.' }
@@ -56,7 +57,7 @@ export const warAndDramaScenes: Scene[] = [
 
 export const horrorAndSeriesScenes: Scene[] = [
     { id: 1, title: 'The Lighthouse: The Light', promptPayload: 'Black and white, Willem Dafoe and Robert Pattinson, the blinding light of the lamp, madness, 1.19:1 aspect ratio.' },
-    { id: 2: title: 'Nosferatu (2024): The Shadow', promptPayload: 'Count Orlok (Bill Skarsgård) in the shadows, Eggers gothic style, candlelit terror, 19th century macabre.' },
+    { id: 2, title: 'Nosferatu (2024): The Shadow', promptPayload: 'Count Orlok (Bill Skarsgård) in the shadows, Eggers gothic style, candlelit terror, 19th century macabre.' },
     { id: 3, title: 'Dracula (2025): The Cape', promptPayload: 'Luc Besson style, opulent horror, vibrant but dark reds, high fashion vampire aesthetic.' },
     { id: 4, title: 'The Chosen: The Jesus Reflection', promptPayload: 'Walking on water or healing, warm cinematic biblical light, hope, emotional depth.' },
     { id: 5, title: 'Ripley: The Italian Coast', promptPayload: 'Black and white (Andrew Scott), high contrast noir, Amalfi coast, luxury and danger, 1950s aesthetic.' },
@@ -92,7 +93,7 @@ export const horrorAndSeriesScenes: Scene[] = [
     { id: 35, title: 'Ripley: The Fake Passport', promptPayload: 'The tools of the imposter, noir detail.' },
     { id: 36, title: 'Hamlet: Ophelia in the water', promptPayload: 'Romantic tragedy, flowers, soft focus.' },
     { id: 37, title: 'V for Vendetta: The Parliament Explosion', promptPayload: 'Guy Fawkes day, fireworks, Tchaikovsky theme.' },
-    { id: 138, title: 'Grand Prix: The Driver\'s Focus', promptPayload: 'Eyes through the goggles, sweat and adrenaline.' },
+    { id: 38, title: 'Grand Prix: The Driver\'s Focus', promptPayload: 'Eyes through the goggles, sweat and adrenaline.' },
     { id: 39, title: 'Rendezvous: The Arc de Triomphe', promptPayload: 'Passing the monument at 100mph.' },
     { id: 40, title: 'Days of Heaven: The Mansion on the Hill', promptPayload: 'Isolated, beautiful architecture against the sky.' },
     { id: 41, title: 'The Lighthouse: The Drunken Song', promptPayload: 'Wandering tune in the dark house.' },

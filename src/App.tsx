@@ -10,7 +10,7 @@ import {
   Copy, Terminal, Film, Palette, CheckCircle, ChevronDown, ChevronRight, Search, SortAsc,
   Layers, Maximize2, Minimize2, Filter, Dices, Lock, Unlock, Trophy, Grid, X,
   ExternalLink, Shirt, Sword, Car, Rocket, Flame, Gamepad2, Aperture, Map, Music,
-  Heart, Zap, Waves, BarChart3, Skull, Coins, MessageCircle, Video, Citrus
+  Heart, Zap, Waves, BarChart3, Skull, Coins, MessageCircle, Video, Citrus, Mail, Info, FileText
 } from 'lucide-react';
 import type { MediaItem } from './data/types';
 import { topMoviesYearly } from './data/topMoviesYearly';
@@ -1007,6 +1007,55 @@ function App() {
                 </button>
               </div>
             </div>
+
+            {/* FOOTER & SUGGESTIONS */}
+            <div className="mt-8 pt-8 border-t border-zinc-900 pb-12">
+              <h2 className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest mb-4 flex items-center gap-2">
+                <MessageCircle className="w-3 h-3 text-cyan-400" /> Support & Suggestions
+              </h2>
+
+              <div className="space-y-4">
+                <div className="bg-zinc-900/50 p-4 rounded-xl border border-zinc-800">
+                  <p className="text-[11px] text-zinc-400 leading-relaxed mb-3">
+                    Have a movie suggestion or technical issue? We want to hear from you!
+                  </p>
+                  <form className="space-y-2" onSubmit={(e) => e.preventDefault()}>
+                    <input
+                      type="text"
+                      placeholder="Movie or Feature Suggestion"
+                      className="w-full bg-black/40 border border-zinc-700 rounded-lg px-3 py-2 text-xs text-zinc-200 outline-none focus:border-cyan-500 transition-colors"
+                    />
+                    <textarea
+                      placeholder="Details..."
+                      className="w-full bg-black/40 border border-zinc-700 rounded-lg px-3 py-2 text-xs text-zinc-200 outline-none focus:border-cyan-500 transition-colors h-20 resize-none"
+                    ></textarea>
+                    <button className="w-full py-2 bg-cyan-600/20 text-cyan-400 border border-cyan-500/30 rounded-lg text-[10px] font-bold uppercase hover:bg-cyan-600 hover:text-white transition-all">
+                      Send Feedback
+                    </button>
+                  </form>
+                </div>
+
+                <div className="space-y-2 px-1">
+                  <div className="flex items-center gap-2 text-zinc-500 text-[10px]">
+                    <Mail className="w-3 h-3" />
+                    <a href="mailto:SREphotoMN@gmail.com" className="hover:text-cyan-400 transition-colors">SREphotoMN@gmail.com</a>
+                  </div>
+                  <div className="flex items-center gap-2 text-zinc-500 text-[10px]">
+                    <Info className="w-3 h-3" />
+                    <button onClick={() => setIsStudioHubOpen(true)} className="hover:text-cyan-400 transition-colors">About Samuel Erwin</button>
+                  </div>
+                  <div className="flex items-center gap-4 py-2 opacity-50">
+                    <a href="/PRIVACY_POLICY.md" className="text-[9px] uppercase tracking-tighter hover:text-white">Privacy</a>
+                    <a href="/TERMS_OF_SERVICE.md" className="text-[9px] uppercase tracking-tighter hover:text-white">Terms</a>
+                    <a href="/MEDIA_PACKAGE.md" className="text-[9px] uppercase tracking-tighter hover:text-white">Media Kit</a>
+                  </div>
+                </div>
+
+                <div className="pt-4 text-center">
+                  <p className="text-[9px] text-zinc-700 font-mono">© 2025 TopGun Prompter • MN, USA</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1028,6 +1077,7 @@ function App() {
               <button
                 onClick={() => setIsStudioHubOpen(false)}
                 className="p-2 hover:bg-zinc-800 rounded-full text-zinc-500 hover:text-white transition-colors"
+                title="Close Drawer"
               >
                 <X className="w-5 h-5" />
               </button>

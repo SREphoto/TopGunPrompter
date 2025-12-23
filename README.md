@@ -33,11 +33,11 @@ Here are some examples of images generated using prompts from this tool:
 
 ## How It Works
 
-1.  **Select a Movie**: Choose a film from the horizontal scroll bar at the top.
-2.  **Select a Scene**: Pick a specific scene from the grid. Each scene includes a title and ID.
-3.  **Choose a Style**: Select an artistic style from the left sidebar. You can choose from "Unique Styles" (specific to the movie) or "Standard Styles".
-4.  **Configure Settings**: Adjust the Midjourney version, aspect ratio, and stylize value in the left sidebar.
-5.  **Generate & Copy**: The prompt is automatically generated in the "Output" terminal on the right. Click "COPY PROMPT" to save it to your clipboard.
+1. **Select a Movie**: Choose a film from the horizontal scroll bar at the top.
+2. **Select a Scene**: Pick a specific scene from the grid. Each scene includes a title and ID.
+3. **Choose a Style**: Select an artistic style from the left sidebar. You can choose from "Unique Styles" (specific to the movie) or "Standard Styles".
+4. **Configure Settings**: Adjust the Midjourney version, aspect ratio, and stylize value in the left sidebar.
+5. **Generate & Copy**: The prompt is automatically generated in the "Output" terminal on the right. Click "COPY PROMPT" to save it to your clipboard.
 
 ## Installation
 
@@ -50,19 +50,21 @@ To run this project locally, follow these steps:
 
 ### Steps
 
-1.  **Clone the repository** (if applicable) or navigate to the project directory.
+1. **Clone the repository** (if applicable) or navigate to the project directory.
 
-2.  **Install dependencies**:
+2. **Install dependencies**:
+
     ```bash
     npm install
     ```
 
-3.  **Start the development server**:
+3. **Start the development server**:
+
     ```bash
     npm run dev
     ```
 
-4.  **Open the application**:
+4. **Open the application**:
     The terminal will display a local URL (usually `http://localhost:5173`). Open this link in your browser.
 
 ## Building for Production
@@ -79,6 +81,13 @@ To preview the production build locally:
 npm run preview
 ```
 
+## Project Resources
+
+- 📚 [**Complete Media Library**](COMPLETE_LIBRARY.md) - A-Z index of all 295+ titles.
+- 📦 [**Media Package**](MEDIA_PACKAGE.md) - Official promotional assets and brand material.
+- ☕ [**Support the Project**](DONATIONS.md) - Help us reach the 50-scene standard for every movie.
+- 📜 [**Legal**](PRIVACY_POLICY.md) | [**Terms**](TERMS_OF_SERVICE.md)
+
 ## Technologies Used
 
 - **Frontend Framework**: [React 19](https://react.dev/)
@@ -86,3 +95,6 @@ npm run preview
 - **Build Tool**: [Vite](https://vitejs.dev/)
 - **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
 - **Icons**: [Lucide React](https://lucide.dev/)
+
+---
+© 2025 SRE Studio • [Contact Support](mailto:SREphotoMN@gmail.com)
