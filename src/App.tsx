@@ -1045,13 +1045,13 @@ function App() {
                     <button onClick={() => setIsStudioHubOpen(true)} className="hover:text-cyan-400 transition-colors">About Samuel Erwin</button>
                   </div>
                   <div className="flex items-center gap-4 py-2 opacity-50">
-                    <a href="/PRIVACY_POLICY.md" className="text-[9px] uppercase tracking-tighter hover:text-white flex items-center gap-1">
+                    <a href="PRIVACY_POLICY.md" className="text-[9px] uppercase tracking-tighter hover:text-white flex items-center gap-1">
                       <FileText className="w-2.5 h-2.5" /> Privacy
                     </a>
-                    <a href="/TERMS_OF_SERVICE.md" className="text-[9px] uppercase tracking-tighter hover:text-white flex items-center gap-1">
+                    <a href="TERMS_OF_SERVICE.md" className="text-[9px] uppercase tracking-tighter hover:text-white flex items-center gap-1">
                       <FileText className="w-2.5 h-2.5" /> Terms
                     </a>
-                    <a href="/MEDIA_PACKAGE.md" className="text-[9px] uppercase tracking-tighter hover:text-white flex items-center gap-1">
+                    <a href="MEDIA_PACKAGE.md" className="text-[9px] uppercase tracking-tighter hover:text-white flex items-center gap-1">
                       <FileText className="w-2.5 h-2.5" /> Media Kit
                     </a>
                   </div>
