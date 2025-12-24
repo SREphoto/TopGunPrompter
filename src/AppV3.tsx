@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import { movieScenes } from './data/scenes';
-import { styles as globalStyles } from './data/stylesV3';
-import { movies } from './data/moviesV3';
+import { styles as globalStyles } from './data/styles';
+import { movies } from './data/movies';
 import { Copy, Terminal, Film, Palette, CheckCircle, ChevronDown, ChevronRight, Search, SortAsc, Layers, Maximize2, Minimize2 } from 'lucide-react';
 
 type LayoutMode = 'split' | 'scene-focus' | 'style-focus';
@@ -27,7 +27,7 @@ function AppV3() {
   const [copied, setCopied] = useState(false);
   const [copyMode, setCopyMode] = useState<'standard' | 'next-scene' | 'next-style'>('standard');
 
-  const currentMovie = useMemo(() => movies.find(m => m.id === selectedMovieId) || movies[0], [selectedMovieId]);
+  const currentMovie = useMemo(() => movies.find((m: any) => m.id === selectedMovieId) || movies[0], [selectedMovieId]);
   const currentScenes = useMemo(() => movieScenes[selectedMovieId] || [], [selectedMovieId]);
 
   // Combine movie-specific styles with global styles for lookup
@@ -45,7 +45,7 @@ function AppV3() {
       result = result.filter(m =>
         m.title.toLowerCase().includes(q) ||
         m.director.toLowerCase().includes(q) ||
-        m.actors.some(a => a.toLowerCase().includes(q))
+        m.actors.some((a: string) => a.toLowerCase().includes(q))
       );
     }
 
@@ -224,7 +224,7 @@ function AppV3() {
                     <h3 className="text-xs font-bold text-zinc-500 uppercase tracking-widest pl-1 border-b border-zinc-800 pb-1 mb-1 whitespace-nowrap">{groupName}</h3>
                   )}
                   <div className="flex gap-3">
-                    {groupMovies.map((movie) => (
+                    {groupMovies.map((movie: any) => (
                       <button
                         key={`${groupName}-${movie.id}`}
                         onClick={() => handleMovieSelect(movie.id)}
@@ -347,7 +347,7 @@ function AppV3() {
                 <div className="mb-8">
                   <h3 className="text-[10px] font-bold text-purple-400 mb-3 px-1 opacity-80 uppercase tracking-wider">Unique to Movie</h3>
                   <div className={`grid gap-2 ${layoutMode === 'style-focus' ? 'grid-cols-3' : 'grid-cols-1'}`}>
-                    {currentMovie.styles.map((style) => (
+                    {currentMovie.styles.map((style: any) => (
                       <button
                         key={style.name}
                         onClick={() => setSelectedStyleName(style.name)}
@@ -371,7 +371,7 @@ function AppV3() {
               <div>
                 <h3 className="text-[10px] font-bold text-zinc-500 mb-3 px-1 uppercase tracking-wider">Standard Library</h3>
                 <div className={`grid gap-2 ${layoutMode === 'style-focus' ? 'grid-cols-4' : 'grid-cols-2'}`}>
-                  {globalStyles.map((style) => (
+                  {globalStyles.map((style: any) => (
                     <button
                       key={style.name}
                       onClick={() => setSelectedStyleName(style.name)}
