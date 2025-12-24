@@ -14,6 +14,8 @@ import {
 } from 'lucide-react';
 import type { MediaItem } from './data/types';
 import { topMoviesYearly } from './data/topMoviesYearly';
+import { VersionModal } from './components/VersionModal';
+import { versionHistory } from './data/versionHistory';
 
 const getTopMovieInfo = (title: string, year: string) => {
   const entry = topMoviesYearly.find(y => y.year === year);
@@ -69,6 +71,7 @@ function App() {
   const [copiedSceneId, setCopiedSceneId] = useState<number | string | null>(null);
   const [copiedStyleName, setCopiedStyleName] = useState<string | null>(null);
   const [isStudioHubOpen, setIsStudioHubOpen] = useState(false);
+  const [isVersionModalOpen, setIsVersionModalOpen] = useState(false);
 
   // Unified Media List
   const allMedia: MediaItem[] = useMemo(() => [...movies, ...series, ...games], []);
@@ -338,7 +341,13 @@ function App() {
             <h1 className={`text-2xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r ${isChristmas ? 'from-red-500 to-green-500' : isWar ? 'from-orange-500 to-stone-400' : 'from-cyan-400 to-blue-600'}`}>
               CINEMA ARCHIVE
             </h1>
-            <span className={`text-xs font-mono mt-1 ml-2 border px-2 py-0.5 rounded ${isWar ? 'text-stone-500 border-stone-800' : 'text-zinc-500 border-zinc-800'}`}>V7 MASTER</span>
+            <button
+              onClick={() => setIsVersionModalOpen(true)}
+              className={`group flex items-center gap-1.5 ml-2 border px-2 py-1 rounded transition-all duration-200 ${isWar ? 'border-stone-800 hover:border-orange-500/50 hover:bg-orange-500/10' : 'border-zinc-800 hover:border-cyan-500/50 hover:bg-cyan-500/10'} bg-zinc-900/50`}
+            >
+              <Info className={`w-3 h-3 ${isWar ? 'text-stone-500 group-hover:text-orange-400' : 'text-zinc-500 group-hover:text-cyan-400'}`} />
+              <span className={`text-xs font-mono font-bold ${isWar ? 'text-stone-500 group-hover:text-orange-400' : 'text-zinc-500 group-hover:text-cyan-400'}`}>V7 MASTER <span className="opacity-50">({versionHistory[0].version})</span></span>
+            </button>
           </div>
 
           <div className="flex items-center gap-3">
@@ -1045,13 +1054,13 @@ function App() {
                     <button onClick={() => setIsStudioHubOpen(true)} className="hover:text-cyan-400 transition-colors">About Samuel Erwin</button>
                   </div>
                   <div className="flex items-center gap-4 py-2 opacity-50">
-                    <a href="PRIVACY_POLICY.txt" className="text-[9px] uppercase tracking-tighter hover:text-white flex items-center gap-1">
+                    <a href="PRIVACY_POLICY.txt" target="_blank" rel="noopener noreferrer" className="text-[9px] uppercase tracking-tighter hover:text-white flex items-center gap-1">
                       <FileText className="w-2.5 h-2.5" /> Privacy
                     </a>
-                    <a href="TERMS_OF_SERVICE.txt" className="text-[9px] uppercase tracking-tighter hover:text-white flex items-center gap-1">
+                    <a href="TERMS_OF_SERVICE.txt" target="_blank" rel="noopener noreferrer" className="text-[9px] uppercase tracking-tighter hover:text-white flex items-center gap-1">
                       <FileText className="w-2.5 h-2.5" /> Terms
                     </a>
-                    <a href="MEDIA_PACKAGE.txt" className="text-[9px] uppercase tracking-tighter hover:text-white flex items-center gap-1">
+                    <a href="MEDIA_KIT.txt" target="_blank" rel="noopener noreferrer" className="text-[9px] uppercase tracking-tighter hover:text-white flex items-center gap-1">
                       <FileText className="w-2.5 h-2.5" /> Media Kit
                     </a>
                   </div>
@@ -1239,6 +1248,7 @@ function App() {
           </div>
         </div>
       </div>
+      <VersionModal isOpen={isVersionModalOpen} onClose={() => setIsVersionModalOpen(false)} />
     </div>
   );
 }

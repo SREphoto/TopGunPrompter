@@ -1,0 +1,49 @@
+MEDIA KIT
+=========
+TopGun Prompter / Cinema Archive
+Version 3.3.0 - December 2024
+
+ABOUT
+-----
+Cinema Archive (formerly TopGun Prompter) is a premium prompt generation 
+tool for AI image creators. It provides curated scene descriptions and 
+visual styles inspired by 300+ films, TV series, and video games.
+
+KEY FEATURES
+------------
+• 300+ Movies, TV Shows, and Video Games
+• 50 High-Detail Scenes per Elite Title
+• Unique Visual Styles per Film
+• Midjourney V7 Optimized Prompts
+• Auto-Copy & Batch Generation Modes
+• Christmas, War, and Themed Visual Effects
+
+CREATED BY
+----------
+Samuel Erwin
+SRE Studio
+Minnesota, USA
+
+CONTACT
+-------
+Email: SREphotoMN@gmail.com
+GitHub: github.com/SREphoto
+
+PRESS INQUIRIES
+---------------
+For press, collaboration, or integration inquiries, 
+please reach out via email.
+
+BRANDING
+--------
+Primary Colors:
+- Cyan: #06B6D4
+- Blue: #2563EB
+- Dark: #18181B
+
+Typography:
+- Headlines: Inter or System Sans-Serif
+- Monospace: JetBrains Mono or System Mono
+
+© 2025 SRE Studio / TopGun Prompter
+All Rights Reserved
