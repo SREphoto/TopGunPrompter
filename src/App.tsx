@@ -114,25 +114,48 @@ function App() {
       const scenes: { id: number; title: string; promptPayload: string }[] = [];
       let idCounter = 1;
 
+      // Add game info header
+      const stylePrefix = `${assets.graphicsStyle} ${assets.perspective} game sprite, ${assets.resolution} resolution`;
+
+      // Add characters with their actions
+      assets.characters?.forEach(char => {
+        const roleIcon = char.role === 'player' ? '⚔️' : char.role === 'boss' ? '👹' : char.role === 'enemy' ? '👾' : '🧑';
+        char.actions.forEach(action => {
+          scenes.push({
+            id: idCounter++,
+            title: `${roleIcon} ${char.name}: ${action.action}`,
+            promptPayload: `${stylePrefix}, ${char.name} character sprite sheet, ${action.action} animation, ${action.description}`
+          });
+        });
+      });
+
+      // Add tilesets
+      assets.tilesets?.forEach(tile => {
+        const typeIcon = tile.type === 'floor' ? '🟫' : tile.type === 'wall' ? '🧱' : tile.type === 'hazard' ? '⚠️' : tile.type === 'background' ? '🌄' : '📦';
+        scenes.push({
+          id: idCounter++,
+          title: `${typeIcon} Tile: ${tile.name}`,
+          promptPayload: `${stylePrefix}, tileset sprite sheet, ${tile.name}, ${tile.type} tiles, ${tile.description}`
+        });
+      });
+
       // Add items
       assets.items?.forEach(item => {
-        scenes.push({ id: idCounter++, title: `🎒 Item: ${item.name}`, promptPayload: item.promptString });
+        const catIcon = item.category === 'weapon' ? '🗡️' : item.category === 'powerup' ? '⭐' : item.category === 'consumable' ? '💊' : item.category === 'equipment' ? '🛡️' : '💎';
+        scenes.push({
+          id: idCounter++,
+          title: `${catIcon} Item: ${item.name}`,
+          promptPayload: `${stylePrefix}, item sprite sheet, ${item.name}, ${item.category}, ${item.description}`
+        });
       });
-      // Add maps/tilesets
-      assets.maps?.forEach(map => {
-        scenes.push({ id: idCounter++, title: `🗺️ Map: ${map.name}`, promptPayload: map.promptString });
-      });
-      // Add heroes
-      assets.heroes?.forEach(hero => {
-        scenes.push({ id: idCounter++, title: `⚔️ Hero: ${hero.name}`, promptPayload: hero.promptString });
-      });
-      // Add enemies
-      assets.enemies?.forEach(enemy => {
-        scenes.push({ id: idCounter++, title: `👾 Enemy: ${enemy.name}`, promptPayload: enemy.promptString });
-      });
-      // Add bosses
-      assets.bosses?.forEach(boss => {
-        scenes.push({ id: idCounter++, title: `👹 Boss: ${boss.name}`, promptPayload: boss.promptString });
+
+      // Add UI elements
+      assets.ui?.forEach(ui => {
+        scenes.push({
+          id: idCounter++,
+          title: `🖼️ UI: ${ui.name}`,
+          promptPayload: `${stylePrefix}, game UI element, ${ui.name}, ${ui.description}`
+        });
       });
 
       return scenes;
