@@ -209,6 +209,25 @@ import {
     wolfOfWallStreetScenes, bigShortScenes
 } from './scenes/expandedBatch6';
 
+import {
+    birdmanScenes, exMachinaScenes, theRevenantScenes, moonlightScenes, getOutScenes,
+    ladyBirdScenes, callMeByYourNameScenes, spiderVerseScenes, parasiteScenes, midsommarScenes,
+    ladyOnFireScenes, uncutGemsScenes, nineteenSeventeenScenes, everythingEverywhereScenes,
+    theBatmanScenes, oppenheimerScenes, barbieScenes, pastLivesScenes, anatomyFallScenes,
+    zoneInterestScenes, godzillaMinusOneScenes, hobbsShawScenes,
+    leagueOwnScenes, sandlotScenes, theNaturalScenes, fieldDreamsScenes
+} from './scenes/missingScenes';
+
+import {
+    vampiresKissScenes, wildAtHeartScenes, redRockWestScenes, willysWonderlandScenes,
+    colorOutOfSpaceScenes, unbearableWeightScenes, dreamScenarioScenes, arcadianScenes,
+    valleyGirlScenes, theTrustScenes, thePrestigeScenes, arrivalScenes, sicarioScenes,
+    theNorthmanScenes, theWitchScenes, djangoUnchainedScenes, hatefulEightScenes,
+    nightcrawlerScenes, americanGangsterScenes, lastMohicansScenes, masterCommanderScenes,
+    theGreenKnightScenes, twelveYearsSlaveScenes, gravityScenes, poorThingsScenes,
+    civilWarScenes, furiosaScenes, theHoldoversScenes, killersFlowerMoonScenes, monkeyManScenes
+} from './scenes/missingScenes2';
+
 export const movieScenes: Record<string, Scene[]> = {
     'top-gun': topGunScenes,
     'interview-vampire': interviewVampireScenes,
@@ -501,16 +520,71 @@ export const movieScenes: Record<string, Scene[]> = {
     'dead-poets-society': deadPoetsSocietyExpandedScenes,
     'passion-christ': passionChristExpandedScenes,
     'few-good-men': fewGoodMenExpandedScenes,
-    'karate-kid-1': karateKid1Scenes,
-    'league-of-their-own': moreSportsScenes,
+    'karate-kid': karateKid1Scenes, // Correction for ID mismatch
+    'league-own': leagueOwnScenes, // Use specific scenes
     'slap-shot': moreSportsScenes,
-    'the-sandlot': moreSportsScenes,
+    'sandlot': sandlotScenes, // Use specific scenes
     'major-league': moreSportsScenes,
-    'the-natural': moreSportsScenes,
+    'natural': theNaturalScenes, // Use specific scenes
     'rudy': moreSportsScenes,
-    'field-of-dreams': moreSportsScenes,
+    'field-dreams': fieldDreamsScenes, // Use specific scenes
     'mighty-ducks': moreSportsScenes,
     'longest-yard': moreSportsScenes,
     'invincible': moreSportsScenes,
     'halloween': halloweenExpandedScenes,
+    // Missing Scenes Part 1
+    'birdman': birdmanScenes,
+    'ex-machina': exMachinaScenes,
+    'the-revenant': theRevenantScenes,
+    'moonlight': moonlightScenes,
+    'get-out': getOutScenes,
+    'lady-bird': ladyBirdScenes,
+    'call-me-by-your-name': callMeByYourNameScenes,
+    'spider-verse': spiderVerseScenes,
+    'parasite': parasiteScenes,
+    'midsommar': midsommarScenes,
+    'lady-on-fire': ladyOnFireScenes,
+    'uncut-gems': uncutGemsScenes,
+    '1917': nineteenSeventeenScenes,
+    'everything-everywhere': everythingEverywhereScenes,
+    'the-batman': theBatmanScenes,
+    'oppenheimer': oppenheimerScenes,
+    'barbie': barbieScenes,
+    'past-lives': pastLivesScenes,
+    'anatomy-fall': anatomyFallScenes,
+    'zone-interest': zoneInterestScenes,
+    'godzilla-minus-one': godzillaMinusOneScenes,
+    'hobbs-shaw': hobbsShawScenes,
+
+    // Missing Scenes Part 2
+    'vampires-kiss': vampiresKissScenes,
+    'wild-at-heart': wildAtHeartScenes,
+    'red-rock-west': redRockWestScenes,
+    'willys-wonderland': willysWonderlandScenes,
+    'color-out-of-space': colorOutOfSpaceScenes,
+    'unbearable-weight': unbearableWeightScenes,
+    'dream-scenario': dreamScenarioScenes,
+    'arcadian': arcadianScenes,
+    'valley-girl': valleyGirlScenes,
+    'the-trust': theTrustScenes,
+    'the-prestige': thePrestigeScenes,
+    'arrival': arrivalScenes,
+    'sicario': sicarioScenes,
+    'the-northman': theNorthmanScenes,
+    'the-witch': theWitchScenes,
+    'django-unchained': djangoUnchainedScenes,
+    'the-hateful-eight': hatefulEightScenes,
+    'nightcrawler': nightcrawlerScenes,
+    'american-gangster': americanGangsterScenes,
+    'last-mohicans': lastMohicansScenes,
+    'master-commander': masterCommanderScenes,
+    'the-green-knight': theGreenKnightScenes,
+    '12-years-slave': twelveYearsSlaveScenes,
+    'gravity': gravityScenes,
+    'poor-things': poorThingsScenes,
+    'civil-war': civilWarScenes,
+    'furiosa': furiosaScenes,
+    'the-holdovers': theHoldoversScenes,
+    'killers-flower-moon': killersFlowerMoonScenes,
+    'monkey-man': monkeyManScenes,
 };
