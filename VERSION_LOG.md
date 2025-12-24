@@ -1,6 +1,13 @@
 # TopGun Prompter - Version History
 
-## v3.2.0 - The Elite V7 Standard Update (Current)
+## v3.3.0 - The Poster Prompt Update (Current)
+
+- **Poster Prompts**: Added `posterPrompt` field to `Movie` interface in `types.ts`.
+- **Content Upgrade**: Added official movie poster prompts for over 50 "Elite" and "Classic" movies (e.g., *Top Gun, Matrix, Godfather, Alien, Blade Runner*).
+- **Visual Enhancement**: Enabled high-quality poster generation for UI backgrounds.
+- **Build Success**: Verified clean build with new data structures.
+
+## v3.2.0 - The Elite V7 Standard Update
 
 - **Elite V7 Standard**: Upgraded 10 legendary films to the new "Elite" prompt standard (50 High-Detail scenes each).
 - **Cinematic Descriptions**: Every new scene now includes detailed camera angles, lighting, and atmosphere metadata.

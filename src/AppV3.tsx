@@ -2,13 +2,15 @@ import { useState, useMemo } from 'react';
 import { movieScenes } from './data/scenes';
 import { styles as globalStyles } from './data/styles';
 import { movies } from './data/movies';
-import { Copy, Terminal, Film, Palette, CheckCircle, ChevronDown, ChevronRight, Search, SortAsc, Layers, Maximize2, Minimize2 } from 'lucide-react';
+import { Copy, Terminal, Film, Palette, CheckCircle, ChevronDown, ChevronRight, Search, SortAsc, Layers, Maximize2, Minimize2, Info } from 'lucide-react';
+import { VersionModal } from './components/VersionModal';
 
 type LayoutMode = 'split' | 'scene-focus' | 'style-focus';
 
 function AppV3() {
   // New UI State
   const [isHeaderOpen, setIsHeaderOpen] = useState(true);
+  const [isVersionModalOpen, setIsVersionModalOpen] = useState(false);
   const [layoutMode, setLayoutMode] = useState<LayoutMode>('split');
 
   // Filter/Sort State
@@ -145,7 +147,13 @@ function AppV3() {
             <h1 className="text-2xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
               CINEMA ARCHIVE
             </h1>
-            <span className="text-xs font-mono text-zinc-500 mt-1 ml-2 border border-zinc-800 px-2 py-0.5 rounded">MASTER EDITION</span>
+            <button
+              onClick={() => setIsVersionModalOpen(true)}
+              className="group flex items-center gap-1.5 ml-3 border border-zinc-800 hover:border-cyan-500/50 hover:bg-cyan-500/10 bg-zinc-900/50 px-2 py-1 rounded transition-all duration-200"
+            >
+              <Info className="w-3 h-3 text-zinc-500 group-hover:text-cyan-400" />
+              <span className="text-xs font-mono font-bold text-zinc-500 group-hover:text-cyan-400">V7 MASTER</span>
+            </button>
           </div>
 
           <button
@@ -509,6 +517,7 @@ function AppV3() {
           </div>
         </div>
       </div>
+      <VersionModal isOpen={isVersionModalOpen} onClose={() => setIsVersionModalOpen(false)} />
     </div>
   );
 }

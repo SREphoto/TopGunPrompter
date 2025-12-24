@@ -13,7 +13,8 @@ export const movies: Movie[] = [
             { name: '80s Sunset', promptString: 'golden hour, silhouette, intense heat haze distortion, Telephoto lens compression, Kodak 5247 film stock, heavy grain' },
             { name: 'Cockpit HUD', promptString: 'green digital phosphor glow, HUD reflection on glass, harsh sunlight, claustrophobic framing, high contrast' },
             { name: 'Volleyball Sweat', promptString: 'glistening oiled skin, hard sunlight, specular highlights, saturated Fujicolor film, slow motion aesthetic' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Top Gun (1986), close-up of Tom Cruise as Maverick in flight suit and aviator sunglasses, fighter jets reflecting in the glasses, red and white stripes background, bold patriotic colors, military aesthetic, 'TOP GUN' title logo in metallic silver gradient at bottom, 80s blockbuster style --ar 2:3"
     },
     {
         id: 'interview-vampire',
@@ -27,7 +28,8 @@ export const movies: Movie[] = [
             { name: 'Gothic Candlelight', promptString: 'flickering candlelight, deep shadows, f/1.8 aperture, shallow depth of field, velvet textures, warm glow' },
             { name: 'New Orleans Decay', promptString: 'foggy streets, gas lamp glow, rotting wood texture, humid atmosphere, wet plate aesthetic, spanish moss' },
             { name: 'Vampire Pale', promptString: 'alabaster skin, translucent veins, piercing eyes, high contrast, cold blue undertones, subsurface scattering' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Interview with the Vampire (1994), split face composition of Tom Cruise and Brad Pitt, pale vampire skin, piercing blue and green eyes, gothic baroque typography, dark moody atmosphere, New Orleans lace texture overlay, romantic horror aesthetic --ar 2:3"
     },
     {
         id: 'oldboy',
@@ -41,7 +43,8 @@ export const movies: Movie[] = [
             { name: 'Green Corridor', promptString: 'sickly green fluorescent lighting, flickering tubes, narrow hallway, dirty textures, neo-noir, 35mm film grain' },
             { name: 'Hammer Grit', promptString: 'extreme close up macro shot, motion blur, visceral violence, blood splatter, raw and gritty texture, high tension' },
             { name: 'Neon Noir', promptString: 'deep blacks, vibrant neon signs, wet streets, urban isolation, cinematic shadow, low key lighting' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Oldboy (2003), Oh Dae-su wearing sunglasses and a black suit, holding a hammer, looking downward with a stoic expression, purple and green neon lighting, gritty texture, mystery thriller vibe, Korean typography elements, high contrast --ar 2:3"
     },
     {
         id: 'john-wick',
@@ -55,7 +58,8 @@ export const movies: Movie[] = [
             { name: 'Neon Club', promptString: 'vibrant pink and blue neon, Anamorphic lens flares, wet surface reflections, volumetric smoke, high contrast' },
             { name: 'Tactical Suit', promptString: 'sharp black suit texture, gun metal grey, clean lines, rim lighting, modern noir, Arri Alexa digital' },
             { name: 'Rainy NYC', promptString: 'heavy rain, wet pavement, city lights reflecting, dark atmosphere, moody, urban solitude, bokeh' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for John Wick (2014), Keanu Reeves standing in a black suit with a gun in hand, looking at camera with intensity, neon blue and purple city lights in background, wet pavement reflections, collar turned up, 'JOHN WICK' text in sleek sans-serif font, neo-noir action style --ar 2:3"
     },
     {
         id: 'american-psycho',
@@ -69,7 +73,8 @@ export const movies: Movie[] = [
             { name: 'Corporate Cold', promptString: 'sterile white environment, minimalism, harsh fluorescent light, expensive suits, emotionless, symmetrical' },
             { name: 'Blood Splatter', promptString: 'bright red blood on white plastic, shocking contrast, surreal violence, pristine horror, high key lighting' },
             { name: '80s Yuppie', promptString: 'warm upscale restaurant lighting, crystal glasses, designer clothing, excess, superficial beauty, soft focus' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for American Psycho (2000), Christian Bale as Patrick Bateman with a perfect smile holding a knife, prestigious suit, blood splatter on his face, clean white background, red serif typography 'AMERICAN PSYCHO', satire horror aesthetic, pristine and disturbing --ar 2:3"
     },
     {
         id: 'gladiator',
@@ -83,7 +88,8 @@ export const movies: Movie[] = [
             { name: 'Roman Dust', promptString: 'sun bleached, floating dust particles, arena sand, ancient stone, epic scale, atmospheric haze' },
             { name: 'Colosseum Sun', promptString: 'blinding sunlight, harsh shadows, metallic armor reflection, heat waves, intense action, high shutter speed' },
             { name: 'Wheat Field', promptString: 'golden wheat, soft focus, dreamlike, hand brushing through grain, ethereal light, magic hour' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Gladiator (2000), Russell Crowe as Maximus in gladiator armor, walking through a wheat field, hand brushing the grain, colosseum looming in the background, golden hour lighting, epic historical drama style, 'GLADIATOR' in chiseled stone font --ar 2:3"
     },
     {
         id: 'seven',
@@ -97,7 +103,8 @@ export const movies: Movie[] = [
             { name: 'Gritty Rain', promptString: 'constant downpour, urban decay, bleach bypass process, silver retention, high contrast, desaturated colors' },
             { name: 'Flashlight Beam', promptString: 'piercing volumetric light beam in darkness, dust motes, claustrophobic, chiaroscuro, shadow play' },
             { name: 'Desaturated City', promptString: 'sepia tones, grime, peeling paint, oppressive atmosphere, hopelessness, industrial texture, film grain' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Se7en (1995), gritty texture, photos of Brad Pitt and Morgan Freeman, scratchy handwritten text overlay 'gluttony greed sloth envy wrath pride lust', dark sepia timeline, rain streaks, psychological thriller aesthetic, distressing collage style --ar 2:3"
     },
     {
         id: 'fight-club',
@@ -111,7 +118,8 @@ export const movies: Movie[] = [
             { name: 'Basement Grime', promptString: 'sweat sheen, blood, concrete texture, sodium vapor lighting, fluorescent green tint, high ISO noise' },
             { name: 'Soap Pink', promptString: 'bright pink soap, chemical burns, surreal satire, consumerism, pop art contrast, macro photography' },
             { name: 'Insomnia Blue', promptString: 'cold blue color grading, sterile office lighting, dissociation, anti-glare coating, sleepless atmosphere' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Fight Club (1999), close-up shot of a pink bar of soap with 'FIGHT CLUB' carved into it, placed on a wet surface with water droplets, brutalist typography, gritty texture, satire black comedy vibe, simple and iconic, Fincher lighting --ar 2:3"
     },
     {
         id: 'aliens',
@@ -125,7 +133,8 @@ export const movies: Movie[] = [
             { name: 'Industrial Blue', promptString: 'cold steel, blue emergency rim lighting, volumetric steam, wet metal textures, James Cameron blue' },
             { name: 'Xenomorph Slime', promptString: 'organic resin, dripping slime, glistening black surfaces, biomechanical texture, low key lighting' },
             { name: 'Motion Tracker Green', promptString: 'grainy green screen, CRT scanlines, sonar blips, low light, claustrophobia, tech noir aesthetic' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Aliens (1986), Ripley holding a pulse rifle, sweaty and intense, protecting Newt, background of xenomorph eggs and blue mist, high contrast lighting, metallic textures, 'ALIENS' title in spaced-out blue font, sci-fi action horror --ar 2:3"
     },
     {
         id: 'predator',
@@ -139,7 +148,8 @@ export const movies: Movie[] = [
             { name: 'Jungle Heat', promptString: 'dense foliage, sweat, humidity, bright green leaves, dappled sunlight, survival, telephoto lens' },
             { name: 'Thermal Vision', promptString: 'heat signature spectrum, blue and red and yellow, alien pov, hunting mode, digital processing' },
             { name: 'Mud Camo', promptString: 'covered in mud, blending with nature, primal, dirty textures, stealth, natural lighting' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Predator (1987), thermal heat vision view of Arnold Schwarzenegger's face, pixelated spectrum colors of red yellow and blue, tri-dot laser sight on his forehead, raw and intense, 'PREDATOR' in red sci-fi font, jungle warfare aesthetic --ar 2:3"
     },
     {
         id: 'joker',
@@ -153,7 +163,8 @@ export const movies: Movie[] = [
             { name: 'Clown Makeup', promptString: 'smeared greasepaint texture, extreme close up, skin pores, tragic expression, vibrant colors, harsh lighting' },
             { name: 'Subway Green', promptString: 'flickering fluorescent lights, dirty subway tiles, teal and orange color grading, Arri Alexa digital noise' },
             { name: 'Talk Show Blue', promptString: 'bright tv studio lighting, retro curtains, saturated blue and red, media spectacle, broadcast look' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Joker (2019), low angle shot of Joaquin Phoenix in full clown makeup dancing on concrete stairs, bright sunlight, Gotham city buildings in background, colorful suit, 'JOKER' title in bold white font, psychological drama masterpiece --ar 2:3"
     },
     {
         id: 'dune',
@@ -167,7 +178,8 @@ export const movies: Movie[] = [
             { name: 'Arrakis Sand', promptString: 'endless dunes, spice floating in air, heat haze, massive scale, monochromatic beige and gold, IMAX scale' },
             { name: 'Spice Blue', promptString: 'glowing blue eyes, deep indigo shadows, mystical atmosphere, desert night, cinematic lighting' },
             { name: 'Ornithopter Steel', promptString: 'brutalist architecture, industrial metal texture, dragonfly wings, dust and machinery, Greig Fraser cinematography' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Dune (2021), Paul Atreides walking alone on a massive sand dune, tiny silhouette against vast scale, floating spice particles, orange and beige color palette, minimalist epic sci-fi aesthetic, 'DUNE' logo in customized futura font --ar 2:3"
     },
     {
         id: 'the-matrix',
@@ -181,7 +193,8 @@ export const movies: Movie[] = [
             { name: 'Digital Rain', promptString: 'falling green code, phosphor glow, CRT texture, black background, latex texture, 35mm film grain' },
             { name: 'Bullet Time', promptString: 'frozen time, 360-degree virtual camera, flow motion, ripple distortion, path tracing, fluid simulation' },
             { name: 'Construct White', promptString: 'infinite white space, clean, sterile, surreal minimalism, ambient occlusion, soft shadows' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for The Matrix (1999), Neo, Trinity, and Morpheus in long black trench coats and sunglasses, raining green digital code overlay, cyber-noir atmosphere, cool green color grading, 'THE MATRIX' glitch text logo, late 90s sci-fi classic --ar 2:3"
     },
     {
         id: 'blade-runner-2049',
@@ -195,7 +208,8 @@ export const movies: Movie[] = [
             { name: 'Orange Haze', promptString: 'radioactive dust, thick orange fog, atmospheric perspective, silhouette, Roger Deakins cinematography' },
             { name: 'Hologram Pink', promptString: 'giant holographic projection, neon pink and purple, transparency, rain on glass, volumetric light' },
             { name: 'Cyberpunk Rain', promptString: 'constant rain, neon reflections on wet pavement, flying cars, dark blue and grey palette, tech noir' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Blade Runner 2049 (2017), Ryan Gosling standing in front of a futuristic spinner car, split composition with Harrison Ford, massive orange haze background, teal neon rain in foreground, 'BLADE RUNNER 2049' title text, cyberpunk masterpiece aesthetic --ar 2:3"
     },
     {
         id: 'mad-max-fury-road',
@@ -209,7 +223,8 @@ export const movies: Movie[] = [
             { name: 'Chrome & Rust', promptString: 'shiny chrome spray paint, rusted metal, high contrast, overexposed sky, sharp focus, kinetic energy' },
             { name: 'Desert Storm', promptString: 'massive sandstorm, red lightning, volumetric dust, apocalyptic scale, orange and black contrast' },
             { name: 'High Octane Blue', promptString: 'day-for-night shooting technique, deep saturated blue, moonlight over desert, cold isolation' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Mad Max: Fury Road (2015), Tom Hardy looking back next to his Interceptor car, Charlize Theron as Furiosa in foreground with war paint, explosion of orange sand and fire in background, high contrast teal and orange color grading, 'MAD MAX: FURY ROAD' distressed metal logo --ar 2:3"
     },
     {
         id: 'the-dark-knight',
@@ -223,7 +238,8 @@ export const movies: Movie[] = [
             { name: 'Gotham Night', promptString: 'city skyline at night, skyscrapers, dark blue and black, 70mm IMAX film, urban crime, aerial shot' },
             { name: 'Joker Purple', promptString: 'purple suit, green hair, chaotic energy, smeared makeup, handheld camera, interrogation lighting' },
             { name: 'IMAX Blue', promptString: 'cold color temperature, glass and steel, high tech surveillance, sharp focus, 70mm film grain' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for The Dark Knight (2008), Joker drawing a smile with red lipstick on a frosted glass window, blurry Batman silhouette in the reflection, 'WHY SO SERIOUS?' scrawled text, dark blue and black color palette, menacing and iconic --ar 2:3"
     },
     {
         id: 'pulp-fiction',
@@ -237,7 +253,8 @@ export const movies: Movie[] = [
             { name: 'Vintage Diner', promptString: 'red vinyl booths, formica tables, warm lighting, 50s americana, retro cool, wide angle lens' },
             { name: 'Tarantino Trunk', promptString: 'low angle shot looking up, trunk lid framing, POV, fish-eye lens effect, cinematic signature' },
             { name: 'Monochrome Suit', promptString: 'black and white suits, thin ties, cool detachment, gangster chic, stylized, high contrast' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Pulp Fiction (1994), Uma Thurman lying on a bed smoking a cigarette, pistol and pulp magazine in foreground, stylized retro kitsch aesthetic, vibrant red and yellow colors, 'PULP FICTION' title in bold retro font, cult classic style --ar 2:3"
     },
     {
         id: 'terminator-2',
@@ -251,7 +268,8 @@ export const movies: Movie[] = [
             { name: 'Liquid Metal', promptString: 'chrome surface, reflection, shapeshifting, fluid simulation, cold perfection, ray tracing' },
             { name: 'Nuclear Fire', promptString: 'apocalyptic destruction, burning playground, orange and black, nightmare sequence, high contrast' },
             { name: 'Steel Blue', promptString: 'cold blue night, industrial steel mill, sparks, James Cameron blue, tech noir, metallic texture' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Terminator 2: Judgment Day (1991), Arnold Schwarzenegger on a Harley Davidson motorcycle holding a shotgun, T-1000 liquid metal face reflection, blue steel color palette, fire in background, metallic font 'T2', blockbuster action style --ar 2:3"
     },
     {
         id: 'inception',
@@ -265,7 +283,8 @@ export const movies: Movie[] = [
             { name: 'Folding City', promptString: 'bending architecture, defying gravity, surreal cityscape, dream logic, mind bending, anamorphic lens' },
             { name: 'Dream Layer', promptString: 'rainy city street, slow motion, texture of water, subconscious projection, phantom high speed' },
             { name: 'Zero Gravity', promptString: 'floating objects, spinning hallway, disorientation, sleek hotel interior, physics defying' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Inception (2010), Leonardo DiCaprio standing in the middle of a city street that is folding over onto itself, defying gravity, surreal architecture, gun metal grey suit, cool blue tones, 'INCEPTION' title in bottom center with maze grid texture --ar 2:3"
     },
     {
         id: 'kill-bill-vol-1',
@@ -279,7 +298,8 @@ export const movies: Movie[] = [
             { name: 'Yellow Jumpsuit', promptString: 'bright yellow track suit, black stripe, vibrant colors, pop art style, snap zoom aesthetic' },
             { name: 'Anime Blood', promptString: 'exaggerated blood spray, silhouette, high contrast, stylized violence, cel shaded influence --niji 6' },
             { name: 'Snowy Garden', promptString: 'serene japanese garden, falling snow, white silence, blood on snow, poetic duel, wide shot' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Kill Bill: Vol. 1 (2003), Uma Thurman in yellow jumpsuit holding a katana, blood splatter on yellow background, minimalist silhouette style, 'KILL BILL' text in bold black font with scratch marks, grindhouse cinema aesthetic --ar 2:3"
     },
     {
         id: 'no-country-for-old-men',
@@ -293,7 +313,8 @@ export const movies: Movie[] = [
             { name: 'Desert Silence', promptString: 'vast texas landscape, empty horizon, harsh midday sunlight, isolation, deep depth of field' },
             { name: 'Motel Shadow', promptString: 'dark motel room, light under the door, suspense, creeping shadow, neo-western, practical lighting' },
             { name: 'Coin Toss Silver', promptString: 'extreme close up of a silver coin, metallic texture, fate, cold indifference, macro lens' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for No Country for Old Men (2007), silhouette of Anton Chigurh holding a captive bolt gun against a Texas sunset, vast desert landscape, oppressive atmosphere, 'NO COUNTRY FOR OLD MEN' western font, gritty and realistic --ar 2:3"
     },
     {
         id: 'drive',
@@ -307,7 +328,8 @@ export const movies: Movie[] = [
             { name: 'Synthwave Neon', promptString: 'pink and blue neon, retro 80s aesthetic, night driving, sodium vapor streetlights, bokeh' },
             { name: 'Scorpion Jacket', promptString: 'white satin, golden embroidery, fabric texture, iconic costume, blood stains, high contrast' },
             { name: 'LA Night', promptString: 'los angeles skyline, streetlights, anamorphic bokeh, lonely atmosphere, noir lighting' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Drive (2011), Ryan Gosling in satin scorpion jacket, driving gloves, pink neon font 'DRIVE', 80s synthwave color palette, cyan and magenta lighting, cool and stylish --ar 2:3"
     },
     {
         id: 'the-fifth-element',
@@ -321,7 +343,8 @@ export const movies: Movie[] = [
             { name: 'Multipass Orange', promptString: 'bright orange hair, futuristic fashion, Jean Paul Gaultier costumes, vibrant pop colors, sharp focus' },
             { name: 'Future NYC', promptString: 'flying cars, vertical city, dense traffic, fog, Moebius comic aesthetic, futuristic metropolis' },
             { name: 'Mondoshawan Gold', promptString: 'ancient alien armor, metallic gold, rusty textures, mystical light, temple setting, volumetric dust' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for The Fifth Element (1997), Milla Jovovich with orange hair and white bandage outfit, Bruce Willis protecting her, flying cars in futuristic NYC background, vibrant orange and blue colors, 'THE FIFTH ELEMENT' sci-fi typography --ar 2:3"
     },
     {
         id: 'interstellar',
@@ -335,7 +358,8 @@ export const movies: Movie[] = [
             { name: 'Black Hole', promptString: 'gargantua accretion disk, bending light, deep space, cosmic scale, IMAX aspect ratio, gravitational lensing' },
             { name: 'Dust Bowl', promptString: 'cornfields, dust storms, americana, gritty realism, earth tones, dying earth, particulate matter' },
             { name: 'Tesseract', promptString: 'fourth dimension, infinite library, strings of time, surreal architecture, abstract, light rays' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Interstellar (2014), Matthew McConaughey walking in a cornfield looking up at the night sky, massive black hole Gargantua looming in space above, 'INTERSTELLAR' thin crisp font, epic scale, cosmic wonder aesthetic --ar 2:3"
     },
     {
         id: 'the-shining',
@@ -349,7 +373,8 @@ export const movies: Movie[] = [
             { name: 'Overlook Carpet', promptString: 'hexagonal pattern, one-point perspective, Steadicam tracking shot, geometric symmetry, wide angle lens' },
             { name: 'Redrum', promptString: 'blood elevator, fluid physics, art deco hotel, psychological horror, symmetrical composition' },
             { name: 'Snow Maze', promptString: 'frozen hedge maze, blue moonlight, mist, isolation, cold atmosphere, winter night' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for The Shining (1980), disturbing yellow graphic design with black face silhouette, 'THE SHINING' text, minimalist Saul Bass style, unsettling atmosphere, classic horror iconography --ar 2:3"
     },
     {
         id: 'tron-legacy',
@@ -363,7 +388,8 @@ export const movies: Movie[] = [
             { name: 'The Grid', promptString: 'neon blue lines, black glass, digital landscape, symmetry, self-illuminated, clean lines' },
             { name: 'Light Cycle', promptString: 'light trails, motion blur, high speed, sleek vehicles, cybernetic, neon orange and blue' },
             { name: 'Iso Orange', promptString: 'warm orange neon, contrast against blue, digital dna, organic code, simulation, glow effect' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Tron: Legacy (2010), two light cycles racing with neon trails, blue vs orange, sleek digital grid background, daft punk helmet reflection, 'TRON LEGACY' glowing tech font, high-tech sci-fi style --ar 2:3"
     },
     {
         id: 'taxi-driver',
@@ -377,7 +403,8 @@ export const movies: Movie[] = [
             { name: 'Yellow Cab', promptString: 'checker cab, steam rising from streets, night city, urban decay, 35mm film grain' },
             { name: 'Mohawk', promptString: 'military jacket, sunglasses, mohawk haircut, mirror reflection, anti-hero, intense stare' },
             { name: 'Neon Rain', promptString: 'rain on windshield, blurred neon lights, bokeh, loneliness, jazz atmosphere, sodium vapor lights' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Taxi Driver (1976), Robert De Niro walking down a wet NYC street at night, military jacket, steam rising from vents, neon pornography signs in background, 'TAXI DRIVER' yellow font, gritty 70s cinema verite style --ar 2:3"
     },
     {
         id: 'saving-private-ryan',
@@ -391,7 +418,8 @@ export const movies: Movie[] = [
             { name: 'Omaha Beach', promptString: 'desaturated, high contrast, 45-degree shutter angle, handheld camera shake, bleach bypass process, film grain' },
             { name: 'Sniper Bell Tower', promptString: 'rubble texture, soft diffused light, telephoto lens, shallow depth of field, particulate dust' },
             { name: 'Faded Glory', promptString: 'american flag, backlit sunlight, dust particles, emotional, somber, god rays, atmospheric haze' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Saving Private Ryan (1998), silhouette of soldiers marching against a grey overcast sky and large american flag, desaturated sepia colors, 'SAVING PRIVATE RYAN' bold serif font, gritty war drama style --ar 2:3"
     },
     {
         id: 'iron-man',
@@ -405,7 +433,8 @@ export const movies: Movie[] = [
             { name: 'Mark III', promptString: 'hot rod red and gold, automotive paint texture, ray traced reflections, photorealistic, 8k' },
             { name: 'Arc Reactor', promptString: 'glowing blue light, chest piece, cave darkness, palladium core, industrial contrast, chiaroscuro' },
             { name: 'Malibu Mansion', promptString: 'futuristic architecture, ocean view, glass walls, wealth, clean lines, morning sun, architectural photography' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Iron Man (2008), Close up of Iron Man's helmet with glowing blue eyes, metallic red and gold texture, 'IRON MAN' title in metallic font, modern superhero blockbuster aesthetic --ar 2:3"
     },
     {
         id: 'starship-troopers',
@@ -419,7 +448,8 @@ export const movies: Movie[] = [
             { name: 'Klendathu Drop', promptString: 'chaotic, swarming arachnids, laser fire, desert planet, daylight horror, epic scale, harsh sunlight' },
             { name: 'Federal Network', promptString: 'propaganda film style, scanlines, bright colors, satire, fascist uniform, broadcast quality' },
             { name: 'Brain Bug', promptString: 'slimy organic texture, massive, underground cave, grotesque, subsurface scattering, low key lighting' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Starship Troopers (1997), propaganda style recruiting poster, Johnny Rico holding a rifle, 'JOIN THE MOBILE INFANTRY' text, hordes of arachnids in background, satirical fascist aesthetic --ar 2:3"
     },
     {
         id: 'transformers',
@@ -433,7 +463,8 @@ export const movies: Movie[] = [
             { name: 'Transformation', promptString: 'complex mechanical parts shifting, metallic glare, sunset heavily saturated, Anamorphic lens flare, motion blur' },
             { name: 'City Battle', promptString: 'debris, explosions, giant robots, dust, destruction, low angle, telephoto compression' },
             { name: 'Bumblebee Garage', promptString: 'yellow camaro, scratched metal, expressive eyes, garage lighting, mist, atmospheric' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Transformers (2007), Close up of Optimus Prime's mechanical eye, complex metal parts, sunset reflection in metal, 'TRANSFORMERS' bold title, lens flare, high budget sci-fi action --ar 2:3"
     },
     {
         id: 'deadpool',
@@ -447,7 +478,8 @@ export const movies: Movie[] = [
             { name: 'Maximum Effort', promptString: 'red spandex fabric texture, dirty suit, breaking fourth wall, comic book contrast, humor' },
             { name: 'Highway Fight', promptString: 'overcast day, slow motion violence, bullet casings, destruction, asphalt texture, high shutter speed' },
             { name: 'X-Mansion', promptString: 'grey sterile halls, emptiness, mockery, bright daylight, architectural symmetry, wide angle' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Deadpool (2016), Deadpool lying seductively on a bearskin rug in front of a fireplace, 'DEADPOOL' title, satirical romantic comedy vibe, red and black suit textures --ar 2:3"
     },
     {
         id: 'john-wick-2',
@@ -461,7 +493,8 @@ export const movies: Movie[] = [
             { name: 'Mirrors Room', promptString: 'multiple reflections, neon lights, confusion, sleek, museum art installation, blue and pink, kaleidoscope' },
             { name: 'Continental Lounge', promptString: 'warm gold lighting, leather chairs, drinking scotch, luxury, unspoken tension, cinematic lighting' },
             { name: 'Rome Catacombs', promptString: 'stone walls, dust, flashlight beams, shadows, tactical suit, ancient arches, rim lighting' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for John Wick: Chapter 2 (2017), Keanu Reeves being surrounded by many guns pointed at his head, calm expression, 'JOHN WICK CHAPTER 2' text, cool blue lighting --ar 2:3"
     },
     {
         id: 'john-wick-3',
@@ -475,7 +508,8 @@ export const movies: Movie[] = [
             { name: 'Glass House', promptString: 'transparent walls, fighting silhouettes, pristine, shattering glass, cool blue light, emptiness' },
             { name: 'Continental Green', promptString: 'intense green neon, heavy armor, smoke, muzzle flashes, high contrast action, volumetric fog' },
             { name: 'Desert Walk', promptString: 'vast dunes, bright sun, black suit, high contrast, heat haze, wandering, telephoto lens' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for John Wick: Chapter 3 - Parabellum (2019), Keanu Reeves looking through rain-soaked glass, purple neon reflection, 'PARABELLUM' text, moody neo-noir --ar 2:3"
     },
     {
         id: 'die-hard',
@@ -489,7 +523,8 @@ export const movies: Movie[] = [
             { name: 'Air Duct', promptString: 'claustrophobic, silver metal, lighter flame, dirt on face, lighter reflection, macro shot' },
             { name: 'Nakatomi Plaza', promptString: 'skyscraper at night, broken glass, helicopter spotlight, 80s action, explosion, Anamorphic lens flare' },
             { name: 'Yippee Ki Yay', promptString: 'bloodied undershirt, desperate, machine gun, sweaty skin, Christmas tape, grimy texture' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Die Hard (1988), Bruce Willis holding a gun next to the Nakatomi Plaza skyscraper building, 'DIE HARD' red bold font, explosion in background, classic 80s action poster --ar 2:3"
     },
     {
         id: 'matrix-reloaded',
@@ -503,7 +538,8 @@ export const movies: Movie[] = [
             { name: 'Freeway Chase', promptString: 'green tint, speeding cars, agents jumping, concrete, motion blur, overcast, 360-degree shutter' },
             { name: 'Burly Brawl', promptString: 'hundreds of smiths, black suits, courtyard, surreal, CGI slickness, bowling pin sound, wide angle' },
             { name: 'Chateau Fight', promptString: 'weapons on walls, grand staircase, marble texture, slow motion, medieval weaponry, cinematic lighting' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for The Matrix Reloaded (2003), Neo stopping bullets in mid-air, Trinity and Morpheus ready to fight, green code background, 'THE MATRIX RELOADED' title, cyber-action style --ar 2:3"
     },
     {
         id: 'matrix-revolutions',
@@ -517,7 +553,8 @@ export const movies: Movie[] = [
             { name: 'Super Brawl', promptString: 'rain, lightning, flying silhouettes, green shockwaves, dark sky, epic scale, fluid simulation' },
             { name: 'Machine City', promptString: 'biomechanical squids, red eyes, swarms, mechanical coldness, cables, deus ex machina, metallic' },
             { name: 'Club Hel', promptString: 'leather straps, bondage gear, red laser lighting, gravity defied, upside down, fetish aesthetic' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for The Matrix Revolutions (2003), Neo standing in rain with smith clones, lightning striking, epic finale green tint, 'THE MATRIX REVOLUTIONS' title --ar 2:3"
     },
     {
         id: 'casino-royale',
@@ -531,7 +568,8 @@ export const movies: Movie[] = [
             { name: 'Parkour Chase', promptString: 'construction crane, dust, bright sunlight, sweat, raw physicality, height, handheld camera' },
             { name: 'Poker Tension', promptString: 'green felt, focus on eyes, chips, tuxedo, smoke, high stakes, warm lighting, macro shot' },
             { name: 'Venice Sinking', promptString: 'collapsing building, turbulent water, tragedy, iron bars, drowning, underwater distortion' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Casino Royale (2006), Daniel Craig in tuxedo walking out of the ocean, or walking with Vesper Lynd, sleek modern spy aesthetic, '007' logo, cool blue color grading --ar 2:3"
     },
     {
         id: 'point-break',
@@ -545,7 +583,8 @@ export const movies: Movie[] = [
             { name: 'Ex-Presidents', promptString: 'president masks, sunset waves, bank robbery, adrenaline, wetsuits, beach vibe, handheld camera' },
             { name: 'Skydiving', promptString: 'blue sky, freefall, wide angle, freedom, adrenaline, holding hands, wind distortion' },
             { name: 'Foot Chase', promptString: 'Steadicam, alleyways, throwing dogs, shaky cam, pure kinetic energy, fence jumping' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Point Break (1991), Patrick Swayze and Keanu Reeves surfing on a giant wave, bank robbery masks in background, 'POINT BREAK' title, sun-soaked action thriller style --ar 2:3"
     },
     {
         id: 'die-hard-vengeance',
@@ -1571,7 +1610,8 @@ export const movies: Movie[] = [
             { name: 'Expressionist Angles', promptString: 'jagged architecture, painted shadows, slanted walls, distorted perspective, german expressionism, silent film aesthetic' },
             { name: 'Somnambulist', promptString: 'black leotard, pale face, heavy eye makeup, stiff movement, surreal set design, high contrast' },
             { name: 'Carnival Tent', promptString: 'fairground, mysterious tent, crowd, hand painted backdrop, eerie atmosphere, monochromatic' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for The Cabinet of Dr. Caligari (1920), German expressionist art style, jagged angular architecture, Cesare the Somnambulist carrying a woman, distorted perspective, black and white high contrast, silent film typography --ar 2:3"
     },
     {
         id: 'nosferatu',
@@ -1585,7 +1625,8 @@ export const movies: Movie[] = [
             { name: 'Count Orlok', promptString: 'rat-like vampire, long claws, bald head, hunched silhouette, shadow on wall, eerie silence, gothic horror' },
             { name: 'Ghost Ship', promptString: 'sailing ship, empty ocean, rats, plague, silent film grain, vignette, foreboding' },
             { name: 'Shadow Creep', promptString: 'shadow of hand grasping heart, climbing stairs, expressionist lighting, high contrast, fear' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Nosferatu (1922), Count Orlok's creepy silhouette standing in an archway, long fingers, bald head, rat-like features, gothic font, sepia tone silent horror, grainy texture --ar 2:3"
     },
     {
         id: 'm',
@@ -1599,7 +1640,8 @@ export const movies: Movie[] = [
             { name: 'Balloon Shadow', promptString: 'shadow on wanted poster, ball rolling, child silhouette, foreboding, german expressionism, urban unease' },
             { name: 'Underground Court', promptString: 'criminal underworld, smoke filled cellar, basement, mob judgment, harsh lighting, faces in shadow' },
             { name: 'Whistle', promptString: 'urban street corner, night, reflection in window, police investigation, noir lighting, suspense' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for M (1931), a large letter 'M' chalked on the back of a man's coat, ominous shadow of a child murderer, German typography, black and white Fritz Lang noir style --ar 2:3"
     },
     {
         id: 'citizen-kane',
@@ -1613,7 +1655,8 @@ export const movies: Movie[] = [
             { name: 'Deep Focus', promptString: 'extreme depth of field, foreground and background in focus, low angle shot, ceiling visible, gregg toland cinematography' },
             { name: 'Xanadu Silhouettes', promptString: 'massive fireplace, vast empty hall, jigsaw puzzle, loneliness, high contrast, gothic architecture' },
             { name: 'Podium Speech', promptString: 'huge poster of self, political rally, low angle powerhouse, microphone, black and white drama' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Citizen Kane (1941), Orson Welles as Kane standing at a podium, low angle shot, deep focus, 'KANE' campaign poster in background, bold black and white dramatic lighting, cinematic masterpiece --ar 2:3"
     },
     {
         id: 'casablanca',
@@ -1627,7 +1670,8 @@ export const movies: Movie[] = [
             { name: 'Foggy Airport', promptString: 'trench coat, fedora, heavy fog, plane propeller, tarmac, noir lighting, tearful goodbye' },
             { name: 'Rick\'s Cafe', promptString: 'moroccan lamp, piano, smoke, shadows, exotic interior, romantic gaze, soft focus' },
             { name: 'Piano Man', promptString: 'close up on hands, piano keys, half empty glass, melancholic atmosphere, black and white glamour' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Casablanca (1942), Humphrey Bogart and Ingrid Bergman close up, romantic and sorrowful, trench coat and fedora, foggy airport runway in background, vintage Hollywood glamour, black and white --ar 2:3"
     },
     {
         id: 'the-third-man',
@@ -1641,7 +1685,8 @@ export const movies: Movie[] = [
             { name: 'Dutch Angle', promptString: 'tilted camera, cobblestone streets, night, wet pavement, massive shadows, vienna ruins, noir' },
             { name: 'Sewer Chase', promptString: 'underground tunnels, rushing water, torchlight, echoes, bars of shadow, claustrophobic' },
             { name: 'Ferris Wheel', promptString: 'prater wheel, moody sky, height, tension, cold wind, black and white masterpiece' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for The Third Man (1949), Orson Welles grinning in a doorway, Dutch angle composition, giant ferris wheel in background, zither instrument, noir shadows, Vienna ruins, black and white --ar 2:3"
     },
     {
         id: 'rear-window',
@@ -1655,7 +1700,8 @@ export const movies: Movie[] = [
             { name: 'Courtyard View', promptString: 'apartment complex, brick walls, multiple windows, voyeuristic pov, telephoto lens, technicolor' },
             { name: 'Fashion Chic', promptString: 'grace kelly dress, elegant interior, warm lamp light, 50s glamour, soft lighting' },
             { name: 'Flashbulb Defense', promptString: 'blinding camera flash, dark apartment, red gel effect, tension, point of view' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Rear Window (1954), James Stewart holding a camera with telephoto lens, looking out a window, binoculars, silhouette of Grace Kelly, apartment courtyard background, technicolor suspense --ar 2:3"
     },
     {
         id: 'vertigo',
@@ -1669,7 +1715,8 @@ export const movies: Movie[] = [
             { name: 'Dolly Zoom', promptString: 'stairwell, vertigo effect, distorting perspective, dizzying, high anxiety, technicolor' },
             { name: 'Neon Hotel', promptString: 'green neon light washing over room, silhouette, obsession, dreamlike, eerie atmosphere' },
             { name: 'Golden Gate', promptString: 'san francisco bay, water, jumper, foggy day, mystery, soft focus, romantic tragedy' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Vertigo (1958), Saul Bass spiral graphic design, silhouette of falling man, James Stewart and Kim Novak faces, 'VERTIGO' distinct typography, dizzying psychedelic hitchcock style --ar 2:3"
     },
     {
         id: 'north-by-northwest',
@@ -1683,7 +1730,8 @@ export const movies: Movie[] = [
             { name: 'Crop Duster', promptString: 'wide open field, biplane low pass, running man, bright daylight, dust, isolation, suspense' },
             { name: 'Mt Rushmore', promptString: 'climbing stone faces, night, peril, monumental scale, floodlights, high contrast action' },
             { name: 'Train Dining', promptString: 'elegant dining car, white tablecloth, flirting, 50s suit, scenic window view, technicolor' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for North by Northwest (1959), Cary Grant running from a crop duster plane in a cornfield, kinetic action, Saul Bass arrow graphics, vibrant technicolor, classic suspense --ar 2:3"
     },
     {
         id: 'psycho',
@@ -1697,7 +1745,8 @@ export const movies: Movie[] = [
             { name: 'Shower Scene', promptString: 'knife silhouette, splashing water, drain, fast cuts, screaming mouth, high key lighting, black and white' },
             { name: 'Bates Motel', promptString: 'gothic house on hill, rain, noir lighting, isolation, creepy atmosphere, low angle' },
             { name: 'Taxidermy Parlor', promptString: 'stuffed birds, shadows, nervous eating, profile shot, unease, claustrophobic' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Psycho (1960), Janet Leigh screaming in the shower, knife silhouette, Bates Motel neon sign in background, shattered glass effect, black and white horror classic, Hitchcock branding --ar 2:3"
     },
     {
         id: '12-angry-men',
@@ -1711,7 +1760,8 @@ export const movies: Movie[] = [
             { name: 'Jury Room', promptString: 'sweaty faces, fan spinning, cigarette smoke, claustrophobic, heat, tension, close up' },
             { name: 'Knife Table', promptString: 'switchblade stuck in wood, shock, group reaction, depth of field, black and white realism' },
             { name: 'Rain Window', promptString: 'rain against glass, gloom, looking out window, reflection, pensive, breaking the heat' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for 12 Angry Men (1957), twelve men sitting around a table arguing, switchblade stuck in the table, intense facial expressions, sweaty atmosphere, 'LIFE IS IN THEIR HANDS' tagline, black and white courtroom drama --ar 2:3"
     },
     {
         id: 'seven-samurai',
@@ -1725,7 +1775,8 @@ export const movies: Movie[] = [
             { name: 'Rain Battle', promptString: 'heavy rain, mud, samurai armor, katana, running, chaos, telephoto lens compression, black and white' },
             { name: 'Village Defense', promptString: 'bamboo spears, barricades, dust, rural japan, strategy, wide shot, epic scale' },
             { name: 'Silent Duel', promptString: 'wind blowing grass, intense stare, hand on hilt, tension, stillness before action, nature background' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Seven Samurai (1954), Toshiro Mifune holding a giant katana, seven samurai standing in the rain, mud and battle gear, brush stroke typography, epic Kurosawa composition, black and white --ar 2:3"
     },
     {
         id: 'rashomon',
@@ -1739,7 +1790,8 @@ export const movies: Movie[] = [
             { name: 'Forest Light', promptString: 'sunlight through leaves, dappled light, dense forest, high contrast, shadows, nature texture' },
             { name: 'Rain Gate', promptString: 'torrential rain, ruined gate, misery, mud, discussion, atmospheric, black and white' },
             { name: 'Duel', promptString: 'frantic sword fight, tripping, sweat, desperate struggle, dynamic camera movement, realism' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Rashomon (1950), three characters giving different testimonies in the rain at a ruined gate, sun shining through forest leaves, intense Japanese drama, Kurosawa masterpiece --ar 2:3"
     },
     {
         id: '2001-space-odyssey',
@@ -1753,7 +1805,8 @@ export const movies: Movie[] = [
             { name: 'Centrifuge', promptString: 'running on walls, rotating set, white sterile interior, futuristic design, symmetry, wide angle' },
             { name: 'HAL 9000', promptString: 'glowing red camera eye, extreme close up, fisheye reflection, cold logic, minimalism, sinister' },
             { name: 'Star Gate', promptString: 'slit scan photography, neon colors, warping light, psychedelic, speed, abstract landscape' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for 2001: A Space Odyssey (1968), Pan Am space clipper flying towards a spinning space station, star child embryo in bubble, HAL 9000 red eye lens, 'the ultimate trip' text, sci-fi masterpiece art by Robert McCall --ar 2:3"
     },
     {
         id: 'dr-strangelove',
@@ -1767,7 +1820,8 @@ export const movies: Movie[] = [
             { name: 'War Room', promptString: 'huge circular table, big board map, spotlight, halo lighting, ken adam set design, black and white, satire' },
             { name: 'B-52 Cockpit', promptString: 'cramped interior, instrument panels, sweat, concentration, handheld camera, documentarian style' },
             { name: 'Bomb Ride', promptString: 'falling cowboy, rodeo style, nuclear bomb, wide angle, absurdity, iconic silhouette' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Dr. Strangelove (1964), Major Kong riding a nuclear bomb like a rodeo cowboy, waving his hat, B-52 plane above, 'HOW I LEARNED TO STOP WORRYING AND LOVE THE BOMB' typography, satirical black and white --ar 2:3"
     },
     {
         id: 'clockwork-orange',
@@ -1781,7 +1835,8 @@ export const movies: Movie[] = [
             { name: 'Korova Milk Bar', promptString: 'mannequin furniture, white sterile room, bowler hats, menacing stare, symmetry, wide angle' },
             { name: 'Ludovico Technique', promptString: 'eyes clamped open, screaming, movie theater light, medical equipment, psychological horror' },
             { name: 'Droogs Walk', promptString: 'slow motion, tunnel, backlighting, shadows, white outfits, ominous unison' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for A Clockwork Orange (1971), Alex DeLarge with one eye wide open wearing a bowler hat and false eyelashes, holding a glass of milk, triangle graphic composition, 'A CLOCKWORK ORANGE' bold futuristic font, disturbing Kubrick style --ar 2:3"
     },
     {
         id: 'the-godfather',
@@ -1795,7 +1850,8 @@ export const movies: Movie[] = [
             { name: 'Don\'s Study', promptString: 'venetian blinds, dark shadows, warm lamp light, tuxedo, power, gordon willis cinematography' },
             { name: 'Wedding Sunny', promptString: 'bright kodachrome colors, outdoor party, dancing, contrast with dark interior, 70s film stock' },
             { name: 'Orange Peel', promptString: 'orange in mouth, playfulness, monster improvisation, garden setting, natural light' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for The Godfather (1972), Don Corleone wearing a tuxedo holding a cat, marionette strings logo above title 'THE GODFATHER', dark moody lighting, elegant crime drama masterpiece --ar 2:3"
     },
     {
         id: 'chinatown',
@@ -1809,7 +1865,8 @@ export const movies: Movie[] = [
             { name: 'LA Drought', promptString: 'dry riverbed, heat haze, blazing sun, pale colors, neo-noir, isolation' },
             { name: 'Venetian Blinds', promptString: 'office interior, slatted shadows on face, cigarette smoke, sweat, mystery, noir lighting' },
             { name: 'Nose Bandage', promptString: 'white bandage, fedora, sunglasses, driving convertible, classic hollywood composition' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Chinatown (1974), illustration style of Jack Nicholson's face formed by smoke from a cigarette, Faye Dunaway silhouette in background, neo-noir mystery aesthetic, beige and brown tones --ar 2:3"
     },
     {
         id: 'raging-bull',
@@ -1823,7 +1880,8 @@ export const movies: Movie[] = [
             { name: 'Use of Flash', promptString: 'camera flash bulbs popping, boxing ring, sweat flying, slow motion, chaotic energy, black and white' },
             { name: 'Ropes Perspective', promptString: 'ring size changing, distortion, heat haze, exhaustion, blood on mat, intense focus' },
             { name: 'Mirror Monologue', promptString: 'dressing room, reflection, lonely, shadow, preparation, psychological intensity' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Raging Bull (1980), Robert De Niro as Jake LaMotta inside the boxing ring, leaning on ropes, bloody and battered, high contrast black and white photography, gritty sports drama --ar 2:3"
     },
     {
         id: 'annie-hall',
@@ -1837,7 +1895,8 @@ export const movies: Movie[] = [
             { name: 'Lobster Kitchen', promptString: 'kitchen chaos, live lobsters, spontaneous laughter, handheld camera, natural lighting, warm vibe' },
             { name: 'Balcony Talk', promptString: 'nyc skyline background, golden hour, conversation, intellectual vibe, 70s fashion, soft focus' },
             { name: 'Split Screen', promptString: 'therapy session, dual perspective, comparison, interior lighting, dialogue focus' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Annie Hall (1977), Woody Allen and Diane Keaton standing back to back, wearing vest and tie, clean white background, simple serif typography, romantic comedy classic --ar 2:3"
     },
     {
         id: 'star-wars-new-hope',
@@ -1851,7 +1910,8 @@ export const movies: Movie[] = [
             { name: 'Binary Sunset', promptString: 'twin suns, desert horizon, farm boy, longing, john williams swelling, silhouette, heat haze' },
             { name: 'Death Star Trench', promptString: 'grey greebles, motion blur, x-wing cockpit, lasers, explosions, speed, industrial sci-fi' },
             { name: 'Cantina Bar', promptString: 'aliens, smoke, dark shadows, crowded, weird creatures, practical effects, dirty sci-fi' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Star Wars: A New Hope (1977), Luke Skywalker holding a lightsaber above his head, Princess Leia with a blaster, Darth Vader helmet looming in background, X-Wings attacking Death Star, classic Hildebrandt brothers art style, epic space opera --ar 2:3"
     },
     {
         id: 'empire-strikes-back',
@@ -1865,7 +1925,8 @@ export const movies: Movie[] = [
             { name: 'Hoth Battle', promptString: 'white snow landscape, AT-AT walkers, trenches, contrast with white, explosions, cold blue shadows' },
             { name: 'Dagobah Swamp', promptString: 'fog, twisted roots, mud, yoda, organic texture, low key lighting, mysterious' },
             { name: 'Carbonite Freeze', promptString: 'orange industrial steam, blue floor lights, silhouette, machinery, ominous, high contrast' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for The Empire Strikes Back (1980), Han Solo and Princess Leia embracing, Darth Vader looming large in starry background, AT-AT walkers on snow below, 'THE EMPIRE STRIKES BACK' blue and silver logo, operatic sci-fi style --ar 2:3"
     },
     {
         id: 'jaws',
@@ -1879,7 +1940,8 @@ export const movies: Movie[] = [
             { name: 'Dolly Zoom Beach', promptString: 'beach chair, sudden realization, background compression, panic, sunny day, heat' },
             { name: 'Orca Boat', promptString: 'cramped cabin, singing, swaying lantern, yellow light, night sea, camaraderie, beer cans' },
             { name: 'Barrel Chase', promptString: 'yellow barrels on water, ocean surface, speed, harpoon, salt spray, relentless pursuit' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Jaws (1975), swimming woman on ocean surface at top, giant shark rising from the deep bottom with open mouth, red title 'JAWS', terrifying minimalist design --ar 2:3"
     },
     {
         id: 'close-encounters',
@@ -1893,7 +1955,8 @@ export const movies: Movie[] = [
             { name: 'Mothership Lights', promptString: 'blinding colorful lights, massive scale, silhouette of crowd, awe, night sky, lens flares' },
             { name: 'Mashed Potatoes', promptString: 'sculpting food, obsession, suburban dining room, texture, messy, madness' },
             { name: 'Abduction Light', promptString: 'orange light through keyhole, shaking objects, blinding beam, terror, supernatural' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Close Encounters of the Third Kind (1977), straight road leading to a bright horizon light, silhouette of a person standing, starry night sky, tagline 'WE ARE NOT ALONE', mysterious sci-fi wonder --ar 2:3"
     },
     {
         id: 'alien',
@@ -1907,7 +1970,8 @@ export const movies: Movie[] = [
             { name: 'Nostromo Hallway', promptString: 'padded white walls, claustrophobia, sterile lighting, ominous shadows, derelict spaceship, industrial sci-fi' },
             { name: 'Space Jockey', promptString: 'massive fossilized pilot, biomechanical texture, hr giger design, atmosphere, flashlight beam, scale' },
             { name: 'Dinner Scene', promptString: 'bright medical bay lighting, laughter, sweat, sudden terror, chestburster, blood splatter, white table' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Alien (1979), large cracking alien egg hovering over a strange grid, glowing green light, 'IN SPACE NO ONE CAN HEAR YOU SCREAM' tagline at top, minimalist sci-fi horror --ar 2:3"
     },
     {
         id: 'rocky',
@@ -1921,7 +1985,8 @@ export const movies: Movie[] = [
             { name: 'Philly Steps', promptString: 'running up steps, grey overcast sky, philadelphia museum of art, triumph, wide shot, raw energy' },
             { name: 'Meat Locker', promptString: 'hanging beef carcasses, punching meat, cold breath, industrial lighting, raw texture, training montage' },
             { name: 'Final Round', promptString: 'swollen eyes, blood, sweat, hugging adrian, chaotic ring, flashbulbs, emotional victory' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Rocky (1976), black and white silhouette of Rocky Balboa and Adrian holding hands in the boxing ring, bright spotlights, 'ROCKY' bold title, inspirational sports drama --ar 2:3"
     },
     {
         id: 'the-exorcist',
@@ -1935,7 +2000,8 @@ export const movies: Movie[] = [
             { name: 'Arrival', promptString: 'priest standing under streetlamp, foggy night, glowing window, iconic silhouette, suburban horror, exorcist' },
             { name: 'Cold Bedroom', promptString: 'visible breath, freezing room, levitating bed, demonic possession, unnatural lighting, terror' },
             { name: 'Stairs', promptString: 'steep stone steps, night, fog, ominous angle, georgetown, shadows, streetlights' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for The Exorcist (1973), silhouette of Father Merrin standing under a street light in the fog outside the MacNeil house, light beaming from a bedroom window, purple and black atmosphere, iconic horror image --ar 2:3"
     },
     {
         id: 'blade-runner',
@@ -1949,7 +2015,8 @@ export const movies: Movie[] = [
             { name: 'Cyberpunk City', promptString: 'neon billboards, constant rain, flying spinners, futuristic los angeles, massive pyramids, noir atmosphere' },
             { name: 'Tears in Rain', promptString: 'white dove, rain on face, rooftop, neon backlight, poetic death, wet metal texture' },
             { name: 'Voight-Kampff', promptString: 'eye close up, smoke, retina reflection, interrogator machine, noir lighting, shadow blinds' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Blade Runner (1982), Harrison Ford holding a gun in front, Sean Young smoking a cigarette, futuristic neon city skyline in background, flying spinner car, 'BLADE RUNNER' red stencil font, neo-noir sci-fi art --ar 2:3"
     },
     {
         id: 'et-extra-terrestrial',
