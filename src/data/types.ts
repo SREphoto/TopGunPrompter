@@ -29,6 +29,7 @@ export interface MediaItem {
     styles: Style[];
     type: 'movie' | 'series' | 'game';
     seasons?: Season[]; // Only for type === 'series'
+    posterPrompt?: string; // Prompt to generate the original movie poster
 }
 
 // Backward compatibility alias if needed, though we should prefer MediaItem
