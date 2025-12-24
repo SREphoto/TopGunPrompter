@@ -176,8 +176,7 @@ export const lastMohicansScenes: Scene[] = [
     { id: 1, title: 'Elk Hunt', promptPayload: 'Hawkeye running through forest, musket in hand, primal energy, sunlight through trees, kinetic movement' },
     { id: 2, title: 'Waterfall Jump', promptPayload: 'Jumping through massive waterfall, "I will find you!", water crashing, wet hair, desperate romance' },
     { id: 3, title: 'Cliff Fight', promptPayload: 'Chingachgook fighting Magua on cliff edge, sunset, war club, brutal choreography, emotional climax' },
-    {
-        id: 4, title: 'Alice's Fall', promptPayload: 'Alice stepping off the cliff, silence, falling into mist, tragic choice, Magua watching' },
+    { id: 4, title: 'Alice\'s Fall', promptPayload: 'Alice stepping off the cliff, silence, falling into mist, tragic choice, Magua watching' },
     { id: 5, title: 'Promontory Run', promptPayload: 'Running up the mountain trail, epic scenery, score playing (The Gael), urgency, wide shot' }
 ];
 
