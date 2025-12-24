@@ -3,252 +3,252 @@ import type { Scene } from '../types';
 export const taxiDriverScenes: Scene[] = [
     {
         id: 1,
-        title: "Steam Rising",
-        promptPayload: "Yellow taxi emerging from the steam rising from a manhole cover, night, New York City, gritty atmosphere, opening credits."
+        title: "Steam Rising (Opening)",
+        promptPayload: "Cinematic wide shot of a yellow taxi cab emerging from a thick wall of white steam rising from a Manhattan manhole cover at night, neon lights reflecting on the wet asphalt, Bernard Herrmann's jazz score visualization, gritty 35mm film grain, New York urban noir --ar 2.39:1"
     },
     {
         id: 2,
-        title: "Travis' Eyes",
-        promptPayload: "Extreme close up of Travis Bickle's eyes in the rearview mirror, watching the city, paranoia, insomnia, red tint."
+        title: "The Rearview Mirror",
+        promptPayload: "Extreme close-up of Travis Bickle's eyes in the rearview mirror, deep red lighting from a traffic signal, paranoia and insomnia visualized, the blurred city lights of 42nd Street passing in the background, sharp focus on the iris, 1970s gritty texture --ar 2.39:1"
     },
     {
         id: 3,
-        title: "The Interview",
-        promptPayload: "Travis applying for the taxi job, 'I can't sleep', wearing the military jacket, dingy office."
+        title: "Travis' Application",
+        promptPayload: "Low-key lighting medium shot of Travis Bickle in a dingy, smoke-filled taxi garage office, wearing a weathered military winter jacket, 'I can't sleep' expression, hard shadows, industrial textures, the weight of loneliness --ar 2.39:1"
     },
     {
         id: 4,
-        title: "Rain on Windshield",
-        promptPayload: "Driving through Times Square in the rain, neon lights blurring on the wet windshield, jazz score, isolation."
+        title: "Rain on the Windshield",
+        promptPayload: "Atmospheric POV shot from inside the taxi, heavy rain blurring the neon signs of Times Square, windshield wipers moving rhythmically, vibrant reds and blues smear across the glass, liquid city lights, melancholic urban mood --ar 2.39:1"
     },
     {
         id: 5,
         title: "Betsy in White",
-        promptPayload: "Travis watching Betsy walk into the campaign office, wearing a white dress, slow motion, 'She appeared like an angel'."
+        promptPayload: "Dreamlike slow-motion tracking shot of Betsy (Cybill Shepherd) walking through a crowd in a white dress, backlit by the morning sun, 'She appeared like an angel', soft focus, ethereal contrast against the gritty New York street --ar 2.39:1"
     },
     {
         id: 6,
-        title: "Coffee Shop Date",
-        promptPayload: "Travis and Betsy sitting in the diner, awkward conversation, 'I think you're a lonely person', fluorescent light."
+        title: "The Coffee Shop Date",
+        promptPayload: "Symmetrical medium shot of Travis and Betsy in a bright fluorescent-lit diner, red vinyl booths, white coffee cups, the awkwardness of the first date, high-contrast lighting, 70s urban aesthetic, shallow depth of field --ar 2.39:1"
     },
     {
         id: 7,
-        title: "Porn Theater",
-        promptPayload: "Travis taking Betsy to the adult movie theater, her discomfort, red velvet seats, the mistake."
+        title: "The Adult Theater Mistake",
+        promptPayload: "Cringe-inducing medium shot inside a dimly lit pornographic theater, the red glow from the screen on Betsy's horrified face, red velvet seats, Travis oblivious to the social breach, grain and shadow-heavy cinematography --ar 2.39:1"
     },
     {
         id: 8,
-        title: "Phone Booth",
-        promptPayload: "Travis standing in the hallway on the payphone, trying to apologize to Betsy, camera tracking away to the empty hallway, rejection."
+        title: "The Rejected Phone Call",
+        promptPayload: "Poetic long-take tracking shot, Travis on a payphone in a long, empty hallway, the camera slowly moving away from him as he is rejected by Betsy, leaving him small and isolated in the architectural void, beige tones --ar 2.39:1"
     },
     {
         id: 9,
         title: "You Talkin' to Me?",
-        promptPayload: "Travis standing in front of the mirror in his apartment, wearing the jacket, drawing the gun, 'You talkin' to me?', imaginary confrontation."
+        promptPayload: "Iconic close-up of Travis Bickle in his sparse apartment, talking to his own reflection in the mirror, wearing his military jacket, drawing the sleeve-gun, 'You talkin' to me?', intense psychotic energy, gritty realism --ar 2.39:1"
     },
     {
         id: 10,
-        title: "Easy Andy",
-        promptPayload: "Travis buying guns from Easy Andy in the hotel room, suitcases of weapons, .44 Magnum, .38 snub nose, business transaction."
+        title: "Easy Andy's Gun Room",
+        promptPayload: "Moody low-angle shot in a seedy hotel room, suitcases full of handguns on the bed, Easy Andy demonstrating a .44 Magnum, warm incandescent light, weapon textures, the hardware of an assassin --ar 2.39:1"
     },
     {
         id: 11,
-        title: "Sleeve Gun",
-        promptPayload: "Travis testing the sliding rail mechanism for the sleeve gun, mechanical detail, preparation, danger."
+        title: "The Sleeve Gun Mechanism",
+        promptPayload: "Macro detail shot of Travis's homemade metal sliding rail for his sleeve gun, mechanical parts clicking into place, tactical preparation, DIY engineering of madness, sharp metal textures, shallow depth of field --ar 2.39:1"
     },
     {
         id: 12,
-        title: "Iris Entering Cab",
-        promptPayload: "Young Iris jumping into the back of the cab, Sport pulling her out, 'Get out of the car!', confusion."
+        title: "Iris Jumps in the Cab",
+        promptPayload: "Chaotic handheld shot, 12-year-old Iris (Jodie Foster) franticly jumping into the back of Travis's taxi, Sport (the pimp) pulling her out, red neon reflections, sudden urban violence, gritty 35mm motion blur --ar 2.39:1"
     },
     {
         id: 13,
         title: "Breakfast with Iris",
-        promptPayload: "Travis having breakfast with Iris in the diner, trying to convince her to leave, jam on toast, father figure."
+        promptPayload: "Intimate medium shot in a sun-drenched diner, Travis watching Iris eat jam on toast, heart-shaped sunglasses, paternal concern mixed with insanity, soft morning light through the greasy window, 70s grain --ar 2.39:1"
     },
     {
         id: 14,
-        title: "Sport",
-        promptPayload: "Sport the pimp talking to Travis, long hair, fingernail, 'I'm not a pimp, I'm a lover', manipulation."
+        title: "Sport (The Pimp)",
+        promptPayload: "Ominous medium shot of Sport leaning against a brick wall at night, long hair, flamboyant clothes, fingernail cleaning, the predator in his element, green-tinted street lighting, textured urban decay --ar 2.39:1"
     },
     {
         id: 15,
-        title: "The Mohawk",
-        promptPayload: "Travis revealing his new mohawk haircut, military jacket, sunglasses, looking in the mirror, transformation into warrior."
+        title: "The Mohawk Reveal",
+        promptPayload: "Striking close-up of Travis Bickle with a freshly shaved mohawk, military jacket, aviator sunglasses, a warrior's mask, high-contrast lighting, the transformation into a killer, psychological peak --ar 2.39:1"
     },
     {
         id: 16,
-        title: "Palantine Rally",
-        promptPayload: "Travis at the political rally, hand in jacket, smiling nervously, secret service watching, tension."
+        title: "The Palantine Rally",
+        promptPayload: "Suspenseful wide shot of the political rally in the park, Travis in the crowd with his hand inside his jacket, the Secret Service agent watching from the background, morning sunlight, hidden threat, cinematic tension --ar 2.39:1"
     },
     {
         id: 17,
-        title: "Brothel Shootout",
-        promptPayload: "Travis walking up the stairs, shooting the bouncer, the hand shot off, chaotic violence, blood on walls."
+        title: "The Brothel Shootout (Start)",
+        promptPayload: "Visceral action shot, Travis shooting the bouncer in the brothel hallway, blood splattering against the floral wallpaper, high-shutter speed violence, gritty and graphic, the release of suppressed rage --ar 2.39:1"
     },
     {
         id: 18,
-        title: "Sport's Death",
-        promptPayload: "Travis shooting Sport in the stomach, 'I'll kill you!', falling against the doorframe."
+        title: "Sport's Death Scene",
+        promptPayload: "Graphic medium shot, Travis shooting Sport in the stomach outside the brothel, Sport collapsing against the doorframe, red blood on the white shirt, night, street light, the end of the pimp --ar 2.39:1"
     },
     {
         id: 19,
-        title: "Finger Gun",
-        promptPayload: "Travis sitting on the couch covered in blood, police entering, putting his bloody finger to his head, 'Pshhh', smile."
+        title: "The Bloody Finger-Gun",
+        promptPayload: "Haunting close-up, Travis sitting on a couch covered in blood, putting his bloody finger to his temple and mimicking a gun shoot as the police enter, a manic smile, extreme gore, color-drenched lighting --ar 2.39:1"
     },
     {
         id: 20,
-        title: "Overhead Shot",
-        promptPayload: "Bird's eye view of the crime scene, tracking over the bodies and blood, Travis sitting, police weapons drawn."
+        title: "The Overhead Massacre",
+        promptPayload: "Breathtaking overhead (bird's eye) tracking shot, moving slowly over the rooms of the brothel filled with bodies, blood, and spent shells, Travis sitting amongst the carnage, cinematic masterpiece composition --ar 2.39:1"
     },
     {
         id: 21,
-        title: "Alka Seltzer",
-        promptPayload: "Close up of the Alka Seltzer tablet fizzing in the glass of water, bubbling, headache, tension."
+        title: "The Alka-Seltzer Fizz",
+        promptPayload: "Macro close-up of an Alka-Seltzer tablet dissolving in a glass of water, millions of bubbles, the sound visualized, Travis's headache and inner turmoil, shallow depth of field, tactile 70s texture --ar 2.39:1"
     },
     {
         id: 22,
-        title: "Writing Diary",
-        promptPayload: "Travis writing in his journal at the desk, voiceover, 'June 29th. I gotta get in shape', obsession."
+        title: "Travis' Diary",
+        promptPayload: "Close-up of a hand-written journal, 'June 29th. I gotta get in shape', messy scrawl, a lonely man's manifesto, soft lamplight, the documentation of a breakdown, cinematic close-focus --ar 2.39:1"
     },
     {
         id: 23,
-        title: "Burning Flowers",
-        promptPayload: "Travis burning the withered flowers in his sink, blue flame, letting go, cleaning house."
+        title: "Burning the Flowers",
+        promptPayload: "Moody medium shot, Travis burning the withered flowers in his sink with a kitchen match, blue and orange flames, reflections in his eyes, ritualistic purging of his life, dark apartment interior --ar 2.39:1"
     },
     {
         id: 24,
-        title: "TV Gun",
-        promptPayload: "Travis pointing his gun at the television screen, 'Slay the dragon', delusion."
+        title: "Targeting the TV",
+        promptPayload: "Silhouette shot of Travis pointing his .44 Magnum at a static-filled television screen in a dark room, blue glow, 'Slay the dragon', the lines between reality and delusion blurring, cinematic isolation --ar 2.39:1"
     },
     {
         id: 25,
-        title: "Wizard",
-        promptPayload: "Travis talking to Wizard the cab driver in the parking lot, 'I got some bad ideas in my head', seeking advice."
+        title: "Talking to Wizard",
+        promptPayload: "Nocturnal wide shot, Travis and the old driver Wizard leaning against their taxis in a dark parking lot, 'I got some bad ideas in my head', yellow cab hoods, city lights in the distance, blue-hour lighting --ar 2.39:1"
     },
     {
         id: 26,
-        title: "Cleaning the Cab",
-        promptPayload: "Travis washing the blood and vomit off the back seat of the taxi, hose water, 'Some day a real rain will come'."
+        title: "Cleaning the Blood",
+        promptPayload: "Gritty detail shot of Travis hosing out the back seat of his taxi, water washing away blood and urban filth, 'Some day a real rain will come', realistic textures, the unglamorous job of the night driver --ar 2.39:1"
     },
     {
         id: 27,
-        title: "Final Ride",
-        promptPayload: "Betsy getting into Travis's cab at the end, he is a hero now, driving her home, silence."
+        title: "Betsy's Final Ride",
+        promptPayload: "Quiet symmetrical medium shot, Betsy in the back of Travis's cab at the end, she looks at him with admiration for his 'heroism', silence, the irony of his new status, soft street lighting --ar 2.39:1"
     },
     {
         id: 28,
-        title: "Rearview Sting",
-        promptPayload: "Travis looking in the rearview mirror after Betsy leaves, sudden sting of music, eyes darting, the madness is still there."
+        title: "The Final Sting",
+        promptPayload: "Sudden close-up of Travis's eyes in the rearview mirror as Betsy leaves, a sharp musical sting, the return of the paranoid twitch, the cycle of madness ready to restart, high-contrast night lights --ar 2.39:1"
     },
     {
         id: 29,
-        title: "42nd Street",
-        promptPayload: "Driving down 42nd street, hookers, pimps, neon signs, trash, the scum of the earth."
+        title: "42nd Street Nocturne",
+        promptPayload: "Vibrant wide shot of the 1970s Times Square at night, 'trash' and 'scum' as Travis sees it, flashing neon signs, wet streets, hookers and pimps in the shadows, a hellscape of urban color --ar 2.39:1"
     },
     {
         id: 30,
-        title: "Training Montage",
-        promptPayload: "Travis doing pushups, holding his hand over the flame, pullups, preparing for war."
+        title: "Training for the Kill",
+        promptPayload: "Montage medium shot, Travis doing one-handed pushups on his floor, holding his hand over an open flame, the physical hardening of his body, sweat-glistening skin, determination, 35mm film grain --ar 2.39:1"
     },
     {
         id: 31,
-        title: "The .44 Magnum",
-        promptPayload: "Close up of the long barrel .44 Magnum, shiny steel, power."
+        title: "The .44 Magnum (Power)",
+        promptPayload: "Macro eroticized shot of the heavy steel barrel of the .44 Magnum, the weight and power of the weapon, light reflecting off the brushed metal, the tool of his final 'righteousness' --ar 2.39:1"
     },
     {
         id: 32,
-        title: "Knife in Boot",
-        promptPayload: "Travis taping the knife to his boot, hidden weapon, detail."
+        title: "Taping the Knife",
+        promptPayload: "Tactical close-up of Travis taping a long Bowie knife to his boot, the silver blade against the black leather, preparation for the close-quarters kill, gritty textures of tape and metal --ar 2.39:1"
     },
     {
         id: 33,
-        title: "Senator Palantine",
-        promptPayload: "Senator Palantine in the back of the cab, Travis talking to him, 'We need to clean up this city'."
+        title: "Senator in the Cab",
+        promptPayload: "Tense medium shot, Senator Palantine in the backseat of the cab, Travis talking to him through the partition, 'We need to clean up this city', the collision of low-life and high-politics --ar 2.39:1"
     },
     {
         id: 34,
-        title: "Secret Service",
-        promptPayload: "The Secret Service agent spotting Travis, sunglasses, earpiece, suspicion."
+        title: "The Secret Service Shadow",
+        promptPayload: "Cinematic medium shot of the Secret Service agent with dark sunglasses and an earpiece, watching Travis from across the street, the threat sensed but not yet engaged, bright afternoon sun --ar 2.39:1"
     },
     {
         id: 35,
-        title: "Iris's Room",
-        promptPayload: "Iris's room filled with candles, records, knick-knacks, a child's sanctuary in hell."
+        title: "Iris's Sanctuary",
+        promptPayload: "Atmospheric medium shot of Iris's room in the brothel, candles, junk food wrappers, the heartbreaking debris of a childhood lost, warm but seedy lighting, tactile texture of the urban underworld --ar 2.39:1"
     },
     {
         id: 36,
-        title: "Slow Motion Stare",
-        promptPayload: "Travis staring at the pimp, slow motion, hatred, planning."
+        title: "The Slow Motion Glare",
+        promptPayload: "Extreme slow-motion close-up of Travis staring at the pimp Sport, the hatred boiling in his eyes, heat haze distortion, the planning of a murder visualized through a single look --ar 2.39:1"
     },
     {
         id: 37,
-        title: "The Timekeeper",
-        promptPayload: "The Timekeeper banging the drum in the taxi garage, rhythm of the city."
+        title: "The Timekeeper's Drum",
+        promptPayload: "Noisy industrial medium shot in the taxi garage, the character 'The Timekeeper' banging a drum, the rhythm of the city's decay, steam, grease, and mechanical noise, gritty Scorsese aesthetic --ar 2.39:1"
     },
     {
         id: 38,
-        title: "Newspaper Clippings",
-        promptPayload: "The wall covered in newspaper clippings about the 'Taxi Driver Hero', fame, irony."
+        title: "The Heroic Scrapbook",
+        promptPayload: "Close-up of a wall in Travis's hideout covered in newspaper clippings calling him a 'Hero Taxi Driver', the ultimate irony of his madness being rewarded, soft focus, clinical lighting --ar 2.39:1"
     },
     {
         id: 39,
-        title: "American Bandstand",
-        promptPayload: "Travis watching couples dancing on American Bandstand, blank expression, alienation."
+        title: "Watching Bandstand",
+        promptPayload: "Depressing wide shot of Travis sitting alone in his dark room, watching American Bandstand on TV, couples dancing, his total isolation from human joy, blue screen light on his blank face --ar 2.39:1"
     },
     {
         id: 40,
-        title: "Traffic Light",
-        promptPayload: "Close up of the traffic light changing from red to green, blur, city rhythm."
+        title: "The Red Light Change",
+        promptPayload: "Macro shot of a New York traffic light turning from a vibrant red to green, the motion of the city, the only clock Travis understands, high-saturation colors against the dark night --ar 2.39:1"
     },
     {
         id: 41,
-        title: "Man Watching Wife",
-        promptPayload: "The passenger watching his wife's silhouette in the window, 'You see that woman?', jealousy."
+        title: "The Cuckold Passenger",
+        promptPayload: "Intense medium shot of a passenger (Scorsese cameo) in the back of the cab watching his wife's shadow in a window, 'You see that woman?', the contagion of jealousy and rage, dark shadows --ar 2.39:1"
     },
     {
         id: 42,
-        title: "Neon Signs",
-        promptPayload: "Blurry neon signs reflecting in puddles, red and blue, urban texture."
+        title: "Neon Puddles",
+        promptPayload: "Artistic low-angle shot of rain puddles reflecting the 'HOTEL' and 'LIQUOR' neon signs, red and yellow light ripples, the grit and beauty of the gutter, cinematic urban texture --ar 2.39:1"
     },
     {
         id: 43,
-        title: "Wipers",
-        promptPayload: "Windshield wipers moving back and forth, hypnotic, rain."
+        title: "The Hypnotic Wipers",
+        promptPayload: "POV shot looking through the windshield, the wipers moving rhythmically through the heavy rain, the repetition of the job, the trance-like state of the night driver, mesmerizing and bleak --ar 2.39:1"
     },
     {
         id: 44,
-        title: "Campaign Button",
-        promptPayload: "Close up of the 'We Are The People' campaign button, irony."
+        title: "The Campaign Button (Detail)",
+        promptPayload: "Macro detail of a 'We Are The People' campaign button pinned to Travis's military jacket, the blood on the pin, the loss of idealism, high-shutter speed detail of the metal and fabric --ar 2.39:1"
     },
     {
         id: 45,
-        title: "Crumpled Money",
-        promptPayload: "Travis trying to give the crumpled $20 bill to the Timekeeper, 'Take it', rejection."
+        title: "The Rejected Bill",
+        promptPayload: "Close-up of a crumpled $20 bill being pushed across a counter, the rejection of Travis's attempt at transactional morality, gritty lighting, the texture of old dirty currency --ar 2.39:1"
     },
     {
         id: 46,
-        title: "Porn Theater Lobby",
-        promptPayload: "Travis standing in the lobby of the porn theater, looking at the posters, awkwardness."
+        title: "The Loner's Walk",
+        promptPayload: "Wide shot of Travis Bickle walking alone down a deserted New York sidewalk at 3 AM, hands in pockets, head down, the city's vastness making him look like a ghost, cold street highlights --ar 2.39:1"
     },
     {
         id: 47,
-        title: "Iris's Sunglasses",
-        promptPayload: "Iris wearing the heart-shaped sunglasses, innocence lost."
+        title: "Iris's Heart Glasses",
+        promptPayload: "Heartbreaking close-up of 12-year-old Iris wearing oversized heart-shaped sunglasses, the fake glamour of the pimp's world, the loss of innocence reflected in the plastic lenses --ar 2.39:1"
     },
     {
         id: 48,
-        title: "Sport Dancing",
-        promptPayload: "Sport slow dancing with Iris, grooming, creepy tenderness."
+        title: "The Pimp's Dance",
+        promptPayload: "Disturbing medium shot of Sport slow dancing with Iris in her room, grooming and manipulation, soft red light, the predator's gentleness, cinematic horror-subtext --ar 2.39:1"
     },
     {
         id: 49,
-        title: "Hotel Clerk",
-        promptPayload: "The hotel clerk at the shootout, hands up, terrified, blood splatter."
+        title: "The Hallway of Blood",
+        promptPayload: "Graphic wide shot looking down the narrow brothel hallway after the massacre, blood smeared on the walls, flickering overhead light, the aftermath of a righteous slaughter, visceral realism --ar 2.39:1"
     },
     {
         id: 50,
-        title: "End Credits",
-        promptPayload: "The taxi driving away into the night, blurred lights, jazz saxophone, city that never sleeps."
+        title: "Taxi Driver Title Card",
+        promptPayload: "The iconic yellow title 'TAXI DRIVER' on a black background, Bernard Herrmann's jazz theme visualization, the quintessential New York film logo, final silence --ar 2.39:1"
     }
 ];

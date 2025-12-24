@@ -4,251 +4,251 @@ export const aliensScenes: Scene[] = [
     {
         id: 1,
         title: "Cryo Sleep Awakening",
-        promptPayload: "Interior of the Sulaco, cryo-sleep chambers opening, white vapor mist, cold blue lighting, crew waking up groggy, close up of Ripley's eyes opening, high tech sterile environment."
+        promptPayload: "Sterile tracking shot of Sulaco cryo-chamber, hypersleep pods opening in sequence with hydraulic hiss, heavy white vapor pouring onto floor, cold blue medical lighting, Ripley's eyes snapping open in extreme close-up, dew on skin, high-tech serenity --ar 2.39:1"
     },
     {
         id: 2,
         title: "Breakfast Debate",
-        promptPayload: "Mess hall scene, marines eating cornbtread, banter, cigar smoke, Bishop doing the knife trick with Hudson's hand, tension, metallic industrial cafeteria."
+        promptPayload: "Gritty mess hall interior, Marines eating cornbread, cigar smoke forming haze layers, Bishop performing rapid knife trick on Hudson's hand, motion blur of blade, sweat on faces, industrial metallic walls, 'state of the badass art' atmosphere --ar 2.39:1"
     },
     {
         id: 3,
         title: "Drop Ship Descent",
-        promptPayload: "Exterior of the Drop Ship detaching from the Sulaco, entering atmosphere, clouds burning, extreme turbulence, shaking camera, 'We're in the pipe, five by five', intense action."
+        promptPayload: "Kinetic exterior action shot, Drop Ship UD-4L detaching from Sulaco belly, entering turbulent atmosphere, hull burning orange from reentry friction, camera shaking violently, 'In the pipe five by five', intense speed, dark space background --ar 2.39:1"
     },
     {
         id: 4,
         title: "APC Deployment",
-        promptPayload: "Armored Personnel Carrier roaring out of the dropship ramp, wheels spinning dirt, rainstorm on LV-426, dark blue night, headlights cutting through storm, mud texture."
+        promptPayload: "Heavy industrial action shot, APC roaring down dropship ramp hitting mud, massive wheels spinning, rainstorm on LV-426, blue night lightning flashes, headlights cutting through thick fog, military hardware aesthetic, Syd Mead design --ar 2.39:1"
     },
     {
         id: 5,
         title: "Hadley's Hope Entry",
-        promptPayload: "Marines entering the colony corridors, motion trackers pinging, rifles raised, flashlight beams cutting through haze, destroyed barricades, silence, tension."
+        promptPayload: "Tense steadycam shot, Marines sweeping colony corridors, pulse rifles raised, shoulder lamps casting sharp beams through atmospheric dust, destroyed barricades, acid burns on floor, silent dread, blue steel color palette --ar 2.39:1"
     },
     {
         id: 6,
         title: "Facehugger Lab",
-        promptPayload: "Med lab with stasis tubes, facehuggers floating in yellow liquid, science equipment, creepy atmosphere, reflection on glass, gross organic texture."
+        promptPayload: "Creepy medical lab interior, stasis tubes containing floating Facehuggers in yellow amniotic fluid, reflections on curved glass, flickering fluorescent tube, gross organic texture vs sterile metal, silence, scientific horror --ar 2.39:1"
     },
     {
         id: 7,
         title: "Hive Discovery",
-        promptPayload: "Marines descending into the hive, resin coated walls, strange organic architecture, steam venting, xenomorph secretion texture, claustrophobic, heat haze."
+        promptPayload: "Nightmarish wide shot of Atmosphere Processor sub-level, walls encrusted with black biomechanical resin, steam venting from pipes, organic curves inspired by H.R. Giger, intense heat haze, glistening wet surfaces, claustrophobia --ar 2.39:1"
     },
     {
         id: 8,
         title: "Chestburster Victim",
-        promptPayload: "Woman coccooned in resin on wall, waking up, screaming, chest moving, marines looking in horror, slime, dark shadows, H.R. Giger aesthetic."
+        promptPayload: "Horrific close-up, colonist cocooned in resin wall waking up, slime stretching, chest heaving violently, Marines watching in horror, dark shadows with harsh rim light, biomechanical fusion of man and hive, tragic terror --ar 2.39:1"
     },
     {
         id: 9,
         title: "Ambush",
-        promptPayload: "Xenomorphs emerging from the walls effectively camouflage, chaotic gunfire, muzzle flashes illuminating slick black alien skin, panic, motion blur, screeching."
+        promptPayload: "Chaotic action frame, Xenomorphs camouflaged in resin walls suddenly peeling off to attack, muzzle flashes from Pulse Rifles illuminating sleek black skulls and teeth, motion blur, panic, high contrast strobe lighting, screeching visualized --ar 2.39:1"
     },
     {
         id: 10,
         title: "Retreat to APC",
-        promptPayload: "Ripley driving the APC, crushing debris, gears grinding, marines diving inside, alien tail smashing windshield, sparks, metal crunching, desperate escape."
+        promptPayload: "Desperate escape sequence, Ripley driving APC with gears grinding, Marines diving into side hatch, Alien tail smashing reinforced windshield, sparks flying, metal crunching, rain pouring outside, chaotic interior lighting --ar 2.39:1"
     },
     {
         id: 11,
         title: "Nuke from Orbit",
-        promptPayload: "Ripley debating with Burke, 'I say we take off and nuke the entire site from orbit', intense determined expression, sweat, strategy room, low key lighting."
+        promptPayload: "Intense strategy room close-up, Ripley in heated debate, face sweaty and dirty, 'I say we take off and nuke the entire site from orbit', determined glare, tactical screens glowing in background, low key lighting, iconic line delivery --ar 2.39:1"
     },
     {
         id: 12,
         title: "Sentry Guns",
-        promptPayload: "Sentry turret guns tracking movement in hallway, ammo count dropping rapidly on LED display, mechanical firing sound, smoke, shell casings piling up."
+        promptPayload: "Tense persistent monitor shot, UA 571-C Sentry Guns firing automatically in corridor, ammo counters dropping rapidly on green LED display, smoke filling hallway, mechanical whirring sound visualized, desperation of dwindling resources --ar 2.39:1"
     },
     {
         id: 13,
         title: "Newt's Hiding Place",
-        promptPayload: "Newt hiding in ventilation ducts, clutching doll head, dirty face, scared eyes, grate shadows, industrial fans turning, isolation."
+        promptPayload: "Claustrophobic shot in ventilation ducts, Newt clutching doll head 'Casey', face smeared with grime, wide terrified eyes reflecting flashlight beam, grate shadows barring her face, industrial fans turning, isolation --ar 2.39:1"
     },
     {
         id: 14,
         title: "Med Lab Standoff",
-        promptPayload: "Ripley and Newt locked in room with facehugger scuttling on floor, overturning furniture, fire alarm flashing red, pulse rifle fire, chaos."
+        promptPayload: "High anxiety action shot in locked Med Lab, Ripley and Newt backed against wall, Facehugger scuttling quickly across floor like a spider, overturning medical trays, red emergency strobe light flashing, fire alarm pulsing, chaos --ar 2.39:1"
     },
     {
         id: 15,
         title: "Ventilation Shaft Escape",
-        promptPayload: "Vasquez and Gorman in vents, red emergency flare lighting, tight space, aliens closing in, sweat, claustrophobia, heroic sacrifice moment."
+        promptPayload: "Tight frantic tracking shot, Vasquez and Gorman retreating through narrow vents, red emergency flares casting harsh shadows, Aliens screeching behind them, sweat and grime, metallic claustrophobia, heroic sacrifice imminent --ar 2.39:1"
     },
     {
         id: 16,
         title: "Grenade Suicide",
-        promptPayload: "Gorman holding grenade, thumb on pin, acceptance, explosion flash, close up hand, tragic end."
+        promptPayload: "Tragic heroic close-up, Gorman and Vasquez clasping hands on thermal detonator, thumb pressing pin, acceptance of death, surrounding aliens lunging, harsh backlight of upcoming explosion, emotional bond --ar 2.39:1"
     },
     {
         id: 17,
         title: "Elevator Ride Down",
-        promptPayload: "Ripley loading up with weapons, taping pulse rifle to flamethrower, elevator lights passing, heavy breathing, preparing for war, iconic gear up."
+        promptPayload: "Iconic preparation montage shot, Ripley in elevator taping Pulse Rifle to Flame Thrower, loading grenade launcher, heavy industrial machinery passing vertically in background, determination, warrior transformation, 'Get away from her you bitch' setup --ar 2.39:1"
     },
     {
         id: 18,
         title: "Queen's Chamber",
-        promptPayload: "Massive Alien Queen laying eggs, steam, hissing, gigantic scale, ovipositor pulsing, warrior drones protecting her, hellish nightmare landscape."
+        promptPayload: "Epic nightmare super-wide shot, Alien Queen sitting on massive egg sac throne, steam rising, hundreds of eggs in mist, biomechanical architecture, Giger design perfection, hellish atmosphere, deep blue and black palette --ar 2.39:1"
     },
     {
         id: 19,
         title: "Egg Burning",
-        promptPayload: "Ripley firing flamethrower at eggs, orange fire engulfing room, screeching, chaotic destruction, motherly rage, high contrast lighting."
+        promptPayload: "Visceral destruction shot, Ripley firing flamethrower in 360 degree arc, orange napalm engulfing Queen's chamber, eggs popping, Queen screaming in rage, high contrast firelight against blue dark, motherly fury unleashed --ar 2.39:1"
     },
     {
         id: 20,
         title: "Power Loader Battle",
-        promptPayload: "Ripley in yellow Power Loader exo-suit, stepping out of shadows, 'Get away from her you bitch', industrial mechanical aesthetic, hydraulics hissing."
+        promptPayload: "Sci-fi boxing match shot, Ripley stepping out of shadows in yellow Caterpillar P-5000 Power Loader, hydraulic clamps snapping, 'Get away from her you bitch', industrial mechanical aesthetic, heavy machinery vs organic monster --ar 2.39:1"
     },
     {
         id: 21,
         title: "Queen vs Loader",
-        promptPayload: "Power Loader wrestling with Queen, metal claw gripping chitinous neck, sparks flying, airlock warning twisting lights, epic duel, sense of weight."
+        promptPayload: "Dynamic wrestling match angle, Power Loader metal claw gripping Alien Queen's chitinous neck, Queen scratching at roll cage, sparks showering down, rotating amber hazard lights cutting through smoke, epic scale duel --ar 2.39:1"
     },
     {
         id: 22,
         title: "Airlock Ejection",
-        promptPayload: "Airlock floor opening, Queen holding onto Ripley's shoe, vacuum sucking debris out, wind howling, desperate struggle, stars outside."
+        promptPayload: "Harrowing low angle shot from floor, airlock hatch blasting open, vacuum sucking debris into stars, Ripley clinging to ladder, Queen holding onto Ripley's ankle, wind howling visualization, desperate struggle for survival --ar 2.39:1"
     },
     {
         id: 23,
         title: "Bishop Torn in Half",
-        promptPayload: "Android Bishop speared by Queen's tail, lifted in air, white synthetic fluid spraying, torn in half, shock, mechanical components visible."
+        promptPayload: "Shocking sudden violence, Bishop impaled and lifted by Queen's tail, white synthetic fluid spraying in arc, body torn in two, stunned expression, mechanical viscera hanging out, wet floor reflection, brutal cyborg destruction --ar 2.39:1"
     },
     {
         id: 24,
         title: "Hypersleep Ending",
-        promptPayload: "Ripley and Newt entering cryo tubes, peaceful soft white lighting, safety, closing eyes, glass fogging up, serene silence."
+        promptPayload: "Peaceful resolution medium shot, Ripley and Newt entering white hypersleep pods, soft diffused medical lighting halo, safety at last, glass curved covers closing, 'Jonesy' the cat sleeping nearby, serene silence --ar 2.39:1"
     },
     {
         id: 25,
         title: "Motion Tracker Ping",
-        promptPayload: "Close up of green motion tracker screen, white dots converging, distance counter decreasing, tension, grain, digital readout."
+        promptPayload: "Close-up insert shot of M314 Motion Tracker screen, green phosphor display, white 'blip' dots converging on center, distance counter reading '4 METERS', focus pulling from screen to sweaty face of marine, audible tension visualized --ar 2.39:1"
     },
     {
         id: 26,
         title: "Dropship Crash",
-        promptPayload: "Dropship crashing and burning on colony ground, massive fireball, twisted metal, rain extinguishing flames, hope lost moment."
+        promptPayload: "Catastrophic wide shot, Dropship crashing into APC beside colony processor, massive fireball explosion illuminating rain-slicked ground, twisted metal debris flying, hope being extinguished, orange fire vs blue night --ar 2.39:1"
     },
     {
         id: 27,
         title: "Burke's Betrayal",
-        promptPayload: "Burke locking the door, cowardly expression, blue cold lighting, looking through window, corporate greed, reflection."
+        promptPayload: "Sinister medium shot, Burke watching from observation window, locking medical door, reflection of panicked marines in glass, cold unaffected expression, corporate greed personified, blue tint lighting --ar 2.39:1"
     },
     {
         id: 28,
         title: "Vasquez Firing",
-        promptPayload: "Vasquez screaming and firing Smart Gun, massive muzzle flash, shell casings flying, muscle definition, bandana, pure action intensity."
+        promptPayload: "Iconic action hero shot, Vasquez screaming war cry, firing M56 Smart Gun from hip, massive muzzle flash blinding camera, shell casings ejecting in slow motion, bandana, sweat, pure adrenaline, 'Let's rock!' energy --ar 2.39:1"
     },
     {
         id: 29,
         title: "Hudson's Last Stand",
-        promptPayload: "Hudson screaming 'Game over man!', firing blindly, being pulled down through floor plates, terror, strobe lighting."
+        promptPayload: "Tragic action sequence, Hudson firing Pulse Rifle blindly while being dragged through floor grating by Xenomorphs, screaming 'Game over man!', strobe lighting disorienting view, panic turning to fight, terror --ar 2.39:1"
     },
     {
         id: 30,
         title: "Atmosphere Processor",
-        promptPayload: "Giant cooling towers, lightning storms, metallic industrial skyline of LV-426, blue and grey palette, matte painting scale."
+        promptPayload: "Majestic matte painting wide shot, LV-426 Atmosphere Processor complex at night, massive cooling towers venting steam, lightning storms in background, metallic industrial skyline, tiny APC in foreground for scale, ominous beauty --ar 2.39:1"
     },
     {
         id: 31,
         title: "Flamethrower Incineration",
-        promptPayload: "Stream of liquid fire hitting alien warrior, creature screeching and flailing, bright orange illumination in dark corridor, smoke."
+        promptPayload: "Intense combat frame, M240 Incinerator Unit unleashing jet of liquid fire, Warrior Alien screeching while convulsing in flames, bright orange illumination banishing the shadows, smoke billowing, heat distortion --ar 2.39:1"
     },
     {
         id: 32,
         title: "Acid Blood Burn",
-        promptPayload: "Acid blood melting through metal floor decks, smoke rising, hissing sound visualized, layers dissolving, danger."
+        promptPayload: "Macro detail shot, neon green acid blood sizzling through metal floor grating levels, smoke reacting chemically, layers dissolving instantly, danger visualized, harsh industrial lighting --ar 2.39:1"
     },
     {
         id: 33,
         title: "Welding the Door",
-        promptPayload: "Hudson welding a door shut, sparks flying, sweat, panic, 'They're coming out of the goddamn walls', claustrophobia."
+        promptPayload: "High tension close-up, Hudson frantically welding blast door shut, sparks cascading over sweat-drenched face, 'They're coming outta the goddamn walls!', claustrophobia, blue welding arclight, panic --ar 2.39:1"
     },
     {
         id: 34,
         title: "Hicks' Shotgun",
-        promptPayload: "Hicks pulling out pump action shotgun for close encounters, 'I like to keep this handy', gritty texture, military hardware."
+        promptPayload: "Cool character beat medium shot, Corporal Hicks racking slide of Ithaca 37 shotgun, 'I like to keep this handy', weary professional expression, scar on face, military hardware texture, grit --ar 2.39:1"
     },
     {
         id: 35,
         title: "Facehugger Jump",
-        promptPayload: "Facehugger leaping towards camera, spider legs spread, underside visible, motion blur, jump scare, nightmare fuel."
+        promptPayload: "Jump scare POV frame, Facehugger leaping rapidly towards lens, spider-like legs splayed, pale underside visible, motion blur, depth of field focus on terror, nightmare fuel --ar 2.39:1"
     },
     {
         id: 36,
         title: "Queen's Tail",
-        promptPayload: "Sharp tip of Queen's tail slowly rising behind Newt, rack focus, menacing, stealth, dark metallic texture."
+        promptPayload: "Menacing stealth shot, razor-sharp tip of Queen's tail rising slowly behind oblivious Newt, rack focus from Newt to tail, dark metallic chitin texture, impending doom, shadow play --ar 2.39:1"
     },
     {
         id: 37,
         title: "APC Wheels",
-        promptPayload: "Massive APC wheels crushing rocks, suspension compressing, low angle tracking shot, military vehicle power."
+        promptPayload: "Dynamic low angle tracking shot, massive APC wheels crushing jagged rocks on LV-426 surface, suspension compressing, sheer weight and power, headlights cutting through rain, mud flying, military industrial design --ar 2.39:1"
     },
     {
         id: 38,
         title: "Pulse Rifle Display",
-        promptPayload: "Digital ammo counter on Pulse Rifle reading '95', futuristic gun design, matte black finish, weathered texture."
+        promptPayload: "Insert shot of M41A Pulse Rifle LED counter reading '95', matte black retro-futurist aesthetic, weathered metal texture, scratched surface, iconic weapon design, red digital glow --ar 2.39:1"
     },
     {
         id: 39,
         title: "Newt's Doll Head",
-        promptPayload: "Dirty doll head floating in water, ripples, ominous foreshadowing, lost innocence, dark moody lighting."
+        promptPayload: "Eerie water level shot, dirty doll head 'Casey' bobbing in dark sewer water, ripples spreading, ominous foreshadowing of abduction, lost innocence, blue backlighting, cinematic gloom --ar 2.39:1"
     },
     {
         id: 40,
         title: "Bishop's Knife Trick",
-        promptPayload: "Fast motion blur of knife hitting table between fingers, Hudson's terrified face, Bishop's intense focus, metallic sound."
+        promptPayload: "Hyper-speed action close-up, Bishop's hand blurring as knife stabs between Hudson's spread fingers on metal table, Hudson's terrified reaction, intense focus, metallic clinking sound visualization, bravado --ar 2.39:1"
     },
     {
         id: 41,
         title: "Resin Wall",
-        promptPayload: "Human bodies codified into the hive wall, gross biomechanical texture, slime dripping, suffering faces, horror tableau."
+        promptPayload: "Gruesome detail shot of Hive wall, human bodies calcified into resin material, faces frozen in agony, slime dripping, biomechanical texture fusion, H.R. Giger organic horror, dark wet lighting, disturbing imagery --ar 2.39:1"
     },
     {
         id: 42,
         title: "Sulaco Orbit",
-        promptPayload: "USS Sulaco floating in space, gun-shaped silhouette, planet LV-426 below, stars, silence, hard sci-fi aesthetic."
+        promptPayload: "Hard sci-fi exterior shot, USS Sulaco heavy cruiser floating silently in deep space, angular gun-shaped silhouette, LV-426 planet looming below with storm clouds, stars, cold desolation, realistic spaceship model photography style --ar 2.39:1"
     },
     {
         id: 43,
         title: "Rain on Window",
-        promptPayload: "Rain lashing against the colony window, dark storm outside, observing the bleak landscape, isolation, moody atmosphere."
+        promptPayload: "Melancholy interior shot, rain lashing against colony reinforced glass, distorted view of dark storm outside, Newt watching silently, reflection of hopeless landscape, blue mood lighting, isolation, atmospheric thunder --ar 2.39:1"
     },
     {
         id: 44,
         title: "Colony Blueprint",
-        promptPayload: "Bishop pointing at blue wireframe schematics of the colony, planning the rescue, tactical map, glowing CRT lines."
+        promptPayload: "Tactical briefing insert shot, Bishop pointing to glowing blue wireframe schematic of Hadley's Hope on CRT monitor, scan lines visible, retro-tech aesthetic, strategic planning, tension, digital readout --ar 2.39:1"
     },
     {
         id: 45,
         title: "Burke's Demise",
-        promptPayload: "Burke running into Alien, door opening to reveal jaws, scream cut short, corporate karma, dark shadow."
+        promptPayload: "Poetic justice horror shot, Burke fleeing into dark corridor, door opening to reveal Alien jaws dripping saliva, scream cut short, corporate suit vs primal monster, shadow engulfing him, karmic retribution --ar 2.39:1"
     },
     {
         id: 46,
         title: "Smart Gun Headset",
-        promptPayload: "Close up of Vasquez's eye piece targeting system, red reticle, tech overlay, cyborg aesthetic, intense concentration."
+        promptPayload: "Tech detail close-up, Vasquez's face with Smart Gun targeting headset eyepiece over one eye, red reticle glowing, looking cool and cybernetic, intense concentration, sweat, military sci-fi iconography --ar 2.39:1"
     },
     {
         id: 47,
         title: "Queen's Elevator Ride",
-        promptPayload: "Queen alien squeezing onto the elevator platform, massive size, smoke, red hazard lights rotating, ascending to deck."
+        promptPayload: "Imposing low angle shot, Alien Queen squeezing massive bulk onto open elevator platform, steam venting, red hazard lights rotating, size contrast with industrial environment, ascending from hell, unstoppable force --ar 2.39:1"
     },
     {
         id: 48,
         title: "Bishop Crawling",
-        promptPayload: "Torso of Bishop crawling to save Newt, leaking white fluid, determination, android endurance, floor grate texture."
+        promptPayload: "Grotesque determination tracking shot, upper torso of bisected Bishop crawling heavily across metal floor grate to save Newt, leaking white fluid, dragging entrails, non-human endurance, sparks flying, heroic horror --ar 2.39:1"
     },
     {
         id: 49,
         title: "Nuclear Cloud",
-        promptPayload: "Mushroom cloud rising from surface of LV-426 as dropship flies away, shockwave, destruction, blinding light, epic scale."
+        promptPayload: "Apocalyptic wide shot, massive mushroom cloud rising from LV-426 surface as Dropship speeds away in foreground, blinding white light shockwave, planet surface cracking, total annihilation, epic scale destruction --ar 2.39:1"
     },
     {
         id: 50,
         title: "Final Sleep",
-        promptPayload: "Ripley sleeping peacefully in cryotube, 'Jonesy' the cat nearby, ending narration, soft focus, survival."
+        promptPayload: "Ultimate peace finale shot, Ripley's face relaxed in cryosleep behind glass, soft white frost, 'Jonesy' curled up, slow zoom out, silence after the storm, ambiguous safety, fade to white, emotional closure --ar 2.39:1"
     }
 ];

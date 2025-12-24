@@ -3,252 +3,252 @@ import type { Scene } from '../types';
 export const terminator2Scenes: Scene[] = [
     {
         id: 1,
-        title: "Skull Crush",
-        promptPayload: "Future war battlefield, T-800 metal foot crushing human skull, blue night lasers, rubble, apocalyptic wasteland, grim opening."
+        title: "Future War Opening",
+        promptPayload: "Nightmarish wide shot of the Year 2029 future war battlefield, a chrome T-800 endoskeleton foot crushing a human skull into the grey ash and pulverized bone, blue plasma laser beams cutting through a dark smoky sky, smoldering ruins of Los Angeles, cinematic rubble, cold blue high-contrast lighting, apocalyptic atmosphere --ar 2.39:1"
     },
     {
         id: 2,
-        title: "Barroom Brawl",
-        promptPayload: "Arnold naked in biker bar, grabbing biker by sunglasses, 'I need your clothes, your boots, and your motorcycle', tough atmosphere, muscle definition."
+        title: "T-800 Arrival (Arnold)",
+        promptPayload: "Dramatic low-angle shot of the time displacement sphere's aftermath, Arnie (T-800) kneeling in a perfectly spherical crater in a dark parking lot, blue electrical arcs dancing on the concrete floor, high-contrast night lighting, steam rising, muscular silhouette, cinematic arrival --ar 2.39:1"
     },
     {
         id: 3,
-        title: "Bad to the Bone",
-        promptPayload: "Terminator walking out of bar in leather gear, putting on sunglasses, shotgun, motorcycle, classic rock vibe, confident slow motion."
+        title: "I Need Your Clothes",
+        promptPayload: "Cinematic medium shot of the T-800 entering a smoky biker bar, backlit by neon signage, cold unblinking stare, muscle definition, pool players in background, leather and grit 90s aesthetic, tension visualization --ar 2.39:1"
     },
     {
         id: 4,
-        title: "T-1000 Arrival",
-        promptPayload: "Police car arrival, T-1000 morphing from liquid metal sphere, chrome reflection, naked silhouette, cold expression, electrical sparks."
+        title: "Bad to the Bone",
+        promptPayload: "Iconic slow-motion tracking shot, T-800 walking out of the bar wearing black leather gear and sunglasses, holding a Winchester shotgun, mounting a Harley Davidson Fat Boy, classic rock anthem vibes, cool confidence, cinematic hero lighting --ar 2.39:1"
     },
     {
         id: 5,
-        title: "Canal Chase",
-        promptPayload: "Truck chasing dirt bike in LA river canal, massive semi truck jumping from bridge, sparks, John Connor looking back in terror, sunny day action."
+        title: "T-1000 Arrival",
+        promptPayload: "Eerie medium shot of a police car in a dark alley, T-1000 (Robert Patrick) emerging from behind a fence, liquid metal ripple effect on skin, cold clinical expression, high-contrast shadows, 90s CGI masterpiece aesthetic --ar 2.39:1"
     },
     {
         id: 6,
-        title: "Rosen's Flowers",
-        promptPayload: "T-800 pulling shotgun from box of roses, slow motion walking, mall hallway, 'Get down', impending violence, bouquet falling."
+        title: "John Connor's Dirt Bike",
+        promptPayload: "Action tracking shot, young John Connor riding his Honda dirt bike through sun-drenched LA streets, hair in face, red flannel shirt, 90s urban grit, handheld camera movement, sense of rebellious freedom --ar 2.39:1"
     },
     {
         id: 7,
-        title: "T-1000 vs T-800",
-        promptPayload: "T-800 thrown through window, T-1000 showing no pain, bullet holes in police uniform healing silver, mall brawl, physical power."
+        title: "The Canal Chase",
+        promptPayload: "Epic wide shot of a massive semi-truck flying through a concrete bridge into the LA river canal, sparks showering everywhere, chasing John's tiny dirt bike, cinematic scale, high speed motion blur, water splashing --ar 2.39:1"
     },
     {
         id: 8,
-        title: "Pescadero Asylum",
-        promptPayload: "Sarah Connor doing pull-ups on overturned bed, sweat, muscle definition, intense focus, mental hospital cell, blue cold lighting."
+        title: "Rose Box Shotgun",
+        promptPayload: "Cinematic slow-motion close-up, T-800 walking through a mall hallway pulling a shotgun out of a box of red roses, flower petals falling like snow, high-shutter speed photography, imminent violence, iconic action beat --ar 2.39:1"
     },
     {
         id: 9,
-        title: "Lick the Floor",
-        promptPayload: "Guard licking Sarah's face, Sarah spitting, restraints, abuse, anger in eyes, white hospital uniform, tension."
+        title: "The Mall Standoff",
+        promptPayload: "High-tension medium shot, T-800 and T-1000 facing off in the mall corridor, shotgun blasts tearing holes in the T-1000's police uniform, liquid metal silver splashes, bystanders fleeing in blurred background, anamorphic lens flares --ar 2.39:1"
     },
     {
         id: 10,
-        title: "Hospital Escape",
-        promptPayload: "Sarah running barefoot, T-800 stepping off elevator, 'Come with me if you want to live', shotgun blast, slow motion realization."
+        title: "Sarah Connor's Asylum",
+        promptPayload: "Intense medium shot in Pescadero State Hospital, Sarah Connor doing pull-ups on an overturned bed frame, extreme muscle definition, sweat-glistening skin, cold blue institutional lighting, determined eyes, psychological grit --ar 2.39:1"
     },
     {
         id: 11,
-        title: "Liquid Metal Bars",
-        promptPayload: "T-1000 walking through metal prison bars, gun getting stuck, liquid metal flowing around bars, chrome texture, mind bending VFX."
+        title: "Dyson's Vision",
+        promptPayload: "Close-up of Miles Dyson staring at the cybermetic arm in the vault, blue glow from the containment glass, reflection of the machine future in his eyes, high-tech lab interior, sense of impending doom --ar 2.39:1"
     },
     {
         id: 12,
-        title: "Skull Surgery",
-        promptPayload: "Sarah operating on T-800 head, mirror reflection, CPU chip removal, bloody tools, mechanical skull underneath, gore and tech."
+        title: "Hospital Breakout",
+        promptPayload: "Action shot, T-800 stepping off the hospital elevator, 'Come with me if you want to live', Sarah's frozen face of terror, high-contrast hallway lighting, slow-motion realization, cinematic tension --ar 2.39:1"
     },
     {
         id: 13,
-        title: "Nuclear Nightmare",
-        promptPayload: "Sarah's dream, playground fence, nuclear explosion, skin burning off skeleton, playground washing away, fiery apocalypse, screaming."
+        title: "Walking Through Bars",
+        promptPayload: "Mind-bending medium shot, T-1000 walking effortlessly through the metal bars of a prison gate, gun getting caught momentarily, liquid metal silver flowing around the iron, perfect CG integration, cold blue lighting --ar 2.39:1"
     },
     {
         id: 14,
-        title: "Dyson's House",
-        promptPayload: "Sarah aiming laser sight at Dyson, red dot on forehead, terrified family, home interior, assassination attempt, heavy breathing."
+        title: "The Desert Cache",
+        promptPayload: "Wide landscape shot, the group arriving at Enrique's desert camp, sun-bleached colors, rows of buried weapons being unearthed, heat haze, military hardware texture, survivalist atmosphere --ar 2.39:1"
     },
     {
         id: 15,
-        title: "Revealing the Arm",
-        promptPayload: "T-800 cutting off arm skin to show Dyson the robot hand, bloody skeleton hand moving, shock on Dyson's face, truth revealed."
+        title: "T-800 Maintenance",
+        promptPayload: "Intimate close-up, Sarah removing the CPU chip from the T-800's mechanical skull in the mirror, blood and metal, exposed robotic components, flickering room light, ethical dilemma visualization --ar 2.39:1"
     },
     {
         id: 16,
-        title: "Cyberdyne Lobby",
-        promptPayload: "T-800 with minigun destroying police cars, 'Human Casualties: 0.0', office glass shattering, massive destruction, smoke and chaos."
+        title: "The Nuclear Dream",
+        promptPayload: "Terrifying wide shot of a playground in Los Angeles, sudden nuclear flash, Sarah Connor burning on the fence, skeletons of children, massive wall of fire (atomic blast), visual effects masterpiece, harrowing destruction --ar 2.39:1"
     },
     {
         id: 17,
-        title: "Tear Gas SWAT",
-        promptPayload: "SWAT team entering through smoke, gas masks, lasers beams cutting fog, T-800 walking through tear gas unaffected, blue lighting."
+        title: "Assassinating Dyson",
+        promptPayload: "High-tension low-light shot, Sarah Connor aiming a laser-sighted rifle at Dyson's head, red dot on his forehead, crying family in background, moral breaking point, deep shadows, cinematic grief --ar 2.39:1"
     },
     {
         id: 18,
-        title: "Helicopter Jump",
-        promptPayload: "T-1000 motorcycle jumping out of building into helicopter, glass shattering, mid-air freeze, liquid metal pilot, insane stunt."
+        title: "Revealing the Machine",
+        promptPayload: "Shocking medium shot, T-800 cutting the flesh off his forearm to reveal the robotic hand to Dyson, blood dripping onto the carpet, mechanical fingers moving with precision, high-contrast lighting, the reveal of truth --ar 2.39:1"
     },
     {
         id: 19,
-        title: "Liquid Nitrogen Truck",
-        promptPayload: "Liquid nitrogen tanker leaking, T-1000 freezing solid, statutesque pose, breaking off limbs, 'Hasta la vista, baby', cold blue smoke."
+        title: "Cyberdyne Lobby Siege",
+        promptPayload: "Epic action wide shot, T-800 with a minigun destroying a line of police cars, smoke and fire everywhere, 'Human Casualties: 0.0', glass shattering in slow motion, massive scale destruction, cinematic mayhem --ar 2.39:1"
     },
     {
         id: 20,
-        title: "Shattered T-1000",
-        promptPayload: "Frozen T-1000 exploding into thousands of ice shards, sliding across steel mill floor, melting into mercury droplets, reforming."
+        title: "SWAT Gas Attack",
+        promptPayload: "Atmospheric shot, SWAT team in gas masks entering the Cyberdyne lobby through thick blue-green tear gas, laser beams cutting through the fog, T-800 silhouette walking through the haze unaffected, high-contrast noir --ar 2.39:1"
     },
     {
         id: 21,
-        title: "Steel Mill Finale",
-        promptPayload: "Molten steel vat glowing orange, industrial catwalks, T-800 vs T-1000 fight, heat distortion, sweat, damaged makeup."
+        title: "Helicopter Jump (Building)",
+        promptPayload: "Stunt-focused action shot, T-1000 on a motorcycle jumping out of a skyscraper window into a flying helicopter, glass shattering, mid-air freeze-frame feel, liquid metal pilot appearing, impossible action --ar 2.39:1"
     },
     {
         id: 22,
-        title: "Arm in Gear",
-        promptPayload: "T-800 arm trapped in giant gears, crushing metal, sparks flying, struggle, power failing, red eye flickering."
+        title: "The Liquid Nitrogen Truck",
+        promptPayload: "Dramatic wide shot, a liquid nitrogen tanker crashing and leaking across the highway, freezing fog rolling over everything, T-1000 freezing solid in a statuesque pose, blue-white color palette, cold intensity --ar 2.39:1"
     },
     {
         id: 23,
-        title: "Thumbs Up",
-        promptPayload: "T-800 lowering into lava, metal skull burning, final thumbs up hand rising, emotional sacrifice, tearful John Connor, orange glow."
+        title: "Hasta La Vista, Baby",
+        promptPayload: "Heroic medium shot, T-800 standing in the freezing fog, 'Hasta la vista, baby', firing the 1911 pistol, shattered frozen shards of the T-1000 flying across the floor, high contrast blue lighting --ar 2.39:1"
     },
     {
         id: 24,
-        title: "No Fate",
-        promptPayload: "Carving 'NO FATE' into wooden picnic table, knife detail, desert setting, sun flare, Sarah contemplating, knife macro."
+        title: "The Steel Mill Arrival",
+        promptPayload: "Ominous industrial wide shot, the trucks entering a glowing orange steel mill at night, sparks flying, massive machinery, heat distortion, mechanical roar visualized, hellish atmosphere --ar 2.39:1"
     },
     {
         id: 25,
-        title: "Reloading Shotgun",
-        promptPayload: "T-800 flipping leverage shotgun one-handed on motorcycle, spin cocking mechanism, cool action beat, leather jacket texture."
+        title: "Moloch of the Mill",
+        promptPayload: "Cinematic medium shot, T-1000 rising from a puddle of molten steel, glowing orange liquid dripping from its silver body, silhouette against the fire, industrial horror, extreme heat effects --ar 2.39:1"
     },
     {
         id: 26,
-        title: "Donut Stick",
-        promptPayload: "T-1000 poking finger through guard's head, turning into spike, coffee cup dropping, 'Hey that's a nice bike', liquid metal horror."
+        title: "T-800 vs T-1000: Final Fight",
+        promptPayload: "Brutal action shot, the two Terminators grappling on a catwalk above molten metal, T-800's face half-destroyed revealing the red robotic eye, sparks and oil, physical domination, intense orange lighting --ar 2.39:1"
     },
     {
         id: 27,
-        title: "Floor Tile Camouflage",
-        promptPayload: "T-1000 rising out of checkered floor tile, texture morphing from chaotic to chrome to police uniform, perfect stealth."
+        title: "Sarah's Shotgun Last Stand",
+        promptPayload: "Powerful medium shot, Sarah Connor one-handedly loading and firing a shotgun at the T-1000, grit and sweat on her face, determined warrior mother, orange embers flying, high-shutter speed motion --ar 2.39:1"
     },
     {
         id: 28,
-        title: "Smiling Lesson",
-        promptPayload: "John teaching Terminator to smile, awkward mechanical grin, teeth showing, desert background, bonding moment, humor."
+        title: "The Grenade Bloat",
+        promptPayload: "Graphic close-up, the T-1000 being hit by a M79 grenade, chest bloating out in a liquid metal donut shape, silver ripples, the impact of high-explosive, industrial background, 90s VFX peak --ar 2.39:1"
     },
     {
         id: 29,
-        title: "Minigun Bloom",
-        promptPayload: "Muzzle flash of minigun spinning, shell casings pouring out like water, glass shredding, unstoppable force, cinematic slow motion."
+        title: "Falling into the Vat",
+        promptPayload: "Wide shot, the T-1000 falling backwards into the vat of molten steel, thrashing and morphing through all its previous forms, orange glow, smoke and bubbles, the end of the machine, epic scale --ar 2.39:1"
     },
     {
         id: 30,
-        title: "Grenade Launcher",
-        promptPayload: "T-800 firing thumper grenade launcher, smoke trail, explosion, reloading break-action, badass pose, damaged face."
+        title: "The Thumbs Up",
+        promptPayload: "Emotional close-up, the T-800 being lowered into the molten metal on a chain, arm rising out of the orange glow, final thumbs up gesture, John Connor crying in background, tragic hero sacrifice, cinematic resolution --ar 2.39:1"
     },
     {
         id: 31,
-        title: "Tanker Explosion",
-        promptPayload: "Steel mill truck crash, massive explosion filling screen, T-800 walking away, silhouette, fire dynamics."
+        title: "No Fate (Carving)",
+        promptPayload: "Macro detail shot, Sarah's hand carving 'NO FATE' into a wooden table in the desert, wood shavings, sharp knife, sun-baked textures, philosophy of the future, close focus --ar 2.39:1"
     },
     {
         id: 32,
-        title: "Sarah's Sunglasses",
-        promptPayload: "Sarah wearing round sunglasses, smoking cigarette, desert wind, looking at horizon, warrior mother, iconic look."
+        title: "The Biker Bar Exterior",
+        promptPayload: "Night wide shot, 'The Corral' bar, motorcycles lined up, neon beer signs, dark blue sky, 90s Americana, a sense of masculine grit, cinematic location --ar 2.39:1"
     },
     {
         id: 33,
-        title: "High Five",
-        promptPayload: "John teaching T-800 to high five, hand missing, looking at hand confused, learning humanity, 'Up high, down low'."
+        title: "Scanning the Mall",
+        promptPayload: "T-800 POV, digital red HUD scanning faces in a crowded neon-lit 90s mall, 'Target: John Connor', object identification boxes, cinematic technical overlay, futuristic robot perspective --ar 2.39:1"
     },
     {
         id: 34,
-        title: "Enrique's Camp",
-        promptPayload: "Underground bunker, weapons cache, cleaning guns, desert heat, military preparation, stockpiling ammo."
+        title: "The T-1000's Finger-Spear",
+        promptPayload: "Graphic close-up, T-1000's finger extending into a long chrome needle, piercing a milk carton (or more), cold liquid metal texture, sudden lethality, clinical execution style --ar 2.39:1"
     },
     {
         id: 35,
-        title: "Phone Booth Trick",
-        promptPayload: "John hacking ATM with Atari portfolio, money spitting out, easy money, 90s tech, young hacker."
+        title: "Harley Jump (Bridge)",
+        promptPayload: "Epic action wide shot, T-800 jumping the Harley Davidson off the bridge into the LA canal, mid-air flight, sparks on impact, cinematic stunt-work, golden hour LA sunlight --ar 2.39:1"
     },
     {
         id: 36,
-        title: "Two Sarahs",
-        promptPayload: "T-1000 mimicking Sarah Connor, real Sarah appearing with shotgun, confusion, doubling effect, steel mill tension."
+        title: "The T-1000 Floor Tile Camouflage",
+        promptPayload: "Surreal medium shot, the T-1000 rising out of a checkered floor in the asylum, skin pattern matching the tiles perfectly before returning to chrome, visual deception, cold horror --ar 2.39:1"
     },
     {
         id: 37,
-        title: "Gaping Hole",
-        promptPayload: "T-1000 shot in head, splash of deformations, head split open in donut shape, healing instantly, shock horror."
+        title: "Smiling Lessons (Desert)",
+        promptPayload: "Humerous but layered medium shot, John trying to teach the T-800 how to smile, awkward mechanical grimace on Arnie's face, desert wind, bonding/humanity subtext, bright sunlight --ar 2.39:1"
     },
     {
         id: 38,
-        title: "Need a Vacation",
-        promptPayload: "T-800 damaged, steam leaking, 'I need a vacation', half face metal exposed, glowing red eye, battle damage."
+        title: "Cyberdyne Lab Destruction",
+        promptPayload: "Wide shot, the lab filled with explosives, Dyson holding the detonator, glass and high-tech equipment, imminent catastrophe, countdown tension, cinematic smoke and debris --ar 2.39:1"
     },
     {
         id: 39,
-        title: "Hook Ride",
-        promptPayload: "T-1000 riding on back of tow truck, hook caught in shoulder, ripping metal, uncaring expression, pursuit intensity."
+        title: "The Minigun Barrage (Lobby)",
+        promptPayload: "Intense close-up of the minigun spinning, hundreds of shell casings pouring out in a brass waterfall, muzzle flash strobing the dark room, T-800's face fixed in concentration, sheer power --ar 2.39:1"
     },
     {
         id: 40,
-        title: "Elevator Ceiling",
-        promptPayload: "T-1000 head reforming from splash on elevator ceiling, dripping down, liquid horror, claustrophobia."
+        title: "Sarah's Escape (Vent)",
+        promptPayload: "Claustrophobic low-angle shot, Sarah squeezing through a narrow crawlspace in the hospital, sweat and panic, T-1000's head appearing through the ceiling behind her, horror chase sequence --ar 2.39:1"
     },
     {
         id: 41,
-        title: "Semi-Truck Tires",
-        promptPayload: "Giant truck tires screeching, smoke, turning corner hard, heavy weight, action chase, low angle."
+        title: "The Hand in the Gears",
+        promptPayload: "Graphic detail shot, T-800's mechanical arm crushed in massive industrial gears, sparks, oil, the struggle of machine against machine, grit and texture of the mill --ar 2.39:1"
     },
     {
         id: 42,
-        title: "Security Guard Coffee",
-        promptPayload: "Guard dropping cup, liquid T-1000 blending with floor, coffee spill, subtle VFX, quiet kill."
+        title: "The CPU Chip (Macro)",
+        promptPayload: "Extreme macro shot of the Cyberdyne processor chip, golden circuits, microscopic complexity, the seed of the apocalypse, shallow depth of field, high-tech still life --ar 2.39:1"
     },
     {
         id: 43,
-        title: "Vault Key",
-        promptPayload: "Key turning in Cyberdyne vault, heavy door opening, revealing CPU arm, blue light, heist vibe."
+        title: "The T-1000 Pilot (Reforming)",
+        promptPayload: "Eerie interior shot, T-1000 flowing into the helicopter pilot's seat, its face forming from liquid silver, the real pilot jumping out, high-altitude wide-angle view of LA --ar 2.39:1"
     },
     {
         id: 44,
-        title: "Police Helicopter Pilot",
-        promptPayload: "T-1000 oozing through helicopter window, telling pilot 'Get out', liquid flows, taking control."
+        title: "The Dark Highway (Opening)",
+        promptPayload: "Cinematic wide shot, camera tracking fast over a dark LA highway at night, lane markers blurring, heavy 90s atmosphere, ominous narration, 'There is no fate but what we make' --ar 2.39:1"
     },
     {
         id: 45,
-        title: "Highway Night",
-        promptPayload: "Road markers passing at speed, headlights, intro narration, dark blue night, destiny, highway hypnosis."
+        title: "Reloading the 1911",
+        promptPayload: "Tactical close-up, Sarah Connor slams a magazine into her Colt 1911, metallic clack, desert dust on the gun, military precision, high-shutter speed detail --ar 2.39:1"
     },
     {
         id: 46,
-        title: "Wolfie",
-        promptPayload: "T-800 on phone mimicking John's voice, 'Wolfie's fine honey', deception, red HUD text 'Voice ID Match'."
+        title: "The Liquid Nitrogen Splash",
+        promptPayload: "Slow-motion close-up of liquid nitrogen splashing onto the floor, instantly freezing the T-1000's feet, white ice crystals forming, cinematic cold effects, blue lighting --ar 2.39:1"
     },
     {
         id: 47,
-        title: "Galleria Mall",
-        promptPayload: "90s mall interior, arcades, neon signs, kids playing, T-800 scanning crowd, Terminator vision overlay."
+        title: "The T-800's Red Eye (Damage)",
+        promptPayload: "Intense close-up of the T-800's battle-damaged face, left eye gone revealing the red glowing robotic optic, sparks and smoke, the machine within, terminator aesthetic --ar 2.39:1"
     },
     {
         id: 48,
-        title: "Cryogenic Tank",
-        promptPayload: "Tank rolling over, freezing gas spraying everywhere, white out, visibility zero, cold vs hot contrast."
+        title: "The T-1000's Liquid Metal Walk",
+        promptPayload: "Wide shot, T-1000 walking through fire towards the camera, uniform burning off to reveal the chrome reflective body underneath, liquid metallic grace, 90s sci-fi icon --ar 2.39:1"
     },
     {
         id: 49,
-        title: "Hand in Gear",
-        promptPayload: "T-800 crushing T-1000's hand in gear, screeching metal sound visually represented, struggle, mechanical strength."
+        title: "Final Highway (Ending)",
+        promptPayload: "Poetic wide shot, the camera looking down the yellow lane lines of a dark highway, 'The unknown future rolls toward us', night, sense of closure and hope, fade to black --ar 2.39:1"
     },
     {
         id: 50,
-        title: "Dark Highway Ending",
-        promptPayload: "Camera tracking fast down dark highway, lane lines blurring, unknown future, 'The luxury of hope', black screen fade."
+        title: "Terminator 2: Judgment Day Logo",
+        promptPayload: "The iconic metallic silver and blue logo on a black background, chrome textures, industrial 90s font, the legacy of a masterpiece --ar 2.39:1"
     }
 ];

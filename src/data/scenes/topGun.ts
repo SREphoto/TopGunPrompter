@@ -4,251 +4,251 @@ export const topGunScenes: Scene[] = [
     {
         id: 1,
         title: "The Opening Deck",
-        promptPayload: "Opening credits, aircraft carrier flight deck at sunrise, silhouette of crew members in color-coded jerseys (purple, green, yellow) signaling, intense orange sun on the horizon, steam rising violently from catapult tracks, heat distortion, F-14 Tomcat in profile, naval industrial aesthetic, cinematic grain."
+        promptPayload: "Cinematic wide shot of aircraft carrier flight deck at sunrise, silhouette of crew members in color-coded jerseys signaling F-14 Tomcat takeoff, shot on Super 35mm film with Panavision C-Series Anamorphic lens, intense orange sun on horizon, violent steam from catapult tracks against golden hour light, heat haze distortion, atmospheric naval industrial aesthetic, theatrical smoke and backlit silhouette style of Tony Scott --ar 2.39:1 --stylize 700"
     },
     {
         id: 2,
         title: "Ghost Rider Flyby",
-        promptPayload: "Two F-14 Tomcats flying in tight formation over a calm blue ocean, high altitude, bright daylight, hard sunlight reflecting off the canopy glass, side view of the jets, missiles mounted on wings, afterburners glowing faintly, crisp horizon line."
+        promptPayload: "Aerial long shot of two F-14 Tomcats flying in tight formation over calm blue ocean, shot on 35mm motion picture film, hard daylight sun reflecting off glass canopies, missiles mounted on wings, faint blue afterburner glow, crisp horizon line, telephoto compression, high shutter speed action photography --ar 2.39:1 --v 6.0"
     },
     {
         id: 3,
         title: "The MiG Encounter",
-        promptPayload: "Interior cockpit point-of-view, Maverick looking up through the glass canopy, the black MiG-28 flying directly above, inverted flight maneuver 4G negative dive, the Russian pilot in a red star helmet looking down in shock, reflections on the instrument panel dials."
+        promptPayload: "POV cockpit shot looking up through glass canopy, inverted flight maneuver 4G negative dive, MiG-28 flying directly above within 2 meters, Russian pilot in red star helmet looking down, reflections on analog instrument panel dials, claustrophobic framing, wide angle distortion, intense cinematic tension --ar 16:9"
     },
     {
         id: 4,
         title: "Tower Buzz",
-        promptPayload: "Control tower interior, officers spilling coffee in shock, wide view through the glass windows, F-14 roaring past extremely close at high speed, motion blur, sonic boom shockwave visual distortion, comedy beat, chaos in the tower."
+        promptPayload: "Interior control tower wide shot, naval officers spilling coffee in shock as F-14 roars past window at mach 1, motion blur of jet, sonic boom visual distortion, glass rattling, high contrast daylight, comedic action beat, 35mm film grain --ar 2.39:1"
     },
     {
         id: 5,
         title: "Volleyball Game",
-        promptPayload: "Golden hour sunlight, beach volleyball court, sweaty shirtless pilots high fissing, extreme muscle definition, slow motion action, sand flying, glistening skin, homoerotic subtext, warm saturated color palette, telephoto lens compression."
+        promptPayload: "Slow motion medium shot of beach volleyball game, shirtless pilots high-fiving, glistening oiled skin texture, extreme muscle definition, intense golden hour backlighting, sand particles flying in air, telephoto lens compression, warm saturated orange and skin tone palette, 80s music video aesthetic --style raw --ar 16:9"
     },
     {
         id: 6,
         title: "Bar Singing",
-        promptPayload: "Dimly lit crowded bar, Maverick singing into a microphone, Goose playing piano in background, smokey atmosphere, warm tungsten practical lighting, sweat on faces, romantic tension with Charlie, 80s patrons cheering."
+        promptPayload: "Dimly lit crowded bar interior, Maverick singing into vintage microphone, Goose playing upright piano in background, atmospheric smoke and haze, warm tungsten practical lighting, sweat on faces, romantic tension with blonde female instructor, shallow depth of field, 85mm portrait lens --ar 2.39:1"
     },
     {
         id: 7,
         title: "Elevator Moment",
-        promptPayload: "Maverick and Charlie in a hotel elevator, silence, intense gazing, blue lighting from elevator buttons, claustrophobic intimacy, tension, two-shot profile."
+        promptPayload: "Two-shot profile in hotel elevator, Maverick and Charlie in silence, intense gazing, cool blue lighting from elevator buttons contrasting with warm skin tones, claustrophobic intimacy, shallow depth of field, romantic tension, shot on 35mm film --ar 2.39:1"
     },
     {
         id: 8,
         title: "Instructional Hangar",
-        promptPayload: "Large aircraft hangar classroom, Viper standing at podium, rows of pilots in flight suits listening, massive American flag in background, industrial ceiling lights, shafts of light cutting through dust."
+        promptPayload: "Wide shot of large aircraft hangar classroom, Viper standing at podium, rows of pilots in flight suits listening, massive American flag hanging in background, shafts of sunlight cutting through atmospheric dust, industrial ceiling lights, cinematic composition --ar 2.39:1"
     },
     {
         id: 9,
         title: "Locker Room Confrontation",
-        promptPayload: "Steam filled locker room, Iceman getting in Maverick's face, tension, sweaty towels, hard flourescent top down lighting, ego clash, close up faces."
+        promptPayload: "Close up intense face-off in steam-filled locker room, Iceman confronting Maverick, wet skin texture, white towel around neck, harsh top-down fluorescent lighting preventing shadows on eyes, sweating, 85mm focal length, high contrast drama --ar 2.39:1"
     },
     {
         id: 10,
         title: "Dinner Date",
-        promptPayload: "Charlie's house, porch swing at twilight, drinking wine, soft romantic lighting, lattice shadows on faces, intimate conversation, seduction scene."
+        promptPayload: "Intimate medium shot on porch swing at twilight, drinking white wine, soft romantic side lighting, lattice shadows cast on faces, comfortable conversation, blue hour background, warm key light, cinematic romance aesthetic --ar 16:9"
     },
     {
         id: 11,
         title: "Motorcycle Runway",
-        promptPayload: "Maverick racing his Kawasaki Ninja motorcycle alongside an F-14 taking off, sunset silhouette, speed, fist pump, runway lights blurring, orange sky, pure 80s energy."
+        promptPayload: "Tracking shot of Maverick racing Kawasaki Ninja motorcycle along runway apron, F-14 Tomcat taking off in background at sunset, fist pumping in air, motion blur speed effect, silhouette against massive orange sun, purple sky gradient, runway lights streaking, pure 80s adrenaline aesthetic, wide angle lens --ar 2.39:1"
     },
     {
         id: 12,
         title: "Briefing Room",
-        promptPayload: "Jester outlining mission parameters, chalkboard diagrams, pilots taking notes, serious expressions, dim lighting, focus on Maverick chewing gum."
+        promptPayload: "Medium shot in tactical briefing room, Jester pointing at chalkboard flight diagrams, pilots taking notes in flight suits, serious expressions, dim ambient lighting, haze in air, rack focus to Maverick chewing gum, telephoto lens compression, military procedure aesthetic --ar 16:9"
     },
     {
         id: 13,
         title: "Dogfight Training",
-        promptPayload: "A-4 Skyhawk aggressor aircraft painted in camouflage, banking hard left, desert mountains below, bright blue sky, sunlight flaring on canopy, training exercise."
+        promptPayload: "External wide shot of A-4 Skyhawk aggressor aircraft with camo paint scheme, banking hard left over desert mountains, bright azure blue sky, sunlight flaring on plexiglass canopy, heat distortion from engine exhaust, sharp focus, high shutter speed, aerial photography style --ar 2.39:1"
     },
     {
         id: 14,
         title: "Hard Deck Violation",
-        promptPayload: "HUD view overlay, target lock square, altitude warning flashing red, desert terrain rushing by too close, tension, breaking rules, digital dashboard graphics."
+        promptPayload: "POV shot through Heads Up Display (HUD), green digital target lock square, altitude warning flashing red, desert terrain rushing by dangerously close, motion blur at edges, tension, breaking rules, digital dashboard graphics overlay, simulator aesthetic --ar 16:9"
     },
     {
         id: 15,
         title: "Goose's Camera",
-        promptPayload: "Goose in back seat holding a polaroid camera up to the canopy, laughing, taking a photo of the MiG, cockpit interior details, helmet reflection."
+        promptPayload: "Reverse angle cockpit shot of Goose in back seat holding Polaroid camera to canopy, laughing expression, snapping photo of inverted MiG, helmet visor reflection showing horizon, intricate cockpit switch details, bright sunlight, camaraderie, cramped interior --ar 2.39:1"
     },
     {
         id: 16,
         title: "Flat Spin",
-        promptPayload: "F-14 spinning uncontrollably, horizon rotating wildly, cockpit shaking violently, alarm lights flashing, panic on faces, G-force distortion, blue sky spinning."
+        promptPayload: "Disorienting spinning camera angle, F-14 tumbling uncontrollably toward ocean, horizon rotating wildly 360 degrees, cockpit violently shaking, red alarm lights flashing, panic on pilot faces, G-force facial distortion, blue sky and water spinning blur, pure chaos --ar 16:9"
     },
     {
         id: 17,
         title: "Ejection",
-        promptPayload: "Canopy blossoming off, ejection seats firing upwards, smoke trails, slow motion, tragedy striking, impact with canopy glass, chaos in the air."
+        promptPayload: "Extreme slow motion shot of canopy glass blasting off, Martin-Baker ejection seats firing rocket motors, smoke trails, tragedy striking, debris filling the air, impact with canopy glass, chaos, frozen moment in time, high contrast sunlight --ar 2.39:1"
     },
     {
         id: 18,
         title: "Ocean Rescue",
-        promptPayload: "Maverick floating in ocean, parachute engulfing him, orange life vest, rescue helicopter overhead, rotor wash whipping up water, tragedy, despair."
+        promptPayload: "High angle shot looking down at Maverick floating in rough ocean, parachute silk engulfing him, bright orange life vest, rotor wash from rescue helicopter whipping up white water spray, look of despair, tragedy, cold blue water palette --ar 16:9"
     },
     {
         id: 19,
         title: "Hospital Bed",
-        promptPayload: "Maverick holding Goose's dog tags, sitting on hospital bed, sterile white room, head in hands, grief, soft window light, emotional low point."
+        promptPayload: "Somber medium shot of Maverick sitting on hospital bed edge, holding Goose's dog tags, sterile white room, head in hands, overwhelming grief, soft cool window light, emotional low point, shallow depth of field, isolation --ar 2.39:1"
     },
     {
         id: 20,
         title: "Viper's House",
-        promptPayload: "Sunday afternoon at Viper's house, ocean view background, Maverick looking at old photos of his father, calm atmosphere, mentorship, warm daylight."
+        promptPayload: "Wide shot of Vicky's back porch on Sunday afternoon, ocean view in background, Maverick looking at old framed photos, calm atmosphere, mentorship, warm daylight sun, coastal breeze, relaxed composition, father figure dynamic --ar 16:9"
     },
     {
         id: 21,
         title: "Solitary Bike Ride",
-        promptPayload: "Maverick riding motorcycle alone at night, city lights bokeh in background, wind in hair, leather jacket, contemplation, looking at jets landing."
+        promptPayload: "Tracking shot of Maverick riding motorcycle alone at night along the coast, city lights bokeh in background, wind blowing hair, leather jacket texture, contemplative expression, looking up at jets landing overhead, cool blue night lighting, moody atmosphere, cinematic solitude --ar 2.39:1"
     },
     {
         id: 22,
         title: "Graduation Ceremony",
-        promptPayload: "Pilots in dress whites, sunny day, shaking hands, forcing smiles, bittersweet atmosphere, flags waving, Miramar base background."
+        promptPayload: "Wide shot of graduation ceremony, pilots in bright white dress uniforms, sunny day at Miramar base, shaking hands, forcing smiles, bittersweet atmosphere, American flags waving in wind, deep depth of field, high contrast, formal military aesthetic --ar 16:9"
     },
     {
         id: 23,
         title: "Crisis Alert",
-        promptPayload: "Red alarm light spinning, sirens blaring in hallway, pilots scrambling, putting on gear, urgency, shaky cam, running towards hangar."
+        promptPayload: "Handheld shaky cam of emergency scramble, red alarm light spinning in foreground, sirens blaring visual, pilots scrambling to put on G-suits, urgency, motion blur, running down hallway towards hangar, panic and adrenaline, high contrast red lighting --ar 2.39:1"
     },
     {
         id: 24,
         title: "Catapult Launch",
-        promptPayload: "Front view of F-14 nose gear hooking up to shuttle, steam everywhere, launch officer signaling shoot, tires compressing, raw mechanical power."
+        promptPayload: "Low angle front view of F-14 nose gear hooking up to catapult shuttle, steam venting everywhere, yellow-shirt launch officer signaling shoot posture, tires compressing under load, raw mechanical power, telephoto compression, intense vibration, heat haze --ar 2.39:1"
     },
     {
         id: 25,
         title: "MiG Swarm",
-        promptPayload: "Radar screen showing multiple bogies appearing, green classic radar sweep, tension building, overwhelming odds, cockpit gauge close up."
+        promptPayload: "Close up macro shot of radar screen, multiple bright blips appearing, classic green radar sweep line, tension building, overwhelming odds, cockpit gauge textures, reflection of pilot's worried eyes, claustrophobic framing, tech-noir aesthetic --ar 16:9"
     },
     {
         id: 26,
         title: "Ice Man in Trouble",
-        promptPayload: "Iceman's F-14 smoking, taking hits, tracers flying past canopy, desperate banking maneuver, defensive flying, grey cloudy sky."
+        promptPayload: "Aerial medium shot of Iceman's F-14 smoking heavily, taking machine gun hits, tracer rounds flying past canopy, desperate banking defensive maneuver, grey cloudy sky background, moody lighting, smoke trails, cinematic action intensity --ar 2.39:1"
     },
     {
         id: 27,
         title: "Maverick Re-engages",
-        promptPayload: "Close up on Maverick's eyes snapping into focus, determination, gripping flight stick, throttle pushed to max, afterburners engaging."
+        promptPayload: "Extreme close up on Maverick's eyes above oxygen mask snapping into focus, determination, leather gloved hand gripping flight stick, throttle pushed to max, dual afterburners engaging with blue flame, cockpit vibration blur, heroic resolve --ar 2.39:1"
     },
     {
         id: 28,
         title: "Missile Lock",
-        promptPayload: "Exterior shot of Sidewinder missile firing from wing rail, smoke trail, tracking target, high speed action, motion blur background."
+        promptPayload: "Exterior wing mount camera shot of Sidewinder missile firing from rail, thick white smoke trail, tracking target, high speed action, motion blur background of ocean and clouds, violent launch physics, cinematic blockbuster style --ar 2.39:1"
     },
     {
         id: 29,
         title: "Explosion",
-        promptPayload: "Enemy MiG exploding in mid-air, fireball, debris scattering, cinematic destruction, camera shake, victorious moment."
+        promptPayload: "Wide shot of enemy MiG-28 exploding in mid-air, massive fireball, debris scattering, cinematic destruction, camera shake effect, victorious moment, black smoke against blue sky, high contrast, pyrotechnic spectacle --ar 16:9"
     },
     {
         id: 30,
         title: "Victory Flyby",
-        promptPayload: "Two F-14s doing a victory roll over the carrier, crew on deck cheering and throwing hats, wide shot, celebration, hero return."
+        promptPayload: "Low angle wide shot, two F-14s performing a victory barrel roll directly over the carrier deck, crew on deck jumping and cheering, throwing hats in air, celebration, hero return, grand scale, triumphant atmosphere, sunlight flaring --ar 2.39:1"
     },
     {
         id: 31,
         title: "Landing on Deck",
-        promptPayload: "Tailhook catching the wire, sparks flying on deck, tires smoking, rapid deceleration, sunset lighting, carrier superstructure in background."
+        promptPayload: "Action shot of F-14 tailhook catching the arresting wire, sparks flying on steel deck, tires smoking, rapid deceleration, sunset backlighting, carrier superstructure in background, heat distortion, telephoto lens, capturing the violence of a carrier landing --ar 2.39:1"
     },
     {
         id: 32,
         title: "Hero's Welcome",
-        promptPayload: "Maverick climbing out of cockpit, mobbed by crew, cheering faces, high fives, adrenaline, sweat, triumphant music capability."
+        promptPayload: "Crowded medium shot of Maverick climbing out of cockpit, being mobbed by cheering flight deck crew, high fives, adrenaline, sweat on face, triumphant atmosphere, warm golden hour lighting, hero framing, shallow depth of field --ar 16:9"
     },
     {
         id: 33,
         title: "Bullpen Handshake",
-        promptPayload: "Iceman and Maverick shaking hands, 'You can be my wingman anytime', respect, smiling, close up, emotional resolution."
+        promptPayload: "Close up two-shot of Iceman and Maverick shaking hands, intense eye contact, 'You can be my wingman anytime' moment, mutual respect, smiling, sweat, emotional resolution, soft interior lighting, cinematic portraiture --ar 2.39:1"
     },
     {
         id: 34,
         title: "Throwing Dog Tags",
-        promptPayload: "Maverick throwing Goose's tags into the ocean, sunset, silhouette, letting go, closure, ocean horizon, peaceful."
+        promptPayload: "Silhouette shot of Maverick standing on carrier deck throwing Goose's dog tags into the ocean, sunset background, letting go, closure, peaceful ocean horizon, lens flare, emotional storytelling, cinematic composition --ar 16:9"
     },
     {
         id: 35,
         title: "Jukebox Play",
-        promptPayload: "Hand selecting 'You've Lost That Lovin' Feeling' on vintage jukebox, neon lights reflecting on chrome, starting the song, nostalgia."
+        promptPayload: "Close up macro shot of hand selecting 'You've Lost That Lovin' Feeling' on vintage Wurlitzer jukebox, neon lights reflecting on chrome details, mechanical movement, nostalgia, 80s aesthetic, shallow depth of field --ar 2.39:1"
     },
     {
         id: 36,
         title: "Charlie Returns",
-        promptPayload: "Bar scene reprise, Charlie appearing at the back, Maverick smiling, You've Lost That Lovin' Feeling playing, romance rekindled."
+        promptPayload: "Medium shot in bar, Charlie appearing at the back through the crowd, Maverick smiling in foreground, jukebox playing, romance rekindled, soft focus background, warm practical lighting, happy ending atmosphere --ar 16:9"
     },
     {
         id: 37,
         title: "Sunset Jet",
-        promptPayload: "Single F-14 flying into the sunset, end credits vibe, silhouette against massive orange sun, peaceful flight, beautiful composition."
+        promptPayload: "Wide panoramic shot of single F-14 flying into the sunset, end credits vibe, perfect silhouette against massive orange sun, peaceful flight, beautiful composition, Tony Scott gradient sky, atmospheric haze, closure --ar 2.39:1"
     },
     {
         id: 38,
         title: "Pre-Flight Check",
-        promptPayload: "Mechanic walking along wing of F-14, touching surface, sunrise reflection, pre-flight inspection, quiet moment before chaos."
+        promptPayload: "Medium shot of mechanic walking along F-14 wing, hand touching metal surface, sunrise reflection on fuselage, pre-flight inspection, quiet moment before chaos, industrial texture, realistic detail, morning light --ar 16:9"
     },
     {
         id: 39,
         title: "Afterburner Glow",
-        promptPayload: "Night shot, rear of F-14 on deck, twin blue flames of afterburners igniting, darkness, raw power, heat waves distortion."
+        promptPayload: "Night shot on flight deck, rear view of F-14, twin blue flames of afterburners igniting in darkness, raw power, heat waves distortion, high contrast, cinematic teal and orange lighting, machinery detail --ar 2.39:1"
     },
     {
         id: 40,
         title: "Radar Intercept Officer",
-        promptPayload: "POV of RIO in back seat, looking at radar scope, complicated buttons and switches, green glow of instruments, intense focus."
+        promptPayload: "POV shot from RIO in back seat, looking at complex radar scope, illuminated buttons and switches, green glow of instruments on face, intense focus, tech-heavy interior, claustrophobic fighter jet cockpit --ar 16:9"
     },
     {
         id: 41,
         title: "Wingman Formation",
-        promptPayload: "View from one cockpit looking at the wingman's jet just feet away, pilot waving, clouds reflecting in canopy, sense of speed."
+        promptPayload: "Cockpit-to-cockpit view looking at wingman's jet flying just feet away, pilot waving, clouds reflecting in canopy glass, immense sense of speed, blue sky, high altitude, aerial photography masterpiece --ar 2.39:1"
     },
     {
         id: 42,
         title: "Breaking Away",
-        promptPayload: "Two jets banking in opposite directions, 'breaking right', symmetry, contrails forming, dynamic aerial maneuver."
+        promptPayload: "Symmetrical shot of two jets banking in opposite directions, 'breaking right' maneuver, wingtip vortices, contrails forming, dynamic aerial composition, bright sunlight, blue sky background, high energy --ar 2.39:1"
     },
     {
         id: 43,
         title: "Refueling Mid-Air",
-        promptPayload: "F-14 approaching tanker boom, delicate maneuver, high altitude clouds, tension, mechanical connection, probe and drogue."
+        promptPayload: "Tense shot of F-14 approaching tanker boom for mid-air refueling, delicate maneuver, high altitude clouds below, mechanical connection, probe and drogue detail, suspense, technical precision, wide cinematic angle --ar 2.39:1"
     },
     {
         id: 44,
         title: "Carrier Island",
-        promptPayload: "Low angle shot looking up at the carrier conning tower (Island), radar dishes spinning, flags snapping in wind, busy activity."
+        promptPayload: "Low angle worm's eye view looking up at aircraft carrier 'Island' tower, radar dishes spinning, American flags snapping in wind, busy flight deck activity foreground, naval power, massive scale, sunlight flare --ar 16:9"
     },
     {
         id: 45,
         title: "Flight Suit Walk",
-        promptPayload: "Iconic slow motion walk of Maverick and Goose in flight suits, carrying helmets, laughing, tarmac heat haze, American heroes."
+        promptPayload: "Iconic slow motion tracking shot of Maverick and Goose walking in flight suits, carrying helmets, laughing together, tarmac heat haze distortion, American heroes, sun flare, backlighting, brotherhood, telephoto lens --ar 2.39:1"
     },
     {
         id: 46,
         title: "Officer's Club",
-        promptPayload: "White uniforms, formal officer's club setting, holding drinks, politicking, soft lighting, contrast to the grimy hangar."
+        promptPayload: "Formal officer's club interior, pilots in dress white uniforms holding drinks, politicking, soft warm lighting, crystal glasses, contrast to grimy hangar, elite social atmosphere, shallow depth of field, conversation --ar 16:9"
     },
     {
         id: 47,
         title: "Tarmac Sunset",
-        promptPayload: "Jets parked in a row on the tarmac, silhouettes against purple and orange sky, peaceful evening, stillness, reflections on wet ground."
+        promptPayload: "Wide static shot of F-14 jets parked in row on tarmac, perfect silhouettes against vibrant purple and orange sunset sky, peaceful evening atmosphere, stillness, reflections on wet ground, cinematic beauty --ar 2.39:1"
     },
     {
         id: 48,
         title: "Engine Test",
-        promptPayload: "Jet engine strapped to test stand, massive flame exhaust, mechanics with ear protection, raw industrial power, night time."
+        promptPayload: "Jet engine strapped to test stand at night, massive blue flame exhaust plume, mechanics wearing ear protection, raw industrial power, high contrast lighting, engineering detail, dangerous atmosphere, 35mm film grain --ar 2.39:1"
     },
     {
         id: 49,
         title: "Mirror Pass",
-        promptPayload: "Maverick looking in rearview mirror of motorcycle, F-14 taking off in reflection, symbolism, speed, wind, focus."
+        promptPayload: "Creative shot looking into motorcycle rearview mirror, reflection of F-14 taking off behind, symbolic composition, speed, wind, focus, asphalt texture blurry in foreground, sun flare on mirror glass --ar 16:9"
     },
     {
         id: 50,
         title: "Top Gun Trophy",
-        promptPayload: "Close up of the Top Gun trophy plaque, names engraved, legacy, history, shallow depth of field, metallic texture."
+        promptPayload: "Extreme close up of Top Gun trophy plaque, engraved names, legacy, history, shallow depth of field, metallic brass texture, dust particles in light, shallow focus, ending note --ar 2.39:1"
     }
 ];

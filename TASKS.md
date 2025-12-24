@@ -31,10 +31,22 @@ This file tracks the progress of populating the 50-scene databases for each movi
 - [x] **The Shining (1980)**
 - [x] **Tron: Legacy (2010)**
 - [x] **Taxi Driver (1976)**
+- [x] **The Godfather (1972)**
+- [x] **Alien (1979)**
+- [x] **Blade Runner (1982)**
+- [x] **Apocalypse Now (1979)**
+- [x] **2001: A Space Odyssey (1968)**
+- [x] **A Clockwork Orange (1971)**
+- [x] **Psycho (1960)**
+- [x] **Full Metal Jacket (1987)**
+- [x] **The Shawshank Redemption (1994)**
+- [x] **Schindler's List (1993)**
+- [x] **Goodfellas (1990)**
+- [x] **Reservoir Dogs (1992)**
 
 ## Workflow for Adding a Movie
 
-1.  **Generate Scenes**: Create 50 detailed scene descriptions ("Mega-Prompts") capturing key moments, lighting, and atmosphere.
-2.  **Create Data File**: Create a new file `src/data/scenes/[movie-id].ts`.
-3.  **Register**: Import and add the scenes to `src/data/scenes.ts`.
-4.  **Verify**: Test the movie in the application to ensure scenes load and prompts generate correctly.
+1. **Generate Scenes**: Create 50 detailed scene descriptions ("Mega-Prompts") capturing key moments, lighting, and atmosphere.
+2. **Create Data File**: Create a new file `src/data/scenes/[movie-id].ts`.
+3. **Register**: Import and add the scenes to `src/data/scenes.ts`.
+4. **Verify**: Test the movie in the application to ensure scenes load and prompts generate correctly.

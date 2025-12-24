@@ -4,251 +4,251 @@ export const duneScenes: Scene[] = [
     {
         id: 1,
         title: "The Gom Jabbar",
-        promptPayload: "Paul Atreides with his hand in the box, Reverend Mother Mohiam holding the Gom Jabbar needle at his neck, intense pain on Paul's face, shadows, ancient Bene Gesserit atmosphere."
+        promptPayload: "Intense psychological horror close-up, Paul Atreides with hand in the nerve-induction box, Reverend Mother Mohiam holding the lethal Gom Jabbar needle at his throat, extreme agony on Paul's face, dark Bene Gesserit robes, shadow-heavy lighting, 'Pain' visualized --ar 2.39:1"
     },
     {
         id: 2,
         title: "Caladan Rain",
-        promptPayload: "Wide shot of the Atreides fleet on Caladan, heavy rain, grey ocean, massive spaceships rising from the water, moody atmospheric lighting, departure."
+        promptPayload: "Majestic wide shot of Castle Caladan, Atreides fleet rising from dark grey oceans into heavy rain clouds, massive spaceship hulls wet and gleaming, moody atmospheric desaturation, goodbye to the home world, epic scale --ar 2.39:1"
     },
     {
         id: 3,
         title: "The Herald of the Change",
-        promptPayload: "Imperial delegation arriving on Caladan, golden armor, massive scroll, Duke Leto and Paul standing in formation, formal ceremony, brutalist architecture."
+        promptPayload: "Formal brutalist ceremony, Imperial delegation in golden armor arriving on Caladan, massive scroll tube being presented, Duke Leto and Paul in stiff military formation, grey stone architecture, sense of inescapable fate --ar 2.39:1"
     },
     {
         id: 4,
         title: "Arrakis Arrival",
-        promptPayload: "The Atreides fleet landing on Arrakis, blinding white sun, heat haze, massive city of Arrakeen, dust and sand, stark contrast to Caladan."
+        promptPayload: "Blinding high-key wide shot, Atreides fleet landing on the burning sands of Arrakis, white sun creating extreme heat haze, massive city of Arrakeen in background, dust swirling, stark yellows and browns, oppressive heat --ar 2.39:1"
     },
     {
         id: 5,
         title: "Hunter Seeker",
-        promptPayload: "Paul freezing in his bedroom, a tiny floating Hunter-Seeker device hovering near his eye, extreme close up, tension, silence, holographic projection."
+        promptPayload: "Extreme suspense close-up, Paul frozen in shadow, a tiny metallic Hunter-Seeker device hovering inches from his eye, delicate blue lights, shallow depth of field, dust motes in sunbeam, silence, lethal precision --ar 2.39:1"
     },
     {
         id: 6,
         title: "Shadout Mapes",
-        promptPayload: "Shadout Mapes presenting the crysknife to Jessica, 'It's the Maker's tooth', religious awe, blue-within-blue eyes, desert interior."
+        promptPayload: "Religious awe medium shot, Shadout Mapes unsheathing milky-white Crysknife for Lady Jessica, 'It's a Maker's tooth', blue-within-blue eyes glowing softly, desert interior shadows, sacred ritual atmosphere --ar 2.39:1"
     },
     {
         id: 7,
         title: "Spice Harvester",
-        promptPayload: "Massive spice harvester machine on the desert sands, dust clouds, ornithopters buzzing around, industrial scale, heat waves."
+        promptPayload: "Industrial scale wide shot, massive Spice Harvester crawler churning up sands of the deep desert, enormous dust clouds, Ornithopters circling like flies, heat waves distorting horizon, golden spice glitter in air --ar 2.39:1"
     },
     {
         id: 8,
         title: "Worm Sign",
-        promptPayload: "Sand shifting and rippling, lightning in the sand, massive shape moving underneath, 'Worm sign!', panic, evacuation."
+        promptPayload: "Terrifying nature shot, sand rippling and shifting in massive rhythmic waves, electrical static lightning discharging in the dust, 'Worm sign!', the desert surface bulging from beneath, awe-inspiring scale --ar 2.39:1"
     },
     {
         id: 9,
         title: "The Duke's Rescue",
-        promptPayload: "Duke Leto landing the ornithopter to rescue the spice workers, wind and sand, heroic action, 'I'm not leaving my men'."
+        promptPayload: "Action hero low angle, Duke Leto jumping from Ornithopter into swirling sand for rescue mission, cape fluttering, 'I'm not leaving my men', dust and wind chaos, desperate heroism, golden hour desert light --ar 2.39:1"
     },
     {
         id: 10,
         title: "Baron Harkonnen",
-        promptPayload: "Baron Vladimir Harkonnen floating in his oil bath, massive pale body, suspensors humming, dark industrial Giedi Prime aesthetic, menacing."
+        promptPayload: "Gothic body horror shot, Baron Vladimir Harkonnen emerging silently from a black oil bath, massive pale body suspended by humming suspensors, dark industrial Giedi Prime interior, menacing shadow play, evil incarnate --ar 2.39:1"
     },
     {
         id: 11,
         title: "Sardaukar Chant",
-        promptPayload: "Sardaukar troops on Salusa Secundus, rain, blood ritual, throat singing, white armor, brutal discipline, terrifying atmosphere."
+        promptPayload: "Ominous brutalistwide shot, Sardaukar troops on Salusa Secundus, blood ritual ritual under grey rain, deep throat singing visualization, white bone-like armor, rows of soldiers in perfect discipline, terrifying military cult atmosphere --ar 2.39:1"
     },
     {
         id: 12,
         title: "Shield Fighting",
-        promptPayload: "Gurney Halleck and Paul training with shields, blue and red energy flickering, kinetic movement, 'The slow blade penetrates the shield'."
+        promptPayload: "Dynamic combat medium shot, Gurney Halleck and Paul sparring with Holtzman shields, blue and red energy sparks flickering on impact, kinetic blur of short blades, 'The slow blade penetrates the shield', training room shadows --ar 2.39:1"
     },
     {
         id: 13,
         title: "The Betrayal",
-        promptPayload: "Explosions rocking Arrakeen at night, shields failing, Harkonnen ships descending, fire and chaos, Dr. Yueh's sad expression."
+        promptPayload: "Nighttime chaos wide shot, massive explosions racking the city of Arrakeen, planetary shields failing, beetle-shaped Harkonnen ships descending through black smoke and fire, orange glow against dark blue night, betrayal unleashed --ar 2.39:1"
     },
     {
         id: 14,
         title: "Duncan Idaho's Stand",
-        promptPayload: "Duncan Idaho fighting Sardaukar in the hallway, shield flickering, acrobatic swordplay, 'For the Duke!', sacrifice."
+        promptPayload: "Heroic action hero shot, Duncan Idaho fighting dozen Sardaukar in narrow stone hallway, Holtzman shield flickering under barrage, acrobatic swordplay, 'For the Duke!', desperate last stand, blood and steel --ar 2.39:1"
     },
     {
         id: 15,
         title: "Leto's Tooth",
-        promptPayload: "Duke Leto naked in the chair, facing the Baron, biting the poison tooth, gas filling the room, final act of defiance."
+        promptPayload: "Tragic vulnerability close-up, Duke Leto naked and paralyzed in stone chair, facing the Baron across long table, biting poison tooth, clouds of blue gas filling room, final act of defiance, death of a Duke --ar 2.39:1"
     },
     {
         id: 16,
         title: "Ornithopter Escape",
-        promptPayload: "Paul and Jessica flying an ornithopter into a sandstorm, wings flapping like a dragonfly, turbulence, lightning inside the storm, intense piloting."
+        promptPayload: "High intensity cockpit shot, Paul and Jessica flying Ornithopter into a Coriolis storm, wings flapping with insect-like vibration, sand blasting against windshield, electrical lightning inside dust wall, chaotic piloting --ar 2.39:1"
     },
     {
         id: 17,
         title: "Tent Vision",
-        promptPayload: "Paul and Jessica in the stilltent, Paul having a spice vision, 'Jihad!', eyes turning blue, terrified of his future, golden spice particles."
+        promptPayload: "Psychological horror medium close-up, Paul and Jessica in stilltent, Paul having spice-induced prescient vision, 'Jihad!', golden spice particles floating in air, eyes turning deep blue, terrifying glimpse of the future --ar 2.39:1"
     },
     {
         id: 18,
         title: "Sandworm Encounter",
-        promptPayload: "Paul and Jessica running on the sand, massive sandworm rising behind them, mouth opening like a flower of teeth, scale difference, awe."
+        promptPayload: "Awe-inspiring wide shot, Paul and Jessica running on desert dunes, massive Shai-Hulud Sandworm rising behind them, mouth opening like a flower of thousand teeth, scale of monster dwarfing humans, desert power --ar 2.39:1"
     },
     {
         id: 19,
         title: "Meeting the Fremen",
-        promptPayload: "Stilgar and his troop emerging from the rocks, stillsuits, blue eyes, weapons drawn, 'Do not run, you will only die tired'."
+        promptPayload: "Tense desert encounter shot, Stilgar and Fremen troop emerging silently from rock shadows, stillsuits blending with sand, blue 'Eyes of Ibad' glowing, weapons drawn, 'Do not run, you will only die tired' --ar 2.39:1"
     },
     {
         id: 20,
         title: "Jamis Duel",
-        promptPayload: "Paul fighting Jamis at sunrise, rocky canyon, ritual combat, 'I was a friend of Jamis', reluctant killer."
+        promptPayload: "Ritual combat medium shot, Paul fighting Jamis at first light of sunrise, orange canyon walls, Maula pistols and knives, ritual dance of death, 'I was a friend of Jamis', tragic necessity, desert justice --ar 2.39:1"
     },
     {
         id: 21,
         title: "Desert Mouse",
-        promptPayload: "Close up of a Muad'Dib (desert mouse) emerging from the sand, large ears, moisture collecting, symbol of survival."
+        promptPayload: "Nature macro detail shot, a Muad'Dib kangaroo mouse emerging from deep sand, oversized translucent ears collecting moisture, giant dark eyes, desert ecosystem survival, golden sand dunes background, shallow focus --ar 2.39:1"
     },
     {
         id: 22,
         title: "Riding the Worm",
-        promptPayload: "Paul riding a sandworm for the first time, hooks in the segments, wind tearing at his stillsuit, sand blurring, mastery of the desert."
+        promptPayload: "Exhilarating action wide shot, Paul riding a massive Sandworm across the open desert, Maker hooks sunk into chitinous segments, wind tearing at stillsuit, enormous localized sandstorm, legendary achievement, 'Shai-Hulud' power --ar 2.39:1"
     },
     {
         id: 23,
         title: "Water of Life",
-        promptPayload: "Paul drinking the Water of Life, convulsing, blue liquid, cosmic visions, expanding consciousness, temple setting."
+        promptPayload: "Cosmic consciousness sequence, Paul drinking the glowing blue Water of Life, convulsing on temple floor, eyes turning white then deep blue, psychedelic visions of space and time, expanding mind, sacred Fremen sanctuary --ar 2.39:1"
     },
     {
         id: 24,
         title: "Feyd-Rautha Arena",
-        promptPayload: "Feyd-Rautha fighting in the Harkonnen arena, black and white high contrast (infrared style), cheering crowd, brutal elegance."
+        promptPayload: "Brutal elegance infrared-style shot, Feyd-Rautha fighting in Giedi Prime arena, high-contrast monochrome (black and white), dark oil-slick skin, massive cheering crowd under black sun, gladiatorial savagery --ar 2.39:1"
     },
     {
         id: 25,
         title: "Emperor's Throne Room",
-        promptPayload: "The Emperor Shaddam IV sitting on his throne, minimalist design, Irulan standing by, tension, political power."
+        promptPayload: "Minimalist power shot, Emperor Shaddam IV sitting on simple yet imposing throne on Salusa Secundus, floating platform, Princess Irulan standing in elaborate bead-metal headdress, political tension, cold imperial majesty --ar 2.39:1"
     },
     {
         id: 26,
         title: "Atomic Weapons",
-        promptPayload: "Paul aiming the atomic weapons at the Shield Wall, 'He who can destroy a thing, controls a thing', massive explosion, dust clearing."
+        promptPayload: "Catarstrophic military wide shot, Paul detonating Atreides family atomics at the Shield Wall, blinding white light mushroom cloud over Arrakeen basin, 'He who can destroy a thing, controls a thing', sandstorm of pulverized rock --ar 2.39:1"
     },
     {
         id: 27,
         title: "The Final Battle",
-        promptPayload: "Fremen riding sandworms into battle against the Sardaukar, massive scale, chaos, storm, total war."
+        promptPayload: "Epic scale war frame, thousands of Fremen charging on the backs of three massive Sandworms, storm clouds and lightning, Sardaukar legions in chaos, total desert war, cinematography of Frank Herbert's vision --ar 2.39:1"
     },
     {
         id: 28,
         title: "Paul vs Feyd",
-        promptPayload: "Paul and Feyd-Rautha dueling with crysknives, circle of watchers, intense physical combat, 'May thy knife chip and shatter'."
+        promptPayload: "Visceral combat close-shot, Paul and Feyd-Rautha locked in Crysknife duel, blades clashing, circle of silent Fremen and Imperial watchers, 'May thy knife chip and shatter', sweat and blood, destiny of the Imperium --ar 2.39:1"
     },
     {
         id: 29,
         title: "Kissing the Ring",
-        promptPayload: "The Emperor kissing Paul's ring, submission, new order, Fremen watching, shift of power."
+        promptPayload: "Political submission shot, Emperor Shaddam IV kneeling to kiss Paul's Ducal signet ring, new order established, Duke Paul Atreides as Lisan al-Gaib, Fremen warriors standing guard, the shift of ultimate power --ar 2.39:1"
     },
     {
         id: 30,
         title: "Holy War",
-        promptPayload: "Fremen ships taking off, 'Lead them to paradise', Paul watching with a heavy heart, the Jihad begins."
+        promptPayload: "Ominous finale wide shot, massive Fremen transport ships launching into orbit, 'Lead them to paradise', Paul Muad'Dib watching with heavy prescience, the first steps of the interstellar Jihad, destiny realized --ar 2.39:1"
     },
     {
         id: 31,
         title: "Bull Head",
-        promptPayload: "Close up of the mounted bull's head, symbol of the Atreides fate, blood and oil, ominous foreshadowing."
+        promptPayload: "Symbolic detail shot, mounted bull's head in Atreides castle, blood dripping onto oil-slicked floor, shadow of cape passing, ominous foreshadowing of the bull that killed the Old Duke, brutalist texture --ar 2.39:1"
     },
     {
         id: 32,
         title: "Spice Eyes",
-        promptPayload: "Extreme close up of eyes completely blue (Ibad), no white, intensity, spice addiction."
+        promptPayload: "Macro iris close-up, eyes completely saturated in deep luminous blue, no white visible (Eyes of Ibad), intense spice addiction, reflection of desert horizon in pupil, otherworldly medical phenomenon --ar 2.39:1"
     },
     {
         id: 33,
         title: "Thumper",
-        promptPayload: "A thumper pounding the sand rhythmically, calling the worm, sound waves visualized, anticipation."
+        promptPayload: "Rhythmic tension shot, mechanical Thumper device pounding the desert floor, sand dancing and vibrating in concentric patterns, audible sound visualized as dust waves, calling the Shai-Hulud --ar 2.39:1"
     },
     {
         id: 34,
         title: "Crysknife",
-        promptPayload: "Close up of a crysknife, milky white blade, organic texture, 'Unsheathed it must taste blood'."
+        promptPayload: "Sacred weapon close-up, milky-white Crysknife blade curved and organic, Maker's tooth texture, faint blue shimmer, 'Unsheathed it must taste blood', steady hand holding hilt, desert ritual --ar 2.39:1"
     },
     {
         id: 35,
         title: "Stillsuit Detail",
-        promptPayload: "Close up of the stillsuit tubes and filtration system, weathered texture, survival technology, 'A person's water belongs to the tribe'."
+        promptPayload: "Industrial tech close-up, intricate tubes and filtration pumps of a Fremen Stillsuit, weathered rubber and metal textures, sweat glistening on neck, 'A person's water belongs to the tribe', survival hardware --ar 2.39:1"
     },
     {
         id: 36,
         title: "Palm Trees",
-        promptPayload: "The sacred palm trees of Arrakeen being watered, waste of water, symbol of power, burning during the attack."
+        promptPayload: "Irony through imagery wide shot, sacred palm trees of Arrakeen being methodically watered by automated systems, massive waste of water in desert, burning orange during city attack, symbols of opulence falling --ar 2.39:1"
     },
     {
         id: 37,
         title: "Bagpipes",
-        promptPayload: "Atreides bagpiper playing on the landing ramp, sound of home, tradition, defiance."
+        promptPayload: "Cultural defiance shot, Atreides bagpiper playing on landing ramp of massive transport ship, sound echoing off stone walls of Arrakeen, wind whipping through banners, tradition in a strange land, hero's welcome --ar 2.39:1"
     },
     {
         id: 38,
         title: "Spider Pet",
-        promptPayload: "The Baron's human-spider pet creature, disturbing body horror, Giedi Prime perversion."
+        promptPayload: "Surreal body horror medium-shot, the Baron's human-spider hybrid creature skittering across dark Giedi Prime floor, pale distorted limbs, Giger-esque design, Giedi Prime perversion of nature, unsettling shadows --ar 2.39:1"
     },
     {
         id: 39,
         title: "Bene Gesserit Ship",
-        promptPayload: "The spherical Bene Gesserit ship landing in the mist, mysterious, organic shape, ancient power."
+        promptPayload: "Enigmatic wide shot, spherical black Bene Gesserit spacecraft landing silently in Arrakeen mists, organic and egg-like silhouette, ancient power descending, mysterious sisterhood, cold atmospheric lighting --ar 2.39:1"
     },
     {
         id: 40,
         title: "Sandwalk",
-        promptPayload: "Paul and Jessica doing the sandwalk, irregular rhythm, wide shot of the desert, survival technique."
+        promptPayload: "Dynamic wide shot, Paul and Jessica executing the rhythmic sandwalk across a vast dune field, irregular staccato movements designed to sound like desert noise, scale of the empty desert, wind swept dunes --ar 2.39:1"
     },
     {
         id: 41,
         title: "Liet Kynes",
-        promptPayload: "Liet Kynes standing in the desert, 'I serve only one master, his name is Shai-Hulud', death by thumper."
+        promptPayload: "Imperial ecologist medium-shot, Liet Kynes standing alone in deep desert, 'I serve only one master, his name is Shai-Hulud', thumper pounding in background, massive sandworm shadow looming, legendary sacrifice --ar 2.39:1"
     },
     {
         id: 42,
         title: "Piter de Vries",
-        promptPayload: "Piter de Vries with his stained lips, calculating eyes, Mentat trance, twisted intelligence."
+        promptPayload: "Mentat close-up, Piter de Vries with ink-stained lips, rolling back eyes in calculation trance, cold and cruel Giedi Prime lighting, white skin, twisted intelligence, serving the Baron --ar 2.39:1"
     },
     {
         id: 43,
         title: "Chani's Dream",
-        promptPayload: "Chani turning to look at the camera in Paul's dream, blue eyes, wind in hair, 'Paul', destiny."
+        promptPayload: "Ethereal dream sequence, Chani turning to look directly at camera, Eyes of Ibad glowing blue, wind-blown desert scarf, soft golden backlight, Paul's destiny calling, 'Paul Atreides' whispered --ar 2.39:1"
     },
     {
         id: 44,
         title: "Eclipse",
-        promptPayload: "The moon of Arrakis eclipsing the sun, 'The Mouse Shadow', silhouette of a kangaroo mouse."
+        promptPayload: "Symmetry wide shot, moon of Arrakis eclipsing the massive sun, 'The Mouse Shadow', silhouette of a Muad'Dib kangaroo mouse cast onto sand, cosmic omen, orange sky darkening to indigo --ar 2.39:1"
     },
     {
         id: 45,
         title: "Spice Coffee",
-        promptPayload: "Fremen preparing spice coffee, steam rising, ritual, community."
+        promptPayload: "Fremen culture shot, preparing spiced coffee in communal sietch, blue steam rising from metal pot, ritualistic pouring, low warm firelight in rocky cave, blue-eyed faces in shadow, survival community --ar 2.39:1"
     },
     {
         id: 46,
         title: "Sietch Tabr",
-        promptPayload: "Interior of Sietch Tabr, vast underground cavern, water reservoir, millions of liters, wealth of the Fremen."
+        promptPayload: "Subterranean wide shot, the vast water reservoir of Sietch Tabr, millions of liters of windtrap-collected water, quiet reflection on surface, massive cave architecture, the hidden wealth of the Fremen --ar 2.39:1"
     },
     {
         id: 47,
         title: "Alia",
-        promptPayload: "Baby Alia holding a gom jabbar, adult eyes, 'Abomination', disturbing presence."
+        promptPayload: "Disturbing close-up, young baby Alia holding a Gom Jabbar needle, Eyes of Ibad glowing with ancient wisdom (Abomination), eerie poise, the sister of Muad'Dib, prophetic presence --ar 2.39:1"
     },
     {
         id: 48,
         title: "Ornithopter Wings",
-        promptPayload: "Close up of ornithopter wings vibrating, motion blur, insect-like mechanics."
+        promptPayload: "Mechanical detail shot, Ornithopter wings vibrating at high frequency, motion blur creating dragonfly wing effect, sound of the desert visualized, high-tech industrial aesthetic, sand grains bouncing --ar 2.39:1"
     },
     {
         id: 49,
         title: "Sand Compactor",
-        promptPayload: "Fremen using a sand compactor, walking without rhythm, technology of the desert."
+        promptPayload: "Fremen technology shot, using a sand compactor device to solidify surface, walking without rhythm across deep desert, vast sand dunes stretching to infinity, survival mastery, orange sun setting --ar 2.39:1"
     },
     {
         id: 50,
         title: "Desert Sunset",
-        promptPayload: "Two moons rising over the dunes, purple and orange sky, vast emptiness, beauty of Arrakis."
+        promptPayload: "Final poetic wide shot, two moons of Arrakis rising over the endless dunes, deep indigo and purple sky, vast silent majesty, 'Desert Power' realized, beauty of the deep desert, fade to black --ar 2.39:1"
     }
 ];

@@ -4,251 +4,251 @@ export const gladiatorScenes: Scene[] = [
     {
         id: 1,
         title: "The Wheat Field",
-        promptPayload: "Maximus walking through a golden wheat field, hand brushing the stalks, soft focus, dreamlike quality, Elysium imagery, warm sunlight, peace before war."
+        promptPayload: "Dreamlike POV tracking shot, Maximus's hand brushing through golden wheat stalks, soft focus rack to distant farmhouse, warm amber sunlight, floating dust particles (Elysium), Hans Zimmer score visualization, nostalgic atmosphere, shallow depth of field --ar 2.39:1"
     },
     {
         id: 2,
         title: "Germania Battle Line",
-        promptPayload: "Roman legions standing in formation in a dark forest, snow falling, breath visible, shields locked, blue cold lighting, anticipation of battle, 'Strength and Honor'."
+        promptPayload: "Cinematic wide shot of Roman Legion formation in dark blue forest, falling snow, soldiers' breath visible in cold air, rectangular shields locked, disciplined ranks, atmospheric fog, desaturated winter color palette, Ridley Scott blue tint --ar 2.39:1"
     },
     {
         id: 3,
         title: "Unleash Hell",
-        promptPayload: "Maximus on horseback, signaling the attack, 'At my signal, unleash hell', fire arrows volleying in the background, chaotic energy, mud and steel."
+        promptPayload: "Epic action shot, Maximus on horseback shouting command, 'At my signal, unleash hell', volley of flaming arrows streaking across dark sky behind him, mud flying, chaotic energy, 45-degree shutter angle effect, war movie masterpiece --ar 2.39:1 --stylize 500"
     },
     {
         id: 4,
         title: "The Emperor's Tent",
-        promptPayload: "Marcus Aurelius sitting in his tent, candlelight, looking old and weary, maps on the table, philosophical atmosphere, shadows dancing on canvas walls."
+        promptPayload: "Intimate candlelight interior shot, Emperor Marcus Aurelius sitting at map table, deep shadows on face (Chiaroscuro), weariness in eyes, flickering flame, texture of canvas tent walls, philosophical atmosphere, richness of Roman red fabrics --ar 2.39:1"
     },
     {
         id: 5,
         title: "Commodus's Tears",
-        promptPayload: "Commodus hugging his father Marcus Aurelius, tears streaming down his face, suffocating him, betrayal, intense emotional close up, tragic lighting."
+        promptPayload: "Uncomfortable close-up traset, Commodus hugging Marcus Aurelius while suffocating him, tears streaming down Commodus's face, betrayal and desperation, dark moody lighting, extreme emotion, claustrophobic framing, tragic opera aesthetic --ar 2.39:1"
     },
     {
         id: 6,
         title: "The Execution",
-        promptPayload: "Maximus kneeling in the snow, Praetorian guards behind him with swords drawn, blade catching the light, Maximus grabbing the sword, sudden violence, survival instinct."
+        promptPayload: "Tense low angle shot in snowy forest, Maximus kneeling for execution, Praetorian guard raising sword behind him, sudden motion blur as Maximus grabs blade, ice and snow texture, cold blue lighting, survival instinct, visceral action --ar 2.39:1"
     },
     {
         id: 7,
         title: "Racing Home",
-        promptPayload: "Maximus galloping on a horse, desperate, wounded, landscape blurring by, sunset turning to night, urgency to save his family."
+        promptPayload: "High speed tracking shot of Maximus galloping on white horse, landscape blurring into streaks of color, wounded shoulder bleeding, transition from day to night, desperation on face, cinematic motion blur, heroic urgency --ar 2.39:1"
     },
     {
         id: 8,
         title: "Burnt Farm",
-        promptPayload: "Maximus arriving at his home, smoke rising, bodies of his wife and son hanging, falling to his knees, screaming in silence, ash floating in the air, devastation."
+        promptPayload: "Devastating wide boom shot, Maximus dropping to knees in charred ruins of farm, black smoke rising into grey sky, bodies of family indistinct in background (tasteful), ash falling like snow, absolute grief, desaturated color grade --ar 2.39:1"
     },
     {
         id: 9,
         title: "Slave Caravan",
-        promptPayload: "Maximus in a cage on a wagon, crossing the desert, heat haze, other slaves looking defeated, Zucchabar province, harsh sunlight, yellow color palette."
+        promptPayload: "Heat haze telephoto shot, Maximus in wooden cage on wagon traversing desert, sun flaring into lens, sweat and dust on skin, vast arid landscape of Zucchabar, harsh yellow sunlight, hopelessness, Lawrence of Arabia aesthetic --ar 2.39:1"
     },
     {
         id: 10,
         title: "Proximo's School",
-        promptPayload: "Proximo walking among the new gladiators, inspecting them, 'I did not pay good money for you for your company', dusty courtyard, red clay walls."
+        promptPayload: "Wide training courtyard shot, red clay walls of Zucchabar arena, Proximo walking among new gladiators, bright hard sunlight casting sharp shadows, texture of sand and stone, atmospheric dust, exotic architecture --ar 2.39:1"
     },
     {
         id: 11,
         title: "First Fight",
-        promptPayload: "Maximus in the local arena, chained to another gladiator, fighting as a team, raw brutality, sand flying, crowd cheering, survival."
+        promptPayload: "Raw hand-held action shot, Maximus chained to fighting partner in provincial arena dirt, swinging sword at enemy gladiator, sand kicking up into lens, savage energy, crowd blurred in background, high contrast sunlight, sweat and grit --ar 2.39:1"
     },
     {
         id: 12,
         title: "Are You Not Entertained",
-        promptPayload: "Maximus standing alone in the center of the arena, throwing a sword into the VIP box, shouting 'Are you not entertained?', arms spread wide, defiance, blood on chest."
+        promptPayload: "Iconic low angle hero shot, Maximus standing in center of sun-drenched arena, arms spread wide in defiance, blood smear on chest, sword thrown into dirt, shouting at VIP box (camera), 'Are you not entertained?', crowd dust swirl, epic scale --ar 2.39:1"
     },
     {
         id: 13,
         title: "Rome Arrival",
-        promptPayload: "Wide shot of the Colosseum, massive scale, crowds entering, banners flying, architectural grandeur, CGI spectacle (but photorealistic style), awe."
+        promptPayload: "Majestic wide establishing shot of Rome's Colosseum, banners fluttering in wind, massive crowds swarming entrance, architectural grandeur, volumetric light shafts, digital matte painting perfection, sense of awe, ancient metropolis --ar 2.39:1"
     },
     {
         id: 14,
         title: "The Spaniard Mask",
-        promptPayload: "Close up of Maximus wearing the silver helmet/mask, eyes visible through the slits, mystery, intimidation, waiting in the dungeon."
+        promptPayload: "Intimidating close-up of silver gladiator helmet (The Spaniard), dark dungeon lighting, eyes barely visible through slits, reflection of torchlight on metal, texture of scratched iron, silence before the storm, mystery --ar 2.39:1"
     },
     {
         id: 15,
         title: "Battle of Carthage",
-        promptPayload: "Chariots circling in the Colosseum, gladiators forming a phalanx, chaos, dust, metal clashing, female archers on chariots, epic scale."
+        promptPayload: "Chaotic action wide shot in Colosseum, scythed chariots circling gladiators, Maximus organizing shield wall (testudo), dust clouds obscuring sun, golden light, dynamic motion, epic spectacle, metal clashing --ar 2.39:1"
     },
     {
         id: 16,
         title: "The Reveal",
-        promptPayload: "Maximus removing his helmet, facing Commodus, 'My name is Maximus Decimus Meridius', intense stare, silence in the arena, shock on Commodus's face."
+        promptPayload: "Dramatic medium close-up, Maximus removing helmet to reveal face to Commodus, intense stare of hatred, sweat dripping, 'My name is Maximus Decimus Meridius', background of stunned crowd, time standing still, confrontation --ar 2.39:1"
     },
     {
         id: 17,
         title: "Commodus's Throne",
-        promptPayload: "Commodus sitting on the marble throne, wearing white armor, looking paranoid, Lucilla standing beside him, opulence, cold white marble background."
+        promptPayload: "Symmetrical wide shot of Commodus on white marble throne, wearing white ceremonial armor, paranoia in eyes, Lucilla standing like statue beside him, cold sterile lighting, opulence of Rome power, contrast with gritty arena --ar 2.39:1"
     },
     {
         id: 18,
         title: "Tigers of the Arena",
-        promptPayload: "Maximus fighting Tigris of Gaul, real tigers leaping from trapdoors, chains rattling, sand kicking up, intense action, man vs beast."
+        promptPayload: "Visceral action shot, Tigris of Gaul swinging axe, real tigers leaping from trapdoor chains snapping tight, sand flying, Maximus rolling, striped beast in mid-air, dynamic lighting, man vs nature, adrenaline --ar 2.39:1"
     },
     {
         id: 19,
         title: "Thumbs Down",
-        promptPayload: "Commodus holding his thumb out, hesitating, then turning it up (or down), the crowd roaring, power of life and death, tension."
+        promptPayload: "Close-up of Commodus's hand extending thumb, hesitation, crowd roaring in background (soft focus), turning thumb down (death), tension, power dynamics, rich purple imperial robes texture, focus on thumb --ar 2.39:1"
     },
     {
         id: 20,
         title: "Juba's Prayer",
-        promptPayload: "Juba burying the figurines in the sand, looking up at the stars, 'I will see you again, but not yet', spiritual moment, night sky."
+        promptPayload: "Spiritual medium shot at night, Juba burying figurines in arena sand, looking up at starry sky, 'I will see you again', moonlight illuminating dark skin, peace amidst violence, cosmic perspective --ar 2.39:1"
     },
     {
         id: 21,
         title: "The Plot",
-        promptPayload: "Senator Gracchus and Lucilla meeting Maximus in the cells, whispering in shadows, torchlight, political intrigue, conspiracy."
+        promptPayload: "Conspiratorial low key shot in dungeon cell, Senator Gracchus and Lucilla whispering with Maximus in shadows, torchlight illuminating faces with high contrast, texture of stone walls, political intrigue, hush-hush atmosphere --ar 2.39:1"
     },
     {
         id: 22,
         title: "Kiss of Death",
-        promptPayload: "Commodus kissing Lucilla, creepy incestuous undertone, threat veiled as affection, 'Am I not merciful?', close up on faces, discomfort."
+        promptPayload: "Unnerving tight close-up, Commodus leaning in to kiss Lucilla, 'Am I not merciful?', predatory gaze, Lucilla's terrified eye in focus, incestuous undertones, cold white marble background, psychological horror --ar 2.39:1"
     },
     {
         id: 23,
         title: "Proximo's Death",
-        promptPayload: "Proximo holding the keys, facing the Praetorian guards, 'Shadows and dust', accepting his fate, noble sacrifice, sword fight."
+        promptPayload: "Heroic medium shot, Proximo holding keys, facing off against Praetorian guards, 'Shadows and dust', sun setting behind him casting long shadows, acceptance of fate, noble sacrifice, warm lighting turning to dark --ar 2.39:1"
     },
     {
         id: 24,
         title: "The Escape Attempt",
-        promptPayload: "Maximus fighting guards in the tunnels, escaping, swordplay in confined space, torchlight flickering, desperation."
+        promptPayload: "Claustrophobic action shot in tunnel, Maximus fighting Praetorians in confined space, torchlight flickering wildly, sparks flying from sword clashes, desperate struggle, dynamic camera movement, intense close quarters combat --ar 2.39:1"
     },
     {
         id: 25,
         title: "Cicero's End",
-        promptPayload: "Cicero waiting with the horses, getting shot by archers, falling, Maximus realizing the trap, tragedy, rain."
+        promptPayload: "Tragic wide shot at city gate, Cicero waiting with horses, arrows striking him from off-screen, falling into mud, rain starting to fall, Maximus realizing trap in foreground, despair, grey stormy lighting --ar 2.39:1"
     },
     {
         id: 26,
         title: "Chained Maximus",
-        promptPayload: "Maximus chained to the wall in the dungeon, Commodus taunting him, 'Smile for me now, brother', psychological torture, low angle shot."
+        promptPayload: "High angle POV looking down at Maximus chained to dungeon wall spread-eagled, commodity mocking him 'Smile for me now brother', cold blue dungeon light, helplessness, muscle strain, psychological torture --ar 2.39:1"
     },
     {
         id: 27,
         title: "Stabbing the Wound",
-        promptPayload: "Commodus hugging Maximus before the duel, secretly stabbing him in the side with a stiletto, pain, betrayal, hidden violence."
+        promptPayload: "Intimate shocking close-up, Commodus hugging Maximus in pre-duel embrace, hidden stiletto blade piercing armor into side, wince of pain on Maximus's face, betrayal masked as affection, eye contact, secret violence --ar 2.39:1"
     },
     {
         id: 28,
         title: "The Final Duel",
-        promptPayload: "Maximus and Commodus circling each other in the Colosseum, rose petals falling, Maximus bleeding, slow motion, silence, intense focus."
+        promptPayload: "Surreal slow motion wide shot, Maximus and Commodus circling in center of Colosseum, rose petals falling like snow from crowd, silence in audio visualize, dreamlike quality, final confrontation, blue sky with white clouds --ar 2.39:1"
     },
     {
         id: 29,
         title: "Sword Drop",
-        promptPayload: "Maximus dropping his sword, disarming Commodus, hand-to-hand combat, struggle, dust rising, crowd watching in silence."
+        promptPayload: "Crunching close-up action, Maximus disarming Commodus, sword clattering to stone, grappling hand-to-hand, dust rising from impact, raw physical struggle, exhaustion, blood mixing with white dust --ar 2.39:1"
     },
     {
         id: 30,
         title: "Commodus's Death",
-        promptPayload: "Maximus driving the hidden blade into Commodus's neck, staring into his eyes, Commodus falling, life leaving him, vengeance complete."
+        promptPayload: "Visceral climax close-up, Maximus slowly driving hidden blade into Commodus's neck, intense eye contact, life fading from Commodus's eyes, silence, ultimate vengeance, sweat and blood, painting-like composition --ar 2.39:1"
     },
     {
         id: 31,
         title: "Floating in Elysium",
-        promptPayload: "Maximus's vision of opening the gate to his home, walking down the path, his son running towards him, bright white light, afterlife."
+        promptPayload: "Ethereal point-of-view shot, Maximus drifting through wooden farm gate, hand grazing wheat stalks again, son running towards him in distance with arms open, blinding white backlit sun, peace, death as homecoming, spiritual resolution --ar 2.39:1"
     },
     {
         id: 32,
         title: "Go to Them",
-        promptPayload: "Lucilla kneeling over dying Maximus, 'Go to them', touching his face, tears, emotional release, crowd kneeling."
+        promptPayload: "Heartbreaking medium shot, Lucilla kneeling over dying Maximus on arena sand, 'Go to them', hand on his face, tears glistening, soft focused crowd kneeling in background, emotional release, golden hour light --ar 2.39:1"
     },
     {
         id: 33,
         title: "Honor Him",
-        promptPayload: "Gladiators carrying Maximus's body out of the arena, Senator Gracchus watching, 'Who will help me carry him?', respect, solemn procession."
+        promptPayload: "Solemn wide shot, Gracchus shouting 'Who will help me carry him?', gladiators lifting Maximus's body, respect silence in arena, religious painting composition (Deposition), shafts of light (God rays), dignity in death --ar 2.39:1"
     },
     {
         id: 34,
         title: "Sunset over Rome",
-        promptPayload: "Wide shot of Rome at sunset, birds flying, peaceful atmosphere, end of an era, golden light bathing the city."
+        promptPayload: "Epic panoramic matte painting of ancient Rome skyline at sunset, birds flocking over Colosseum, warm orange and purple hues, peaceful aftermath, visual metaphor for the end of tyranny, architectural majesty --ar 2.39:1"
     },
     {
         id: 35,
         title: "The Wooden Sword",
-        promptPayload: "Close up of the wooden sword (rudis) given to Proximo, symbol of freedom, texture of wood, memories."
+        promptPayload: "Macro detail shot of Proximo's wooden training sword (rudis) buried in sand, grain of wood visible, symbol of freedom, wind blowing dust over it, memory, legacy, tactile texture, poignant still life --ar 2.39:1"
     },
     {
         id: 36,
         title: "Wheat Field Hand",
-        promptPayload: "Extreme close up of Maximus's hand brushing the wheat, texture of skin and grain, the recurring motif, sensory detail."
+        promptPayload: "Extreme close-up macro, rough fingers of Maximus brushing against delicate golden wheat kernels, recurring visual motif (Leitmotif), sensory focus, warm amber lighting, connection to earth and family, dream state --ar 2.39:1"
     },
     {
         id: 37,
         title: "Armour Detail",
-        promptPayload: "Close up on Maximus's breastplate, the horses and wolf emblem, scratches and battle damage, leather straps, texture of steel."
+        promptPayload: "Costume detail close-up, Maximus's cuirass armor with embossed white horses and wolf, battle damage scratches, leather straps, texture of steel and sweat, authenticity of production design, warrior aesthetic --ar 2.39:1"
     },
     {
         id: 38,
         title: "Crowd Roar",
-        promptPayload: "View from the arena floor looking up at the screaming crowd, thousands of faces, thumbs down, mob mentality, dizzying perspective."
+        promptPayload: "Disorienting POV fisheye shot from arena floor looking up at 50,000 screaming spectators, thumbs down gestures everywhere, dizzying scale, mob mentality, blurring faces, deafening visual noise, gladiator perspective --ar 2.39:1"
     },
     {
         id: 39,
         title: "Blood on Sand",
-        promptPayload: "Red blood soaking into the white sand of the arena, contrast, symbol of sacrifice, gritty texture."
+        promptPayload: "Symbolic overhead shot, bright red blood splattered on white arena sand, contrasting colors, granular texture of sand, harsh sunlight, geometric composition, brutality of sport, beauty in violence --ar 2.39:1"
     },
     {
         id: 40,
         title: "Lucius Watching",
-        promptPayload: "Young Lucius watching the fight with wide eyes, innocence amidst violence, foreshadowing, royal box setting."
+        promptPayload: "Reaction shot, young Lucius in imperial box, wide eyes reflecting violence, innocence corrupted, foreshadowing future emperor, opulent purple drapes in background, soft focus on adults, childhood perspective --ar 2.39:1"
     },
     {
         id: 41,
         title: "Senator Gracchus",
-        promptPayload: "Gracchus arguing in the Senate, marble columns, togas, political debate, 'Rome is the mob', intellectual atmosphere."
+        promptPayload: "Intellectual medium shot, Gracchus arguing in Senate chamber, 'Rome is the mob', surrounded by white marble columns and statues, toga fabric texture, natural light streaming through oculus, debate of republic vs empire --ar 2.39:1"
     },
     {
         id: 42,
         title: "Hagen's Test",
-        promptPayload: "Hagen (the red-haired gladiator) testing a sword, flexing muscles, camaraderie, preparing for battle."
+        promptPayload: "Gritty low angle shot, Hagen (red-haired giant) bending iron bar or testing sword weight in gladiator ludus, muscles straining, sweat oil on skin, warm firelight background, camaraderie of doomed men --ar 2.39:1"
     },
     {
         id: 43,
         title: "The Black Statues",
-        promptPayload: "Commodus walking past rows of black marble busts of his ancestors, feeling judged, dark atmosphere, shadows."
+        promptPayload: "Gothic atmosphere wide shot, Commodus walking slowly down corridor lined with black marble busts of ancestors, dark shadows, feeling of judgement, insanity creeping in, visual weight of history, silence --ar 2.39:1"
     },
     {
         id: 44,
         title: "Petals Falling",
-        promptPayload: "Rose petals falling in slow motion in the Colosseum, blue sky background, beauty and death, poetic imagery."
+        promptPayload: "Poetic insert shot, thousands of red rose petals falling in slow motion against deep blue sky, catching sunlight, beauty amidst death, Colosseum arches in background, dreamlike visual pause --ar 2.39:1"
     },
     {
         id: 45,
         title: "Maximus Prayer",
-        promptPayload: "Maximus kissing his figurines, whispering to his ancestors, intimate moment, candlelight, faith."
+        promptPayload: "Intimate candlelight close-up, Maximus kissing small clay figurines of wife and son, whispering to ancestors, flame reflection in eyes, religious devotion, solitude, warm orange glow in dark cell --ar 2.39:1"
     },
     {
         id: 46,
         title: "The Wolf",
-        promptPayload: "A wolf standing in the snow in Germania, breath visible, wild nature, symbol of Rome, ominous."
+        promptPayload: "Ominous telephoto shot, grey wolf standing on snowy ridge in Germania, breath visible, staring directly at camera, symbol of Romulus/Rome, wild nature, desaturated cold color palette, portent of war --ar 2.39:1"
     },
     {
         id: 47,
         title: "Slave Market",
-        promptPayload: "Chaos of the slave market, shouting traders, camels, dust, Maximus looking broken, exotic location."
+        promptPayload: "Chaotic wide shot of Zucchabar slave market, camels and traders, dust swirling, Maximus in chains looking defeated, exotic North African lighting (yellow/gold), noise visualized, disorientation --ar 2.39:1"
     },
     {
         id: 48,
         title: "Training Montage",
-        promptPayload: "Gladiators training with wooden swords, sweat, dust, Proximo shouting instructions, building strength."
+        promptPayload: "Dynamic montage frame, gladiators sparring with wooden swords in dust, sweat flying, Proximo barking orders in background, kinetic energy, muscle definition, building strength, golden hour training --ar 2.39:1"
     },
     {
         id: 49,
         title: "The Poison",
-        promptPayload: "Commodus pouring wine, looking at the goblet, contemplating poison, treachery, reflection in the liquid."
+        promptPayload: "Macabre close-up, Commodus pouring wine into goblet, reflection of his distorted face in dark liquid, contemplating patricide/poison, snakes on goblet design, dark brooding lighting, treachery --ar 2.39:1"
     },
     {
         id: 50,
         title: "Now We Are Free",
-        promptPayload: "Final shot, Juba walking away in the desert, sun setting, 'Now we are free', footprints in the sand, emotional closure."
-    }
+        promptPayload: "Final cathartic wide shot, Juba walking away across desert dunes at sunset, burying the figurines, footprints in sand, 'Now we are free', vast horizon, Hans Zimmer vocal score visualization, peace --ar 2.39:1"
+    },
 ];

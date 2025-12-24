@@ -4413,6 +4413,48 @@ export const movies: Movie[] = [
             { name: 'Wall Street Ticker', promptString: 'clinical office lighting, stock market numbers, handheld camera, fourth wall break, 2008 urban grit' },
             { name: 'Vegas Boom', promptString: 'neon casino floor, poolside greed, desert heat, vibrant and cynical documentary style' }
         ]
+    },
+    {
+        id: 'halloween',
+        title: 'Halloween',
+        year: '1978',
+        genres: ['Horror', 'Thriller'],
+        director: 'John Carpenter',
+        actors: ['Jamie Lee Curtis', 'Donald Pleasence'],
+        type: 'movie',
+        styles: [
+            { name: 'Suburban Stalking', promptString: 'wide shot of suburban street, autumn leaves, daytime, figure in background, eerie voyeurism, panavision' },
+            { name: 'The Shape', promptString: 'white mask in shadows, heavy breathing, silhouette, darkness, blue moonlight, terrifying presence' },
+            { name: 'Closet POV', promptString: 'slatted closet door, light slicing through darkness, trapped, suspense, claustrophobic' }
+        ]
+    },
+    {
+        id: 'vampires-kiss',
+        title: 'Vampire\'s Kiss',
+        year: '1988',
+        genres: ['Comedy', 'Horror'],
+        director: 'Robert Bierman',
+        actors: ['Nicolas Cage', 'Maria Conchita Alonso'],
+        type: 'movie',
+        styles: [
+            { name: 'New York Madness', promptString: 'wide eyes, sweat, chaotic office, 80s suit, unhinged energy, urban isolation' },
+            { name: 'Plastic Fangs', promptString: 'cheap vampire teeth, mirror reflection, delusion, neon city lights, tragic comedy' },
+            { name: 'Sofa Fort', promptString: 'upside down furniture, makeshift cage, erratic movements, shadows, insanity' }
+        ]
+    },
+    {
+        id: 'willys-wonderland',
+        title: 'Willy\'s Wonderland',
+        year: '2021',
+        genres: ['Action', 'Comedy', 'Horror'],
+        director: 'Kevin Lewis',
+        actors: ['Nicolas Cage', 'Emily Tosta'],
+        type: 'movie',
+        styles: [
+            { name: 'Animatronic Horror', promptString: 'creepy mascot, fur texture, oil and grease, flickering fluorescent lights, jump scare' },
+            { name: 'Pinball Break', promptString: 'intense pinball playing, neon flashing lights, energy drink, stoic silence, rhythmic action' },
+            { name: 'Janitor Rage', promptString: 'mop handle weapon, fighting stance, exploding robot parts, grime, blood and oil splatter' }
+        ]
     }
 ];
 

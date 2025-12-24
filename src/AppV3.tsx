@@ -87,7 +87,7 @@ function AppV3() {
     const style = allStyles.find(s => s.name === selectedStyleName);
 
     if (scene && style) {
-      return `${scene.promptPayload}. ${style.promptString}. ESTABLISHING SHOT, cinematic footage from the movie ${currentMovie.title} (${currentMovie.year}) --style raw --ar ${ar} --v ${version} --stylize ${stylize}`;
+      return `Cinematic scene from ${currentMovie.title}, ${scene.promptPayload}, ${style.promptString} --ar ${ar} --v ${version} --stylize ${stylize}`;
     }
     return '';
   }, [selectedSceneId, selectedStyleName, currentScenes, allStyles, currentMovie, ar, version, stylize]);

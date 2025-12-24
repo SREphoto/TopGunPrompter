@@ -11,16 +11,31 @@ import { predatorScenes } from './scenes/predator';
 import { jokerScenes } from './scenes/joker';
 import { duneScenes } from './scenes/dune';
 import { theMatrixScenes } from './scenes/theMatrix';
+import { bladeRunner2049Scenes } from './scenes/bladeRunner2049';
+import { apocalypseNowScenes } from './scenes/apocalypseNow';
+import { bladeRunnerScenes } from './scenes/bladeRunner';
+import { gladiatorScenes } from './scenes/gladiator';
+import { theGodfatherScenes } from './scenes/theGodfather';
+import { clockworkOrangeScenes } from './scenes/clockworkOrange';
+import { psychoScenes } from './scenes/psycho';
+import { fullMetalJacketScenes } from './scenes/fullMetalJacket';
+import { alienScenes } from './scenes/alien';
+import { goodfellasScenes } from './scenes/goodfellas';
+import { reservoirDogsScenes } from './scenes/reservoirDogs';
+import { shawshankRedemptionScenes } from './scenes/shawshankRedemption';
+import { schindlersListScenes } from './scenes/schindlersList';
 import { madMaxFuryRoadScenes } from './scenes/madMaxFuryRoad';
 import { theDarkKnightScenes } from './scenes/theDarkKnight';
 import { pulpFictionScenes } from './scenes/pulpFiction';
 import { terminator2Scenes } from './scenes/terminator2';
+import { theShiningScenes } from './scenes/theShining';
 import { inceptionScenes } from './scenes/inception';
 import { killBillVol1Scenes } from './scenes/killBillVol1';
 import { noCountryForOldMenScenes } from './scenes/noCountryForOldMen';
 import { driveScenes } from './scenes/drive';
 import { theFifthElementScenes } from './scenes/theFifthElement';
 import { interstellarScenes } from './scenes/interstellar';
+import { spaceOdysseyScenes } from './scenes/spaceOdyssey';
 import { tronLegacyScenes } from './scenes/tronLegacy';
 import { taxiDriverScenes } from './scenes/taxiDriver';
 
@@ -74,16 +89,16 @@ import {
 import {
     metropolisScenes, cabinetCaligariScenes, nosferatuScenes, mScenes, citizenKaneScenes,
     casablancaScenes, theThirdManScenes, rearWindowScenes, vertigoScenes, northByNorthwestScenes,
-    twelveAngryMenScenes, sevenSamuraiScenes, rashomonScenes, spaceOdysseyScenes,
-    drStrangeloveScenes, clockworkOrangeScenes, theGodfatherScenes, chinatownScenes, ragingBullScenes,
+    twelveAngryMenScenes, sevenSamuraiScenes, rashomonScenes,
+    drStrangeloveScenes, chinatownScenes, ragingBullScenes,
     annieHallScenes, starWarsNewHopeScenes, empireStrikesBackScenes, closeEncountersScenes,
-    alienScenes, rockyScenes, theExorcistScenes, etScenes, ghostbustersScenes,
+    rockyScenes, theExorcistScenes, etScenes, ghostbustersScenes,
     amadeusScenes, brazilScenes, untouchablesScenes, standByMeScenes, blueVelvetScenes,
     parisTexasScenes, wingsOfDesireScenes, ranScenes, cinemaParadisoScenes
 } from './scenes/classics1';
 
 import {
-    goodfellasScenes, schindlersListScenes, thePianistScenes, shawshankRedemptionScenes, reservoirDogsScenes,
+    thePianistScenes,
     fargoScenes, bigLebowskiScenes, trainspottingScenes, princessBrideScenes, akiraScenes, unforgivenScenes,
     lionKingScenes, heatScenes, toyStoryScenes, princessMononokeScenes, trumanShowScenes, americanBeautyScenes,
     crouchingTigerScenes, spiritedAwayScenes, amelieScenes, cityOfGodScenes, lostInTranslationScenes,
@@ -130,11 +145,10 @@ import {
     pirates3Scenes as pirates3ExpandedScenes, pirates4Scenes as pirates4ExpandedScenes, pirates5Scenes as pirates5ExpandedScenes
 } from './scenes/piratesAndClassics';
 import {
-    fullMetalJacketExpandedScenes, apocalypseNowExpandedScenes, fewGoodMenExpandedScenes,
-    gladiatorExpandedScenes, bladeRunnerExpandedScenes
+    fewGoodMenExpandedScenes
 } from './scenes/expandedClassics';
 import {
-    br2049ExpandedScenes, theShiningExpandedScenes, vForVendettaExpandedScenes
+    vForVendettaExpandedScenes
 } from './scenes/modernClassicsExpanded';
 import {
     lighthouseExpandedScenes, nosferatu2024ExpandedScenes, dracula2025ExpandedScenes,
@@ -176,7 +190,7 @@ import {
 } from './scenes/expandedBatch2';
 
 import {
-    psychoExpandedScenes, talentedMrRipleyExpandedScenes,
+    talentedMrRipleyExpandedScenes,
     warOfTheWorldsScenes, halloweenExpandedScenes
 } from './scenes/expandedBatch3';
 
@@ -289,7 +303,7 @@ export const movieScenes: Record<string, Scene[]> = {
     'fury': furyScenes,
     'kingdom-of-heaven': kingdomOfHeavenScenes,
     'braveheart': braveheartScenes,
-    'apocalypse-now': apocalypseNowExpandedScenes,
+    'apocalypse-now': apocalypseNowScenes,
     'pans-labyrinth': pansLabyrinthScenes,
     'the-patriot': thePatriotScenes,
     'the-mission': theMissionScenes,
@@ -307,7 +321,7 @@ export const movieScenes: Record<string, Scene[]> = {
     'rear-window': rearWindowScenes,
     'vertigo': vertigoScenes,
     'north-by-northwest': northByNorthwestScenes,
-    'psycho': psychoExpandedScenes,
+    'psycho': psychoScenes,
     '12-angry-men': twelveAngryMenScenes,
     'seven-samurai': sevenSamuraiScenes,
     'rashomon': rashomonScenes,
@@ -325,7 +339,7 @@ export const movieScenes: Record<string, Scene[]> = {
     'alien': alienScenes,
     'rocky': rockyScenes,
     'the-exorcist': theExorcistScenes,
-    'blade-runner': bladeRunnerExpandedScenes,
+    'blade-runner': bladeRunnerScenes,
     'et-extra-terrestrial': etScenes,
     'ghostbusters': ghostbustersScenes,
     'amadeus': amadeusScenes,
@@ -335,7 +349,7 @@ export const movieScenes: Record<string, Scene[]> = {
     'stand-by-me': standByMeScenes,
     'blue-velvet': blueVelvetScenes,
     'paris-texas': parisTexasScenes,
-    'full-metal-jacket': fullMetalJacketExpandedScenes,
+    'full-metal-jacket': fullMetalJacketScenes,
     'wings-of-desire': wingsOfDesireScenes,
     'ran': ranScenes,
     'cinema-paradiso': cinemaParadisoScenes,
@@ -461,9 +475,9 @@ export const movieScenes: Record<string, Scene[]> = {
     'the-rock': theRockExpandedScenes,
     'con-air': conAirExpandedScenes,
     'face-off': faceOffExpandedScenes,
-    'gladiator': gladiatorExpandedScenes,
-    'blade-runner-2049': br2049ExpandedScenes,
-    'the-shining': theShiningExpandedScenes,
+    'gladiator': gladiatorScenes,
+    'blade-runner-2049': bladeRunner2049Scenes,
+    'the-shining': theShiningScenes,
     'pretty-in-pink': prettyInPinkScenes,
     'singing-in-the-rain': singingInTheRainScenes,
     'eyes-wide-shut': eyesWideShutExpandedScenes,
