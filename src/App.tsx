@@ -10,7 +10,7 @@ import {
   Copy, Terminal, Film, Palette, CheckCircle, ChevronDown, ChevronRight, Search, SortAsc,
   Layers, Maximize2, Minimize2, Filter, Dices, Lock, Unlock, Trophy, Grid, X,
   ExternalLink, Shirt, Sword, Car, Rocket, Flame, Gamepad2, Aperture, Map, Music,
-  Heart, Zap, Waves, BarChart3, Skull, Coins, MessageCircle, Video, Citrus, Mail, Info, FileText, User
+  Heart, Zap, Waves, BarChart3, Skull, Coins, MessageCircle, Video, Citrus, Mail, Info, FileText, User, Image
 } from 'lucide-react';
 import type { MediaItem } from './data/types';
 import { topMoviesYearly } from './data/topMoviesYearly';
@@ -72,6 +72,8 @@ function App() {
   const [copiedStyleName, setCopiedStyleName] = useState<string | null>(null);
   const [isStudioHubOpen, setIsStudioHubOpen] = useState(false);
   const [isVersionModalOpen, setIsVersionModalOpen] = useState(false);
+  const [posterMode, setPosterMode] = useState(false);
+  const [posterCopied, setPosterCopied] = useState(false);
 
   // Unified Media List
   const allMedia: MediaItem[] = useMemo(() => [...movies, ...series, ...games], []);
@@ -196,7 +198,7 @@ function App() {
     return '';
   }, [selectedSceneId, selectedStyleName, currentScenes, allStyles, currentMovie, ar, version, stylize, compareLenses, burstMode, draftMode, cleanUp]);
 
-  const handleMovieSelect = (id: string) => {
+  const handleMovieSelect = async (id: string) => {
     setSelectedMovieId(id);
     setSelectedSceneId(null);
     setSelectedStyleName(null);
@@ -205,6 +207,17 @@ function App() {
     if (media?.type === 'series') {
       setSelectedSeasonId(1);
       setSelectedEpisodeId(1);
+    }
+
+    // Poster Mode: Auto-copy poster prompt
+    if (posterMode && media?.posterPrompt) {
+      try {
+        await navigator.clipboard.writeText(media.posterPrompt);
+        setPosterCopied(true);
+        setTimeout(() => setPosterCopied(false), 1500);
+      } catch (err) {
+        console.error('Poster copy failed', err);
+      }
     }
   };
 
@@ -351,6 +364,26 @@ function App() {
           </div>
 
           <div className="flex items-center gap-3">
+            {/* Poster Mode Toggle */}
+            <button
+              onClick={() => setPosterMode(!posterMode)}
+              className={`
+                p-2 rounded-lg transition-all relative flex items-center gap-2 border
+                ${posterMode
+                  ? 'bg-purple-500/20 text-purple-400 border-purple-500/50 shadow-[0_0_10px_rgba(168,85,247,0.2)]'
+                  : 'text-zinc-500 hover:text-white hover:bg-zinc-800 border-zinc-800'}
+              `}
+              title={posterMode ? "Poster Mode ON - Click movie to copy poster prompt" : "Enable Poster Mode"}
+            >
+              <Image className="w-5 h-5" />
+              {posterMode && <span className="text-[10px] font-bold uppercase">Poster</span>}
+              {posterCopied && (
+                <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-purple-500 text-white text-[10px] font-bold px-2 py-1 rounded whitespace-nowrap">
+                  POSTER COPIED!
+                </div>
+              )}
+            </button>
+
             <button
               onClick={() => setIsHeaderOpen(!isHeaderOpen)}
               className={`
