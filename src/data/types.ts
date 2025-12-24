@@ -20,39 +20,69 @@ export interface Season {
 }
 
 // Sprite sheet generation prompts for game assets
+
+// Standard game perspectives/camera angles
+export type GamePerspective =
+    | 'side-scroller'      // Mario, Sonic, Mega Man - horizontal view
+    | 'top-down'           // Zelda ALTTP, Hotline Miami - overhead view
+    | 'isometric'          // Diablo, SimCity - 3/4 angled view
+    | '3/4-view'           // RPG Maker style - slightly angled overhead
+    | 'first-person'       // Doom, Wolfenstein - player view (enemies face camera)
+    | 'fighting'           // Street Fighter - side view with facing opponent
+    | 'racing-overhead'    // Micro Machines - top-down vehicle view
+    | 'racing-behind';     // OutRun - third-person behind vehicle
+
+// Standard graphics styles
+export type GraphicsStyle =
+    | '8-bit'              // NES, Game Boy - 4 colors, chunky pixels
+    | '16-bit'             // SNES, Genesis - more colors, detailed
+    | '32-bit'             // PS1, Saturn - early 3D or detailed 2D
+    | 'pixel-art-hd'       // Shovel Knight - modern pixel art, higher res
+    | 'low-poly-3d'        // PS1 style 3D
+    | 'cel-shaded'         // Jet Set Radio style
+    | 'vector'             // Clean scalable graphics
+    | 'hand-drawn';        // Cuphead, Hollow Knight
+
 export interface SpriteAction {
     action: string;           // e.g., "idle", "run", "jump", "attack_sword"
+    frames: number;           // Number of animation frames (e.g., 4, 6, 8)
     description: string;      // Detailed prompt for this action animation
 }
 
 export interface CharacterSprite {
     name: string;
-    role: string;             // "player", "enemy", "boss", "npc"
+    role: 'player' | 'enemy' | 'boss' | 'npc';
+    directions: number;       // 1 (side only), 2 (left/right), 4 (cardinal), 8 (full rotation)
     actions: SpriteAction[];  // All animation states for this character
 }
 
 export interface TilesetPrompt {
     name: string;
-    type: string;             // "floor", "wall", "prop", "background", "hazard"
+    type: 'floor' | 'wall' | 'prop' | 'background' | 'hazard' | 'platform' | 'decoration';
+    variants: number;         // How many tile variations
     description: string;      // Detailed tileset description
 }
 
 export interface ItemSprite {
     name: string;
-    category: string;         // "weapon", "powerup", "collectible", "consumable", "equipment"
+    category: 'weapon' | 'powerup' | 'collectible' | 'consumable' | 'equipment' | 'projectile';
+    animated: boolean;        // Does this item animate?
+    frames: number;           // Animation frames if animated
     description: string;
 }
 
 export interface GameAssets {
-    // Core game properties
-    perspective: string;      // "top-down", "side-scroller", "isometric", "first-person", "third-person", "2.5D"
-    graphicsStyle: string;    // "8-bit", "16-bit", "32-bit", "pixel-art", "low-poly-3D", "cel-shaded", "realistic"
-    resolution: string;       // "16x16", "32x32", "64x64", "128x128" for sprites
+    // Core game properties for sprite sheet generation
+    perspective: GamePerspective;
+    graphicsStyle: GraphicsStyle;
+    resolution: '8x8' | '16x16' | '32x32' | '48x48' | '64x64' | '128x128';
+    colorPalette?: string;    // e.g., "NES palette", "PICO-8", "Game Boy green"
 
-    // Sprite categories
+    // Sprite sheet categories
     characters?: CharacterSprite[];  // All characters with their action sets
     tilesets?: TilesetPrompt[];      // Map tiles and backgrounds
     items?: ItemSprite[];            // Weapons, power-ups, collectibles
+    effects?: { name: string; frames: number; description: string }[];  // VFX sprites
     ui?: { name: string; description: string }[];  // HUD elements, menus
 }
 

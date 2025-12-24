@@ -103,7 +103,7 @@ function App() {
   const isChristmas = useMemo(() => currentMovie.genres.includes('Christmas'), [currentMovie]);
   const isWar = useMemo(() => currentMovie.genres.includes('War'), [currentMovie]);
 
-  // Scenes Logic - for games, convert gameAssets to scene-like format
+  // Scenes Logic - for games, convert gameAssets to scene-like format for SPRITE SHEET GENERATION
   const currentScenes = useMemo(() => {
     if (currentMovie.type === 'series') {
       return tvScenes[currentMovie.id]?.[selectedSeasonId]?.[selectedEpisodeId] || [];
@@ -114,38 +114,55 @@ function App() {
       const scenes: { id: number; title: string; promptPayload: string }[] = [];
       let idCounter = 1;
 
-      // Add game info header
-      const stylePrefix = `${assets.graphicsStyle} ${assets.perspective} game sprite, ${assets.resolution} resolution`;
+      // Core sprite sheet prompt prefix
+      const palette = assets.colorPalette ? `, ${assets.colorPalette}` : '';
+      const basePrompt = `${assets.graphicsStyle} ${assets.perspective} game sprite sheet, ${assets.resolution} resolution${palette}`;
 
-      // Add characters with their actions
+      // Add characters with their actions - SPRITE SHEET FOCUSED
       assets.characters?.forEach(char => {
         const roleIcon = char.role === 'player' ? '⚔️' : char.role === 'boss' ? '👹' : char.role === 'enemy' ? '👾' : '🧑';
+        const directionInfo = char.directions === 1 ? 'single direction' :
+          char.directions === 2 ? 'left and right facing' :
+            char.directions === 4 ? '4 cardinal directions (up/down/left/right)' :
+              '8 rotation angles';
+
         char.actions.forEach(action => {
+          const frameInfo = action.frames > 1 ? `${action.frames}-frame animation` : 'static pose';
           scenes.push({
             id: idCounter++,
-            title: `${roleIcon} ${char.name}: ${action.action}`,
-            promptPayload: `${stylePrefix}, ${char.name} character sprite sheet, ${action.action} animation, ${action.description}`
+            title: `${roleIcon} ${char.name}: ${action.action} (${action.frames}f)`,
+            promptPayload: `${basePrompt}, CHARACTER SPRITE SHEET: ${char.name} - ${action.action}, ${frameInfo}, ${directionInfo}, ${action.description}, arranged in horizontal row, transparent background, consistent size per frame`
           });
         });
       });
 
-      // Add tilesets
+      // Add tilesets - TILESET FOCUSED
       assets.tilesets?.forEach(tile => {
-        const typeIcon = tile.type === 'floor' ? '🟫' : tile.type === 'wall' ? '🧱' : tile.type === 'hazard' ? '⚠️' : tile.type === 'background' ? '🌄' : '📦';
+        const typeIcon = tile.type === 'floor' ? '🟫' : tile.type === 'wall' ? '🧱' : tile.type === 'hazard' ? '⚠️' : tile.type === 'background' ? '🌄' : tile.type === 'platform' ? '📐' : tile.type === 'decoration' ? '🌸' : '📦';
         scenes.push({
           id: idCounter++,
-          title: `${typeIcon} Tile: ${tile.name}`,
-          promptPayload: `${stylePrefix}, tileset sprite sheet, ${tile.name}, ${tile.type} tiles, ${tile.description}`
+          title: `${typeIcon} Tileset: ${tile.name} (${tile.variants}v)`,
+          promptPayload: `${basePrompt}, TILESET SPRITE SHEET: ${tile.name}, ${tile.type} tiles, ${tile.variants} variations, ${tile.description}, seamless edges, grid layout, transparent background`
         });
       });
 
-      // Add items
+      // Add items - ITEM SPRITES
       assets.items?.forEach(item => {
-        const catIcon = item.category === 'weapon' ? '🗡️' : item.category === 'powerup' ? '⭐' : item.category === 'consumable' ? '💊' : item.category === 'equipment' ? '🛡️' : '💎';
+        const catIcon = item.category === 'weapon' ? '🗡️' : item.category === 'powerup' ? '⭐' : item.category === 'consumable' ? '💊' : item.category === 'equipment' ? '🛡️' : item.category === 'projectile' ? '💥' : '💎';
+        const animInfo = item.animated ? `${item.frames}-frame animation` : 'static sprite';
         scenes.push({
           id: idCounter++,
-          title: `${catIcon} Item: ${item.name}`,
-          promptPayload: `${stylePrefix}, item sprite sheet, ${item.name}, ${item.category}, ${item.description}`
+          title: `${catIcon} Item: ${item.name} (${item.frames}f)`,
+          promptPayload: `${basePrompt}, ITEM SPRITE: ${item.name}, ${item.category}, ${animInfo}, ${item.description}, transparent background`
+        });
+      });
+
+      // Add effects - VFX SPRITES
+      assets.effects?.forEach(effect => {
+        scenes.push({
+          id: idCounter++,
+          title: `✨ Effect: ${effect.name} (${effect.frames}f)`,
+          promptPayload: `${basePrompt}, VFX SPRITE SHEET: ${effect.name}, ${effect.frames}-frame animation, ${effect.description}, horizontal strip, transparent background`
         });
       });
 
@@ -154,7 +171,7 @@ function App() {
         scenes.push({
           id: idCounter++,
           title: `🖼️ UI: ${ui.name}`,
-          promptPayload: `${stylePrefix}, game UI element, ${ui.name}, ${ui.description}`
+          promptPayload: `${basePrompt}, GAME UI ELEMENT: ${ui.name}, ${ui.description}, clean design, transparent background`
         });
       });
 
