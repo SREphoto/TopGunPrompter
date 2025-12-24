@@ -2030,7 +2030,8 @@ export const movies: Movie[] = [
             { name: 'Flying Bikes', promptString: 'silhouette against full moon, bicycles in sky, forest tree line, night blue, amblin magic' },
             { name: 'Glowing Finger', promptString: 'glowing fingertip, healing light, alien skin texture, emotional connection, suburban bedroom' },
             { name: 'Hazmat Home', promptString: 'plastic tunnels, government agents, flashlights, quarantine, sci-fi invasion, menacing contrast' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for E.T. the Extra-Terrestrial (1982), young Elliott and E.T. touching fingers, glowing fingertip, bicycle flying across full moon in background, 'E.T.' large title, magical Amblin style --ar 2:3"
     },
     {
         id: 'ghostbusters',
@@ -2044,7 +2045,8 @@ export const movies: Movie[] = [
             { name: 'Proton Stream', promptString: 'crossing the streams, wiggly orange energy, lightning effects, rooftop battle, 80s special effects' },
             { name: 'Stay Puft', promptString: 'massive marshmallow man, walking through city, low angle, terror and comedy, nyc street' },
             { name: 'Library Ghost', promptString: 'transparent purple ghost, floating books, card catalog, spooky library, jumpscare aesthetic' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Ghostbusters (1984), four ghostbusters firing proton streams, crossing streams, Stay Puft Marshmallow Man looming in NYC skyline, 'NO GHOSTS' logo, comedy horror classic --ar 2:3"
     },
     {
         id: 'amadeus',
@@ -2058,7 +2060,8 @@ export const movies: Movie[] = [
             { name: 'Opera House', promptString: 'candlelight, baroque architecture, powdered wigs, lavish costumes, opera performance, warm glow' },
             { name: 'Composition Bed', promptString: 'dictating music, feverish, sheet music scattered, quill pen, candlelight, intensity, shadows' },
             { name: 'Masquerade', promptString: 'venetian masks, elaborate parties, decadence, 18th century vienna, rich textures, silk' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Amadeus (1984), Mozart silhouette conducting with wild hair, Salieri lurking in shadow, 18th century musical notes overlay, opulent gold and red color palette, dramatic biography --ar 2:3"
     },
     {
         id: 'brazil',
@@ -2072,7 +2075,8 @@ export const movies: Movie[] = [
             { name: 'Ductwork', promptString: 'overwhelmed by pipes, industrial bureaucracy, retro technology, ducts everywhere, wide angle distortion' },
             { name: 'Dream Knight', promptString: 'silver winged armor, giant samurai, clouds, fantasy sequence, surrealism, gilliam aesthetic' },
             { name: 'Ministry of Info', promptString: 'massive brutalist architecture, tiny people, bureaucracy, paperwork, totalitarian scale' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Brazil (1985), Sam Lowry strapped into a chair with tubes, winged knight flying in clouds above, retro-futuristic industrial pipes background, 'BRAZIL' neon neon blue title, Terry Gilliam surrealism --ar 2:3"
     },
     {
         id: 'scarface',
@@ -2086,7 +2090,8 @@ export const movies: Movie[] = [
             { name: 'Say Hello', promptString: 'm-16 with grenade launcher, balcony, explosion, mansion interior, red carpets, chaotic violence' },
             { name: 'Chainsaw Bathroom', promptString: 'pastel colors, cramped motel bathroom, shower curtain, blood, tension, miami vibe' },
             { name: 'Money Laundry', promptString: 'stacks of cash, bank bags, counting money, greed, 80s excess, gold and green' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Scarface (1983), Tony Montana in a black suit divided by white negative space, holding a gun, red title 'SCARFACE', high contrast black and white minimalist design --ar 2:3"
     },
     {
         id: 'untouchables',
@@ -2100,7 +2105,8 @@ export const movies: Movie[] = [
             { name: 'Union Station', promptString: 'falling baby carriage, slow motion, marble stairs, sailors, shootout, tension, de palma angle' },
             { name: 'Baseball Bat', promptString: 'tuxedo dinner, round table, overhead shot, violence, posh interior, sudden brutality' },
             { name: 'Border Raid', promptString: 'canadian border, horseback, bridge, leather jackets, shotgun, western vibe, wide shot' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for The Untouchables (1987), Kevin Costner, Sean Connery, and team standing tall with shotguns, Al Capone face in background, prohibition era Chicago style, art deco typography --ar 2:3"
     },
     {
         id: 'stand-by-me',
@@ -2114,7 +2120,8 @@ export const movies: Movie[] = [
             { name: 'Train Tracks', promptString: 'walking on railroad tracks, summer forest, camaraderie, nostalgia, vanishing point, soft sunlight' },
             { name: 'The Bridge', promptString: 'running from train, steam engine smoke, panic, height, dangerous drop, action' },
             { name: 'Campfire', promptString: 'night woods, firelight on faces, storytelling, youth, intimacy, crickets, emotional' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Stand by Me (1986), four boys walking along train tracks, summer sunset, lush green forest, nostalgic coming of age vibe, 'STAND BY ME' title at top --ar 2:3"
     },
     {
         id: 'blue-velvet',
@@ -2128,7 +2135,8 @@ export const movies: Movie[] = [
             { name: 'Suburban Roses', promptString: 'bright red roses, white picket fence, hyper saturated, fake perfection, blue sky, low angle' },
             { name: 'Closet Voyeur', promptString: 'view through slats, dark room, velvet robe, fear, voyeurism, lynchian atmosphere' },
             { name: 'Gas Mask', promptString: 'oxygen mask, velvet texture, manic intensity, disturbed, dim lighting, psychological horror' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Blue Velvet (1986), Isabella Rossellini singing at a microphone, blue velvet curtain background, close up on red lips, neo-noir mystery atmospheric art --ar 2:3"
     },
     {
         id: 'paris-texas',
@@ -2142,7 +2150,8 @@ export const movies: Movie[] = [
             { name: 'Desert Walk', promptString: 'red baseball cap, dusty suit, endless highway, american southwest, isolation, robby muller cinematography' },
             { name: 'Peep Show', promptString: 'two way mirror, reflection, telephone, neon lighting, separation, emotional confession' },
             { name: 'Green Light', promptString: 'fluorescent green light, parking lot, dusk, lonely atmosphere, urban alienation, color mood' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Paris, Texas (1984), Travis wearing a red baseball cap looking at a vast desert landscape, neon green sign reflection, lonely americana aesthetic, Wim Wenders style --ar 2:3"
     },
     {
         id: 'full-metal-jacket',
@@ -2156,7 +2165,8 @@ export const movies: Movie[] = [
             { name: 'Barracks Lineup', promptString: 'perfect symmetry, drill instructor yelling, immaculate beds, cold blue light, wide angle lens' },
             { name: 'Sniper Ruins', promptString: 'burning building, hue city, rubble, desaturated, fire, urban warfare, tension' },
             { name: 'Mickey Mouse', promptString: 'soldiers marching, silhouettes against fire, hellish landscape, surreal war, night' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Full Metal Jacket (1987), a military helmet with 'BORN TO KILL' written on it, bullets as peace sign, white background, bold black title, Kubrick war movie minimalism --ar 2:3"
     },
     {
         id: 'wings-of-desire',
@@ -2170,7 +2180,8 @@ export const movies: Movie[] = [
             { name: 'Angel View', promptString: 'black and white, high angle looking down on berlin, trench coat, solitude, rooftop, spiritual' },
             { name: 'Library Thoughts', promptString: 'library interior, whispering, soft light, intellectual, listening to thoughts, peaceful' },
             { name: 'Color Transition', promptString: 'shift from b&w to color, vibrant aesthetic, falling in love, sensory detail, cinematic poetry' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Wings of Desire (1987), an angel perched on a stone statue overlooking Berlin, black and white photography, gold title text, atmospheric spiritual drama --ar 2:3"
     },
     {
         id: 'ran',
@@ -2184,7 +2195,8 @@ export const movies: Movie[] = [
             { name: 'Color Armies', promptString: 'primary colors, red yellow blue banners, massive armies, green hills, telephoto compression, painterly' },
             { name: 'Burning Castle', promptString: 'burning wooden fortress, arrows flying, chaotic battle, smoke, blood, noh theater makeup' },
             { name: 'Mad King', promptString: 'wild hair, kimono, wandering in wilderness, storm clouds, shakespearean tragedy, epic scale' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Ran (1985), an old warlord sitting in front of a burning castle, arrows stuck in floor, vibrant red and yellow colors, chaotic samurai battle background, Kurosawa epic --ar 2:3"
     },
     {
         id: 'cinema-paradiso',
@@ -2197,8 +2209,9 @@ export const movies: Movie[] = [
         styles: [
             { name: 'Projection Booth', promptString: 'beam of light, film reels, dust motes, face illuminated by projector, magic of cinema' },
             { name: 'Town Square', promptString: 'outdoor screening, white sheet on wall, italian village, night, community, nostalgia, warm light' },
-            { name: 'Film Kiss', promptString: 'montage of kisses, celluloid texture, black & white clips, emotion, tears, close up' }
-        ]
+            { name: 'Film Kiss', promptString: 'montage of kisses, celluloid texture, black & white clips, emotional, tears, close up' }
+        ],
+        posterPrompt: "Official movie poster for Cinema Paradiso (1988), young boy Toto looking up at an old film projector light, Alfredo the projectionist smiling, film strips floating, warm nostalgic Italian cinema style --ar 2:3"
     },
     {
         id: 'goodfellas',
@@ -2212,7 +2225,8 @@ export const movies: Movie[] = [
             { name: 'Copa Shot', promptString: 'steadicam tracking shot, kitchen corridor, red light, bustling restaurant, entering club, immersion' },
             { name: 'Trunk Shot', promptString: 'looking up from trunk, red brake lights, three gangsters, brutal, high contrast, low angle' },
             { name: 'Helicopter Paranoia', promptString: 'driving car, looking at sky, frantic, sweat, cocaine energy, jump cuts, erratic camera' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Goodfellas (1990), Henry Hill, Jimmy Conway, and Tommy DeVito looking down at a body in a car trunk, red taillight glow, 'As far back as I can remember I always wanted to be a gangster' tagline --ar 2:3"
     },
     {
         id: 'schindlers-list',
@@ -2226,7 +2240,8 @@ export const movies: Movie[] = [
             { name: 'Girl in Red', promptString: 'black and white crowd, selective color red coat, devastation, high angle, poignant contrast' },
             { name: 'Typewriter', promptString: 'names on list, close up keys, cigarette smoke, documents, life and death, janusz kaminski lighting' },
             { name: 'Candle Smoke', promptString: 'extinguishing candle, smoke rising, darkness, transition, somber atmosphere, metaphor' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Schindler's List (1993), close up of two hands holding, one adult one child, selective color red coat sleeve, otherwise black and white, 'Whoever saves one life, saves the world entire' --ar 2:3"
     },
     {
         id: 'the-pianist',
@@ -2240,7 +2255,8 @@ export const movies: Movie[] = [
             { name: 'Ruined Warsaw', promptString: 'destroyed city, mountains of rubble, grey dust, loneliness, survival, wide shot devastation' },
             { name: 'Frozen Hands', promptString: 'cold breath, dirty window light, starving, playing piano air, desperation, texture' },
             { name: 'Moonlight Sonata', promptString: 'shaft of light, german officer, piano silhouette, dust particles, tension, art salvation' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for The Pianist (2002), Adrien Brody looking out a shattered window at snowy destroyed Warsaw ruins, lonely atmosphere, grand piano silhouette, somber historical drama --ar 2:3"
     },
     {
         id: 'shawshank-redemption',
@@ -2254,7 +2270,8 @@ export const movies: Movie[] = [
             { name: 'Rain Freedom', promptString: 'arms wide open, pouring rain, lightning, ripped shirt, freedom, shirtless, catharsis, high angle' },
             { name: 'Library Light', promptString: 'sunlight through high bars, dust motes, books, prison library, hope, warm atmosphere' },
             { name: 'Zihuatanejo', promptString: 'bright blue ocean, white sand, wooden boat, reunion, saturated colors, paradise, wide shot' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for The Shawshank Redemption (1994), Andy Dufresne standing in the rain with arms raised to the sky, Shawshank prison in background, lightning, iconic pose of freedom --ar 2:3"
     },
     {
         id: 'reservoir-dogs',
@@ -2268,7 +2285,8 @@ export const movies: Movie[] = [
             { name: 'Walking Title', promptString: 'slow motion walking, black suits, sunglasses, parking lot, cool attitude, ensemble cast, low angle' },
             { name: 'Ear Scene', promptString: 'dancing with razor, warehouse interior, radio, psychotic joy, torture, industrial grit' },
             { name: 'Mexican Standoff', promptString: 'guns pointed at each other, triangle formation, blood soaked shirts, tension, high contrast' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Reservoir Dogs (1992), six men in black suits and sunglasses walking in slow motion, white background, blood splatter, 'RESERVOIR DOGS' title in bold, Tarantino debut classic --ar 2:3"
     },
     {
         id: 'fargo',
@@ -2282,7 +2300,8 @@ export const movies: Movie[] = [
             { name: 'White Warning', promptString: 'car in snow, endless white horizon, isolation, tiny silhouette, bleak landscape, overcast' },
             { name: 'Wood Chipper', promptString: 'red blood on white snow, industrial machine, shock, black comedy contrast, daylight' },
             { name: 'Sheriff Coffee', promptString: 'warm diner interior, police uniform, coffee steam, friendly demeanor, minnesota winter outside' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Fargo (1996), a car driving on a lonely road in a vast white snowy landscape, needlepoint art style tagline 'A HOMESPUN MURDER STORY', red blood contrast against snow --ar 2:3"
     },
     {
         id: 'big-lebowski',
@@ -2296,7 +2315,8 @@ export const movies: Movie[] = [
             { name: 'Bowling Jesus', promptString: 'purple jumpsuit, bowling alley, slow motion, cleaning ball, jesus quintana, surreal lighting' },
             { name: 'Rug Room', promptString: 'persian rug, bathrobe, white russian, sunglasses inside, slacker vibe, messy apartment' },
             { name: 'Gutter Dreams', promptString: 'dream sequence, bowling pin headdress, valkyrie, checkered floor, surreal musical, wide angle' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for The Big Lebowski (1998), The Dude wearing sunglasses and a bathrobe, Walter holding a bowling ball, Donny in background, neon bowling alley aesthetic, 'THE BIG LEBOWSKI' retro font --ar 2:3"
     },
     {
         id: 'trainspotting',
@@ -2310,7 +2330,8 @@ export const movies: Movie[] = [
             { name: 'Edinburgh Run', promptString: 'running down street, shopping bags, britpop energy, motion blur, freeze frame, urban decay' },
             { name: 'Toilet Dive', promptString: 'underwater surrealism, crystal clear water, swimming, fantasy, blue light, dreamlike' },
             { name: 'Ceiling Baby', promptString: 'hallucination, baby crawling on ceiling, distorted perspective, withdrawal horror, dutch angle' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Trainspotting (1996), Ewan McGregor wrapping arms around himself, orange and white text layout lists 'Choose Life. Choose a Job. Choose a Career.', gritty 90s British cinema style --ar 2:3"
     },
     {
         id: 'princess-bride',
@@ -2324,7 +2345,8 @@ export const movies: Movie[] = [
             { name: 'Cliffs of Insanity', promptString: 'rope climbing massive cliff, silhouette against blue sky, peril, dizzying height, fantasy landscape' },
             { name: 'Sword Duel', promptString: 'fencing on ruins, acrobatics, witty banter implied, warm stone texture, dynamic poses, sunlight' },
             { name: 'Storybook', promptString: 'grandpa reading book, bedroom candlelight, warmth, fantasy vignette overlay, golden glow, nostalgia' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for The Princess Bride (1987), Westley and Buttercup silhouette against a giant setting sun, grandfather reading a book border, fantasy adventure romance style, 'AS YOU WISH' text --ar 2:3"
     },
     {
         id: 'akira',
@@ -2338,7 +2360,8 @@ export const movies: Movie[] = [
             { name: 'Neo-Tokyo Bike', promptString: 'kaneda bike slide, red trails, electric sparks, futuristic city, neon skyline, speed lines, anime aesthetic' },
             { name: 'Stadium Mutation', promptString: 'massive flesh transformation, fleshy organic horror, crumbling concrete, dust, apocalypse, visceral' },
             { name: 'Laser Satellite', promptString: 'orbital laser beam, destruction, white light, explosion shockwave, massive scale, sci-fi anime' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Akira (1988), Kaneda walking towards his red motorcycle, Neo-Tokyo explosive background, 'AKIRA' bold red kanji title, cyber-punk anime masterpiece art --ar 2:3"
     },
     {
         id: 'unforgiven',
@@ -2352,7 +2375,8 @@ export const movies: Movie[] = [
             { name: 'Rainy Saloon', promptString: 'pouring rain, mud, shotgun silhouette, dim lantern light, tension, grim western, shadows' },
             { name: 'Pig Farm', promptString: 'muddy pen, failing sunlight, rough texture, weary cowboy, realism, desaturated earth tones' },
             { name: 'Last Stand', promptString: 'whiskey bottle, dark saloon, thunderstorm outside, flashes of lightning, solitary anti-hero' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Unforgiven (1992), Clint Eastwood silhouette in rain, holding a rifle, dark moody western sky, 'UNFORGIVEN' text in weathered font, gritty revisionist western --ar 2:3"
     },
     {
         id: 'lion-king',
@@ -2366,7 +2390,8 @@ export const movies: Movie[] = [
             { name: 'Circle of Life', promptString: 'pride rock sunrise, african savanna, herds of animals, golden light, epic scale, vibrant colors' },
             { name: 'Wildebeest Stampede', promptString: 'canyon dust, rushing herd, shadows, peril, movement blur, dramatic angle, tragedy' },
             { name: 'Ghost in Clouds', promptString: 'cloud formation lion face, starry night, mystical blue light, wisdom, ethereal atmosphere' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for The Lion King (1994), Pride Rock silhouette against a massive red rising sun, Simba standing on the edge, African savanna animals bowing below, epic Disney animation style --ar 2:3"
     },
     {
         id: 'heat',
@@ -2380,7 +2405,8 @@ export const movies: Movie[] = [
             { name: 'Bank Heist', promptString: 'grey suits, assault rifles, downtown la, deafening sound implied, shattering glass, urban warfare, blue tint' },
             { name: 'Diner Coffee', promptString: 'two men talking, simple diner table, focus, blurred background, professional respect, stillness' },
             { name: 'LA Airport', promptString: 'planes landing, night, runway lights, chase, shadows, noise, industrial solitude' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Heat (1995), Al Pacino and Robert De Niro faces superimposed over a blue night city skyline of Los Angeles, 'HEAT' bold metallic title, crime saga masterpiece --ar 2:3"
     },
     {
         id: 'toy-story',
@@ -2394,7 +2420,8 @@ export const movies: Movie[] = [
             { name: 'Bedroom Floor', promptString: 'toys eye view, giant furniture, vibrant plastic textures, bedspread pattern, nostalgia, cgi' },
             { name: 'The Claw', promptString: 'aliens looking up, green glow, arcade crane, awe, plastic texture, reflection' },
             { name: 'Rocket Chase', promptString: 'rc car speeding, moving truck, rocket ignition, motion blur, asphalt texture, dynamic action' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Toy Story (1995), Woody and Buzz Lightyear smiling, cloudy blue wallpaper background, Pixar 3D animation style, 'TOY STORY' yellow and blue logo, classic --ar 2:3"
     },
     {
         id: 'princess-mononoke',
@@ -2408,7 +2435,8 @@ export const movies: Movie[] = [
             { name: 'Cursed Arm', promptString: 'black worm infection, hatred, glowing aura, dynamic lines, anime violence, ghibli style' },
             { name: 'Forest Spirit', promptString: 'glowing deer god, walking on water, serene nature, lush green forest, kodama spirits, magical' },
             { name: 'Iron Town', promptString: 'industrial bellows, fire, wooden fortress, female workers, smoke, feudal japan fantasy' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Princess Mononoke (1997), San with blood on her face riding a giant white wolf, Ashitaka riding a red elk, forest spirits background, Studio Ghibli fantasy epic art --ar 2:3"
     },
     {
         id: 'truman-show',
@@ -2422,7 +2450,8 @@ export const movies: Movie[] = [
             { name: 'Hidden Camera', promptString: 'fisheye lens, vignette, surveillance angle, fake suburban perfection, bright lighting, unnatural' },
             { name: 'The Wall', promptString: 'boat hitting painted sky, artificial horizon, realization, tear in reality, blue sky wall' },
             { name: 'Exit Door', promptString: 'black stairs against sky, spotlight, final bow, silhouette, escaping simulation, surrealism' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for The Truman Show (1998), mosaic of hundreds of tiny photos forming Jim Carrey's face, 'ON THE AIR' graphic, television monitors background, satirical drama --ar 2:3"
     },
     {
         id: 'american-beauty',
@@ -2436,7 +2465,8 @@ export const movies: Movie[] = [
             { name: 'Rose Petals', promptString: 'bed of red roses, birds eye view, fantasy, vivid red, smooth skin, surreal desire, dream' },
             { name: 'Plastic Bag', promptString: 'floating white bag, leaves dancing, mundane beauty, lo-fi video texture, wind, serenity' },
             { name: 'Dining Table', promptString: 'distant composition, symmetry, candlelight, cold atmosphere, suburban dysfunction, shadows' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for American Beauty (1999), a girl lying in a bed of red rose petals seen from above, minimalist composition, '...look closer' tagline, provocative drama art --ar 2:3"
     },
     {
         id: 'crouching-tiger',
@@ -2450,7 +2480,8 @@ export const movies: Movie[] = [
             { name: 'Bamboo Fight', promptString: 'balancing on green bamboo, swaying, gravity defying, sweeping camera, wuxia elegance, forest' },
             { name: 'Rooftop Chase', promptString: 'running on tiles, night, blue moonlight, floating robes, stealth, ancient china architecture' },
             { name: 'Desert Cave', promptString: 'candlelight, rocky texture, intimacy, isolation, flashback, warm glow, romance' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Crouching Tiger, Hidden Dragon (2000), Michelle Yeoh and Zhang Ziyi fighting in a green bamboo forest, flying wire-fu action, blurred motion, elegant wuxia art style --ar 2:3"
     },
     {
         id: 'spirited-away',
@@ -2464,7 +2495,8 @@ export const movies: Movie[] = [
             { name: 'Bathhouse Night', promptString: 'glowing lanterns, bridge, spirits crossing, reflection on water, massive wooden structure, ghibli magic' },
             { name: 'Train on Water', promptString: 'train tracks submerged, endless ocean, lonely shadow passengers, melancholic beauty, sunset' },
             { name: 'Dragon Flight', promptString: 'white dragon flying, scales, wind in hair, night sky, friendship, dynamic anime angle' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Spirited Away (2001), Chihiro standing on a bridge in front of the massive bathhouse, No Face spirit standing next to her, twilight purple sky, Ghibli masterpiece --ar 2:3"
     },
     {
         id: 'amelie',
@@ -2478,7 +2510,8 @@ export const movies: Movie[] = [
             { name: 'Green & Red', promptString: 'saturated green and red palette, parisian street, whimsical, wide angle close up, mischievous smile' },
             { name: 'Spoon Cracking', promptString: 'creme brulee, cracking crust, sensory detail, macro shot, golden light, simple pleasure' },
             { name: 'Photobooth', promptString: 'torn photo pieces, mystery, montage, quirky interior, warm lighting, eccentric' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for Amélie (2001), Audrey Tautou looking mischievously at the camera, spoon breaking creme brulee crust, warm red and green saturated colors, French whimsical cinema --ar 2:3"
     },
     {
         id: 'city-of-god',
@@ -2492,7 +2525,8 @@ export const movies: Movie[] = [
             { name: 'Chicken Chase', promptString: 'low angle, chicken running, knife sharpening, favela streets, frantic editing style, gritty color' },
             { name: 'Favela Dust', promptString: 'golden hour, dust kicking up, kids with guns, raw realism, claustrophobic alleyways, heat' },
             { name: ' strobe Party', promptString: 'disco lights, sweat, dancing, sudden violence, motion blur, chaotic night, high contrast' }
-        ]
+        ],
+        posterPrompt: "Official movie poster for City of God (2002), Rocket holding a camera, Lil Ze holding a gun, chicken running in foreground, golden sun over favela background, vibrant Kinetic energy --ar 2:3"
     },
     {
         id: 'lost-in-translation',
