@@ -324,5 +324,599 @@ export const games: MediaItem[] = [
                 { name: 'Spider Mastermind', promptString: 'brain on spider legs boss, chaingun' }
             ]
         }
+    },
+    {
+        id: 'skyrim',
+        title: 'The Elder Scrolls V: Skyrim',
+        year: '2011',
+        genres: ['RPG', 'Fantasy', 'Open World'],
+        director: 'Bethesda',
+        actors: [],
+        type: 'game',
+        styles: [
+            { name: 'Nordic Winter', promptString: 'snowy mountains, nordic ruins, aurora borealis' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Iron Sword', promptString: 'nordic sword sprite, iron blade, leather grip' },
+                { name: 'Potions', promptString: 'alchemy potion sprites, health magicka stamina bottles' },
+                { name: 'Soul Gems', promptString: 'glowing gem sprites, petty to grand, magic containers' }
+            ],
+            heroes: [
+                { name: 'Dragonborn', promptString: 'nord warrior sprite, horned helmet, various armor' }
+            ],
+            enemies: [
+                { name: 'Draugr', promptString: 'undead nordic warrior sprites, ancient weapons' },
+                { name: 'Bandits', promptString: 'human enemy sprites, fur armor, various weapons' }
+            ],
+            bosses: [
+                { name: 'Alduin', promptString: 'black dragon boss sprite, world eater, fire breath' }
+            ]
+        }
+    },
+    {
+        id: 'mass-effect-2',
+        title: 'Mass Effect 2',
+        year: '2010',
+        genres: ['RPG', 'Sci-Fi', 'Action'],
+        director: 'BioWare',
+        actors: [],
+        type: 'game',
+        styles: [
+            { name: 'Omega', promptString: 'neon sci-fi slums, criminal underworld, space station' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Assault Rifle', promptString: 'sci-fi rifle sprite, thermal clip, sleek design' },
+                { name: 'Medi-gel', promptString: 'healing item sprite, orange gel pack' }
+            ],
+            heroes: [
+                { name: 'Commander Shepard', promptString: 'N7 armor sprite, red stripe, omni-tool' }
+            ],
+            enemies: [
+                { name: 'Collectors', promptString: 'insectoid alien enemy sprites, glowing eyes' },
+                { name: 'Husks', promptString: 'cybernetic zombie sprites, reaper tech' }
+            ],
+            bosses: [
+                { name: 'Human Reaper', promptString: 'massive terminator boss, larval form, skeleton' }
+            ]
+        }
+    },
+    {
+        id: 'the-last-of-us',
+        title: 'The Last of Us',
+        year: '2013',
+        genres: ['Action', 'Adventure', 'Horror'],
+        director: 'Neil Druckmann',
+        actors: [],
+        type: 'game',
+        styles: [
+            { name: 'Overgrown City', promptString: 'nature reclaiming civilization, post-apocalyptic' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Revolver', promptString: 'worn pistol sprite, survival weapon' },
+                { name: 'Molotov', promptString: 'bottle firebomb sprite, rag fuse, crafted weapon' },
+                { name: 'Med Kit', promptString: 'bandage health kit sprite, scavenged materials' }
+            ],
+            heroes: [
+                { name: 'Joel', promptString: 'grizzled survivor sprite, backpack, flannel shirt' },
+                { name: 'Ellie', promptString: 'teenage girl sprite, switchblade, hoodie' }
+            ],
+            enemies: [
+                { name: 'Runners', promptString: 'fresh infected sprites, aggressive, screaming' },
+                { name: 'Clickers', promptString: 'blind fungal zombie sprites, clicking echolocation' }
+            ],
+            bosses: [
+                { name: 'Bloater', promptString: 'massive infected boss, armored fungus, spore throw' }
+            ]
+        }
+    },
+    {
+        id: 'super-mario-world',
+        title: 'Super Mario World',
+        year: '1991',
+        genres: ['Platformer', 'Action'],
+        director: 'Shigeru Miyamoto',
+        actors: [],
+        type: 'game',
+        styles: [
+            { name: 'Dinosaur Land', promptString: 'colorful SNES platformer, Yoshi, bright colors' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Super Mushroom', promptString: 'red mushroom sprite, power-up, 16-bit' },
+                { name: 'Cape Feather', promptString: 'yellow feather sprite, flight power-up' },
+                { name: 'Yoshi Coins', promptString: 'dragon coin collectible sprite' }
+            ],
+            maps: [
+                { name: 'Overworld Tileset', promptString: 'SMW tiles, grass hills, pipes, blocks, 16-bit' }
+            ],
+            heroes: [
+                { name: 'Mario', promptString: 'SNES mario sprite, cape, run jump animations' },
+                { name: 'Yoshi', promptString: 'green dinosaur mount sprite, tongue, flutter' }
+            ],
+            enemies: [
+                { name: 'Koopa Troopa', promptString: '16-bit turtle enemy, shell kick' },
+                { name: 'Chargin Chuck', promptString: 'football koopa sprite, tackle attack' }
+            ],
+            bosses: [
+                { name: 'Bowser', promptString: 'clown car boss, hammer throw, SMW style' }
+            ]
+        }
+    },
+    {
+        id: 'chrono-trigger',
+        title: 'Chrono Trigger',
+        year: '1995',
+        genres: ['RPG', 'Fantasy', 'Time Travel'],
+        director: 'Square',
+        actors: [],
+        type: 'game',
+        styles: [
+            { name: 'Time Periods', promptString: 'prehistoric to future, varied eras, Toriyama art' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Katana', promptString: 'Crono sword sprites, rainbow to crisis blade' },
+                { name: 'Potions', promptString: 'tonic and ether healing item sprites' }
+            ],
+            heroes: [
+                { name: 'Crono', promptString: 'spiky red hair hero sprite, katana, lightning magic' },
+                { name: 'Marle', promptString: 'princess sprite, crossbow, ice magic, blonde' },
+                { name: 'Lucca', promptString: 'inventor girl sprite, glasses, fire magic, gun' }
+            ],
+            enemies: [
+                { name: 'Imps', promptString: 'small demon enemy sprites, various colors' },
+                { name: 'Reptites', promptString: 'dinosaur humanoid enemy sprites' }
+            ],
+            bosses: [
+                { name: 'Lavos', promptString: 'cosmic parasite boss, shell forms, final boss' },
+                { name: 'Magus', promptString: 'dark wizard sprite, scythe, shadow magic, cape' }
+            ]
+        }
+    },
+    {
+        id: 'zelda-link-to-the-past',
+        title: 'The Legend of Zelda: A Link to the Past',
+        year: '1991',
+        genres: ['Action', 'Adventure', 'RPG'],
+        director: 'Shigeru Miyamoto',
+        actors: [],
+        type: 'game',
+        styles: [
+            { name: 'Light World', promptString: 'bright hyrule, SNES zelda, green fields' },
+            { name: 'Dark World', promptString: 'corrupted realm, purple palette, twisted' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Master Sword', promptString: '16-bit master sword sprite, beam attack' },
+                { name: 'Hookshot', promptString: 'grappling hook item sprite, chain extension' },
+                { name: 'Bow', promptString: 'wooden bow sprite, arrow projectiles' }
+            ],
+            maps: [
+                { name: 'Light World Tiles', promptString: 'SNES hyrule tileset, grass trees water' },
+                { name: 'Dark World Tiles', promptString: 'corrupted purple tileset, skull rocks' }
+            ],
+            heroes: [
+                { name: 'Link', promptString: 'pink hair hero sprite, green tunic, 16-bit animations' }
+            ],
+            enemies: [
+                { name: 'Soldiers', promptString: 'castle guard enemy sprites, sword and spear' },
+                { name: 'Moblins', promptString: 'pig warrior enemy sprites, spear throwing' }
+            ],
+            bosses: [
+                { name: 'Ganon', promptString: 'blue pig demon boss sprite, trident, fire bats' }
+            ]
+        }
+    },
+    {
+        id: 'red-dead-redemption',
+        title: 'Red Dead Redemption',
+        year: '2010',
+        genres: ['Action', 'Adventure', 'Western'],
+        director: 'Rockstar Games',
+        actors: [],
+        type: 'game',
+        styles: [
+            { name: 'Old West', promptString: 'frontier america, desert towns, horseback' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Revolver', promptString: 'western six shooter sprite, cowboy pistol' },
+                { name: 'Rifle', promptString: 'lever action rifle sprite, western firearms' },
+                { name: 'Lasso', promptString: 'rope lasso sprite, catching tool' }
+            ],
+            heroes: [
+                { name: 'John Marston', promptString: 'scarred cowboy sprite, hat, duster coat' }
+            ],
+            enemies: [
+                { name: 'Outlaws', promptString: 'western bandit enemy sprites, various weapons' }
+            ],
+            bosses: [
+                { name: 'Dutch', promptString: 'gang leader boss, fancy clothes, dual pistols' }
+            ]
+        }
+    },
+    {
+        id: 'goldeneye-007',
+        title: 'GoldenEye 007',
+        year: '1997',
+        genres: ['FPS', 'Action', 'Spy'],
+        director: 'Rare',
+        actors: [],
+        type: 'game',
+        styles: [
+            { name: 'Facility', promptString: 'cold war russian base, industrial, N64 graphics' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'PP7', promptString: 'bond pistol sprite, silenced variant' },
+                { name: 'Golden Gun', promptString: 'one-hit-kill golden pistol sprite' },
+                { name: 'Body Armor', promptString: 'protective vest pickup sprite' }
+            ],
+            heroes: [
+                { name: 'James Bond', promptString: 'secret agent sprite, tuxedo, various weapons' }
+            ],
+            enemies: [
+                { name: 'Russian Soldiers', promptString: 'military guard enemy sprites, AK47' }
+            ],
+            bosses: [
+                { name: 'Trevelyan', promptString: '006 villain sprite, final boss, dual wielding' }
+            ]
+        }
+    },
+    {
+        id: 'halo-combat-evolved',
+        title: 'Halo: Combat Evolved',
+        year: '2001',
+        genres: ['FPS', 'Sci-Fi', 'Action'],
+        director: 'Bungie',
+        actors: [],
+        type: 'game',
+        styles: [
+            { name: 'Ringworld', promptString: 'alien megastructure, forerunner architecture' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Assault Rifle', promptString: 'MA5B rifle sprite, UNSC weapon, ammo counter' },
+                { name: 'Plasma Pistol', promptString: 'covenant pistol sprite, green glow, overcharge' },
+                { name: 'Frag Grenade', promptString: 'UNSC grenade sprite, explosive' }
+            ],
+            heroes: [
+                { name: 'Master Chief', promptString: 'spartan armor sprite, green mjolnir, visor' }
+            ],
+            enemies: [
+                { name: 'Grunts', promptString: 'covenant grunt enemy sprites, small aliens' },
+                { name: 'Elites', promptString: 'sangheili warrior sprites, energy sword' },
+                { name: 'Flood', promptString: 'parasite zombie sprites, infection forms' }
+            ],
+            bosses: [
+                { name: '343 Guilty Spark', promptString: 'floating AI orb, blue eye, forerunner' }
+            ]
+        }
+    },
+    {
+        id: 'portal-2',
+        title: 'Portal 2',
+        year: '2011',
+        genres: ['Puzzle', 'Sci-Fi', 'First Person'],
+        director: 'Valve',
+        actors: [],
+        type: 'game',
+        styles: [
+            { name: 'Aperture Science', promptString: 'test chambers, white panels, portal gun' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Portal Gun', promptString: 'ASHPD device sprite, blue and orange portals' },
+                { name: 'Companion Cube', promptString: 'weighted cube with hearts, iconic' },
+                { name: 'Gels', promptString: 'repulsion propulsion conversion gel sprites' }
+            ],
+            heroes: [
+                { name: 'Chell', promptString: 'test subject sprite, orange jumpsuit, long fall boots' }
+            ],
+            enemies: [
+                { name: 'Turrets', promptString: 'sentry turret sprites, aperture design, laser sight' }
+            ],
+            bosses: [
+                { name: 'GLaDOS', promptString: 'AI boss sprite, hanging chassis, yellow eye' },
+                { name: 'Wheatley', promptString: 'blue personality core sprite, mechanical eye' }
+            ]
+        }
+    },
+    {
+        id: 'minecraft',
+        title: 'Minecraft',
+        year: '2011',
+        genres: ['Sandbox', 'Survival', 'Creative'],
+        director: 'Markus Persson',
+        actors: [],
+        type: 'game',
+        styles: [
+            { name: 'Blocky World', promptString: 'voxel landscape, cubic everything, procedural' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Diamond Sword', promptString: 'blue diamond blade sprite, 16x16 minecraft' },
+                { name: 'Pickaxes', promptString: 'wood stone iron gold diamond pickaxe sprites' },
+                { name: 'Food', promptString: 'steak apple bread carrot minecraft food sprites' }
+            ],
+            maps: [
+                { name: 'Block Textures', promptString: 'minecraft blocks, grass dirt stone ore, 16x16' }
+            ],
+            heroes: [
+                { name: 'Steve', promptString: 'default player skin, blocky humanoid' },
+                { name: 'Alex', promptString: 'female player skin, orange hair, slim' }
+            ],
+            enemies: [
+                { name: 'Creeper', promptString: 'green exploding monster, iconic, silent' },
+                { name: 'Skeleton', promptString: 'bow-wielding undead, bone texture' },
+                { name: 'Zombie', promptString: 'green undead, blue shirt, shambling' }
+            ],
+            bosses: [
+                { name: 'Ender Dragon', promptString: 'black dragon boss, purple eyes, end dimension' },
+                { name: 'Wither', promptString: 'three-headed skeleton boss, flying, skulls' }
+            ]
+        }
+    },
+    {
+        id: 'street-fighter-ii',
+        title: 'Street Fighter II',
+        year: '1991',
+        genres: ['Fighting', 'Arcade'],
+        director: 'Capcom',
+        actors: [],
+        type: 'game',
+        styles: [
+            { name: 'World Warriors', promptString: 'arcade fighting, 16-bit sprites, world stages' }
+        ],
+        gameAssets: {
+            heroes: [
+                { name: 'Ryu', promptString: 'karate fighter sprite, white gi, hadouken' },
+                { name: 'Ken', promptString: 'american fighter sprite, red gi, shoryuken' },
+                { name: 'Chun-Li', promptString: 'kung fu woman sprite, blue qipao, lightning kick' }
+            ],
+            bosses: [
+                { name: 'M. Bison', promptString: 'dictator boss sprite, red uniform, psycho power' },
+                { name: 'Sagat', promptString: 'muay thai boss, eye patch, tiger uppercut' }
+            ],
+            maps: [
+                { name: 'World Stages', promptString: 'fighting game backgrounds, japan china usa india' }
+            ]
+        }
+    },
+    {
+        id: 'portal',
+        title: 'Portal',
+        year: '2007',
+        genres: ['Puzzle', 'Sci-Fi'],
+        director: 'Valve',
+        actors: [],
+        type: 'game',
+        styles: [
+            { name: 'Test Chambers', promptString: 'sterile white chambers, orange and blue portals' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Portal Gun', promptString: 'handheld portal device sprite, sci-fi tool' },
+                { name: 'Companion Cube', promptString: 'weighted storage cube, pink hearts' }
+            ],
+            heroes: [
+                { name: 'Chell', promptString: 'silent protagonist sprite, orange jumpsuit' }
+            ],
+            bosses: [
+                { name: 'GLaDOS', promptString: 'AI antagonist sprite, cake is a lie, robotic' }
+            ]
+        }
+    },
+    {
+        id: 'witcher-3',
+        title: 'The Witcher 3: Wild Hunt',
+        year: '2015',
+        genres: ['RPG', 'Fantasy', 'Action'],
+        director: 'CD Projekt Red',
+        actors: [],
+        type: 'game',
+        styles: [
+            { name: 'Northern Realms', promptString: 'slavic dark fantasy, war-torn, mature themes' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Silver Sword', promptString: 'witcher sword for monsters, runes, silver blade' },
+                { name: 'Potions', promptString: 'alchemy bottles sprites, various witcher brews' }
+            ],
+            heroes: [
+                { name: 'Geralt', promptString: 'white hair witcher sprite, two swords, cat eyes' },
+                { name: 'Ciri', promptString: 'ashen-haired woman sprite, blink ability, sword' }
+            ],
+            enemies: [
+                { name: 'Drowners', promptString: 'water monster sprites, webbed claws, amphibian' },
+                { name: 'Wraiths', promptString: 'ghost enemy sprites, spectral, screaming' }
+            ],
+            bosses: [
+                { name: 'Wild Hunt', promptString: 'frost elf rider boss sprites, spectral armor' }
+            ]
+        }
+    },
+    {
+        id: 'super-metroid',
+        title: 'Super Metroid',
+        year: '1994',
+        genres: ['Action', 'Adventure', 'Metroidvania'],
+        director: 'Nintendo',
+        actors: [],
+        type: 'game',
+        styles: [
+            { name: 'Zebes', promptString: 'alien planet, biomechanical corridors, isolated' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Missiles', promptString: 'missile ammo sprites, expansion pickups' },
+                { name: 'Energy Tank', promptString: 'health upgrade sprite, glowing container' }
+            ],
+            maps: [
+                { name: 'Brinstar Tiles', promptString: 'organic cave tileset, green flora, alien' },
+                { name: 'Norfair Tiles', promptString: 'lava cavern tileset, red hot metal, volcanic' }
+            ],
+            heroes: [
+                { name: 'Samus', promptString: 'power suit sprite, arm cannon, morph ball, 16-bit' }
+            ],
+            enemies: [
+                { name: 'Space Pirates', promptString: 'alien soldier sprites, laser weapons' },
+                { name: 'Metroids', promptString: 'floating jellyfish aliens, life drain' }
+            ],
+            bosses: [
+                { name: 'Ridley', promptString: 'purple dragon boss sprite, fire breath, wings' },
+                { name: 'Mother Brain', promptString: 'giant brain boss, laser eye, final form' }
+            ]
+        }
+    },
+    {
+        id: 'super-mario-bros',
+        title: 'Super Mario Bros.',
+        year: '1985',
+        genres: ['Platformer', 'Action'],
+        director: 'Shigeru Miyamoto',
+        actors: [],
+        type: 'game',
+        styles: [
+            { name: 'World 1-1', promptString: 'iconic NES platformer, blue sky, green pipes' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Super Mushroom', promptString: 'red power-up mushroom sprite, 8-bit' },
+                { name: 'Fire Flower', promptString: 'orange flower power-up sprite' },
+                { name: 'Coins', promptString: 'gold coin sprite, spinning animation' }
+            ],
+            maps: [
+                { name: 'Overworld Tiles', promptString: 'NES mario tileset, bricks, question blocks, pipes' },
+                { name: 'Underground Tiles', promptString: 'blue underground tileset, dark' }
+            ],
+            heroes: [
+                { name: 'Mario', promptString: 'red cap plumber sprite, 8-bit, run jump animations' }
+            ],
+            enemies: [
+                { name: 'Goomba', promptString: 'brown mushroom enemy sprite, walking' },
+                { name: 'Koopa Troopa', promptString: 'turtle enemy sprite, shell kick' }
+            ],
+            bosses: [
+                { name: 'Bowser', promptString: 'koopa king boss sprite, fire breath, bridge' }
+            ]
+        }
+    },
+    {
+        id: 'shadow-of-the-colossus',
+        title: 'Shadow of the Colossus',
+        year: '2005',
+        genres: ['Action', 'Adventure', 'Puzzle'],
+        director: 'Fumito Ueda',
+        actors: [],
+        type: 'game',
+        styles: [
+            { name: 'Forbidden Lands', promptString: 'vast empty landscape, ancient ruins, lonely' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Ancient Sword', promptString: 'glowing blade sprite, light beam, guidance' },
+                { name: 'Bow', promptString: 'wooden bow sprite, arrow projectiles' }
+            ],
+            heroes: [
+                { name: 'Wander', promptString: 'young warrior sprite, cloak, climbing poses' },
+                { name: 'Agro', promptString: 'faithful horse sprite, riding animations' }
+            ],
+            bosses: [
+                { name: 'Colossi', promptString: 'giant stone creature boss sprites, various forms, weak points' }
+            ]
+        }
+    },
+    {
+        id: 'deus-ex',
+        title: 'Deus Ex',
+        year: '2000',
+        genres: ['RPG', 'FPS', 'Stealth'],
+        director: 'Ion Storm',
+        actors: [],
+        type: 'game',
+        styles: [
+            { name: 'Cyberpunk Future', promptString: 'conspiracy, augmentations, dark near-future' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'GEP Gun', promptString: 'rocket launcher sprite, bulky military weapon' },
+                { name: 'Augmentation Canister', promptString: 'upgrade item sprite, nano tech' },
+                { name: 'Lockpicks', promptString: 'electronic lockpick sprite, hacking tool' }
+            ],
+            heroes: [
+                { name: 'JC Denton', promptString: 'sunglasses agent sprite, trenchcoat, augmented' }
+            ],
+            enemies: [
+                { name: 'MJ12 Troops', promptString: 'paramilitary soldier sprites, conspiracy troops' },
+                { name: 'MIB', promptString: 'men in black enemy sprites, sunglasses, suits' }
+            ],
+            bosses: [
+                { name: 'Walton Simons', promptString: 'augmented villain sprite, nano-augs, boss fight' }
+            ]
+        }
+    },
+    {
+        id: 'super-mario-bros-3',
+        title: 'Super Mario Bros. 3',
+        year: '1990',
+        genres: ['Platformer', 'Action'],
+        director: 'Shigeru Miyamoto',
+        actors: [],
+        type: 'game',
+        styles: [
+            { name: 'Grass Land', promptString: 'NES platformer, colorful worlds, koopa kids' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Super Leaf', promptString: 'raccoon tail power-up sprite, tanooki' },
+                { name: 'Frog Suit', promptString: 'swimming power-up sprite, green frog' },
+                { name: 'P-Wing', promptString: 'infinite flight power-up sprite' }
+            ],
+            maps: [
+                { name: 'World Map Tiles', promptString: 'SMB3 world map tileset, levels, secrets' }
+            ],
+            heroes: [
+                { name: 'Mario', promptString: 'NES mario sprites, raccoon tail, frog suit variants' }
+            ],
+            enemies: [
+                { name: 'Hammer Bros', promptString: 'hammer-throwing koopa sprites' },
+                { name: 'Boo', promptString: 'ghost enemy sprite, shy when looked at' }
+            ],
+            bosses: [
+                { name: 'Koopalings', promptString: 'koopa kid boss sprites, seven variants, magic wands' },
+                { name: 'Bowser', promptString: 'king koopa boss sprite, ground pound, final battle' }
+            ]
+        }
+    },
+    {
+        id: 'gta-v',
+        title: 'Grand Theft Auto V',
+        year: '2013',
+        genres: ['Action', 'Open World', 'Crime'],
+        director: 'Rockstar Games',
+        actors: [],
+        type: 'game',
+        styles: [
+            { name: 'Los Santos', promptString: 'LA satire, modern crime, three protagonists' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Weapons', promptString: 'modern gun sprites, pistol SMG rifle, realistic' },
+                { name: 'Cash', promptString: 'money bundle sprites, heist loot, dollar stacks' }
+            ],
+            heroes: [
+                { name: 'Michael', promptString: 'retired criminal sprite, suit, middle-aged' },
+                { name: 'Franklin', promptString: 'young gangster sprite, streetwear, ambitious' },
+                { name: 'Trevor', promptString: 'psycho criminal sprite, unhinged, bald' }
+            ],
+            enemies: [
+                { name: 'Police', promptString: 'LSPD cop sprites, various weapons, pursuit' },
+                { name: 'Gang Members', promptString: 'street gang enemy sprites, various factions' }
+            ]
+        }
     }
 ];

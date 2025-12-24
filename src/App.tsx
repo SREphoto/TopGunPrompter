@@ -103,10 +103,39 @@ function App() {
   const isChristmas = useMemo(() => currentMovie.genres.includes('Christmas'), [currentMovie]);
   const isWar = useMemo(() => currentMovie.genres.includes('War'), [currentMovie]);
 
-  // Scenes Logic
+  // Scenes Logic - for games, convert gameAssets to scene-like format
   const currentScenes = useMemo(() => {
     if (currentMovie.type === 'series') {
       return tvScenes[currentMovie.id]?.[selectedSeasonId]?.[selectedEpisodeId] || [];
+    }
+    if (currentMovie.type === 'game' && currentMovie.gameAssets) {
+      // Convert gameAssets to scene-like format for display
+      const assets = currentMovie.gameAssets;
+      const scenes: { id: number; title: string; promptPayload: string }[] = [];
+      let idCounter = 1;
+
+      // Add items
+      assets.items?.forEach(item => {
+        scenes.push({ id: idCounter++, title: `🎒 Item: ${item.name}`, promptPayload: item.promptString });
+      });
+      // Add maps/tilesets
+      assets.maps?.forEach(map => {
+        scenes.push({ id: idCounter++, title: `🗺️ Map: ${map.name}`, promptPayload: map.promptString });
+      });
+      // Add heroes
+      assets.heroes?.forEach(hero => {
+        scenes.push({ id: idCounter++, title: `⚔️ Hero: ${hero.name}`, promptPayload: hero.promptString });
+      });
+      // Add enemies
+      assets.enemies?.forEach(enemy => {
+        scenes.push({ id: idCounter++, title: `👾 Enemy: ${enemy.name}`, promptPayload: enemy.promptString });
+      });
+      // Add bosses
+      assets.bosses?.forEach(boss => {
+        scenes.push({ id: idCounter++, title: `👹 Boss: ${boss.name}`, promptPayload: boss.promptString });
+      });
+
+      return scenes;
     }
     return movieScenes[selectedMovieId] || [];
   }, [selectedMovieId, currentMovie, selectedSeasonId, selectedEpisodeId]);
