@@ -2,283 +2,327 @@ import type { MediaItem } from './types';
 
 export const games: MediaItem[] = [
     {
-        id: 'the-last-of-us-part-1',
-        title: 'The Last of Us Part I',
-        year: '2022',
-        genres: ['Action', 'Adventure', 'Horror'],
-        director: 'Neil Druckmann',
-        actors: ['Pedro Pascal', 'Bella Ramsey'], // Using show actors/voice actors mix or just characters? Sticking to voice/show actors for familiarity
-        type: 'game',
-        styles: [
-            { name: 'Overgrown City', promptString: 'nature reclaiming civilization, lush green vegetation on buildings, concrete decay, soft overcast natural lighting, melancholic' },
-            { name: 'Spore Dark', promptString: 'dark basement, floating spores, flashlight beam, intense shadows, green fungal growth, terrifying atmosphere, claustrophobic' },
-            { name: 'Emotional Close-up', promptString: 'shallow depth of field, dirty face, tear streaks, raw emotion, cinematic lighting, 85mm portrait lens' }
-        ]
-    },
-    {
-        id: 'cyberpunk-2077',
-        title: 'Cyberpunk 2077',
-        year: '2020',
-        genres: ['Action', 'RPG', 'Sci-Fi'],
-        director: 'Adam Badowski',
-        actors: ['Keanu Reeves'],
-        type: 'game',
-        styles: [
-            { name: 'Night City', promptString: 'neon signs, wet pavement, towering skyscrapers, holographic ads, dense crowd, rain, pink and blue color palette' },
-            { name: 'Badlands', promptString: 'desert wasteland, dust storm, rusted metal, blinding sun, nomad vehicles, wide open space, heat haze' },
-            { name: 'Braindance', promptString: 'digital glitch, datamoshing, scanlines, distorted reality, thermal vision overlay, cybernetic interface' }
-        ]
-    },
-    {
-        id: 'red-dead-redemption-2',
-        title: 'Red Dead Redemption 2',
-        year: '2018',
-        genres: ['Action', 'Adventure', 'Western'],
-        director: 'Rockstar Games',
-        actors: ['Roger Clark'],
-        type: 'game',
-        styles: [
-            { name: 'The Heartlands', promptString: 'rolling green hills, bison herd, golden hour sunlight, volumetric clouds, grassy plains, painterly landscape' },
-            { name: 'Saint Denis Fog', promptString: 'dense industrial fog, gas lamps, cobblestone streets, swamp humidity, mysterious silhouette, moonlit' },
-            { name: 'Snowy Grizzlies', promptString: 'deep snow, heavy blizzard, fur coat texture, cold blue tones, mountain peaks, survival atmosphere' }
-        ]
-    },
-    {
-        id: 'elden-ring',
-        title: 'Elden Ring',
-        year: '2022',
-        genres: ['Action', 'RPG', 'Fantasy'],
-        director: 'Hidetaka Miyazaki',
+        id: 'tetris',
+        title: 'Tetris',
+        year: '1985',
+        genres: ['Puzzle'],
+        director: 'Alexey Pajitnov',
         actors: [],
         type: 'game',
         styles: [
-            { name: 'Erdtree Gold', promptString: 'giant glowing golden tree in sky, falling golden leaves, ethereal light, grand fantasy landscape, awe inspiring' },
-            { name: 'Caelid Rot', promptString: 'red sky, twisted fungal growths, swamp of rot, desolate, horrifying, disease texture, alien landscape' },
-            { name: 'Liurnia Mist', promptString: 'thick magical fog, blue crystals, flooded ruins, gothic academy silhouette, cool color temperature, mystical' }
-        ]
+            { name: 'Classic Tetris', promptString: 'falling blocks, grid playfield, russian aesthetic, simple clean design' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Tetrominos', promptString: 'pixel art sprite sheet, I J L O S T Z blocks, different colors, clean geometric shapes, 16x16' }
+            ],
+            maps: [
+                { name: 'Playfield', promptString: 'tetris game board, 10x20 grid, dark background, score display, next piece preview' }
+            ]
+        }
     },
     {
-        id: 'control',
-        title: 'Control',
-        year: '2019',
-        genres: ['Action', 'Adventure', 'Sci-Fi'],
-        director: 'Mikael Kasurinen',
-        actors: ['Courtney Hope'],
+        id: 'zelda-ocarina-of-time',
+        title: 'The Legend of Zelda: Ocarina of Time',
+        year: '1998',
+        genres: ['Action', 'Adventure', 'RPG'],
+        director: 'Shigeru Miyamoto',
+        actors: [],
         type: 'game',
         styles: [
-            { name: 'Brutalist Red', promptString: 'imposing concrete architecture, harsh red emergency lighting, geometric shapes, supernatural suspension, unsettling' },
-            { name: 'Astral Plane', promptString: 'infinite white void, black stone monoliths, minimal, sterile, abstract shapes, soft ambient occlusion' },
-            { name: 'Hiss Distortion', promptString: 'reality warping, chromatic aberration, fluid floating debris, red smoke, chaotic energy, motion blur' }
-        ]
+            { name: 'Hyrule Field', promptString: 'vast green plains, distant castle, blue sky, epic fantasy landscape' },
+            { name: 'Temple Dungeon', promptString: 'ancient stone corridors, torchlit, puzzle mechanisms, zelda dungeon' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Master Sword', promptString: 'legendary blue sword sprite, glowing blade, multiple angles, 32x32' },
+                { name: 'Heart Container', promptString: 'red heart icon sprite, health pickup, animation frames' },
+                { name: 'Rupees', promptString: 'green blue red purple gems sprite sheet, currency items, shiny' }
+            ],
+            maps: [
+                { name: 'Hyrule Tileset', promptString: 'top-down tileset, grass paths trees water, fantasy overworld, 16x16' },
+                { name: 'Dungeon Tileset', promptString: 'stone floor walls doors torches, temple interior tiles' }
+            ],
+            heroes: [
+                { name: 'Link Sprite', promptString: 'green tunic hero sprite sheet, sword shield, walk attack animations, 8 directions' }
+            ],
+            enemies: [
+                { name: 'Octorok', promptString: 'octopus creature sprite, spitting rocks, 4 directions animation' },
+                { name: 'Stalfos', promptString: 'skeleton warrior sprite, sword and shield, attack animation' }
+            ],
+            bosses: [
+                { name: 'Ganondorf', promptString: 'dark king boss sprite, flowing cape, magic attacks, imposing' }
+            ]
+        }
     },
     {
-        id: 'death-stranding',
-        title: 'Death Stranding',
-        year: '2019',
-        genres: ['Action', 'Adventure', 'Sci-Fi'],
-        director: 'Hideo Kojima',
-        actors: ['Norman Reedus', 'Mads Mikkelsen', 'Léa Seydoux'],
+        id: 'super-mario-64',
+        title: 'Super Mario 64',
+        year: '1996',
+        genres: ['Platformer', 'Adventure'],
+        director: 'Shigeru Miyamoto',
+        actors: [],
         type: 'game',
         styles: [
-            { name: 'Icelandic Black Sand', promptString: 'volcanic black rock, green moss, overcast grey sky, lonely figure walking, vast scale, photorealistic landscape' },
-            { name: 'Timefall Rain', promptString: 'heavy rain that ages things, inverted rainbow, black tar creatures, dark moody atmosphere, mist' },
-            { name: 'Hades War', promptString: 'world war trenches, barbed wire, skeletal soldiers, oil slick texture, hellish red sky, nightmare' }
-        ]
+            { name: 'Peach Castle', promptString: '3D platformer, colorful worlds, Nintendo 64 aesthetic' },
+            { name: 'Bob-omb Battlefield', promptString: 'grassy hills, chain chomp, king bob-omb mountain' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Power Stars', promptString: 'golden star sprite, spinning animation, collectible glow' },
+                { name: 'Coins', promptString: 'yellow coin sprite sheet, spinning animation, mario style' },
+                { name: 'Red Coins', promptString: 'red coin sprite, special collectible, shimmering' }
+            ],
+            maps: [
+                { name: 'Castle Tileset', promptString: 'stone castle interior, stained glass, paintings, carpet' }
+            ],
+            heroes: [
+                { name: 'Mario 64', promptString: 'red cap plumber sprite, jump punch dive animations' }
+            ],
+            enemies: [
+                { name: 'Goomba', promptString: 'brown mushroom enemy, 3D style, walking animation' },
+                { name: 'Bob-omb', promptString: 'walking bomb sprite, fuse lit, explosion animation' }
+            ],
+            bosses: [
+                { name: 'King Bob-omb', promptString: 'giant bomb king boss, mustache crown, throwing pose' },
+                { name: 'Bowser', promptString: 'koopa king boss sprite, fire breath, tail spin' }
+            ]
+        }
+    },
+    {
+        id: 'half-life-2',
+        title: 'Half-Life 2',
+        year: '2004',
+        genres: ['FPS', 'Sci-Fi', 'Action'],
+        director: 'Valve',
+        actors: [],
+        type: 'game',
+        styles: [
+            { name: 'City 17', promptString: 'dystopian eastern european city, combine architecture, oppressive' },
+            { name: 'Ravenholm', promptString: 'horror town, zombies, dark atmosphere, abandoned' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Gravity Gun', promptString: 'physics gun sprite, orange glow, sci-fi weapon icon' },
+                { name: 'Crowbar', promptString: 'red crowbar sprite, iconic melee weapon, simple design' },
+                { name: 'Health Kit', promptString: 'white medical kit sprite, red cross, healing item' }
+            ],
+            heroes: [
+                { name: 'Gordon Freeman', promptString: 'scientist in HEV suit sprite, glasses, crowbar, orange suit' }
+            ],
+            enemies: [
+                { name: 'Combine Soldier', promptString: 'masked soldier sprite, white armor, pulse rifle' },
+                { name: 'Headcrab', promptString: 'parasitic alien sprite, jumping animation, face hugger' },
+                { name: 'Zombie', promptString: 'headcrab zombie sprite, shambling, claws, horror' }
+            ],
+            bosses: [
+                { name: 'Strider', promptString: 'tripod walker boss, long legs, pulse cannon, alien machine' }
+            ]
+        }
+    },
+    {
+        id: 'resident-evil-4',
+        title: 'Resident Evil 4',
+        year: '2005',
+        genres: ['Action', 'Horror', 'Survival'],
+        director: 'Shinji Mikami',
+        actors: [],
+        type: 'game',
+        styles: [
+            { name: 'Spanish Village', promptString: 'rural horror, rain, cultists, dirty textures' },
+            { name: 'Castle', promptString: 'gothic castle, red velvet, candlelit, religious zealotry' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Handgun', promptString: 'pistol sprite, realistic firearm, RE4 style' },
+                { name: 'Green Herb', promptString: 'healing herb sprite, green plant, health item' },
+                { name: 'Treasure', promptString: 'gem and treasure sprites, jewels, collectibles' }
+            ],
+            heroes: [
+                { name: 'Leon Kennedy', promptString: 'agent sprite sheet, tactical gear, knife, gun poses' }
+            ],
+            enemies: [
+                { name: 'Ganados', promptString: 'villager enemy sprites, pitchforks, axes, infected' },
+                { name: 'Zealots', promptString: 'cult enemy sprites, robes, crossbows, red eyes' }
+            ],
+            bosses: [
+                { name: 'El Gigante', promptString: 'giant troll boss sprite, massive, chains, roaring' },
+                { name: 'Saddler', promptString: 'cult leader boss, tentacle mutations, final form' }
+            ]
+        }
     },
     {
         id: 'bioshock',
         title: 'BioShock',
         year: '2007',
-        genres: ['Action', 'Sci-Fi', 'Horror'],
+        genres: ['FPS', 'Horror', 'Sci-Fi'],
         director: 'Ken Levine',
         actors: [],
         type: 'game',
         styles: [
-            { name: 'Rapture Deco', promptString: 'underwater city, art deco architecture, neon signs, water leaking, rusting brass, retro 1950s aesthetic' },
-            { name: 'Big Daddy', promptString: 'heavy diving suit, glowing portholes, drill arm, industrial texture, rivets, dark corridor, scary' },
-            { name: 'Splicer Shadow', promptString: 'deformed silhouette, bunny mask, dirty hospital tiles, flickering light, horror atmosphere, tilted angle' }
-        ]
+            { name: 'Rapture Deco', promptString: 'underwater city, art deco, neon, 1950s retro-futurism' },
+            { name: 'Big Daddy', promptString: 'diving suit, drill arm, glowing portholes' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Plasmids', promptString: 'genetic power sprites, syringe, elemental icons, fire ice lightning' },
+                { name: 'EVE Hypo', promptString: 'blue syringe sprite, mana/energy item' },
+                { name: 'Audio Diary', promptString: 'tape recorder sprite, collectible item icon' }
+            ],
+            maps: [
+                { name: 'Rapture Tileset', promptString: 'art deco tiles, brass copper, water leaks, neon signs' }
+            ],
+            heroes: [
+                { name: 'Jack', promptString: 'protagonist sprite, sweater, wrench, plasmid hand' }
+            ],
+            enemies: [
+                { name: 'Splicers', promptString: 'deformed enemy sprites, masks, various weapons' },
+                { name: 'Security Bot', promptString: 'flying drone sprite, searchlight, turret' }
+            ],
+            bosses: [
+                { name: 'Big Daddy', promptString: 'diving suit boss, drill and rivet gun variants' },
+                { name: 'Fontaine', promptString: 'final boss sprite, ADAM mutations, monster form' }
+            ]
+        }
     },
     {
-        id: 'bloodborne',
-        title: 'Bloodborne',
-        year: '2015',
-        genres: ['Action', 'RPG', 'Horror'],
-        director: 'Hidetaka Miyazaki',
-        actors: [],
-        type: 'game',
-        styles: [
-            { name: 'Yharnam Gothic', promptString: 'victorian gothic architecture, cobblestones, gas lamps, dark night, full moon, cosmic horror, blood slicked' },
-            { name: 'Hunter Garb', promptString: 'leather trench coat, tricorne hat, saw cleaver, intricate fabric texture, dark and gritty, blood splatter' },
-            { name: 'Nightmare Swirl', promptString: 'purple and red sky, twisted organic shapes, eyes on walls, frenzy, lovecraftian madness, surreal' }
-        ]
-    },
-    {
-        id: 'god-of-war-ragnarok',
-        title: 'God of War Ragnarok',
-        year: '2022',
-        genres: ['Action', 'Adventure'],
-        director: 'Eric Williams',
-        actors: ['Christopher Judge', 'Sunny Suljic'],
-        type: 'game',
-        styles: [
-            { name: 'Fimbulwinter', promptString: 'frozen midgard, thick snow, biting frost, wolf sled, nordic runes, cold white and blue lighting' },
-            { name: 'Vanaheim Jungle', promptString: 'lush mystical jungle, bioluminescent plants, ancient stone structures, river, vibrant greens and purples' },
-            { name: 'Spartan Rage', promptString: 'burning orange embers, fire, intense anger, glowing red eyes, chaos blades, high contrast, heat' }
-        ]
-    },
-    {
-        id: 'horizon-forbidden-west',
-        title: 'Horizon Forbidden West',
-        year: '2022',
-        genres: ['Action', 'Adventure', 'Sci-Fi'],
-        director: 'Mathijs de Jonge',
-        actors: ['Ashly Burch'],
-        type: 'game',
-        styles: [
-            { name: 'Machine Graveyard', promptString: 'giant rusted mechanical beasts, desert ruins, wires and cables, high tech parts in sand, bright desert sun' },
-            { name: 'Oceanic Bloom', promptString: 'tropical beach, clear turquoise water, palm trees, giant mechanical turtle, sun flare, paradise' },
-            { name: 'Focus HUD', promptString: 'holographic projections, blue digital lines, scan data, augmented reality overlay on nature' }
-        ]
-    },
-    {
-        id: 'ghost-of-tsushima',
-        title: 'Ghost of Tsushima',
-        year: '2020',
-        genres: ['Action', 'Adventure'],
-        director: 'Nate Fox',
-        actors: ['Daisuke Tsuji'],
-        type: 'game',
-        styles: [
-            { name: 'Autumn Leaves', promptString: 'carpet of bright red maple leaves, falling leaves, traditional japanese temple, peaceful wind, vibrant color' },
-            { name: 'Kurosawa Mode', promptString: 'high contrast black and white, heavy film grain, samurai duel, wind blowing grass, 1950s japanese cinema aesthetic' },
-            { name: 'Moonlit Duel', promptString: 'field of white spider lilies, giant full moon, silhouette of samurai, cherry blossoms in breeze, poetic' }
-        ]
-    },
-    {
-        id: 'alan-wake-2',
-        title: 'Alan Wake 2',
-        year: '2023',
-        genres: ['Horror', 'Mystery'],
-        director: 'Sam Lake',
-        actors: ['Ilkka Villi', 'Matthew Porretta'],
-        type: 'game',
-        styles: [
-            { name: 'Dark Place NYC', promptString: 'twisted noir version of New York, shifting neon signs, overlapping graffiti, dark ink shadows, surreal urban horror' },
-            { name: 'The Overlap', promptString: 'forest woods merging with strange dimensions, doppler effect, distorted trees, unsettling light, portal' },
-            { name: 'Flashlight Beam', promptString: 'harsh flashlight cutting through deep darkness, particle effects in beam, high contrast shadows, tense' }
-        ]
-    },
-    {
-        id: 'resident-evil-4-remake',
-        title: 'Resident Evil 4',
-        year: '2023',
-        genres: ['Action', 'Horror'],
-        director: 'Yasuhiro Anpo',
-        actors: ['Nick Apostolides'],
-        type: 'game',
-        styles: [
-            { name: 'Spanish Village', promptString: 'muddy rural village, rain, burning hay, dirty textures, villagers with pitchforks, overcast grey sky' },
-            { name: 'Castle Grandeur', promptString: 'european gothic castle, red velvet, gold trim, candlelit, massive chandeliers, religious zealotry' },
-            { name: 'Island Lab', promptString: 'industrial facility, blue clinical lighting, body bags, biohazard signs, metal grates, scientific horror' }
-        ]
-    },
-    {
-        id: 'final-fantasy-vii-rebirth',
-        title: 'Final Fantasy VII Rebirth',
-        year: '2024',
+        id: 'final-fantasy-vii',
+        title: 'Final Fantasy VII',
+        year: '1997',
         genres: ['RPG', 'Fantasy', 'Sci-Fi'],
-        director: 'Naoki Hamaguchi',
-        actors: ['Cody Christian'],
-        type: 'game',
-        styles: [
-            { name: 'Midgar Steel', promptString: 'industrial piping, mako energy glow, cyberpunk slums, massive buster sword, steampunk details' },
-            { name: 'Grasslands', promptString: 'vast green meadows, chocobos grazing, crystal clear blue sky, mountain range, epic fantasy scale' },
-            { name: 'Cosmo Canyon', promptString: 'red rock canyons, stargazing observatory, bonfire embers, sunset, native american inspired motifs' }
-        ]
-    },
-    {
-        id: 'hollow-knight',
-        title: 'Hollow Knight',
-        year: '2017',
-        genres: ['Action', 'Adventure', 'Indie'],
-        director: 'William Pellen',
+        director: 'Yoshinori Kitase',
         actors: [],
         type: 'game',
         styles: [
-            { name: 'City of Tears', promptString: 'rainy blue stone city, glowing blue lanterns, beautiful melancholy, insectoid architecture, gothic' },
-            { name: 'Deepnest', promptString: 'dark tunnels, spider webs, claustrophobic, many eyes in dark, eerie, arachnophobia, scratching sounds' },
-            { name: 'Greenpath', promptString: 'winding plant tunnels, acidic pools, vibrant green leaves, insect shells, soft natural light' }
-        ]
+            { name: 'Midgar', promptString: 'cyberpunk slums, mako reactors, industrial dystopia' },
+            { name: 'Materia Magic', promptString: 'magical orbs, spell effects, summons' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Materia', promptString: 'glowing orb sprites, green red yellow purple, magical spheres' },
+                { name: 'Potions', promptString: 'healing item sprites, potion hi-potion elixir bottles' },
+                { name: 'Buster Sword', promptString: 'massive sword sprite, iconic weapon, Cloud equipment' }
+            ],
+            maps: [
+                { name: 'Midgar Tileset', promptString: 'industrial city tiles, pipes, slums, mako glow' },
+                { name: 'World Map', promptString: 'FF7 overworld tiles, grasslands, mountains, towns' }
+            ],
+            heroes: [
+                { name: 'Cloud Strife', promptString: 'spiky hair soldier sprite, buster sword, SOLDIER uniform' },
+                { name: 'Tifa', promptString: 'martial artist sprite, fighting poses, black outfit' },
+                { name: 'Aerith', promptString: 'flower girl sprite, staff, pink dress, healing' }
+            ],
+            enemies: [
+                { name: 'Shinra Soldiers', promptString: 'military enemy sprites, blue uniform, guns' },
+                { name: 'Monsters', promptString: 'FF7 creature sprites, various beasts and machines' }
+            ],
+            bosses: [
+                { name: 'Sephiroth', promptString: 'silver hair villain sprite, masamune sword, black coat' },
+                { name: 'Jenova', promptString: 'alien entity boss, tentacles, biomechanical horror' }
+            ]
+        }
     },
     {
-        id: 'hades',
-        title: 'Hades',
-        year: '2020',
-        genres: ['Action', 'RPG', 'Indie'],
-        director: 'Greg Kasavin',
+        id: 'world-of-warcraft',
+        title: 'World of Warcraft',
+        year: '2004',
+        genres: ['MMORPG', 'Fantasy'],
+        director: 'Blizzard Entertainment',
         actors: [],
         type: 'game',
         styles: [
-            { name: 'Tartarus', promptString: 'greek underworld, dark halls with green glowing details, chains, skeletal motifs, isometric perspective' },
-            { name: 'Asphodel', promptString: 'hellish lava pools, burning skeletons, islands of bone in magma, orange and yellow light, heat' },
-            { name: 'Elysium', promptString: 'pink and white flowers, golden armor, heroic statues, starry blue sky, celestial paradise' }
-        ]
+            { name: 'Azeroth', promptString: 'warcraft fantasy world, stylized graphics, epic landscapes' },
+            { name: 'Horde vs Alliance', promptString: 'faction conflict, orcs humans, banner flags' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Weapons', promptString: 'WoW weapon sprites, epic swords axes staves, glowing enchants' },
+                { name: 'Armor Sets', promptString: 'tier armor sprites, plate mail cloth leather, class sets' },
+                { name: 'Mounts', promptString: 'mount sprites, horses wolves dragons, riding animals' }
+            ],
+            maps: [
+                { name: 'Elwynn Forest', promptString: 'green forest tileset, human starting zone, peaceful' },
+                { name: 'Durotar', promptString: 'red desert tileset, orc homeland, harsh terrain' }
+            ],
+            heroes: [
+                { name: 'Human Warrior', promptString: 'Alliance warrior sprite, plate armor, sword shield' },
+                { name: 'Orc Warrior', promptString: 'Horde warrior sprite, green skin, axes, spikes' }
+            ],
+            enemies: [
+                { name: 'Kobolds', promptString: 'candle-wearing rat creatures, mining picks' },
+                { name: 'Murlocs', promptString: 'fish creatures, coastal enemies, gurgling' }
+            ],
+            bosses: [
+                { name: 'Ragnaros', promptString: 'fire elemental lord boss, magma, massive hammer' },
+                { name: 'Arthas', promptString: 'Lich King boss, Frostmourne sword, undead armor' }
+            ]
+        }
     },
     {
-        id: 'mass-effect-legendary-edition',
-        title: 'Mass Effect',
-        year: '2021',
-        genres: ['RPG', 'Sci-Fi'],
-        director: 'Casey Hudson',
-        actors: ['Mark Meer', 'Jennifer Hale'],
-        type: 'game',
-        styles: [
-            { name: 'The Citadel', promptString: 'futuristic space station interior, white sleek architecture, massive holographic trees, alien species, utopia' },
-            { name: 'N7 Armor', promptString: 'black combat hardsuit with red and white stripe, omni-tool glowing, orbital view of planet, sci-fi action' },
-            { name: 'Normandy Bridge', promptString: 'starship cockpit, blue console lights, galaxy map hologram, view of a nebula through glass' }
-        ]
-    },
-    {
-        id: 'starfield',
-        title: 'Starfield',
-        year: '2023',
-        genres: ['RPG', 'Sci-Fi'],
-        director: 'Todd Howard',
+        id: 'metal-gear-solid',
+        title: 'Metal Gear Solid',
+        year: '1998',
+        genres: ['Stealth', 'Action', 'Tactical'],
+        director: 'Hideo Kojima',
         actors: [],
         type: 'game',
         styles: [
-            { name: 'NASA-Punk', promptString: 'functional space technology, realistic buttons and switches, white suits with patches, practical scifi, industrial' },
-            { name: 'Neon City', promptString: 'cyberpunk ocean city, fish oil smoke, bright kanji signs, wet catwalks, shady underworld' },
-            { name: 'Alien Frontier', promptString: 'barren moon, low gravity, ringed planet in sky, craters, lonely spaceship landed' }
-        ]
+            { name: 'Shadow Moses', promptString: 'arctic military base, stealth infiltration, snow' },
+            { name: 'Tactical Espionage', promptString: 'radar view, codec calls, cardboard box hiding' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'SOCOM Pistol', promptString: 'silenced pistol sprite, tactical firearm' },
+                { name: 'Cardboard Box', promptString: 'hiding box sprite, stealth item, iconic' },
+                { name: 'Rations', promptString: 'military food sprite, health item, camo pattern' }
+            ],
+            heroes: [
+                { name: 'Solid Snake', promptString: 'stealth soldier sprite, bandana, sneaking suit, CQC poses' }
+            ],
+            enemies: [
+                { name: 'Genome Soldiers', promptString: 'guard sprites, patrol animations, alert poses' }
+            ],
+            bosses: [
+                { name: 'Gray Fox', promptString: 'cyborg ninja sprite, exoskeleton, sword' },
+                { name: 'Metal Gear REX', promptString: 'bipedal tank boss sprite, nuclear mech' },
+                { name: 'Liquid Snake', promptString: 'villain sprite, blonde, shirtless, twin brother' }
+            ]
+        }
     },
     {
-        id: 'baldurs-gate-3',
-        title: 'Baldur\'s Gate 3',
-        year: '2023',
-        genres: ['RPG', 'Fantasy'],
-        director: 'Swen Vincke',
-        actors: ['Neil Newbon'],
+        id: 'doom-1993',
+        title: 'Doom',
+        year: '1993',
+        genres: ['FPS', 'Action', 'Horror'],
+        director: 'id Software',
+        actors: [],
         type: 'game',
         styles: [
-            { name: 'Emerald Grove', promptString: 'druid camp, ancient trees, sunlight through leaves, high fantasy, stone statues, hidden sanctuary' },
-            { name: 'Underdark', promptString: 'giant bioluminescent mushrooms, purple glowing crystals, dark caverns, drow architecture, mysterious' },
-            { name: 'Mind Flayer Ship', promptString: 'organic alien interior, fleshy walls, purple lighting, tentacles, nautiloid, body horror' }
-        ]
-    },
-    {
-        id: 'marvels-spider-man-2',
-        title: 'Spider-Man 2',
-        year: '2023',
-        genres: ['Action', 'Adventure'],
-        director: 'Bryan Intihar',
-        actors: ['Yuri Lowenthal'],
-        type: 'game',
-        styles: [
-            { name: 'Queens Sunset', promptString: 'low rise nyc neighborhood, golden hour, spider-man swinging between houses, suburban feel' },
-            { name: 'Symbiote Black', promptString: 'slick black oil texture, venom details, dark aggressive energy, nighttime nyc, menacing' },
-            { name: 'Empire State View', promptString: 'top of skyscraper, tiny cars below, vast scale of manhattan, bright midday sun, heroic' }
-        ]
+            { name: 'Mars Base', promptString: 'sci-fi corridors, hell portals, demon invasion' },
+            { name: 'Hell', promptString: 'fire and brimstone, demonic architecture, gore' }
+        ],
+        gameAssets: {
+            items: [
+                { name: 'Weapons', promptString: 'doom weapon sprites, shotgun chaingun BFG, pixel art' },
+                { name: 'Keycards', promptString: 'red blue yellow keycard sprites, door access' },
+                { name: 'Health', promptString: 'medkit and stimpack sprites, healing items' }
+            ],
+            maps: [
+                { name: 'Tech Base Tileset', promptString: 'doom WAD tiles, metal walls, computer panels, doors' },
+                { name: 'Hell Tileset', promptString: 'hellish tiles, flesh walls, lava, demonic symbols' }
+            ],
+            heroes: [
+                { name: 'Doomguy', promptString: 'space marine sprite, green armor, multiple weapons, sprite rotations' }
+            ],
+            enemies: [
+                { name: 'Imp', promptString: 'brown demon sprite, fireball attack, melee claws' },
+                { name: 'Pinky Demon', promptString: 'pink bull demon sprite, charging attack' },
+                { name: 'Cacodemon', promptString: 'floating red eye ball demon, projectile attack' }
+            ],
+            bosses: [
+                { name: 'Cyberdemon', promptString: 'massive demon boss, rocket launcher arm, cybernetic' },
+                { name: 'Spider Mastermind', promptString: 'brain on spider legs boss, chaingun' }
+            ]
+        }
     }
 ];
