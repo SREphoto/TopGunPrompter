@@ -1,0 +1,46 @@
+TERMS OF SERVICE
+================
+TopGun Prompter / Cinema Archive
+Last Updated: December 2024
+
+1. ACCEPTANCE OF TERMS
+----------------------
+By using TopGun Prompter ("Cinema Archive"), you agree to these terms.
+
+2. DESCRIPTION OF SERVICE
+-------------------------
+This is a free prompt generation tool designed to help users create 
+descriptive text prompts for AI image generation, inspired by scenes 
+from popular films, TV series, and video games.
+
+3. USER RESPONSIBILITIES
+------------------------
+- You are solely responsible for how you use generated prompts
+- Generated content should comply with the terms of service of any 
+  AI image generation platform you use (Midjourney, DALL-E, etc.)
+- Do not use prompts to generate illegal, harmful, or infringing content
+
+4. INTELLECTUAL PROPERTY
+------------------------
+- Film titles, character names, and scene descriptions reference 
+  publicly known works and are used for descriptive purposes only
+- This tool does not claim ownership of any referenced films or franchises
+- Generated prompts are provided as creative inspiration
+
+5. DISCLAIMER
+-------------
+THE SERVICE IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND.
+We are not affiliated with any film studios, streaming services, 
+or AI image generation platforms.
+
+6. LIMITATION OF LIABILITY
+--------------------------
+SRE Studio shall not be liable for any damages arising from the use 
+of this service or generated prompts.
+
+7. CONTACT
+----------
+Email: SREphotoMN@gmail.com
+
+© 2025 SRE Studio / TopGun Prompter
+Minnesota, USA
