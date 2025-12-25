@@ -3205,5 +3205,693 @@ export const games: MediaItem[] = [
             items: [],
             ui: [{ name: 'Shots', description: 'bullets remaining' }]
         }
+    },
+
+    // Wolfenstein 3D
+    {
+        id: 'wolfenstein', title: 'Wolfenstein 3D', year: '1992', genres: ['FPS', 'Action'], director: 'id Software', actors: [], type: 'game',
+        styles: [{ name: 'Proto FPS', promptString: 'early first-person shooter, Nazi castle, pixel enemies' }],
+        gameAssets: {
+            perspective: 'first-person', graphicsStyle: '32-bit', resolution: '64x64', colorPalette: 'VGA palette',
+            characters: [
+                {
+                    name: 'Guard', role: 'enemy', directions: 8, actions: [
+                        { action: 'idle', frames: 1, description: 'Nazi soldier facing player' },
+                        { action: 'walk', frames: 4, description: 'patrolling' },
+                        { action: 'shoot', frames: 2, description: 'firing pistol' },
+                        { action: 'death', frames: 4, description: 'falling dead' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Castle', type: 'wall', variants: 8, description: 'stone castle walls' }],
+            items: [{ name: 'Health', category: 'consumable', animated: false, frames: 1, description: 'food items' }],
+            ui: [{ name: 'Face', description: 'player face health indicator' }]
+        }
+    },
+
+    // Half-Life
+    {
+        id: 'half-life', title: 'Half-Life', year: '1998', genres: ['FPS', 'Sci-Fi'], director: 'Valve', actors: [], type: 'game',
+        styles: [{ name: 'GoldSrc', promptString: 'late 90s FPS, Black Mesa, crowbar, headcrabs' }],
+        gameAssets: {
+            perspective: 'first-person', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'industrial',
+            characters: [
+                {
+                    name: 'Headcrab', role: 'enemy', directions: 8, actions: [
+                        { action: 'idle', frames: 2, description: 'alien crab waiting' },
+                        { action: 'leap', frames: 4, description: 'jumping at player' }
+                    ]
+                },
+                {
+                    name: 'Vortigaunt', role: 'enemy', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'alien slave' },
+                        { action: 'attack', frames: 4, description: 'lightning attack' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Black Mesa', type: 'floor', variants: 8, description: 'research facility' }],
+            items: [{ name: 'HEV Charger', category: 'equipment', animated: true, frames: 4, description: 'suit charger' }],
+            ui: [{ name: 'HEV', description: 'suit power meter' }]
+        }
+    },
+
+    // Portal
+    {
+        id: 'portal', title: 'Portal', year: '2007', genres: ['Puzzle', 'FPS'], director: 'Valve', actors: [], type: 'game',
+        styles: [{ name: 'Aperture Science', promptString: 'clean test chambers, portal gun, GLaDOS' }],
+        gameAssets: {
+            perspective: 'first-person', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'sterile white',
+            characters: [
+                {
+                    name: 'Turret', role: 'enemy', directions: 1, actions: [
+                        { action: 'idle', frames: 2, description: 'white turret closed' },
+                        { action: 'open', frames: 4, description: 'deploying guns' },
+                        { action: 'fire', frames: 2, description: 'shooting' },
+                        { action: 'death', frames: 4, description: 'tipping over' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Test Chamber', type: 'floor', variants: 6, description: 'clean white panels' }],
+            items: [{ name: 'Companion Cube', category: 'equipment', animated: false, frames: 1, description: 'weighted cube with hearts' }],
+            effects: [{ name: 'Portal', frames: 4, description: 'orange/blue portal effect' }],
+            ui: [{ name: 'Crosshair', description: 'portal placement indicator' }]
+        }
+    },
+
+    // Left 4 Dead
+    {
+        id: 'left-4-dead', title: 'Left 4 Dead', year: '2008', genres: ['FPS', 'Horror', 'Co-op'], director: 'Valve', actors: [], type: 'game',
+        styles: [{ name: 'Zombie Apocalypse', promptString: 'modern zombie horror, infected hordes, survivors' }],
+        gameAssets: {
+            perspective: 'first-person', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'gritty',
+            characters: [
+                {
+                    name: 'Common Infected', role: 'enemy', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'zombie standing' },
+                        { action: 'run', frames: 6, description: 'sprinting at survivors' },
+                        { action: 'attack', frames: 4, description: 'clawing' }
+                    ]
+                },
+                {
+                    name: 'Boomer', role: 'boss', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'bloated zombie' },
+                        { action: 'vomit', frames: 4, description: 'bile attack' },
+                        { action: 'explode', frames: 6, description: 'death explosion' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'City', type: 'floor', variants: 8, description: 'destroyed urban environment' }],
+            items: [{ name: 'Medkit', category: 'consumable', animated: false, frames: 1, description: 'first aid kit' }],
+            ui: [{ name: 'Health', description: 'survivor health bars' }]
+        }
+    },
+
+    // Team Fortress 2
+    {
+        id: 'tf2', title: 'Team Fortress 2', year: '2007', genres: ['FPS', 'Team'], director: 'Valve', actors: [], type: 'game',
+        styles: [{ name: 'Cartoon FPS', promptString: 'stylized 60s cartoon, class-based shooter, hats' }],
+        gameAssets: {
+            perspective: 'first-person', graphicsStyle: 'cel-shaded', resolution: '64x64', colorPalette: 'RED/BLU',
+            characters: [
+                {
+                    name: 'Heavy', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'large Russian with minigun' },
+                        { action: 'rev', frames: 4, description: 'spinning up minigun' },
+                        { action: 'fire', frames: 2, description: 'shooting Sasha' }
+                    ]
+                },
+                {
+                    name: 'Scout', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'Boston runner' },
+                        { action: 'run', frames: 6, description: 'fast running' },
+                        { action: 'double_jump', frames: 4, description: 'second jump' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: '2Fort', type: 'floor', variants: 8, description: 'industrial cartoon base' }],
+            items: [{ name: 'Health Pack', category: 'consumable', animated: false, frames: 1, description: 'medkit pickup' }],
+            ui: [{ name: 'Ammo', description: 'ammunition counter' }]
+        }
+    },
+
+    // Bioshock
+    {
+        id: 'bioshock', title: 'BioShock', year: '2007', genres: ['FPS', 'Horror'], director: '2K', actors: [], type: 'game',
+        styles: [{ name: 'Art Deco Horror', promptString: 'underwater city Rapture, 1960s dystopia, plasmids' }],
+        gameAssets: {
+            perspective: 'first-person', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'art deco',
+            characters: [
+                {
+                    name: 'Big Daddy', role: 'boss', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'diving suit giant with drill' },
+                        { action: 'walk', frames: 6, description: 'heavy footsteps' },
+                        { action: 'charge', frames: 6, description: 'drill charge attack' }
+                    ]
+                },
+                {
+                    name: 'Splicer', role: 'enemy', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'deformed citizen' },
+                        { action: 'attack', frames: 4, description: 'wrench swing' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Rapture', type: 'floor', variants: 8, description: 'art deco underwater city' }],
+            items: [{ name: 'EVE Hypo', category: 'consumable', animated: false, frames: 1, description: 'plasmid energy' }],
+            ui: [{ name: 'Adam', description: 'gene currency' }]
+        }
+    },
+
+    // Borderlands
+    {
+        id: 'borderlands', title: 'Borderlands', year: '2009', genres: ['FPS', 'Looter'], director: 'Gearbox', actors: [], type: 'game',
+        styles: [{ name: 'Cell-Shaded Looter', promptString: 'cel-shaded wasteland, bazillion guns, vault hunters' }],
+        gameAssets: {
+            perspective: 'first-person', graphicsStyle: 'cel-shaded', resolution: '64x64', colorPalette: 'desert wasteland',
+            characters: [
+                {
+                    name: 'Psycho', role: 'enemy', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'masked bandit' },
+                        { action: 'run', frames: 6, description: 'charging with axe' },
+                        { action: 'throw', frames: 4, description: 'throwing buzz axe' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Pandora', type: 'floor', variants: 8, description: 'wasteland desert' }],
+            items: [{ name: 'Gun', category: 'weapon', animated: false, frames: 1, description: 'random generated gun' }],
+            ui: [{ name: 'Loot Rarity', description: 'white/green/blue/purple/orange' }]
+        }
+    },
+
+    // XCOM
+    {
+        id: 'xcom', title: 'XCOM: Enemy Unknown', year: '2012', genres: ['Strategy', 'Tactics'], director: 'Firaxis', actors: [], type: 'game',
+        styles: [{ name: 'Tactical Sci-Fi', promptString: 'turn-based tactics, alien invasion, squad management' }],
+        gameAssets: {
+            perspective: 'isometric', graphicsStyle: 'low-poly-3d', resolution: '32x32', colorPalette: 'military sci-fi',
+            characters: [
+                {
+                    name: 'Soldier', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 2, description: 'XCOM operative' },
+                        { action: 'move', frames: 6, description: 'tactical movement' },
+                        { action: 'shoot', frames: 4, description: 'firing rifle' },
+                        { action: 'overwatch', frames: 2, description: 'watching for enemies' }
+                    ]
+                },
+                {
+                    name: 'Sectoid', role: 'enemy', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'grey alien' },
+                        { action: 'mind_merge', frames: 6, description: 'psionic attack' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'UFO', type: 'floor', variants: 8, description: 'alien ship interior' }],
+            items: [],
+            ui: [{ name: 'Action Points', description: 'movement/action indicators' }]
+        }
+    },
+
+    // Civilization
+    {
+        id: 'civilization', title: 'Civilization VI', year: '2016', genres: ['Strategy', '4X'], director: 'Firaxis', actors: [], type: 'game',
+        styles: [{ name: 'Stylized Strategy', promptString: 'hex-based world, historical leaders, wonders' }],
+        gameAssets: {
+            perspective: 'isometric', graphicsStyle: 'cel-shaded', resolution: '32x32', colorPalette: 'vibrant world',
+            characters: [
+                {
+                    name: 'Warrior', role: 'player', directions: 6, actions: [
+                        { action: 'idle', frames: 4, description: 'ancient warrior unit' },
+                        { action: 'attack', frames: 4, description: 'melee strike' }
+                    ]
+                },
+                {
+                    name: 'Settler', role: 'player', directions: 6, actions: [
+                        { action: 'idle', frames: 2, description: 'settler with cart' },
+                        { action: 'found', frames: 4, description: 'founding city' }
+                    ]
+                }
+            ],
+            tilesets: [
+                { name: 'Terrain', type: 'floor', variants: 12, description: 'hex tiles - plains, hills, desert, forest' },
+                { name: 'Resources', type: 'prop', variants: 8, description: 'iron, horses, wheat' }
+            ],
+            items: [],
+            ui: [{ name: 'Yields', description: 'food/production/gold icons' }]
+        }
+    },
+
+    // Age of Empires
+    {
+        id: 'age-of-empires', title: 'Age of Empires II', year: '1999', genres: ['RTS', 'Strategy'], director: 'Ensemble', actors: [], type: 'game',
+        styles: [{ name: 'Classic RTS', promptString: 'isometric medieval RTS, villagers, wololo' }],
+        gameAssets: {
+            perspective: 'isometric', graphicsStyle: '16-bit', resolution: '32x32', colorPalette: 'medieval',
+            characters: [
+                {
+                    name: 'Villager', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 2, description: 'peasant worker' },
+                        { action: 'walk', frames: 6, description: 'walking' },
+                        { action: 'chop', frames: 4, description: 'chopping wood' },
+                        { action: 'mine', frames: 4, description: 'mining gold' },
+                        { action: 'build', frames: 4, description: 'constructing' }
+                    ]
+                },
+                {
+                    name: 'Knight', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'mounted knight' },
+                        { action: 'charge', frames: 6, description: 'cavalry charge' }
+                    ]
+                },
+                {
+                    name: 'Monk', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'robed monk' },
+                        { action: 'convert', frames: 8, description: 'wololo conversion' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Terrain', type: 'floor', variants: 8, description: 'grass, dirt, water' }],
+            items: [{ name: 'Gold', category: 'collectible', animated: true, frames: 2, description: 'resource pile' }],
+            ui: [{ name: 'Resources', description: 'wood/food/gold/stone counters' }]
+        }
+    },
+
+    // Command and Conquer
+    {
+        id: 'command-conquer', title: 'Command & Conquer', year: '1995', genres: ['RTS', 'Strategy'], director: 'Westwood', actors: [], type: 'game',
+        styles: [{ name: 'Westwood RTS', promptString: 'classic RTS, tiberium, GDI vs NOD' }],
+        gameAssets: {
+            perspective: 'isometric', graphicsStyle: '16-bit', resolution: '32x32', colorPalette: 'military',
+            characters: [
+                {
+                    name: 'Minigunner', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 2, description: 'infantry soldier' },
+                        { action: 'walk', frames: 6, description: 'marching' },
+                        { action: 'fire', frames: 4, description: 'shooting' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Tiberium', type: 'prop', variants: 4, description: 'green crystal resource' }],
+            items: [{ name: 'Crate', category: 'powerup', animated: true, frames: 2, description: 'bonus crate' }],
+            ui: [{ name: 'Credits', description: 'money counter' }]
+        }
+    },
+
+    // Warcraft
+    {
+        id: 'warcraft', title: 'Warcraft III', year: '2002', genres: ['RTS', 'Fantasy'], director: 'Blizzard', actors: [], type: 'game',
+        styles: [{ name: 'Blizzard Fantasy', promptString: 'colorful fantasy RTS, orcs vs humans, heroes' }],
+        gameAssets: {
+            perspective: 'isometric', graphicsStyle: 'low-poly-3d', resolution: '48x48', colorPalette: 'fantasy',
+            characters: [
+                {
+                    name: 'Footman', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'human soldier' },
+                        { action: 'walk', frames: 6, description: 'marching' },
+                        { action: 'attack', frames: 4, description: 'sword swing' }
+                    ]
+                },
+                {
+                    name: 'Grunt', role: 'enemy', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'orc warrior' },
+                        { action: 'roar', frames: 6, description: 'battle cry' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Forest', type: 'floor', variants: 8, description: 'Lordaeron forest' }],
+            items: [{ name: 'Health Potion', category: 'consumable', animated: true, frames: 2, description: 'red potion' }],
+            ui: [{ name: 'Gold/Lumber', description: 'resource counters' }]
+        }
+    },
+
+    // Angry Birds
+    {
+        id: 'angry-birds', title: 'Angry Birds', year: '2009', genres: ['Puzzle', 'Physics'], director: 'Rovio', actors: [], type: 'game',
+        styles: [{ name: 'Mobile Cartoon', promptString: 'cartoon birds, catapult physics, green pigs' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: 'hand-drawn', resolution: '64x64', colorPalette: 'cartoon',
+            characters: [
+                {
+                    name: 'Red Bird', role: 'player', directions: 1, actions: [
+                        { action: 'idle', frames: 4, description: 'angry red bird' },
+                        { action: 'fly', frames: 2, description: 'flying through air' },
+                        { action: 'impact', frames: 4, description: 'hitting structure' }
+                    ]
+                },
+                {
+                    name: 'Pig', role: 'enemy', directions: 1, actions: [
+                        { action: 'idle', frames: 4, description: 'green pig smiling' },
+                        { action: 'scared', frames: 2, description: 'worried expression' },
+                        { action: 'pop', frames: 4, description: 'popping when hit' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Wood', type: 'prop', variants: 4, description: 'wooden blocks' }],
+            items: [],
+            ui: [{ name: 'Score', description: 'points and stars' }]
+        }
+    },
+
+    // Cut the Rope
+    {
+        id: 'cut-the-rope', title: 'Cut the Rope', year: '2010', genres: ['Puzzle', 'Physics'], director: 'ZeptoLab', actors: [], type: 'game',
+        styles: [{ name: 'Cute Puzzle', promptString: 'physics puzzle, cute monster, candy swinging' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: 'hand-drawn', resolution: '64x64', colorPalette: 'colorful',
+            characters: [
+                {
+                    name: 'Om Nom', role: 'player', directions: 1, actions: [
+                        { action: 'idle', frames: 6, description: 'cute green monster' },
+                        { action: 'happy', frames: 4, description: 'excited for candy' },
+                        { action: 'eat', frames: 6, description: 'eating candy' },
+                        { action: 'sad', frames: 4, description: 'missed the candy' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Box', type: 'background', variants: 4, description: 'cardboard box levels' }],
+            items: [{ name: 'Candy', category: 'collectible', animated: true, frames: 4, description: 'swinging candy' }],
+            ui: [{ name: 'Stars', description: 'level rating' }]
+        }
+    },
+
+    // Plants vs Zombies
+    {
+        id: 'plants-vs-zombies', title: 'Plants vs. Zombies', year: '2009', genres: ['Tower Defense', 'Strategy'], director: 'PopCap', actors: [], type: 'game',
+        styles: [{ name: 'Cartoon Defense', promptString: 'comedic tower defense, zombie horde, garden warfare' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: 'hand-drawn', resolution: '48x48', colorPalette: 'cartoon',
+            characters: [
+                {
+                    name: 'Peashooter', role: 'player', directions: 1, actions: [
+                        { action: 'idle', frames: 6, description: 'green pea plant' },
+                        { action: 'shoot', frames: 4, description: 'spitting peas' }
+                    ]
+                },
+                {
+                    name: 'Sunflower', role: 'player', directions: 1, actions: [
+                        { action: 'idle', frames: 8, description: 'dancing flower' },
+                        { action: 'produce', frames: 4, description: 'making sun' }
+                    ]
+                },
+                {
+                    name: 'Basic Zombie', role: 'enemy', directions: 1, actions: [
+                        { action: 'walk', frames: 8, description: 'shambling zombie' },
+                        { action: 'eat', frames: 6, description: 'eating plant' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Lawn', type: 'floor', variants: 4, description: 'grass lanes' }],
+            items: [{ name: 'Sun', category: 'collectible', animated: true, frames: 4, description: 'falling sun' }],
+            ui: [{ name: 'Sun Counter', description: 'currency display' }]
+        }
+    },
+
+    // Fruit Ninja
+    {
+        id: 'fruit-ninja', title: 'Fruit Ninja', year: '2010', genres: ['Arcade', 'Mobile'], director: 'Halfbrick', actors: [], type: 'game',
+        styles: [{ name: 'Slice Action', promptString: 'fruit slicing, juice explosions, ninja theme' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: 'hand-drawn', resolution: '64x64', colorPalette: 'juicy',
+            characters: [],
+            tilesets: [{ name: 'Background', type: 'background', variants: 4, description: 'wooden dojo' }],
+            items: [
+                { name: 'Watermelon', category: 'collectible', animated: true, frames: 4, description: 'large fruit' },
+                { name: 'Apple', category: 'collectible', animated: true, frames: 4, description: 'red apple' },
+                { name: 'Bomb', category: 'equipment', animated: true, frames: 4, description: 'game-ending bomb' }
+            ],
+            effects: [{ name: 'Slice', frames: 6, description: 'juice splash effect' }],
+            ui: [{ name: 'Score', description: 'points and combo' }]
+        }
+    },
+
+    // Temple Run
+    {
+        id: 'temple-run', title: 'Temple Run', year: '2011', genres: ['Endless Runner', 'Mobile'], director: 'Imangi', actors: [], type: 'game',
+        styles: [{ name: 'Mobile Runner', promptString: 'endless runner, temple escape, demon monkeys' }],
+        gameAssets: {
+            perspective: 'racing-behind', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'jungle temple',
+            characters: [
+                {
+                    name: 'Explorer', role: 'player', directions: 1, actions: [
+                        { action: 'run', frames: 8, description: 'running forward' },
+                        { action: 'jump', frames: 4, description: 'jumping over gap' },
+                        { action: 'slide', frames: 4, description: 'sliding under obstacle' },
+                        { action: 'turn', frames: 4, description: 'sharp corner turn' },
+                        { action: 'stumble', frames: 4, description: 'tripping' }
+                    ]
+                },
+                {
+                    name: 'Demon Monkey', role: 'enemy', directions: 1, actions: [
+                        { action: 'chase', frames: 6, description: 'chasing player' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Temple', type: 'floor', variants: 6, description: 'ancient temple path' }],
+            items: [{ name: 'Coin', category: 'collectible', animated: true, frames: 4, description: 'gold coin' }],
+            ui: [{ name: 'Distance', description: 'meters run' }]
+        }
+    },
+
+    // Subway Surfers
+    {
+        id: 'subway-surfers', title: 'Subway Surfers', year: '2012', genres: ['Endless Runner', 'Mobile'], director: 'SYBO', actors: [], type: 'game',
+        styles: [{ name: 'Urban Runner', promptString: 'graffiti runner, train tracks, hover boards' }],
+        gameAssets: {
+            perspective: 'racing-behind', graphicsStyle: 'cel-shaded', resolution: '64x64', colorPalette: 'urban graffiti',
+            characters: [
+                {
+                    name: 'Jake', role: 'player', directions: 1, actions: [
+                        { action: 'run', frames: 8, description: 'graffiti artist running' },
+                        { action: 'jump', frames: 4, description: 'jumping' },
+                        { action: 'roll', frames: 4, description: 'rolling under trains' },
+                        { action: 'hoverboard', frames: 4, description: 'riding hoverboard' }
+                    ]
+                },
+                {
+                    name: 'Guard', role: 'enemy', directions: 1, actions: [
+                        { action: 'chase', frames: 6, description: 'security guard with dog' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Tracks', type: 'floor', variants: 6, description: 'subway tracks' }],
+            items: [{ name: 'Coin', category: 'collectible', animated: true, frames: 4, description: 'gold coin' }],
+            ui: [{ name: 'Meters', description: 'distance counter' }]
+        }
+    },
+
+    // Flappy Bird
+    {
+        id: 'flappy-bird', title: 'Flappy Bird', year: '2013', genres: ['Arcade', 'Mobile'], director: 'Dong Nguyen', actors: [], type: 'game',
+        styles: [{ name: 'Retro Mobile', promptString: 'simple pixel art, one-tap gameplay, pipe obstacles' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'Super Mario',
+            characters: [
+                {
+                    name: 'Bird', role: 'player', directions: 1, actions: [
+                        { action: 'flap', frames: 3, description: 'yellow bird flapping' },
+                        { action: 'fall', frames: 2, description: 'falling down' },
+                        { action: 'death', frames: 4, description: 'hitting pipe' }
+                    ]
+                }
+            ],
+            tilesets: [
+                { name: 'Pipe', type: 'prop', variants: 2, description: 'green pipes up/down' },
+                { name: 'Ground', type: 'floor', variants: 2, description: 'scrolling ground' }
+            ],
+            items: [],
+            ui: [{ name: 'Score', description: 'pipe count' }]
+        }
+    },
+
+    // Crossy Road
+    {
+        id: 'crossy-road', title: 'Crossy Road', year: '2014', genres: ['Arcade', 'Mobile'], director: 'Hipster Whale', actors: [], type: 'game',
+        styles: [{ name: 'Voxel Frogger', promptString: 'voxel graphics, endless Frogger, many characters' }],
+        gameAssets: {
+            perspective: 'isometric', graphicsStyle: 'pixel-art-hd', resolution: '16x16', colorPalette: 'voxel',
+            characters: [
+                {
+                    name: 'Chicken', role: 'player', directions: 4, actions: [
+                        { action: 'idle', frames: 2, description: 'blocky chicken' },
+                        { action: 'hop', frames: 2, description: 'hopping forward' },
+                        { action: 'splat', frames: 4, description: 'hit by car' }
+                    ]
+                }
+            ],
+            tilesets: [
+                { name: 'Road', type: 'floor', variants: 4, description: 'lanes with cars' },
+                { name: 'River', type: 'floor', variants: 4, description: 'water with logs' },
+                { name: 'Grass', type: 'floor', variants: 4, description: 'safe grass strips' }
+            ],
+            items: [{ name: 'Coin', category: 'collectible', animated: true, frames: 4, description: 'gold coin pickup' }],
+            ui: [{ name: 'Distance', description: 'hops counter' }]
+        }
+    },
+
+    // Among Us
+    {
+        id: 'among-us', title: 'Among Us', year: '2018', genres: ['Party', 'Deduction'], director: 'Innersloth', actors: [], type: 'game',
+        styles: [{ name: 'Colorful Impostors', promptString: 'bean-shaped crewmates, spaceship, colorful simple' }],
+        gameAssets: {
+            perspective: 'top-down', graphicsStyle: 'hand-drawn', resolution: '32x32', colorPalette: 'colorful',
+            characters: [
+                {
+                    name: 'Crewmate', role: 'player', directions: 4, actions: [
+                        { action: 'idle', frames: 2, description: 'bean astronaut' },
+                        { action: 'walk', frames: 4, description: 'waddling' },
+                        { action: 'task', frames: 6, description: 'doing task' },
+                        { action: 'dead', frames: 1, description: 'bone corpse' }
+                    ]
+                },
+                {
+                    name: 'Impostor', role: 'enemy', directions: 4, actions: [
+                        { action: 'kill', frames: 6, description: 'tongue stab kill' },
+                        { action: 'vent', frames: 4, description: 'entering vent' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Skeld', type: 'floor', variants: 8, description: 'spaceship interior' }],
+            items: [],
+            ui: [{ name: 'Task Bar', description: 'task completion progress' }]
+        }
+    },
+
+    // Fall Guys
+    {
+        id: 'fall-guys', title: 'Fall Guys', year: '2020', genres: ['Party', 'Battle Royale'], director: 'Mediatonic', actors: [], type: 'game',
+        styles: [{ name: 'Bean Royale', promptString: 'jellybean characters, obstacle course, colorful chaos' }],
+        gameAssets: {
+            perspective: 'third-person', graphicsStyle: 'cel-shaded', resolution: '64x64', colorPalette: 'bright pastel',
+            characters: [
+                {
+                    name: 'Bean', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 6, description: 'wobbling jellybean' },
+                        { action: 'run', frames: 8, description: 'running arms flailing' },
+                        { action: 'jump', frames: 4, description: 'jumping' },
+                        { action: 'dive', frames: 4, description: 'diving forward' },
+                        { action: 'grab', frames: 4, description: 'grabbing other player' },
+                        { action: 'fall', frames: 6, description: 'ragdoll falling' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Obstacle', type: 'prop', variants: 8, description: 'spinning obstacles, slime' }],
+            items: [],
+            ui: [{ name: 'Players Remaining', description: 'elimination counter' }]
+        }
+    },
+
+    // Rocket League
+    {
+        id: 'rocket-league', title: 'Rocket League', year: '2015', genres: ['Sports', 'Racing'], director: 'Psyonix', actors: [], type: 'game',
+        styles: [{ name: 'Car Soccer', promptString: 'rocket-powered cars, giant soccer ball, aerial plays' }],
+        gameAssets: {
+            perspective: 'third-person', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'sports arena',
+            characters: [
+                {
+                    name: 'Car', role: 'player', directions: 8, actions: [
+                        { action: 'drive', frames: 2, description: 'driving on field' },
+                        { action: 'boost', frames: 4, description: 'rocket boost flames' },
+                        { action: 'jump', frames: 4, description: 'double jumping' },
+                        { action: 'flip', frames: 6, description: 'dodge flip' },
+                        { action: 'aerial', frames: 4, description: 'flying through air' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Arena', type: 'floor', variants: 4, description: 'soccer field turf' }],
+            items: [{ name: 'Boost Pad', category: 'powerup', animated: true, frames: 4, description: 'boost pickup' }],
+            ui: [{ name: 'Boost Meter', description: 'boost percentage' }]
+        }
+    },
+
+    // FIFA
+    {
+        id: 'fifa', title: 'FIFA', year: '2023', genres: ['Sports', 'Soccer'], director: 'EA', actors: [], type: 'game',
+        styles: [{ name: 'Realistic Soccer', promptString: 'realistic graphics, licensed teams, stadium atmosphere' }],
+        gameAssets: {
+            perspective: 'isometric', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'sports',
+            characters: [
+                {
+                    name: 'Player', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'soccer player standing' },
+                        { action: 'run', frames: 8, description: 'sprinting' },
+                        { action: 'kick', frames: 4, description: 'kicking ball' },
+                        { action: 'tackle', frames: 4, description: 'slide tackle' },
+                        { action: 'header', frames: 4, description: 'heading ball' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Pitch', type: 'floor', variants: 4, description: 'grass patterns' }],
+            items: [{ name: 'Ball', category: 'equipment', animated: true, frames: 8, description: 'soccer ball rolling' }],
+            ui: [{ name: 'Scoreboard', description: 'score and time' }]
+        }
+    },
+
+    // NBA 2K
+    {
+        id: 'nba-2k', title: 'NBA 2K', year: '2023', genres: ['Sports', 'Basketball'], director: 'Visual Concepts', actors: [], type: 'game',
+        styles: [{ name: 'Realistic Basketball', promptString: 'realistic graphics, NBA licensed, court action' }],
+        gameAssets: {
+            perspective: 'isometric', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'sports arena',
+            characters: [
+                {
+                    name: 'Player', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'basketball player' },
+                        { action: 'run', frames: 6, description: 'running court' },
+                        { action: 'dribble', frames: 6, description: 'dribbling ball' },
+                        { action: 'shoot', frames: 6, description: 'shooting jumper' },
+                        { action: 'dunk', frames: 8, description: 'slam dunk' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Court', type: 'floor', variants: 4, description: 'basketball court' }],
+            items: [{ name: 'Basketball', category: 'equipment', animated: true, frames: 4, description: 'bouncing ball' }],
+            ui: [{ name: 'Shot Meter', description: 'timing indicator' }]
+        }
+    },
+
+    // Madden
+    {
+        id: 'madden', title: 'Madden NFL', year: '2023', genres: ['Sports', 'Football'], director: 'EA', actors: [], type: 'game',
+        styles: [{ name: 'Realistic Football', promptString: 'realistic graphics, NFL licensed, American football' }],
+        gameAssets: {
+            perspective: 'isometric', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'sports stadium',
+            characters: [
+                {
+                    name: 'Player', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 2, description: 'football player' },
+                        { action: 'run', frames: 6, description: 'running play' },
+                        { action: 'throw', frames: 6, description: 'quarterback throw' },
+                        { action: 'tackle', frames: 4, description: 'tackling' },
+                        { action: 'catch', frames: 4, description: 'receiving pass' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Field', type: 'floor', variants: 4, description: 'football field' }],
+            items: [{ name: 'Football', category: 'equipment', animated: true, frames: 4, description: 'spiral throw' }],
+            ui: [{ name: 'Play Call', description: 'formation selection' }]
+        }
+    },
+
+    // Guitar Hero
+    {
+        id: 'guitar-hero', title: 'Guitar Hero', year: '2005', genres: ['Rhythm', 'Music'], director: 'Harmonix', actors: [], type: 'game',
+        styles: [{ name: 'Rock Concert', promptString: 'rhythm game, note highway, rock and roll' }],
+        gameAssets: {
+            perspective: 'first-person', graphicsStyle: 'cel-shaded', resolution: '64x64', colorPalette: 'rock stage',
+            characters: [
+                {
+                    name: 'Rocker', role: 'player', directions: 1, actions: [
+                        { action: 'idle', frames: 4, description: 'guitarist on stage' },
+                        { action: 'strum', frames: 4, description: 'strumming guitar' },
+                        { action: 'star_power', frames: 8, description: 'activating star power' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Stage', type: 'background', variants: 4, description: 'concert stage' }],
+            items: [
+                { name: 'Green Note', category: 'collectible', animated: true, frames: 2, description: 'highway note' },
+                { name: 'Red Note', category: 'collectible', animated: true, frames: 2, description: 'highway note' },
+                { name: 'Yellow Note', category: 'collectible', animated: true, frames: 2, description: 'highway note' }
+            ],
+            ui: [{ name: 'Rock Meter', description: 'performance gauge' }]
+        }
     }
 ];
