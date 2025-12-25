@@ -213,8 +213,8 @@ import {
     birdmanScenes, exMachinaScenes, theRevenantScenes, moonlightScenes, getOutScenes,
     ladyBirdScenes, callMeByYourNameScenes, spiderVerseScenes, parasiteScenes, midsommarScenes,
     ladyOnFireScenes, uncutGemsScenes, nineteenSeventeenScenes, everythingEverywhereScenes,
-    theBatmanScenes, oppenheimerScenes, barbieScenes, pastLivesScenes, anatomyFallScenes,
-    zoneInterestScenes, godzillaMinusOneScenes, hobbsShawScenes,
+    theBatmanScenes, oppenheimerScenes, barbieScenes, pastLivesScenes, anatomyOfAFallScenes,
+    zoneOfInterestScenes, godzillaMinusOneScenes, hobbsShawScenes,
     leagueOwnScenes, sandlotScenes, theNaturalScenes, fieldDreamsScenes
 } from './scenes/missingScenes';
 
@@ -551,8 +551,8 @@ export const movieScenes: Record<string, Scene[]> = {
     'oppenheimer': oppenheimerScenes,
     'barbie': barbieScenes,
     'past-lives': pastLivesScenes,
-    'anatomy-fall': anatomyFallScenes,
-    'zone-interest': zoneInterestScenes,
+    'anatomy-fall': anatomyOfAFallScenes,
+    'zone-interest': zoneOfInterestScenes,
     'godzilla-minus-one': godzillaMinusOneScenes,
     'hobbs-shaw': hobbsShawScenes,
 
