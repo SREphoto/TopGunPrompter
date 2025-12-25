@@ -3893,5 +3893,732 @@ export const games: MediaItem[] = [
             ],
             ui: [{ name: 'Rock Meter', description: 'performance gauge' }]
         }
+    },
+
+    // Mass Effect
+    {
+        id: 'mass-effect', title: 'Mass Effect', year: '2007', genres: ['RPG', 'Shooter'], director: 'BioWare', actors: [], type: 'game',
+        styles: [{ name: 'Space Opera', promptString: 'cinematic sci-fi, sleek armor, alien races, lens flares' }],
+        gameAssets: {
+            perspective: 'third-person', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'sci-fi blue',
+            characters: [
+                {
+                    name: 'Shepard', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'N7 armor soldier' },
+                        { action: 'run', frames: 6, description: 'combat run' },
+                        { action: 'shoot', frames: 4, description: 'firing assault rifle' },
+                        { action: 'cover', frames: 2, description: 'taking cover' },
+                        { action: 'biotic', frames: 6, description: 'blue energy power' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Normandy', type: 'floor', variants: 6, description: 'spaceship interior' }],
+            items: [{ name: 'Omni-gel', category: 'consumable', animated: false, frames: 1, description: 'orange gel' }],
+            ui: [{ name: 'Dialogue Wheel', description: 'circular conversation options' }]
+        }
+    },
+
+    // Dragon Age
+    {
+        id: 'dragon-age', title: 'Dragon Age: Origins', year: '2009', genres: ['RPG', 'Fantasy'], director: 'BioWare', actors: [], type: 'game',
+        styles: [{ name: 'Dark Fantasy', promptString: 'gritty fantasy, blood splatter, medieval armor' }],
+        gameAssets: {
+            perspective: 'third-person', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'dark fantasy',
+            characters: [
+                {
+                    name: 'Warden', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'armored warrior' },
+                        { action: 'attack', frames: 4, description: 'sword swing' },
+                        { action: 'cast', frames: 6, description: 'spell casting' }
+                    ]
+                },
+                {
+                    name: 'Darkspawn', role: 'enemy', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'corrupted creature' },
+                        { action: 'swarm', frames: 6, description: 'attacking in group' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Ruins', type: 'floor', variants: 8, description: 'elven ruins' }],
+            items: [{ name: 'Lyrium Potion', category: 'consumable', animated: true, frames: 2, description: 'blue potion' }],
+            ui: [{ name: 'Hotbar', description: 'skill icons' }]
+        }
+    },
+
+    // Fallout
+    {
+        id: 'fallout', title: 'Fallout 3', year: '2008', genres: ['RPG', 'Post-Apocalyptic'], director: 'Bethesda', actors: [], type: 'game',
+        styles: [{ name: 'Wasteland', promptString: 'post-apocalyptic retro-futurism, greyscale decay, power armor' }],
+        gameAssets: {
+            perspective: 'first-person', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'grey and green',
+            characters: [
+                {
+                    name: 'Vault Dweller', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'blue jumpsuit pipboy' },
+                        { action: 'aim', frames: 2, description: 'aiming VATS' },
+                        { action: 'shoot', frames: 2, description: 'firing 10mm pistol' }
+                    ]
+                },
+                {
+                    name: 'Super Mutant', role: 'enemy', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'green giant with club' },
+                        { action: 'roam', frames: 6, description: 'patrolling rubble' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Wasteland', type: 'floor', variants: 8, description: 'irradiated dirt and rubble' }],
+            items: [{ name: 'Nuka Cola', category: 'consumable', animated: false, frames: 1, description: 'bottle rocket soda' }],
+            ui: [{ name: 'Pip-Boy', description: 'green CRT interface' }]
+        }
+    },
+
+    // Skyrim
+    {
+        id: 'skyrim', title: 'The Elder Scrolls V: Skyrim', year: '2011', genres: ['RPG', 'Fantasy'], director: 'Bethesda', actors: [], type: 'game',
+        styles: [{ name: 'Nordic Fantasy', promptString: 'snowy mountains, viking aesthetics, dragons, realistic grit' }],
+        gameAssets: {
+            perspective: 'first-person', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'cold nordic',
+            characters: [
+                {
+                    name: 'Dragonborn', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'horned helmet warrior' },
+                        { action: 'shout', frames: 4, description: 'fus ro dah shout' },
+                        { action: 'swing', frames: 4, description: 'axe swing' },
+                        { action: 'block', frames: 2, description: 'shield block' }
+                    ]
+                },
+                {
+                    name: 'Dragon', role: 'boss', directions: 4, actions: [
+                        { action: 'fly', frames: 6, description: 'flying dragon' },
+                        { action: 'breath', frames: 4, description: 'fire breath' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Tundra', type: 'floor', variants: 8, description: 'snow and rock' }],
+            items: [{ name: 'Sweetroll', category: 'consumable', animated: false, frames: 1, description: 'pastry' }],
+            ui: [{ name: 'Compass', description: 'navigation bar' }]
+        }
+    },
+
+    // Darkest Dungeon
+    {
+        id: 'darkest-dungeon', title: 'Darkest Dungeon', year: '2016', genres: ['RPG', 'Roguelike'], director: 'Red Hook', actors: [], type: 'game',
+        styles: [{ name: 'Gothic Horror', promptString: 'hand-drawn ink heavy dark lines, lovecraftian horror, shadows' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: 'hand-drawn', resolution: '64x64', colorPalette: 'ink black',
+            characters: [
+                {
+                    name: 'Crusader', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 4, description: 'heavy armor knight' },
+                        { action: 'attack', frames: 4, description: 'heavy sword swing' },
+                        { action: 'stress', frames: 4, description: 'panicking' }
+                    ]
+                },
+                {
+                    name: 'Cultist', role: 'enemy', directions: 2, actions: [
+                        { action: 'idle', frames: 4, description: 'robed cultist' },
+                        { action: 'chant', frames: 4, description: 'eldritch spell' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Dungeon', type: 'background', variants: 4, description: 'gothic corridor' }],
+            items: [{ name: 'Torch', category: 'consumable', animated: true, frames: 4, description: 'burning torch' }],
+            ui: [{ name: 'Stress', description: 'stress meter' }]
+        }
+    },
+
+    // Slay the Spire
+    {
+        id: 'slay-the-spire', title: 'Slay the Spire', year: '2017', genres: ['Roguelike', 'Card Game'], director: 'Mega Crit', actors: [], type: 'game',
+        styles: [{ name: 'Card Battler', promptString: 'unique creature design, painted style, spire climbing' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: 'hand-drawn', resolution: '48x48', colorPalette: 'fantasy',
+            characters: [
+                {
+                    name: 'Ironclad', role: 'player', directions: 1, actions: [
+                        { action: 'idle', frames: 4, description: 'masked warrior' },
+                        { action: 'attack', frames: 4, description: 'sword strike' },
+                        { action: 'block', frames: 2, description: 'raising shield' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Spire', type: 'background', variants: 4, description: 'bizarre tower background' }],
+            items: [{ name: 'Card', category: 'ui', animated: false, frames: 1, description: 'attack card' }],
+            ui: [{ name: 'Energy', description: 'mana counter' }]
+        }
+    },
+
+    // Into the Breach
+    {
+        id: 'into-the-breach', title: 'Into the Breach', year: '2018', genres: ['Strategy', 'Puzzle'], director: 'Subset Games', actors: [], type: 'game',
+        styles: [{ name: 'Pixel Tactics', promptString: 'clean pixel art, mechs vs bugs, isometric tactics' }],
+        gameAssets: {
+            perspective: 'isometric', graphicsStyle: 'pixel-art-hd', resolution: '32x32', colorPalette: 'clean sci-fi',
+            characters: [
+                {
+                    name: 'Combat Mech', role: 'player', directions: 4, actions: [
+                        { action: 'idle', frames: 2, description: 'blue combat mech' },
+                        { action: 'punch', frames: 4, description: 'mechanical punch' }
+                    ]
+                },
+                {
+                    name: 'Vek', role: 'enemy', directions: 4, actions: [
+                        { action: 'idle', frames: 4, description: 'giant insect' },
+                        { action: 'emerge', frames: 4, description: 'digging out of ground' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'City', type: 'floor', variants: 4, description: 'civilian buildings' }],
+            items: [],
+            ui: [{ name: 'Grid', description: 'tactical grid' }]
+        }
+    },
+
+    // FTL
+    {
+        id: 'ftl', title: 'FTL: Faster Than Light', year: '2012', genres: ['Strategy', 'Roguelike'], director: 'Subset Games', actors: [], type: 'game',
+        styles: [{ name: 'Top-Down Space', promptString: 'top down spaceship management, simple pixel crew, starfield' }],
+        gameAssets: {
+            perspective: 'top-down', graphicsStyle: 'pixel-art-hd', resolution: '16x16', colorPalette: 'space',
+            characters: [
+                {
+                    name: 'Crew', role: 'player', directions: 4, actions: [
+                        { action: 'idle', frames: 2, description: 'tiny space crew' },
+                        { action: 'repair', frames: 4, description: 'fixing system' },
+                        { action: 'fight', frames: 4, description: 'fighting intruders' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Ship Floor', type: 'floor', variants: 4, description: 'spaceship rooms' }],
+            items: [{ name: 'Scrap', category: 'collectible', animated: false, frames: 1, description: 'metal currency' }],
+            ui: [{ name: 'Systems', description: 'shield/engine/weapon powers' }]
+        }
+    },
+
+    // Paper Mario
+    {
+        id: 'paper-mario', title: 'Paper Mario', year: '2000', genres: ['RPG', 'Adventure'], director: 'Intelligent Systems', actors: [], type: 'game',
+        styles: [{ name: 'Paper Craft', promptString: '2D paper cutout characters in 3D world, cute, flat' }],
+        gameAssets: {
+            perspective: 'third-person', graphicsStyle: 'hand-drawn', resolution: '48x48', colorPalette: 'bright paper',
+            characters: [
+                {
+                    name: 'Mario Paper', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 2, description: 'flat paper Mario' },
+                        { action: 'walk', frames: 4, description: 'paper shuffling walk' },
+                        { action: 'jump', frames: 2, description: 'paper jump' },
+                        { action: 'hammer', frames: 4, description: 'huge hammer swing' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Cardboard', type: 'prop', variants: 8, description: 'cardboard scenery' }],
+            items: [{ name: 'Mushroom', category: 'consumable', animated: false, frames: 1, description: 'paper mushroom' }],
+            ui: [{ name: 'Badge', description: 'equipable badge' }]
+        }
+    },
+
+    // Fire Emblem
+    {
+        id: 'fire-emblem', title: 'Fire Emblem', year: '2003', genres: ['RPG', 'Strategy'], director: 'Intelligent Systems', actors: [], type: 'game',
+        styles: [{ name: 'GBA Strategy', promptString: 'GBA pixel art, anime battles, strategic grid, critical hits' }],
+        gameAssets: {
+            perspective: 'top-down', graphicsStyle: '16-bit', resolution: '24x24', colorPalette: 'GBA vibrant',
+            characters: [
+                {
+                    name: 'Lord', role: 'player', directions: 4, actions: [
+                        { action: 'idle', frames: 4, description: 'blue haired lord' },
+                        { action: 'map_walk', frames: 4, description: 'walking on map' },
+                        { action: 'attack_crit', frames: 12, description: 'flashy critical hit animation' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Plains', type: 'floor', variants: 6, description: 'grassy battlefield' }],
+            items: [{ name: 'Sword', category: 'weapon', animated: false, frames: 1, description: 'iron sword' }],
+            ui: [{ name: 'Stats', description: 'level up screen' }]
+        }
+    },
+
+    // Advance Wars
+    {
+        id: 'advance-wars', title: 'Advance Wars', year: '2001', genres: ['Strategy', 'Turn-Based'], director: 'Intelligent Systems', actors: [], type: 'game',
+        styles: [{ name: 'GBA Military', promptString: 'cute military pixel art, tanks, soldiers, anime commanders' }],
+        gameAssets: {
+            perspective: 'top-down', graphicsStyle: '16-bit', resolution: '16x16', colorPalette: 'GBA vibrant',
+            characters: [
+                {
+                    name: 'Infantry', role: 'player', directions: 4, actions: [
+                        { action: 'idle', frames: 2, description: 'little soldier' },
+                        { action: 'capture', frames: 4, description: 'capturing city' },
+                        { action: 'fire', frames: 2, description: 'shooting gun' }
+                    ]
+                },
+                {
+                    name: 'Tank', role: 'player', directions: 4, actions: [
+                        { action: 'idle', frames: 2, description: 'green tank' },
+                        { action: 'move', frames: 2, description: 'treads moving' },
+                        { action: 'fire', frames: 2, description: 'cannon firing' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Map', type: 'floor', variants: 8, description: 'roads, forests, mountains' }],
+            items: [],
+            ui: [{ name: 'CO Power', description: 'power meter star' }]
+        }
+    },
+
+    // Golden Sun
+    {
+        id: 'golden-sun', title: 'Golden Sun', year: '2001', genres: ['RPG', 'Fantasy'], director: 'Camelot', actors: [], type: 'game',
+        styles: [{ name: 'GBA RPG', promptString: 'pseudo-3D GBA battles, djinn summons, elemental magic' }],
+        gameAssets: {
+            perspective: 'top-down', graphicsStyle: '16-bit', resolution: '24x24', colorPalette: 'GBA vibrant',
+            characters: [
+                {
+                    name: 'Isaac', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'blonde adept' },
+                        { action: 'cast', frames: 6, description: 'psynergy casting' },
+                        { action: 'summon', frames: 8, description: 'summoning djinn' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Vale', type: 'floor', variants: 8, description: 'village tiles' }],
+            items: [{ name: 'Djinn', category: 'collectible', animated: true, frames: 4, description: 'elemental spirit' }],
+            ui: [{ name: 'Psynergy', description: 'spell menu' }]
+        }
+    },
+
+    // Final Fantasy Tactics
+    {
+        id: 'ff-tactics', title: 'Final Fantasy Tactics', year: '1997', genres: ['RPG', 'Strategy'], director: 'Square', actors: [], type: 'game',
+        styles: [{ name: 'Isometric Tactics', promptString: 'isometric pixel art, nose-less characters, ornate armor' }],
+        gameAssets: {
+            perspective: 'isometric', graphicsStyle: '16-bit', resolution: '32x32', colorPalette: 'ivalice',
+            characters: [
+                {
+                    name: 'Ramza', role: 'player', directions: 4, actions: [
+                        { action: 'idle', frames: 2, description: 'mercenary sprite' },
+                        { action: 'walk', frames: 4, description: 'walking in place' },
+                        { action: 'attack', frames: 4, description: 'sword swing' },
+                        { action: 'chant', frames: 4, description: 'casting spell' },
+                        { action: 'hurt', frames: 1, description: 'kneeling in pain' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Battlefield', type: 'floor', variants: 8, description: 'isometric terrain blocks' }],
+            items: [{ name: 'Crystal', category: 'collectible', animated: true, frames: 4, description: 'fallen unit crystal' }],
+            ui: [{ name: 'CT', description: 'charge time' }]
+        }
+    },
+
+    // Disgaea
+    {
+        id: 'disgaea', title: 'Disgaea: Hour of Darkness', year: '2003', genres: ['RPG', 'Strategy'], director: 'Nippon Ichi', actors: [], type: 'game',
+        styles: [{ name: 'Anime Strategy', promptString: 'anime srpg, insane damage numbers, penguins, demons' }],
+        gameAssets: {
+            perspective: 'isometric', graphicsStyle: 'hand-drawn', resolution: '48x48', colorPalette: 'anime',
+            characters: [
+                {
+                    name: 'Laharl', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'demon prince' },
+                        { action: 'laugh', frames: 4, description: 'evil laugh' },
+                        { action: 'attack', frames: 6, description: 'over the top attack' }
+                    ]
+                },
+                {
+                    name: 'Prinny', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'blue penguin with knives' },
+                        { action: 'throw', frames: 4, description: 'being thrown' },
+                        { action: 'explode', frames: 6, description: 'explosion' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Netherworld', type: 'floor', variants: 6, description: 'demon world tiles' }],
+            items: [],
+            ui: [{ name: 'Damage', description: 'millions of damage text' }]
+        }
+    },
+
+    // Ogre Battle
+    {
+        id: 'ogre-battle', title: 'Ogre Battle: The March of the Black Queen', year: '1993', genres: ['Strategy', 'RPG'], director: 'Quest', actors: [], type: 'game',
+        styles: [{ name: 'Tarot Strategy', promptString: 'SNES strategy, tarot cards, unit squads, medieval map' }],
+        gameAssets: {
+            perspective: 'top-down', graphicsStyle: '16-bit', resolution: '24x24', colorPalette: 'medieval',
+            characters: [
+                {
+                    name: 'Lord', role: 'player', directions: 4, actions: [
+                        { action: 'idle', frames: 2, description: 'armored leader' },
+                        { action: 'attack', frames: 2, description: 'commanding troops' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'World Map', type: 'floor', variants: 8, description: 'mode 7 map' }],
+            items: [{ name: 'Tarot Card', category: 'powerup', animated: false, frames: 1, description: 'major arcana' }],
+            ui: [{ name: 'Reputation', description: 'alignment meter' }]
+        }
+    },
+
+    // Castlevania SOTN
+    {
+        id: 'sotn', title: 'Castlevania: Symphony of the Night', year: '1997', genres: ['Metroidvania', 'Action'], director: 'Konami', actors: [], type: 'game',
+        styles: [{ name: 'Gothic Pixel Masterpiece', promptString: 'luxurious pixel art, gothic castle, smooth animation, afterimages' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '32-bit', resolution: '64x64', colorPalette: 'gothic masterful',
+            characters: [
+                {
+                    name: 'Alucard', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 8, description: 'vampire son, cape blowing' },
+                        { action: 'run', frames: 12, description: 'smooth running with afterimage' },
+                        { action: 'slash', frames: 6, description: 'sword attack' },
+                        { action: 'backdash', frames: 4, description: 'sliding backwards' },
+                        { action: 'mist', frames: 8, description: 'transforming into mist' },
+                        { action: 'bat', frames: 4, description: 'transforming into bat' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Castle', type: 'floor', variants: 12, description: 'ornate castle interiors' }],
+            items: [{ name: 'Relic', category: 'collectible', animated: true, frames: 4, description: 'magical artifact' }],
+            ui: [{ name: 'Map', description: 'castle completion map' }]
+        }
+    },
+
+    // Bloodborne
+    {
+        id: 'bloodborne', title: 'Bloodborne', year: '2015', genres: ['Action', 'RPG'], director: 'FromSoftware', actors: [], type: 'game',
+        styles: [{ name: 'Victorian Horror', promptString: 'lovecraftian victorian, gothic horror, blood, trenchcoats' }],
+        gameAssets: {
+            perspective: 'third-person', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'dark gothic',
+            characters: [
+                {
+                    name: 'Hunter', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'hunter in trenchcoat' },
+                        { action: 'dash', frames: 4, description: 'quick step dodge' },
+                        { action: 'trick_weapon', frames: 6, description: 'transforming saw cleaver' },
+                        { action: 'visceral', frames: 8, description: 'ripping attack' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Yharnam', type: 'floor', variants: 8, description: 'cobblestone streets, coffins' }],
+            items: [{ name: 'Blood Vial', category: 'consumable', animated: false, frames: 1, description: 'healing blood' }],
+            ui: [{ name: 'Echoes', description: 'blood echo counter' }]
+        }
+    },
+
+    // Sekiro
+    {
+        id: 'sekiro', title: 'Sekiro: Shadows Die Twice', year: '2019', genres: ['Action', 'Adventure'], director: 'FromSoftware', actors: [], type: 'game',
+        styles: [{ name: 'Feudal Japan', promptString: 'sengoku era, shinobi, sparks clashing, intense swordplay' }],
+        gameAssets: {
+            perspective: 'third-person', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'autumn japan',
+            characters: [
+                {
+                    name: 'Wolf', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'one-armed shinobi' },
+                        { action: 'deflect', frames: 2, description: 'sparking sword parry' },
+                        { action: 'grapple', frames: 4, description: 'grappling hook' },
+                        { action: 'deathblow', frames: 6, description: 'killing finisher' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Castle', type: 'floor', variants: 8, description: 'japanese castle roof' }],
+            items: [{ name: 'Gourd', category: 'consumable', animated: false, frames: 1, description: 'healing gourd' }],
+            ui: [{ name: 'Posture', description: 'posture bar' }]
+        }
+    },
+
+    // Nier Automata
+    {
+        id: 'nier-automata', title: 'NieR: Automata', year: '2017', genres: ['Action', 'RPG'], director: 'Yoko Taro', actors: [], type: 'game',
+        styles: [{ name: 'Android Action', promptString: 'post-apocalyptic ruins, blindfolded androids, stylish combat, beige ruins' }],
+        gameAssets: {
+            perspective: 'third-person', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'muted beige',
+            characters: [
+                {
+                    name: '2B', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'battle android in dress' },
+                        { action: 'run', frames: 8, description: 'fast graceful run' },
+                        { action: 'slash', frames: 6, description: 'floating sword attack' },
+                        { action: 'evade', frames: 6, description: 'perfect dodge' }
+                    ]
+                },
+                {
+                    name: 'Pod', role: 'player', directions: 8, actions: [
+                        { action: 'hover', frames: 4, description: 'floating robot assistant' },
+                        { action: 'fire', frames: 4, description: 'shooting laser' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Ruins', type: 'floor', variants: 8, description: 'overgrown city ruins' }],
+            items: [{ name: 'Chip', category: 'equipment', animated: false, frames: 1, description: 'plugin chip' }],
+            ui: [{ name: 'System', description: 'minimalist beige UI' }]
+        }
+    },
+
+    // Persona 5
+    {
+        id: 'persona-5', title: 'Persona 5', year: '2016', genres: ['JRPG', 'Social Sim'], director: 'Atlus', actors: [], type: 'game',
+        styles: [{ name: 'Stylish Pop', promptString: 'punk red and black, comic book style, acid jazz aesthetic' }],
+        gameAssets: {
+            perspective: 'third-person', graphicsStyle: 'cel-shaded', resolution: '64x64', colorPalette: 'red and black',
+            characters: [
+                {
+                    name: 'Joker', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'thief in trenchcoat' },
+                        { action: 'ambush', frames: 6, description: 'ripping mask off' },
+                        { action: 'all_out', frames: 8, description: 'finishing pose' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Casino', type: 'floor', variants: 8, description: 'flashy palace interior' }],
+            items: [{ name: 'Mask', category: 'collectible', animated: true, frames: 2, description: 'persona mask' }],
+            ui: [{ name: 'Menu', description: 'stylish punk menu' }]
+        }
+    },
+
+    // Kingdom Hearts
+    {
+        id: 'kingdom-hearts', title: 'Kingdom Hearts', year: '2002', genres: ['Action', 'RPG'], director: 'Square', actors: [], type: 'game',
+        styles: [{ name: 'Disney Anime', promptString: 'anime boy with keyblade, disney characters, zipper clothes' }],
+        gameAssets: {
+            perspective: 'third-person', graphicsStyle: 'low-poly-3d', resolution: '48x48', colorPalette: 'colorful',
+            characters: [
+                {
+                    name: 'Sora', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'spiky hair, big shoes' },
+                        { action: 'attack', frames: 4, description: 'keyblade swing' },
+                        { action: 'magic', frames: 4, description: 'casting magic' },
+                        { action: 'glide', frames: 4, description: 'floating through air' }
+                    ]
+                },
+                {
+                    name: 'Heartless', role: 'enemy', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'shadow creature' },
+                        { action: 'jump', frames: 4, description: 'leaping attack' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Traverse Town', type: 'floor', variants: 8, description: 'night town with stars' }],
+            items: [{ name: 'Potion', category: 'consumable', animated: false, frames: 1, description: 'green bottled potion' }],
+            ui: [{ name: 'command', description: 'battle menu list' }]
+        }
+    },
+
+    // Monster Hunter
+    {
+        id: 'monster-hunter', title: 'Monster Hunter: World', year: '2018', genres: ['Action', 'RPG'], director: 'Capcom', actors: [], type: 'game',
+        styles: [{ name: 'Hunting Action', promptString: 'giant realistic monsters, oversized weapons, nature, cooking' }],
+        gameAssets: {
+            perspective: 'third-person', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'realistic nature',
+            characters: [
+                {
+                    name: 'Hunter', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'armored hunter' },
+                        { action: 'charge', frames: 6, description: 'charging greatsword' },
+                        { action: 'dodge', frames: 4, description: 'dive dodge' },
+                        { action: 'carve', frames: 4, description: 'carving materials' }
+                    ]
+                },
+                {
+                    name: 'Palico', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'cat companion' },
+                        { action: 'heal', frames: 4, description: 'using vigorwasp' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Forest', type: 'floor', variants: 8, description: 'ancient forest' }],
+            items: [{ name: 'Meat', category: 'consumable', animated: true, frames: 4, description: 'roasting spit' }],
+            ui: [{ name: 'Sharpness', description: 'weapon sharpness gauge' }]
+        }
+    },
+
+    // Devil May Cry
+    {
+        id: 'dmc', title: 'Devil May Cry 5', year: '2019', genres: ['Action', 'Hack and Slash'], director: 'Capcom', actors: [], type: 'game',
+        styles: [{ name: 'Stylish Action', promptString: 'over the top action, demons, dual pistols, trenchcoats, SSS rank' }],
+        gameAssets: {
+            perspective: 'third-person', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'gothic rock',
+            characters: [
+                {
+                    name: 'Dante', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'legendary devil hunter' },
+                        { action: 'stinger', frames: 4, description: 'sword thrust' },
+                        { action: 'shoot', frames: 4, description: 'ebony and ivory' },
+                        { action: 'taunt', frames: 6, description: 'stylish taunt' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Demon World', type: 'floor', variants: 8, description: 'twisted organic structures' }],
+            items: [{ name: 'Orb', category: 'collectible', animated: true, frames: 4, description: 'red orb' }],
+            ui: [{ name: 'Style Rank', description: 'D C B A S SS SSS letters' }]
+        }
+    },
+
+    // Bayonetta
+    {
+        id: 'bayonetta', title: 'Bayonetta', year: '2009', genres: ['Action', 'Hack and Slash'], director: 'PlatinumGames', actors: [], type: 'game',
+        styles: [{ name: 'Witch Time', promptString: 'sexy witch, hair magic, guns on feet, angels, climax action' }],
+        gameAssets: {
+            perspective: 'third-person', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'baroque',
+            characters: [
+                {
+                    name: 'Bayonetta', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'tall witch posing' },
+                        { action: 'kick', frames: 4, description: 'gun heel kick' },
+                        { action: 'summon', frames: 8, description: 'giant hair demon' },
+                        { action: 'pose', frames: 4, description: 'vogue pose' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Paradiso', type: 'floor', variants: 6, description: 'heavenly architecture' }],
+            items: [{ name: 'Lollipop', category: 'consumable', animated: false, frames: 1, description: 'green lollipop' }],
+            ui: [{ name: 'Magic', description: 'magic gauge' }]
+        }
+    },
+
+    // God of War
+    {
+        id: 'god-of-war', title: 'God of War (2018)', year: '2018', genres: ['Action', 'Adventure'], director: 'Santa Monica', actors: [], type: 'game',
+        styles: [{ name: 'Norse Epic', promptString: 'bearded Kratos, snowy midgard, leviathan axe, boy' }],
+        gameAssets: {
+            perspective: 'third-person', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'cold norse',
+            characters: [
+                {
+                    name: 'Kratos', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'bearded god with axe' },
+                        { action: 'swing', frames: 6, description: 'axe swing' },
+                        { action: 'throw', frames: 4, description: 'throwing axe' },
+                        { action: 'recall', frames: 4, description: 'catching axe' },
+                        { action: 'rage', frames: 6, description: 'spartan rage' }
+                    ]
+                },
+                {
+                    name: 'Atreus', role: 'player', directions: 8, actions: [
+                        { action: 'shoot', frames: 4, description: 'bow shot' },
+                        { action: 'jump', frames: 4, description: 'jumping on enemy' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Midgard', type: 'floor', variants: 8, description: 'snowy forest' }],
+            items: [{ name: 'Hacksilver', category: 'collectible', animated: true, frames: 2, description: 'currency' }],
+            ui: [{ name: 'Rage Meter', description: 'red bar' }]
+        }
+    },
+
+    // Uncharted
+    {
+        id: 'uncharted', title: 'Uncharted 2: Among Thieves', year: '2009', genres: ['Action', 'Adventure'], director: 'Naughty Dog', actors: [], type: 'game',
+        styles: [{ name: 'Cinematic Adventure', promptString: 'pulp adventure, treasure hunting, explosions, climbing, set pieces' }],
+        gameAssets: {
+            perspective: 'third-person', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'warm adventure',
+            characters: [
+                {
+                    name: 'Drake', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'half tuck shirt adventurer' },
+                        { action: 'climb', frames: 6, description: 'shimmying ledge' },
+                        { action: 'shoot', frames: 4, description: 'cover shooting' },
+                        { action: 'hang', frames: 4, description: 'hanging one hand' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Nepal', type: 'floor', variants: 8, description: 'war torn city' }],
+            items: [{ name: 'Treasure', category: 'collectible', animated: true, frames: 2, description: 'glinting relic' }],
+            ui: [{ name: 'Journal', description: 'notebook sketch' }]
+        }
+    },
+
+    // The Last of Us
+    {
+        id: 'last-of-us', title: 'The Last of Us', year: '2013', genres: ['Action', 'Survival'], director: 'Naughty Dog', actors: [], type: 'game',
+        styles: [{ name: 'Post-Pandemic', promptString: 'overgrown city, fungal zombies, clickers, gritty survival' }],
+        gameAssets: {
+            perspective: 'third-person', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'overgrown green',
+            characters: [
+                {
+                    name: 'Joel', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'tired survivor' },
+                        { action: 'crouch', frames: 4, description: 'stealth crouching' },
+                        { action: 'listen', frames: 2, description: 'listening mode' },
+                        { action: 'melee', frames: 4, description: 'pipe swing' }
+                    ]
+                },
+                {
+                    name: 'Clicker', role: 'enemy', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'fungal blind zombie' },
+                        { action: 'twitch', frames: 4, description: 'erratic movement' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'City', type: 'floor', variants: 8, description: 'overgrown street' }],
+            items: [{ name: 'Brick', category: 'weapon', animated: false, frames: 1, description: 'throwable brick' }],
+            ui: [{ name: 'Crafting', description: 'shive/medkit icons' }]
+        }
+    },
+
+    // Tomb Raider
+    {
+        id: 'tomb-raider', title: 'Tomb Raider (1996)', year: '1996', genres: ['Action', 'Adventure'], director: 'Core Design', actors: [], type: 'game',
+        styles: [{ name: 'Classic Polygon', promptString: 'early 3D rugged polygons, tank controls, dual pistols, tombs' }],
+        gameAssets: {
+            perspective: 'third-person', graphicsStyle: 'low-poly-3d', resolution: '48x48', colorPalette: 'cave brown',
+            characters: [
+                {
+                    name: 'Lara', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 1, description: 'polygon lara croft' },
+                        { action: 'run', frames: 6, description: 'gymnastic run' },
+                        { action: 'jump', frames: 4, description: 'flip jump' },
+                        { action: 'climb', frames: 4, description: 'ledge pull up' },
+                        { action: 'shoot', frames: 2, description: 'dual pistol fire' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Cave', type: 'floor', variants: 6, description: 'ancient ruins' }],
+            items: [{ name: 'Medipack', category: 'consumable', animated: false, frames: 1, description: 'large medipack' }],
+            ui: [{ name: 'Health', description: 'health bar' }]
+        }
+    },
+
+    // Assassin's Creed
+    {
+        id: 'assassins-creed', title: "Assassin's Creed II", year: '2009', genres: ['Action', 'Adventure'], director: 'Ubisoft', actors: [], type: 'game',
+        styles: [{ name: 'Renaissance', promptString: 'Italian renaissance, hooded assassin, parkour, hidden blade' }],
+        gameAssets: {
+            perspective: 'third-person', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'warm italian',
+            characters: [
+                {
+                    name: 'Ezio', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'hooded assassin' },
+                        { action: 'run', frames: 8, description: 'sprinting' },
+                        { action: 'parkour', frames: 6, description: 'climbing building' },
+                        { action: 'leap', frames: 4, description: 'leap of faith' },
+                        { action: 'stab', frames: 4, description: 'hidden blade assassination' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Roof', type: 'floor', variants: 8, description: 'terracotta tiles' }],
+            items: [{ name: 'Feather', category: 'collectible', animated: true, frames: 2, description: 'eagle feather' }],
+            ui: [{ name: 'Social Status', description: 'notoriety meter' }]
+        }
+    },
+
+    // Prince of Persia
+    {
+        id: 'prince-of-persia', title: 'Prince of Persia: The Sands of Time', year: '2003', genres: ['Action', 'Platformer'], director: 'Ubisoft', actors: [], type: 'game',
+        styles: [{ name: 'Time Rewind', promptString: 'arabian nights, acrobatics, time manipulation, sand monsters' }],
+        gameAssets: {
+            perspective: 'third-person', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'golden sand',
+            characters: [
+                {
+                    name: 'Prince', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'shirtless prince with dagger' },
+                        { action: 'run', frames: 6, description: 'wall running' },
+                        { action: 'rewind', frames: 6, description: 'time reversing effect' },
+                        { action: 'freeze', frames: 4, description: 'sand freeze attack' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Palace', type: 'floor', variants: 8, description: 'persian palace' }],
+            items: [{ name: 'Sand Cloud', category: 'collectible', animated: true, frames: 4, description: 'sands of time' }],
+            ui: [{ name: 'Sand Tank', description: 'dagger energy' }]
+        }
     }
 ];
