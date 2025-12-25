@@ -181,10 +181,46 @@ function App() {
   }, [selectedMovieId, currentMovie, selectedSeasonId, selectedEpisodeId]);
 
   // Combine movie-specific styles with global styles for lookup
-  const allStyles = useMemo(() => [
-    ...(currentMovie.styles || []),
-    ...globalStyles
-  ], [currentMovie]);
+  // For games: include styles from ALL games to allow cross-game reimagining
+  const allStyles = useMemo(() => {
+    if (currentMovie.type === 'game') {
+      // Collect all game styles for reimagining (e.g., Mario in Doom style)
+      const allGameStyles: { name: string; promptString: string }[] = [];
+
+      games.forEach(game => {
+        // Add the game's defined styles
+        if (game.styles) {
+          game.styles.forEach(style => {
+            allGameStyles.push({
+              name: `${game.title}: ${style.name}`,
+              promptString: style.promptString
+            });
+          });
+        }
+
+        // Also add auto-generated style from each game's assets
+        if (game.gameAssets) {
+          const assets = game.gameAssets;
+          const palette = assets.colorPalette ? `, ${assets.colorPalette}` : '';
+          allGameStyles.push({
+            name: `${game.title} Style (${assets.graphicsStyle} ${assets.perspective})`,
+            promptString: `${assets.graphicsStyle} ${assets.perspective} game style, ${assets.resolution} resolution${palette}`
+          });
+        }
+      });
+
+      return [
+        ...(currentMovie.styles || []),
+        ...allGameStyles,
+        ...globalStyles
+      ];
+    }
+
+    return [
+      ...(currentMovie.styles || []),
+      ...globalStyles
+    ];
+  }, [currentMovie]);
 
   // --- Filtering & Sorting Logic ---
   // --- Filtering & Sorting Logic ---
@@ -245,8 +281,20 @@ function App() {
       // 2. Subject & Action
       const subject = scene.promptPayload;
 
-      // 3. Visual Style
-      const visualStyle = style.promptString;
+      // 3. Visual Style - for games, check if reimagining with different style
+      let visualStyle = style.promptString;
+
+      // If this is a game and a different game's style is selected, add reimagining context
+      if (currentMovie.type === 'game' && selectedStyleName && !selectedStyleName.startsWith(currentMovie.title)) {
+        // Extract the source game name from style name (e.g., "Doom Style (32-bit first-person)" -> "Doom")
+        const styleGameMatch = selectedStyleName.match(/^([^:]+):/);
+        const styleGameMatch2 = selectedStyleName.match(/^(.+) Style \(/);
+        const sourceGame = styleGameMatch?.[1] || styleGameMatch2?.[1] || '';
+
+        if (sourceGame && sourceGame !== currentMovie.title) {
+          visualStyle = `REIMAGINED in ${sourceGame} art style: ${style.promptString}`;
+        }
+      }
 
       // 4. Technical Specs (Hardware/Lenses)
       let techSpecs = '';
