@@ -2666,5 +2666,544 @@ export const games: MediaItem[] = [
             items: [{ name: 'Hamburger', category: 'consumable', animated: false, frames: 1, description: 'health food' }],
             ui: [{ name: 'HP Roller', description: 'rolling HP counter' }]
         }
+    },
+
+    // Chrono Trigger
+    {
+        id: 'chrono-trigger', title: 'Chrono Trigger', year: '1995', genres: ['JRPG', 'Time Travel'], director: 'Square', actors: [], type: 'game',
+        styles: [{ name: 'SNES Akira Toriyama', promptString: '16-bit RPG, Dragon Ball artist style, time travel adventure' }],
+        gameAssets: {
+            perspective: 'top-down', graphicsStyle: '16-bit', resolution: '24x24', colorPalette: 'SNES palette',
+            characters: [
+                {
+                    name: 'Crono', role: 'player', directions: 4, actions: [
+                        { action: 'idle', frames: 2, description: 'red spiky hair, katana' },
+                        { action: 'walk', frames: 4, description: 'walking' },
+                        { action: 'slash', frames: 4, description: 'sword slash' },
+                        { action: 'lightning', frames: 6, description: 'casting lightning magic' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Time Periods', type: 'floor', variants: 12, description: 'prehistoric to future tiles' }],
+            items: [{ name: 'Potion', category: 'consumable', animated: false, frames: 1, description: 'healing item' }],
+            ui: [{ name: 'ATB', description: 'active time battle' }]
+        }
+    },
+
+    // Secret of Mana
+    {
+        id: 'secret-of-mana', title: 'Secret of Mana', year: '1993', genres: ['Action RPG', 'Fantasy'], director: 'Square', actors: [], type: 'game',
+        styles: [{ name: 'SNES Action RPG', promptString: '16-bit colorful action RPG, ring menu system' }],
+        gameAssets: {
+            perspective: 'top-down', graphicsStyle: '16-bit', resolution: '24x24', colorPalette: 'SNES palette',
+            characters: [
+                {
+                    name: 'Randi', role: 'player', directions: 4, actions: [
+                        { action: 'idle', frames: 2, description: 'boy with sword' },
+                        { action: 'walk', frames: 4, description: 'walking' },
+                        { action: 'swing', frames: 4, description: 'sword swing' },
+                        { action: 'charge', frames: 4, description: 'charging attack' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Forest', type: 'floor', variants: 8, description: 'lush fantasy forest' }],
+            items: [{ name: 'Candy', category: 'consumable', animated: false, frames: 1, description: 'health restore' }],
+            ui: [{ name: 'Ring Menu', description: 'circular item menu' }]
+        }
+    },
+
+    // Super Smash Bros
+    {
+        id: 'smash-bros', title: 'Super Smash Bros.', year: '1999', genres: ['Fighting', 'Party'], director: 'Nintendo', actors: [], type: 'game',
+        styles: [{ name: 'N64 Mascot Fighter', promptString: 'Nintendo crossover fighting, platform stages' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: 'low-poly-3d', resolution: '64x64', colorPalette: 'N64 palette',
+            characters: [
+                {
+                    name: 'Mario SSB', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 4, description: 'fighting stance' },
+                        { action: 'jab', frames: 3, description: 'punch combo' },
+                        { action: 'smash', frames: 6, description: 'charged attack' },
+                        { action: 'special', frames: 4, description: 'fireball throw' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Final Destination', type: 'platform', variants: 4, description: 'floating stage' }],
+            items: [{ name: 'Smash Ball', category: 'powerup', animated: true, frames: 4, description: 'final smash' }],
+            ui: [{ name: 'Damage Percent', description: 'knockback percentage' }]
+        }
+    },
+
+    // Mario Kart
+    {
+        id: 'mario-kart', title: 'Super Mario Kart', year: '1992', genres: ['Racing', 'Kart'], director: 'Nintendo', actors: [], type: 'game',
+        styles: [{ name: 'Mode 7 Racing', promptString: 'SNES Mode 7 kart racing, item chaos' }],
+        gameAssets: {
+            perspective: 'racing-behind', graphicsStyle: '16-bit', resolution: '32x32', colorPalette: 'SNES palette',
+            characters: [
+                {
+                    name: 'Mario Kart', role: 'player', directions: 8, actions: [
+                        { action: 'drive', frames: 1, description: 'driving kart' },
+                        { action: 'turn', frames: 2, description: 'leaning into turn' },
+                        { action: 'spin_out', frames: 4, description: 'spinning from hit' },
+                        { action: 'jump', frames: 2, description: 'feather jump' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Track', type: 'floor', variants: 8, description: 'race track tiles' }],
+            items: [
+                { name: 'Banana', category: 'weapon', animated: false, frames: 1, description: 'slip hazard' },
+                { name: 'Shell', category: 'weapon', animated: true, frames: 4, description: 'homing projectile' },
+                { name: 'Star', category: 'powerup', animated: true, frames: 4, description: 'invincibility' }
+            ],
+            ui: [{ name: 'Lap Counter', description: 'race position' }]
+        }
+    },
+
+    // F-Zero
+    {
+        id: 'f-zero', title: 'F-Zero', year: '1990', genres: ['Racing', 'Futuristic'], director: 'Nintendo', actors: [], type: 'game',
+        styles: [{ name: 'SNES Mode 7', promptString: 'futuristic anti-gravity racing, Mode 7 graphics' }],
+        gameAssets: {
+            perspective: 'racing-behind', graphicsStyle: '16-bit', resolution: '32x32', colorPalette: 'SNES palette',
+            characters: [
+                {
+                    name: 'Blue Falcon', role: 'player', directions: 1, actions: [
+                        { action: 'drive', frames: 1, description: 'blue racer hovering' },
+                        { action: 'boost', frames: 4, description: 'afterburner effect' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Mute City', type: 'floor', variants: 8, description: 'futuristic track' }],
+            items: [],
+            ui: [{ name: 'Energy', description: 'health/boost bar' }]
+        }
+    },
+
+    // Pilotwings
+    {
+        id: 'pilotwings', title: 'Pilotwings', year: '1990', genres: ['Flight Sim', 'Sports'], director: 'Nintendo', actors: [], type: 'game',
+        styles: [{ name: 'Mode 7 Flight', promptString: 'SNES flight simulation, skydiving, hang gliding' }],
+        gameAssets: {
+            perspective: 'third-person', graphicsStyle: '16-bit', resolution: '32x32', colorPalette: 'SNES palette',
+            characters: [
+                {
+                    name: 'Pilot', role: 'player', directions: 8, actions: [
+                        { action: 'plane', frames: 2, description: 'flying light plane' },
+                        { action: 'skydive', frames: 4, description: 'free falling' },
+                        { action: 'parachute', frames: 2, description: 'parachute open' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Landing Zone', type: 'floor', variants: 4, description: 'target platforms' }],
+            items: [],
+            ui: [{ name: 'Altitude', description: 'height meter' }]
+        }
+    },
+
+    // Star Fox
+    {
+        id: 'star-fox', title: 'Star Fox', year: '1993', genres: ['Rail Shooter', 'Sci-Fi'], director: 'Nintendo', actors: [], type: 'game',
+        styles: [{ name: 'Super FX', promptString: 'SNES 3D polygons, anthropomorphic pilots, space combat' }],
+        gameAssets: {
+            perspective: 'racing-behind', graphicsStyle: 'low-poly-3d', resolution: '48x48', colorPalette: 'SNES palette',
+            characters: [
+                {
+                    name: 'Arwing', role: 'player', directions: 1, actions: [
+                        { action: 'fly', frames: 2, description: 'flying spacecraft' },
+                        { action: 'barrel_roll', frames: 6, description: 'do a barrel roll' },
+                        { action: 'somersault', frames: 6, description: 'loop maneuver' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Corneria', type: 'background', variants: 4, description: 'planet surface' }],
+            items: [{ name: 'Laser Powerup', category: 'powerup', animated: true, frames: 2, description: 'weapon upgrade' }],
+            ui: [{ name: 'Shield', description: 'ship health' }]
+        }
+    },
+
+    // Yoshi's Island
+    {
+        id: 'yoshis-island', title: "Yoshi's Island", year: '1995', genres: ['Platformer', 'Action'], director: 'Nintendo', actors: [], type: 'game',
+        styles: [{ name: 'Crayon Art', promptString: 'hand-drawn crayon style, baby Mario, egg throwing' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '16-bit', resolution: '32x32', colorPalette: 'crayon pastel',
+            characters: [
+                {
+                    name: 'Yoshi', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 4, description: 'green dinosaur, baby on back' },
+                        { action: 'walk', frames: 6, description: 'walking' },
+                        { action: 'flutter', frames: 6, description: 'flutter jump' },
+                        { action: 'tongue', frames: 4, description: 'eating enemy' },
+                        { action: 'egg_aim', frames: 1, description: 'aiming egg throw' },
+                        { action: 'ground_pound', frames: 4, description: 'butt stomp' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Crayon World', type: 'floor', variants: 8, description: 'hand-drawn style tiles' }],
+            items: [{ name: 'Egg', category: 'weapon', animated: false, frames: 1, description: 'throwable egg' }],
+            ui: [{ name: 'Star Counter', description: 'baby Mario timer' }]
+        }
+    },
+
+    // Celeste
+    {
+        id: 'celeste', title: 'Celeste', year: '2018', genres: ['Platformer', 'Indie'], director: 'Matt Thorson', actors: [], type: 'game',
+        styles: [{ name: 'Modern Pixel', promptString: 'modern pixel art, precision platforming, emotional story' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: 'pixel-art-hd', resolution: '16x16', colorPalette: 'muted palette',
+            characters: [
+                {
+                    name: 'Madeline', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 4, description: 'red-haired girl' },
+                        { action: 'run', frames: 6, description: 'running' },
+                        { action: 'jump', frames: 2, description: 'jumping' },
+                        { action: 'dash', frames: 4, description: 'air dash, hair color changes' },
+                        { action: 'climb', frames: 4, description: 'wall climbing' },
+                        { action: 'death', frames: 6, description: 'burst into particles' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Mountain', type: 'floor', variants: 8, description: 'snowy mountain tiles' }],
+            items: [{ name: 'Strawberry', category: 'collectible', animated: true, frames: 4, description: 'optional collectible' }],
+            ui: [{ name: 'Deaths', description: 'death counter' }]
+        }
+    },
+
+    // Shovel Knight
+    {
+        id: 'shovel-knight', title: 'Shovel Knight', year: '2014', genres: ['Platformer', 'Retro'], director: 'Yacht Club', actors: [], type: 'game',
+        styles: [{ name: 'Neo NES', promptString: 'NES-style with modern polish, knight with shovel' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'NES enhanced',
+            characters: [
+                {
+                    name: 'Shovel Knight', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 2, description: 'blue armored knight' },
+                        { action: 'walk', frames: 4, description: 'walking' },
+                        { action: 'jump', frames: 1, description: 'jumping' },
+                        { action: 'dig', frames: 3, description: 'shovel swing' },
+                        { action: 'pogo', frames: 2, description: 'downward shovel bounce' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Plains', type: 'floor', variants: 8, description: 'medieval platformer tiles' }],
+            items: [{ name: 'Gem', category: 'collectible', animated: true, frames: 4, description: 'currency' }],
+            ui: [{ name: 'Health', description: 'health bar' }]
+        }
+    },
+
+    // Undertale
+    {
+        id: 'undertale', title: 'Undertale', year: '2015', genres: ['RPG', 'Indie'], director: 'Toby Fox', actors: [], type: 'game',
+        styles: [{ name: 'Minimalist RPG', promptString: 'simple pixel art, bullet hell battles, choice matters' }],
+        gameAssets: {
+            perspective: 'top-down', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'minimal',
+            characters: [
+                {
+                    name: 'Frisk', role: 'player', directions: 4, actions: [
+                        { action: 'idle', frames: 1, description: 'striped shirt child' },
+                        { action: 'walk', frames: 4, description: 'walking' }
+                    ]
+                },
+                {
+                    name: 'Sans', role: 'enemy', directions: 2, actions: [
+                        { action: 'idle', frames: 2, description: 'skeleton in hoodie, grin' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Ruins', type: 'floor', variants: 6, description: 'underground ruins' }],
+            items: [{ name: 'Soul', category: 'equipment', animated: true, frames: 2, description: 'red heart in battle' }],
+            ui: [{ name: 'ACT Menu', description: 'FIGHT ACT ITEM MERCY' }]
+        }
+    },
+
+    // Stardew Valley
+    {
+        id: 'stardew-valley', title: 'Stardew Valley', year: '2016', genres: ['Farming Sim', 'RPG'], director: 'ConcernedApe', actors: [], type: 'game',
+        styles: [{ name: 'Cozy Farming', promptString: 'pixel art farming, seasons, village life' }],
+        gameAssets: {
+            perspective: 'top-down', graphicsStyle: 'pixel-art-hd', resolution: '16x16', colorPalette: 'pastoral',
+            characters: [
+                {
+                    name: 'Farmer', role: 'player', directions: 4, actions: [
+                        { action: 'idle', frames: 1, description: 'farmer with tool' },
+                        { action: 'walk', frames: 4, description: 'walking' },
+                        { action: 'hoe', frames: 4, description: 'tilling soil' },
+                        { action: 'water', frames: 4, description: 'watering crops' },
+                        { action: 'fish', frames: 6, description: 'fishing cast and reel' }
+                    ]
+                }
+            ],
+            tilesets: [
+                { name: 'Farm', type: 'floor', variants: 8, description: 'farm land tiles' },
+                { name: 'Crops', type: 'prop', variants: 16, description: 'various crop growth stages' }
+            ],
+            items: [{ name: 'Seeds', category: 'equipment', animated: false, frames: 1, description: 'planting seeds' }],
+            ui: [{ name: 'Energy', description: 'stamina bar' }]
+        }
+    },
+
+    // Terraria
+    {
+        id: 'terraria', title: 'Terraria', year: '2011', genres: ['Sandbox', 'Action'], director: 'Re-Logic', actors: [], type: 'game',
+        styles: [{ name: '2D Minecraft', promptString: 'pixel sandbox, mining, boss fights, building' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: 'pixel-art-hd', resolution: '16x16', colorPalette: 'vibrant',
+            characters: [
+                {
+                    name: 'Terrarian', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 1, description: 'customizable character' },
+                        { action: 'walk', frames: 4, description: 'walking' },
+                        { action: 'swing', frames: 3, description: 'weapon swing' },
+                        { action: 'grapple', frames: 2, description: 'grappling hook' },
+                        { action: 'mine', frames: 4, description: 'pickaxe mining' }
+                    ]
+                }
+            ],
+            tilesets: [
+                { name: 'Dirt', type: 'floor', variants: 8, description: 'minable dirt blocks' },
+                { name: 'Stone', type: 'wall', variants: 8, description: 'stone layers' },
+                { name: 'Ores', type: 'prop', variants: 8, description: 'valuable ore deposits' }
+            ],
+            items: [{ name: 'Heart Crystal', category: 'powerup', animated: true, frames: 4, description: 'health upgrade' }],
+            ui: [{ name: 'Health Hearts', description: 'heart containers' }]
+        }
+    },
+
+    // Dead Cells
+    {
+        id: 'dead-cells', title: 'Dead Cells', year: '2018', genres: ['Roguelike', 'Metroidvania'], director: 'Motion Twin', actors: [], type: 'game',
+        styles: [{ name: 'Fluid Pixel', promptString: 'smooth pixel animation, procedural dungeon, permadeath' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: 'pixel-art-hd', resolution: '32x32', colorPalette: 'dark dungeon',
+            characters: [
+                {
+                    name: 'Prisoner', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 6, description: 'headless body, flame for head' },
+                        { action: 'run', frames: 8, description: 'fast running' },
+                        { action: 'roll', frames: 6, description: 'dodge roll' },
+                        { action: 'slash', frames: 4, description: 'sword combo' },
+                        { action: 'ground_slam', frames: 6, description: 'aerial slam attack' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Prison', type: 'floor', variants: 8, description: 'starting prison area' }],
+            items: [{ name: 'Cell', category: 'collectible', animated: true, frames: 4, description: 'upgrade currency' }],
+            ui: [{ name: 'Weapons', description: 'loadout slots' }]
+        }
+    },
+
+    // Hades
+    {
+        id: 'hades', title: 'Hades', year: '2020', genres: ['Roguelike', 'Action'], director: 'Supergiant', actors: [], type: 'game',
+        styles: [{ name: 'Stylized Greek', promptString: 'stylized Greek mythology, fluid combat, isometric' }],
+        gameAssets: {
+            perspective: 'isometric', graphicsStyle: 'hand-drawn', resolution: '64x64', colorPalette: 'Greek underworld',
+            characters: [
+                {
+                    name: 'Zagreus', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 6, description: 'prince of underworld, burning feet' },
+                        { action: 'run', frames: 8, description: 'running' },
+                        { action: 'dash', frames: 4, description: 'quick dash' },
+                        { action: 'sword', frames: 6, description: 'Stygian blade combo' },
+                        { action: 'cast', frames: 4, description: 'bloodstone throw' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Tartarus', type: 'floor', variants: 8, description: 'underworld chambers' }],
+            items: [{ name: 'Boon', category: 'powerup', animated: true, frames: 4, description: 'god blessing' }],
+            ui: [{ name: 'Death Defiance', description: 'extra lives' }]
+        }
+    },
+
+    // Enter the Gungeon
+    {
+        id: 'enter-the-gungeon', title: 'Enter the Gungeon', year: '2016', genres: ['Roguelike', 'Shooter'], director: 'Dodge Roll', actors: [], type: 'game',
+        styles: [{ name: 'Bullet Hell', promptString: 'pixel bullet hell, gun-themed dungeon, dodge rolling' }],
+        gameAssets: {
+            perspective: 'top-down', graphicsStyle: 'pixel-art-hd', resolution: '16x16', colorPalette: 'dungeon',
+            characters: [
+                {
+                    name: 'Marine', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'soldier with gun' },
+                        { action: 'walk', frames: 6, description: 'walking' },
+                        { action: 'dodge_roll', frames: 8, description: 'invincible roll' },
+                        { action: 'shoot', frames: 2, description: 'firing weapon' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Gungeon', type: 'floor', variants: 8, description: 'gun-themed dungeon' }],
+            items: [{ name: 'Gun', category: 'weapon', animated: true, frames: 2, description: 'random gun pickup' }],
+            ui: [{ name: 'Blanks', description: 'bullet clear counter' }]
+        }
+    },
+
+    // Spelunky
+    {
+        id: 'spelunky', title: 'Spelunky', year: '2008', genres: ['Roguelike', 'Platformer'], director: 'Mossmouth', actors: [], type: 'game',
+        styles: [{ name: 'Cave Explorer', promptString: 'procedural caves, traps, whip and bombs' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: 'pixel-art-hd', resolution: '16x16', colorPalette: 'cave',
+            characters: [
+                {
+                    name: 'Spelunker', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 2, description: 'adventurer with hat' },
+                        { action: 'walk', frames: 4, description: 'walking' },
+                        { action: 'jump', frames: 1, description: 'jumping' },
+                        { action: 'whip', frames: 4, description: 'whip attack' },
+                        { action: 'rope', frames: 2, description: 'throwing rope' },
+                        { action: 'bomb', frames: 2, description: 'placing bomb' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Caves', type: 'floor', variants: 8, description: 'mine tiles' }],
+            items: [{ name: 'Gold', category: 'collectible', animated: true, frames: 4, description: 'treasure' }],
+            ui: [{ name: 'Bombs', description: 'bomb count' }]
+        }
+    },
+
+    // Binding of Isaac
+    {
+        id: 'binding-of-isaac', title: 'Binding of Isaac', year: '2011', genres: ['Roguelike', 'Shooter'], director: 'Edmund McMillen', actors: [], type: 'game',
+        styles: [{ name: 'Flash Horror', promptString: 'grotesque cartoon, twin-stick shooter, biblical themes' }],
+        gameAssets: {
+            perspective: 'top-down', graphicsStyle: 'hand-drawn', resolution: '32x32', colorPalette: 'basement',
+            characters: [
+                {
+                    name: 'Isaac', role: 'player', directions: 4, actions: [
+                        { action: 'idle', frames: 2, description: 'naked crying child' },
+                        { action: 'walk', frames: 4, description: 'walking' },
+                        { action: 'shoot', frames: 2, description: 'shooting tears' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Basement', type: 'floor', variants: 6, description: 'basement room tiles' }],
+            items: [{ name: 'Heart', category: 'consumable', animated: true, frames: 2, description: 'health pickup' }],
+            ui: [{ name: 'Hearts', description: 'health hearts' }]
+        }
+    },
+
+    // Hotline Miami
+    {
+        id: 'hotline-miami', title: 'Hotline Miami', year: '2012', genres: ['Action', 'Top-Down Shooter'], director: 'Dennaton', actors: [], type: 'game',
+        styles: [{ name: 'Neon Violence', promptString: '80s neon, ultraviolent, animal masks, pulsing soundtrack' }],
+        gameAssets: {
+            perspective: 'top-down', graphicsStyle: 'pixel-art-hd', resolution: '16x16', colorPalette: 'neon 80s',
+            characters: [
+                {
+                    name: 'Jacket', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 2, description: 'varsity jacket, animal mask' },
+                        { action: 'walk', frames: 4, description: 'walking' },
+                        { action: 'punch', frames: 3, description: 'melee attack' },
+                        { action: 'shoot', frames: 2, description: 'firing gun' },
+                        { action: 'execute', frames: 4, description: 'ground finisher' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Building', type: 'floor', variants: 8, description: '80s interior' }],
+            items: [{ name: 'Weapon', category: 'weapon', animated: false, frames: 1, description: 'dropped weapon' }],
+            effects: [{ name: 'Blood', frames: 1, description: 'blood pool' }],
+            ui: [{ name: 'Score', description: 'combo multiplier' }]
+        }
+    },
+
+    // Super Meat Boy
+    {
+        id: 'super-meat-boy', title: 'Super Meat Boy', year: '2010', genres: ['Platformer', 'Hardcore'], director: 'Team Meat', actors: [], type: 'game',
+        styles: [{ name: 'Bloody Platformer', promptString: 'tough-as-nails platformer, meat character, saw blades' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: 'pixel-art-hd', resolution: '16x16', colorPalette: 'bloody',
+            characters: [
+                {
+                    name: 'Meat Boy', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 4, description: 'cube of meat, no skin' },
+                        { action: 'run', frames: 6, description: 'running, leaving blood trail' },
+                        { action: 'jump', frames: 2, description: 'jumping' },
+                        { action: 'wall_slide', frames: 2, description: 'sliding down wall' },
+                        { action: 'death', frames: 4, description: 'exploding into chunks' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Forest', type: 'floor', variants: 6, description: 'world 1 tiles' }],
+            items: [{ name: 'Bandage', category: 'collectible', animated: true, frames: 2, description: 'hidden collectible' }],
+            ui: [{ name: 'Timer', description: 'level time' }]
+        }
+    },
+
+    // VVVVVV
+    {
+        id: 'vvvvvv', title: 'VVVVVV', year: '2010', genres: ['Platformer', 'Puzzle'], director: 'Terry Cavanagh', actors: [], type: 'game',
+        styles: [{ name: 'Commodore 64', promptString: 'retro C64 style, gravity flipping, single screen rooms' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '8-bit', resolution: '8x8', colorPalette: 'C64',
+            characters: [
+                {
+                    name: 'Viridian', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 2, description: 'simple smiling figure' },
+                        { action: 'walk', frames: 4, description: 'walking' },
+                        { action: 'flip', frames: 2, description: 'gravity flip' },
+                        { action: 'sad', frames: 1, description: 'frowning when dead' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Space Station', type: 'floor', variants: 4, description: 'blocky space station' }],
+            items: [{ name: 'Trinket', category: 'collectible', animated: true, frames: 4, description: 'shiny collectible' }],
+            ui: [{ name: 'Deaths', description: 'death counter' }]
+        }
+    },
+
+    // Cave Story
+    {
+        id: 'cave-story', title: 'Cave Story', year: '2004', genres: ['Metroidvania', 'Indie'], director: 'Pixel', actors: [], type: 'game',
+        styles: [{ name: 'Freeware Classic', promptString: 'charming pixel art, rabbit creatures, weapon leveling' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: 'pixel-art-hd', resolution: '16x16', colorPalette: 'vibrant',
+            characters: [
+                {
+                    name: 'Quote', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 2, description: 'robot soldier, red scarf' },
+                        { action: 'walk', frames: 4, description: 'walking' },
+                        { action: 'jump', frames: 1, description: 'jumping' },
+                        { action: 'shoot', frames: 2, description: 'firing polar star' },
+                        { action: 'look_up', frames: 1, description: 'aiming upward' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Mimiga Village', type: 'floor', variants: 8, description: 'cave village tiles' }],
+            items: [
+                { name: 'Missile', category: 'weapon', animated: true, frames: 2, description: 'missile ammo' },
+                { name: 'Triangle', category: 'collectible', animated: true, frames: 4, description: 'weapon energy' }
+            ],
+            ui: [{ name: 'Weapon Level', description: 'EXP bar' }]
+        }
+    },
+
+    // Duck Hunt
+    {
+        id: 'duck-hunt', title: 'Duck Hunt', year: '1984', genres: ['Shooter', 'Light Gun'], director: 'Nintendo', actors: [], type: 'game',
+        styles: [{ name: 'NES Zapper', promptString: 'light gun shooter, ducks and dog, point and shoot' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'NES palette',
+            characters: [
+                {
+                    name: 'Dog', role: 'player', directions: 2, actions: [
+                        { action: 'sniff', frames: 4, description: 'sniffing grass' },
+                        { action: 'jump', frames: 4, description: 'jumping into grass' },
+                        { action: 'laugh', frames: 4, description: 'laughing at missed shots' },
+                        { action: 'hold_duck', frames: 2, description: 'holding caught duck' }
+                    ]
+                },
+                {
+                    name: 'Duck', role: 'enemy', directions: 8, actions: [
+                        { action: 'fly', frames: 4, description: 'flying duck' },
+                        { action: 'fall', frames: 4, description: 'shot duck falling' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Field', type: 'background', variants: 2, description: 'grass field and sky' }],
+            items: [],
+            ui: [{ name: 'Shots', description: 'bullets remaining' }]
+        }
     }
 ];
