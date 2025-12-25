@@ -31,7 +31,8 @@ export type GamePerspective =
     | 'third-person'       // Tony Hawk, action games - behind player
     | 'fighting'           // Street Fighter - side view with facing opponent
     | 'racing-overhead'    // Micro Machines - top-down vehicle view
-    | 'racing-behind';     // OutRun - third-person behind vehicle
+    | 'racing-behind'      // OutRun - third-person behind vehicle
+    | 'side-view';         // General side view (Limbo, Inside)
 
 // Standard graphics styles
 export type GraphicsStyle =
@@ -42,7 +43,9 @@ export type GraphicsStyle =
     | 'low-poly-3d'        // PS1 style 3D
     | 'cel-shaded'         // Jet Set Radio style
     | 'vector'             // Clean scalable graphics
-    | 'hand-drawn';        // Cuphead, Hollow Knight
+    | 'hand-drawn'         // Cuphead, Hollow Knight
+    | 'arcade'             // Classic arcade detailed pixel art
+    | '2d-clean';          // Modern sharp 2D (Flash, Vector-like)
 
 export interface SpriteAction {
     action: string;           // e.g., "idle", "run", "jump", "attack_sword"
@@ -66,7 +69,7 @@ export interface TilesetPrompt {
 
 export interface ItemSprite {
     name: string;
-    category: 'weapon' | 'powerup' | 'collectible' | 'consumable' | 'equipment' | 'projectile';
+    category: 'weapon' | 'powerup' | 'collectible' | 'consumable' | 'equipment' | 'projectile' | 'hazard' | 'ui';
     animated: boolean;        // Does this item animate?
     frames: number;           // Animation frames if animated
     description: string;
@@ -76,7 +79,7 @@ export interface GameAssets {
     // Core game properties for sprite sheet generation
     perspective: GamePerspective;
     graphicsStyle: GraphicsStyle;
-    resolution: '8x8' | '16x16' | '32x32' | '48x48' | '64x64' | '128x128';
+    resolution: '8x8' | '16x16' | '24x24' | '32x32' | '48x48' | '64x64' | '128x128';
     colorPalette?: string;    // e.g., "NES palette", "PICO-8", "Game Boy green"
 
     // Sprite sheet categories
