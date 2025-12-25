@@ -1299,5 +1299,1372 @@ export const games: MediaItem[] = [
                 { name: 'Gear', description: 'LOW/HIGH gear indicator' }
             ]
         }
+    },
+
+    // JRPG - Final Fantasy
+    {
+        id: 'final-fantasy',
+        title: 'Final Fantasy VI',
+        year: '1994',
+        genres: ['JRPG', 'Turn-Based'],
+        director: 'Square',
+        actors: [],
+        type: 'game',
+        styles: [{ name: 'SNES JRPG', promptString: '16-bit JRPG, detailed character sprites, fantasy world' }],
+        gameAssets: {
+            perspective: 'top-down',
+            graphicsStyle: '16-bit',
+            resolution: '32x32',
+            colorPalette: 'SNES palette',
+            characters: [
+                {
+                    name: 'Terra', role: 'player', directions: 4, actions: [
+                        { action: 'idle', frames: 2, description: 'green-haired mage standing' },
+                        { action: 'walk', frames: 4, description: 'walking animation' },
+                        { action: 'battle_idle', frames: 4, description: 'fighting stance, side view' },
+                        { action: 'attack', frames: 4, description: 'sword swing' },
+                        { action: 'cast_spell', frames: 6, description: 'magic casting, arms raised' },
+                        { action: 'victory', frames: 4, description: 'celebration pose' }
+                    ]
+                }
+            ],
+            tilesets: [
+                { name: 'World Map', type: 'floor', variants: 16, description: 'overworld tiles, forests, mountains, water' },
+                { name: 'Town', type: 'floor', variants: 12, description: 'cobblestone, buildings, shops' }
+            ],
+            items: [
+                { name: 'Potion', category: 'consumable', animated: false, frames: 1, description: 'healing potion' },
+                { name: 'Sword', category: 'weapon', animated: false, frames: 1, description: 'various swords' }
+            ],
+            ui: [{ name: 'Battle Menu', description: 'ATB gauge, HP/MP bars, command menu' }]
+        }
+    },
+
+    // Run and Gun - Metal Slug
+    {
+        id: 'metal-slug',
+        title: 'Metal Slug',
+        year: '1996',
+        genres: ['Run and Gun', 'Arcade'],
+        director: 'SNK',
+        actors: [],
+        type: 'game',
+        styles: [{ name: 'Neo Geo', promptString: 'Neo Geo arcade, highly detailed sprites, military comedy' }],
+        gameAssets: {
+            perspective: 'side-scroller',
+            graphicsStyle: '32-bit',
+            resolution: '64x64',
+            colorPalette: 'Neo Geo',
+            characters: [
+                {
+                    name: 'Marco', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 4, description: 'soldier standing, breathing' },
+                        { action: 'run', frames: 8, description: 'running with gun' },
+                        { action: 'shoot', frames: 3, description: 'firing pistol/machine gun' },
+                        { action: 'crouch', frames: 2, description: 'ducking low' },
+                        { action: 'jump', frames: 4, description: 'jumping, legs spread' },
+                        { action: 'knife', frames: 4, description: 'melee knife attack' },
+                        { action: 'grenade', frames: 4, description: 'throwing grenade' },
+                        { action: 'death', frames: 6, description: 'comical death animation' }
+                    ]
+                },
+                {
+                    name: 'Rebel Soldier', role: 'enemy', directions: 2, actions: [
+                        { action: 'idle', frames: 2, description: 'enemy soldier standing' },
+                        { action: 'shoot', frames: 3, description: 'firing rifle' },
+                        { action: 'death', frames: 4, description: 'dramatic death' }
+                    ]
+                }
+            ],
+            tilesets: [
+                { name: 'Military Base', type: 'floor', variants: 8, description: 'industrial military environment' }
+            ],
+            items: [
+                { name: 'Heavy Machine Gun', category: 'weapon', animated: true, frames: 2, description: 'H letter powerup' },
+                { name: 'Shotgun', category: 'weapon', animated: true, frames: 2, description: 'S letter powerup' }
+            ],
+            effects: [{ name: 'Explosion', frames: 8, description: 'detailed fiery explosion' }],
+            ui: [{ name: 'Ammo Counter', description: 'weapon ammo display' }]
+        }
+    },
+
+    // Classic Shooter - Contra
+    {
+        id: 'contra',
+        title: 'Contra',
+        year: '1987',
+        genres: ['Run and Gun', 'Action'],
+        director: 'Konami',
+        actors: [],
+        type: 'game',
+        styles: [{ name: 'NES Action', promptString: '8-bit military action, alien invasion, tough commandos' }],
+        gameAssets: {
+            perspective: 'side-scroller',
+            graphicsStyle: '8-bit',
+            resolution: '16x16',
+            colorPalette: 'NES palette',
+            characters: [
+                {
+                    name: 'Bill Rizer', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 1, description: 'muscular commando, shirtless' },
+                        { action: 'run', frames: 4, description: 'running with rifle' },
+                        { action: 'jump', frames: 1, description: 'somersault jump' },
+                        { action: 'shoot_forward', frames: 2, description: 'shooting straight' },
+                        { action: 'shoot_up', frames: 2, description: 'aiming upward' },
+                        { action: 'shoot_diagonal', frames: 2, description: 'aiming 45 degrees' },
+                        { action: 'prone', frames: 1, description: 'lying flat, shooting' }
+                    ]
+                }
+            ],
+            tilesets: [
+                { name: 'Jungle', type: 'floor', variants: 6, description: 'jungle platforms, vines' },
+                { name: 'Base', type: 'wall', variants: 6, description: 'alien base tiles' }
+            ],
+            items: [
+                { name: 'Spread Gun', category: 'powerup', animated: true, frames: 2, description: 'S powerup capsule' },
+                { name: 'Laser', category: 'powerup', animated: true, frames: 2, description: 'L powerup' }
+            ],
+            ui: [{ name: 'Lives', description: 'remaining lives counter' }]
+        }
+    },
+
+    // Survival Horror - Resident Evil
+    {
+        id: 'resident-evil',
+        title: 'Resident Evil',
+        year: '1996',
+        genres: ['Survival Horror', 'Action'],
+        director: 'Capcom',
+        actors: [],
+        type: 'game',
+        styles: [{ name: 'PS1 Horror', promptString: 'PS1 pre-rendered backgrounds, low-poly 3D characters, horror atmosphere' }],
+        gameAssets: {
+            perspective: 'isometric',
+            graphicsStyle: 'low-poly-3d',
+            resolution: '64x64',
+            colorPalette: 'dark muted',
+            characters: [
+                {
+                    name: 'Jill Valentine', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'STARS member standing alert' },
+                        { action: 'walk', frames: 8, description: 'cautious walking' },
+                        { action: 'run', frames: 6, description: 'running' },
+                        { action: 'aim', frames: 2, description: 'aiming handgun' },
+                        { action: 'shoot', frames: 3, description: 'firing weapon' },
+                        { action: 'damage', frames: 2, description: 'getting hit, stagger' }
+                    ]
+                },
+                {
+                    name: 'Zombie', role: 'enemy', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'shambling zombie' },
+                        { action: 'walk', frames: 8, description: 'slow zombie walk' },
+                        { action: 'grab', frames: 4, description: 'grabbing attack' },
+                        { action: 'death', frames: 6, description: 'collapsing' }
+                    ]
+                }
+            ],
+            tilesets: [
+                { name: 'Mansion', type: 'floor', variants: 8, description: 'creepy mansion interior' }
+            ],
+            items: [
+                { name: 'First Aid Spray', category: 'consumable', animated: false, frames: 1, description: 'healing item' },
+                { name: 'Handgun Ammo', category: 'consumable', animated: false, frames: 1, description: 'ammunition box' }
+            ],
+            ui: [{ name: 'Health Status', description: 'ECG heartbeat, FINE/CAUTION/DANGER' }]
+        }
+    },
+
+    // RTS - StarCraft
+    {
+        id: 'starcraft',
+        title: 'StarCraft',
+        year: '1998',
+        genres: ['RTS', 'Strategy', 'Sci-Fi'],
+        director: 'Blizzard',
+        actors: [],
+        type: 'game',
+        styles: [{ name: 'Blizzard RTS', promptString: 'isometric sci-fi RTS, three distinct races, detailed unit sprites' }],
+        gameAssets: {
+            perspective: 'isometric',
+            graphicsStyle: '32-bit',
+            resolution: '32x32',
+            colorPalette: 'sci-fi',
+            characters: [
+                {
+                    name: 'Marine', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'power armor soldier' },
+                        { action: 'walk', frames: 8, description: 'marching' },
+                        { action: 'attack', frames: 4, description: 'firing gauss rifle' },
+                        { action: 'death', frames: 6, description: 'falling dead' }
+                    ]
+                },
+                {
+                    name: 'Zergling', role: 'enemy', directions: 8, actions: [
+                        { action: 'idle', frames: 4, description: 'alien dog creature' },
+                        { action: 'run', frames: 6, description: 'fast scuttling' },
+                        { action: 'attack', frames: 4, description: 'claw swipe' }
+                    ]
+                }
+            ],
+            tilesets: [
+                { name: 'Space Platform', type: 'floor', variants: 8, description: 'metal sci-fi tiles' },
+                { name: 'Zerg Creep', type: 'floor', variants: 4, description: 'organic alien ground' }
+            ],
+            items: [
+                { name: 'Minerals', category: 'collectible', animated: true, frames: 2, description: 'blue crystal resource' },
+                { name: 'Vespene Geyser', category: 'collectible', animated: true, frames: 4, description: 'green gas' }
+            ],
+            ui: [{ name: 'Minimap', description: 'tactical map view' }]
+        }
+    },
+
+    // Rhythm - DDR
+    {
+        id: 'ddr',
+        title: 'Dance Dance Revolution',
+        year: '1998',
+        genres: ['Rhythm', 'Music', 'Arcade'],
+        director: 'Konami',
+        actors: [],
+        type: 'game',
+        styles: [{ name: 'Arcade Rhythm', promptString: 'colorful arcade, neon arrows, dance energy' }],
+        gameAssets: {
+            perspective: 'top-down',
+            graphicsStyle: '32-bit',
+            resolution: '64x64',
+            colorPalette: 'neon vibrant',
+            characters: [
+                {
+                    name: 'Dancer', role: 'player', directions: 1, actions: [
+                        { action: 'dance', frames: 8, description: 'dancing to beat' },
+                        { action: 'perfect', frames: 4, description: 'celebration move' },
+                        { action: 'miss', frames: 2, description: 'stumble' }
+                    ]
+                }
+            ],
+            tilesets: [
+                { name: 'Dance Stage', type: 'background', variants: 4, description: 'colorful stage lighting' }
+            ],
+            items: [
+                { name: 'Arrow Up', category: 'collectible', animated: true, frames: 4, description: 'scrolling up arrow' },
+                { name: 'Arrow Down', category: 'collectible', animated: true, frames: 4, description: 'scrolling down arrow' },
+                { name: 'Arrow Left', category: 'collectible', animated: true, frames: 4, description: 'scrolling left arrow' },
+                { name: 'Arrow Right', category: 'collectible', animated: true, frames: 4, description: 'scrolling right arrow' }
+            ],
+            effects: [
+                { name: 'Perfect', frames: 4, description: 'rainbow burst effect' },
+                { name: 'Good', frames: 3, description: 'yellow flash' }
+            ],
+            ui: [{ name: 'Combo Counter', description: 'hit streak display' }]
+        }
+    },
+
+    // Sports - Tony Hawk
+    {
+        id: 'tony-hawk',
+        title: "Tony Hawk's Pro Skater",
+        year: '1999',
+        genres: ['Sports', 'Skateboarding'],
+        director: 'Neversoft',
+        actors: [],
+        type: 'game',
+        styles: [{ name: 'PS1 Skate', promptString: 'late 90s skateboarding, urban environments, trick-focused' }],
+        gameAssets: {
+            perspective: 'third-person',
+            graphicsStyle: 'low-poly-3d',
+            resolution: '64x64',
+            colorPalette: 'urban',
+            characters: [
+                {
+                    name: 'Skater', role: 'player', directions: 8, actions: [
+                        { action: 'push', frames: 6, description: 'pushing on skateboard' },
+                        { action: 'ollie', frames: 4, description: 'jumping with board' },
+                        { action: 'kickflip', frames: 6, description: 'board spinning under feet' },
+                        { action: 'grind', frames: 4, description: 'grinding on rail' },
+                        { action: 'manual', frames: 2, description: 'balancing on two wheels' },
+                        { action: 'bail', frames: 6, description: 'crash and fall' }
+                    ]
+                }
+            ],
+            tilesets: [
+                { name: 'Skatepark', type: 'floor', variants: 8, description: 'concrete ramps, rails, halfpipes' },
+                { name: 'Street', type: 'floor', variants: 6, description: 'urban environment, stairs, benches' }
+            ],
+            items: [
+                { name: 'S-K-A-T-E Letter', category: 'collectible', animated: true, frames: 4, description: 'floating letter pickup' },
+                { name: 'Stat Point', category: 'powerup', animated: true, frames: 4, description: 'upgrade pickup' }
+            ],
+            ui: [{ name: 'Trick List', description: 'current combo display' }]
+        }
+    },
+
+    // Fighting - Mortal Kombat
+    {
+        id: 'mortal-kombat',
+        title: 'Mortal Kombat',
+        year: '1992',
+        genres: ['Fighting', 'Arcade'],
+        director: 'Midway',
+        actors: [],
+        type: 'game',
+        styles: [{ name: 'Digitized Fighters', promptString: 'digitized sprites, dark martial arts, blood and gore' }],
+        gameAssets: {
+            perspective: 'fighting',
+            graphicsStyle: '32-bit',
+            resolution: '64x64',
+            colorPalette: 'dark gritty',
+            characters: [
+                {
+                    name: 'Scorpion', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 6, description: 'yellow ninja stance' },
+                        { action: 'walk', frames: 6, description: 'walking forward' },
+                        { action: 'punch', frames: 4, description: 'punching' },
+                        { action: 'kick', frames: 4, description: 'high kick' },
+                        { action: 'spear', frames: 6, description: 'throwing spear rope, GET OVER HERE' },
+                        { action: 'teleport', frames: 4, description: 'hellfire teleport' },
+                        { action: 'fatality', frames: 12, description: 'fire breath skull' }
+                    ]
+                },
+                {
+                    name: 'Sub-Zero', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 6, description: 'blue ninja stance' },
+                        { action: 'ice_ball', frames: 6, description: 'throwing freezing projectile' },
+                        { action: 'slide', frames: 4, description: 'ice slide kick' }
+                    ]
+                }
+            ],
+            tilesets: [
+                { name: 'The Pit', type: 'background', variants: 1, description: 'bridge over spikes, moon' }
+            ],
+            items: [],
+            effects: [
+                { name: 'Blood Splash', frames: 4, description: 'red blood spray' },
+                { name: 'Freeze', frames: 4, description: 'ice encasing opponent' }
+            ],
+            ui: [{ name: 'Health Bar', description: 'fighter health bars' }]
+        }
+    },
+
+    // Classic Arcade - Space Invaders
+    {
+        id: 'space-invaders',
+        title: 'Space Invaders',
+        year: '1978',
+        genres: ['Shooter', 'Arcade', 'Classic'],
+        director: 'Taito',
+        actors: [],
+        type: 'game',
+        styles: [{ name: 'Arcade Pioneer', promptString: 'earliest arcade, monochrome sprites, simple but iconic' }],
+        gameAssets: {
+            perspective: 'top-down',
+            graphicsStyle: '8-bit',
+            resolution: '8x8',
+            colorPalette: 'monochrome green',
+            characters: [
+                {
+                    name: 'Cannon', role: 'player', directions: 1, actions: [
+                        { action: 'idle', frames: 1, description: 'player cannon at bottom' },
+                        { action: 'shoot', frames: 2, description: 'firing upward' },
+                        { action: 'death', frames: 4, description: 'explosion' }
+                    ]
+                },
+                {
+                    name: 'Invader Type A', role: 'enemy', directions: 1, actions: [
+                        { action: 'march', frames: 2, description: 'squid invader, legs alternating' }
+                    ]
+                },
+                {
+                    name: 'Invader Type B', role: 'enemy', directions: 1, actions: [
+                        { action: 'march', frames: 2, description: 'crab invader, claws moving' }
+                    ]
+                },
+                {
+                    name: 'UFO', role: 'boss', directions: 1, actions: [
+                        { action: 'fly', frames: 2, description: 'mystery ship crossing top' }
+                    ]
+                }
+            ],
+            tilesets: [
+                { name: 'Shield', type: 'prop', variants: 4, description: 'destructible bunker shields' }
+            ],
+            items: [],
+            effects: [{ name: 'Invader Death', frames: 4, description: 'explosion sprite' }],
+            ui: [{ name: 'Score', description: 'point counter' }]
+        }
+    },
+
+    // Classic Arcade - Frogger
+    {
+        id: 'frogger',
+        title: 'Frogger',
+        year: '1981',
+        genres: ['Arcade', 'Action', 'Classic'],
+        director: 'Konami',
+        actors: [],
+        type: 'game',
+        styles: [{ name: 'Arcade Classic', promptString: 'early arcade, simple colorful sprites, road crossing' }],
+        gameAssets: {
+            perspective: 'top-down',
+            graphicsStyle: '8-bit',
+            resolution: '16x16',
+            colorPalette: 'arcade',
+            characters: [
+                {
+                    name: 'Frog', role: 'player', directions: 4, actions: [
+                        { action: 'idle', frames: 1, description: 'green frog sitting' },
+                        { action: 'hop', frames: 2, description: 'jumping forward' },
+                        { action: 'death', frames: 4, description: 'squished or drowned' }
+                    ]
+                }
+            ],
+            tilesets: [
+                { name: 'Road', type: 'floor', variants: 4, description: 'highway lanes' },
+                { name: 'River', type: 'hazard', variants: 4, description: 'water lanes' },
+                { name: 'Safe Zone', type: 'floor', variants: 2, description: 'grass median' }
+            ],
+            items: [
+                { name: 'Log', category: 'equipment', animated: true, frames: 2, description: 'floating log to ride' },
+                { name: 'Turtle', category: 'equipment', animated: true, frames: 4, description: 'swimming turtle platform' },
+                { name: 'Car', category: 'equipment', animated: true, frames: 2, description: 'traffic car hazard' },
+                { name: 'Truck', category: 'equipment', animated: true, frames: 2, description: 'long truck hazard' }
+            ],
+            ui: [{ name: 'Lives', description: 'remaining frogs' }]
+        }
+    },
+
+    // Donkey Kong
+    {
+        id: 'donkey-kong', title: 'Donkey Kong', year: '1981', genres: ['Arcade', 'Platformer'], director: 'Nintendo', actors: [], type: 'game',
+        styles: [{ name: 'Arcade Classic', promptString: 'early arcade, climbing platformer, barrels and ladders' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'arcade',
+            characters: [
+                {
+                    name: 'Jumpman', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 1, description: 'red shirt, blue overalls, early Mario' },
+                        { action: 'walk', frames: 2, description: 'walking on girders' },
+                        { action: 'jump', frames: 1, description: 'jumping over barrels' },
+                        { action: 'climb', frames: 2, description: 'climbing ladder' }
+                    ]
+                },
+                {
+                    name: 'Donkey Kong', role: 'boss', directions: 1, actions: [
+                        { action: 'idle', frames: 2, description: 'giant ape at top' },
+                        { action: 'throw_barrel', frames: 4, description: 'throwing barrel' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Girders', type: 'platform', variants: 4, description: 'red construction girders' }],
+            items: [{ name: 'Barrel', category: 'equipment', animated: true, frames: 4, description: 'rolling barrel hazard' }],
+            ui: [{ name: 'Score', description: 'point display' }]
+        }
+    },
+
+    // Galaga
+    {
+        id: 'galaga', title: 'Galaga', year: '1981', genres: ['Shooter', 'Arcade'], director: 'Namco', actors: [], type: 'game',
+        styles: [{ name: 'Space Shooter', promptString: 'fixed shooter arcade, colorful aliens, space background' }],
+        gameAssets: {
+            perspective: 'top-down', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'arcade space',
+            characters: [
+                {
+                    name: 'Fighter', role: 'player', directions: 1, actions: [
+                        { action: 'idle', frames: 1, description: 'white spaceship at bottom' },
+                        { action: 'shoot', frames: 2, description: 'firing upward' },
+                        { action: 'captured', frames: 4, description: 'being abducted by boss' }
+                    ]
+                },
+                {
+                    name: 'Galaga Bee', role: 'enemy', directions: 1, actions: [
+                        { action: 'fly', frames: 2, description: 'bee-shaped alien, wings flapping' },
+                        { action: 'dive', frames: 4, description: 'diving attack pattern' }
+                    ]
+                },
+                {
+                    name: 'Boss Galaga', role: 'boss', directions: 1, actions: [
+                        { action: 'fly', frames: 2, description: 'large green boss alien' },
+                        { action: 'beam', frames: 4, description: 'tractor beam capture' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Starfield', type: 'background', variants: 1, description: 'scrolling star background' }],
+            items: [],
+            effects: [{ name: 'Explosion', frames: 4, description: 'enemy explosion' }],
+            ui: [{ name: 'Score', description: 'points' }]
+        }
+    },
+
+    // Asteroids
+    {
+        id: 'asteroids', title: 'Asteroids', year: '1979', genres: ['Shooter', 'Arcade'], director: 'Atari', actors: [], type: 'game',
+        styles: [{ name: 'Vector Graphics', promptString: 'vector line art, white on black, geometric shapes' }],
+        gameAssets: {
+            perspective: 'top-down', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'vector white',
+            characters: [
+                {
+                    name: 'Ship', role: 'player', directions: 16, actions: [
+                        { action: 'idle', frames: 1, description: 'triangular spaceship' },
+                        { action: 'thrust', frames: 2, description: 'engine flame visible' },
+                        { action: 'hyperspace', frames: 4, description: 'disappearing/reappearing' }
+                    ]
+                }
+            ],
+            tilesets: [],
+            items: [
+                { name: 'Large Asteroid', category: 'equipment', animated: true, frames: 8, description: 'large rotating rock' },
+                { name: 'Medium Asteroid', category: 'equipment', animated: true, frames: 8, description: 'medium rock' },
+                { name: 'Small Asteroid', category: 'equipment', animated: true, frames: 8, description: 'small fast rock' },
+                { name: 'UFO', category: 'equipment', animated: true, frames: 2, description: 'enemy saucer' }
+            ],
+            effects: [{ name: 'Explosion', frames: 8, description: 'line segments flying outward' }],
+            ui: [{ name: 'Score', description: 'points' }]
+        }
+    },
+
+    // Centipede
+    {
+        id: 'centipede', title: 'Centipede', year: '1981', genres: ['Shooter', 'Arcade'], director: 'Atari', actors: [], type: 'game',
+        styles: [{ name: 'Trackball Shooter', promptString: 'colorful arcade, mushroom field, insect enemies' }],
+        gameAssets: {
+            perspective: 'top-down', graphicsStyle: '8-bit', resolution: '8x8', colorPalette: 'arcade',
+            characters: [
+                {
+                    name: 'Shooter', role: 'player', directions: 1, actions: [
+                        { action: 'idle', frames: 1, description: 'small gun turret' },
+                        { action: 'shoot', frames: 2, description: 'firing dart upward' }
+                    ]
+                },
+                {
+                    name: 'Centipede', role: 'enemy', directions: 2, actions: [
+                        { action: 'crawl', frames: 2, description: 'segmented body moving' }
+                    ]
+                },
+                {
+                    name: 'Spider', role: 'enemy', directions: 4, actions: [
+                        { action: 'bounce', frames: 4, description: 'spider bouncing around' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Mushroom', type: 'prop', variants: 4, description: 'colorful mushrooms, destructible' }],
+            items: [],
+            ui: [{ name: 'Score', description: 'points' }]
+        }
+    },
+
+    // Dig Dug
+    {
+        id: 'dig-dug', title: 'Dig Dug', year: '1982', genres: ['Arcade', 'Action'], director: 'Namco', actors: [], type: 'game',
+        styles: [{ name: 'Digging Arcade', promptString: 'colorful underground, digging tunnels, inflating enemies' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'arcade',
+            characters: [
+                {
+                    name: 'Dig Dug', role: 'player', directions: 4, actions: [
+                        { action: 'idle', frames: 1, description: 'white suit, red visor' },
+                        { action: 'dig', frames: 4, description: 'digging through dirt' },
+                        { action: 'pump', frames: 4, description: 'pumping air at enemy' }
+                    ]
+                },
+                {
+                    name: 'Pooka', role: 'enemy', directions: 4, actions: [
+                        { action: 'walk', frames: 2, description: 'round orange enemy' },
+                        { action: 'inflate', frames: 4, description: 'inflating and popping' }
+                    ]
+                },
+                {
+                    name: 'Fygar', role: 'enemy', directions: 2, actions: [
+                        { action: 'walk', frames: 2, description: 'green dragon' },
+                        { action: 'fire', frames: 3, description: 'breathing fire' }
+                    ]
+                }
+            ],
+            tilesets: [
+                { name: 'Dirt', type: 'floor', variants: 4, description: 'colored dirt layers' },
+                { name: 'Rock', type: 'prop', variants: 1, description: 'droppable rock hazard' }
+            ],
+            items: [{ name: 'Vegetable', category: 'collectible', animated: false, frames: 1, description: 'bonus vegetable' }],
+            ui: [{ name: 'Score', description: 'points' }]
+        }
+    },
+
+    // Q*bert
+    {
+        id: 'qbert', title: 'Q*bert', year: '1982', genres: ['Arcade', 'Puzzle'], director: 'Gottlieb', actors: [], type: 'game',
+        styles: [{ name: 'Isometric Puzzle', promptString: 'isometric pyramid, color-changing cubes, cute character' }],
+        gameAssets: {
+            perspective: 'isometric', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'arcade',
+            characters: [
+                {
+                    name: 'Q*bert', role: 'player', directions: 4, actions: [
+                        { action: 'idle', frames: 1, description: 'orange creature with long nose' },
+                        { action: 'hop', frames: 2, description: 'jumping diagonally' },
+                        { action: 'fall', frames: 4, description: 'falling off pyramid' }
+                    ]
+                },
+                {
+                    name: 'Coily', role: 'enemy', directions: 4, actions: [
+                        { action: 'egg', frames: 1, description: 'purple egg bouncing' },
+                        { action: 'snake', frames: 2, description: 'hatched snake chasing' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Cubes', type: 'platform', variants: 6, description: 'isometric cubes changing colors' }],
+            items: [{ name: 'Flying Disc', category: 'equipment', animated: true, frames: 2, description: 'escape disc' }],
+            ui: [{ name: 'Score', description: 'points' }]
+        }
+    },
+
+    // Bubble Bobble
+    {
+        id: 'bubble-bobble', title: 'Bubble Bobble', year: '1986', genres: ['Platformer', 'Arcade'], director: 'Taito', actors: [], type: 'game',
+        styles: [{ name: 'Cute Arcade', promptString: 'cute colorful arcade, bubble dragons, single-screen levels' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'pastel arcade',
+            characters: [
+                {
+                    name: 'Bub', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 2, description: 'green bubble dragon' },
+                        { action: 'walk', frames: 4, description: 'waddling' },
+                        { action: 'blow_bubble', frames: 3, description: 'blowing bubble' },
+                        { action: 'pop', frames: 2, description: 'popping trapped enemy' }
+                    ]
+                },
+                {
+                    name: 'Bob', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 2, description: 'blue bubble dragon' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Platforms', type: 'platform', variants: 6, description: 'colorful solid platforms' }],
+            items: [
+                { name: 'Bubble', category: 'weapon', animated: true, frames: 4, description: 'trapping bubble' },
+                { name: 'Fruit', category: 'collectible', animated: false, frames: 1, description: 'bonus fruits' }
+            ],
+            ui: [{ name: 'Score', description: 'points' }]
+        }
+    },
+
+    // Bomberman
+    {
+        id: 'bomberman', title: 'Bomberman', year: '1983', genres: ['Maze', 'Action'], director: 'Hudson', actors: [], type: 'game',
+        styles: [{ name: 'Bomb Maze', promptString: 'top-down maze, cute bomber, explosions, destructible walls' }],
+        gameAssets: {
+            perspective: 'top-down', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'NES palette',
+            characters: [
+                {
+                    name: 'Bomberman', role: 'player', directions: 4, actions: [
+                        { action: 'idle', frames: 1, description: 'white bomber with antenna' },
+                        { action: 'walk', frames: 4, description: 'walking in maze' },
+                        { action: 'place_bomb', frames: 2, description: 'placing bomb' },
+                        { action: 'death', frames: 4, description: 'caught in explosion' }
+                    ]
+                }
+            ],
+            tilesets: [
+                { name: 'Hard Block', type: 'wall', variants: 1, description: 'indestructible wall' },
+                { name: 'Soft Block', type: 'wall', variants: 1, description: 'destructible brick' },
+                { name: 'Floor', type: 'floor', variants: 2, description: 'walkable ground' }
+            ],
+            items: [
+                { name: 'Bomb', category: 'weapon', animated: true, frames: 4, description: 'ticking bomb' },
+                { name: 'Fire Powerup', category: 'powerup', animated: true, frames: 2, description: 'bigger explosions' },
+                { name: 'Bomb Powerup', category: 'powerup', animated: true, frames: 2, description: 'more bombs' }
+            ],
+            effects: [{ name: 'Explosion', frames: 6, description: 'cross-shaped explosion' }],
+            ui: [{ name: 'Timer', description: 'countdown' }]
+        }
+    },
+
+    // Double Dragon
+    {
+        id: 'double-dragon', title: 'Double Dragon', year: '1987', genres: ['Beat em Up', 'Arcade'], director: 'Technos', actors: [], type: 'game',
+        styles: [{ name: 'Beat em Up', promptString: 'side-scrolling brawler, urban streets, martial arts' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '8-bit', resolution: '32x32', colorPalette: 'NES palette',
+            characters: [
+                {
+                    name: 'Billy Lee', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 2, description: 'martial artist, blue outfit' },
+                        { action: 'walk', frames: 4, description: 'walking forward' },
+                        { action: 'punch', frames: 3, description: 'punching' },
+                        { action: 'kick', frames: 3, description: 'roundhouse kick' },
+                        { action: 'jump_kick', frames: 4, description: 'flying kick' },
+                        { action: 'elbow', frames: 3, description: 'back elbow' }
+                    ]
+                },
+                {
+                    name: 'Williams', role: 'enemy', directions: 2, actions: [
+                        { action: 'idle', frames: 2, description: 'punk gang member' },
+                        { action: 'punch', frames: 3, description: 'attacking' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'City Street', type: 'floor', variants: 6, description: 'urban environment' }],
+            items: [
+                { name: 'Bat', category: 'weapon', animated: false, frames: 1, description: 'baseball bat weapon' },
+                { name: 'Whip', category: 'weapon', animated: false, frames: 1, description: 'enemy whip' }
+            ],
+            ui: [{ name: 'Health Bar', description: 'player health' }]
+        }
+    },
+
+    // Golden Axe
+    {
+        id: 'golden-axe', title: 'Golden Axe', year: '1989', genres: ['Beat em Up', 'Fantasy'], director: 'Sega', actors: [], type: 'game',
+        styles: [{ name: 'Fantasy Brawler', promptString: '16-bit fantasy beat em up, barbarians, magic' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '16-bit', resolution: '32x32', colorPalette: 'Genesis palette',
+            characters: [
+                {
+                    name: 'Ax Battler', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 4, description: 'barbarian with sword' },
+                        { action: 'walk', frames: 6, description: 'walking' },
+                        { action: 'attack', frames: 4, description: 'sword swing' },
+                        { action: 'magic', frames: 6, description: 'casting earth magic' },
+                        { action: 'mount', frames: 4, description: 'riding dragon' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Fantasy Ground', type: 'floor', variants: 8, description: 'medieval fantasy terrain' }],
+            items: [
+                { name: 'Magic Pot', category: 'collectible', animated: true, frames: 2, description: 'blue magic potion' },
+                { name: 'Meat', category: 'consumable', animated: false, frames: 1, description: 'health meat' }
+            ],
+            ui: [{ name: 'Health Bar', description: 'life gauge' }]
+        }
+    },
+
+    // R-Type
+    {
+        id: 'r-type', title: 'R-Type', year: '1987', genres: ['Shmup', 'Arcade'], director: 'Irem', actors: [], type: 'game',
+        styles: [{ name: 'Horizontal Shmup', promptString: 'horizontal shooter, biomechanical aliens, detailed sprites' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '16-bit', resolution: '32x32', colorPalette: 'arcade',
+            characters: [
+                {
+                    name: 'R-9', role: 'player', directions: 1, actions: [
+                        { action: 'idle', frames: 1, description: 'sleek fighter spacecraft' },
+                        { action: 'charge', frames: 4, description: 'charging wave cannon' },
+                        { action: 'fire', frames: 2, description: 'releasing charged shot' }
+                    ]
+                },
+                {
+                    name: 'Force Pod', role: 'player', directions: 1, actions: [
+                        { action: 'orbit', frames: 4, description: 'indestructible helper pod' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Bydo Base', type: 'wall', variants: 8, description: 'organic alien walls' }],
+            items: [{ name: 'Powerup', category: 'powerup', animated: true, frames: 4, description: 'weapon upgrade orbs' }],
+            effects: [{ name: 'Beam', frames: 4, description: 'wave cannon blast' }],
+            ui: [{ name: 'Score', description: 'points' }]
+        }
+    },
+
+    // Gradius
+    {
+        id: 'gradius', title: 'Gradius', year: '1985', genres: ['Shmup', 'Arcade'], director: 'Konami', actors: [], type: 'game',
+        styles: [{ name: 'Classic Shmup', promptString: 'horizontal shooter, powerup bar, Moai heads' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'NES palette',
+            characters: [
+                {
+                    name: 'Vic Viper', role: 'player', directions: 1, actions: [
+                        { action: 'idle', frames: 1, description: 'blue starfighter' },
+                        { action: 'shoot', frames: 2, description: 'firing lasers' }
+                    ]
+                },
+                {
+                    name: 'Option', role: 'player', directions: 1, actions: [
+                        { action: 'follow', frames: 2, description: 'orange helper orb' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Volcano', type: 'wall', variants: 6, description: 'volcanic terrain' }],
+            items: [{ name: 'Capsule', category: 'powerup', animated: true, frames: 2, description: 'red powerup capsule' }],
+            ui: [{ name: 'Powerup Bar', description: 'SPEED MISSILE DOUBLE LASER OPTION ?' }]
+        }
+    },
+
+    // Gauntlet
+    {
+        id: 'gauntlet', title: 'Gauntlet', year: '1985', genres: ['Dungeon Crawler', 'Arcade'], director: 'Atari', actors: [], type: 'game',
+        styles: [{ name: 'Dungeon Arcade', promptString: 'top-down dungeon crawler, four player, monster hordes' }],
+        gameAssets: {
+            perspective: 'top-down', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'arcade',
+            characters: [
+                {
+                    name: 'Warrior', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 2, description: 'red armored warrior' },
+                        { action: 'walk', frames: 4, description: 'walking' },
+                        { action: 'attack', frames: 3, description: 'sword swing' }
+                    ]
+                },
+                {
+                    name: 'Elf', role: 'player', directions: 8, actions: [
+                        { action: 'idle', frames: 2, description: 'green archer' },
+                        { action: 'shoot', frames: 3, description: 'firing arrows' }
+                    ]
+                },
+                {
+                    name: 'Ghost', role: 'enemy', directions: 4, actions: [
+                        { action: 'float', frames: 4, description: 'ghostly enemy' }
+                    ]
+                }
+            ],
+            tilesets: [
+                { name: 'Dungeon Floor', type: 'floor', variants: 4, description: 'stone dungeon' },
+                { name: 'Walls', type: 'wall', variants: 4, description: 'dungeon walls' }
+            ],
+            items: [
+                { name: 'Food', category: 'consumable', animated: false, frames: 1, description: 'health food' },
+                { name: 'Key', category: 'collectible', animated: true, frames: 2, description: 'door key' }
+            ],
+            ui: [{ name: 'Health Counter', description: 'health as number' }]
+        }
+    },
+
+    // Ghosts 'n Goblins
+    {
+        id: 'ghosts-n-goblins', title: "Ghosts 'n Goblins", year: '1985', genres: ['Platformer', 'Action'], director: 'Capcom', actors: [], type: 'game',
+        styles: [{ name: 'Hard Platformer', promptString: '8-bit gothic horror, knight vs monsters, notoriously difficult' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'NES palette',
+            characters: [
+                {
+                    name: 'Arthur', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 1, description: 'knight in silver armor' },
+                        { action: 'walk', frames: 4, description: 'marching' },
+                        { action: 'jump', frames: 1, description: 'jumping' },
+                        { action: 'throw', frames: 2, description: 'throwing lance' },
+                        { action: 'underwear', frames: 4, description: 'running in boxers after hit' },
+                        { action: 'death', frames: 4, description: 'skeleton collapse' }
+                    ]
+                },
+                {
+                    name: 'Zombie', role: 'enemy', directions: 2, actions: [
+                        { action: 'rise', frames: 4, description: 'emerging from ground' },
+                        { action: 'walk', frames: 4, description: 'shambling' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Graveyard', type: 'floor', variants: 6, description: 'haunted graveyard tiles' }],
+            items: [
+                { name: 'Lance', category: 'weapon', animated: false, frames: 1, description: 'throwing lance' },
+                { name: 'Torch', category: 'weapon', animated: true, frames: 2, description: 'fire weapon' }
+            ],
+            ui: [{ name: 'Timer', description: 'countdown timer' }]
+        }
+    },
+
+    // Punch-Out!!
+    {
+        id: 'punch-out', title: 'Punch-Out!!', year: '1987', genres: ['Sports', 'Boxing'], director: 'Nintendo', actors: [], type: 'game',
+        styles: [{ name: 'Boxing Arcade', promptString: 'behind-boxer view, pattern-based boxing, colorful opponents' }],
+        gameAssets: {
+            perspective: 'first-person', graphicsStyle: '8-bit', resolution: '32x32', colorPalette: 'NES palette',
+            characters: [
+                {
+                    name: 'Little Mac', role: 'player', directions: 1, actions: [
+                        { action: 'idle', frames: 2, description: 'small boxer from behind' },
+                        { action: 'left_jab', frames: 3, description: 'left punch' },
+                        { action: 'right_jab', frames: 3, description: 'right punch' },
+                        { action: 'body_blow', frames: 3, description: 'low punch' },
+                        { action: 'star_punch', frames: 6, description: 'powerful uppercut' },
+                        { action: 'dodge_left', frames: 2, description: 'dodging left' },
+                        { action: 'dodge_right', frames: 2, description: 'dodging right' },
+                        { action: 'block', frames: 1, description: 'blocking' }
+                    ]
+                },
+                {
+                    name: 'Glass Joe', role: 'enemy', directions: 1, actions: [
+                        { action: 'idle', frames: 4, description: 'French boxer facing player' },
+                        { action: 'wind_up', frames: 4, description: 'telegraphing punch' },
+                        { action: 'punch', frames: 4, description: 'throwing punch' },
+                        { action: 'stunned', frames: 4, description: 'seeing stars' },
+                        { action: 'knockdown', frames: 6, description: 'falling to canvas' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Boxing Ring', type: 'background', variants: 1, description: 'ring ropes, crowd' }],
+            items: [],
+            effects: [{ name: 'Star', frames: 4, description: 'earned star power' }],
+            ui: [{ name: 'Hearts', description: 'stamina hearts' }]
+        }
+    },
+
+    // Metroid
+    {
+        id: 'metroid', title: 'Metroid', year: '1986', genres: ['Metroidvania', 'Action'], director: 'Nintendo', actors: [], type: 'game',
+        styles: [{ name: 'NES Sci-Fi', promptString: '8-bit sci-fi exploration, alien planet, power suit' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'NES palette',
+            characters: [
+                {
+                    name: 'Samus', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 1, description: 'orange power suit, arm cannon' },
+                        { action: 'walk', frames: 4, description: 'walking' },
+                        { action: 'jump', frames: 1, description: 'spin jump' },
+                        { action: 'morph_ball', frames: 2, description: 'curled into ball' },
+                        { action: 'shoot', frames: 2, description: 'firing arm cannon' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Zebes', type: 'floor', variants: 8, description: 'alien planet tiles' }],
+            items: [{ name: 'Missile', category: 'weapon', animated: true, frames: 2, description: 'missile pickup' }],
+            ui: [{ name: 'Energy', description: 'health tanks' }]
+        }
+    },
+
+    // Kid Icarus
+    {
+        id: 'kid-icarus', title: 'Kid Icarus', year: '1986', genres: ['Platformer', 'Action'], director: 'Nintendo', actors: [], type: 'game',
+        styles: [{ name: 'NES Mythology', promptString: '8-bit Greek mythology, angelic hero, vertical scrolling' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'NES palette',
+            characters: [
+                {
+                    name: 'Pit', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 1, description: 'angel boy with bow' },
+                        { action: 'walk', frames: 4, description: 'walking' },
+                        { action: 'jump', frames: 1, description: 'jumping with wings' },
+                        { action: 'shoot', frames: 2, description: 'firing arrows' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Underworld', type: 'floor', variants: 6, description: 'Greek temple blocks' }],
+            items: [{ name: 'Heart', category: 'collectible', animated: true, frames: 2, description: 'currency hearts' }],
+            ui: [{ name: 'Health', description: 'life bar' }]
+        }
+    },
+
+    // Ninja Gaiden
+    {
+        id: 'ninja-gaiden', title: 'Ninja Gaiden', year: '1988', genres: ['Action', 'Platformer'], director: 'Tecmo', actors: [], type: 'game',
+        styles: [{ name: 'NES Ninja', promptString: '8-bit ninja action, cinematic cutscenes, fast paced' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'NES palette',
+            characters: [
+                {
+                    name: 'Ryu Hayabusa', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 1, description: 'blue ninja' },
+                        { action: 'run', frames: 4, description: 'running fast' },
+                        { action: 'jump', frames: 1, description: 'flip jump' },
+                        { action: 'wall_cling', frames: 1, description: 'clinging to wall' },
+                        { action: 'slash', frames: 3, description: 'sword slash' },
+                        { action: 'throw', frames: 2, description: 'throwing shuriken' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'City', type: 'floor', variants: 6, description: 'urban ninja environment' }],
+            items: [{ name: 'Ninpo', category: 'weapon', animated: true, frames: 2, description: 'ninja magic' }],
+            ui: [{ name: 'Timer', description: 'stage timer' }]
+        }
+    },
+
+    // Battletoads
+    {
+        id: 'battletoads', title: 'Battletoads', year: '1991', genres: ['Beat em Up', 'Action'], director: 'Rare', actors: [], type: 'game',
+        styles: [{ name: 'Rare NES', promptString: '8-bit extreme action, muscular toads, varied gameplay' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '8-bit', resolution: '24x24', colorPalette: 'NES palette',
+            characters: [
+                {
+                    name: 'Rash', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 2, description: 'green muscular toad' },
+                        { action: 'walk', frames: 4, description: 'walking' },
+                        { action: 'punch', frames: 3, description: 'giant fist attack' },
+                        { action: 'kick', frames: 3, description: 'big boot attack' },
+                        { action: 'headbutt', frames: 4, description: 'ram horns headbutt' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Ragnarok', type: 'floor', variants: 6, description: 'spaceship interior' }],
+            items: [],
+            ui: [{ name: 'Health', description: 'toad icons' }]
+        }
+    },
+
+    // Earthworm Jim
+    {
+        id: 'earthworm-jim', title: 'Earthworm Jim', year: '1994', genres: ['Platformer', 'Action'], director: 'Shiny', actors: [], type: 'game',
+        styles: [{ name: 'Genesis Cartoon', promptString: '16-bit cartoon animation, bizarre humor, fluid sprites' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '16-bit', resolution: '48x48', colorPalette: 'Genesis palette',
+            characters: [
+                {
+                    name: 'Jim', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 6, description: 'worm in super suit, breathing' },
+                        { action: 'walk', frames: 8, description: 'walking animation' },
+                        { action: 'run', frames: 6, description: 'running' },
+                        { action: 'jump', frames: 4, description: 'jumping' },
+                        { action: 'shoot', frames: 4, description: 'plasma gun fire' },
+                        { action: 'whip', frames: 6, description: 'using self as whip' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'New Junk City', type: 'floor', variants: 8, description: 'junkyard level' }],
+            items: [{ name: 'Plasma', category: 'weapon', animated: true, frames: 2, description: 'ammo pickup' }],
+            ui: [{ name: 'Health', description: 'percentage counter' }]
+        }
+    },
+
+    // Shinobi
+    {
+        id: 'shinobi', title: 'Shinobi', year: '1987', genres: ['Action', 'Arcade'], director: 'Sega', actors: [], type: 'game',
+        styles: [{ name: 'Arcade Ninja', promptString: 'arcade ninja action, rescue hostages, throwing stars' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '16-bit', resolution: '32x32', colorPalette: 'arcade',
+            characters: [
+                {
+                    name: 'Joe Musashi', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 2, description: 'white ninja' },
+                        { action: 'walk', frames: 4, description: 'walking' },
+                        { action: 'jump', frames: 1, description: 'jumping' },
+                        { action: 'throw', frames: 3, description: 'throwing shurikens' },
+                        { action: 'kick', frames: 3, description: 'close range kick' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'City', type: 'floor', variants: 6, description: 'urban Japan' }],
+            items: [{ name: 'Hostage', category: 'collectible', animated: true, frames: 2, description: 'rescued hostage' }],
+            ui: [{ name: 'Shurikens', description: 'ammo count' }]
+        }
+    },
+
+    // Altered Beast
+    {
+        id: 'altered-beast', title: 'Altered Beast', year: '1988', genres: ['Beat em Up', 'Action'], director: 'Sega', actors: [], type: 'game',
+        styles: [{ name: 'Genesis Launch', promptString: '16-bit mythology, werewolf transformation, RISE FROM YOUR GRAVE' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '16-bit', resolution: '48x48', colorPalette: 'Genesis palette',
+            characters: [
+                {
+                    name: 'Centurion', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 2, description: 'muscular Roman soldier' },
+                        { action: 'walk', frames: 4, description: 'walking' },
+                        { action: 'punch', frames: 3, description: 'punching' },
+                        { action: 'kick', frames: 3, description: 'kicking' },
+                        { action: 'transform', frames: 8, description: 'becoming werewolf' },
+                        { action: 'wolf_idle', frames: 4, description: 'werewolf form' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Graveyard', type: 'floor', variants: 6, description: 'Greek underworld' }],
+            items: [{ name: 'Spirit Ball', category: 'powerup', animated: true, frames: 4, description: 'blue power orb' }],
+            ui: [{ name: 'Power Level', description: 'transformation meter' }]
+        }
+    },
+
+    // Splatterhouse
+    {
+        id: 'splatterhouse', title: 'Splatterhouse', year: '1988', genres: ['Beat em Up', 'Horror'], director: 'Namco', actors: [], type: 'game',
+        styles: [{ name: 'Horror Brawler', promptString: 'horror beat em up, hockey mask, gore and monsters' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '16-bit', resolution: '48x48', colorPalette: 'dark horror',
+            characters: [
+                {
+                    name: 'Rick', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 2, description: 'Jason-like mask, muscular' },
+                        { action: 'walk', frames: 4, description: 'walking' },
+                        { action: 'punch', frames: 3, description: 'punching' },
+                        { action: 'slide_kick', frames: 4, description: 'sliding kick' },
+                        { action: 'weapon_swing', frames: 4, description: 'swinging 2x4' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Mansion', type: 'floor', variants: 6, description: 'haunted house' }],
+            items: [{ name: '2x4', category: 'weapon', animated: false, frames: 1, description: 'wooden plank' }],
+            effects: [{ name: 'Blood', frames: 4, description: 'blood splatter' }],
+            ui: [{ name: 'Health', description: 'heart icons' }]
+        }
+    },
+
+    // Excitebike
+    {
+        id: 'excitebike', title: 'Excitebike', year: '1984', genres: ['Racing', 'Sports'], director: 'Nintendo', actors: [], type: 'game',
+        styles: [{ name: 'NES Racing', promptString: '8-bit motocross, dirt bikes, track editor' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'NES palette',
+            characters: [
+                {
+                    name: 'Biker', role: 'player', directions: 1, actions: [
+                        { action: 'ride', frames: 2, description: 'riding motorcycle' },
+                        { action: 'wheelie', frames: 2, description: 'front wheel up' },
+                        { action: 'lean_back', frames: 2, description: 'leaning backward' },
+                        { action: 'crash', frames: 4, description: 'falling off bike' }
+                    ]
+                }
+            ],
+            tilesets: [
+                { name: 'Track', type: 'floor', variants: 4, description: 'dirt track' },
+                { name: 'Ramps', type: 'prop', variants: 4, description: 'jump ramps' }
+            ],
+            items: [],
+            ui: [{ name: 'Temp Gauge', description: 'overheating bar' }]
+        }
+    },
+
+    // Ice Climber
+    {
+        id: 'ice-climber', title: 'Ice Climber', year: '1985', genres: ['Platformer', 'Arcade'], director: 'Nintendo', actors: [], type: 'game',
+        styles: [{ name: 'NES Classic', promptString: '8-bit vertical climbing, ice blocks, vegetables' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'NES palette',
+            characters: [
+                {
+                    name: 'Popo', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 1, description: 'blue parka climber' },
+                        { action: 'walk', frames: 4, description: 'walking' },
+                        { action: 'jump', frames: 1, description: 'jumping' },
+                        { action: 'hammer', frames: 3, description: 'swinging hammer upward' }
+                    ]
+                },
+                {
+                    name: 'Nana', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 1, description: 'pink parka climber' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Ice', type: 'floor', variants: 4, description: 'ice blocks' }],
+            items: [{ name: 'Vegetable', category: 'collectible', animated: false, frames: 1, description: 'bonus eggplant' }],
+            ui: [{ name: 'Height', description: 'floor counter' }]
+        }
+    },
+
+    // Balloon Fight
+    {
+        id: 'balloon-fight', title: 'Balloon Fight', year: '1984', genres: ['Arcade', 'Action'], director: 'Nintendo', actors: [], type: 'game',
+        styles: [{ name: 'NES Arcade', promptString: '8-bit balloon popping, Joust-like gameplay' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'NES palette',
+            characters: [
+                {
+                    name: 'Balloon Fighter', role: 'player', directions: 2, actions: [
+                        { action: 'fly', frames: 4, description: 'flapping with two balloons' },
+                        { action: 'one_balloon', frames: 4, description: 'flying with one balloon' },
+                        { action: 'fall', frames: 2, description: 'falling without balloons' }
+                    ]
+                },
+                {
+                    name: 'Balloon Bird', role: 'enemy', directions: 2, actions: [
+                        { action: 'fly', frames: 4, description: 'enemy with balloons' },
+                        { action: 'parachute', frames: 2, description: 'falling after pop' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Platforms', type: 'platform', variants: 4, description: 'floating platforms' }],
+            items: [],
+            ui: [{ name: 'Lives', description: 'remaining lives' }]
+        }
+    },
+
+    // Lode Runner
+    {
+        id: 'lode-runner', title: 'Lode Runner', year: '1983', genres: ['Puzzle', 'Platformer'], director: 'Broderbund', actors: [], type: 'game',
+        styles: [{ name: 'Puzzle Platformer', promptString: 'climbing ladders, digging holes, collecting gold' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'retro',
+            characters: [
+                {
+                    name: 'Runner', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 1, description: 'gold collector' },
+                        { action: 'run', frames: 4, description: 'running' },
+                        { action: 'climb', frames: 4, description: 'climbing ladder' },
+                        { action: 'hang', frames: 2, description: 'hanging on bar' },
+                        { action: 'dig', frames: 4, description: 'digging hole' }
+                    ]
+                },
+                {
+                    name: 'Guard', role: 'enemy', directions: 2, actions: [
+                        { action: 'chase', frames: 4, description: 'chasing player' }
+                    ]
+                }
+            ],
+            tilesets: [
+                { name: 'Brick', type: 'floor', variants: 4, description: 'diggable bricks' },
+                { name: 'Ladder', type: 'prop', variants: 2, description: 'climbable ladder' }
+            ],
+            items: [{ name: 'Gold', category: 'collectible', animated: true, frames: 2, description: 'gold bar' }],
+            ui: [{ name: 'Level', description: 'level number' }]
+        }
+    },
+
+    // Adventure Island
+    {
+        id: 'adventure-island', title: 'Adventure Island', year: '1986', genres: ['Platformer', 'Action'], director: 'Hudson', actors: [], type: 'game',
+        styles: [{ name: 'Tropical Platformer', promptString: '8-bit tropical island, caveman hero, skateboard' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'NES palette',
+            characters: [
+                {
+                    name: 'Master Higgins', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 2, description: 'grass skirt caveman' },
+                        { action: 'run', frames: 4, description: 'running' },
+                        { action: 'jump', frames: 1, description: 'jumping' },
+                        { action: 'throw', frames: 2, description: 'throwing axe' },
+                        { action: 'skateboard', frames: 2, description: 'riding skateboard' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Island', type: 'floor', variants: 6, description: 'tropical island tiles' }],
+            items: [
+                { name: 'Fruit', category: 'consumable', animated: false, frames: 1, description: 'energy fruit' },
+                { name: 'Stone Axe', category: 'weapon', animated: false, frames: 1, description: 'throwing weapon' }
+            ],
+            ui: [{ name: 'Vitality', description: 'draining energy bar' }]
+        }
+    },
+
+    // Wonder Boy
+    {
+        id: 'wonder-boy', title: 'Wonder Boy', year: '1986', genres: ['Platformer', 'Action'], director: 'Sega', actors: [], type: 'game',
+        styles: [{ name: 'Sega Platformer', promptString: '8-bit action platformer, skateboard, similar to Adventure Island' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'Master System',
+            characters: [
+                {
+                    name: 'Tom-Tom', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 2, description: 'blonde boy' },
+                        { action: 'run', frames: 4, description: 'running' },
+                        { action: 'jump', frames: 1, description: 'jumping' },
+                        { action: 'throw', frames: 2, description: 'throwing hammer' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Forest', type: 'floor', variants: 6, description: 'forest tiles' }],
+            items: [{ name: 'Fruit', category: 'consumable', animated: false, frames: 1, description: 'health fruit' }],
+            ui: [{ name: 'Vitality', description: 'energy gauge' }]
+        }
+    },
+
+    // Alex Kidd
+    {
+        id: 'alex-kidd', title: 'Alex Kidd in Miracle World', year: '1986', genres: ['Platformer', 'Action'], director: 'Sega', actors: [], type: 'game',
+        styles: [{ name: 'Master System', promptString: 'Sega 8-bit, big-eared hero, rock paper scissors' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'Master System',
+            characters: [
+                {
+                    name: 'Alex Kidd', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 2, description: 'big ears, red outfit' },
+                        { action: 'walk', frames: 4, description: 'walking' },
+                        { action: 'jump', frames: 1, description: 'jumping' },
+                        { action: 'punch', frames: 3, description: 'big punch attack' },
+                        { action: 'swim', frames: 4, description: 'swimming' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Radaxian', type: 'floor', variants: 8, description: 'kingdom tiles' }],
+            items: [{ name: 'Rice Ball', category: 'consumable', animated: false, frames: 1, description: 'health item' }],
+            ui: [{ name: 'Money', description: 'currency counter' }]
+        }
+    },
+
+    // Kirby's Dream Land
+    {
+        id: 'kirby', title: "Kirby's Dream Land", year: '1992', genres: ['Platformer', 'Action'], director: 'HAL', actors: [], type: 'game',
+        styles: [{ name: 'Game Boy Cute', promptString: 'Game Boy, cute pink puffball, inhaling enemies' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'Game Boy',
+            characters: [
+                {
+                    name: 'Kirby', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 2, description: 'pink round puffball' },
+                        { action: 'walk', frames: 4, description: 'walking' },
+                        { action: 'jump', frames: 1, description: 'jumping' },
+                        { action: 'inhale', frames: 4, description: 'sucking in air' },
+                        { action: 'fly', frames: 4, description: 'puffed up flying' },
+                        { action: 'spit', frames: 3, description: 'spitting star attack' }
+                    ]
+                },
+                {
+                    name: 'King Dedede', role: 'boss', directions: 2, actions: [
+                        { action: 'idle', frames: 4, description: 'penguin king with hammer' },
+                        { action: 'swing', frames: 6, description: 'hammer swing' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Dream Land', type: 'floor', variants: 6, description: 'fluffy cloud world' }],
+            items: [{ name: 'Maxim Tomato', category: 'consumable', animated: false, frames: 1, description: 'full heal' }],
+            ui: [{ name: 'Health', description: 'health bars' }]
+        }
+    },
+
+    // Wario Land
+    {
+        id: 'wario-land', title: 'Wario Land', year: '1994', genres: ['Platformer', 'Action'], director: 'Nintendo', actors: [], type: 'game',
+        styles: [{ name: 'Game Boy Greed', promptString: 'Game Boy, greedy anti-hero, treasure hunting' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '8-bit', resolution: '16x16', colorPalette: 'Game Boy',
+            characters: [
+                {
+                    name: 'Wario', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 2, description: 'yellow outfit, pointy mustache' },
+                        { action: 'walk', frames: 4, description: 'walking' },
+                        { action: 'run', frames: 4, description: 'running' },
+                        { action: 'shoulder_bash', frames: 4, description: 'charging attack' },
+                        { action: 'ground_pound', frames: 4, description: 'butt stomp' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Kitchen Island', type: 'floor', variants: 6, description: 'pirate treasure levels' }],
+            items: [{ name: 'Coin', category: 'collectible', animated: true, frames: 4, description: 'gold coin' }],
+            ui: [{ name: 'Hearts', description: 'health hearts' }]
+        }
+    },
+
+    // Donkey Kong Country
+    {
+        id: 'dkc', title: 'Donkey Kong Country', year: '1994', genres: ['Platformer', 'Action'], director: 'Rare', actors: [], type: 'game',
+        styles: [{ name: 'Pre-rendered 3D', promptString: 'SNES pre-rendered 3D, jungle adventure, smooth animations' }],
+        gameAssets: {
+            perspective: 'side-scroller', graphicsStyle: '16-bit', resolution: '48x48', colorPalette: 'SNES ACM',
+            characters: [
+                {
+                    name: 'Donkey Kong', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 4, description: 'big gorilla, red tie' },
+                        { action: 'walk', frames: 6, description: 'walking' },
+                        { action: 'run', frames: 4, description: 'running' },
+                        { action: 'roll', frames: 6, description: 'rolling attack' },
+                        { action: 'ground_slap', frames: 4, description: 'slapping ground' }
+                    ]
+                },
+                {
+                    name: 'Diddy Kong', role: 'player', directions: 2, actions: [
+                        { action: 'idle', frames: 4, description: 'small chimp, red cap' },
+                        { action: 'cartwheel', frames: 6, description: 'cartwheel attack' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Jungle', type: 'floor', variants: 8, description: 'lush jungle tiles' }],
+            items: [
+                { name: 'Banana', category: 'collectible', animated: false, frames: 1, description: 'banana pickup' },
+                { name: 'KONG Letter', category: 'collectible', animated: true, frames: 2, description: 'K-O-N-G letters' }
+            ],
+            ui: [{ name: 'Lives', description: 'balloon lives' }]
+        }
+    },
+
+    // Earthbound
+    {
+        id: 'earthbound', title: 'EarthBound', year: '1994', genres: ['JRPG', 'Comedy'], director: 'Nintendo', actors: [], type: 'game',
+        styles: [{ name: 'Quirky RPG', promptString: '16-bit modern day RPG, psychic powers, bizarre humor' }],
+        gameAssets: {
+            perspective: 'top-down', graphicsStyle: '16-bit', resolution: '24x24', colorPalette: 'SNES palette',
+            characters: [
+                {
+                    name: 'Ness', role: 'player', directions: 4, actions: [
+                        { action: 'idle', frames: 2, description: 'boy with baseball cap' },
+                        { action: 'walk', frames: 4, description: 'walking' },
+                        { action: 'bat_swing', frames: 4, description: 'baseball bat attack' },
+                        { action: 'psi', frames: 4, description: 'psychic attack' }
+                    ]
+                }
+            ],
+            tilesets: [{ name: 'Onett', type: 'floor', variants: 8, description: 'suburban town' }],
+            items: [{ name: 'Hamburger', category: 'consumable', animated: false, frames: 1, description: 'health food' }],
+            ui: [{ name: 'HP Roller', description: 'rolling HP counter' }]
+        }
     }
 ];

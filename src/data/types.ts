@@ -28,6 +28,7 @@ export type GamePerspective =
     | 'isometric'          // Diablo, SimCity - 3/4 angled view
     | '3/4-view'           // RPG Maker style - slightly angled overhead
     | 'first-person'       // Doom, Wolfenstein - player view (enemies face camera)
+    | 'third-person'       // Tony Hawk, action games - behind player
     | 'fighting'           // Street Fighter - side view with facing opponent
     | 'racing-overhead'    // Micro Machines - top-down vehicle view
     | 'racing-behind';     // OutRun - third-person behind vehicle
