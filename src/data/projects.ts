@@ -171,8 +171,19 @@ export const deployedApps: StudioProject[] = [
         color: 'text-lime-400',
         visibility: 'Public',
         status: 'deployed'
+    },
+    {
+        id: 'lane-shark',
+        title: 'LaneShark',
+        description: 'A thrilling underwater bowling experience.',
+        url: 'https://srephoto.github.io/LaneShark/',
+        icon: 'Waves',
+        color: 'text-cyan-400',
+        visibility: 'Public',
+        status: 'deployed'
     }
 ];
+
 
 // SECTION 2: GitHub Repos (Source code - click to view on GitHub)
 export const repoApps: StudioProject[] = [
@@ -201,17 +212,8 @@ export const repoApps: StudioProject[] = [
 // SECTION 3: Local Only (In development)
 export const localApps: StudioProject[] = [
     {
-        id: 'mad-men-stylist',
-        title: 'Mad Men Stylist',
-        description: 'Vintage fashion & scene creator.',
-        url: '',
-        icon: 'Shirt',
-        color: 'text-amber-500',
-        visibility: 'Private',
-        status: 'local'
-    },
-    {
         id: 'ocr-app',
+
         title: 'OCR App',
         description: 'Optical Character Recognition scanner.',
         url: '',
