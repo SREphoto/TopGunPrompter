@@ -43,16 +43,6 @@ export const deployedApps: StudioProject[] = [
         status: 'deployed'
     },
     {
-        id: 'word-music',
-        title: 'Word Music Game',
-        description: 'Rhythm based word challenge (Now Fixed).',
-        url: 'https://srephoto.github.io/Word-Music-Game/',
-        icon: 'Music',
-        color: 'text-yellow-400',
-        visibility: 'Public',
-        status: 'deployed'
-    },
-    {
         id: 'home-planner',
         title: 'Home Planner',
         description: 'AI-assisted interior design planning.',
