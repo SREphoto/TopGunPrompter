@@ -13,6 +13,16 @@ export interface StudioProject {
 // SECTION 1: Deployed & Working Apps (GitHub Pages)
 export const deployedApps: StudioProject[] = [
     {
+        id: 'launchpad',
+        title: 'Deployment Launchpad',
+        description: 'Interactive AI-guided app deployment tool.',
+        url: 'https://srephoto.github.io/Interactive-App-Deployment-Launchpad-/',
+        icon: 'Rocket',
+        color: 'text-orange-500',
+        visibility: 'Public',
+        status: 'deployed'
+    },
+    {
         id: 'top-gun-prompter',
         title: 'Top Gun Prompter',
         description: 'V7 Master Prompt Engine for Midjourney.',
