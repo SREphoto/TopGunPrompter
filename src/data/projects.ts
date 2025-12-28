@@ -16,7 +16,7 @@ export const deployedApps: StudioProject[] = [
         id: 'launchpad',
         title: 'Deployment Launchpad',
         description: 'Interactive AI-guided app deployment tool.',
-        url: 'https://srephoto.github.io/Interactive-App-Deployment-Launchpad-/',
+        url: 'https://interactive-app-deployment-launchpad-zdgy.onrender.com/',
         icon: 'Rocket',
         color: 'text-orange-500',
         visibility: 'Public',
@@ -143,10 +143,10 @@ export const deployedApps: StudioProject[] = [
         status: 'deployed'
     },
     {
-        id: 'wellnest',
-        title: 'WellNest',
+        id: 'b2gthr',
+        title: 'B2GTHR',
         description: 'Wellness and health tracking platform.',
-        url: 'https://srephoto.github.io/WellNest/',
+        url: 'https://b2gthr.web.app/',
         icon: 'Heart',
         color: 'text-rose-400',
         visibility: 'Public',

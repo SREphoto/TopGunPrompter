@@ -1283,31 +1283,57 @@ function App() {
                 <h3 className="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-3 flex items-center gap-2">
                   <CheckCircle className="w-4 h-4" /> Live Apps ({deployedApps.length})
                 </h3>
-                <div className="space-y-3">
+                <div className="grid grid-cols-1 gap-3">
                   {deployedApps.map((project) => {
                     const IconComponent = {
                       Film, Palette, Shirt, Sword, Car, Rocket, Flame,
                       Gamepad2, Aperture, Map, Music, Heart, Zap, Waves, BarChart3,
                       Skull, Coins, MessageCircle, Video, Citrus
                     }[project.icon] || Grid;
+
+                    // Determine background image style based on project ID
+                    // Using a gradient overlay on top of an image if available, or just a cool gradient
+                    const bgStyle = project.id === 'b2gthr'
+                      ? { backgroundImage: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url(https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1000&auto=format&fit=crop)' }
+                      : { backgroundImage: 'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9))' };
+
                     return (
                       <a
                         key={project.id}
                         href={project.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group block p-4 bg-emerald-950/30 border border-emerald-700/30 rounded-xl hover:bg-emerald-900/40 hover:border-emerald-500/50 transition-all duration-300"
+                        className="group relative block p-4 rounded-xl transition-all duration-300 hover:scale-105 hover:z-10 overflow-hidden border border-zinc-800 hover:border-emerald-500/50 hover:shadow-xl hover:shadow-emerald-500/10"
+                        style={{
+                          ...bgStyle,
+                          backgroundSize: 'cover',
+                          backgroundPosition: 'center'
+                        }}
                       >
-                        <div className="flex items-start gap-4">
-                          <div className={`p-3 bg-zinc-950 rounded-lg group-hover:scale-110 transition-transform duration-300 ${project.color}`}>
-                            <IconComponent className="w-6 h-6" />
+                        {/* Hover info expansion - implicit by the scale and height adjustment if we want, 
+                             or strictly following "expand on mouse over to give more information" 
+                             we can use a max-height transition */}
+                        <div className="relative z-10 flex items-start gap-4">
+                          {/* Icon - Transparent background now */}
+                          <div className={`p-2 rounded-lg transition-transform duration-300 group-hover:scale-110 shrink-0 ${project.color.replace('text-', 'bg-').replace('400', '500/20').replace('500', '500/20')} backdrop-blur-sm`}>
+                            <IconComponent className={`w-8 h-8 ${project.color}`} />
                           </div>
-                          <div className="flex-1">
+
+                          <div className="flex-1 min-w-0">
                             <div className="flex items-center justify-between">
-                              <h3 className="font-bold text-zinc-100 group-hover:text-emerald-400 transition-colors">{project.title}</h3>
-                              <ExternalLink className="w-3 h-3 text-emerald-600 group-hover:text-emerald-400" />
+                              <h3 className="font-bold text-zinc-100 group-hover:text-emerald-400 transition-colors text-lg truncate">{project.title}</h3>
+                              <ExternalLink className="w-4 h-4 text-zinc-600 group-hover:text-emerald-400 transition-colors opacity-0 group-hover:opacity-100" />
                             </div>
-                            <p className="text-xs text-zinc-500 mt-1 leading-relaxed">{project.description}</p>
+
+                            {/* Description - Expanded view */}
+                            <p className="text-xs text-zinc-400 mt-1 leading-relaxed line-clamp-2 group-hover:line-clamp-none group-hover:text-zinc-200 transition-all">
+                              {project.description}
+                            </p>
+
+                            {/* URL hint on hover */}
+                            <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-1 text-[10px] text-emerald-500 font-mono overflow-hidden">
+                              <span className="truncate">{project.url.replace('https://', '')}</span>
+                            </div>
                           </div>
                         </div>
                       </a>
@@ -1321,31 +1347,37 @@ function App() {
                 <h3 className="text-xs font-bold text-blue-400 uppercase tracking-wider mb-3 flex items-center gap-2">
                   <Terminal className="w-4 h-4" /> GitHub Repos ({repoApps.length})
                 </h3>
-                <div className="space-y-3">
+                <div className="grid grid-cols-1 gap-3">
                   {repoApps.map((project) => {
                     const IconComponent = {
                       Film, Palette, Shirt, Sword, Car, Rocket, Flame,
                       Gamepad2, Aperture, Map, Music, Heart, Zap, Waves, BarChart3,
                       Skull, Coins, MessageCircle, Video, Citrus
                     }[project.icon] || Grid;
+
                     return (
                       <a
                         key={project.id}
                         href={project.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group block p-4 bg-blue-950/30 border border-blue-700/30 rounded-xl hover:bg-blue-900/40 hover:border-blue-500/50 transition-all duration-300"
+                        className="group relative block p-4 rounded-xl transition-all duration-300 hover:scale-105 hover:z-10 overflow-hidden border border-zinc-800 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10 bg-zinc-900/80"
                       >
-                        <div className="flex items-start gap-4">
-                          <div className={`p-3 bg-zinc-950 rounded-lg group-hover:scale-110 transition-transform duration-300 ${project.color}`}>
-                            <IconComponent className="w-6 h-6" />
+                        <div className="relative z-10 flex items-start gap-4">
+                          {/* Icon - Transparent background */}
+                          <div className={`p-2 rounded-lg transition-transform duration-300 group-hover:scale-110 shrink-0 ${project.color.replace('text-', 'bg-').replace('400', '500/20').replace('500', '500/20')} backdrop-blur-sm`}>
+                            <IconComponent className={`w-8 h-8 ${project.color}`} />
                           </div>
-                          <div className="flex-1">
+
+                          <div className="flex-1 min-w-0">
                             <div className="flex items-center justify-between">
-                              <h3 className="font-bold text-zinc-100 group-hover:text-blue-400 transition-colors">{project.title}</h3>
-                              <ExternalLink className="w-3 h-3 text-blue-600 group-hover:text-blue-400" />
+                              <h3 className="font-bold text-zinc-100 group-hover:text-blue-400 transition-colors text-lg truncate">{project.title}</h3>
+                              <ExternalLink className="w-4 h-4 text-zinc-600 group-hover:text-blue-400 transition-colors opacity-0 group-hover:opacity-100" />
                             </div>
-                            <p className="text-xs text-zinc-500 mt-1 leading-relaxed">{project.description}</p>
+                            <p className="text-xs text-zinc-400 mt-1 leading-relaxed line-clamp-2 group-hover:line-clamp-none group-hover:text-zinc-200 transition-all">{project.description}</p>
+                            <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-1 text-[10px] text-blue-500 font-mono overflow-hidden">
+                              <span className="truncate">{project.url.replace('https://', '')}</span>
+                            </div>
                           </div>
                         </div>
                       </a>
