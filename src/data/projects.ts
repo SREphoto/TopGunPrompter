@@ -8,6 +8,7 @@ export interface StudioProject {
     color: string;
     visibility: 'Public' | 'Private';
     status: 'deployed' | 'repo' | 'local';
+    backgroundImage?: string;
 }
 
 // SECTION 1: Deployed & Working Apps (GitHub Pages)
@@ -20,7 +21,8 @@ export const deployedApps: StudioProject[] = [
         icon: 'Rocket',
         color: 'text-orange-500',
         visibility: 'Public',
-        status: 'deployed'
+        status: 'deployed',
+        backgroundImage: 'https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=1000'
     },
     {
         id: 'top-gun-prompter',
@@ -30,7 +32,8 @@ export const deployedApps: StudioProject[] = [
         icon: 'Film',
         color: 'text-cyan-400',
         visibility: 'Public',
-        status: 'deployed'
+        status: 'deployed',
+        backgroundImage: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1000'
     },
     {
         id: 'zelda-clone',
@@ -40,7 +43,8 @@ export const deployedApps: StudioProject[] = [
         icon: 'Sword',
         color: 'text-green-500',
         visibility: 'Public',
-        status: 'deployed'
+        status: 'deployed',
+        backgroundImage: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1000'
     },
     {
         id: 'sre-designs',
@@ -50,7 +54,8 @@ export const deployedApps: StudioProject[] = [
         icon: 'Aperture',
         color: 'text-white',
         visibility: 'Public',
-        status: 'deployed'
+        status: 'deployed',
+        backgroundImage: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1000'
     },
     {
         id: 'home-planner',
@@ -60,7 +65,8 @@ export const deployedApps: StudioProject[] = [
         icon: 'Heart',
         color: 'text-orange-400',
         visibility: 'Public',
-        status: 'deployed'
+        status: 'deployed',
+        backgroundImage: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1000'
     },
     {
         id: 'word-slide',
@@ -70,7 +76,8 @@ export const deployedApps: StudioProject[] = [
         icon: 'Gamepad2',
         color: 'text-yellow-500',
         visibility: 'Public',
-        status: 'deployed'
+        status: 'deployed',
+        backgroundImage: 'https://images.unsplash.com/photo-1632516643720-e7f5d7d6ecc9?q=80&w=1000'
     },
     {
         id: 'storyweaver',
@@ -80,7 +87,8 @@ export const deployedApps: StudioProject[] = [
         icon: 'MessageCircle',
         color: 'text-indigo-500',
         visibility: 'Public',
-        status: 'deployed'
+        status: 'deployed',
+        backgroundImage: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1000'
     },
     {
         id: 'dynamic-prob-calc',
@@ -90,7 +98,8 @@ export const deployedApps: StudioProject[] = [
         icon: 'BarChart3',
         color: 'text-blue-400',
         visibility: 'Public',
-        status: 'deployed'
+        status: 'deployed',
+        backgroundImage: 'https://images.unsplash.com/photo-1596495578065-6e0763fa1178?q=80&w=1000'
     },
     {
         id: 'fractalization',
@@ -100,7 +109,8 @@ export const deployedApps: StudioProject[] = [
         icon: 'Aperture',
         color: 'text-purple-400',
         visibility: 'Public',
-        status: 'deployed'
+        status: 'deployed',
+        backgroundImage: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1000'
     },
     {
         id: 'sprite-forge',
@@ -110,7 +120,8 @@ export const deployedApps: StudioProject[] = [
         icon: 'Palette',
         color: 'text-orange-400',
         visibility: 'Public',
-        status: 'deployed'
+        status: 'deployed',
+        backgroundImage: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=1000'
     },
     {
         id: 'diablo-js',
@@ -120,7 +131,8 @@ export const deployedApps: StudioProject[] = [
         icon: 'Flame',
         color: 'text-red-600',
         visibility: 'Public',
-        status: 'deployed'
+        status: 'deployed',
+        backgroundImage: 'https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?q=80&w=1000'
     },
     {
         id: 'pixel-art-pro',
@@ -130,7 +142,8 @@ export const deployedApps: StudioProject[] = [
         icon: 'Aperture',
         color: 'text-cyan-500',
         visibility: 'Public',
-        status: 'deployed'
+        status: 'deployed',
+        backgroundImage: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000'
     },
     {
         id: 'treasure-map',
@@ -140,7 +153,8 @@ export const deployedApps: StudioProject[] = [
         icon: 'Map',
         color: 'text-emerald-500',
         visibility: 'Public',
-        status: 'deployed'
+        status: 'deployed',
+        backgroundImage: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1000'
     },
     {
         id: 'b2gthr',
@@ -150,7 +164,8 @@ export const deployedApps: StudioProject[] = [
         icon: 'Heart',
         color: 'text-rose-400',
         visibility: 'Public',
-        status: 'deployed'
+        status: 'deployed',
+        backgroundImage: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1000&auto=format&fit=crop'
     },
     {
         id: 'iodine-gba',
@@ -160,7 +175,8 @@ export const deployedApps: StudioProject[] = [
         icon: 'Gamepad2',
         color: 'text-fuchsia-500',
         visibility: 'Public',
-        status: 'deployed'
+        status: 'deployed',
+        backgroundImage: 'https://images.unsplash.com/photo-1598550476439-c94841dd0ad3?q=80&w=1000'
     },
     {
         id: 'punchline-master',
@@ -170,7 +186,8 @@ export const deployedApps: StudioProject[] = [
         icon: 'MessageCircle',
         color: 'text-lime-400',
         visibility: 'Public',
-        status: 'deployed'
+        status: 'deployed',
+        backgroundImage: 'https://images.unsplash.com/photo-1525268323814-e87b2f9df8dc?q=80&w=1000'
     },
     {
         id: 'lane-shark',
@@ -180,7 +197,8 @@ export const deployedApps: StudioProject[] = [
         icon: 'Waves',
         color: 'text-cyan-400',
         visibility: 'Public',
-        status: 'deployed'
+        status: 'deployed',
+        backgroundImage: 'https://images.unsplash.com/photo-1538513639417-62091dd7929e?q=80&w=1000'
     }
 ];
 
@@ -195,7 +213,8 @@ export const repoApps: StudioProject[] = [
         icon: 'Car',
         color: 'text-pink-500',
         visibility: 'Public',
-        status: 'repo'
+        status: 'repo',
+        backgroundImage: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1000'
     },
     {
         id: 'vibe-check',
@@ -205,8 +224,9 @@ export const repoApps: StudioProject[] = [
         icon: 'Waves',
         color: 'text-purple-400',
         visibility: 'Public',
-        status: 'repo'
-    }
+        status: 'repo',
+        backgroundImage: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1000'
+    },
 ];
 
 // SECTION 3: Local Only (In development)

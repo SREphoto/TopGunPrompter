@@ -1291,10 +1291,10 @@ function App() {
                       Skull, Coins, MessageCircle, Video, Citrus
                     }[project.icon] || Grid;
 
-                    // Determine background image style based on project ID
+                    // Determine background image style based on project data
                     // Using a gradient overlay on top of an image if available, or just a cool gradient
-                    const bgStyle = project.id === 'b2gthr'
-                      ? { backgroundImage: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url(https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1000&auto=format&fit=crop)' }
+                    const bgStyle = project.backgroundImage
+                      ? { backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url(${project.backgroundImage})` }
                       : { backgroundImage: 'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9))' };
 
                     return (
@@ -1355,6 +1355,11 @@ function App() {
                       Skull, Coins, MessageCircle, Video, Citrus
                     }[project.icon] || Grid;
 
+                    // Determine background image style based on project data
+                    const bgStyle = project.backgroundImage
+                      ? { backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url(${project.backgroundImage})` }
+                      : { backgroundImage: 'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9))' };
+
                     return (
                       <a
                         key={project.id}
@@ -1362,6 +1367,11 @@ function App() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group relative block p-4 rounded-xl transition-all duration-300 hover:scale-105 hover:z-10 overflow-hidden border border-zinc-800 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10 bg-zinc-900/80"
+                        style={{
+                          ...bgStyle,
+                          backgroundSize: 'cover',
+                          backgroundPosition: 'center'
+                        }}
                       >
                         <div className="relative z-10 flex items-start gap-4">
                           {/* Icon - Transparent background */}
