@@ -174,6 +174,7 @@ export const deployedApps: StudioProject[] = [
     }
 ];
 
+
 // SECTION 2: GitHub Repos (Source code - click to view on GitHub)
 export const repoApps: StudioProject[] = [
     {
