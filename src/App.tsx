@@ -10,10 +10,12 @@ import {
   Copy, Terminal, Film, Palette, CheckCircle, ChevronDown, ChevronRight, Search, SortAsc,
   Layers, Maximize2, Minimize2, Filter, Dices, Lock, Unlock, Trophy, Grid, X,
   ExternalLink, Shirt, Sword, Car, Rocket, Flame, Gamepad2, Aperture, Map, Music,
-  Heart, Zap, Waves, BarChart3, Skull, Coins, MessageCircle, Video, Citrus, Mail, Info, FileText, User
+  Heart, Zap, Waves, BarChart3, Skull, Coins, MessageCircle, Video, Citrus, Mail, Info, FileText, User, Image
 } from 'lucide-react';
 import type { MediaItem } from './data/types';
 import { topMoviesYearly } from './data/topMoviesYearly';
+import { VersionModal } from './components/VersionModal';
+import { versionHistory } from './data/versionHistory';
 
 const getTopMovieInfo = (title: string, year: string) => {
   const entry = topMoviesYearly.find(y => y.year === year);
@@ -69,6 +71,9 @@ function App() {
   const [copiedSceneId, setCopiedSceneId] = useState<number | string | null>(null);
   const [copiedStyleName, setCopiedStyleName] = useState<string | null>(null);
   const [isStudioHubOpen, setIsStudioHubOpen] = useState(false);
+  const [isVersionModalOpen, setIsVersionModalOpen] = useState(false);
+  const [posterMode, setPosterMode] = useState(false);
+  const [posterCopied, setPosterCopied] = useState(false);
 
   // Unified Media List
   const allMedia: MediaItem[] = useMemo(() => [...movies, ...series, ...games], []);
@@ -98,19 +103,124 @@ function App() {
   const isChristmas = useMemo(() => currentMovie.genres.includes('Christmas'), [currentMovie]);
   const isWar = useMemo(() => currentMovie.genres.includes('War'), [currentMovie]);
 
-  // Scenes Logic
+  // Scenes Logic - for games, convert gameAssets to scene-like format for SPRITE SHEET GENERATION
   const currentScenes = useMemo(() => {
     if (currentMovie.type === 'series') {
       return tvScenes[currentMovie.id]?.[selectedSeasonId]?.[selectedEpisodeId] || [];
+    }
+    if (currentMovie.type === 'game' && currentMovie.gameAssets) {
+      // Convert gameAssets to scene-like format for display
+      const assets = currentMovie.gameAssets;
+      const scenes: { id: number; title: string; promptPayload: string }[] = [];
+      let idCounter = 1;
+
+      // Core sprite sheet prompt prefix
+      const palette = assets.colorPalette ? `, ${assets.colorPalette}` : '';
+      const basePrompt = `${assets.graphicsStyle} ${assets.perspective} game sprite sheet, ${assets.resolution} resolution${palette}`;
+
+      // Add characters with their actions - SPRITE SHEET FOCUSED
+      assets.characters?.forEach(char => {
+        const roleIcon = char.role === 'player' ? '⚔️' : char.role === 'boss' ? '👹' : char.role === 'enemy' ? '👾' : '🧑';
+        const directionInfo = char.directions === 1 ? 'single direction' :
+          char.directions === 2 ? 'left and right facing' :
+            char.directions === 4 ? '4 cardinal directions (up/down/left/right)' :
+              '8 rotation angles';
+
+        char.actions.forEach(action => {
+          const frameInfo = action.frames > 1 ? `${action.frames}-frame animation` : 'static pose';
+          scenes.push({
+            id: idCounter++,
+            title: `${roleIcon} ${char.name}: ${action.action} (${action.frames}f)`,
+            promptPayload: `${basePrompt}, CHARACTER SPRITE SHEET: ${char.name} - ${action.action}, ${frameInfo}, ${directionInfo}, ${action.description}, arranged in horizontal row, transparent background, consistent size per frame`
+          });
+        });
+      });
+
+      // Add tilesets - TILESET FOCUSED
+      assets.tilesets?.forEach(tile => {
+        const typeIcon = tile.type === 'floor' ? '🟫' : tile.type === 'wall' ? '🧱' : tile.type === 'hazard' ? '⚠️' : tile.type === 'background' ? '🌄' : tile.type === 'platform' ? '📐' : tile.type === 'decoration' ? '🌸' : '📦';
+        scenes.push({
+          id: idCounter++,
+          title: `${typeIcon} Tileset: ${tile.name} (${tile.variants}v)`,
+          promptPayload: `${basePrompt}, TILESET SPRITE SHEET: ${tile.name}, ${tile.type} tiles, ${tile.variants} variations, ${tile.description}, seamless edges, grid layout, transparent background`
+        });
+      });
+
+      // Add items - ITEM SPRITES
+      assets.items?.forEach(item => {
+        const catIcon = item.category === 'weapon' ? '🗡️' : item.category === 'powerup' ? '⭐' : item.category === 'consumable' ? '💊' : item.category === 'equipment' ? '🛡️' : item.category === 'projectile' ? '💥' : '💎';
+        const animInfo = item.animated ? `${item.frames}-frame animation` : 'static sprite';
+        scenes.push({
+          id: idCounter++,
+          title: `${catIcon} Item: ${item.name} (${item.frames}f)`,
+          promptPayload: `${basePrompt}, ITEM SPRITE: ${item.name}, ${item.category}, ${animInfo}, ${item.description}, transparent background`
+        });
+      });
+
+      // Add effects - VFX SPRITES
+      assets.effects?.forEach(effect => {
+        scenes.push({
+          id: idCounter++,
+          title: `✨ Effect: ${effect.name} (${effect.frames}f)`,
+          promptPayload: `${basePrompt}, VFX SPRITE SHEET: ${effect.name}, ${effect.frames}-frame animation, ${effect.description}, horizontal strip, transparent background`
+        });
+      });
+
+      // Add UI elements
+      assets.ui?.forEach(ui => {
+        scenes.push({
+          id: idCounter++,
+          title: `🖼️ UI: ${ui.name}`,
+          promptPayload: `${basePrompt}, GAME UI ELEMENT: ${ui.name}, ${ui.description}, clean design, transparent background`
+        });
+      });
+
+      return scenes;
     }
     return movieScenes[selectedMovieId] || [];
   }, [selectedMovieId, currentMovie, selectedSeasonId, selectedEpisodeId]);
 
   // Combine movie-specific styles with global styles for lookup
-  const allStyles = useMemo(() => [
-    ...(currentMovie.styles || []),
-    ...globalStyles
-  ], [currentMovie]);
+  // For games: include styles from ALL games to allow cross-game reimagining
+  const allStyles = useMemo(() => {
+    if (currentMovie.type === 'game') {
+      // Collect all game styles for reimagining (e.g., Mario in Doom style)
+      const allGameStyles: { name: string; promptString: string }[] = [];
+
+      games.forEach(game => {
+        // Add the game's defined styles
+        if (game.styles) {
+          game.styles.forEach(style => {
+            allGameStyles.push({
+              name: `${game.title}: ${style.name}`,
+              promptString: style.promptString
+            });
+          });
+        }
+
+        // Also add auto-generated style from each game's assets
+        if (game.gameAssets) {
+          const assets = game.gameAssets;
+          const palette = assets.colorPalette ? `, ${assets.colorPalette}` : '';
+          allGameStyles.push({
+            name: `${game.title} Style (${assets.graphicsStyle} ${assets.perspective})`,
+            promptString: `${assets.graphicsStyle} ${assets.perspective} game style, ${assets.resolution} resolution${palette}`
+          });
+        }
+      });
+
+      return [
+        ...(currentMovie.styles || []),
+        ...allGameStyles,
+        ...globalStyles
+      ];
+    }
+
+    return [
+      ...(currentMovie.styles || []),
+      ...globalStyles
+    ];
+  }, [currentMovie]);
 
   // --- Filtering & Sorting Logic ---
   // --- Filtering & Sorting Logic ---
@@ -171,8 +281,20 @@ function App() {
       // 2. Subject & Action
       const subject = scene.promptPayload;
 
-      // 3. Visual Style
-      const visualStyle = style.promptString;
+      // 3. Visual Style - for games, check if reimagining with different style
+      let visualStyle = style.promptString;
+
+      // If this is a game and a different game's style is selected, add reimagining context
+      if (currentMovie.type === 'game' && selectedStyleName && !selectedStyleName.startsWith(currentMovie.title)) {
+        // Extract the source game name from style name (e.g., "Doom Style (32-bit first-person)" -> "Doom")
+        const styleGameMatch = selectedStyleName.match(/^([^:]+):/);
+        const styleGameMatch2 = selectedStyleName.match(/^(.+) Style \(/);
+        const sourceGame = styleGameMatch?.[1] || styleGameMatch2?.[1] || '';
+
+        if (sourceGame && sourceGame !== currentMovie.title) {
+          visualStyle = `REIMAGINED in ${sourceGame} art style: ${style.promptString}`;
+        }
+      }
 
       // 4. Technical Specs (Hardware/Lenses)
       let techSpecs = '';
@@ -193,7 +315,7 @@ function App() {
     return '';
   }, [selectedSceneId, selectedStyleName, currentScenes, allStyles, currentMovie, ar, version, stylize, compareLenses, burstMode, draftMode, cleanUp]);
 
-  const handleMovieSelect = (id: string) => {
+  const handleMovieSelect = async (id: string) => {
     setSelectedMovieId(id);
     setSelectedSceneId(null);
     setSelectedStyleName(null);
@@ -202,6 +324,17 @@ function App() {
     if (media?.type === 'series') {
       setSelectedSeasonId(1);
       setSelectedEpisodeId(1);
+    }
+
+    // Poster Mode: Auto-copy poster prompt
+    if (posterMode && media?.posterPrompt) {
+      try {
+        await navigator.clipboard.writeText(media.posterPrompt);
+        setPosterCopied(true);
+        setTimeout(() => setPosterCopied(false), 1500);
+      } catch (err) {
+        console.error('Poster copy failed', err);
+      }
     }
   };
 
@@ -338,10 +471,36 @@ function App() {
             <h1 className={`text-2xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r ${isChristmas ? 'from-red-500 to-green-500' : isWar ? 'from-orange-500 to-stone-400' : 'from-cyan-400 to-blue-600'}`}>
               CINEMA ARCHIVE
             </h1>
-            <span className={`text-xs font-mono mt-1 ml-2 border px-2 py-0.5 rounded ${isWar ? 'text-stone-500 border-stone-800' : 'text-zinc-500 border-zinc-800'}`}>V7 MASTER</span>
+            <button
+              onClick={() => setIsVersionModalOpen(true)}
+              className={`group flex items-center gap-1.5 ml-2 border px-2 py-1 rounded transition-all duration-200 ${isWar ? 'border-stone-800 hover:border-orange-500/50 hover:bg-orange-500/10' : 'border-zinc-800 hover:border-cyan-500/50 hover:bg-cyan-500/10'} bg-zinc-900/50`}
+            >
+              <Info className={`w-3 h-3 ${isWar ? 'text-stone-500 group-hover:text-orange-400' : 'text-zinc-500 group-hover:text-cyan-400'}`} />
+              <span className={`text-xs font-mono font-bold ${isWar ? 'text-stone-500 group-hover:text-orange-400' : 'text-zinc-500 group-hover:text-cyan-400'}`}>V7 MASTER <span className="opacity-50">({versionHistory[0].version})</span></span>
+            </button>
           </div>
 
           <div className="flex items-center gap-3">
+            {/* Poster Mode Toggle */}
+            <button
+              onClick={() => setPosterMode(!posterMode)}
+              className={`
+                p-2 rounded-lg transition-all relative flex items-center gap-2 border
+                ${posterMode
+                  ? 'bg-purple-500/20 text-purple-400 border-purple-500/50 shadow-[0_0_10px_rgba(168,85,247,0.2)]'
+                  : 'text-zinc-500 hover:text-white hover:bg-zinc-800 border-zinc-800'}
+              `}
+              title={posterMode ? "Poster Mode ON - Click movie to copy poster prompt" : "Enable Poster Mode"}
+            >
+              <Image className="w-5 h-5" />
+              {posterMode && <span className="text-[10px] font-bold uppercase">Poster</span>}
+              {posterCopied && (
+                <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-purple-500 text-white text-[10px] font-bold px-2 py-1 rounded whitespace-nowrap">
+                  POSTER COPIED!
+                </div>
+              )}
+            </button>
+
             <button
               onClick={() => setIsHeaderOpen(!isHeaderOpen)}
               className={`
@@ -1045,13 +1204,13 @@ function App() {
                     <button onClick={() => setIsStudioHubOpen(true)} className="hover:text-cyan-400 transition-colors">About Samuel Erwin</button>
                   </div>
                   <div className="flex items-center gap-4 py-2 opacity-50">
-                    <a href="PRIVACY_POLICY.txt" className="text-[9px] uppercase tracking-tighter hover:text-white flex items-center gap-1">
+                    <a href="PRIVACY_POLICY.txt" target="_blank" rel="noopener noreferrer" className="text-[9px] uppercase tracking-tighter hover:text-white flex items-center gap-1">
                       <FileText className="w-2.5 h-2.5" /> Privacy
                     </a>
-                    <a href="TERMS_OF_SERVICE.txt" className="text-[9px] uppercase tracking-tighter hover:text-white flex items-center gap-1">
+                    <a href="TERMS_OF_SERVICE.txt" target="_blank" rel="noopener noreferrer" className="text-[9px] uppercase tracking-tighter hover:text-white flex items-center gap-1">
                       <FileText className="w-2.5 h-2.5" /> Terms
                     </a>
-                    <a href="MEDIA_PACKAGE.txt" className="text-[9px] uppercase tracking-tighter hover:text-white flex items-center gap-1">
+                    <a href="MEDIA_KIT.txt" target="_blank" rel="noopener noreferrer" className="text-[9px] uppercase tracking-tighter hover:text-white flex items-center gap-1">
                       <FileText className="w-2.5 h-2.5" /> Media Kit
                     </a>
                   </div>
@@ -1124,31 +1283,57 @@ function App() {
                 <h3 className="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-3 flex items-center gap-2">
                   <CheckCircle className="w-4 h-4" /> Live Apps ({deployedApps.length})
                 </h3>
-                <div className="space-y-3">
+                <div className="grid grid-cols-1 gap-3">
                   {deployedApps.map((project) => {
                     const IconComponent = {
                       Film, Palette, Shirt, Sword, Car, Rocket, Flame,
                       Gamepad2, Aperture, Map, Music, Heart, Zap, Waves, BarChart3,
                       Skull, Coins, MessageCircle, Video, Citrus
                     }[project.icon] || Grid;
+
+                    // Determine background image style based on project data
+                    // Using a gradient overlay on top of an image if available, or just a cool gradient
+                    const bgStyle = project.backgroundImage
+                      ? { backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url(${project.backgroundImage})` }
+                      : { backgroundImage: 'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9))' };
+
                     return (
                       <a
                         key={project.id}
                         href={project.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group block p-4 bg-emerald-950/30 border border-emerald-700/30 rounded-xl hover:bg-emerald-900/40 hover:border-emerald-500/50 transition-all duration-300"
+                        className="group relative block p-4 rounded-xl transition-all duration-300 hover:scale-105 hover:z-10 overflow-hidden border border-zinc-800 hover:border-emerald-500/50 hover:shadow-xl hover:shadow-emerald-500/10"
+                        style={{
+                          ...bgStyle,
+                          backgroundSize: 'cover',
+                          backgroundPosition: 'center'
+                        }}
                       >
-                        <div className="flex items-start gap-4">
-                          <div className={`p-3 bg-zinc-950 rounded-lg group-hover:scale-110 transition-transform duration-300 ${project.color}`}>
-                            <IconComponent className="w-6 h-6" />
+                        {/* Hover info expansion - implicit by the scale and height adjustment if we want, 
+                             or strictly following "expand on mouse over to give more information" 
+                             we can use a max-height transition */}
+                        <div className="relative z-10 flex items-start gap-4">
+                          {/* Icon - Transparent background now */}
+                          <div className={`p-2 rounded-lg transition-transform duration-300 group-hover:scale-110 shrink-0 ${project.color.replace('text-', 'bg-').replace('400', '500/20').replace('500', '500/20')} backdrop-blur-sm`}>
+                            <IconComponent className={`w-8 h-8 ${project.color}`} />
                           </div>
-                          <div className="flex-1">
+
+                          <div className="flex-1 min-w-0">
                             <div className="flex items-center justify-between">
-                              <h3 className="font-bold text-zinc-100 group-hover:text-emerald-400 transition-colors">{project.title}</h3>
-                              <ExternalLink className="w-3 h-3 text-emerald-600 group-hover:text-emerald-400" />
+                              <h3 className="font-bold text-zinc-100 group-hover:text-emerald-400 transition-colors text-lg truncate">{project.title}</h3>
+                              <ExternalLink className="w-4 h-4 text-zinc-600 group-hover:text-emerald-400 transition-colors opacity-0 group-hover:opacity-100" />
                             </div>
-                            <p className="text-xs text-zinc-500 mt-1 leading-relaxed">{project.description}</p>
+
+                            {/* Description - Expanded view */}
+                            <p className="text-xs text-zinc-400 mt-1 leading-relaxed line-clamp-2 group-hover:line-clamp-none group-hover:text-zinc-200 transition-all">
+                              {project.description}
+                            </p>
+
+                            {/* URL hint on hover */}
+                            <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-1 text-[10px] text-emerald-500 font-mono overflow-hidden">
+                              <span className="truncate">{project.url.replace('https://', '')}</span>
+                            </div>
                           </div>
                         </div>
                       </a>
@@ -1162,31 +1347,47 @@ function App() {
                 <h3 className="text-xs font-bold text-blue-400 uppercase tracking-wider mb-3 flex items-center gap-2">
                   <Terminal className="w-4 h-4" /> GitHub Repos ({repoApps.length})
                 </h3>
-                <div className="space-y-3">
+                <div className="grid grid-cols-1 gap-3">
                   {repoApps.map((project) => {
                     const IconComponent = {
                       Film, Palette, Shirt, Sword, Car, Rocket, Flame,
                       Gamepad2, Aperture, Map, Music, Heart, Zap, Waves, BarChart3,
                       Skull, Coins, MessageCircle, Video, Citrus
                     }[project.icon] || Grid;
+
+                    // Determine background image style based on project data
+                    const bgStyle = project.backgroundImage
+                      ? { backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url(${project.backgroundImage})` }
+                      : { backgroundImage: 'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9))' };
+
                     return (
                       <a
                         key={project.id}
                         href={project.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group block p-4 bg-blue-950/30 border border-blue-700/30 rounded-xl hover:bg-blue-900/40 hover:border-blue-500/50 transition-all duration-300"
+                        className="group relative block p-4 rounded-xl transition-all duration-300 hover:scale-105 hover:z-10 overflow-hidden border border-zinc-800 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10 bg-zinc-900/80"
+                        style={{
+                          ...bgStyle,
+                          backgroundSize: 'cover',
+                          backgroundPosition: 'center'
+                        }}
                       >
-                        <div className="flex items-start gap-4">
-                          <div className={`p-3 bg-zinc-950 rounded-lg group-hover:scale-110 transition-transform duration-300 ${project.color}`}>
-                            <IconComponent className="w-6 h-6" />
+                        <div className="relative z-10 flex items-start gap-4">
+                          {/* Icon - Transparent background */}
+                          <div className={`p-2 rounded-lg transition-transform duration-300 group-hover:scale-110 shrink-0 ${project.color.replace('text-', 'bg-').replace('400', '500/20').replace('500', '500/20')} backdrop-blur-sm`}>
+                            <IconComponent className={`w-8 h-8 ${project.color}`} />
                           </div>
-                          <div className="flex-1">
+
+                          <div className="flex-1 min-w-0">
                             <div className="flex items-center justify-between">
-                              <h3 className="font-bold text-zinc-100 group-hover:text-blue-400 transition-colors">{project.title}</h3>
-                              <ExternalLink className="w-3 h-3 text-blue-600 group-hover:text-blue-400" />
+                              <h3 className="font-bold text-zinc-100 group-hover:text-blue-400 transition-colors text-lg truncate">{project.title}</h3>
+                              <ExternalLink className="w-4 h-4 text-zinc-600 group-hover:text-blue-400 transition-colors opacity-0 group-hover:opacity-100" />
                             </div>
-                            <p className="text-xs text-zinc-500 mt-1 leading-relaxed">{project.description}</p>
+                            <p className="text-xs text-zinc-400 mt-1 leading-relaxed line-clamp-2 group-hover:line-clamp-none group-hover:text-zinc-200 transition-all">{project.description}</p>
+                            <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-1 text-[10px] text-blue-500 font-mono overflow-hidden">
+                              <span className="truncate">{project.url.replace('https://', '')}</span>
+                            </div>
                           </div>
                         </div>
                       </a>
@@ -1239,6 +1440,7 @@ function App() {
           </div>
         </div>
       </div>
+      <VersionModal isOpen={isVersionModalOpen} onClose={() => setIsVersionModalOpen(false)} />
     </div>
   );
 }
