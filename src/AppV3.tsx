@@ -25,9 +25,10 @@ function AppV3() {
   const [selectedMovieId, setSelectedMovieId] = useState<string>('top-gun');
   const [selectedSceneId, setSelectedSceneId] = useState<number | null>(null);
   const [selectedStyleName, setSelectedStyleName] = useState<string | null>(null);
-  const [version, setVersion] = useState<string>('7');
+  const [version, setVersion] = useState<string>('8.1');
+  const [promptOnly, setPromptOnly] = useState<boolean>(false);
   const [ar, setAr] = useState<string>('9:16');
-  const [stylize, setStylize] = useState<number>(700);
+  const [stylize, setStylize] = useState<number>(100);
   const [copied, setCopied] = useState(false);
   const [copyMode, setCopyMode] = useState<'standard' | 'next-scene' | 'next-style'>('standard');
 
@@ -91,10 +92,31 @@ function AppV3() {
     const style = allStyles.find(s => s.name === selectedStyleName);
 
     if (scene && style) {
-      return `Cinematic scene from ${currentMovie.title}, ${scene.promptPayload}, ${style.promptString} --ar ${ar} --v ${version} --stylize ${stylize}`;
+        let descriptiveText = '';
+        let params = '';
+
+        if (version === '8' || version === '8.1') {
+            const subject = scene.promptPayload.replace(/\.,/g, ',');
+            const visualStyleProse = style.promptString.replace(/\.,/g, ',');
+            const subjectIntro = `A cinematic shot featuring ${subject.toLowerCase()}`;
+            const envIntro = `set within the world of the movie ${currentMovie.title} (${currentMovie.year})`;
+            const lightAndCamera = `The scene is defined by ${visualStyleProse.toLowerCase()}`;
+            
+            descriptiveText = `${subjectIntro}, ${envIntro}. ${lightAndCamera}.`;
+            if (!descriptiveText.toLowerCase().includes('light')) {
+                descriptiveText += ' High quality cinematic lighting.';
+            }
+            params = `--style raw --ar ${ar} --v ${version} --s ${stylize}`;
+        } else {
+            descriptiveText = `Cinematic scene from ${currentMovie.title}, ${scene.promptPayload}, ${style.promptString}`;
+            params = `--ar ${ar} --v ${version} --stylize ${stylize}`;
+        }
+
+        if (promptOnly) return descriptiveText;
+        return `${descriptiveText} ${params}`;
     }
     return '';
-  }, [selectedSceneId, selectedStyleName, currentScenes, allStyles, currentMovie, ar, version, stylize]);
+  }, [selectedSceneId, selectedStyleName, currentScenes, allStyles, currentMovie, ar, version, stylize, promptOnly]);
 
   const handleMovieSelect = (id: string) => {
     setSelectedMovieId(id);
@@ -154,7 +176,7 @@ function AppV3() {
               className="group flex items-center gap-1.5 ml-3 border border-zinc-800 hover:border-cyan-500/50 hover:bg-cyan-500/10 bg-zinc-900/50 px-2 py-1 rounded transition-all duration-200"
             >
               <Info className="w-3 h-3 text-zinc-500 group-hover:text-cyan-400" />
-              <span className="text-xs font-mono font-bold text-zinc-500 group-hover:text-cyan-400">V7 MASTER <span className="opacity-50">({versionHistory[0].version})</span></span>
+              <span className="text-xs font-mono font-bold text-zinc-500 group-hover:text-cyan-400">V{version} MASTER <span className="opacity-50">({versionHistory[0].version})</span></span>
             </button>
           </div>
 
@@ -488,10 +510,20 @@ function AppV3() {
 
             <div className="space-y-4">
               <div>
-                <label className="block text-[9px] font-mono text-zinc-600 mb-1.5 ml-1">MIDJOURNEY VERSION</label>
-                <div className="flex bg-zinc-900 p-1 rounded-lg border border-zinc-800">
-                  {['5', '6', '6.1', '7'].map((v) => (
-                    <button key={v} onClick={() => setVersion(v)} className={`flex-1 py-1.5 text-[10px] font-bold rounded-md transition-all ${version === v ? 'bg-zinc-700 text-white shadow-sm' : 'text-zinc-500 hover:text-zinc-300'}`}>v{v}</button>
+                <div className="flex justify-between items-center mb-1.5 ml-1">
+                  <label className="block text-[9px] font-mono text-zinc-600 uppercase">Midjourney Version</label>
+                  <label className="flex items-center gap-1 cursor-pointer">
+                    <input type="checkbox" checked={promptOnly} onChange={(e) => setPromptOnly(e.target.checked)} className="accent-cyan-500 cursor-pointer" />
+                    <span className="text-[9px] font-mono text-cyan-400">Prompt Only</span>
+                  </label>
+                </div>
+                <div className="flex bg-zinc-900 p-1 rounded-lg border border-zinc-800 flex-wrap gap-1">
+                  {['5', '6', '6.1', '7', '8', '8.1'].map((v) => (
+                    <button key={v} onClick={() => {
+                      setVersion(v);
+                      if (v === '8' || v === '8.1') setStylize(100);
+                      else setStylize(700);
+                    }} className={`flex-1 min-w-[25px] py-1.5 text-[10px] font-bold rounded-md transition-all ${version === v ? 'bg-zinc-700 text-white shadow-sm' : 'text-zinc-500 hover:text-zinc-300'}`} title={v === '8' ? "Literal interpretation, explicit lighting required, fast mode only" : v === '8.1' ? "Precision mode, native 2K, strict hierarchy, relaxed mode supported" : "Keyword-friendly, auto-cinematic lighting"}>v{v}</button>
                   ))}
                 </div>
               </div>

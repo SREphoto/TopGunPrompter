@@ -50,7 +50,8 @@ function App() {
 
   const [selectedSceneId, setSelectedSceneId] = useState<number | null>(null);
   const [selectedStyleName, setSelectedStyleName] = useState<string | null>(null);
-  const [version, setVersion] = useState<string>('7');
+  const [version, setVersion] = useState<string>('8.1');
+  const [promptOnly, setPromptOnly] = useState<boolean>(false);
   const [ar, setAr] = useState<string>('16:9');
   const [stylize, setStylize] = useState<number>(300);
   const [copied, setCopied] = useState(false);
@@ -61,6 +62,17 @@ function App() {
   const [burstMode, setBurstMode] = useState(false);
   const [cleanUp, setCleanUp] = useState(false);
   const [draftMode, setDraftMode] = useState(false);
+
+  // V8/V8.1 Features
+  const [qValue, setQValue] = useState<number>(1);
+  const [hdMode, setHdMode] = useState<boolean>(false);
+  const [sref, setSref] = useState<string>('');
+  const [sw, setSw] = useState<number>(100);
+  const [oref, setOref] = useState<string>('');
+  const [ow, setOw] = useState<number>(100);
+  const [chaos, setChaos] = useState<number>(0);
+  const [weird, setWeird] = useState<number>(0);
+  const [rawMode, setRawMode] = useState<boolean>(false);
 
   // Randomizer State
   const [lockMovie, setLockMovie] = useState(false);
@@ -275,45 +287,69 @@ function App() {
     const style = allStyles.find(s => s.name === selectedStyleName);
 
     if (scene && style) {
-      // 1. Anchor (Context)
-      const anchor = `Cinematic shot from the ${currentMovie.type === 'series' ? 'TV Series' : currentMovie.type === 'game' ? 'Video Game' : 'movie'} ${currentMovie.title} (${currentMovie.year})`;
-
-      // 2. Subject & Action
-      const subject = scene.promptPayload;
-
-      // 3. Visual Style - for games, check if reimagining with different style
       let visualStyle = style.promptString;
-
-      // If this is a game and a different game's style is selected, add reimagining context
       if (currentMovie.type === 'game' && selectedStyleName && !selectedStyleName.startsWith(currentMovie.title)) {
-        // Extract the source game name from style name (e.g., "Doom Style (32-bit first-person)" -> "Doom")
         const styleGameMatch = selectedStyleName.match(/^([^:]+):/);
         const styleGameMatch2 = selectedStyleName.match(/^(.+) Style \(/);
         const sourceGame = styleGameMatch?.[1] || styleGameMatch2?.[1] || '';
-
         if (sourceGame && sourceGame !== currentMovie.title) {
           visualStyle = `REIMAGINED in ${sourceGame} art style: ${style.promptString}`;
         }
       }
 
-      // 4. Technical Specs (Hardware/Lenses)
-      let techSpecs = '';
-      if (compareLenses) {
-        techSpecs += ' {35mm lens, 85mm lens, Fisheye lens} --fast';
+      if (version === '8' || version === '8.1') {
+        const subject = scene.promptPayload.replace(/\.,/g, ',');
+        const visualStyleProse = visualStyle.replace(/\.,/g, ',');
+        const subjectIntro = `A cinematic shot featuring ${subject.toLowerCase()}`;
+        const envIntro = `set within the world of the ${currentMovie.type === 'series' ? 'TV Series' : currentMovie.type === 'game' ? 'Video Game' : 'movie'} ${currentMovie.title} (${currentMovie.year})`;
+        const lightAndCamera = `The scene is defined by ${visualStyleProse.toLowerCase()}`;
+        
+        let descriptiveText = `${subjectIntro}, ${envIntro}. ${lightAndCamera}.`;
+        if (!descriptiveText.toLowerCase().includes('light')) {
+           descriptiveText += ' High quality cinematic lighting.';
+        }
+
+        if (promptOnly) return descriptiveText;
+
+        let techSpecs = '';
+        if (compareLenses) techSpecs += ' {35mm lens, 85mm lens, Fisheye lens} --fast';
+
+        let params = `--ar ${ar} --v ${version}`;
+        if (rawMode) params += ' --style raw';
+        if (stylize > 0) params += ` --s ${stylize}`;
+        if (qValue !== 1) params += ` --q ${qValue}`;
+        if (sref) params += ` --sref ${sref}${sw !== 100 ? ` --sw ${sw}` : ''}`;
+        if (chaos > 0) params += ` --c ${chaos}`;
+        if (weird > 0) params += ` --weird ${weird}`;
+        if (version === '8.1') {
+          if (hdMode && qValue <= 1) params += ' --hd';
+          if (oref) params += ` --oref ${oref}${ow !== 100 ? ` --ow ${ow}` : ''}`;
+        }
+        if (burstMode) params += ' --repeat 5';
+        if (cleanUp) params += ' --no text, watermark, signature, blur, distortion';
+
+        return `${descriptiveText}${techSpecs} ${params}`;
+      } else {
+        const anchor = `Cinematic shot from the ${currentMovie.type === 'series' ? 'TV Series' : currentMovie.type === 'game' ? 'Video Game' : 'movie'} ${currentMovie.title} (${currentMovie.year})`;
+        const subject = scene.promptPayload;
+        
+        if (promptOnly) return `${anchor}. ${subject}. ${visualStyle}.`;
+
+        let techSpecs = '';
+        if (compareLenses) techSpecs += ' {35mm lens, 85mm lens, Fisheye lens} --fast';
+
+        let params = `--ar ${ar} --v ${version}`;
+        if (rawMode) params += ' --style raw';
+        if (stylize > 0) params += ` --stylize ${stylize}`;
+        if (burstMode) params += ' --repeat 5';
+        if (draftMode) params += ' --draft';
+        if (cleanUp) params += ' --no text, watermark, signature, blur, distortion';
+
+        return `${anchor}. ${subject}. ${visualStyle}.${techSpecs} ${params}`;
       }
-
-      // 5. Parameters
-      let params = `--ar ${ar} --v ${version} --style raw`;
-      if (stylize > 0) params += ` --stylize ${stylize}`;
-      if (burstMode) params += ' --repeat 5';
-      if (draftMode) params += ' --draft';
-      if (cleanUp) params += ' --no text, watermark, signature, blur, distortion';
-
-      // Assemble: Context + Subject + Style + Tech + Params
-      return `${anchor}. ${subject}. ${visualStyle}.${techSpecs} ${params}`;
     }
     return '';
-  }, [selectedSceneId, selectedStyleName, currentScenes, allStyles, currentMovie, ar, version, stylize, compareLenses, burstMode, draftMode, cleanUp]);
+  }, [selectedSceneId, selectedStyleName, currentScenes, allStyles, currentMovie, ar, version, stylize, compareLenses, burstMode, draftMode, cleanUp, promptOnly, qValue, hdMode, sref, sw, oref, ow, chaos, weird, rawMode]);
 
   const handleMovieSelect = async (id: string) => {
     setSelectedMovieId(id);
@@ -476,7 +512,7 @@ function App() {
               className={`group flex items-center gap-1.5 ml-2 border px-2 py-1 rounded transition-all duration-200 ${isWar ? 'border-stone-800 hover:border-orange-500/50 hover:bg-orange-500/10' : 'border-zinc-800 hover:border-cyan-500/50 hover:bg-cyan-500/10'} bg-zinc-900/50`}
             >
               <Info className={`w-3 h-3 ${isWar ? 'text-stone-500 group-hover:text-orange-400' : 'text-zinc-500 group-hover:text-cyan-400'}`} />
-              <span className={`text-xs font-mono font-bold ${isWar ? 'text-stone-500 group-hover:text-orange-400' : 'text-zinc-500 group-hover:text-cyan-400'}`}>V7 MASTER <span className="opacity-50">({versionHistory[0].version})</span></span>
+              <span className={`text-xs font-mono font-bold ${isWar ? 'text-stone-500 group-hover:text-orange-400' : 'text-zinc-500 group-hover:text-cyan-400'}`}>V{version} MASTER <span className="opacity-50">({versionHistory[0].version})</span></span>
             </button>
           </div>
 
@@ -1101,10 +1137,30 @@ function App() {
 
             <div className="space-y-4">
               <div>
-                <label className="block text-[9px] font-mono text-zinc-600 mb-1.5 ml-1">MIDJOURNEY VERSION</label>
-                <div className="flex bg-zinc-900 p-1 rounded-lg border border-zinc-800">
-                  {['5', '6', '6.1', '7'].map((v) => (
-                    <button key={v} onClick={() => setVersion(v)} className={`flex-1 py-1.5 text-[10px] font-bold rounded-md transition-all ${version === v ? 'bg-zinc-700 text-white shadow-sm' : 'text-zinc-500 hover:text-zinc-300'}`}>v{v}</button>
+                <div className="flex justify-between items-center mb-1.5 ml-1">
+                  <label className="block text-[9px] font-mono text-zinc-600 uppercase">Midjourney Version</label>
+                  <label className="flex items-center gap-1 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={promptOnly}
+                      onChange={(e) => setPromptOnly(e.target.checked)}
+                      className="accent-cyan-500 cursor-pointer"
+                    />
+                    <span className="text-[9px] font-mono text-cyan-400">Prompt Only</span>
+                  </label>
+                </div>
+                <div className="flex bg-zinc-900 p-1 rounded-lg border border-zinc-800 flex-wrap gap-1">
+                  {['5', '6', '6.1', '7', '8', '8.1'].map((v) => (
+                    <button 
+                      key={v} 
+                      onClick={() => {
+                        setVersion(v);
+                        if (v === '8' || v === '8.1') setStylize(100);
+                        else setStylize(300);
+                      }} 
+                      className={`flex-1 min-w-[30px] py-1.5 text-[10px] font-bold rounded-md transition-all ${version === v ? 'bg-zinc-700 text-white shadow-sm' : 'text-zinc-500 hover:text-zinc-300'}`}
+                      title={v === '8' ? "Literal interpretation, explicit lighting required, fast mode only" : v === '8.1' ? "Precision mode, native 2K, strict hierarchy, relaxed mode supported" : "Keyword-friendly, auto-cinematic lighting"}
+                    >v{v}</button>
                   ))}
                 </div>
               </div>
@@ -1128,6 +1184,115 @@ function App() {
                   className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-cyan-500"
                 />
               </div>
+
+              {/* V8/V8.1 Features */}
+              {(version === '8' || version === '8.1') && (
+                <div className="pt-2 border-t border-zinc-900 space-y-3">
+                  <div className="flex justify-between items-center">
+                    <label className="block text-[9px] font-mono text-cyan-600 font-bold uppercase">V8/V8.1 Controls</label>
+                  </div>
+                  
+                  {/* Quality & HD */}
+                  <div className="grid grid-cols-2 gap-2">
+                    <div>
+                      <div className="flex justify-between mb-1">
+                        <label className="text-[9px] font-mono text-zinc-500">QUALITY (--q)</label>
+                        <span className="text-[9px] font-mono text-cyan-500">{qValue}</span>
+                      </div>
+                      <input
+                        type="range" min="0.25" max="2" step="0.25" value={qValue} onChange={(e) => setQValue(parseFloat(e.target.value))}
+                        className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-cyan-500"
+                      />
+                    </div>
+                    {version === '8.1' && (
+                      <div className="flex items-end pb-1">
+                        <button
+                          onClick={() => setHdMode(!hdMode)}
+                          disabled={qValue > 1}
+                          title={qValue > 1 ? "HD mode disabled when --q > 1" : "Native 2K processing"}
+                          className={`w-full py-1.5 rounded-md text-[9px] font-bold border transition-all ${hdMode ? 'bg-cyan-900/40 text-cyan-400 border-cyan-500/50' : 'bg-zinc-900 text-zinc-500 border-zinc-800 hover:text-zinc-300'} disabled:opacity-30 disabled:cursor-not-allowed`}
+                        >
+                          HD MODE (--hd)
+                        </button>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* SREF & SW */}
+                  <div className="grid grid-cols-3 gap-2">
+                    <div className="col-span-2">
+                      <label className="block text-[9px] font-mono text-zinc-500 mb-1">STYLE REF (--sref)</label>
+                      <input 
+                        type="text" value={sref} onChange={(e) => setSref(e.target.value)}
+                        placeholder="URL or code..."
+                        className="w-full bg-zinc-900 border border-zinc-800 rounded px-2 py-1 text-[10px] text-zinc-300 outline-none focus:border-cyan-500"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-[9px] font-mono text-zinc-500 mb-1">--sw {sw}</label>
+                      <input
+                        type="range" min="0" max="1000" step="50" value={sw} onChange={(e) => setSw(parseInt(e.target.value))}
+                        className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-cyan-500 mt-2"
+                      />
+                    </div>
+                  </div>
+
+                  {/* OREF & OW */}
+                  {version === '8.1' && (
+                    <div className="grid grid-cols-3 gap-2">
+                      <div className="col-span-2">
+                        <label className="block text-[9px] font-mono text-zinc-500 mb-1">OMNI REF (--oref)</label>
+                        <input 
+                          type="text" value={oref} onChange={(e) => setOref(e.target.value)}
+                          placeholder="URL..."
+                          className="w-full bg-zinc-900 border border-zinc-800 rounded px-2 py-1 text-[10px] text-zinc-300 outline-none focus:border-cyan-500"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-[9px] font-mono text-zinc-500 mb-1">--ow {ow}</label>
+                        <input
+                          type="range" min="0" max="1000" step="50" value={ow} onChange={(e) => setOw(parseInt(e.target.value))}
+                          className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-cyan-500 mt-2"
+                        />
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Chaos & Weird */}
+                  <div className="grid grid-cols-2 gap-2">
+                    <div>
+                      <div className="flex justify-between mb-1">
+                        <label className="text-[9px] font-mono text-zinc-500">CHAOS (--c)</label>
+                        <span className="text-[9px] font-mono text-cyan-500">{chaos}</span>
+                      </div>
+                      <input
+                        type="range" min="0" max="100" step="5" value={chaos} onChange={(e) => setChaos(parseInt(e.target.value))}
+                        className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-cyan-500"
+                      />
+                    </div>
+                    <div>
+                      <div className="flex justify-between mb-1">
+                        <label className="text-[9px] font-mono text-zinc-500">WEIRD (--w)</label>
+                        <span className="text-[9px] font-mono text-cyan-500">{weird}</span>
+                      </div>
+                      <input
+                        type="range" min="0" max="3000" step="100" value={weird} onChange={(e) => setWeird(parseInt(e.target.value))}
+                        className="w-full h-1 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-cyan-500"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-end pb-1">
+                    <button
+                      onClick={() => setRawMode(!rawMode)}
+                      className={`w-full py-1.5 rounded-md text-[9px] font-bold border transition-all ${rawMode ? 'bg-cyan-900/40 text-cyan-400 border-cyan-500/50' : 'bg-zinc-900 text-zinc-500 border-zinc-800 hover:text-zinc-300'}`}
+                    >
+                      RAW MODE (--style raw)
+                    </button>
+                  </div>
+                </div>
+              )}
+
 
               {/* V7 Features */}
               <div className="pt-2 border-t border-zinc-900 space-y-2">
@@ -1159,7 +1324,9 @@ function App() {
 
                 <button
                   onClick={() => setDraftMode(!draftMode)}
-                  className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs font-bold border transition-all ${draftMode ? 'bg-zinc-800 text-yellow-400 border-yellow-500/50' : 'bg-zinc-900 text-zinc-500 border-zinc-800'}`}
+                  disabled={version === '8' || version === '8.1'}
+                  title={(version === '8' || version === '8.1') ? "Draft mode is not supported in V8" : "Generate low quality drafts quickly"}
+                  className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs font-bold border transition-all ${draftMode ? 'bg-zinc-800 text-yellow-400 border-yellow-500/50' : 'bg-zinc-900 text-zinc-500 border-zinc-800'} ${(version === '8' || version === '8.1') ? 'opacity-30 cursor-not-allowed' : ''}`}
                 >
                   <span>Draft Mode</span>
                   <span className="text-[9px] font-mono opacity-50">{draftMode ? 'ON' : 'OFF'}</span>

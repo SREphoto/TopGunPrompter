@@ -7,9 +7,21 @@ export interface VersionUpdate {
 
 export const versionHistory: VersionUpdate[] = [
     {
+        version: "v3.4.0",
+        title: "The Midjourney V8 & V8.1 Upgrade",
+        isCurrent: true,
+        changes: [
+            "V8 & V8.1 Engine: Switched prompt generator from keyword clusters to natural-language prose with explicit lighting definitions.",
+            "Prompt Only Mode: Added ability to generate raw prose without technical parameters.",
+            "Advanced Parameters: Added UI controls for Quality (--q), Style Reference (--sref, --sw), Omni Reference (--oref, --ow), Chaos, and Weird.",
+            "HD Mode: Support for native 2K rendering via --hd in V8.1.",
+            "Version Validation: Built-in safeguards to prevent incompatible parameter stacking (e.g. blocking --hd or --oref in V8)."
+        ]
+    },
+    {
         version: "v3.3.0",
         title: "The Poster Prompt Update",
-        isCurrent: true,
+        isCurrent: false,
         changes: [
             "Poster Prompts: Added posterPrompt field to Movie interface in types.ts.",
             "Content Upgrade: Added official movie poster prompts for over 50 'Elite' and 'Classic' movies (e.g., Top Gun, Matrix, Godfather, Alien, Blade Runner).",

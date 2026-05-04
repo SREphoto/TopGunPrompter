@@ -1,0 +1,9 @@
+language: en
+timezone: UTC
+agent_mapping:
+  frontend: gemini
+  backend: gemini
+  mobile: gemini
+  pm: gemini
+  qa: gemini
+  debug: gemini

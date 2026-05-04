@@ -8,9 +8,10 @@ function AppClassic() {
     const [selectedMovieId, setSelectedMovieId] = useState<string>('top-gun');
     const [selectedSceneId, setSelectedSceneId] = useState<number | null>(null);
     const [selectedStyleName, setSelectedStyleName] = useState<string | null>(null);
-    const [version, setVersion] = useState<string>('7');
+    const [version, setVersion] = useState<string>('8.1');
+    const [promptOnly, setPromptOnly] = useState<boolean>(false);
     const [ar, setAr] = useState<string>('9:16');
-    const [stylize, setStylize] = useState<number>(700);
+    const [stylize, setStylize] = useState<number>(100);
     const [copied, setCopied] = useState(false);
     const [copyMode, setCopyMode] = useState<'standard' | 'next-scene' | 'next-style'>('standard');
 
@@ -29,12 +30,31 @@ function AppClassic() {
         const style = allStyles.find(s => s.name === selectedStyleName);
 
         if (scene && style) {
-            // Construct prompt with Scene first (Subject), then visual Style, then Movie Context
-            // Using periods to separate major conceptual blocks for better adherence in recent MJ versions
-            return `${scene.promptPayload}. ${style.promptString}. ESTABLISHING SHOT, cinematic footage from the movie ${currentMovie.title} (${currentMovie.year}) --style raw --ar ${ar} --v ${version} --stylize ${stylize}`;
+            let descriptiveText = '';
+            let params = '';
+
+            if (version === '8' || version === '8.1') {
+                const subject = scene.promptPayload.replace(/\.,/g, ',');
+                const visualStyleProse = style.promptString.replace(/\.,/g, ',');
+                const subjectIntro = `A cinematic shot featuring ${subject.toLowerCase()}`;
+                const envIntro = `set within the world of the movie ${currentMovie.title} (${currentMovie.year})`;
+                const lightAndCamera = `The scene is defined by ${visualStyleProse.toLowerCase()}`;
+                
+                descriptiveText = `${subjectIntro}, ${envIntro}. ${lightAndCamera}.`;
+                if (!descriptiveText.toLowerCase().includes('light')) {
+                    descriptiveText += ' High quality cinematic lighting.';
+                }
+                params = `--style raw --ar ${ar} --v ${version} --s ${stylize}`;
+            } else {
+                descriptiveText = `${scene.promptPayload}. ${style.promptString}. ESTABLISHING SHOT, cinematic footage from the movie ${currentMovie.title} (${currentMovie.year})`;
+                params = `--style raw --ar ${ar} --v ${version} --stylize ${stylize}`;
+            }
+
+            if (promptOnly) return descriptiveText;
+            return `${descriptiveText} ${params}`;
         }
         return '';
-    }, [selectedSceneId, selectedStyleName, currentScenes, allStyles, currentMovie, ar, version, stylize]);
+    }, [selectedSceneId, selectedStyleName, currentScenes, allStyles, currentMovie, ar, version, stylize, promptOnly]);
 
     const handleMovieSelect = (id: string) => {
         setSelectedMovieId(id);
@@ -98,14 +118,30 @@ function AppClassic() {
                 {/* Settings */}
                 <div className="space-y-6 mb-8">
                     <div>
-                        <label className="block text-xs font-mono text-zinc-500 mb-2">MIDJOURNEY VERSION</label>
-                        <div className="flex bg-zinc-900 p-1 rounded-lg border border-zinc-800">
-                            {['5', '6', '6.1', '7'].map((v) => (
+                        <div className="flex justify-between items-center mb-2">
+                            <label className="block text-xs font-mono text-zinc-500 uppercase">Midjourney Version</label>
+                            <label className="flex items-center gap-1 cursor-pointer">
+                                <input
+                                    type="checkbox"
+                                    checked={promptOnly}
+                                    onChange={(e) => setPromptOnly(e.target.checked)}
+                                    className="accent-cyan-500 cursor-pointer"
+                                />
+                                <span className="text-xs font-mono text-cyan-400">Prompt Only</span>
+                            </label>
+                        </div>
+                        <div className="flex bg-zinc-900 p-1 rounded-lg border border-zinc-800 flex-wrap gap-1">
+                            {['5', '6', '6.1', '7', '8', '8.1'].map((v) => (
                                 <button
                                     key={v}
-                                    onClick={() => setVersion(v)}
-                                    className={`flex-1 py-2 text-xs font-bold rounded-md transition-all ${version === v ? 'bg-zinc-700 text-white shadow-sm' : 'text-zinc-500 hover:text-zinc-300'
+                                    onClick={() => {
+                                        setVersion(v);
+                                        if (v === '8' || v === '8.1') setStylize(100);
+                                        else setStylize(700);
+                                    }}
+                                    className={`flex-1 min-w-[30px] py-2 text-xs font-bold rounded-md transition-all ${version === v ? 'bg-zinc-700 text-white shadow-sm' : 'text-zinc-500 hover:text-zinc-300'
                                         }`}
+                                    title={v === '8' ? "Literal interpretation, explicit lighting required, fast mode only" : v === '8.1' ? "Precision mode, native 2K, strict hierarchy, relaxed mode supported" : "Keyword-friendly, auto-cinematic lighting"}
                                 >
                                     v{v}
                                 </button>
