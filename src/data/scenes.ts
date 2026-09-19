@@ -245,6 +245,18 @@ import {
     beforeSunriseScenes, tenThingsIHateAboutYouScenes, valentinesDayMovieScenes
 } from './scenes/seasonalScenes';
 
+import {
+    theRingScenes, rosemarysBabyScenes, aQuietPlaceScenes, theDescentScenes,
+    twentyEightDaysLaterScenes, paranormalActivityScenes, theBabadookScenes,
+    insidiousScenes, sinisterScenes, theCabinInTheWoodsScenes, carrieScenes, theMistScenes
+} from './scenes/horrorExpandedScenes';
+
+import {
+    lastHouseOnTheLeftScenes, houseOf1000CorpsesScenes, theDevilsRejectsScenes,
+    halloween2007Scenes, halloweenII2009Scenes, elSuperbeastoScenes,
+    theLordsOfSalemScenes, thirtyOneScenes, threeFromHellScenes, theMunsters2022Scenes
+} from './scenes/robZombieAndGrindhouseScenes';
+
 export const movieScenes: Record<string, Scene[]> = {
     'top-gun': topGunScenes,
     'interview-vampire': interviewVampireScenes,
@@ -632,6 +644,28 @@ export const movieScenes: Record<string, Scene[]> = {
     'childs-play': childsPlayScenes,
     'night-of-the-living-dead': nightOfTheLivingDeadScenes,
     'it-2017': it2017Scenes,
+    'the-ring': theRingScenes,
+    'rosemarys-baby': rosemarysBabyScenes,
+    'a-quiet-place': aQuietPlaceScenes,
+    'the-descent': theDescentScenes,
+    '28-days-later': twentyEightDaysLaterScenes,
+    'paranormal-activity': paranormalActivityScenes,
+    'the-babadook': theBabadookScenes,
+    'insidious': insidiousScenes,
+    'sinister': sinisterScenes,
+    'the-cabin-in-the-woods': theCabinInTheWoodsScenes,
+    'carrie': carrieScenes,
+    'the-mist': theMistScenes,
+    'the-last-house-on-the-left': lastHouseOnTheLeftScenes,
+    'house-of-1000-corpses': houseOf1000CorpsesScenes,
+    'the-devils-rejects': theDevilsRejectsScenes,
+    'halloween-2007': halloween2007Scenes,
+    'halloween-ii-2009': halloweenII2009Scenes,
+    'the-haunted-world-of-el-superbeasto': elSuperbeastoScenes,
+    'the-lords-of-salem': theLordsOfSalemScenes,
+    'thirty-one': thirtyOneScenes,
+    'three-from-hell': threeFromHellScenes,
+    'the-munsters-2022': theMunsters2022Scenes,
 
     // 🦃 Thanksgiving
     'charlie-brown-thanksgiving': charlieBrownThanksgivingScenes,

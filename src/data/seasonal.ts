@@ -348,6 +348,358 @@ export const seasonalMedia: MediaItem[] = [
         ],
         posterPrompt: "Official movie poster for It (2017), young boy in yellow raincoat Georgie facing dark storm drain with glowing yellow clown eyes and bright red balloon, Derry rain street, modern horror blockbuster style --ar 2:3"
     },
+    {
+        id: 'the-ring',
+        title: 'The Ring',
+        year: '2002',
+        genres: ['Horror', 'Mystery'],
+        director: 'Gore Verbinski',
+        actors: ['Naomi Watts', 'Martin Henderson', 'David Dorfman', 'Brian Cox'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: 'Cold Pacific Northwest Rain', promptString: 'desaturated cold cyan-green color grade, torrential Seattle rainfall, misty pine forests, Puget Sound ferry, bleak melancholic dread, 35mm film grain' },
+            { name: 'Cursed Static Broadcast', promptString: 'flickering cathode ray CRT monitor in dark room, white electronic static noise, tracking error distortion lines, avant-garde surreal nightmare montage' },
+            { name: 'Well of Moesko Island', promptString: 'deep subterranean stone water well, dripping black stagnant water, solitary circular light patch above, sodden drenched long black hair, claustrophobic dread' }
+        ],
+        posterPrompt: "Official movie poster for The Ring (2002), glowing white ring of solar eclipse against pitch-black void with silhouette of ancient stone well, 'BEFORE YOU DIE, YOU SEE THE RING' typography, cold green psychological horror style --ar 2:3"
+    },
+    {
+        id: 'rosemarys-baby',
+        title: 'Rosemary\'s Baby',
+        year: '1968',
+        genres: ['Drama', 'Horror', 'Mystery'],
+        director: 'Roman Polanski',
+        actors: ['Mia Farrow', 'John Cassavetes', 'Ruth Gordon', 'Sidney Blackmer'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: 'The Bramford Gothic', promptString: 'late 1960s Manhattan luxury apartment, high ceilings, dark mahogany woodwork, shadowy hallways, ornate brass fixtures, subtle psychological dread' },
+            { name: 'Vidal Sassoon Modernity', promptString: 'sharp geometric pixie cut, pale delicate features, pastel linen maternity dresses, bright sunlit Upper West Side rooms masking dark sinister paranoia' },
+            { name: 'Occult Coven Elegance', promptString: 'vintage silver filigree tannis root pendant, antique velvet armchairs, flickering yellow candlelight, elderly aristocrats in formal evening wear, sinister intimacy' }
+        ],
+        posterPrompt: "Official movie poster for Rosemary's Baby (1968), Mia Farrow's delicate profile in pale green mist superimposed against dark silhouette of antique baby perambulator on rocky hilltop, 'ROSEMARY'S BABY' iconic title, psychological horror masterpiece --ar 2:3"
+    },
+    {
+        id: 'a-quiet-place',
+        title: 'A Quiet Place',
+        year: '2018',
+        genres: ['Drama', 'Horror', 'Sci-Fi'],
+        director: 'John Krasinski',
+        actors: ['Emily Blunt', 'John Krasinski', 'Millicent Simmonds', 'Noah Jupe'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: 'Hushed Rural Sanctum', promptString: 'upstate New York farmhouse, white sand walking paths, golden hour cornfields, acoustic insulation foam walls, warm incandescent lamp glow, breathless silence' },
+            { name: 'Crimson Warning Glow', promptString: 'strings of red incandescent fairy lights glowing across dark farmyard at night, torrential storm rain, high-contrast chiaroscuro emergency illumination' },
+            { name: 'Acoustic Alien Terror', promptString: 'armored extraterrestrial apex predator with fluttering ear plates, subterranean grain silo darkness, industrial metal textures, razor-sharp hearing biology' }
+        ],
+        posterPrompt: "Official movie poster for A Quiet Place (2018), Emily Blunt clutching her face in silent terror inside clawfoot bathtub with blood on floor, string of glowing red lights, 'A QUIET PLACE' bold typography, suspense horror style --ar 2:3"
+    },
+    {
+        id: 'the-descent',
+        title: 'The Descent',
+        year: '2005',
+        genres: ['Adventure', 'Horror'],
+        director: 'Neil Marshall',
+        actors: ['Shauna Macdonald', 'Natalie Mendoza', 'Alex Reid', 'Saskia Mulder'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: 'Claustrophobic Subterranean Flare', promptString: 'pitch-black limestone cavern illuminated solely by sputtering red emergency flares, jagged stalactites, deep inky shadows, suffocating subterranean dread' },
+            { name: 'Night-Vision Green Dread', promptString: 'grainy monochrome night-vision infrared camera viewfinder, emerald green scan lines, pale blind crawler creature crouching on rock behind spelunker' },
+            { name: 'Primal Bloodpool Emergence', promptString: 'survivor emerging coated in thick crimson blood from subterranean bone pool, wild primal eyes, clutching climbing pickaxe, raw visceral survival horror' }
+        ],
+        posterPrompt: "Official movie poster for The Descent (2005), six female spelunkers silhouetted against glowing red flare deep inside monstrous skull-shaped cavern formation, 'THE DESCENT' bold typography, intense claustrophobic horror --ar 2:3"
+    },
+    {
+        id: '28-days-later',
+        title: '28 Days Later',
+        year: '2002',
+        genres: ['Drama', 'Horror', 'Sci-Fi'],
+        director: 'Danny Boyle',
+        actors: ['Cillian Murphy', 'Naomie Harris', 'Christopher Eccleston', 'Megan Burns'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: 'Desolate London Dawn', promptString: 'hauntingly empty London landmarks, deserted Westminster Bridge, abandoned red double-decker buses, early morning golden smog, Canon XL1 miniDV digital video grit' },
+            { name: 'Furious Sprinting Rage', promptString: 'ferocious athletic infected sprinting through dark alleyways, bloodshot eyes weeping red tears, chaotic handheld motion blur, pure frenzied adrenaline' },
+            { name: 'Rainbound Country Manor', promptString: 'fortified English country estate under torrential night thunderstorm, barbed wire and sandbags, military flares cutting through downpour, gothic militarism' }
+        ],
+        posterPrompt: "Official movie poster for 28 Days Later (2002), hazardous biohazard symbol with blood-red background, empty London street with solitary man in hospital scrubs, '28 DAYS LATER' distressed stencil typography, gritty post-apocalyptic horror --ar 2:3"
+    },
+    {
+        id: 'paranormal-activity',
+        title: 'Paranormal Activity',
+        year: '2007',
+        genres: ['Horror', 'Mystery'],
+        director: 'Oren Peli',
+        actors: ['Katie Featherston', 'Micah Sloat', 'Mark Fredrichs', 'Amber Armstrong'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: 'Night-Vision Timecode Surveillance', promptString: 'fixed wide angle master bedroom camera, pale green-tinted night-vision glow, blue digital timecode 02:47:19 AM in corner, unsettling mundane stillness' },
+            { name: 'Suburban Domestic Unease', promptString: 'bright California suburban house during daytime, polished granite countertops, open floor plan, contrast between mundane domesticity and invisible demonic menace' },
+            { name: 'Invisible Force Kinetic', promptString: 'sheets slowly levitating in mid-air above bed, talcum powder on hardwood floor showing three-toed demon footprints, violent door slams, extreme tension' }
+        ],
+        posterPrompt: "Official movie poster for Paranormal Activity (2007), night-vision camera perspective of couple asleep in bed with door slowly swinging open in shadows, digital timecode, 'WHAT HAPPENS WHEN YOU SLEEP?' psychological horror style --ar 2:3"
+    },
+    {
+        id: 'the-babadook',
+        title: 'The Babadook',
+        year: '2014',
+        genres: ['Drama', 'Horror', 'Mystery'],
+        director: 'Jennifer Kent',
+        actors: ['Essie Davis', 'Noah Wiseman', 'Daniel Henshall', 'Hayley McElhinney'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: 'Charcoal Pop-Up German Expressionism', promptString: 'Victorian pop-up book aesthetic, stark charcoal illustrations, deep German Expressionist shadows, jagged paper pop-up silhouette of top-hatted clawed figure' },
+            { name: 'Depressive Suburban Palette', promptString: 'claustrophobic Australian suburban home, muted slate blue, cold ash grey, dreary overcast window light, psychological grief and sleep deprivation' },
+            { name: 'Ceiling Shadow Menace', promptString: 'billowing inky black shadow stretching across high bedroom ceiling like a demonic cloak, glowing white eyes, coat and top hat hovering without form' }
+        ],
+        posterPrompt: "Official movie poster for The Babadook (2014), terrifying pop-up book open on dark wooden floor with giant silhouette of Mr. Babadook in top hat and trench coat towering over screaming mother and child, indie horror masterpiece --ar 2:3"
+    },
+    {
+        id: 'insidious',
+        title: 'Insidious',
+        year: '2010',
+        genres: ['Horror', 'Mystery', 'Thriller'],
+        director: 'James Wan',
+        actors: ['Patrick Wilson', 'Rose Byrne', 'Barbara Hershey', 'Lin Shaye'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: 'The Further Void', promptString: 'surreal astral projection realm, endless rolling black fog, Victorian wooden furniture floating in darkness, single antique red camping lantern beam, eerie limbo' },
+            { name: 'Red-Faced Demon Lair', promptString: 'blood-red illuminated attic workshop, grinding wheel throwing fiery sparks, antique phonograph playing, shadowy clawed demon sharpening metallic talons' },
+            { name: 'Vintage Seance Gas Mask', promptString: '1970s dark living room seance, medium wearing vintage WWI gas mask with speaking hose, candle flames flickering, poltergeist vibration rattling floor' }
+        ],
+        posterPrompt: "Official movie poster for Insidious (2010), young boy with hollow eyes standing in front of dark suburban house with glowing red window in attic, 'IT'S NOT THE HOUSE THAT'S HAUNTED' typography, James Wan supernatural horror style --ar 2:3"
+    },
+    {
+        id: 'sinister',
+        title: 'Sinister',
+        year: '2012',
+        genres: ['Horror', 'Mystery', 'Thriller'],
+        director: 'Scott Derrickson',
+        actors: ['Ethan Hawke', 'Juliet Rylance', 'Fred Dalton Thompson', 'James Ransone'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: 'Super 8 Celluloid Macabre', promptString: 'grainy 1970s Super 8mm celluloid film stock, washed-out faded colors, projector dust and hair artifacts, horrific snuff murder home movie aesthetic' },
+            { name: 'Midnight Study Obsession', promptString: 'dark home office illuminated solely by buzzing 8mm film projector beam, true crime author drinking whiskey, stacks of case files, atmospheric claustrophobia' },
+            { name: 'Bughuul Pagan Entity', promptString: 'ghastly pale pagan deity face with stitched shut mouth and sunken hollow black eye sockets, dark tailored suit, standing motionless in stormy backyard bushes' }
+        ],
+        posterPrompt: "Official movie poster for Sinister (2012), little girl in nightgown painting horrifying demonic face of Bughuul on hallway wall using dripping human blood, 'ONCE YOU SEE HIM, NOTHING CAN SAVE YOU' typography --ar 2:3"
+    },
+    {
+        id: 'the-cabin-in-the-woods',
+        title: 'The Cabin in the Woods',
+        year: '2011',
+        genres: ['Comedy', 'Horror'],
+        director: 'Drew Goddard',
+        actors: ['Kristen Connolly', 'Chris Hemsworth', 'Anna Hutchison', 'Fran Kranz', 'Richard Jenkins'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: 'Deconstructed Slasher Cabin', promptString: 'rustic lakeside wooden cabin, mounted taxidermy animal heads, two-way mirrors, dust motes in tungsten lamp glow, classic 80s horror trope subversion' },
+            { name: 'High-Tech Subterranean Laboratory', promptString: 'fluorescent subterranean control room, pristine white consoles, giant digital monster betting board, surveillance monitors, bureaucratic black comedy' },
+            { name: 'Glass Cube Menagerie Purge', promptString: 'thousands of glowing transparent glass containment cubes suspended in subterranean void holding every horror monster, red purge strobe lights, glorious chaos' }
+        ],
+        posterPrompt: "Official movie poster for The Cabin in the Woods (2011), dilapidated wooden cabin suspended and twisting like an intricate geometric Rubik's cube in dark forest, 'YOU THINK YOU KNOW THE STORY' meta-horror typography --ar 2:3"
+    },
+    {
+        id: 'carrie',
+        title: 'Carrie',
+        year: '1976',
+        genres: ['Horror'],
+        director: 'Brian De Palma',
+        actors: ['Sissy Spacek', 'Piper Laurie', 'Amy Irving', 'William Katt', 'John Travolta'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: 'Prom Night Pig Blood Deluge', promptString: 'high school prom queen in pastel pink dress drenched completely in thick dripping crimson pig blood, wide staring unblinking eyes, terrifying telekinetic fury' },
+            { name: 'Split-Screen 70s Grandeur', promptString: 'Brian De Palma split-screen cinematography, dual perspectives of prom stage and electrical wires sparking, soft 1970s incandescent glow, operatic tragedy' },
+            { name: 'Gothic Religious Repression', promptString: 'dark prayer closet, flickering red glass votive candles, grotesque bleeding Saint Sebastian statue, crucifixes, suffocating religious trauma' }
+        ],
+        posterPrompt: "Official movie poster for Carrie (1976), Sissy Spacek standing frozen on prom stage drenched in vivid red blood with prom queen crown slipping off, gymnasium inferno in background, Brian De Palma classic horror style --ar 2:3"
+    },
+    {
+        id: 'the-mist',
+        title: 'The Mist',
+        year: '2007',
+        genres: ['Horror', 'Sci-Fi'],
+        director: 'Frank Darabont',
+        actors: ['Thomas Jane', 'Marcia Gay Harden', 'Laurie Holden', 'Andre Braugher'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: 'Impenetrable White Fog', promptString: 'dense milky white fog pressing against supermarket plate glass windows, blinding whiteout, shadowy silhouettes of colossal tentacles and winged beasts moving outside' },
+            { name: 'Fluorescent Supermarket Siege', promptString: 'crowded grocery store aisles barricaded with dog food bags and fertilizer, flickering industrial fluorescent bulbs, frantic human mob, apocalyptic dread' },
+            { name: 'Lovecraftian Cosmic Behemoth', promptString: 'hundred-foot-tall six-legged cosmic behemoth striding slowly through mist above tiny stranded SUV, hanging tentacles, ground-shaking scale, awe-inspiring dread' }
+        ],
+        posterPrompt: "Official movie poster for The Mist (2007), supermarket glass storefront at night looking out into thick swirling white fog with colossal tentacled shadow looming above cars, Stephen King cosmic horror style --ar 2:3"
+    },
+    {
+        id: 'the-last-house-on-the-left',
+        title: 'The Last House on the Left',
+        year: '1972',
+        genres: ['Crime', 'Horror', 'Thriller'],
+        director: 'Wes Craven',
+        actors: ['Sandra Peabody', 'Lucy Grantham', 'David Hess', 'Fred J. Lincoln'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: '1970s Raw 16mm Exploitation', promptString: 'raw grainy 16mm film stock, harsh natural daylight, washed-out Connecticut lakeside forest, handheld documentary realism, visceral grindhouse tension' },
+            { name: 'Lakeside Pastoral Dread', promptString: 'peaceful sunlit lake surface, autumn foliage, idyllic cottage porch with warm yellow lamp, contrast between serene nature and horrific human cruelty' },
+            { name: 'Paternal Retribution', promptString: 'dark wood-paneled suburban living room, roaring gas chainsaw spitting blue exhaust smoke, surgical scalpels on silver tray, cold righteous revenge' }
+        ],
+        posterPrompt: "Official movie poster for The Last House on the Left (1972), terrified girl's face reflected in sunglasses with tagline 'TO AVOID FAINTING KEEP REPEATING: IT'S ONLY A MOVIE', Wes Craven raw grindhouse horror style --ar 2:3"
+    },
+    {
+        id: 'house-of-1000-corpses',
+        title: 'House of 1000 Corpses',
+        year: '2003',
+        genres: ['Horror'],
+        director: 'Rob Zombie',
+        actors: ['Sid Haig', 'Bill Moseley', 'Sheri Moon Zombie', 'Karen Black', 'Rainn Wilson'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: 'Carnival Neon Nightmare', promptString: 'garish carnival aesthetic, neon red and electric green lighting, Captain Spaulding smeared clown makeup, retro roadside spookhouse, 16mm film grain, psychedelic dread' },
+            { name: 'Firefly Farmhouse Macabre', promptString: 'dilapidated Victorian farmhouse, taxidermy roadkill, animal bones hanging from ceiling, rotten jack-o\'-lanterns, unhinged southern gothic madness' },
+            { name: 'Dr. Satan Cybernetic Catacombs', promptString: 'subterranean industrial dungeon, sickly green fluorescent tubes, rusty surgical instruments, cybernetic undead surgeon with mechanical breathing apparatus' }
+        ],
+        posterPrompt: "Official movie poster for House of 1000 Corpses (2003), Captain Spaulding in smeared clown makeup and stars-and-stripes top hat grinning menacingly with Firefly family behind him, Rob Zombie neon horror style --ar 2:3"
+    },
+    {
+        id: 'the-devils-rejects',
+        title: 'The Devil\'s Rejects',
+        year: '2005',
+        genres: ['Action', 'Crime', 'Horror'],
+        director: 'Rob Zombie',
+        actors: ['Sid Haig', 'Bill Moseley', 'Sheri Moon Zombie', 'William Forsythe', 'Ken Foree'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: 'Sun-Bleached Texas Grindhouse', promptString: 'scorching 1970s Texas sun, bleach-bypass 35mm film stock, dusty desert highways, battered vintage convertibles, Peckinpah-style outlaw grit' },
+            { name: 'Motel Room Sadism', promptString: 'seedy desert motel, peeling floral wallpaper, slow-moving ceiling fan casting rotating shadows, unsparing visceral tension, sweaty realistic cruelty' },
+            { name: 'Free Bird Roadblock Last Stand', promptString: 'epic slow-motion highway shootout, police roadblock cruisers, muzzle flashes in midday glare, bloodied outlaws raising revolvers with defiant smiles' }
+        ],
+        posterPrompt: "Official movie poster for The Devil's Rejects (2005), Captain Spaulding, Otis Driftwood, and Baby Firefly walking side by side down dusty Texas highway with guns, 'THE DEVIL'S REJECTS' bold metallic typography, 70s outlaw horror style --ar 2:3"
+    },
+    {
+        id: 'halloween-2007',
+        title: 'Halloween',
+        year: '2007',
+        genres: ['Horror'],
+        director: 'Rob Zombie',
+        actors: ['Malcolm McDowell', 'Tyler Mane', 'Sheri Moon Zombie', 'Scout Taylor-Compton', 'Brad Dourif'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: 'Towering Juggernaut Shape', promptString: 'massive 6\'9" hulking Michael Myers in rotted weathered mask and grease-stained denim coveralls, brute physical force, heavy breathing, visceral modern slasher' },
+            { name: 'Haddonfield White Trash Gothic', promptString: 'grimy 1970s Midwestern trailer park, chaotic clutter, autumn leaves blowing across dirt roads, psychological childhood trauma, 35mm gritty film stock' },
+            { name: 'Smith\'s Grove Paper-Mache Cell', promptString: 'sterile sanitarium isolation room with every square inch of white walls covered in hundreds of bizarre hand-crafted paper-mache masks, haunting stillness' }
+        ],
+        posterPrompt: "Official movie poster for Rob Zombie's Halloween (2007), cracked and rotting white Michael Myers mask emerging from total shadow, 'ROB ZOMBIE'S HALLOWEEN' bold blood-red title, brutal modern horror style --ar 2:3"
+    },
+    {
+        id: 'halloween-ii-2009',
+        title: 'Halloween II',
+        year: '2009',
+        genres: ['Horror'],
+        director: 'Rob Zombie',
+        actors: ['Malcolm McDowell', 'Tyler Mane', 'Sheri Moon Zombie', 'Scout Taylor-Compton', 'Brad Dourif'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: 'Feral Hermit Michael', promptString: 'rough Appalachian wilderness, feral bearded giant Michael Myers with half-exposed face beneath torn rotting mask, misty pine woods, raw survivalist fury' },
+            { name: 'White Horse Ethereal Vision', promptString: 'surreal dreamscape, Deborah Myers in flowing white Victorian gown standing beside ethereal white stallion in misty field, haunting psychological psychosis' },
+            { name: 'Rain-Flooded Hospital Nightmare', promptString: 'dark abandoned hospital corridors flooded with storm water, emergency red lights flashing, heavy woodcutter axe smashing through glass partitions' }
+        ],
+        posterPrompt: "Official movie poster for Halloween II (2009), weathered half-rotted Michael Myers mask showing jagged beard beneath, white horse silhouette in fog, 'H2' iconic blood-red title, psychological slasher aesthetic --ar 2:3"
+    },
+    {
+        id: 'the-haunted-world-of-el-superbeasto',
+        title: 'The Haunted World of El Superbeasto',
+        year: '2009',
+        genres: ['Animation', 'Action', 'Comedy', 'Horror'],
+        director: 'Rob Zombie',
+        actors: ['Tom Papa', 'Sheri Moon Zombie', 'Paul Giamatti', 'Rosario Dawson', 'Brian Posehn'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: 'Psychedelic Cartoon Exploitation', promptString: 'hyper-vibrant 2D hand-drawn animation, saturated neon purple and hot pink palette, exaggerated comic book lines, 1970s adult cartoon style reminiscent of Ralph Bakshi' },
+            { name: 'Monsterland Burlesque Castle', promptString: 'campy gothic castle, bubbling test tubes, zombie showgirls, flying rocket hearses, steampunk mad scientist laboratory with neon green lightning' },
+            { name: 'Lucha Libre Comic Violence', promptString: 'masked Mexican wrestler El Superbeasto in golden leopard mask and cape performing flying wrestling moves on cartoon devils, comic-book action bursts' }
+        ],
+        posterPrompt: "Official movie poster for The Haunted World of El Superbeasto (2009), masked luchador El Superbeasto and sexy spy Suzi-X surrounded by cartoon monsters and Dr. Satan, wild psychedelic 70s comic art style --ar 2:3"
+    },
+    {
+        id: 'the-lords-of-salem',
+        title: 'The Lords of Salem',
+        year: '2012',
+        genres: ['Drama', 'Horror', 'Mystery'],
+        director: 'Rob Zombie',
+        actors: ['Sheri Moon Zombie', 'Bruce Davison', 'Jeff Daniel Phillips', 'Ken Foree', 'Patricia Quinn'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: 'Kubrickian Velvet Surrealism', promptString: 'wide symmetrical apartment hallway, deep crimson red walls, slow hypnotic tracking camera, vintage horror posters, dreamlike avant-garde occult dread' },
+            { name: '1692 Folk Witchcraft Ritual', promptString: 'primitive 16mm night footage, nude elderly witches dancing around woodland bonfire in ancient Salem forest, smoke, torchlight, goat skull idols' },
+            { name: 'Neon Cross Leviathan Cathedral', promptString: 'hallucinatory gothic theater, neon red inverted crosses, glowing amber spotlights, baroque lace bridal gown with corpse paint, psychedelic Kenneth Anger aesthetic' }
+        ],
+        posterPrompt: "Official movie poster for The Lords of Salem (2012), Sheri Moon Zombie in gothic white face paint and dreadlocks with ancient witches dancing around bonfire in fog, Rob Zombie psychedelic occult horror style --ar 2:3"
+    },
+    {
+        id: 'thirty-one',
+        title: '31',
+        year: '2016',
+        genres: ['Horror', 'Thriller'],
+        director: 'Rob Zombie',
+        actors: ['Sheri Moon Zombie', 'Jeff Daniel Phillips', 'Lawrence Hilton-Jacobs', 'Richard Brake', 'Malcolm McDowell'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: '1976 Carnie Halloween Grime', promptString: 'Halloween 1976 aesthetic, vintage hippie van, autumn leaves on desolate Texas crossroads, gritty 16mm exploitation film stock, warm vintage grain' },
+            { name: 'Murder World Industrial Labyrinth', promptString: 'sprawling abandoned industrial warehouse, flickering fluorescent cages, steel shipping containers, chains and meat hooks, claustrophobic death arena' },
+            { name: 'Doom-Head Psychotic Menace', promptString: 'Richard Brake as Doom-Head, stark white greasepaint with black clown markings, wielding rusted machete, cold unhinged monologues, blood-spattered walls' }
+        ],
+        posterPrompt: "Official movie poster for 31 (2016), Richard Brake as psychotic clown Doom-Head with bloodied machete grinning in shadows, 'A ROB ZOMBIE FILM: 31' bold yellow typography, brutal survival horror style --ar 2:3"
+    },
+    {
+        id: 'three-from-hell',
+        title: '3 from Hell',
+        year: '2019',
+        genres: ['Action', 'Crime', 'Horror'],
+        director: 'Rob Zombie',
+        actors: ['Sheri Moon Zombie', 'Bill Moseley', 'Richard Brake', 'Sid Haig', 'Danny Trejo'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: 'Day of the Dead Mexican Sun', promptString: 'sun-baked Mexican border town, colorful marigold flowers, Calavera skull face paint, vibrant Day of the Dead banners, dusty adobe courtyards' },
+            { name: 'Outlaw Prison Break Violence', promptString: 'maximum security prison work gang, desert highway shootout, high-caliber assault rifles, heavy bullet hits, gritty modern exploitation cinema' },
+            { name: 'Midnight Motel Courtyard Siege', promptString: 'bullet-riddled desert motel courtyard at midnight, muzzle flashes lighting adobe walls, Baby firing recurve bow from roof, burning cars in firelight' }
+        ],
+        posterPrompt: "Official movie poster for 3 from Hell (2019), Baby Firefly, Otis Driftwood, and Foxy Coltrane in Day of the Dead skull face paint holding guns with flames behind them, Rob Zombie outlaw horror style --ar 2:3"
+    },
+    {
+        id: 'the-munsters-2022',
+        title: 'The Munsters',
+        year: '2022',
+        genres: ['Comedy', 'Family', 'Fantasy', 'Horror'],
+        director: 'Rob Zombie',
+        actors: ['Sheri Moon Zombie', 'Jeff Daniel Phillips', 'Daniel Roebuck', 'Richard Brake', 'Jorge Garcia'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: 'Campy Gothic Technicolor', promptString: 'ultra-saturated neon green, electric purple, and vibrant magenta color palette, campy Transylvanian castle laboratory, bubbling colorful alchemy cauldrons' },
+            { name: 'Classic 1960s Spooky Sitcom', promptString: 'suburban Mockingbird Lane Victorian haunted mansion, spiderweb drapes, coffin-shaped furniture, platform boots, neck bolts, retro comedy warmth' },
+            { name: 'Transylvanian Punk Romance', promptString: 'romantic foggy midnight cemetery date, Herman and Lily holding hands between headstones, neon fog, bats fluttering, whimsical gothic fairy tale' }
+        ],
+        posterPrompt: "Official movie poster for The Munsters (2022), Herman Munster, Lily Munster, and The Count Grandpa standing on porch of 1313 Mockingbird Lane in eye-popping neon green and purple Technicolor, Rob Zombie camp classic --ar 2:3"
+    },
 
     // ==========================================
     // 🦃 THANKSGIVING

@@ -7,9 +7,22 @@ export interface VersionUpdate {
 
 export const versionHistory: VersionUpdate[] = [
     {
+        version: "v3.7.0",
+        title: "The Ultimate Horror Expansion & Rob Zombie Collection",
+        isCurrent: true,
+        changes: [
+            "Horror Category Expansion: Added 22 new horror masterworks for a grand total of 30 iconic films in the dedicated Horror category.",
+            "25 Scenes Standard: Every horror film now features exactly 25 hand-crafted, high-detail Midjourney scene prompts with camera angles, lighting conditions, and dialogue excerpts (750+ total horror scenes).",
+            "Complete Rob Zombie Filmography: Added all 9 Rob Zombie feature films (House of 1000 Corpses, The Devil's Rejects, Halloween 2007, Halloween II 2009, El Superbeasto, The Lords of Salem, 31, 3 from Hell, The Munsters 2022).",
+            "Grindhouse & Exploitation Classics: Added Wes Craven's 1972 boundary-pushing classic The Last House on the Left with raw 16mm grindhouse aesthetics.",
+            "Modern & Psychological Horror Staples: Added The Ring, Rosemary's Baby, A Quiet Place, The Descent, 28 Days Later, Paranormal Activity, The Babadook, Insidious, Sinister, The Cabin in the Woods, Carrie, and The Mist.",
+            "3 Custom Visual Styles Per Film: Bespoke aesthetic presets capturing Rob Zombie's carnival grindhouse neon, 1970s sun-bleached exploitation, and psychological atmospheric dread."
+        ]
+    },
+    {
         version: "v3.6.0",
         title: "Favorites System, On-The-Spot Gemini AI Media Creator & Community Sync",
-        isCurrent: true,
+        isCurrent: false,
         changes: [
             "Favorites System: Favorite any movie, TV series, or video game with a single click. Dedicated Favorites tab with live count badge.",
             "Ask Gemini to Add Media: On-the-spot AI generation tool powered by Google Gemini to create complete film, show, or video game prompt packages.",
