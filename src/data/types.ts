@@ -90,6 +90,16 @@ export interface GameAssets {
     ui?: { name: string; description: string }[];  // HUD elements, menus
 }
 
+export type HolidaySeason =
+    | 'fall'
+    | 'halloween'
+    | 'horror'
+    | 'thanksgiving'
+    | 'winter'
+    | 'christmas'
+    | 'new-years'
+    | 'valentines';
+
 export interface MediaItem {
     id: string;
     title: string;
@@ -102,6 +112,7 @@ export interface MediaItem {
     seasons?: Season[]; // Only for type === 'series'
     posterPrompt?: string; // Prompt to generate the original movie poster
     gameAssets?: GameAssets; // Only for type === 'game' - sprite sheet prompts
+    holiday?: HolidaySeason; // Optional seasonal / holiday category
 }
 
 // Backward compatibility alias if needed, though we should prefer MediaItem

@@ -1,21 +1,32 @@
-import { useState, useMemo, useRef } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import { movieScenes } from './data/scenes';
 import { tvScenes } from './data/tvScenes';
 import { styles as globalStyles } from './data/styles';
 import { movies } from './data/movies';
 import { series } from './data/series';
 import { games } from './data/games';
+import { seasonalMedia } from './data/seasonal';
+import { customMediaList, customScenesRecord } from './data/customMedia';
 import { deployedApps, repoApps, localApps } from './data/projects';
 import {
   Copy, Terminal, Film, Palette, CheckCircle, ChevronDown, ChevronRight, Search, SortAsc,
   Layers, Maximize2, Minimize2, Filter, Dices, Lock, Unlock, Trophy, Grid, X,
   ExternalLink, Shirt, Sword, Car, Rocket, Flame, Gamepad2, Aperture, Map, Music,
-  Heart, Zap, Waves, BarChart3, Skull, Coins, MessageCircle, Video, Citrus, Mail, Info, FileText, User, Image
+  Heart, Zap, Waves, BarChart3, Skull, Coins, MessageCircle, Video, Citrus, Mail, Info, FileText, User, Image,
+  Sparkles
 } from 'lucide-react';
-import type { MediaItem } from './data/types';
+import type { MediaItem, HolidaySeason, Scene } from './data/types';
 import { topMoviesYearly } from './data/topMoviesYearly';
 import { VersionModal } from './components/VersionModal';
 import { versionHistory } from './data/versionHistory';
+import { GeminiAddMediaModal } from './components/GeminiAddMediaModal';
+import {
+  getFavorites,
+  toggleFavorite,
+  loadCommunityMedia,
+  getLocalCommunityMedia,
+  getLocalCommunityScenes
+} from './services/communityMediaService';
 
 const getTopMovieInfo = (title: string, year: string) => {
   const entry = topMoviesYearly.find(y => y.year === year);
@@ -42,7 +53,8 @@ function App() {
   const sectionRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   // Existing State
-  const [appMode, setAppMode] = useState<'movies' | 'tv' | 'games'>('movies');
+  const [appMode, setAppMode] = useState<'movies' | 'tv' | 'games' | 'seasonal' | 'favorites'>('movies');
+  const [selectedHolidayFilter, setSelectedHolidayFilter] = useState<'all' | HolidaySeason>('all');
   const [selectedMovieId, setSelectedMovieId] = useState<string>('top-gun');
   // TV Series State
   const [selectedSeasonId, setSelectedSeasonId] = useState<number>(1);
@@ -87,8 +99,84 @@ function App() {
   const [posterMode, setPosterMode] = useState(false);
   const [posterCopied, setPosterCopied] = useState(false);
 
+  // Community & Favorites State
+  const [communityMedia, setCommunityMedia] = useState<MediaItem[]>(() => getLocalCommunityMedia());
+  const [communityScenes, setCommunityScenes] = useState<Record<string, Scene[]>>(() => getLocalCommunityScenes());
+  const [favorites, setFavorites] = useState<string[]>(() => getFavorites());
+  const [isAddMediaModalOpen, setIsAddMediaModalOpen] = useState(false);
+
+  // Load Community Media on Mount (Sync with Cloud)
+  useEffect(() => {
+    loadCommunityMedia().then(({ media, scenes }) => {
+      if (media && media.length > 0) {
+        setCommunityMedia(media);
+      }
+      if (scenes && Object.keys(scenes).length > 0) {
+        setCommunityScenes(scenes);
+      }
+    });
+  }, []);
+
+  const handleToggleFavorite = (e: React.MouseEvent, id: string) => {
+    e.stopPropagation();
+    const updated = toggleFavorite(id);
+    setFavorites(updated);
+  };
+
+  const handleMediaAdded = (item: MediaItem, scenes: Scene[]) => {
+    setCommunityMedia(prev => [item, ...prev.filter(m => m.id !== item.id)]);
+    setCommunityScenes(prev => ({ ...prev, [item.id]: scenes }));
+    // Auto-favorite the newly added title
+    if (!favorites.includes(item.id)) {
+      const updated = toggleFavorite(item.id);
+      setFavorites(updated);
+    }
+    // Switch to corresponding mode and select
+    if (item.type === 'game') {
+      setAppMode('games');
+    } else if (item.type === 'series') {
+      setAppMode('tv');
+    } else {
+      setAppMode('movies');
+    }
+    setSelectedMovieId(item.id);
+    setSelectedSceneId(null);
+    setSelectedStyleName(null);
+  };
+
+  const dedupeMedia = (items: MediaItem[]): MediaItem[] => {
+    const seen: Record<string, MediaItem> = {};
+    items.forEach(item => {
+      if (!seen[item.id]) seen[item.id] = item;
+    });
+    return Object.values(seen);
+  };
+
+  // Media Groupings including community additions
+  const allMovies = useMemo<MediaItem[]>(() => {
+    const custom = [...customMediaList, ...communityMedia].filter(m => m.type === 'movie');
+    return dedupeMedia([...custom, ...movies]);
+  }, [communityMedia]);
+
+  const allSeries = useMemo<MediaItem[]>(() => {
+    const custom = [...customMediaList, ...communityMedia].filter(m => m.type === 'series');
+    return dedupeMedia([...custom, ...series]);
+  }, [communityMedia]);
+
+  const allGames = useMemo<MediaItem[]>(() => {
+    const custom = [...customMediaList, ...communityMedia].filter(m => m.type === 'game');
+    return dedupeMedia([...custom, ...games]);
+  }, [communityMedia]);
+
   // Unified Media List
-  const allMedia: MediaItem[] = useMemo(() => [...movies, ...series, ...games], []);
+  const allMedia = useMemo<MediaItem[]>(() => {
+    return dedupeMedia([...allMovies, ...allSeries, ...allGames, ...seasonalMedia]);
+  }, [allMovies, allSeries, allGames]);
+
+  // Favorites List
+  const favoriteMedia = useMemo<MediaItem[]>(() => {
+    return allMedia.filter(m => favorites.includes(m.id));
+  }, [allMedia, favorites]);
 
   // Handlers for interactive cards
   const handleQuickCopy = async (e: React.MouseEvent, text: string, type: 'scene' | 'style', id: number | string) => {
@@ -112,13 +200,20 @@ function App() {
   };
 
   const currentMovie = useMemo(() => allMedia.find(m => m.id === selectedMovieId) || allMedia[0], [selectedMovieId, allMedia]);
-  const isChristmas = useMemo(() => currentMovie.genres.includes('Christmas'), [currentMovie]);
+  const isChristmas = useMemo(() => currentMovie.genres.includes('Christmas') || currentMovie.holiday === 'christmas', [currentMovie]);
   const isWar = useMemo(() => currentMovie.genres.includes('War'), [currentMovie]);
+  const isHorror = useMemo(() => currentMovie.holiday === 'horror' || (currentMovie.genres.includes('Horror') && appMode === 'seasonal'), [currentMovie, appMode]);
+  const isHalloween = useMemo(() => currentMovie.holiday === 'halloween' || currentMovie.genres.includes('Halloween'), [currentMovie]);
+  const isFall = useMemo(() => currentMovie.holiday === 'fall' || currentMovie.genres.includes('Fall'), [currentMovie]);
+  const isThanksgiving = useMemo(() => currentMovie.holiday === 'thanksgiving' || currentMovie.genres.includes('Thanksgiving'), [currentMovie]);
+  const isWinter = useMemo(() => currentMovie.holiday === 'winter' || currentMovie.genres.includes('Winter'), [currentMovie]);
+  const isNewYears = useMemo(() => currentMovie.holiday === 'new-years' || currentMovie.genres.includes('New Years'), [currentMovie]);
+  const isValentines = useMemo(() => currentMovie.holiday === 'valentines' || currentMovie.genres.includes('Valentines'), [currentMovie]);
 
   // Scenes Logic - for games, convert gameAssets to scene-like format for SPRITE SHEET GENERATION
   const currentScenes = useMemo(() => {
     if (currentMovie.type === 'series') {
-      return tvScenes[currentMovie.id]?.[selectedSeasonId]?.[selectedEpisodeId] || [];
+      return tvScenes[currentMovie.id]?.[selectedSeasonId]?.[selectedEpisodeId] || communityScenes[currentMovie.id] || customScenesRecord[currentMovie.id] || movieScenes[currentMovie.id] || [];
     }
     if (currentMovie.type === 'game' && currentMovie.gameAssets) {
       // Convert gameAssets to scene-like format for display
@@ -189,8 +284,8 @@ function App() {
 
       return scenes;
     }
-    return movieScenes[selectedMovieId] || [];
-  }, [selectedMovieId, currentMovie, selectedSeasonId, selectedEpisodeId]);
+    return movieScenes[selectedMovieId] || communityScenes[selectedMovieId] || customScenesRecord[selectedMovieId] || [];
+  }, [selectedMovieId, currentMovie, selectedSeasonId, selectedEpisodeId, communityScenes]);
 
   // Combine movie-specific styles with global styles for lookup
   // For games: include styles from ALL games to allow cross-game reimagining
@@ -238,7 +333,7 @@ function App() {
   // --- Filtering & Sorting Logic ---
   const processedMovies = useMemo(() => {
     // Only process MOVIES here for the main list, we will handle series separately
-    let result = [...movies];
+    let result = [...allMovies];
 
     if (searchQuery) {
       const q = searchQuery.toLowerCase();
@@ -259,11 +354,11 @@ function App() {
     });
 
     return result;
-  }, [searchQuery, sortBy, sortOrder]);
+  }, [allMovies, searchQuery, sortBy, sortOrder]);
 
-  const groupedMovies = useMemo(() => {
+  const groupedMovies = useMemo<Record<string, MediaItem[]>>(() => {
     if (groupBy === 'none') return { 'All Movies': processedMovies };
-    const groups: Record<string, typeof movies> = {};
+    const groups: Record<string, MediaItem[]> = {};
     processedMovies.forEach(movie => {
       let keys: string[] = [];
       if (groupBy === 'decade') {
@@ -277,8 +372,25 @@ function App() {
         groups[key].push(movie);
       });
     });
-    return Object.keys(groups).sort().reduce((acc, key) => { acc[key] = groups[key]; return acc; }, {} as Record<string, typeof movies>);
+    return Object.keys(groups).sort().reduce((acc, key) => { acc[key] = groups[key]; return acc; }, {} as Record<string, MediaItem[]>);
   }, [processedMovies, groupBy]);
+
+  const filteredSeasonalMedia = useMemo(() => {
+    let list = seasonalMedia;
+    if (selectedHolidayFilter !== 'all') {
+      list = list.filter(m => m.holiday === selectedHolidayFilter);
+    }
+    if (searchQuery.trim() && appMode === 'seasonal') {
+      const q = searchQuery.toLowerCase();
+      list = list.filter(m =>
+        m.title.toLowerCase().includes(q) ||
+        m.year.includes(q) ||
+        m.director.toLowerCase().includes(q) ||
+        m.genres.some(g => g.toLowerCase().includes(q))
+      );
+    }
+    return list;
+  }, [selectedHolidayFilter, searchQuery, appMode]);
 
 
   const generatedPrompt = useMemo(() => {
@@ -374,15 +486,22 @@ function App() {
     }
   };
 
-  const handleModeSwitch = (mode: 'movies' | 'tv' | 'games') => {
+  const handleModeSwitch = (mode: 'movies' | 'tv' | 'games' | 'seasonal' | 'favorites') => {
     setAppMode(mode);
     // Reset selection when switching modes
     if (mode === 'movies') {
       handleMovieSelect('top-gun');
     } else if (mode === 'tv') {
       handleMovieSelect('mad-men');
-    } else {
+    } else if (mode === 'games') {
       handleMovieSelect('the-last-of-us-part-1');
+    } else if (mode === 'seasonal') {
+      handleMovieSelect('over-the-garden-wall');
+    } else if (mode === 'favorites') {
+      const firstFav = allMedia.find(m => favorites.includes(m.id));
+      if (firstFav) {
+        handleMovieSelect(firstFav.id);
+      }
     }
   };
 
@@ -481,12 +600,97 @@ function App() {
   };
 
   return (
-    <div className={`h-screen w-screen overflow-hidden text-zinc-100 flex flex-col font-sans selection:bg-cyan-500/30 transition-colors duration-700 ${isChristmas ? 'bg-slate-900' : isWar ? 'bg-stone-950' : 'bg-zinc-900'}`}>
+    <div className={`h-screen w-screen overflow-hidden text-zinc-100 flex flex-col font-sans selection:bg-cyan-500/30 transition-colors duration-700 ${
+      (isChristmas || isWinter) ? 'bg-slate-900' :
+      isHorror ? 'bg-neutral-950' :
+      isHalloween ? 'bg-stone-950' :
+      (isFall || isThanksgiving) ? 'bg-stone-900' :
+      isValentines ? 'bg-neutral-950' :
+      isNewYears ? 'bg-slate-950' :
+      isWar ? 'bg-stone-950' : 'bg-zinc-900'
+    }`}>
 
-      {isChristmas && (
+      {(isChristmas || isWinter) && (
         <div className="snow-container pointer-events-none fixed inset-0 z-50 overflow-hidden" aria-hidden="true">
-          {[...Array(12)].map((_, i) => (
+          {[...Array(14)].map((_, i) => (
             <div key={i} className="snowflake">❅</div>
+          ))}
+        </div>
+      )}
+
+      {(isFall || isThanksgiving) && (
+        <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden" aria-hidden="true">
+          {['🍂', '🍁', '🍂', '🍁', '🍂', '🍁', '🍂', '🍁'].map((leaf, i) => (
+            <div
+              key={i}
+              className="autumn-leaf"
+              style={{
+                left: `${(i * 12) + 4}%`,
+                animationDelay: `${i * 1.1}s, ${i * 0.4}s`,
+                fontSize: `${1.2 + (i % 3) * 0.3}em`
+              }}
+            >
+              {leaf}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {isHalloween && (
+        <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden" aria-hidden="true">
+          {['🎃', '👻', '🦇', '🎃', '🦇', '👻'].map((icon, i) => (
+            <div
+              key={i}
+              className="autumn-leaf"
+              style={{
+                left: `${(i * 16) + 5}%`,
+                animationDelay: `${i * 1.4}s, ${i * 0.5}s`,
+                fontSize: `${1.2 + (i % 3) * 0.25}em`,
+                opacity: 0.75
+              }}
+            >
+              {icon}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {isHorror && (
+        <div className="pointer-events-none fixed inset-0 z-40 horror-glow" aria-hidden="true" />
+      )}
+
+      {isValentines && (
+        <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden" aria-hidden="true">
+          {['💖', '💕', '🌹', '💖', '💘', '💕', '🌹'].map((heart, i) => (
+            <div
+              key={i}
+              className="heart-particle"
+              style={{
+                left: `${(i * 14) + 5}%`,
+                animationDelay: `${i * 1.1}s, ${i * 0.4}s`,
+                fontSize: `${1.1 + (i % 3) * 0.3}em`
+              }}
+            >
+              {heart}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {isNewYears && (
+        <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden" aria-hidden="true">
+          {['✨', '🥂', '🎉', '✨', '⭐', '🥂', '✨'].map((sparkle, i) => (
+            <div
+              key={i}
+              className="confetti-particle"
+              style={{
+                left: `${(i * 14) + 3}%`,
+                animationDelay: `${i * 0.8}s, ${i * 0.3}s`,
+                fontSize: `${1.2 + (i % 3) * 0.3}em`
+              }}
+            >
+              {sparkle}
+            </div>
           ))}
         </div>
       )}
@@ -500,11 +704,37 @@ function App() {
       )}
 
       {/* HEADER SECTION */}
-      <header className={`flex-shrink-0 border-b z-50 transition-colors duration-500 ${isWar ? 'bg-stone-900 border-stone-800' : 'bg-zinc-950 border-zinc-800'}`}>
+      <header className={`flex-shrink-0 border-b z-50 transition-colors duration-500 ${
+        isHorror ? 'bg-neutral-950 border-red-900/40' :
+        isHalloween ? 'bg-stone-950 border-orange-900/40' :
+        isChristmas ? 'bg-slate-950 border-slate-800' :
+        isValentines ? 'bg-neutral-950 border-pink-900/40' :
+        isNewYears ? 'bg-slate-950 border-amber-900/40' :
+        isFall || isThanksgiving ? 'bg-stone-950 border-amber-900/40' :
+        isWar ? 'bg-stone-900 border-stone-800' : 'bg-zinc-950 border-zinc-800'
+      }`}>
         <div className="flex items-center justify-between px-6 py-4">
           <div className="flex items-center gap-3">
-            <Film className={`w-8 h-8 ${isChristmas ? 'text-red-500' : isWar ? 'text-orange-600' : 'text-cyan-400'} transition-colors duration-500`} />
-            <h1 className={`text-2xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r ${isChristmas ? 'from-red-500 to-green-500' : isWar ? 'from-orange-500 to-stone-400' : 'from-cyan-400 to-blue-600'}`}>
+            <Film className={`w-8 h-8 ${
+              isChristmas ? 'text-red-500' :
+              isHorror ? 'text-red-600' :
+              isHalloween ? 'text-orange-500' :
+              (isFall || isThanksgiving) ? 'text-amber-500' :
+              isValentines ? 'text-pink-500' :
+              isNewYears ? 'text-yellow-400' :
+              isWinter ? 'text-cyan-300' :
+              isWar ? 'text-orange-600' : 'text-cyan-400'
+            } transition-colors duration-500`} />
+            <h1 className={`text-2xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r ${
+              isChristmas ? 'from-red-500 to-green-500' :
+              isHorror ? 'from-red-600 via-rose-700 to-red-900' :
+              isHalloween ? 'from-orange-500 via-amber-500 to-purple-600' :
+              (isFall || isThanksgiving) ? 'from-amber-500 via-orange-600 to-yellow-600' :
+              isValentines ? 'from-rose-400 via-pink-500 to-red-500' :
+              isNewYears ? 'from-yellow-300 via-amber-400 to-cyan-300' :
+              isWinter ? 'from-sky-300 to-cyan-500' :
+              isWar ? 'from-orange-500 to-stone-400' : 'from-cyan-400 to-blue-600'
+            }`}>
               CINEMA ARCHIVE
             </h1>
             <button
@@ -517,6 +747,16 @@ function App() {
           </div>
 
           <div className="flex items-center gap-3">
+            {/* Ask Gemini to Add Film Button */}
+            <button
+              onClick={() => setIsAddMediaModalOpen(true)}
+              className="px-3 py-1.5 rounded-lg font-bold text-xs uppercase tracking-wider bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-black flex items-center gap-1.5 shadow-lg shadow-cyan-500/20 transition-all cursor-pointer"
+              title="Ask Gemini to add a movie, TV show, or video game on the spot"
+            >
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Ask Gemini</span>
+            </button>
+
             {/* Poster Mode Toggle */}
             <button
               onClick={() => setPosterMode(!posterMode)}
@@ -585,6 +825,19 @@ function App() {
               >
                 Video Games
               </button>
+              <button
+                onClick={() => handleModeSwitch('seasonal')}
+                className={`text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full transition-all flex items-center gap-1.5 ${appMode === 'seasonal' ? 'bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 text-white shadow-md shadow-orange-900/30' : 'text-zinc-600 hover:text-zinc-400'}`}
+              >
+                <span>🍂 Holiday & Seasons 🎃</span>
+              </button>
+              <button
+                onClick={() => handleModeSwitch('favorites')}
+                className={`text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full transition-all flex items-center gap-1.5 ${appMode === 'favorites' ? 'bg-rose-950 text-rose-300 border border-rose-800/80 shadow-md shadow-rose-950/40' : 'text-zinc-600 hover:text-rose-400'}`}
+              >
+                <Heart className={`w-3 h-3 ${favorites.length > 0 ? 'fill-rose-500 text-rose-500' : ''}`} />
+                <span>Favorites ({favorites.length})</span>
+              </button>
             </div>
           </div>
 
@@ -602,6 +855,48 @@ function App() {
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="bg-zinc-950 border border-zinc-800 rounded-md pl-8 pr-3 py-1.5 text-xs text-zinc-200 focus:outline-none focus:border-cyan-500 w-48 placeholder-zinc-600"
                   />
+                </div>
+              )}
+
+              {appMode === 'seasonal' && (
+                <div className="flex items-center gap-3 flex-wrap">
+                  <div className="relative group">
+                    <Search className="absolute left-2.5 top-2 w-3.5 h-3.5 text-zinc-500 group-focus-within:text-amber-400" />
+                    <input
+                      type="text"
+                      placeholder="Search seasonal & horror..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="bg-zinc-950 border border-zinc-800 rounded-md pl-8 pr-3 py-1.5 text-xs text-zinc-200 focus:outline-none focus:border-amber-500 w-48 placeholder-zinc-600"
+                    />
+                  </div>
+                  <div className="h-4 w-px bg-zinc-800"></div>
+                  <div className="flex items-center gap-1.5 overflow-x-auto py-1">
+                    {([
+                      { id: 'all' as const, label: 'All', icon: '✨' },
+                      { id: 'fall' as const, label: 'Fall', icon: '🍂' },
+                      { id: 'halloween' as const, label: 'Halloween', icon: '🎃' },
+                      { id: 'horror' as const, label: 'Horror', icon: '🩸' },
+                      { id: 'thanksgiving' as const, label: 'Thanksgiving', icon: '🦃' },
+                      { id: 'winter' as const, label: 'Winter', icon: '❄️' },
+                      { id: 'christmas' as const, label: 'Christmas', icon: '🎄' },
+                      { id: 'new-years' as const, label: 'New Year\'s Eve', icon: '🥂' },
+                      { id: 'valentines' as const, label: 'Valentine\'s Day', icon: '💖' },
+                    ] as { id: HolidaySeason | 'all'; label: string; icon: string }[]).map(cat => (
+                      <button
+                        key={cat.id}
+                        onClick={() => setSelectedHolidayFilter(cat.id)}
+                        className={`text-[11px] font-bold px-2.5 py-1 rounded-full whitespace-nowrap transition-all flex items-center gap-1 border ${
+                          selectedHolidayFilter === cat.id
+                            ? 'bg-amber-500/20 text-amber-300 border-amber-500/60 shadow-[0_0_10px_rgba(245,158,11,0.2)]'
+                            : 'bg-zinc-950/60 text-zinc-400 border-zinc-800 hover:border-zinc-700 hover:text-zinc-200'
+                        }`}
+                      >
+                        <span>{cat.icon}</span>
+                        <span>{cat.label}</span>
+                      </button>
+                    ))}
+                  </div>
                 </div>
               )}
               {appMode === 'movies' && (
@@ -668,14 +963,60 @@ function App() {
           {/* Movie Grid */}
           <div className="px-6 py-4 overflow-x-auto pb-6 custom-scrollbar">
             <div className="flex gap-6">
+              {/* FAVORITES GRID */}
+              {appMode === 'favorites' && (
+                <div className="flex-shrink-0 flex flex-col gap-2 w-full">
+                  {favoriteMedia.length === 0 ? (
+                    <div className="flex flex-col items-center justify-center py-6 text-zinc-500 gap-2 w-full">
+                      <Heart className="w-8 h-8 text-zinc-700" />
+                      <p className="text-sm font-bold text-zinc-300">No Favorites Saved Yet</p>
+                      <p className="text-xs text-zinc-500 max-w-md text-center">
+                        Click the heart icon on any movie, TV show, or video game to add it to your favorites list, or click &quot;Ask Gemini&quot; to generate a brand new title!
+                      </p>
+                    </div>
+                  ) : (
+                    <div className="flex gap-3">
+                      {favoriteMedia.map(item => {
+                        const typeBadge = item.type === 'game' ? 'Game' : item.type === 'series' ? 'Series' : 'Movie';
+                        return (
+                          <button
+                            key={item.id}
+                            onClick={() => handleMovieSelect(item.id)}
+                            className={`
+                              flex-shrink-0 whitespace-nowrap px-5 py-3 rounded-lg text-sm font-bold transition-all duration-200 border relative overflow-hidden w-[190px] text-left
+                              ${selectedMovieId === item.id
+                                ? 'bg-rose-500/15 border-rose-500 text-rose-300 shadow-[0_0_15px_rgba(244,63,94,0.25)] scale-105 z-10'
+                                : 'bg-zinc-800/80 border-zinc-700 text-zinc-400 hover:border-zinc-500 hover:text-zinc-200 hover:bg-zinc-800'}
+                            `}
+                          >
+                            <div className="flex flex-col items-start gap-1 w-full overflow-hidden">
+                              <span className="truncate w-full pr-5">{item.title}</span>
+                              <div className="text-[10px] font-mono opacity-60 font-normal flex justify-between w-full">
+                                <span>{item.year}</span>
+                                <span className="opacity-80 uppercase text-[9px] px-1.5 py-0.2 rounded bg-zinc-900 border border-zinc-700/50">{typeBadge}</span>
+                              </div>
+                            </div>
+                            <button
+                              onClick={(e) => handleToggleFavorite(e, item.id)}
+                              className="absolute top-1.5 right-1.5 p-1 rounded-full hover:bg-zinc-700/80 transition-colors z-20 text-rose-500"
+                              title="Remove from Favorites"
+                            >
+                              <Heart className="w-3.5 h-3.5 fill-rose-500" />
+                            </button>
+                            {selectedMovieId === item.id && (<div className="absolute inset-0 bg-gradient-to-r from-rose-500/10 to-transparent pointer-events-none"></div>)}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
+              )}
+
               {/* TV SERIES GRID */}
               {appMode === 'tv' && (
                 <div className="flex-shrink-0 flex flex-col gap-2 w-full">
-                  {/* <h3 className="text-xs font-bold text-zinc-500 uppercase tracking-widest pl-1 border-b border-zinc-800 pb-1 mb-1 whitespace-nowrap flex items-center gap-2">
-                        <Tv className="w-3 h-3" /> TV Series
-                    </h3> */}
                   <div className="flex gap-3">
-                    {series.map(s => (
+                    {allSeries.map(s => (
                       <button
                         key={s.id}
                         onClick={() => handleMovieSelect(s.id)}
@@ -687,12 +1028,19 @@ function App() {
                             `}
                       >
                         <div className="flex flex-col items-start gap-1 w-full overflow-hidden">
-                          <span className="truncate w-full">{s.title}</span>
+                          <span className="truncate w-full pr-5">{s.title}</span>
                           <span className="text-[10px] font-mono opacity-50 font-normal flex justify-between w-full">
                             <span>{s.year}</span>
                             <span className="opacity-75">Series</span>
                           </span>
                         </div>
+                        <button
+                          onClick={(e) => handleToggleFavorite(e, s.id)}
+                          className="absolute top-1.5 right-1.5 p-1 rounded-full hover:bg-zinc-700/80 transition-colors z-20"
+                          title={favorites.includes(s.id) ? "Remove from Favorites" : "Add to Favorites"}
+                        >
+                          <Heart className={`w-3.5 h-3.5 ${favorites.includes(s.id) ? 'fill-rose-500 text-rose-500' : 'text-zinc-500 hover:text-rose-400'}`} />
+                        </button>
                         {selectedMovieId === s.id && (<div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-transparent pointer-events-none"></div>)}
                       </button>
                     ))}
@@ -704,7 +1052,7 @@ function App() {
               {appMode === 'games' && (
                 <div className="flex-shrink-0 flex flex-col gap-2 w-full">
                   <div className="flex gap-3">
-                    {games.map(g => (
+                    {allGames.map(g => (
                       <button
                         key={g.id}
                         onClick={() => handleMovieSelect(g.id)}
@@ -716,15 +1064,84 @@ function App() {
                             `}
                       >
                         <div className="flex flex-col items-start gap-1 w-full overflow-hidden">
-                          <span className="truncate w-full">{g.title}</span>
+                          <span className="truncate w-full pr-5">{g.title}</span>
                           <span className="text-[10px] font-mono opacity-50 font-normal flex justify-between w-full">
                             <span>{g.year}</span>
                             <span className="opacity-75">Game</span>
                           </span>
                         </div>
+                        <button
+                          onClick={(e) => handleToggleFavorite(e, g.id)}
+                          className="absolute top-1.5 right-1.5 p-1 rounded-full hover:bg-zinc-700/80 transition-colors z-20"
+                          title={favorites.includes(g.id) ? "Remove from Favorites" : "Add to Favorites"}
+                        >
+                          <Heart className={`w-3.5 h-3.5 ${favorites.includes(g.id) ? 'fill-rose-500 text-rose-500' : 'text-zinc-500 hover:text-rose-400'}`} />
+                        </button>
                         {selectedMovieId === g.id && (<div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-transparent pointer-events-none"></div>)}
                       </button>
                     ))}
+                  </div>
+                </div>
+              )}
+
+              {/* SEASONAL & HOLIDAYS GRID */}
+              {appMode === 'seasonal' && (
+                <div className="flex-shrink-0 flex flex-col gap-2 w-full">
+                  <div className="flex gap-3">
+                    {filteredSeasonalMedia.map(item => {
+                      const holidayBadgeColor =
+                        item.holiday === 'horror' ? 'text-red-400 bg-red-950/50 border-red-800/40' :
+                        item.holiday === 'halloween' ? 'text-orange-400 bg-orange-950/50 border-orange-800/40' :
+                        item.holiday === 'fall' ? 'text-amber-400 bg-amber-950/50 border-amber-800/40' :
+                        item.holiday === 'thanksgiving' ? 'text-yellow-400 bg-yellow-950/50 border-yellow-800/40' :
+                        item.holiday === 'winter' ? 'text-cyan-300 bg-cyan-950/50 border-cyan-800/40' :
+                        item.holiday === 'christmas' ? 'text-emerald-400 bg-emerald-950/50 border-emerald-800/40' :
+                        item.holiday === 'new-years' ? 'text-yellow-300 bg-amber-950/50 border-yellow-800/40' :
+                        'text-pink-400 bg-pink-950/50 border-pink-800/40';
+
+                      const holidayIcon =
+                        item.holiday === 'horror' ? '🩸' :
+                        item.holiday === 'halloween' ? '🎃' :
+                        item.holiday === 'fall' ? '🍂' :
+                        item.holiday === 'thanksgiving' ? '🦃' :
+                        item.holiday === 'winter' ? '❄️' :
+                        item.holiday === 'christmas' ? '🎄' :
+                        item.holiday === 'new-years' ? '🥂' : '💖';
+
+                      return (
+                        <button
+                          key={item.id}
+                          onClick={() => handleMovieSelect(item.id)}
+                          className={`
+                            flex-shrink-0 whitespace-nowrap px-5 py-3 rounded-lg text-sm font-bold transition-all duration-200 border relative overflow-hidden w-[205px] text-left
+                            ${selectedMovieId === item.id
+                              ? 'bg-amber-500/15 border-amber-500 text-amber-300 shadow-[0_0_15px_rgba(245,158,11,0.25)] scale-105 z-10'
+                              : 'bg-zinc-800/80 border-zinc-700 text-zinc-400 hover:border-zinc-500 hover:text-zinc-200 hover:bg-zinc-800'}
+                          `}
+                        >
+                          <div className="flex flex-col items-start gap-1 w-full overflow-hidden">
+                            <span className="truncate w-full pr-5">{item.title}</span>
+                            <div className="text-[10px] font-mono flex justify-between items-center w-full">
+                              <span className="opacity-60">{item.year}</span>
+                              <span className={`text-[9px] uppercase px-1.5 py-0.5 rounded border ${holidayBadgeColor} flex items-center gap-1 font-semibold`}>
+                                <span>{holidayIcon}</span>
+                                <span>{item.holiday}</span>
+                              </span>
+                            </div>
+                          </div>
+                          <button
+                            onClick={(e) => handleToggleFavorite(e, item.id)}
+                            className="absolute top-1.5 right-1.5 p-1 rounded-full hover:bg-zinc-700/80 transition-colors z-20"
+                            title={favorites.includes(item.id) ? "Remove from Favorites" : "Add to Favorites"}
+                          >
+                            <Heart className={`w-3.5 h-3.5 ${favorites.includes(item.id) ? 'fill-rose-500 text-rose-500' : 'text-zinc-500 hover:text-rose-400'}`} />
+                          </button>
+                          {selectedMovieId === item.id && (
+                            <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-transparent pointer-events-none"></div>
+                          )}
+                        </button>
+                      );
+                    })}
                   </div>
                 </div>
               )}
@@ -751,17 +1168,24 @@ function App() {
                         `}
                       >
                         <div className="flex flex-col items-start gap-1 w-full overflow-hidden">
-                          <span className="truncate w-full pr-4">{movie.title}</span>
+                          <span className="truncate w-full pr-9">{movie.title}</span>
                           <span className="text-[10px] font-mono opacity-50 font-normal flex justify-between w-full">
                             <span>{movie.year}</span>
                             <span className="opacity-75">{movie.director.split(' ')[0]}</span>
                           </span>
                         </div>
                         {getTopMovieInfo(movie.title, movie.year) && (
-                          <div className="absolute top-1 right-1" title={`Top Office: ${getTopMovieInfo(movie.title, movie.year)}`}>
+                          <div className="absolute top-1.5 right-7" title={`Top Office: ${getTopMovieInfo(movie.title, movie.year)}`}>
                             <Trophy className="w-3 h-3 text-yellow-500/80" />
                           </div>
                         )}
+                        <button
+                          onClick={(e) => handleToggleFavorite(e, movie.id)}
+                          className="absolute top-1.5 right-1.5 p-1 rounded-full hover:bg-zinc-700/80 transition-colors z-20"
+                          title={favorites.includes(movie.id) ? "Remove from Favorites" : "Add to Favorites"}
+                        >
+                          <Heart className={`w-3.5 h-3.5 ${favorites.includes(movie.id) ? 'fill-rose-500 text-rose-500' : 'text-zinc-500 hover:text-rose-400'}`} />
+                        </button>
                         {selectedMovieId === movie.id && (<div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-transparent pointer-events-none"></div>)}
                       </button>
                     ))}
@@ -791,7 +1215,16 @@ function App() {
                   <Film className="w-3 h-3 text-cyan-400" />
                   Selecting Scenes For:
                 </h2>
-                <span className="text-lg font-bold text-zinc-100 mt-1 truncate max-w-[300px]">{currentMovie.title}</span>
+                <div className="flex items-center gap-2 mt-1">
+                  <span className="text-lg font-bold text-zinc-100 truncate max-w-[300px]">{currentMovie.title}</span>
+                  <button
+                    onClick={(e) => handleToggleFavorite(e, currentMovie.id)}
+                    className="p-1 rounded-full hover:bg-zinc-800 transition-colors"
+                    title={favorites.includes(currentMovie.id) ? "Remove from Favorites" : "Add to Favorites"}
+                  >
+                    <Heart className={`w-4 h-4 transition-transform hover:scale-110 ${favorites.includes(currentMovie.id) ? 'fill-rose-500 text-rose-500' : 'text-zinc-500 hover:text-rose-400'}`} />
+                  </button>
+                </div>
               </div>
 
               <div className="flex items-center gap-1">
@@ -1608,6 +2041,11 @@ function App() {
         </div>
       </div>
       <VersionModal isOpen={isVersionModalOpen} onClose={() => setIsVersionModalOpen(false)} />
+      <GeminiAddMediaModal
+        isOpen={isAddMediaModalOpen}
+        onClose={() => setIsAddMediaModalOpen(false)}
+        onMediaAdded={handleMediaAdded}
+      />
     </div>
   );
 }

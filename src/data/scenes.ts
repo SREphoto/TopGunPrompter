@@ -228,6 +228,23 @@ import {
     civilWarScenes, furiosaScenes, theHoldoversScenes, killersFlowerMoonScenes, monkeyManScenes
 } from './scenes/missingScenes2';
 
+import {
+    overTheGardenWallScenes, autumnInNewYorkScenes, fantasticMrFoxScenes, gilmoreGirlsAutumnScenes,
+    greatPumpkinCharlieBrownScenes, hocusPocusScenes, beetlejuiceScenes, simpsonsTreehouseOfHorrorScenes,
+    trickRTreatScenes, casperScenes, coralineScenes, monsterHouseScenes,
+    fridayThe13thScenes, texasChainSawMassacreScenes, hereditaryScenes, theConjuringScenes,
+    sawScenes, childsPlayScenes, nightOfTheLivingDeadScenes, it2017Scenes,
+    charlieBrownThanksgivingScenes, planesTrainsAutomobilesScenes, friendsThanksgivingScenes,
+    addamsFamilyValuesScenes, piecesOfAprilScenes,
+    groundhogDayScenes, snowpiercerScenes, southParkAsspenScenes, baltoScenes,
+    charlieBrownChristmasScenes, rudolphRedNosedReindeerScenes, frostyTheSnowmanScenes,
+    howTheGrinchStoleChristmasAnimatedScenes, aChristmasCarol1984Scenes, homeAlone2Scenes,
+    whenHarryMetSallyNYEScenes, newYearsEveMovieScenes, thePoseidonAdventureScenes,
+    futuramaSpacePilot3000Scenes, tradingPlacesNYEScenes,
+    beMyValentineCharlieBrownScenes, simpsonsILoveLisaScenes, myBloodyValentineScenes,
+    beforeSunriseScenes, tenThingsIHateAboutYouScenes, valentinesDayMovieScenes
+} from './scenes/seasonalScenes';
+
 export const movieScenes: Record<string, Scene[]> = {
     'top-gun': topGunScenes,
     'interview-vampire': interviewVampireScenes,
@@ -587,4 +604,68 @@ export const movieScenes: Record<string, Scene[]> = {
     'the-holdovers': theHoldoversScenes,
     'killers-flower-moon': killersFlowerMoonScenes,
     'monkey-man': monkeyManScenes,
+
+    // 🍂 Fall
+    'over-the-garden-wall': overTheGardenWallScenes,
+    'autumn-in-new-york': autumnInNewYorkScenes,
+    'fantastic-mr-fox': fantasticMrFoxScenes,
+    'gilmore-girls-autumn': gilmoreGirlsAutumnScenes,
+
+    // 🎃 Halloween
+    'great-pumpkin-charlie-brown': greatPumpkinCharlieBrownScenes,
+    'hocus-pocus': hocusPocusScenes,
+    'beetlejuice': beetlejuiceScenes,
+    'simpsons-treehouse-horror-v': simpsonsTreehouseOfHorrorScenes,
+    'trick-r-treat': trickRTreatScenes,
+    'casper': casperScenes,
+    'coraline': coralineScenes,
+    'monster-house': monsterHouseScenes,
+
+    // 🩸 Horror (Dedicated Category)
+    'friday-the-13th': fridayThe13thScenes,
+    'the-texas-chain-saw-massacre': texasChainSawMassacreScenes,
+    'a-nightmare-on-elm-street': nightmareOnElmStreetScenes,
+    'halloween-1978': halloweenExpandedScenes,
+    'hereditary': hereditaryScenes,
+    'the-conjuring': theConjuringScenes,
+    'saw': sawScenes,
+    'childs-play': childsPlayScenes,
+    'night-of-the-living-dead': nightOfTheLivingDeadScenes,
+    'it-2017': it2017Scenes,
+
+    // 🦃 Thanksgiving
+    'charlie-brown-thanksgiving': charlieBrownThanksgivingScenes,
+    'planes-trains-and-automobiles': planesTrainsAutomobilesScenes,
+    'friends-thanksgiving': friendsThanksgivingScenes,
+    'addams-family-values': addamsFamilyValuesScenes,
+    'pieces-of-april': piecesOfAprilScenes,
+
+    // ❄️ Winter
+    'groundhog-day': groundhogDayScenes,
+    'snowpiercer': snowpiercerScenes,
+    'south-park-asspen': southParkAsspenScenes,
+    'balto': baltoScenes,
+
+    // 🎄 Christmas
+    'charlie-brown-christmas': charlieBrownChristmasScenes,
+    'rudolph-red-nosed-reindeer': rudolphRedNosedReindeerScenes,
+    'frosty-the-snowman': frostyTheSnowmanScenes,
+    'how-the-grinch-stole-christmas-1966': howTheGrinchStoleChristmasAnimatedScenes,
+    'a-christmas-carol-1984': aChristmasCarol1984Scenes,
+    'home-alone-2': homeAlone2Scenes,
+
+    // 🥂 New Year's Eve
+    'when-harry-met-sally-nye': whenHarryMetSallyNYEScenes,
+    'new-years-eve-movie': newYearsEveMovieScenes,
+    'the-poseidon-adventure': thePoseidonAdventureScenes,
+    'futurama-space-pilot-3000': futuramaSpacePilot3000Scenes,
+    'trading-places-nye': tradingPlacesNYEScenes,
+
+    // 💖 Valentine's Day
+    'be-my-valentine-charlie-brown': beMyValentineCharlieBrownScenes,
+    'simpsons-i-love-lisa': simpsonsILoveLisaScenes,
+    'my-bloody-valentine': myBloodyValentineScenes,
+    'before-sunrise': beforeSunriseScenes,
+    'ten-things-i-hate-about-you': tenThingsIHateAboutYouScenes,
+    'valentines-day-movie': valentinesDayMovieScenes,
 };

@@ -7,9 +7,34 @@ export interface VersionUpdate {
 
 export const versionHistory: VersionUpdate[] = [
     {
+        version: "v3.6.0",
+        title: "Favorites System, On-The-Spot Gemini AI Media Creator & Community Sync",
+        isCurrent: true,
+        changes: [
+            "Favorites System: Favorite any movie, TV series, or video game with a single click. Dedicated Favorites tab with live count badge.",
+            "Ask Gemini to Add Media: On-the-spot AI generation tool powered by Google Gemini to create complete film, show, or video game prompt packages.",
+            "Complete Media Package Generation: Generates official metadata, director/studio, cast, genres, 3-5 unique visual styles, 5-10 iconic scenes, and official poster art prompts.",
+            "Global Community Persistence: Multi-tiered sync across cloud storage, local Vite dev server auto-writing, and local cache so added media is saved and accessible for everyone.",
+            "Manual Title Creator: Comprehensive manual entry tab for authors wanting to craft their own custom titles, scenes, and visual styles.",
+            "Intelligent Fallback Engine: Built-in cinematic prompt generator that works seamlessly even without an API key or offline."
+        ]
+    },
+    {
+        version: "v3.5.0",
+        title: "The Seasonal, Holiday & Horror Mega-Expansion",
+        isCurrent: false,
+        changes: [
+            "Seasonal & Holiday Hub: Added a dedicated top-level mode for Fall, Halloween, Horror, Thanksgiving, Winter, Christmas, New Year's Eve, and Valentine's Day.",
+            "Dedicated Horror Category: Separate first-class category featuring iconic slashers and horror masterpieces (Friday the 13th, A Nightmare on Elm Street, Texas Chain Saw Massacre, Halloween, Saw, The Conjuring, Hereditary, Night of the Living Dead, IT, Child's Play) alongside family Halloween and cartoon classics.",
+            "48 Curated Titles: Extensive coverage of seasonal films, beloved animated specials (Charlie Brown specials, The Simpsons Treehouse of Horror & I Love Lisa, Over the Garden Wall, Rankin/Bass stop-motion classics), and cozy holiday favorites.",
+            "Tailored Midjourney Styles & Scenes: Added rich visual style presets (e.g., Unknown Woods, Wes Anderson Autumn, 80s Slasher Gritty VHS, Rankin/Bass Animagic, 90s Rom-Com Golden Glow) and handcrafted scene prompts for every seasonal title.",
+            "Atmospheric UI Particle FX: Dynamic theme effects with floating autumn leaves, falling snow, festive confetti, glowing hearts, and blood-red horror atmospheric lighting."
+        ]
+    },
+    {
         version: "v3.4.0",
         title: "The Midjourney V8 & V8.1 Upgrade",
-        isCurrent: true,
+        isCurrent: false,
         changes: [
             "V8 & V8.1 Engine: Switched prompt generator from keyword clusters to natural-language prose with explicit lighting definitions.",
             "Prompt Only Mode: Added ability to generate raw prose without technical parameters.",

@@ -2158,4 +2158,4 @@ I will treat Video Games similarly to Movies for now (flat structure of styles),
 - Note: Games might not have "scenes" in the same way TV shows do (Season/Episode), or they might just use the "movie" structure (flat list of scenes or styles). We will check the `games.ts` structure to match `Movie` (flat structure) unless we want "Levels/Chapters". For now, we'll treat them like Movies (flat structure) as it's simpler, or we can use the `seasons` field for "Chapters". Let's stick to the Movie (flat) structure for simplicity unless the user requested otherwise. _(games, scenes, shows)_
 
 ---
-_Last updated: 2026-05-04T19:41:56.386Z_
+_Last updated: 2026-05-05T12:25:26.267Z_
