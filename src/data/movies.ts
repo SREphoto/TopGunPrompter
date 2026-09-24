@@ -1197,9 +1197,11 @@ export const movies: Movie[] = [
         actors: ['Chevy Chase', 'Beverly D\'Angelo', 'Randy Quaid'],
         type: 'movie',
         styles: [
-            { name: '25,000 Lights', promptString: 'blinding lens flare, extreme brightness, suburban night, glowing halo, electrical sparks, comedic excess' },
-            { name: 'Attic Memories', promptString: 'dust motes, shafts of light, old film projector look, nostalgic warmth, sentimental close up' },
-            { name: 'Squirrel Chaos', promptString: 'motion blur, destruction, debris flying, wide angle distortion, chaotic energy, messy interior' }
+            { name: '25,000 Blinding Bulbs', promptString: 'blinding incandescent lens flare, extreme suburban night illumination, power grid overload, glowing halos, electrical sparks, holiday comedy excess' },
+            { name: 'Cousin Eddie Driveway Grit', promptString: 'snowy morning driveway, rusty 1970s RV exhaust, short white bathrobe, flap ear cap, holding sewer hose with beer can, hilarious blue-collar suburban chaos' },
+            { name: 'Griswold Attic Nostalgia', promptString: 'dust motes floating in attic sunbeams, 8mm projector light beam, velvet gloves, vintage family home movie warmth, sentimental emotional glow' },
+            { name: 'Dry Turkey & Squirrel Mayhem', promptString: 'exploding dry roasted turkey dust cloud, rabid squirrel leaping from Christmas tree branches, women screaming on dining chairs, motion blur, chaotic holiday dinner' },
+            { name: 'Moose Mug Eggnog Warmth', promptString: 'glass Wally World antler moose mugs filled with eggnog, roaring stone fireplace hearth, loud 80s holiday sweaters, festive family camaraderie' }
         ],
         posterPrompt: "Official movie poster for National Lampoon's Christmas Vacation (1989), Chevy Chase tangled in Christmas lights on roof, Griswold house lit up, 'CHRISTMAS VACATION' title, holiday comedy style --ar 2:3"
     },
@@ -1242,9 +1244,11 @@ export const movies: Movie[] = [
         actors: ['Peter Billingsley', 'Melinda Dillon', 'Darren McGavin'],
         type: 'movie',
         styles: [
-            { name: 'Leg Lamp', promptString: 'soft glow of fringe, stocking texture, fishnet, living room window, warm nostalgic lighting, obsession' },
-            { name: 'Red Ryder BB', promptString: 'dream sequence, heroic pose, cowboy aesthetic, soft vignette, childhood fantasy' },
-            { name: 'Frozen Pole', promptString: 'cold winter grey, playground texture, close up on tongue, panic, icy metal, comedic framing' }
+            { name: 'Leg Lamp Amber Glow', promptString: 'soft golden-amber glow through gold fringe lampshade, real fishnet stocking on mannequin leg, bay window reflection in snow, eccentric 1940s Midwestern domestic pride' },
+            { name: 'Red Ryder Cowboy Fantasy', promptString: 'sepia-toned vintage western vignette, heroic pose, leather chaps, lever-action air rifle with stock compass, cowboy hat, childhood dream sequence' },
+            { name: 'Frozen Flagpole Schoolyard', promptString: 'bleak overcast Midwestern winter sky, icy iron flagpole, frosted breath, wool scarves and galoshes, playground panic, triple dog dare tension' },
+            { name: 'Higbee\'s Holiday Wonder', promptString: 'illuminated department store window at night, vintage animatronic elves, toy trains, falling snowflakes on glass, wide-eyed childhood reverie, 1940 Technicolor warmth' },
+            { name: 'Pink Nightmare Humiliation', promptString: 'full-body fleece pink bunny pajamas, oversized floppy bunny ears, mortified boy on wooden stairs, amused parents, warm nostalgic holiday living room' }
         ],
         posterPrompt: "Official movie poster for A Christmas Story (1983), Ralphie in pink bunny suit and Red Ryder BB gun, leg lamp, 'A CHRISTMAS STORY' title, nostalgic holiday comedy style --ar 2:3"
     },
@@ -2009,9 +2013,11 @@ export const movies: Movie[] = [
         actors: ['Roy Scheider', 'Robert Shaw', 'Richard Dreyfuss'],
         type: 'movie',
         styles: [
-            { name: 'Dolly Zoom Beach', promptString: 'beach chair, sudden realization, background compression, panic, sunny day, heat' },
-            { name: 'Orca Boat', promptString: 'cramped cabin, singing, swaying lantern, yellow light, night sea, camaraderie, beer cans' },
-            { name: 'Barrel Chase', promptString: 'yellow barrels on water, ocean surface, speed, harpoon, salt spray, relentless pursuit' }
+            { name: 'Dolly Zoom Vertigo Panic', promptString: 'Spielbergian zolly shot, background warping while foreground zooms, intense facial realization, blinding sunny beach, summer panic, Panavision 35mm anamorphic' },
+            { name: 'Orca Cabin Sea-Dog Grit', promptString: 'cramped wooden boat cabin interior, swinging yellow kerosene lantern, deep shadows, beer cans, weathered maritime textures, Robert Shaw storytelling, intimate camaraderie' },
+            { name: 'Yellow Barrel Ocean Pursuit', promptString: 'bright yellow wooden flotation barrels skimming across choppy deep blue Atlantic waves, white salt spray, harpoon tension, relentless unseen underwater behemoth' },
+            { name: 'Submerged Scuba Apex Dread', promptString: 'underwater POV looking up through cerulean water, silhouette of colossal Great White shark gliding past cage bars, bubbles, sunlight rays refracting into dark abyss' },
+            { name: 'Amity 4th of July Americana', promptString: 'crowded 1975 New England coastal beach, striped umbrellas, sun-drenched sand, Kodachrome vintage film grain, ominous ocean horizon, festive summertime tragedy' }
         ],
         posterPrompt: "Official movie poster for Jaws (1975), swimming woman on ocean surface at top, giant shark rising from the deep bottom with open mouth, red title 'JAWS', terrifying minimalist design --ar 2:3"
     },
@@ -2114,9 +2120,11 @@ export const movies: Movie[] = [
         actors: ['Bill Murray', 'Dan Aykroyd', 'Sigourney Weaver'],
         type: 'movie',
         styles: [
-            { name: 'Proton Stream', promptString: 'crossing the streams, wiggly orange energy, lightning effects, rooftop battle, 80s special effects' },
-            { name: 'Stay Puft', promptString: 'massive marshmallow man, walking through city, low angle, terror and comedy, nyc street' },
-            { name: 'Library Ghost', promptString: 'transparent purple ghost, floating books, card catalog, spooky library, jumpscare aesthetic' }
+            { name: 'Proton Stream Volumetric Lightning', promptString: 'crossing the streams, entwined orange particle beams, crackling blue electrical arcs, rooftop temple storm, practical 1984 optical effects, high voltage energy' },
+            { name: 'Stay Puft 80s Kaiju', promptString: 'colossal 100-foot smiling white marshmallow sailor marching down Fifth Avenue between Manhattan skyscrapers, low angle, crushing cars, whimsical apocalyptic terror' },
+            { name: 'Sedgewick Hotel Slime Elegance', promptString: 'ornate gilded hotel ballroom, crystal chandeliers, flying green ectoplasmic Slimer gorging on room service carts, champagne pyramid destruction, beige flight suits' },
+            { name: 'Gozer Temple Art Deco Storm', promptString: 'Mayan-style skyscraper rooftop temple, swirling purple thunderstorm clouds, glowing stone terror dogs, blue lightning strikes, dimensional gateway breach' },
+            { name: 'Ecto-1 Manhattan Siren Rush', promptString: '1959 Cadillac Miller-Meteor ambulance speeding through wet Times Square streets at dusk, dual roof sirens wailing, red fins, chrome grille, flashing emergency lights' }
         ],
         posterPrompt: "Official movie poster for Ghostbusters (1984), four ghostbusters firing proton streams, crossing streams, Stay Puft Marshmallow Man looming in NYC skyline, 'NO GHOSTS' logo, comedy horror classic --ar 2:3"
     },
@@ -4787,6 +4795,297 @@ export const movies: Movie[] = [
             { name: 'Janitor Rage', promptString: 'mop handle weapon, fighting stance, exploding robot parts, grime, blood and oil splatter' }
         ],
         posterPrompt: "Official movie poster for Willy's Wonderland (2021), Nicolas Cage fighting animatronics, neon arcade, 'WILLY'S WONDERLAND' title, horror action --ar 2:3"
+    },
+    {
+        id: 'the-goonies',
+        title: 'The Goonies',
+        year: '1985',
+        genres: ['Adventure', 'Comedy', 'Family'],
+        director: 'Richard Donner',
+        actors: ['Sean Astin', 'Josh Brolin', 'Jeff Cohen', 'Corey Feldman', 'Ke Huy Quan', 'Martha Plimpton'],
+        type: 'movie',
+        styles: [
+            { name: 'Astoria Coastal Mist', promptString: 'Pacific Northwest coastal mist, Douglas fir cliffs, rain-slicked Victorian rooftops, overcast grey sky, moody Pacific ocean swell, 35mm Amblin adventure film grain' },
+            { name: 'One-Eyed Willy Cavern', promptString: 'colossal subterranean grotto, 17th-century Spanish pirate ship, golden chalices, emerald necklaces, warm candle glow, pirate skull with eye patch' },
+            { name: 'Fratelli B-Movie Noir', promptString: 'grimy abandoned seaside restaurant, flickering neon sign, meat cleavers, rainy coastal highway, dark shadows, comic menace' },
+            { name: 'Data Booby-Trap Inventions', promptString: 'whimsical steampunk childhood gadgets, spring-loaded boxing glove belt, suction darts, slick shoes oil spill, flashlight beams in dark tunnels' },
+            { name: 'Sloth & Chunk Brotherhood', promptString: 'gentle giant deformed silhouette, Superman t-shirt, pirate hat, swinging from ship rigging, unwrapped Baby Ruth candy bar, warm joyful camaraderie' }
+        ],
+        posterPrompt: "Official movie poster for The Goonies (1985), group of kids hanging onto steep rocky cavern cliff above pirate ship, Spanish doubloon shining, 'THE GOONIES' iconic title logo, 80s Amblin adventure style --ar 2:3"
+    },
+    {
+        id: 'weird-science',
+        title: 'Weird Science',
+        year: '1985',
+        genres: ['Comedy', 'Sci-Fi', 'Romance'],
+        director: 'John Hughes',
+        actors: ['Anthony Michael Hall', 'Ilan Mitchell-Smith', 'Kelly LeBrock', 'Bill Paxton', 'Robert Downey Jr.'],
+        type: 'movie',
+        styles: [
+            { name: 'John Hughes 80s Cyber-Glam', promptString: 'CRT computer phosphor glow, 3D wireframe graphics, magenta and cyan volumetric neon smoke, crackling Tesla coil lightning, 80s synth-pop aesthetic' },
+            { name: 'Lisa Magenta Smoke Materialization', promptString: 'billowing clouds of pink and blue smoke, glowing doorway, Kelly LeBrock stepping out in cutoff grey sweatshirt, effortless beauty and magical confidence' },
+            { name: 'Chet Military Tyranny', promptString: 'camouflage combat fatigues, buzzcut, military boots, menacing air rifle, comedic suburban drill sergeant intimidation, Bill Paxton intensity' },
+            { name: 'Suburban House Anarchy', promptString: 'sprawling two-story home, nuclear ICBM missile piercing living room ceiling, mutant biker gang on choppers, furniture spinning in indoor tornado' },
+            { name: 'Blues Bar Smoke & Satin', promptString: 'smoky south-side Chicago blues bar, amber cocktail glow, live electric blues band, Gary Wallace in sunglasses and cigar, relaxed swagger' }
+        ],
+        posterPrompt: "Official movie poster for Weird Science (1985), Anthony Michael Hall and Ilan Mitchell-Smith with bras on their heads next to Kelly LeBrock in cutoff sweatshirt, electrical lightning, 'WEIRD SCIENCE' neon logo --ar 2:3"
+    },
+    {
+        id: 'real-genius',
+        title: 'Real Genius',
+        year: '1985',
+        genres: ['Comedy', 'Sci-Fi'],
+        director: 'Martha Coolidge',
+        actors: ['Val Kilmer', 'Gabriel Jarret', 'Michelle Meyrink', 'William Atherton', 'Jon Gries'],
+        type: 'movie',
+        styles: [
+            { name: 'Pacific Tech 80s Lab Glow', promptString: 'darkened optics research laboratory, glowing vacuum chambers, ruby laser rods, emerald laser beams slicing through steel, safety goggles, 80s California campus sun' },
+            { name: 'Suburban Popcorn Deluge', promptString: 'suburban dream house bursting at the seams, millions of pounds of warm buttered popcorn erupting through plate glass windows, fluffy white avalanche in blue sky' },
+            { name: 'Val Kilmer Slacker Brilliance', promptString: 'terrycloth bathrobe, pink fuzzy bunny slippers, mirrored aviator sunglasses, effortless nonchalant genius, witty irreverence, golden California light' },
+            { name: 'Liquid Nitrogen Ice Pranks', promptString: 'hallway floor frozen solid with liquid nitrogen into indoor ice rink, dry ice mist rolling down corridors, students ice skating in pajamas' },
+            { name: 'Underground Steam Tunnels', promptString: 'claustrophobic subterranean pipe sanctum, thousands of sweepstakes entry forms, automated sorting levers, glowing amber CRT monitors, eccentric isolation' }
+        ],
+        posterPrompt: "Official movie poster for Real Genius (1985), Val Kilmer smiling in mirrored sunglasses with glowing green laser reflecting in lenses, house bursting with popcorn in background, 'REAL GENIUS' logo --ar 2:3"
+    },
+    {
+        id: 'the-last-house-on-the-left-2009',
+        title: 'The Last House on the Left',
+        year: '2009',
+        genres: ['Crime', 'Horror', 'Thriller'],
+        director: 'Dennis Iliadis',
+        actors: ['Garret Dillahunt', 'Sara Paxton', 'Monica Potter', 'Tony Goldwyn', 'Aaron Paul', 'Spencer Treat Clark'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: 'Rain-Drenched Lake Storm', promptString: 'torrential nocturnal downpour, violent lightning flashes illuminating deep dark lake water, rain streaming down modern glass windows, cold desaturated teal and slate palette' },
+            { name: 'Surgical Home Defense', promptString: 'warm modern wood-paneled lake house, stainless steel surgical instruments, cast-iron skillet, kitchen disposal trap, cold calculating parental retribution' },
+            { name: 'Grim Woodland Desperation', promptString: 'dense muddy Pacific Northwest forest in pouring rain, shaking handheld camera, visceral pursuit, flashlight beams cutting through mist, raw brutal tension' },
+            { name: 'Microwave Oven Finality', promptString: 'chilling sterile kitchen counter, paralyzed face trapped inside stainless steel microwave oven, digital timer counting down, humming high voltage, uncompromising horror climax' },
+            { name: 'Lakeside Morning Dawn', promptString: 'calm glassy lake surface at sunrise, mist lifting off evergreen trees, tranquil nature contrasted with psychological trauma, sombre resolution' }
+        ],
+        posterPrompt: "Official movie poster for The Last House on the Left (2009), modern isolated lake house at night in torrential rain with bloodied hand on window glass, 'THE LAST HOUSE ON THE LEFT' title, brutal thriller aesthetic --ar 2:3"
+    },
+    {
+        id: 'national-lampoons-vacation',
+        title: 'National Lampoon\'s Vacation',
+        year: '1983',
+        genres: ['Comedy', 'Adventure'],
+        director: 'Harold Ramis',
+        actors: ['Chevy Chase', 'Beverly D\'Angelo', 'Imogene Coca', 'Anthony Michael Hall', 'Dana Barron', 'Randy Quaid', 'John Candy'],
+        type: 'movie',
+        styles: [
+            { name: 'Family Truckster Highway Odyssey', promptString: 'metallic pea-green station wagon with wood vinyl panelling, luggage strapped to roof, two-lane American highway, open prairie horizon, 1980s summer Kodachrome warmth' },
+            { name: 'Red Ferrari Highway Mirage', promptString: 'cherry-red Ferrari 308 GTS cruising alongside in golden sunlight, Christie Brinkley smiling with wind-blown blonde hair, dreamlike desert heat haze' },
+            { name: 'Walley World Theme Park Americana', promptString: 'massive closed amusement park gates, giant plastic Marty Moose statue, roller coaster silhouette against California blue sky, manic determination' },
+            { name: 'Desert Breakdown Despair', promptString: 'scorching Monument Valley sandstone buttes, broken axle in red sand dunes, buzzards circling, heat shimmer, desperate family under umbrella' },
+            { name: 'Cousin Eddie Kansas Dust', promptString: 'dilapidated rural Kansas farmhouse, rusted tractor hulls, hound dogs in dirt, raw hamburger patties on formica table, unapologetic redneck hospitality' }
+        ],
+        posterPrompt: "Official movie poster for National Lampoon's Vacation (1983), Boris Vallejo style heroic fantasy parody of Clark Griswold with sword standing atop Family Truckster with family, 'VACATION' logo --ar 2:3"
+    },
+    {
+        id: 'european-vacation',
+        title: 'National Lampoon\'s European Vacation',
+        year: '1985',
+        genres: ['Comedy', 'Adventure'],
+        director: 'Amy Heckerling',
+        actors: ['Chevy Chase', 'Beverly D\'Angelo', 'Jason Lively', 'Dana Hill', 'Eric Idle'],
+        type: 'movie',
+        styles: [
+            { name: 'Pig in a Poke Game Show Glitz', promptString: 'garish 1980s television studio stage, pink foam pig snout costumes, flashing neon scoreboards, cheesy game show host charisma' },
+            { name: 'Foggy London Roundabout', promptString: 'rain-drenched London street, yellow Austin Mini endlessly circling roundabout, red double-decker buses, Big Ben and Parliament in grey drizzle' },
+            { name: 'Bavarian Folk Slapstick', promptString: 'sunny Bavarian village square, alpine chalets, lederhosen and dirndls, brass oompah band, slap-dancing duel turning into chaotic festival brawl' },
+            { name: 'Parisian Cafe Chiaroscuro', promptString: 'chic Paris boulevard sidewalk cafe, yellow leisure suit and tourist beret, snooty French waiter, Eiffel tower looming in soft afternoon light' },
+            { name: 'Roman Holiday Heist', promptString: 'cobblestone Roman alleyways, honking Vespas, red Fiat bouncing down Spanish Steps, Colosseum sunset view, chaotic Mediterranean chase' }
+        ],
+        posterPrompt: "Official movie poster for National Lampoon's European Vacation (1985), Clark Griswold in beret carrying luggage across European landmarks, Big Ben and Eiffel Tower, 'EUROPEAN VACATION' title --ar 2:3"
+    },
+    {
+        id: 'vegas-vacation',
+        title: 'National Lampoon\'s Vegas Vacation',
+        year: '1997',
+        genres: ['Comedy'],
+        director: 'Stephen Kessler',
+        actors: ['Chevy Chase', 'Beverly D\'Angelo', 'Randy Quaid', 'Ethan Embry', 'Marisol Nichols', 'Wallace Shawn', 'Wayne Newton'],
+        type: 'movie',
+        styles: [
+            { name: 'Mirage Strip Neon Spectacle', promptString: 'dazzling Las Vegas Strip neon, erupting artificial volcano, tropical indoor atrium waterfalls, buzzing casino floor, 90s casino excess' },
+            { name: 'Marty\'s Smirking Blackjack Felt', promptString: 'dim green felt table lighting, stacks of casino chips, Wallace Shawn\'s smirking dealer face, rapid-fire card deals, devastating house advantage' },
+            { name: 'Nick Papagiorgio High Roller', promptString: 'slick Italian silk suit, gelled hair, dark sunglasses, VIP penthouse suite comp, winning sports cars at slot carousels, cool effortless swagger' },
+            { name: 'Hoover Dam Concrete Vertigo', promptString: 'blazing Nevada desert sun, monumental curved concrete wall of Hoover Dam, high-voltage electrical cables, vertigo-inducing river canyon below' },
+            { name: 'Wayne Newton Velvet Lounge', promptString: 'opulent showroom stage, crystal chandeliers, Wayne Newton in sparkling tuxedo serenading with private microphone, romantic crooner charm' }
+        ],
+        posterPrompt: "Official movie poster for National Lampoon's Vegas Vacation (1997), Clark Griswold juggling playing cards and dice in front of neon Vegas signs, Mirage volcano, 'VEGAS VACATION' logo --ar 2:3"
+    },
+    {
+        id: 'animal-house',
+        title: 'National Lampoon\'s Animal House',
+        year: '1978',
+        genres: ['Comedy'],
+        director: 'John Landis',
+        actors: ['John Belushi', 'Tim Matheson', 'Peter Riegert', 'Tom Hulce', 'Stephen Furst', 'Karen Allen', 'John Vernon', 'Donald Sutherland'],
+        type: 'movie',
+        styles: [
+            { name: '1962 Ivy League Sepia', promptString: 'autumn brick campus, falling yellow elm leaves, tweed blazers, pipe smoke, bronze founder statue, traditional collegiate decorum' },
+            { name: 'Delta House Frat Chaos', promptString: 'dilapidated fraternity living room, beer kegs on tap, motorcycle on staircase, flying bottles, John Belushi in dirty sweater chugging whiskey fifth' },
+            { name: 'Toga Party Soul Groove', promptString: 'basement party draped in white bedsheets, laurel leaf crowns, Otis Day and the Knights performing on stage, hundreds of students jumping to soul music' },
+            { name: 'Deathmobile Armored Parade', promptString: 'black armored custom car with red teeth grille, smoke canisters exploding, marching bands crashing into brass instruments, homecoming parade anarchy' },
+            { name: 'Dean Wormer Disciplinary Woodwork', promptString: 'stately mahogany-paneled university office, stern Dean scowling over academic files, dead horse on oriental rug, double secret probation' }
+        ],
+        posterPrompt: "Official movie poster for National Lampoon's Animal House (1978), illustrated poster of John Belushi in toga raising beer mug with chaotic college party behind him, 'ANIMAL HOUSE' title --ar 2:3"
+    },
+    {
+        id: 'airplane',
+        title: 'Airplane!',
+        year: '1980',
+        genres: ['Comedy'],
+        director: 'Jim Abrahams, David Zucker, Jerry Zucker',
+        actors: ['Robert Hays', 'Julie Hagerty', 'Leslie Nielsen', 'Peter Graves', 'Lloyd Bridges', 'Robert Stack', 'Kareem Abdul-Jabbar'],
+        type: 'movie',
+        styles: [
+            { name: '70s Disaster Movie Grain', promptString: 'vintage 1980 commercial airliner cabin, red and white striped livery, analog flight instruments, deadpan parody of classic airport disaster cinema' },
+            { name: 'Cockpit Instrument Sweating Panic', promptString: 'cramped cockpit instrument dials literally sweating condensation, altimeters vibrating, Ted Striker sweating rivers of water over flight yoke' },
+            { name: 'Dr. Rumack Deadpan Gravitas', promptString: 'Leslie Nielsen in stethoscope and business suit, stone-faced earnest delivery, hospital lighting, surreal slapstick comedy performed with Shakespearean seriousness' },
+            { name: 'Inflatable Autopilot Pop', promptString: 'smiling blue rubber inflatable mannequin sitting in captain seat, painted mustache, pilot hat, smoking cigarette with smug nonchalance' },
+            { name: 'Runway Fire Foam Belly-Flop', promptString: 'nighttime runway flooded with knee-deep white chemical fire foam, flashing red sirens, airliner skidding sideways on belly with showering sparks' }
+        ],
+        posterPrompt: "Official movie poster for Airplane! (1980), passenger airliner tied in a knot flying through blue sky with fluffy white clouds, bold red 'AIRPLANE!' title text, iconic comedy poster --ar 2:3"
+    },
+    {
+        id: 'ghostbusters-2',
+        title: 'Ghostbusters II',
+        year: '1989',
+        genres: ['Action', 'Comedy', 'Fantasy'],
+        director: 'Ivan Reitman',
+        actors: ['Bill Murray', 'Dan Aykroyd', 'Sigourney Weaver', 'Harold Ramis', 'Ernie Hudson', 'Rick Moranis', 'Peter MacNicol'],
+        type: 'movie',
+        styles: [
+            { name: 'River of Pink Psychomagnotheric Slime', promptString: 'subterranean abandoned pneumatic transit tunnel, glowing river of bubbling magenta slime, ectoplasmic tentacles, misty subterranean darkness' },
+            { name: 'Vigo the Carpathian Haunted Canvas', promptString: 'monumental 10-foot oil portrait, 16th-century tyrant with piercing demonic eyes, dark sorcery aura, cracked varnish, museum restoration lab' },
+            { name: 'Lady Liberty 5th Avenue Stride', promptString: 'colossal copper Statue of Liberty walking tall down Manhattan boulevard, illuminated torch blazing, New Year\'s Eve crowds cheering to soul music' },
+            { name: 'Courtroom Scoleri Electric Havoc', promptString: 'marble courtroom plunged into chaos, two blue glowing electric-chair phantoms flying through air, proton pack particle throwers discharging in tight spaces' },
+            { name: 'Dancing Toaster Mood Slime Warmth', promptString: 'chrome two-slice kitchen toaster coated in pink slime hopping rhythmically on laboratory table, warm cheerful comedic paranormal science' }
+        ],
+        posterPrompt: "Official movie poster for Ghostbusters II (1989), classic No-Ghost logo holding up two peace-sign fingers, four Ghostbusters on New York street, 'GHOSTBUSTERS II' title --ar 2:3"
+    },
+    {
+        id: 'labyrinth',
+        title: 'Labyrinth',
+        year: '1986',
+        genres: ['Adventure', 'Family', 'Fantasy'],
+        director: 'Jim Henson',
+        actors: ['David Bowie', 'Jennifer Connelly', 'Toby Froud'],
+        type: 'movie',
+        styles: [
+            { name: 'Henson Animatronic Goblin Baroque', promptString: 'Jim Henson creature workshop puppetry, moss-covered stone walls, quirky goblins in patched metal armor, rich tactile organic textures' },
+            { name: 'M.C. Escher Gravity Staircase', promptString: 'impossible architectural chamber of interlocking floating stone stairways defying gravity, David Bowie walking upside down, surreal optical wonder' },
+            { name: 'Venetian Masquerade Glass Bubble', promptString: 'dreamlike ballroom inside crystal orb, silver and white Victorian ballgown, ornate masks, floating glass bubbles, David Bowie romantic seduction' },
+            { name: 'Bog of Eternal Stench Murk', promptString: 'bubbling sulfurous swamp, green noxious vapor, muddy geysers, Sir Didymus riding sheepdog steed across slippery river stones' },
+            { name: 'Crystal Orb Magic Dance', promptString: 'Jareth the Goblin King spinning clear glass spheres in gloved fingers, dramatic stage lighting, synth-pop fantasy theatrical glamour' }
+        ],
+        posterPrompt: "Official movie poster for Labyrinth (1986), Jennifer Connelly looking into crystal ball held by David Bowie as Jareth the Goblin King, Jim Henson creatures below, 'LABYRINTH' fantasy title --ar 2:3"
+    },
+    {
+        id: 'career-opportunities',
+        title: 'Career Opportunities',
+        year: '1991',
+        genres: ['Comedy', 'Romance'],
+        director: 'Bryan Gordon',
+        actors: ['Jennifer Connelly', 'Frank Whaley', 'Dermot Mulroney', 'John Candy'],
+        type: 'movie',
+        styles: [
+            { name: 'Roller Skate Midnight Aisle', promptString: 'Jennifer Connelly in white tank top roller skating gracefully down wide department store aisles in slow motion, golden fluorescent backlight, pure 90s visual poetry' },
+            { name: '90s Target Department Store Neon', promptString: 'vast empty suburban retail store at 2 AM, endless polished linoleum floors, wall of 50 cathode ray TVs, colorful product packaging, lonely consumerist playground' },
+            { name: 'Mechanical Quarter Horse Romance', promptString: 'front entrance 25-cent mechanical horse ride rocking under neon sign, two young outcasts sharing intimate laughter and gentle romance' },
+            { name: 'Sporting Goods Tent Sanctuary', promptString: 'green camping tent pitched inside store aisle, battery lantern glow, potato chips and soda, intimate late-night confessions and first kiss' },
+            { name: 'Two-Bit Crook Standoff', promptString: 'bumbling armed robbers with snub-nosed revolvers in utility cage, hair spray flamethrower, Jennifer Connelly holding gun with ice-cold poise' }
+        ],
+        posterPrompt: "Official movie poster for Career Opportunities (1991), Jennifer Connelly and Frank Whaley sitting on shopping cart in empty department store, 'CAREER OPPORTUNITIES' title, 90s teen romance --ar 2:3"
+    },
+    {
+        id: 'dark-city',
+        title: 'Dark City',
+        year: '1998',
+        genres: ['Mystery', 'Sci-Fi', 'Thriller'],
+        director: 'Alex Proyas',
+        actors: ['Rufus Sewell', 'William Hurt', 'Kiefer Sutherland', 'Jennifer Connelly', 'Richard O\'Brien'],
+        type: 'movie',
+        styles: [
+            { name: 'Neo-Noir Architectural Tuning', promptString: 'gothic skyscrapers stretching and morphing like clockwork at midnight, brick arches unfolding in real time, perpetual rain, 1940s shadowplay' },
+            { name: 'Emerald Lounge Singer Spotlight', promptString: 'Jennifer Connelly in shimmering emerald silk dress singing melancholic torch song into art deco microphone, smoky nightclub, sorrowful romantic allure' },
+            { name: 'The Strangers Gothic Trenchcoat', promptString: 'pale hairless extraterrestrial parasites floating in black leather trench coats and fedoras, clicking gloves, telepathic collective resonance' },
+            { name: 'Shell Beach Nostalgic Mirage', promptString: 'vivid colorful 1950s postcard colors of tropical beach contrasting the dark urban nightmare, brick wall breaking to reveal outer space void' },
+            { name: 'Telekinetic Mind Duel', promptString: 'Rufus Sewell and alien overlords levitating above dark cityscape, shockwaves of pure thought bending matter, cosmic mind battle' }
+        ],
+        posterPrompt: "Official movie poster for Dark City (1998), shadowy silhouette of Rufus Sewell against towering shifting gothic skyscrapers, pale Strangers floating above, 'DARK CITY' title --ar 2:3"
+    },
+    {
+        id: 'requiem-for-a-dream',
+        title: 'Requiem for a Dream',
+        year: '2000',
+        genres: ['Drama'],
+        director: 'Darren Aronofsky',
+        actors: ['Ellen Burstyn', 'Jared Leto', 'Jennifer Connelly', 'Marlon Wayans'],
+        type: 'movie',
+        styles: [
+            { name: 'Hip-Hop Montage Micro-Zoom', promptString: 'extreme macro close-ups, bubbling liquid in bottle cap, needle entry, pupil expanding violently to fill screen, hyper-speed sensory rush' },
+            { name: 'Coney Island Pier Red Dress', promptString: 'Jennifer Connelly standing at edge of weathered wooden pier in vivid red dress, ocean wind, grey Atlantic waves, fleeting summer romance' },
+            { name: 'Split-Screen Horizontal Intimacy', promptString: 'split-screen composition dividing bed, lovers whispering dreams of fashion boutiques, fingertips touching across frame divide' },
+            { name: 'Psychiatric Institution Overexposure', promptString: 'harsh sterile white clinical lighting, buzzing fluorescent tubes, electroconvulsive shock flashes, catatonic hospital corridors' },
+            { name: 'Four Fetal Positions of Despair', promptString: 'symmetrical overhead compositions, characters curled in identical fetal positions on beds and sofas, tragic symphonic despair' }
+        ],
+        posterPrompt: "Official movie poster for Requiem for a Dream (2000), extreme close-up of dilated human eye pupil reflecting blue sky, bold white title 'REQUIEM FOR A DREAM', haunting psychological drama --ar 2:3"
+    },
+    {
+        id: 'a-beautiful-mind',
+        title: 'A Beautiful Mind',
+        year: '2001',
+        genres: ['Biography', 'Drama'],
+        director: 'Ron Howard',
+        actors: ['Russell Crowe', 'Ed Harris', 'Jennifer Connelly', 'Paul Bettany', 'Christopher Plummer'],
+        type: 'movie',
+        styles: [
+            { name: 'Princeton Ivy League Amber', promptString: 'autumn golden sunlight filtering through ivy-covered gothic brick arches, university libraries, leather armchairs, 1940s academic prestige' },
+            { name: 'Window Glass Mathematics', promptString: 'white wax pencil equations written directly onto transparent window glass, sunlight refracting through formulas, pure intuitive geometry' },
+            { name: 'Cold War Espionage Shadows', promptString: 'nocturnal rain, black sedans with rounded fenders, mysterious men in fedoras, abandoned gothic mansion drop-boxes, red string conspiracy boards' },
+            { name: 'Nobel Fountain Pen Ceremony', promptString: 'Princeton faculty members walking up to table reverently placing gold fountain pens before John Nash, profound emotional academic honor' },
+            { name: 'Stockholm Royal Winter Dignity', promptString: 'formal white tie, grand concert hall chandeliers, Swedish royal court, Jennifer Connelly in tears holding white handkerchief' }
+        ],
+        posterPrompt: "Official movie poster for A Beautiful Mind (2001), Russell Crowe profile overlaid with glowing mathematical formulas, Jennifer Connelly beside him, 'A BEAUTIFUL MIND' title --ar 2:3"
+    },
+    {
+        id: 'the-rocketeer',
+        title: 'The Rocketeer',
+        year: '1991',
+        genres: ['Action', 'Adventure', 'Sci-Fi'],
+        director: 'Joe Johnston',
+        actors: ['Billy Campbell', 'Jennifer Connelly', 'Alan Arkin', 'Timothy Dalton', 'Terry O\'Quinn'],
+        type: 'movie',
+        styles: [
+            { name: '1930s Art Deco Streamline', promptString: 'aerodynamic polished bronze helmet with fin, Cirrus X-3 chrome rocket pack, leather aviator jackets, vintage yellow racing planes, Golden Age California' },
+            { name: 'South Seas Club Backless Satin', promptString: 'Jennifer Connelly in breathtaking white backless silk evening gown, big band orchestra, multi-tiered art deco nightclub with coconut palms' },
+            { name: 'Twin Plume Aerial Dogfight', promptString: 'Rocketeer soaring over Los Angeles night skyline with twin roaring flame trails, banking around searchlights and radio towers' },
+            { name: 'Nazi Zeppelin Luxembourg Infernal', promptString: 'colossal rigid airship hovering over Griffith Observatory at midnight, hydrogen gas bags exploding in massive white fireball' },
+            { name: 'Hollywoodland Golden Age Pulp', promptString: 'movie studio soundstages, Errol Flynn-style swashbuckler film sets, classic Packard automobiles, Howard Hughes experimental autogyros' }
+        ],
+        posterPrompt: "Official movie poster for The Rocketeer (1991), art deco illustration of The Rocketeer flying with jetpack in front of giant stylized sun, bronze helmet gleaming, pulp adventure title --ar 2:3"
+    },
+    {
+        id: 'phenomena',
+        title: 'Phenomena',
+        year: '1985',
+        genres: ['Horror', 'Mystery'],
+        director: 'Dario Argento',
+        actors: ['Jennifer Connelly', 'Daria Nicolodi', 'Dalila Di Lazzaro', 'Donald Pleasence'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: 'Argento Technicolor Swiss Alps', promptString: 'lush green alpine meadows, roaring waterfalls, snow-capped peaks, surreal lighting, eerie Swiss boarding school corridors, giallo cinematography' },
+            { name: 'Telepathic Insect Swarm', promptString: 'billions of glowing flies and fireflies swirling in living cloud around Jennifer, synchronized insect hive-mind, eerie luminescent green glow' },
+            { name: 'Forensic Entomologist Chalet', promptString: 'Donald Pleasence in wheelchair surrounded by specimen jars, exotic beetles, microscope slides, friendly trained chimpanzee in yellow sweater' },
+            { name: 'Maggot-Vat Subterranean Cellar', promptString: 'nightmarish underground pool filled with decomposing remains and writhing white maggots, slimy stone walls, visceral Italian horror atmosphere' },
+            { name: 'Inga Chimpanzee Razor Retribution', promptString: 'chimpanzee leaping from shadows with open steel straight razor, slashing killer in moonlight on wooden lake dock, shock crescendo' }
+        ],
+        posterPrompt: "Official movie poster for Phenomena (1985), young Jennifer Connelly with giant luminous insect on hand against dark Swiss mountain forest, blood-red 'PHENOMENA' title --ar 2:3"
     }
 ];
 

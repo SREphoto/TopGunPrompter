@@ -1,6 +1,37 @@
 # TopGun Prompter - Version History
 
-## v3.3.0 - The Poster Prompt Update (Current)
+## v3.8.0 - The 50-Scene Masterworks Expansion (Current)
+
+- **1,050 Handcrafted Scenes Added**: Expanded 21 iconic titles to the full 50-scene director standard with anamorphic 35mm cameras, lighting directions, color grading, and film stocks.
+- **5 Bespoke Visual Styles Per Title**: 105 new visual aesthetic presets capturing distinct eras and director visions.
+- **80s Sci-Fi & Adventure Legends**: *The Goonies*, *Weird Science*, *Real Genius*, *Airplane!*.
+- **The Complete National Lampoon Anthology**: *Animal House*, *National Lampoon's Vacation*, *European Vacation*, *Vegas Vacation*, and *Christmas Vacation* (overhaul).
+- **Ghostbusters I & II**: Complete 50-scene suites for both Ivan Reitman classics.
+- **Jennifer Connelly Showcase**: 50 scenes each for *Labyrinth*, *Phenomena*, *Career Opportunities*, *The Rocketeer*, *Dark City*, *Requiem for a Dream*, and *A Beautiful Mind*.
+- **Classics & Horror Remake**: Overhauled *Jaws* and *A Christmas Story*, plus Dennis Iliadis' gritty 2009 remake of *The Last House on the Left*.
+
+## v3.7.0 - The Ultimate Horror Expansion & Rob Zombie Collection
+
+- **Horror Category Expansion**: Added 22 horror titles for 30 total films in the dedicated Horror category.
+- **Complete Rob Zombie Filmography**: All 9 Rob Zombie feature films added with 25 scenes each.
+- **Grindhouse & Psychological Staples**: Added 1972 *The Last House on the Left*, *The Ring*, *Rosemary's Baby*, *A Quiet Place*, *The Descent*, *28 Days Later*, *Sinister*, *The Babadook*, and more.
+
+## v3.6.0 - Favorites System, Gemini AI Media Creator & Community Sync
+
+- **Favorites System**: One-click favoriting with dedicated tab.
+- **Gemini AI Integration**: On-the-spot media creator for generating films, shows, or games.
+- **Global Community Sync**: Multi-tiered sync across cloud storage, local Vite dev server, and local cache.
+
+## v3.5.0 - Seasonal, Holiday & Horror Mega-Expansion
+
+- **Seasonal Hub**: Dedicated hub for Fall, Halloween, Horror, Thanksgiving, Winter, Christmas, New Year's Eve, Valentine's Day.
+- **Particle FX**: Dynamic themes with leaves, snow, confetti, hearts, and horror atmospheric lighting.
+
+## v3.4.0 - Midjourney V8 & V8.1 Upgrade
+
+- Upgraded parameter support and syntax compatibility for Midjourney V8 and V8.1.
+
+## v3.3.0 - The Poster Prompt Update
 
 - **Poster Prompts**: Added `posterPrompt` field to `Movie` interface in `types.ts`.
 - **Content Upgrade**: Added official movie poster prompts for over 50 "Elite" and "Classic" movies (e.g., *Top Gun, Matrix, Godfather, Alien, Blade Runner*).

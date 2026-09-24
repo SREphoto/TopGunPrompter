@@ -557,6 +557,24 @@ export const seasonalMedia: MediaItem[] = [
         posterPrompt: "Official movie poster for The Last House on the Left (1972), terrified girl's face reflected in sunglasses with tagline 'TO AVOID FAINTING KEEP REPEATING: IT'S ONLY A MOVIE', Wes Craven raw grindhouse horror style --ar 2:3"
     },
     {
+        id: 'the-last-house-on-the-left-2009',
+        title: 'The Last House on the Left (2009)',
+        year: '2009',
+        genres: ['Crime', 'Horror', 'Thriller'],
+        director: 'Dennis Iliadis',
+        actors: ['Garret Dillahunt', 'Sara Paxton', 'Monica Potter', 'Tony Goldwyn', 'Aaron Paul', 'Spencer Treat Clark'],
+        type: 'movie',
+        holiday: 'horror',
+        styles: [
+            { name: 'Rain-Drenched Lake Storm', promptString: 'torrential nocturnal downpour, violent lightning flashes illuminating deep dark lake water, rain streaming down modern glass windows, cold desaturated teal and slate palette' },
+            { name: 'Surgical Home Defense', promptString: 'warm modern wood-paneled lake house, stainless steel surgical instruments, cast-iron skillet, kitchen disposal trap, cold calculating parental retribution' },
+            { name: 'Grim Woodland Desperation', promptString: 'dense muddy Pacific Northwest forest in pouring rain, shaking handheld camera, visceral pursuit, flashlight beams cutting through mist, raw brutal tension' },
+            { name: 'Microwave Oven Finality', promptString: 'chilling sterile kitchen counter, paralyzed face trapped inside stainless steel microwave oven, digital timer counting down, humming high voltage, uncompromising horror climax' },
+            { name: 'Lakeside Morning Dawn', promptString: 'calm glassy lake surface at sunrise, mist lifting off evergreen trees, tranquil nature contrasted with psychological trauma, sombre resolution' }
+        ],
+        posterPrompt: "Official movie poster for The Last House on the Left (2009), modern isolated lake house at night in torrential rain with bloodied hand on window glass, 'THE LAST HOUSE ON THE LEFT' title, brutal thriller aesthetic --ar 2:3"
+    },
+    {
         id: 'house-of-1000-corpses',
         title: 'House of 1000 Corpses',
         year: '2003',

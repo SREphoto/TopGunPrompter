@@ -7,9 +7,23 @@ export interface VersionUpdate {
 
 export const versionHistory: VersionUpdate[] = [
     {
+        version: "v3.8.0",
+        title: "The 50-Scene Masterworks Expansion: 80s Icons, National Lampoon, Jennifer Connelly & Classics",
+        isCurrent: true,
+        changes: [
+            "50-Scene Standard for 21 Iconic Titles: Added 1,050 handcrafted, director-grade cinematic scene prompts (exactly 50 scenes per title) with 35mm anamorphic camera angles, lighting cues, color grading, and film stocks.",
+            "5 Authentic Visual Styles Per Title: Expanded each film with 5 bespoke aesthetic presets capturing distinctive eras, directors, and cinematographers.",
+            "80s Sci-Fi, Adventure & Comedy Legends: Added 50 scenes and 5 styles each for The Goonies, Weird Science, Real Genius, and Airplane!.",
+            "The Complete National Lampoon Anthology: Added 50 scenes and 5 styles each for Animal House (1978), National Lampoon's Vacation (1983), European Vacation (1985), Vegas Vacation (1997), and overhauled Christmas Vacation (1989).",
+            "Ghostbusters I & II: Comprehensive 50-scene expansions for both Ivan Reitman classics (Ghostbusters 1984 & Ghostbusters II 1989) with proton beam glow and slime aesthetics.",
+            "The Jennifer Connelly Cinematic Showcase: Added 50-scene suites and 5 custom styles each for 7 seminal works: Labyrinth (1986), Phenomena (1985), Career Opportunities (1991), The Rocketeer (1991), Dark City (1998), Requiem for a Dream (2000), and A Beautiful Mind (2001).",
+            "Classics & Remakes: Complete 50-scene overhauls for Steven Spielberg's Jaws (1975) and Bob Clark's A Christmas Story (1983), plus Dennis Iliadis' gritty 2009 remake of The Last House on the Left."
+        ]
+    },
+    {
         version: "v3.7.0",
         title: "The Ultimate Horror Expansion & Rob Zombie Collection",
-        isCurrent: true,
+        isCurrent: false,
         changes: [
             "Horror Category Expansion: Added 22 new horror masterworks for a grand total of 30 iconic films in the dedicated Horror category.",
             "25 Scenes Standard: Every horror film now features exactly 25 hand-crafted, high-detail Midjourney scene prompts with camera angles, lighting conditions, and dialogue excerpts (750+ total horror scenes).",

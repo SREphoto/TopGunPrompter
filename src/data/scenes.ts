@@ -65,7 +65,7 @@ import {
 } from './scenes/christmasClassics';
 
 import {
-    miracleScenes, christmasStoryScenes, grinchScenes,
+    miracleScenes, grinchScenes,
     muppetCarolScenes, loveActuallyScenes
 } from './scenes/christmasClassics2';
 
@@ -92,7 +92,7 @@ import {
     twelveAngryMenScenes, sevenSamuraiScenes, rashomonScenes,
     drStrangeloveScenes, chinatownScenes, ragingBullScenes,
     annieHallScenes, starWarsNewHopeScenes, empireStrikesBackScenes, closeEncountersScenes,
-    rockyScenes, theExorcistScenes, etScenes, ghostbustersScenes,
+    rockyScenes, theExorcistScenes, etScenes,
     amadeusScenes, brazilScenes, untouchablesScenes, standByMeScenes, blueVelvetScenes,
     parisTexasScenes, wingsOfDesireScenes, ranScenes, cinemaParadisoScenes
 } from './scenes/classics1';
@@ -176,7 +176,7 @@ import {
 } from './scenes/addedBlockbusters';
 
 import {
-    adaptationScenes, familyManScenes, fearAndLoathingScenes, jawsScenes as jawsExpandedScenes
+    adaptationScenes, familyManScenes, fearAndLoathingScenes
 } from './scenes/cageAndOthers';
 
 import {
@@ -195,7 +195,7 @@ import {
 } from './scenes/expandedBatch3';
 
 import {
-    christmasVacationExpandedScenes, thisIsTheEndScenes,
+    thisIsTheEndScenes,
     prettyInPinkScenes, singingInTheRainScenes, eyesWideShutExpandedScenes
 } from './scenes/expandedBatch4';
 
@@ -256,6 +256,25 @@ import {
     halloween2007Scenes, halloweenII2009Scenes, elSuperbeastoScenes,
     theLordsOfSalemScenes, thirtyOneScenes, threeFromHellScenes, theMunsters2022Scenes
 } from './scenes/robZombieAndGrindhouseScenes';
+
+import { jawsScenes } from './scenes/jaws';
+import {
+    gooniesScenes, weirdScienceScenes, realGeniusScenes, airplaneScenes
+} from './scenes/eightiesGeniusGoonies';
+import { lastHouse2009Scenes } from './scenes/lastHouse2009';
+import { christmasStoryExpandedScenes } from './scenes/christmasStoryExpanded';
+import {
+    christmasVacationOverhaulScenes, vacation1983Scenes, europeanVacationScenes,
+    vegasVacationScenes, animalHouseScenes
+} from './scenes/nationalLampoonScenes';
+import {
+    ghostbusters1Scenes, ghostbusters2Scenes
+} from './scenes/ghostbustersScenes';
+import {
+    labyrinthScenes, careerOpportunitiesScenes, darkCityScenes,
+    requiemForADreamScenes, aBeautifulMindScenes, theRocketeerScenes,
+    phenomenaScenes
+} from './scenes/jenniferConnellyScenes';
 
 export const movieScenes: Record<string, Scene[]> = {
     'top-gun': topGunScenes,
@@ -328,10 +347,10 @@ export const movieScenes: Record<string, Scene[]> = {
     'its-a-wonderful-life': itsAWonderfulLifeScenes,
     'home-alone': homeAloneScenes,
     'elf': elfScenes,
-    'christmas-vacation': christmasVacationExpandedScenes,
+    'christmas-vacation': christmasVacationOverhaulScenes,
     'nightmare-before-christmas': nightmareBeforeChristmasScenes,
     'miracle-34th-street': miracleScenes,
-    'christmas-story': christmasStoryScenes,
+    'christmas-story': christmasStoryExpandedScenes,
     'how-the-grinch-stole': grinchScenes,
     'muppet-christmas-carol': muppetCarolScenes,
     'love-actually': loveActuallyScenes,
@@ -382,14 +401,14 @@ export const movieScenes: Record<string, Scene[]> = {
     'annie-hall': annieHallScenes,
     'star-wars-new-hope': starWarsNewHopeScenes,
     'empire-strikes-back': empireStrikesBackScenes,
-    'jaws': jawsExpandedScenes,
+    'jaws': jawsScenes,
     'close-encounters': closeEncountersScenes,
     'alien': alienScenes,
     'rocky': rockyScenes,
     'the-exorcist': theExorcistScenes,
     'blade-runner': bladeRunnerScenes,
     'et-extra-terrestrial': etScenes,
-    'ghostbusters': ghostbustersScenes,
+    'ghostbusters': ghostbusters1Scenes,
     'amadeus': amadeusScenes,
     'brazil': brazilScenes,
     'scarface': scarfaceExpandedScenes,
@@ -702,4 +721,31 @@ export const movieScenes: Record<string, Scene[]> = {
     'before-sunrise': beforeSunriseScenes,
     'ten-things-i-hate-about-you': tenThingsIHateAboutYouScenes,
     'valentines-day-movie': valentinesDayMovieScenes,
+
+    // 80s Pop Classics, Genius & Airplane
+    'the-goonies': gooniesScenes,
+    'weird-science': weirdScienceScenes,
+    'real-genius': realGeniusScenes,
+    'airplane': airplaneScenes,
+
+    // Last House on the Left (2009 Remake)
+    'the-last-house-on-the-left-2009': lastHouse2009Scenes,
+
+    // National Lampoon Classics
+    'national-lampoons-vacation': vacation1983Scenes,
+    'european-vacation': europeanVacationScenes,
+    'vegas-vacation': vegasVacationScenes,
+    'animal-house': animalHouseScenes,
+
+    // Ghostbusters II
+    'ghostbusters-2': ghostbusters2Scenes,
+
+    // Jennifer Connelly Classics
+    'labyrinth': labyrinthScenes,
+    'career-opportunities': careerOpportunitiesScenes,
+    'dark-city': darkCityScenes,
+    'requiem-for-a-dream': requiemForADreamScenes,
+    'a-beautiful-mind': aBeautifulMindScenes,
+    'the-rocketeer': theRocketeerScenes,
+    'phenomena': phenomenaScenes,
 };
