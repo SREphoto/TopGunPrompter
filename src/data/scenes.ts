@@ -92,7 +92,7 @@ import {
     twelveAngryMenScenes, sevenSamuraiScenes, rashomonScenes,
     drStrangeloveScenes, chinatownScenes, ragingBullScenes,
     annieHallScenes, starWarsNewHopeScenes, empireStrikesBackScenes, closeEncountersScenes,
-    rockyScenes, theExorcistScenes, etScenes,
+    theExorcistScenes, etScenes,
     amadeusScenes, brazilScenes, untouchablesScenes, standByMeScenes, blueVelvetScenes,
     parisTexasScenes, wingsOfDesireScenes, ranScenes, cinemaParadisoScenes
 } from './scenes/classics1';
@@ -404,7 +404,7 @@ export const movieScenes: Record<string, Scene[]> = {
     'jaws': jawsScenes,
     'close-encounters': closeEncountersScenes,
     'alien': alienScenes,
-    'rocky': rockyScenes,
+    'rocky': rocky1ExpandedScenes,
     'the-exorcist': theExorcistScenes,
     'blade-runner': bladeRunnerScenes,
     'et-extra-terrestrial': etScenes,

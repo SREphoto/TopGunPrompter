@@ -24,18 +24,28 @@ function AppClassic() {
         ...globalStyles
     ], [currentMovie]);
 
+    const stripMidjourneyParams = (text: string): string =>
+        text
+            .replace(/\s*(?:--|\u2014|\u2013)(?:ar|v|version|stylize|s|style|niji|q|quality|c|chaos|w|weird|repeat|fast|draft|hd|sd|sref|sw|oref|ow|cref|cw|no)\b[^.,;]*/gi, '')
+            .replace(/\s+/g, ' ')
+            .replace(/\s+([.,;])/g, '$1')
+            .replace(/[.,;]+$/g, '')
+            .trim();
+
     const generatedPrompt = useMemo(() => {
         if (!selectedSceneId || !selectedStyleName) return '';
         const scene = currentScenes.find(s => s.id === selectedSceneId);
         const style = allStyles.find(s => s.name === selectedStyleName);
 
         if (scene && style) {
+            const cleanScenePayload = stripMidjourneyParams(scene.promptPayload);
+            const cleanStyleString = stripMidjourneyParams(style.promptString);
             let descriptiveText = '';
             let params = '';
 
             if (version === '8' || version === '8.1') {
-                const subject = scene.promptPayload.replace(/\.,/g, ',');
-                const visualStyleProse = style.promptString.replace(/\.,/g, ',');
+                const subject = cleanScenePayload.replace(/\.,/g, ',');
+                const visualStyleProse = cleanStyleString.replace(/\.,/g, ',');
                 const subjectIntro = `A cinematic shot featuring ${subject.toLowerCase()}`;
                 const envIntro = `set within the world of the movie ${currentMovie.title} (${currentMovie.year})`;
                 const lightAndCamera = `The scene is defined by ${visualStyleProse.toLowerCase()}`;
@@ -46,7 +56,7 @@ function AppClassic() {
                 }
                 params = `--style raw --ar ${ar} --v ${version} --s ${stylize}`;
             } else {
-                descriptiveText = `${scene.promptPayload}. ${style.promptString}. ESTABLISHING SHOT, cinematic footage from the movie ${currentMovie.title} (${currentMovie.year})`;
+                descriptiveText = `${cleanScenePayload}. ${cleanStyleString}. ESTABLISHING SHOT, cinematic footage from the movie ${currentMovie.title} (${currentMovie.year})`;
                 params = `--style raw --ar ${ar} --v ${version} --stylize ${stylize}`;
             }
 

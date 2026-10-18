@@ -182,7 +182,12 @@ function App() {
   const handleQuickCopy = async (e: React.MouseEvent, text: string, type: 'scene' | 'style', id: number | string) => {
     e.stopPropagation();
     try {
-      await navigator.clipboard.writeText(text);
+      const cleanText = text
+        .replace(/\s*(?:--|\u2014|\u2013)(?:ar|v|version|stylize|s|style|niji|q|quality|c|chaos|w|weird|repeat|fast|draft|hd|sd|sref|sw|oref|ow|cref|cw|no)\b[^.,;]*/gi, '')
+        .replace(/\s+/g, ' ')
+        .replace(/\s+([.,;])/g, '$1')
+        .trim();
+      await navigator.clipboard.writeText(cleanText);
       if (type === 'scene') {
         setCopiedSceneId(id as number);
         setTimeout(() => setCopiedSceneId(null), 1500);
@@ -393,24 +398,51 @@ function App() {
   }, [selectedHolidayFilter, searchQuery, appMode]);
 
 
+  const stripMidjourneyParams = (text: string): string =>
+    text
+      .replace(/\s*(?:--|\u2014|\u2013)(?:ar|v|version|stylize|s|style|niji|q|quality|c|chaos|w|weird|repeat|fast|draft|hd|sd|sref|sw|oref|ow|cref|cw|no)\b[^.,;]*/gi, '')
+      .replace(/\s+/g, ' ')
+      .replace(/\s+([.,;])/g, '$1')
+      .replace(/[.,;]+$/g, '')
+      .trim();
+
+  const normalizeAspectRatio = (ratio: string): string => {
+    const clean = ratio.trim();
+    if (clean === '2.39:1' || clean === '2.35:1' || clean === '2.40:1') return '21:9';
+    if (clean === '1.85:1') return '185:100';
+    // Convert any other decimal ratio X.YZ:1 to integer ratio
+    const decMatch = clean.match(/^(\d+)\.(\d+):(\d+)$/);
+    if (decMatch) {
+      const scale = Math.pow(10, decMatch[2].length);
+      const w = Math.round(parseFloat(`${decMatch[1]}.${decMatch[2]}`) * scale);
+      const h = parseInt(decMatch[3], 10) * scale;
+      return `${w}:${h}`;
+    }
+    return clean;
+  };
+
   const generatedPrompt = useMemo(() => {
     if (!selectedSceneId || !selectedStyleName) return '';
     const scene = currentScenes.find(s => s.id === selectedSceneId);
     const style = allStyles.find(s => s.name === selectedStyleName);
 
     if (scene && style) {
-      let visualStyle = style.promptString;
+      const cleanScenePayload = stripMidjourneyParams(scene.promptPayload);
+      const cleanStyleString = stripMidjourneyParams(style.promptString);
+      let visualStyle = cleanStyleString;
       if (currentMovie.type === 'game' && selectedStyleName && !selectedStyleName.startsWith(currentMovie.title)) {
         const styleGameMatch = selectedStyleName.match(/^([^:]+):/);
         const styleGameMatch2 = selectedStyleName.match(/^(.+) Style \(/);
         const sourceGame = styleGameMatch?.[1] || styleGameMatch2?.[1] || '';
         if (sourceGame && sourceGame !== currentMovie.title) {
-          visualStyle = `REIMAGINED in ${sourceGame} art style: ${style.promptString}`;
+          visualStyle = `REIMAGINED in ${sourceGame} art style: ${cleanStyleString}`;
         }
       }
 
+      const validAr = normalizeAspectRatio(ar);
+
       if (version === '8' || version === '8.1') {
-        const subject = scene.promptPayload.replace(/\.,/g, ',');
+        const subject = cleanScenePayload.replace(/\.,/g, ',');
         const visualStyleProse = visualStyle.replace(/\.,/g, ',');
         const subjectIntro = `A cinematic shot featuring ${subject.toLowerCase()}`;
         const envIntro = `set within the world of the ${currentMovie.type === 'series' ? 'TV Series' : currentMovie.type === 'game' ? 'Video Game' : 'movie'} ${currentMovie.title} (${currentMovie.year})`;
@@ -426,7 +458,7 @@ function App() {
         let techSpecs = '';
         if (compareLenses) techSpecs += ' {35mm lens, 85mm lens, Fisheye lens} --fast';
 
-        let params = `--ar ${ar} --v ${version}`;
+        let params = `--ar ${validAr} --v ${version}`;
         if (rawMode) params += ' --style raw';
         if (stylize > 0) params += ` --s ${stylize}`;
         if (qValue !== 1) params += ` --q ${qValue}`;
@@ -443,14 +475,14 @@ function App() {
         return `${descriptiveText}${techSpecs} ${params}`;
       } else {
         const anchor = `Cinematic shot from the ${currentMovie.type === 'series' ? 'TV Series' : currentMovie.type === 'game' ? 'Video Game' : 'movie'} ${currentMovie.title} (${currentMovie.year})`;
-        const subject = scene.promptPayload;
+        const subject = cleanScenePayload;
         
         if (promptOnly) return `${anchor}. ${subject}. ${visualStyle}.`;
 
         let techSpecs = '';
         if (compareLenses) techSpecs += ' {35mm lens, 85mm lens, Fisheye lens} --fast';
 
-        let params = `--ar ${ar} --v ${version}`;
+        let params = `--ar ${validAr} --v ${version}`;
         if (rawMode) params += ' --style raw';
         if (stylize > 0) params += ` --stylize ${stylize}`;
         if (burstMode) params += ' --repeat 5';
@@ -1572,14 +1604,14 @@ function App() {
               <div>
                 <div className="flex justify-between items-center mb-1.5 ml-1">
                   <label className="block text-[9px] font-mono text-zinc-600 uppercase">Midjourney Version</label>
-                  <label className="flex items-center gap-1 cursor-pointer">
+                  <label className="flex items-center gap-1 cursor-pointer" title="Output scene and style prose only without any --ar, --v, or other Midjourney modifiers">
                     <input
                       type="checkbox"
                       checked={promptOnly}
                       onChange={(e) => setPromptOnly(e.target.checked)}
                       className="accent-cyan-500 cursor-pointer"
                     />
-                    <span className="text-[9px] font-mono text-cyan-400">Prompt Only</span>
+                    <span className="text-[9px] font-mono text-cyan-400">No Modifiers (Prompt Only)</span>
                   </label>
                 </div>
                 <div className="flex bg-zinc-900 p-1 rounded-lg border border-zinc-800 flex-wrap gap-1">
@@ -1600,7 +1632,7 @@ function App() {
               <div>
                 <label className="block text-[9px] font-mono text-zinc-600 mb-1.5 ml-1">ASPECT RATIO</label>
                 <div className="grid grid-cols-4 gap-1 bg-zinc-900 p-1 rounded-lg border border-zinc-800">
-                  {['16:9', '2.39:1', '1.85:1', '4:3', '3:2', '1:1', '9:16', '2:3'].map((ratio) => (
+                  {['16:9', '21:9', '2:1', '4:3', '3:2', '1:1', '9:16', '2:3'].map((ratio) => (
                     <button key={ratio} onClick={() => setAr(ratio)} className={`py-1.5 text-[9px] font-bold rounded-md transition-all ${ar === ratio ? 'bg-zinc-700 text-white shadow-sm' : 'text-zinc-500 hover:text-zinc-300'}`}>{ratio}</button>
                   ))}
                 </div>

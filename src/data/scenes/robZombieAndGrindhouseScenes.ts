@@ -1,7 +1,7 @@
 import type { Scene } from '../types';
 
 // ==========================================
-// 1. The Last House on the Left (1972) - 25 Scenes
+// 1. The Last House on the Left (1972) - 50 Scenes
 // ==========================================
 export const lastHouseOnTheLeftScenes: Scene[] = [
     { id: 1, title: 'Mari\'s 17th Birthday Morning', promptPayload: 'Sun-drenched Connecticut lakeside home, teenage girl Mari Collingwood celebrating 17th birthday with parents, packing denim bellbottoms and acoustic guitar for rock concert in New York, 1970s warm 16mm grain.' },
@@ -28,11 +28,36 @@ export const lastHouseOnTheLeftScenes: Scene[] = [
     { id: 22, title: 'Dr. Collingwood Starts the Chainsaw', promptPayload: 'Dr. Collingwood in basement workshop pulling rip-cord of heavy gas-powered chainsaw, engine roaring to life, blue smoke filling room, eyes cold and dead.' },
     { id: 23, title: 'The Chainsaw Duel in the Living Room', promptPayload: 'Dr. Collingwood pursuing Krug through family living room wielding roaring chainsaw, chewing through antique furniture and drywall, righteous paternal wrath.' },
     { id: 24, title: 'Junior\'s Tragic Suicide', promptPayload: 'Junior unable to bear the horror, picking up Krug\'s fallen revolver, shooting himself in head in front of horrified parents, tragedy compounding.' },
-    { id: 25, title: 'The Sheriff Arrives Too Late', promptPayload: 'Morning sun breaking over demolished house, police cruisers arriving, sheriff finding blood-soaked parents sitting in daze among corpses, haunting bleak freeze-frame.' }
+    { id: 25, title: 'The Sheriff Arrives Too Late', promptPayload: 'Morning sun breaking over demolished house, police cruisers arriving, sheriff finding blood-soaked parents sitting in daze among corpses, haunting bleak freeze-frame.' },
+    { id: 26, title: 'The Rural Mailman at the Mailbox', promptPayload: 'Opening 1972 pastoral shot of an elderly rural Connecticut mailman on a bicycle dropping letters into the Collingwood family mailbox along a quiet wooded country lane.' },
+    { id: 27, title: 'Mari Showering Behind Frosted Glass', promptPayload: 'Soft-focus 16mm morning shot of teenage Mari showering before her birthday trip while folk-rock acoustic guitar music plays over the sunny lakeside house.' },
+    { id: 28, title: 'The Peace Sign Birthday Pendant', promptPayload: 'Dr. John and Estelle Collingwood presenting Mari with a delicate silver peace-sign necklace over breakfast, kissing their daughter goodbye before she leaves for the city.' },
+    { id: 29, title: 'Radio Broadcast of Krug\'s Prison Break', promptPayload: 'Car dashboard AM radio crackling with an urgent news bulletin warning that convicted murderers Krug Stillo and Fred "Weasel" Podowski have escaped custody.' },
+    { id: 30, title: 'Buying Ice Cream Cones in the Park', promptPayload: 'Mari and tough-talking friend Phyllis strolling through a gritty New York street fair eating melting vanilla ice cream cones before spotting Junior on the stoop.' },
+    { id: 31, title: 'Junior\'s Brass Cowbell Necklace', promptPayload: 'Close-up of twitchy drug-addicted Junior fingering the battered brass cowbell hanging around his neck as Krug demands his daily heroin fix.' },
+    { id: 32, title: 'Locked Inside the Car Trunk', promptPayload: 'Krug and Weasel shoving bound and gagged Mari and Phyllis into the dark cramped trunk of their stolen 1960s convertible and slamming the metal lid shut.' },
+    { id: 33, title: 'Bumping Over the Collingwood Driveway', promptPayload: 'Ironic wide shot of the killers\' stolen convertible speeding right past the Collingwood family mailbox before the rear axle snaps in the woods a hundred yards away.' },
+    { id: 34, title: 'Bumbling Sheriff and Deputy at the Diner', promptPayload: 'Slapstick tonal contrast as the inept local Sheriff and his deputy argue over coffee and donuts before their patrol car runs out of gas on the highway.' },
+    { id: 35, title: 'Phyllis Stabbed in the Cemetery Clearing', promptPayload: 'Phyllis sprinting toward the paved road through an overgrown stone graveyard, tackled from behind by Weasel and Sadie with switchblades flashing in the gray light.' },
+    { id: 36, title: 'Mari Pleading with Junior by the Trees', promptPayload: 'Desperate Mari appealing to Junior\'s conscience in the woods, calling him "Willow" and promising to get him off drugs if he helps her escape his father Krug.' },
+    { id: 37, title: 'Washing Blood in the Forest Stream', promptPayload: 'After the murder at the lake, Krug, Weasel, and Sadie kneeling at a shallow woodland brook scrubbing dark bloodstains off their hands and shirt cuffs.' },
+    { id: 38, title: 'Putting On Cheap Disguise Suits', promptPayload: 'The four killers pulling ill-fitting thrift-store suits out of their car trunk, pretending to be traveling insurance salesmen when they knock on the Collingwoods\' door.' },
+    { id: 39, title: 'The Awkward Dinner Table Conversation', promptPayload: 'Tense candlelit dinner in the Collingwood dining room as Krug makes crude jokes and spills red wine on the white tablecloth while Dr. Collingwood watches uneasily.' },
+    { id: 40, title: 'Hitchhiking on the Chicken Delivery Truck', promptPayload: 'The stranded Sheriff and Deputy riding in the back of a noisy wooden crate truck filled with squawking live white chickens on their way to the Collingwood house.' },
+    { id: 41, title: 'Overhearing the Killers Through the Bedroom Wall', promptPayload: 'Estelle Collingwood pressing her ear against the hallway wallpaper outside the guest room, hearing Krug laugh about the two teenage girls in the woods.' },
+    { id: 42, title: 'Finding the Bloodstained Clothes in the Suitcase', promptPayload: 'Dr. Collingwood quietly opening the killers\' battered leather suitcase in the closet, uncovering Mari\'s torn bloodied denim jacket.' },
+    { id: 43, title: 'Setting Up the Electrified Living Room Booby Trap', promptPayload: 'Dr. Collingwood stripping copper lamp cords and wiring high-voltage household current across the wet living room threshold in the dark.' },
+    { id: 44, title: 'Estelle Lures Weasel to the Emerald Pond', promptPayload: 'Estelle leading drunken Weasel out to the dark moonlit swimming pool in the woods under the pretense of seduction before biting and slashing him.' },
+    { id: 45, title: 'Weasel Drowns in the Dark Water', promptPayload: 'Bleeding Weasel staggering backward into the deep end of the dark backyard pool while Estelle stands motionless on the stone edge watching him sink.' },
+    { id: 46, title: 'Slashing Sadie by the Poolside', promptPayload: 'Sadie stumbling out into the backyard looking for Weasel, ambushed by Estelle and forced into the bloody pool water with a carving knife.' },
+    { id: 47, title: 'Krug Commands Junior to Shoot Dr. Collingwood', promptPayload: 'Cornered in the foyer, Krug screaming at his terrified son Junior to shoot unarmed Dr. Collingwood with the .38 revolver.' },
+    { id: 48, title: 'Chainsaw Blade Through the Front Door', promptPayload: 'Roaring two-stroke steel chainsaw blade punching straight through the white wooden panels of the living room door, splinters flying in slow motion.' },
+    { id: 49, title: 'Krug Cornered Against the Bookshelf', promptPayload: 'Once-omnipotent killer Krug cowering in terror against the living room wall as blood-spattered Dr. Collingwood drives the screaming chainsaw into his chest.' },
+    { id: 50, title: 'The Deputy Drops the Chainsaw in Silence', promptPayload: 'The Sheriff bursting through the front door with revolver drawn, telling devastated Dr. Collingwood gently to put the chainsaw down as folk music fades in.' }
 ];
 
 // ==========================================
-// 2. House of 1000 Corpses (2003) - 25 Scenes
+// 2. House of 1000 Corpses (2003) - 50 Scenes
 // ==========================================
 export const houseOf1000CorpsesScenes: Scene[] = [
     { id: 1, title: 'Captain Spaulding\'s Fried Chicken & Gas', promptPayload: 'Garish rural Texas gas station at night, flickering neon signs, Captain Spaulding in smeared clown makeup and stars-and-stripes top hat eating fried chicken behind counter.' },
@@ -59,11 +84,36 @@ export const houseOf1000CorpsesScenes: Scene[] = [
     { id: 22, title: 'Crawling Through the Grave Tunnel', promptPayload: 'Denise clawing frantic through muddy crawlspace filled with skeletal remains, bursting out into open air through cemetery grave.' },
     { id: 23, title: 'Flagging Down Captain Spaulding\'s Car', promptPayload: 'Blood-soaked Denise reaching paved highway at dawn, flagging down passing vintage convertible driven by Captain Spaulding, gasping for rescue.' },
     { id: 24, title: 'Otis in the Backseat', promptPayload: 'Spaulding smiling warmly, camera tilting down into rear seat as Otis slowly sits up holding hunting knife to Denise\'s throat, trap sprung.' },
-    { id: 25, title: 'The Final Operating Table Smash Cut', promptPayload: 'Denise strapped to Dr. Satan\'s operating table, doctor holding scalpel over eye, scream echoing into violent smash cut to black and screeching metal music.' }
+    { id: 25, title: 'The Final Operating Table Smash Cut', promptPayload: 'Denise strapped to Dr. Satan\'s operating table, doctor holding scalpel over eye, scream echoing into violent smash cut to black and screeching metal music.' },
+    { id: 26, title: 'Stucky\'s Restroom Ambush Prep', promptPayload: 'Filthy yellow-lit gas station bathroom, Captain Spaulding\'s bearded assistant Ravelli mopping the tile floor while two armed robbers load shotguns outside in the rain.' },
+    { id: 27, title: 'Ed Gein and Albert Fish Wax Exhibits', promptPayload: 'Neon-drenched spookhouse corridor inside the Museum of Monsters and Madmen, mechanical mannequin of Ed Gein rising from a butcher table in strobe light.' },
+    { id: 28, title: 'The Legend of S. Quentin Quale', promptPayload: 'Grainy 1930s black-and-white archival montage showing mad asylum surgeon Dr. Satan hanging from a lynching tree before his body mysteriously vanishes.' },
+    { id: 29, title: 'Shotgun Blast Over the Car Roof', promptPayload: 'In the pouring rain, shadowy figure firing a 12-gauge shotgun from the roadside trees, blowing out the tire of the college students\' car.' },
+    { id: 30, title: 'Rufus Tows the Stranded Car', promptPayload: 'Hulking bearded mechanic Rufus pulling up in a rusted tow truck with amber hazard lights flashing through the downpour, hauling the kids to the Firefly house.' },
+    { id: 31, title: 'Grampa Hugo\'s Dirty Jokes by the Fire', promptPayload: 'Cantankerous Grampa Hugo sitting in a rocking chair wearing a dusty tuxedo and top hat, cackling at awful vaudeville jokes in the cluttered parlor.' },
+    { id: 32, title: 'Tiny\'s Monster Mask and Cereal Bowl', promptPayload: 'Burn-scarred seven-foot giant Tiny Firefly sitting alone at a wooden table wearing a rubber monster mask, quietly eating cereal with a soup spoon.' },
+    { id: 33, title: 'Mary Confronts Baby After the Dance', promptPayload: 'Jealous girlfriend Mary slapping Baby Firefly after her seductive song, Baby pulling a pearl-handled switchblade and whispering that Mary will never leave alive.' },
+    { id: 34, title: 'Scarecrow Ambush at the Wooden Gate', promptPayload: 'As the car rolls down the driveway at night, Otis and Rufus dressed as horrifying scarecrows drop from the wooden archway onto the hood.' },
+    { id: 35, title: 'Jerry Scalped for Answering Wrong', promptPayload: 'Bound to a chair in the neon cellar, sarcastic college boy Jerry failing to guess Baby\'s favorite movie star (Bette Davis) and getting partially scalped by Otis.' },
+    { id: 36, title: 'Baby\'s Polaroid Trophy Wall', promptPayload: 'Bedroom wall papered with hundreds of faded Polaroid snapshots of bound hitchhikers, cheerleaders, and mutilated victims surrounded by glitter hearts.' },
+    { id: 37, title: 'Don Willis Searches the Barn', promptPayload: 'Denise\'s retired cop father Don Willis and Deputy Steve Naish entering the dark Firefly barn with flashlights, discovering dead cheerleaders hanging from rafters.' },
+    { id: 38, title: 'The 17-Second Overhead Shot of Deputy Naish', promptPayload: 'Famous slow-motion high-angle crane shot of Otis holding his revolver to kneeling Deputy Naish\'s forehead in the dirt yard for seventeen agonizing seconds before firing.' },
+    { id: 39, title: 'Otis Wearing Don Willis\'s Face', promptPayload: 'Otis stepping into the lantern-lit barn wearing the freshly flayed facial skin and police glasses of Denise\'s father over his own face like a grotesque mask.' },
+    { id: 40, title: 'Mary\'s Desperate Run Through the Mist', promptPayload: 'Bound Mary breaking free in the foggy cemetery woods, sprinting through twisted gravestones in psychedelic negative-color jump cuts as Baby chases her with a butcher knife.' },
+    { id: 41, title: 'Baby Stabs Mary Beneath the Obelisk', promptPayload: 'Baby tackling exhausted Mary in a clearing of fallen autumn leaves, straddling her and stabbing her repeatedly while screaming in psychotic ecstasy.' },
+    { id: 42, title: 'Otis Conducts the Ritual in Red Robes', promptPayload: 'Torchlit pagan altar in the woods, Otis painted in white skull makeup and crimson robes raising a sacrificial dagger over the surviving captives.' },
+    { id: 43, title: 'Burning Don Willis Inside the Effigy', promptPayload: 'Mutilated corpse of Don Willis bound to a wooden cross of branches and set ablaze against the black Halloween night sky.' },
+    { id: 44, title: 'Jerry Lowered to the Underground Cannibals', promptPayload: 'Jerry lowered on a steel cable down the stone well into a swarming pit of pale subterranean ghouls that drag him into the darkness.' },
+    { id: 45, title: 'Denise\'s Torchlight Crawl Through Skulls', promptPayload: 'Denise holding a sputtering wooden torch as she squeezes through a narrow earthen catacomb wall packed solid with thousands of human skulls.' },
+    { id: 46, title: 'Failed Escape of the Cheerleader on the Table', promptPayload: 'Inside the subterranean operating theater, a lobotomized cheerleader on a gurney gasping for Denise\'s help before dying in a spray of blood.' },
+    { id: 47, title: 'Dr. Satan\'s Mechanical Respirator Mask', promptPayload: 'Extreme close-up of decrepit Dr. Satan in his rusted iron surgical frame, pneumatic rubber bellows wheezing and mechanical fingers twitching.' },
+    { id: 48, title: 'Tricking the Axeman with the Collapsing Beam', promptPayload: 'Denise ducking beneath a rotting timber support in the tunnel as giant axeman Earl Firefly swings his blade and brings the earth ceiling crashing down on himself.' },
+    { id: 49, title: 'Passing Captain Spaulding\'s Chicken Bag', promptPayload: 'Exhausted Denise slumping in the passenger seat of Spaulding\'s car on the sunny highway, noticing his greasy paper bag of fried chicken on the bench seat.' },
+    { id: 50, title: 'Split-Screen Psychedelic Grindhouse Finale', promptPayload: 'Frenzied 1970s exploitation montage of flashing red skulls, screaming faces, and Dr. Satan\'s laughing eyes under heavy distorted guitars.' }
 ];
 
 // ==========================================
-// 3. The Devil's Rejects (2005) - 25 Scenes
+// 3. The Devil's Rejects (2005) - 50 Scenes
 // ==========================================
 export const theDevilsRejectsScenes: Scene[] = [
     { id: 1, title: 'The Farmhouse Shootout at Dawn', promptPayload: 'Sheriff Wydell leading heavily armed police siege on Firefly farmhouse at sunrise, hundreds of high-caliber rounds shredding wooden walls, heavy steel shield defense.' },
@@ -90,11 +140,36 @@ export const theDevilsRejectsScenes: Scene[] = [
     { id: 22, title: 'Tiny Firefly\'s Heroic Rescue', promptPayload: 'Deformed giant Tiny Firefly bursting through burning walls, snapping Wydell\'s neck, freeing Otis, Baby, and Spaulding from the inferno.' },
     { id: 23, title: 'Tiny Walks Back into the Flames', promptPayload: 'Tiny watching trio drive away in battered 1972 Cadillac convertible, turning around and walking peacefully back into collapsing blazing farmhouse to die.' },
     { id: 24, title: 'The Free Bird Highway Roadblock', promptPayload: 'Lynyrd Skynyrd\'s "Free Bird" playing, trio driving down empty two-lane highway, spotting barricade of dozen state trooper cruisers and shotguns aimed.' },
-    { id: 25, title: 'The Glorious Outlaw Last Stand', promptPayload: 'Otis stepping on gas, trio raising revolvers and shotguns smiling through blood and bruises, speeding directly into wall of police gunfire in legendary freeze-frame.' }
+    { id: 25, title: 'The Glorious Outlaw Last Stand', promptPayload: 'Otis stepping on gas, trio raising revolvers and shotguns smiling through blood and bruises, speeding directly into wall of police gunfire in legendary freeze-frame.' },
+    { id: 26, title: 'Dragging the Naked Corpse Through the Woods', promptPayload: 'Grainy sepia-toned opening title sequence, Otis and Rufus dragging a bound dead woman through muddy Texas woods while Terry Reid\'s "Seed of Memory" plays.' },
+    { id: 27, title: 'Otis Wakes Next to a Corpse', promptPayload: 'Morning sunlight filtering through dirty farmhouse blinds onto Otis sleeping naked beside a rotting dead body before police bullhorns shatter the silence.' },
+    { id: 28, title: 'Rufus Shot Through the Steel Armor Plate', promptPayload: 'Rufus stepping onto the farmhouse porch wearing welded boiler-plate steel armor and firing twin submachine guns until twenty police rifle rounds drop him in the dirt.' },
+    { id: 29, title: 'Escaping Through the Sewer Drainpipe', promptPayload: 'Otis and Baby crawling out of a rusted corrugated iron drainage pipe into a dry creek bed half a mile behind the police cordon.' },
+    { id: 30, title: 'Carjacking the Driver on the Desert Road', promptPayload: 'Baby lying in the middle of a lonely asphalt road feigning injury, Otis springing from the brush to stab the Good Samaritan driver and steal her car.' },
+    { id: 31, title: 'Captain Spaulding\'s Nightmare Vision', promptPayload: 'Spaulding waking up sweating in bed next to his girlfriend after dreaming of a decomposing corpse attacking him, answering the frantic phone call from Otis.' },
+    { id: 32, title: 'Spaulding Threatens the Child in the Car', promptPayload: 'While stealing a station wagon at gunpoint, Captain Spaulding leaning down to the crying boy in the back seat and growling about why he should hate clowns.' },
+    { id: 33, title: 'Psychic Morris Green Examines the Farmhouse', promptPayload: 'Eccentric television psychic Morris Green walking through the bullet-riddled Firefly cellar touching bloodstained walls and recoiling from the psychic evil.' },
+    { id: 34, title: 'Baby Wears Gloria\'s Wedding Ring', promptPayload: 'Inside Room 9 of the Kahiki Palms Motel, Baby humiliating captive band wife Gloria and forcing her to hand over her diamond wedding band.' },
+    { id: 35, title: 'Otis\'s "I Am the Devil" Speech', promptPayload: 'Low-angle close-up of gaunt, bearded Otis pointing his revolver down at the kneeling musicians in the desert and proclaiming "I am the Devil, and I am here to do the Devil\'s work."' },
+    { id: 36, title: 'Fanny Packs and Tutti-Frutti Ice Cream Argument', promptPayload: 'Cruising down the sun-baked Texas highway in the sedan, Otis, Baby, and Spaulding bickering furiously until Spaulding demands they stop for tutti-frutti ice cream.' },
+    { id: 37, title: 'Motel Maid Discovers the Carnage in Room 9', promptPayload: 'Horrified motel housekeeper pushing her cleaning cart into Room 9, screaming at the blood-spattered walls and Wendy hanging taped to the bathroom door.' },
+    { id: 38, title: 'Film Critic Elvis Obsession Interrogation', promptPayload: 'Sheriff Wydell dragging pretentious rock critic Susan into his office to decode why the Firefly clan is obsessed with Groucho Marx characters.' },
+    { id: 39, title: 'Mother Firefly Taunts Wydell About Killing His Brother', promptPayload: 'In the dim county jail cell, Mother Firefly grinning through her teeth and describing in graphic detail how she blew Sheriff George Wydell\'s brains out.' },
+    { id: 40, title: 'Chinese Food and Beer at Charlie\'s Bordello', promptPayload: 'Otis, Baby, and Spaulding lounging in velvet armchairs at Charlie\'s desert brothel eating takeout lo mein from paper cartons and watching cartoons.' },
+    { id: 41, title: 'Stomping the Stripper\'s Boyfriend on the Porch', promptPayload: 'Otis and Spaulding viciously beating an unruly customer on the wooden porch of Frontier Fun Town while dust devils spin across the desert yard.' },
+    { id: 42, title: 'Rondo and Billy Boy Checking Their Shotguns', promptPayload: 'Veteran bounty hunters Rondo (Danny Trejo) and Billy Boy (Diamond Dallas Page) loading 12-gauge shells outside the brothel at dawn before springing the trap.' },
+    { id: 43, title: 'Wydell Hunts Baby Through the Cornfield', promptPayload: 'Unhinged Sheriff Wydell releasing Baby into the moonlit cornfield around the farmhouse just so he can hunt her down like an animal with his revolver.' },
+    { id: 44, title: 'Wydell Staples Crime Scene Photos to Their Chests', promptPayload: 'Inside the torture cellar, Wydell using a heavy steel staple gun to pin Polaroids of murdered victims directly onto Otis\'s bare chest.' },
+    { id: 45, title: 'Cattle Prod Torture of Captain Spaulding', promptPayload: 'Sweating Sheriff Wydell shocking bound Captain Spaulding with a high-voltage electric cattle prod while quoting the Book of Revelation.' },
+    { id: 46, title: 'Charlie Altamont Returns with an Axe', promptPayload: 'Loyal brother Charlie sneaking into the farmhouse to rescue the trio, only for Wydell to catch him off-guard and bury a hatchet in his chest.' },
+    { id: 47, title: 'Super 8 Home Movies of Happy Outlaw Days', promptPayload: 'Warm sun-flared Super 8mm home movie montage showing Otis, Baby, and Spaulding laughing at a backyard barbecue in happier days as "Free Bird" builds.' },
+    { id: 48, title: 'Bandaging Wounds in the Back of the Cadillac', promptPayload: 'Bleeding and scorched from the farmhouse fire, Baby resting her head on Spaulding\'s shoulder while Otis steers the bullet-pocked convertible down the highway.' },
+    { id: 49, title: 'State Troopers Rack Shotguns Behind Cruiser Doors', promptPayload: 'Line of dusty Texas highway patrol cars parked nose-to-nose across the asphalt, twenty troopers aiming rifles and shotguns as the Cadillac refuses to slow down.' },
+    { id: 50, title: 'Split-Screen Freeze-Frame in Blaze of Gunfire', promptPayload: 'Iconic 1970s three-panel split-screen freeze-frame of Otis, Baby, and Captain Spaulding firing their guns in defiance as the guitar solo reaches its climax.' }
 ];
 
 // ==========================================
-// 4. Halloween (2007) - 25 Scenes
+// 4. Halloween (2007) - 50 Scenes
 // ==========================================
 export const halloween2007Scenes: Scene[] = [
     { id: 1, title: 'The Myers Trailer in Haddonfield', promptPayload: 'Gloomy overcast morning in rundown Haddonfield trailer park, young 10-year-old Michael Myers waking in chaotic squalid home, feeding pet rat, 70s rock poster walls.' },
@@ -121,11 +196,36 @@ export const halloween2007Scenes: Scene[] = [
     { id: 22, title: 'Kidnapped to the Myers Basement', promptPayload: 'Michael reviving, kidnapping unconscious Laurie to cellar of old Myers home, presenting her with yellowed childhood photo of them together.' },
     { id: 23, title: 'Laurie Stabs Michael with His Own Knife', promptPayload: 'Laurie rejecting the connection, grabbing butcher knife and stabbing Michael repeatedly in chest and shoulder, scrambling up cellar stairs.' },
     { id: 24, title: 'The Balcony Plunge at the Myers House', promptPayload: 'Michael cornering Laurie on second-story roof, Laurie tackling Michael, both plunging off roof through wooden patio cover to ground below.' },
-    { id: 25, title: 'The Final Point-Blank Shot in the Grass', promptPayload: 'Laurie straddling unconscious Michael in wet grass, holding revolver with trembling hands, pulling trigger point-blank into face, screaming in primal trauma.' }
+    { id: 25, title: 'The Final Point-Blank Shot in the Grass', promptPayload: 'Laurie straddling unconscious Michael in wet grass, holding revolver with trembling hands, pulling trigger point-blank into face, screaming in primal trauma.' },
+    { id: 26, title: 'Deborah Myers Summoned to the Principal\'s Office', promptPayload: 'Principal Chambers opening young Michael\'s school backpack on the desk, dumping out jars containing a dead cat and Polaroids of mutilated animals in front of his shocked mother.' },
+    { id: 27, title: 'Deborah Dancing at the Go-Go Club', promptPayload: 'Melancholy contrast shot of mother Deborah Myers dancing on a neon-lit stage at the Rabbit in Red Lounge while Nazareth\'s "Love Hurts" plays over young Michael walking in the woods.' },
+    { id: 28, title: 'Steve Haley Beat to Death in the Cornfield', promptPayload: 'Young Michael in his clown mask cornering Judith\'s boyfriend Steve in the garage, smashing his face in with an aluminum baseball bat.' },
+    { id: 29, title: 'Putting On the Boyfriend\'s Latex Mask', promptPayload: 'Ten-year-old Michael placing Steve\'s oversized latex monster mask over his head before ascending the wooden stairs to his sister Judith\'s bedroom.' },
+    { id: 30, title: 'Judith Stabbed in the Hallway', promptPayload: 'Wounded Judith crawling desperately down the second-floor hallway in a trail of blood before young Michael catches up and finishes the attack.' },
+    { id: 31, title: 'Tape Recordings with Young Michael at Smith\'s Grove', promptPayload: 'Reel-to-reel magnetic tape recorder spinning on Dr. Loomis\'s desk as young Michael grows increasingly hostile and detached during months of psychiatric sessions.' },
+    { id: 32, title: 'Kind Security Guard Ismael Cruz', promptPayload: 'Elderly orderly Ismael Cruz bringing adult Michael food trays in his mask-covered cell at Smith\'s Grove, treating the silent giant with quiet respect.' },
+    { id: 33, title: 'Nurse Wynn Stabbed in the Neck with a Fork', promptPayload: 'Cruel Nurse Wynn mocking a baby photograph of Angel Myers during intake, young Michael lunging across the table and driving a metal dinner fork into her neck.' },
+    { id: 34, title: '8mm Home Movies Beside His Mother\'s Body', promptPayload: 'Heartbreaking shot of Deborah Myers lying dead on her living room floor while an 8mm film projector continues playing home movies of young Michael and baby Angel over her body.' },
+    { id: 35, title: 'Loomis Says Goodbye to Michael', promptPayload: 'After fifteen years of futile therapy, weary Dr. Loomis visiting towering adult Michael in his cell to tell him he is resigning and leaving him behind.' },
+    { id: 36, title: 'Drowning Guard Ismael in the Utility Sink', promptPayload: 'During the escape, fugitive Michael finding kind guard Ismael Cruz in the basement corridor and brutally drowning him despite Ismael\'s pleas that he was always good to him.' },
+    { id: 37, title: 'Loomis Buys the .357 Magnum Revolver', promptPayload: 'Dr. Loomis standing at a neon-lit Haddonfield gun shop counter purchasing a heavy stainless-steel Smith & Wesson revolver to stop his former patient.' },
+    { id: 38, title: 'Cruising Past the Strode Real Estate Sign', promptPayload: 'Mason Strode standing on his porch handing Laurie a folder of real estate documents to drop off at the abandoned Myers house.' },
+    { id: 39, title: 'Michael Watching Laurie from the Upstairs Window', promptPayload: 'Laurie placing the real estate envelope inside the mail slot of the rotting Myers porch while Michael stands inches behind the dirty glass window watching her.' },
+    { id: 40, title: 'Killing the German Shepherd Lester', promptPayload: 'At the Wallace house, Annie\'s boyfriend Paul investigating barking in the dark backyard only to find the family dog killed by the shadows.' },
+    { id: 41, title: 'Bob Pinned to the Kitchen Pantry Door', promptPayload: 'Iconic homage shot: towering Michael lifting Lynda\'s boyfriend Bob off his feet and pinning him straight to the kitchen wall with a twelve-inch chef knife, tilting his head.' },
+    { id: 42, title: 'Michael Under the Ghost Bedsheet with Glasses', promptPayload: 'Michael standing in the bedroom doorway draped in a white cotton bedsheet with Bob\'s eyeglasses perched over the eyeholes before strangling Lynda with the phone cord.' },
+    { id: 43, title: 'Murder of Mason and Cynthia Strode', promptPayload: 'Michael ambushing Laurie\'s adoptive parents Mason and Cynthia Strode on the front porch of their home, slaughtering them before heading after Laurie.' },
+    { id: 44, title: 'Hiding in the Upstairs Closet with Tommy and Lindsey', promptPayload: 'Terrified Laurie huddling inside the dark wooden bedroom closet clutching crying children Tommy Doyle and Lindsey Wallace as Michael hacks through the door panels.' },
+    { id: 45, title: 'Police Officer Killed in the Foyer', promptPayload: 'Deputy responding to the 911 call stepping into the dark Wallace foyer, instantly tackled and butchered by Michael in front of the screaming kids.' },
+    { id: 46, title: 'Dr. Loomis and Sheriff Brackett in the Patrol Car', promptPayload: 'Dr. Loomis riding shotgun in Sheriff Leigh Brackett\'s cruiser racing through Haddonfield streets, revealing to Brackett that Laurie is actually Michael\'s sister.' },
+    { id: 47, title: 'Michael Drops His Knife Before Laurie', promptPayload: 'In the candlelit cellar of the dilapidated Myers house, Michael kneeling gently before bound Laurie, taking off his mask, and holding out the childhood photograph.' },
+    { id: 48, title: 'Michael Crushes Dr. Loomis\'s Skull', promptPayload: 'When Dr. Loomis intervenes in the Myers hallway, giant Michael grabs Loomis by the temples with both massive hands and crushes his head until he collapses.' },
+    { id: 49, title: 'Laurie Crawling Through the Rotting Ceiling Ducts', promptPayload: 'Laurie wedged inside the dusty wooden wall spaces of the upper floor as Michael smashes a heavy two-by-four timber straight through the plasterboard.' },
+    { id: 50, title: 'Blood Splatter Across Laurie\'s Screaming Face', promptPayload: 'Final harrowing close-up of Laurie covered in her brother\'s blood after the revolver goes off, her raw hysterical screams echoing over vintage childhood home movies.' }
 ];
 
 // ==========================================
-// 5. Halloween II (2009) - 25 Scenes
+// 5. Halloween II (2009) - 50 Scenes
 // ==========================================
 export const halloweenII2009Scenes: Scene[] = [
     { id: 1, title: 'The Rainy Highway Transport Ambush', promptPayload: 'Coroner van transporting Michael\'s presumed dead body crashing into cow on dark rainy country highway, driver decapitated, Michael tearing out of body bag.' },
@@ -152,11 +252,36 @@ export const halloweenII2009Scenes: Scene[] = [
     { id: 22, title: 'Michael Speaks: "DIE!"', promptPayload: 'Michael grabbing Loomis, tearing off mask, shouting his only word in franchise: "DIE!", stabbing Loomis through chest with giant blade.' },
     { id: 23, title: 'Police Firestorm on the Shack', promptPayload: 'Sheriff Brackett ordering swat snipers to open fire through wooden walls of shed, hundreds of bullets tearing through Michael\'s body.' },
     { id: 24, title: 'Laurie Stabs Michael with His Blade', promptPayload: 'Dying Michael collapsing, Laurie picking up giant knife and stabbing brother repeatedly in neck and chest to finish the nightmare.' },
-    { id: 25, title: 'The Asylum White Room Ending', promptPayload: 'Laurie sitting alone in stark all-white psychiatric isolation room wearing Michael\'s mask, smiling serenely as ghost mother and white horse appear.' }
+    { id: 25, title: 'The Asylum White Room Ending', promptPayload: 'Laurie sitting alone in stark all-white psychiatric isolation room wearing Michael\'s mask, smiling serenely as ghost mother and white horse appear.' },
+    { id: 26, title: 'Young Deborah Gives Michael the White Horse Toy', promptPayload: 'Cold blue-lit Smith\'s Grove flashback in 1992, mother Deborah Myers handing young Michael a small white plastic horse statuette and promising they will always be together.' },
+    { id: 27, title: 'Sheriff Brackett Finds Dazed Laurie on the Road', promptPayload: 'Torrential rain on Halloween night, blood-soaked teenage Laurie staggering down the middle of the suburban street muttering "Was that the boogeyman?" into Sheriff Brackett\'s headlights.' },
+    { id: 28, title: 'Coroner Van Driver Impaled on Shattered Glass', promptPayload: 'After the highway collision with the stray cow, the coroner van attendant looking at his decapitated partner before ghostly Deborah Myers appears in the rear doors.' },
+    { id: 29, title: 'Hospital Guard Buddy\'s Brutal Axe Death', promptPayload: 'In the hospital nightmare, kindly night security guard Buddy returning with hot chocolate only to be cornered and hacked down by Michael in the rain.' },
+    { id: 30, title: 'Nurse Octavia\'s Murder in the Supply Room', promptPayload: 'Michael cornering Nurse Octavia inside a flooded hospital utility room, slamming her repeatedly against the metal medical cabinets in raw 16mm grit.' },
+    { id: 31, title: 'Working at the Vintage Record Store', promptPayload: 'Laurie working behind the counter of an indie record and thrift shop in Haddonfield surrounded by punk posters and Halloween masks that trigger her panic.' },
+    { id: 32, title: 'Laurie\'s Hallucination of Becoming Young Michael', promptPayload: 'During a therapy session, Laurie imagining herself tied to a chair in a vintage clown costume while her adoptive mother screams at her.' },
+    { id: 33, title: 'Rednecks Ambush Michael in the Barn Field', promptPayload: 'A pickup truck of armed country hunters confronting bearded hobo Michael in a muddy field at night, Michael slaughtering the entire group with bare hands and a bowie knife.' },
+    { id: 34, title: 'Eating Raw Dog Meat by the Campfire', promptPayload: 'Feral bearded Michael crouching by a dying fire in a ruined stone barn, chewing raw meat while the apparition of his mother in white tells him it is time to bring Angel home.' },
+    { id: 35, title: 'The Rabbit in Red Stripper Killed Against the Mirror', promptPayload: 'Backstage at the seedy Rabbit in Red strip club, Michael grabbing a dancer by the hair and smashing her head repeatedly into the vanity mirror.' },
+    { id: 36, title: 'Chainsaw Head Display at the Press Conference', promptPayload: 'Pompous Dr. Loomis holding a press conference inside the old Myers house, infuriating grieving father Charles Elrod who pulls a rifle on him through the fence.' },
+    { id: 37, title: 'Mya and Harley Dressed as Magenta and Columbia', promptPayload: 'Laurie\'s best friends Mya and Harley dressing up in Rocky Horror Picture Show costumes, convincing reluctant Laurie to come out to the Phantom Jam Halloween party.' },
+    { id: 38, title: 'Harley Killed in the Back of the Party Van', promptPayload: 'Costumed teenager Harley hooking up with a girl inside a parked van at the barn rave, interrupted when Michael tears open the doors and slaughters him.' },
+    { id: 39, title: 'Hanging the Body in the Stage Spotlight', promptPayload: 'At the Phantom Jam barn rave, Michael rigging a murdered victim above the stage lights in a psychotic prank that the cheering crowd mistakes for a magic show.' },
+    { id: 40, title: 'Mya Murdered in the Abandoned House', promptPayload: 'After fleeing the party, Mya searching the darkened Brackett house for help before Michael steps out of the hallway shadows and kills her.' },
+    { id: 41, title: 'Home Movies of Childhood Annie', promptPayload: 'Heart-wrenching montage of real childhood home videos of young Annie playing in the sun cut directly against Sheriff Brackett weeping over her dead body.' },
+    { id: 42, title: 'Car Crash in the Woods While Fleeing', promptPayload: 'Laurie flagging down a passing car on the dark country road, Michael stepping in front of the headlights and causing the car to flip into a ditch.' },
+    { id: 43, title: 'Michael Carries Laurie Over His Shoulder', promptPayload: 'Towering silhouette of bearded Michael walking across the moonlit field carrying unconscious Laurie over his shoulder like a ragdoll.' },
+    { id: 44, title: 'Police Helicopters Circle the Field Shack', promptPayload: 'Blinding white searchlights from police helicopters and twenty squad cars surrounding the isolated wooden cabin as Sheriff Brackett takes aim with a sniper rifle.' },
+    { id: 45, title: 'Ghostly Deborah Commands Laurie to Hold On', promptPayload: 'Inside the candlelit shack, hallucination of Deborah Myers and young Michael holding Laurie\'s hands and whispering "Say hello to Mommy."' },
+    { id: 46, title: 'Loomis Dragged Through the Cabin Wall', promptPayload: 'Michael smashing through the rotting wooden planks of the cabin wall to grab Dr. Loomis, hurling him across the room before stabbing him.' },
+    { id: 47, title: 'Michael Impaled on the Farm Pitchforks', promptPayload: 'Riddled with sniper bullets from Sheriff Brackett\'s rifle, giant Michael stumbling backward and falling onto the iron tines of upright farm implements.' },
+    { id: 48, title: 'Laurie Puts On the Bloodied Mask', promptPayload: 'Traumatized Laurie emerging slowly from the front door of the shack into the blinding police floodlights wearing her dead brother\'s ragged mask.' },
+    { id: 49, title: 'The Long White Corridor Walk', promptPayload: 'Kubrickian symmetrical tracking shot down an endless sterile white psychiatric ward corridor as Beethoven\'s "Moonlight Sonata" plays softly.' },
+    { id: 50, title: 'The White Horse at the End of the Dream', promptPayload: 'Final haunting slow zoom into Laurie\'s scarred, smiling face on her asylum cot as her mother\'s ghost stands holding the reins of the white horse.' }
 ];
 
 // ==========================================
-// 6. The Haunted World of El Superbeasto (2009) - 25 Scenes
+// 6. The Haunted World of El Superbeasto (2009) - 50 Scenes
 // ==========================================
 export const elSuperbeastoScenes: Scene[] = [
     { id: 1, title: 'El Superbeasto in the Ring', promptPayload: 'Vibrant over-the-top cartoon wrestling arena, washed-up superhero luchador El Superbeasto in golden leopard mask and cape delivering flying elbow drop to monster opponent.' },
@@ -183,11 +308,36 @@ export const elSuperbeastoScenes: Scene[] = [
     { id: 22, title: 'Lucha Libre Wrestling on Dr. Satan', promptPayload: 'Superbeasto executing series of classic wrestling moves on Dr. Satan: suplex into pews, turnbuckle splash, headbutt, comedic comic-book impact stars.' },
     { id: 23, title: 'The Giant Devil Awakens', promptPayload: 'Colossal red cartoon Lucifer rising from lava pit roaring, looking at tiny Dr. Satan, swatting villain across cavern like a fly.' },
     { id: 24, title: 'Velvet Von Black\'s Rescue', promptPayload: 'Superbeasto scooping up Velvet in arms, Murray carrying Suzi-X, rocket boosters launching heroes out of erupting volcano castle just in time.' },
-    { id: 25, title: 'Driving into the Neon Sunset', promptPayload: 'Beastomobile cruising down desert highway into vibrant purple-and-orange cartoon sunset, Velvet kissing Superbeasto, celebratory rock and roll finale.' }
+    { id: 25, title: 'Driving into the Neon Sunset', promptPayload: 'Beastomobile cruising down desert highway into vibrant purple-and-orange cartoon sunset, Velvet kissing Superbeasto, celebratory rock and roll finale.' },
+    { id: 26, title: 'Monsterland City Skyline at Midnight', promptPayload: 'Colorful retro-pulp 2D animated skyline of Monsterland bathed in acid-green and magenta neon, gothic skyscrapers, flying bats, and classic exploitation billboards.' },
+    { id: 27, title: 'Suzi-X vs. the Nazi Zombie Commandos', promptPayload: 'Action-packed cartoon prologue inside a secret jungle bunker where superspy Suzi-X mows down a platoon of goose-stepping zombie soldiers to recover the severed head of Hitler.' },
+    { id: 28, title: 'El Superbeasto Directing His Exploitation Film', promptPayload: 'Burly masked luchador El Superbeasto sitting in a canvas director\'s chair with a megaphone and cigar, filming a sleazy low-budget exploitation flick.' },
+    { id: 29, title: 'Otto the Synthetic Ape Gets Slapped', promptPayload: 'Furious Dr. Satan standing on a wooden stool to repeatedly slap his giant talking gorilla henchman Otto in classic Three Stooges cartoon slapstick.' },
+    { id: 30, title: 'The Velvet Kitty Burlesque Neon Marquee', promptPayload: 'Garish flashing pink neon marquee of The Velvet Kitty strip club on the rain-slicked streets of Monsterland, seedy monster patrons lining up outside.' },
+    { id: 31, title: 'Superbeasto Showering with His Mask On', promptPayload: 'Comedic bathroom shot of hairy-chested El Superbeasto singing off-key in the shower while still wearing his signature purple-and-gold lucha libre mask.' },
+    { id: 32, title: 'Cthulhu Monster Cameo at the Tiki Bar', promptPayload: 'Exotic Polynesian tiki lounge filled with tentacled Lovecraftian monsters and gill-men drinking flaming rum cocktails while Superbeasto hits on the waitress.' },
+    { id: 33, title: 'Murray\'s Jet-Powered Wheelchair', promptPayload: 'Battered tin robot Murray rolling down the street smoking a stogie and firing twin machine guns from his rusted chassis.' },
+    { id: 34, title: 'Bride of Frankenstein Hair Salon', promptPayload: 'Monsterland beauty parlor where undead women sit under giant chrome hair dryers getting white lightning streaks zapped into their towering beehive hairdos.' },
+    { id: 35, title: 'Captain Spaulding Cameo in Monsterland', promptPayload: 'Animated cameo of Captain Spaulding in his clown makeup and top hat running a filthy roadside fried chicken stand and cursing out El Superbeasto.' },
+    { id: 36, title: 'Michael Myers Cameo on the Street Corner', promptPayload: 'Sight-gag background cameo in Monsterland showing a cartoon Michael Myers standing silently beside a mailbox holding a bloody kitchen knife.' },
+    { id: 37, title: 'Suzi-X Decodes the Book of Damnation', promptPayload: 'Inside the high-tech Beasto-Cave computer lab, Suzi-X analyzing ancient occult prophecies on a glowing green radar screen.' },
+    { id: 38, title: 'Otto\'s Sad Country Song in the Dungeon', promptPayload: 'Heartbroken gorilla Otto sitting on a dungeon crate strumming a tiny ukulele and singing a melancholy country ballad about unrequited love for Velvet.' },
+    { id: 39, title: 'Army of Chainsaw-Wielding Clowns', promptPayload: 'Dr. Satan unleashing a manic squad of grinning cartoon killer clowns revving chainsaws across the castle drawbridge.' },
+    { id: 40, title: 'Superbeasto\'s Hover-Cycle Chase', promptPayload: 'High-speed animated chase across cemetery rooftops as Superbeasto rides a sputtering rocket-cycle pursued by flying vampire harpies.' },
+    { id: 41, title: 'The Haunted Forest of Living Trees', promptPayload: 'Twisted cartoon trees with glowing yellow eyes and gnarled wooden claws grabbing at Suzi-X and Murray as they trek toward Castle Satan.' },
+    { id: 42, title: 'Velvet Seduced by the Giant Severed Head', promptPayload: 'Bizarre comedic dungeon scene where Dr. Satan\'s floating psychic head tries to sweet-talk handcuffed Velvet Von Black over a candlelit dinner.' },
+    { id: 43, title: 'Suzi-X\'s Rocket Launcher Blast', promptPayload: 'Suzi-X hoisting a massive red bazooka onto her shoulder and blowing the iron dungeon doors off their hinges in a cloud of cartoon smoke.' },
+    { id: 44, title: 'Superbeasto\'s Mask Nearly Pulled Off', promptPayload: 'During the climactic wrestling brawl, Dr. Satan grabbing the laces of Superbeasto\'s lucha mask, triggering Superbeasto\'s ultimate berserker rage.' },
+    { id: 45, title: 'The Atomic Mexican Flying Body Press', promptPayload: 'El Superbeasto leaping from the highest cathedral chandelier in slow motion, plummeting down onto Dr. Satan with a flaming luchador body splash.' },
+    { id: 46, title: 'Murray Hooks Up with the Expresso Machine', promptPayload: 'While chaos rages in the castle, robot Murray flirting shamelessly with a chrome Italian espresso maker in the castle kitchen.' },
+    { id: 47, title: 'Dr. Satan Dragged Into the Pit of Hell', promptPayload: 'Giant red cartoon demons with pitchforks grabbing miniature Dr. Satan by the ankles and dragging him kicking and screaming into the lava fissure.' },
+    { id: 48, title: 'Castle Satan Explodes in Technicolor', promptPayload: 'Over-the-top 1970s grindhouse explosion as Dr. Satan\'s gothic fortress erupts into a mushroom cloud of neon purple and green fireworks.' },
+    { id: 49, title: 'Poolside Margarita Party at the Beasto-Pad', promptPayload: 'Sunny cartoon afternoon by the swimming pool, Superbeasto lounging on an inflatable raft surrounded by bikini-clad monster girls and empty beer cans.' },
+    { id: 50, title: 'Classic Comic Book End Splash Panel', promptPayload: 'Bold vintage pulp comic-book cover frame reading "THE END?" with El Superbeasto, Suzi-X, and Murray grinning at the audience.' }
 ];
 
 // ==========================================
-// 7. The Lords of Salem (2012) - 25 Scenes
+// 7. The Lords of Salem (2012) - 50 Scenes
 // ==========================================
 export const theLordsOfSalemScenes: Scene[] = [
     { id: 1, title: '1692 Salem Woods Coven Rite', promptPayload: 'Grainy 16mm night scene, coven of elderly nude witches gathered around bonfire in ancient Massachusetts woods, dancing in trance, demonic goat idol, folk dread.' },
@@ -214,11 +364,36 @@ export const theLordsOfSalemScenes: Scene[] = [
     { id: 22, title: 'The Cosmic Womb of Leviathan', promptPayload: 'Surreal avant-garde spectacle: Heidi elevated on pedestal of writhing bodies, cosmic light beams, psychedelic imagery reminiscent of Kenneth Anger.' },
     { id: 23, title: 'Birth of the Monstrous Entity', promptPayload: 'Heidi giving birth on stage to grotesque tentacled creature representing the reborn anti-Christ, coven kneeling in adoration, organ music swelling.' },
     { id: 24, title: 'The Deserted Morning After', promptPayload: 'Cold morning light breaking over empty Salem cobblestones, abandoned cars, radio station silent, news announcer reporting Heidi missing without a trace.' },
-    { id: 25, title: 'The Silent Radio Frequency', promptPayload: 'Close-up of radio tower against gray Salem sky, needle resting on silent turntable in empty broadcast booth, chilling victory of ancient evil.' }
+    { id: 25, title: 'The Silent Radio Frequency', promptPayload: 'Close-up of radio tower against gray Salem sky, needle resting on silent turntable in empty broadcast booth, chilling victory of ancient evil.' },
+    { id: 26, title: 'Margaret Morgan Spits Blood on Reverend Hawthorne', promptPayload: '1692 Salem trial chamber, shackled crone witch Margaret Morgan spitting black blood into the face of Puritan Judge Jonathan Hawthorne before cursing his unborn descendants.' },
+    { id: 27, title: 'Walking the Dog Past the Witch Memorial', promptPayload: 'Autumn morning in modern Salem, Massachusetts, Heidi in her striped knit beanie walking her Komondor dog through the leaf-strewn cemetery of 1692 stone markers.' },
+    { id: 28, title: 'Interviewing Author Francis Matthias on the Air', promptPayload: 'Inside the WIQZ rock radio booth, scholar Francis Matthias promoting his new book "Satan\'s Last Stand" about the Salem Witch Trials to DJs Heidi and Whitey.' },
+    { id: 29, title: 'Heidi\'s Skeleton Back Tattoo', promptPayload: 'Candlelit bedroom shot of Heidi sitting on the edge of her bed, intricate black ink tattoo of a dancing medieval skeleton visible across her bare back.' },
+    { id: 30, title: 'Unlocking the Heavy Padlock on Door 5', promptPayload: 'Landlady Lacy standing at the end of the dim floral-wallpapered corridor, turning an iron key in the padlock of long-abandoned Apartment 5.' },
+    { id: 31, title: 'Sonny Reads Heidi\'s Palm in the Parlor', promptPayload: 'Eccentric sister Sonny holding Heidi\'s hand across a lace tablecloth, tracing her lifeline and whispering cryptic prophecies about a special child coming.' },
+    { id: 32, title: 'Megan\'s Tarot Card Reading', promptPayload: 'Red-haired sister Megan flipping antique woodcut Tarot cards onto the table, revealing the Devil, the Tower, and Death in a sinister row.' },
+    { id: 33, title: 'Margaret Morgan Invades Heidi\'s Bed', promptPayload: 'Midnight nightmare in Heidi\'s bedroom, the grotesque rotting hag Margaret Morgan crawling out from beneath the bedsheets with a long serrated dagger.' },
+    { id: 34, title: 'Reverend Jonathan Hawthorne at the Window', promptPayload: 'Spectral 17th-century Puritan Reverend Hawthorne in black cloak and buckle hat standing in the rain outside Heidi\'s bedroom window, weeping tears of blood.' },
+    { id: 35, title: 'Whitey Attempts to Comfort Heidi at the Bar', promptPayload: 'Concerned radio co-host Herman "Whitey" Salvador sitting with pale, trembling Heidi in a dim Salem tavern as she hallucinates figures in the crowd.' },
+    { id: 36, title: 'Playing the Lords Track Over the City Airwaves', promptPayload: 'At the radio console, the studio turntable needle dropping onto The Lords\' vinyl record, sending its sinister six-note violin melody into every car and home in Salem.' },
+    { id: 37, title: 'Suburban Housewives Frozen in Kitchens', promptPayload: 'Chilling montage across Salem as women of all ages stop washing dishes and folding laundry, staring blankly with dilated pupils as the radio broadcast plays.' },
+    { id: 38, title: 'Francis Visits his Mentor AJ Kennedy', promptPayload: 'Bookish historian Francis visiting elderly occult collector AJ Kennedy in his study crammed with 17th-century grimoires, discovering the music was composed by Margaret Morgan.' },
+    { id: 39, title: 'The Golden Opera Box Phantom', promptPayload: 'Surreal symmetrical shot of a gilded baroque theater opera box where a faceless figure in a golden horned mask watches Heidi from the velvet shadows.' },
+    { id: 40, title: 'Heidi Vomiting Black Sludge in the Sink', promptPayload: 'Possessed Heidi hunched over her apartment bathroom sink under a flickering fluorescent tube, coughing up thick black tar as the walls pulse.' },
+    { id: 41, title: 'Lacy\'s Sisters Perform the Kitchen Ritual', promptPayload: 'Lacy, Sonny, and Megan standing over bleeding historian Francis on the linoleum floor, chanting praises to Satan in ecstatic frenzy.' },
+    { id: 42, title: 'Whitey Discovers the Empty Apartment', promptPayload: 'Whitey knocking urgently on Heidi\'s apartment door on the night of the concert, finding her dog alone and the record still spinning on the turntable.' },
+    { id: 43, title: 'The Marquee of the WIQZ Lords Show', promptPayload: 'Glowing vintage theater marquee in the foggy night reading "TONIGHT: THE BIG H PRESENTS THE LORDS OF SALEM" as women file silently through the doors.' },
+    { id: 44, title: 'Whitey Locked Out of the Auditorium', promptPayload: 'Whitey pounding helplessly on the locked brass doors of the theater lobby while inside, the female audience slowly strips and enters a collective trance.' },
+    { id: 45, title: 'The Giant Horned Idol Descends', promptPayload: 'On the theater stage, a colossal bronze-and-gold occult sculpture of a horned goat deity descending from the rafters amid clouds of incense.' },
+    { id: 46, title: 'Mozart\'s Requiem Over the Pagan Tableau', promptPayload: 'Blinding gold and crimson stage lights illuminating a living Baroque painting of nude witches and horned priests as Mozart\'s Requiem thunders.' },
+    { id: 47, title: 'Heidi Riding the Golden Goat Throne', promptPayload: 'Surreal psychedelic shot of smiling Heidi crowned in gold leaf sitting astride a mechanical horned throne above a sea of raised hands.' },
+    { id: 48, title: 'Pile of Dead Bodies on the Stage', promptPayload: 'Cold morning fluorescent work lights turned on inside the silent theater, revealing a tangled mound of lifeless female bodies across the orchestra pit.' },
+    { id: 49, title: 'The Tiny Demon Infant on the Velvet Cushion', promptPayload: 'Close-up of the bizarre pale miniature creature resting on a blood-red velvet pillow before vanishing into the shadows with the coven.' },
+    { id: 50, title: 'Final Portrait of Heidi Among the 1692 Coven', promptPayload: 'Slow zoom into an antique sepia daguerreotype photograph on the wall showing modern Heidi standing proudly at the center of the 17th-century Salem coven.' }
 ];
 
 // ==========================================
-// 8. 31 (2016) - 25 Scenes
+// 8. 31 (2016) - 50 Scenes
 // ==========================================
 export const thirtyOneScenes: Scene[] = [
     { id: 1, title: 'Doom-Head\'s Monologue in Black and White', promptPayload: 'Intense black-and-white prologue, psychotic hitman Doom-Head in clown makeup staring directly into camera, delivering menacing philosophical speech before murder.' },
@@ -245,11 +420,36 @@ export const thirtyOneScenes: Scene[] = [
     { id: 22, title: 'Venus\'s Torture and Death', promptPayload: 'Doom-Head capturing Venus, tying her up, terrifying psychological torment before killing her as Charly watches helplessly from hiding.' },
     { id: 23, title: 'The Final Clock: Twelve Hours Strike', promptPayload: 'Giant digital game clock striking 12:00:00, sirens wailing, Father Murder announcing Charly has survived and must be released under game rules.' },
     { id: 24, title: 'Doom-Head Defies the Rules', promptPayload: 'Doom-Head refusing to let Charly walk away, pursuing her out of warehouse into dawn mist, determined to finish his kill outside the rules.' },
-    { id: 25, title: 'The Highway Standoff at Dawn', promptPayload: 'Bleak morning highway, exhausted blood-drenched Charly turning around with wooden club, Doom-Head pulling switchblade, freezing in epic final showdown.' }
+    { id: 25, title: 'The Highway Standoff at Dawn', promptPayload: 'Bleak morning highway, exhausted blood-drenched Charly turning around with wooden club, Doom-Head pulling switchblade, freezing in epic final showdown.' },
+    { id: 26, title: 'Doom-Head Executes the Bound Preacher', promptPayload: 'Stark high-contrast monochrome shot of Doom-Head finishing his speech about not being here to save anyone, bringing a rusted fire axe down onto the bound pastor.' },
+    { id: 27, title: 'Stopping for Gas at the Helloween Pump', promptPayload: 'Groovy orange-and-white 1970s tour bus "The Sweet Leaf" pulling into a dusty rural service station decorated with plastic jack-o\'-lanterns.' },
+    { id: 28, title: 'Charly\'s Roller-Girl Carnival Outfit', promptPayload: 'Blonde carnival dancer Charly laughing with her friends in the back of the bus wearing vintage 1970s denim shorts and striped knee socks.' },
+    { id: 29, title: 'Bus Driver Executed in the Fog', promptPayload: 'When the carnival crew steps off the bus to clear the scarecrow roadblock, masked men in white jumpsuits drop from the trees and shoot the driver point-blank.' },
+    { id: 30, title: 'Hosed Down in the Concrete Cell', promptPayload: 'Masked attendants blasting the five chained carnival captives with freezing high-pressure water hoses inside a tiled industrial slaughterhouse room.' },
+    { id: 31, title: 'The Chandelier Banquet of the Aristocrats', promptPayload: 'Decadent baroque dining table set inside the industrial bunker where Father Murder, Sister Serpent, and Sister Dragon feast on roasted meats while watching CCTV screens.' },
+    { id: 32, title: 'Sick-Head\'s Hitler Mustache and Sombrero', promptPayload: 'Diminutive killer clown Sick-Head strutting onto his stage platform covered in swastika tattoos, twirling twin switchblades under a red spotlight.' },
+    { id: 33, title: 'Finding the Fake Exit Door', promptPayload: 'Survivors sprinting toward a glowing green EXIT sign at the end of a rusted corridor, only to find it opens onto a bricked-up wall rigged with a tripwire.' },
+    { id: 34, title: 'Sick-Head Thrown Down the Elevator Shaft', promptPayload: 'After Charly batters Sick-Head with a pipe, Roscoe kicks the bleeding killer clown straight down a bottomless industrial elevator shaft.' },
+    { id: 35, title: 'Psycho-Head and Schizo-Head\'s Locker Room', promptPayload: 'Backstage prep room littered with porn magazines and human bones where the two chainsaw clown brothers argue like hillbilly mechanics before their shift.' },
+    { id: 36, title: 'Crushing Psycho-Head Under the Iron Gate', promptPayload: 'Roscoe and Charly dropping a two-ton counterweighted iron portcullis gate onto Psycho-Head\'s chest and finishing him with his own chainsaw.' },
+    { id: 37, title: 'Cannibalistic Dinner Break in the Maze', promptPayload: 'The aristocrats ringing the intermission bell and lowering a silver serving tray into the arena containing roasted meat carved from the carnies\' dead friend.' },
+    { id: 38, title: 'Death-Head\'s German War cries', promptPayload: 'Towering 350-pound brute Death-Head in smeared greasepaint and leather butcher apron roaring in German as he smashes through brick partitions.' },
+    { id: 39, title: 'Venus Trapped in the Boiler Furnace', promptPayload: 'Venus crawling through a narrow rusted furnace pipe while Sex-Head slashes at her boots with a medieval dagger.' },
+    { id: 40, title: 'Roscoe Bludgeons Death-Head with a Crowbar', promptPayload: 'Fuelled by pure rage, Roscoe leaping onto giant Death-Head\'s back and beating him relentlessly with a heavy steel crowbar until the giant falls.' },
+    { id: 41, title: 'Doom-Head\'s Trailer Park Trophy Wall', promptPayload: 'Inside his dingy wood-paneled trailer, Doom-Head doing push-ups on the floor beneath a wall of newspaper clippings and hunting knives.' },
+    { id: 42, title: 'Father Murder Offers Doom-Head Double Pay', promptPayload: 'Malcolm McDowell as powdered-wigged Father Murder standing in the control room offering Doom-Head a fortune to make sure zero survivors walk out at dawn.' },
+    { id: 43, title: 'Doom-Head\'s Pep Talk in the Mirror', promptPayload: 'Extreme close-up of Richard Brake as Doom-Head slapping his own face in the mirror and whispering "You are the star of this show, baby!"' },
+    { id: 44, title: 'Locking the Blast Door Behind Roscoe', promptPayload: 'Wounded Roscoe shoving Charly and Venus through a heavy steel bulkhead hatch and welding the wheel shut from the inside to hold off Doom-Head alone.' },
+    { id: 45, title: 'Venus Caught in the Chain Hoist', promptPayload: 'Doom-Head stringing Venus up by her wrists from a rusty slaughterhouse meat hook and taunting Charly over the intercom to come out.' },
+    { id: 46, title: 'Charly Disguised in the Clown Mask', promptPayload: 'Desperate Charly putting on a dead clown\'s rubber mask and coat to sneak past Doom-Head in the strobe-lit subterranean corridors.' },
+    { id: 47, title: 'Stabbing Doom-Head Through the Shoulder', promptPayload: 'Charly lunging out of a dark locker and driving a jagged shard of steel into Doom-Head\'s shoulder before bolting toward the sunlit exit tunnel.' },
+    { id: 48, title: 'The Iron Gate Rises Into the Morning Sun', promptPayload: 'As the twelve-hour klaxon sounds, the massive rusted warehouse roller door grinds open to reveal blinding golden Texas morning sunlight.' },
+    { id: 49, title: 'Father Murder Removes His Powdered Wig', promptPayload: 'In the dressing room, defeated aristocrat Father Murder peeling off his white 18th-century wig and makeup to reveal a cold modern corporate billionaire.' },
+    { id: 50, title: 'Doom-Head\'s Switchblade Clicks Open', promptPayload: 'Final extreme close-up of Doom-Head\'s blood-streaked grin on the empty asphalt highway as he flicks open twin stiletto blades and walks toward Charly.' }
 ];
 
 // ==========================================
-// 9. 3 from Hell (2019) - 25 Scenes
+// 9. 3 from Hell (2019) - 50 Scenes
 // ==========================================
 export const threeFromHellScenes: Scene[] = [
     { id: 1, title: 'The Trial of the Devil\'s Rejects', promptPayload: 'Circus courtroom media frenzy, Captain Spaulding, Otis Driftwood, and Baby Firefly in orange prison jumpsuits facing TV cameras, unrepentant smiles.' },
@@ -276,11 +476,36 @@ export const threeFromHellScenes: Scene[] = [
     { id: 22, title: 'The Machete Duel in the Dirt', promptPayload: 'Otis fighting cartel giant in dusty courtyard with heavy machetes, sparks flying off steel, Otis disemboweling enemy in brutal fury.' },
     { id: 23, title: 'Execution of Aquarius', promptPayload: 'Baby and Otis cornering cartel leader Aquarius, tying him to courtyard pole, pouring kerosene over body, Baby striking match with smile.' },
     { id: 24, title: 'The Burning Motel Courtyard', promptPayload: 'Aquarius engulfed in flames, motel burning against midnight sky, trio standing tall in firelight, bloodied but untouchable outlaw legends.' },
-    { id: 25, title: 'Walking Away into the Day of the Dead', promptPayload: 'Otis, Baby, and Foxy walking side by side down dusty Mexican road as morning sun rises over mountains, disappearing into the horizon.' }
+    { id: 25, title: 'Walking Away into the Day of the Dead', promptPayload: 'Otis, Baby, and Foxy walking side by side down dusty Mexican road as morning sun rises over mountains, disappearing into the horizon.' },
+    { id: 26, title: '1980s CRT News Documentary Montage', promptPayload: 'Authentic grainy 1980s VHS television news report detailing how the Firefly trio miraculously survived 60 bullet wounds at the police roadblock in 1978.' },
+    { id: 27, title: 'Free the Three Protestors Outside the Courthouse', promptPayload: 'Cult-like teenage fans wearing Captain Spaulding clown masks and waving "FREE BABY" signs on the courthouse steps while riot police hold them back.' },
+    { id: 28, title: 'Spaulding\'s Last Interview on Death Row', promptPayload: 'Elderly Captain Spaulding sitting behind scratched plexiglass in prison stripes, cursing at the documentary camera crew and declaring himself a legend.' },
+    { id: 29, title: 'Rondo Chainsawed on the Chain Gang', promptPayload: 'In the brush along the prison highway, Otis turning the tables on fellow inmate Rondo (Danny Trejo) and executing him during the escape.' },
+    { id: 30, title: 'Foxy\'s Wolf-Head Cane and Leather Vest', promptPayload: 'Close-up of the Midnight Wolfman Winslow "Foxy" Coltrane grinning through rotting teeth in his outlaw biker vest as he hands Otis a revolver.' },
+    { id: 31, title: 'Baby\'s Parole Board Hearing Disaster', promptPayload: 'Shackled Baby Firefly sitting before three stern parole board officials, pretending to be rehabilitated before leaping across the table screaming obscenities.' },
+    { id: 32, title: 'Stealing the Camper Van in the Woods', promptPayload: 'Otis and Foxy ambushing a couple camping in the forest, stealing their wood-paneled station wagon and civilian clothes to prepare for the prison break.' },
+    { id: 33, title: 'Baby Disguised in the Guard Uniform', promptPayload: 'Inside the women\'s prison corridor, Warden Harper nervously leading Baby dressed in a stolen blue correctional officer uniform past unsuspecting guards.' },
+    { id: 34, title: 'Hiding Inside the Living Room Clown Costume', promptPayload: 'At Warden Harper\'s suburban party, Foxy hiding motionless in the corner wearing a life-sized vintage clown suit until the guests realize he is real.' },
+    { id: 35, title: 'Heather Held Hostage in the Kitchen', promptPayload: 'Neighbor friend Heather (Dee Wallace) tied to a chair in the Warden\'s kitchen as Baby taunts her with a butcher knife and manic giggles.' },
+    { id: 36, title: 'Buying the Recurve Bow at the Trading Post', promptPayload: 'On the road south toward the border, Baby becoming entranced by a feathered Native American war bonnet and a wooden hunting bow in a dusty pawnshop.' },
+    { id: 37, title: 'Execution of the Sleazy Motel Owner', promptPayload: 'When the sleazy American motel manager recognizes the fugitives from television and calls the cartel, Otis and Foxy ambush him in his office.' },
+    { id: 38, title: 'Crossing the Rio Grande Desert at Sunset', promptPayload: 'Anamorphic widescreen shot of the fugitives\' station wagon kicking up a golden trail of dust across the vast Mexican border badlands.' },
+    { id: 39, title: 'Dancing with Mariachis and Prostitutes', promptPayload: 'Inside the neon-lit Durango cantina, Otis, Foxy, and Baby drinking shots of mescal from the bottle and dancing wildly under red paper lanterns.' },
+    { id: 40, title: 'Sebastian\'s Secret Friendship with Baby', promptPayload: 'Kindly dwarf motel employee Sebastian sitting on the stone steps chatting gently with Baby Firefly, who treats him with genuine affection.' },
+    { id: 41, title: 'Coffin-Shaped Cartel Hearse Arrives', promptPayload: 'Two black Cadillacs packed with Black Satans sicarios wearing Dia de los Muertos skull masks rolling slowly into the quiet Mexican plaza.' },
+    { id: 42, title: 'Foxy Captured at Gunpoint in the Bedroom', promptPayload: 'Cartel hitmen bursting into Foxy\'s motel room while he is in bed, dragging him naked at gunpoint out into the sunny dirt courtyard.' },
+    { id: 43, title: 'Sebastian\'s Tragic Death in the Crossfire', promptPayload: 'Sebastian trying to warn Baby as the cartel opens fire, getting gunned down in the courtyard and sending Baby into a murderous rampage.' },
+    { id: 44, title: 'Otis Ambushes the Execution Squad from the Closet', promptPayload: 'Just as Aquarius prepares to execute kneeling Foxy, Otis bursts from a wooden shed firing a double-barreled shotgun and scattering the cartel.' },
+    { id: 45, title: 'Baby\'s Rooftop Arrow Through the Eye', promptPayload: 'Low-angle shot looking up at the adobe roof edge as Baby draws her bowstring and puts a feathered shaft straight through a sicario\'s skull mask.' },
+    { id: 46, title: 'Otis vs. the Mask-Wearing Cartel Butcher', promptPayload: 'Locked inside an abandoned stone barn, blood-soaked Otis trading brutal slashes with a giant machete-wielding cartel enforcer.' },
+    { id: 47, title: 'Foxy Dual-Wielding Chrome Revolvers', promptPayload: 'Foxy sprinting down the narrow cobblestone alleyways of the Mexican village firing twin six-shooters at fleeing Black Satans gunmen.' },
+    { id: 48, title: 'Baby Paints Her Face with Blood', promptPayload: 'Standing over the defeated cartel leader, Baby dipping her fingers into fresh blood and painting tribal war stripes across her cheeks.' },
+    { id: 49, title: 'Drinking Tequila by the Burning Pyre', promptPayload: 'Otis, Foxy, and Baby sitting on wooden crates passing a bottle of tequila back and forth while Aquarius burns behind them in the night.' },
+    { id: 50, title: 'Final Freeze-Frame of the Three Outlaws', promptPayload: 'Gritty 1970s grindhouse freeze-frame of Otis, Baby, and Foxy strolling down the sun-bleached Mexican dirt road as Iron Butterfly\'s "In-A-Gadda-Da-Vida" plays.' }
 ];
 
 // ==========================================
-// 10. The Munsters (2022) - 25 Scenes
+// 10. The Munsters (2022) - 50 Scenes
 // ==========================================
 export const theMunsters2022Scenes: Scene[] = [
     { id: 1, title: 'Transylvania Laboratory Creation', promptPayload: 'Campy gothic Transylvania castle laboratory, neon green and purple lightning arcing, mad scientist Dr. Wolfgang and assistant Floop assembling Herman Munster from corpses.' },
@@ -307,5 +532,30 @@ export const theMunsters2022Scenes: Scene[] = [
     { id: 22, title: 'Lester Wins Back the Fortune', promptPayload: 'Werewolf brother Lester returning with bags of cash won in Las Vegas gambling spree, paying off mortgage on 1313 Mockingbird Lane.' },
     { id: 23, title: 'Spot the Fire-Breathing Dragon', promptPayload: 'Herman lifting cellar trapdoor to feed Spot, giant fiery blast of dragon breath singeing Herman\'s suit jacket, Herman laughing cheerfully.' },
     { id: 24, title: 'Family Porch Harmony', promptPayload: 'Herman, Lily, and Grandpa sitting on front porch rocking chairs at twilight, bats flying overhead, warm glowing jack-o\'-lanterns, perfect family happiness.' },
-    { id: 25, title: 'The Iconic Munster Walk Theme Song', promptPayload: 'Entire Munster family walking together in synchronized step down Mockingbird Lane sidewalk, classic rock surf guitar theme playing, joyful monster ending.' }
+    { id: 25, title: 'The Iconic Munster Walk Theme Song', promptPayload: 'Entire Munster family walking together in synchronized step down Mockingbird Lane sidewalk, classic rock surf guitar theme playing, joyful monster ending.' },
+    { id: 26, title: 'Grave Robbery in the Transylvanian Mist', promptPayload: 'Candy-colored gothic graveyard drenched in electric blue and purple fog, hunchbacked assistant Floop digging up body parts with a shovel while wolves howl at a giant full moon.' },
+    { id: 27, title: 'Igor the Bat Delivering the Morning Mail', promptPayload: 'Inside Castle Dracula, squeaking pet vampire bat Igor fluttering through the gothic stained-glass window carrying black-bordered letters to The Count.' },
+    { id: 28, title: 'Zoya Krupp\'s Gypsy Revenge Curse', promptPayload: 'Vengeful gypsy sorceress Zoya Krupp in ornate gold headdress plotting with werewolf brother Lester to steal The Count\'s ancestral Transylvanian castle.' },
+    { id: 29, title: 'The Haunted Television Talk Show', promptPayload: 'Campy Transylvanian late-night television broadcast hosted by Zombo, where Dr. Wolfgang proudly debuts his singing and dancing creation Herman.' },
+    { id: 30, title: 'Lily Applies Cobweb Perfume', promptPayload: 'Glamorous vampire Lily standing before an ornate cobweb-draped vanity mirror, spraying black mist perfume from an atomizer before her big date with Herman.' },
+    { id: 31, title: 'The Count\'s Failed Hypnosis of Herman', promptPayload: 'Grandpa waving his glowing red Dracula medallion in front of Herman\'s eyes to hypnotize him into leaving Lily, only for Herman\'s thick skull to bounce the spell back.' },
+    { id: 32, title: 'Romantic Gondola Ride Through the Sewer Swamp', promptPayload: 'Herman and Lily riding in a swan-shaped boat across a bioluminescent green Transylvanian marsh while giant skeletal fish leap romantically overhead.' },
+    { id: 33, title: 'Uncle Gilbert the Creature from the Lagoon', promptPayload: 'At the gothic wedding reception, gill-man Uncle Gilbert in a wet tuxedo raising a seaweed cocktail toast to the newlyweds.' },
+    { id: 34, title: 'Paris Honeymoon Under the Eiffel Tower', promptPayload: 'Technicolor postcard montage of Herman and Lily on their honeymoon in Paris, terrifying French cafe waiters while feeding pigeons in the rain.' },
+    { id: 35, title: 'Signing the Deed with a Feather Quill', promptPayload: 'Oblivious Herman happily signing away the 500-year-old Castle Dracula deed with a raven feather quill while werewolf Lester grins greedily behind his back.' },
+    { id: 36, title: 'Zoya Krupp Turns the Castle into a Disco', promptPayload: 'To The Count\'s horror, new owner Zoya Krupp arrives with construction crews to tear down the cobwebs and convert his ancient vampire castle into a tacky tourist attraction.' },
+    { id: 37, title: 'Transatlantic Flight to California', promptPayload: 'Herman, Lily, and Grandpa sitting in first class on a 1960s passenger airliner, Grandpa hanging upside down from the overhead luggage rack while passengers faint.' },
+    { id: 38, title: 'Real Estate Agent Barbara Knocked Cold', promptPayload: 'Cheerful sunny California realtor showing the Munsters pristine mid-century modern ranch homes, fainting in terror when Lily asks for a house with more rot and mold.' },
+    { id: 39, title: 'Grandpa Summons a Raincloud Over 1313', promptPayload: 'Standing on the sunny front lawn of 1313 Mockingbird Lane, Grandpa waving his arms to conjure a permanent private thunderstorm cloud directly over their Victorian roof.' },
+    { id: 40, title: 'Lily Redecorates with Dust and Spiders', promptPayload: 'Lily using a reverse vacuum blower to blast thick gray dust and live tarantulas over the living room chandeliers until the mansion looks delightfully haunted.' },
+    { id: 41, title: 'Adopting Spot from the Paris Sewer', promptPayload: 'Herman opening a giant wooden shipping crate in the parlor, coaxing their beloved fire-breathing pet dragon Spot down beneath the main staircase.' },
+    { id: 42, title: 'The Raven Inside the Cuckoo Clock', promptPayload: 'Close-up of the gothic coffin-shaped wall clock in the hallway as mechanical doors snap open and the animatronic raven croaks "Nevermore!"' },
+    { id: 43, title: 'Herman\'s First Day Carrying Coffins', promptPayload: 'At the Gateman, Goodbury & Graves mortuary, seven-foot Herman effortlessly carrying four heavy mahogany caskets at once under his arms with a cheerful whistle.' },
+    { id: 44, title: 'Grandpa\'s Dragster Coffin Car', promptPayload: 'In the garage, Grandpa welding chrome exhaust pipes onto a customized gold-and-red hot rod built out of a Victorian funeral hearse and casket.' },
+    { id: 45, title: 'Trick-or-Treaters Flee the Front Porch', promptPayload: 'Suburban kids in ghost sheets ringing the doorbell of 1313 Mockingbird Lane, screaming and dropping their candy bags when Herman answers the door.' },
+    { id: 46, title: 'Herman Sings Caravan at the Halloween Bash', promptPayload: 'Herman taking the microphone with the live surf-rock band at the neighborhood Halloween party, bringing down the house with his booming baritone laugh.' },
+    { id: 47, title: 'Tin Can Phone Call from Transylvania', promptPayload: 'Dr. Wolfgang and Floop watching Herman\'s new American life on their laboratory viewing screen and cheering for their beloved monster creation.' },
+    { id: 48, title: 'Lester Arrives in a Pink Cadillac Convertible', promptPayload: 'Werewolf Uncle Lester pulling into the driveway of 1313 Mockingbird Lane in a flashy pink 1960s convertible wearing a gold lamé suit and sunglasses.' },
+    { id: 49, title: 'Grandpa Turns Lester Into a Chihuahua', promptPayload: 'Fed up with Lester\'s schemes, Grandpa zapping his werewolf son-in-law with a puff of purple magic smoke and turning him into a yapping little dog.' },
+    { id: 50, title: 'Black-and-White Sitcom Opening Homage', promptPayload: 'Final nostalgic transition from saturated neon colors into crisp 1964 monochrome television framing as Herman bursts straight through the front door frame.' }
 ];

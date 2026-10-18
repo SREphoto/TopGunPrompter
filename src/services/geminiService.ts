@@ -240,6 +240,12 @@ Output ONLY raw valid JSON. Do not include markdown code blocks (\`\`\`json) if 
 
             const parsed = JSON.parse(cleanedText);
 
+            const stripFlags = (str: string) =>
+                str
+                    .replace(/\s*(?:--|\u2014|\u2013)(?:ar|v|version|stylize|s|style|niji|q|quality|c|chaos|w|weird|repeat|fast|draft|hd|sd|sref|sw|oref|ow|cref|cw|no)\b[^.,;]*/gi, '')
+                    .replace(/\s+/g, ' ')
+                    .trim();
+
             // Validate and structure parsed response
             const item: MediaItem = {
                 id: parsed.id || cleanTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
@@ -249,9 +255,14 @@ Output ONLY raw valid JSON. Do not include markdown code blocks (\`\`\`json) if 
                 genres: Array.isArray(parsed.genres) ? parsed.genres : ['Drama'],
                 actors: Array.isArray(parsed.actors) ? parsed.actors : ['Unknown Cast'],
                 type: type,
-                styles: Array.isArray(parsed.styles) && parsed.styles.length > 0 ? parsed.styles : [
-                    { name: 'Cinematic Standard', promptString: '35mm anamorphic, natural lighting, high dynamic range' }
-                ],
+                styles: Array.isArray(parsed.styles) && parsed.styles.length > 0
+                    ? parsed.styles.map((st: { name?: string; promptString?: string }, i: number) => ({
+                        name: st.name || `Style ${i + 1}`,
+                        promptString: stripFlags(st.promptString || '35mm anamorphic, natural lighting, high dynamic range')
+                    }))
+                    : [
+                        { name: 'Cinematic Standard', promptString: '35mm anamorphic, natural lighting, high dynamic range' }
+                    ],
                 posterPrompt: parsed.posterPrompt || `Official movie poster for ${cleanTitle} --ar 2:3`
             };
 
@@ -259,7 +270,7 @@ Output ONLY raw valid JSON. Do not include markdown code blocks (\`\`\`json) if 
                 ? parsed.scenes.map((s: Partial<Scene>, idx: number) => ({
                     id: typeof s.id === 'number' ? s.id : idx + 1,
                     title: s.title || `Scene ${idx + 1}`,
-                    promptPayload: s.promptPayload || `${cleanTitle} cinematic scene`
+                    promptPayload: stripFlags(s.promptPayload || `${cleanTitle} cinematic scene`)
                 }))
                 : [
                     { id: 1, title: 'Iconic Opening', promptPayload: `Opening scene from ${cleanTitle}` }

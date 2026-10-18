@@ -1,7 +1,7 @@
 import type { Scene } from '../types';
 
 // ==========================================
-// 1. The Ring (2002) - 25 Scenes
+// 1. The Ring (2002) - 50 Scenes
 // ==========================================
 export const theRingScenes: Scene[] = [
     { id: 1, title: 'The Static Television Screen', promptPayload: 'Close-up of vintage CRT television screen emitting buzzing white static snow in a dark Seattle bedroom, blue-green glow illuminating trembling hands holding remote, eerie cold dread, 35mm film grain.' },
@@ -28,11 +28,36 @@ export const theRingScenes: Scene[] = [
     { id: 22, title: 'Noah\'s Apartment: The TV Turns On', promptPayload: 'Noah sitting alone in minimalist loft, television switching on by itself to fuzzy static channel, water quietly pooling on hardwood floor beneath screen, electric humming tone.' },
     { id: 23, title: 'Crawling Out of the Well', promptPayload: 'On television screen, water well in misty forest, sodden figure in dripping white dress and drenched long black hair crawling agonizingly out of well mouth, jerky unnatural frame-rate.' },
     { id: 24, title: 'Crawling Through the TV Screen', promptPayload: 'Samara crawling physically out of flat CRT glass surface into real-world living room, dripping putrid water onto carpet, twitching inverted joints, Noah backed against wall in sheer paralyzed terror.' },
-    { id: 25, title: 'Duplicating the Tape to Survive', promptPayload: 'Rachel standing at dual VCR dubbing deck, inserting blank tape, pressing duplicate button, frantic realization of the viral cycle, glowing green LED numbers in dark room.' }
+    { id: 25, title: 'Duplicating the Tape to Survive', promptPayload: 'Rachel standing at dual VCR dubbing deck, inserting blank tape, pressing duplicate button, frantic realization of the viral cycle, glowing green LED numbers in dark room.' },
+    { id: 26, title: 'Becca and Katie\'s Late Night Gossip', promptPayload: 'Rain lashing dark suburban house windows, teenage girls Katie and Becca sitting on carpet in pajamas talking about the urban legend of the cursed videotape, eerie blue moonlight.' },
+    { id: 27, title: 'Water Dripping from the Refrigerator', promptPayload: 'Katie walking alone into dark kitchen at midnight, pool of inexplicable cold water spreading across linoleum floor from refrigerator door, unsettling domestic quiet.' },
+    { id: 28, title: 'Katie\'s Funeral Wake', promptPayload: 'Somber Seattle funeral gathering in gloomy Victorian house, guests dressed in black whispering in hallways, grieving mother Ruth asking Rachel to investigate her niece\'s inexplicable death.' },
+    { id: 29, title: 'Becca in the Psychiatric Ward', promptPayload: 'Sterile psychiatric hospital room, traumatized teenager Becca sitting on bed in catatonic dread, panicking at the sight of a switched-off reflective television monitor on the wall.' },
+    { id: 30, title: 'Finding the Receipt in Katie\'s Bedroom', promptPayload: 'Rachel searching Katie\'s teenage bedroom, opening desk drawer to discover photo booth strips and a receipt from Shelter Mountain Inn Cabin 12, investigative neo-noir lighting.' },
+    { id: 31, title: 'The Creepy Innkeeper at Shelter Mountain', promptPayload: 'Rain-drenched reception desk at Shelter Mountain Inn, eccentric innkeeper handing Rachel the brass key to Cabin 12 while VHS tapes sit stacked on an unmarked shelf.' },
+    { id: 32, title: 'The Cursed Tape: Maggots and Wriggling Bodies', promptPayload: 'Surreal grainy monochrome imagery on CRT television, writhing mass of pale maggots dissolving into distorted human figures churning in mud, avant-garde psychological horror.' },
+    { id: 33, title: 'The Cursed Tape: Chair Spinning in Mid-Air', promptPayload: 'Distorted black-and-white VHS frame showing a wooden ladder and an antique chair rotating upside down in mid-air against a stark gray sky, scratchy celluloid noise.' },
+    { id: 34, title: 'The Cursed Tape: Finger on the Rusty Nail', promptPayload: 'Unflinching monochrome close-up from the cursed videotape, pale finger pressing down slowly onto a sharp upright iron nail, visceral tactile discomfort, static lines.' },
+    { id: 35, title: 'Pulling the Fly from the Television Screen', promptPayload: 'Rachel pausing the VHS tape on a tiny housefly buzzing on the screen, reaching out to touch the CRT glass and pulling the real living fly out into her fingers, surreal shock.' },
+    { id: 36, title: 'The Nosebleed in the Bathroom', promptPayload: 'Rachel staring into apartment bathroom mirror, single drop of bright crimson blood falling from her nose into the white porcelain sink, symptom of the seven-day curse.' },
+    { id: 37, title: 'Showing the Tape to Noah', promptPayload: 'Rachel sitting tensely on sofa in Noah\'s loft while Noah watches the cursed VHS tape with skeptical smirk, blue television flicker reflecting in his glasses.' },
+    { id: 38, title: 'The Extended Frame Track Discovery', promptPayload: 'Noah adjusting horizontal tracking dial on professional broadcast VCR deck, revealing hidden off-screen image of a coastal lighthouse beyond the frame edge.' },
+    { id: 39, title: 'The Newspaper Archives in Seattle', promptPayload: 'Dimly lit newspaper morgue room, Rachel spreading yellowed newsprint clippings across wooden table showing Anna Morgan\'s prize horses drowned on Moesko Island.' },
+    { id: 40, title: 'Confronting Richard Morgan at the Door', promptPayload: 'Reclusive widower Richard Morgan standing in the doorway of his gloomy island house, stern weathered face refusing to speak about his adopted daughter Samara.' },
+    { id: 41, title: 'Dr. Grasnik\'s Island Clinic', promptPayload: 'Cozy yet unsettling island medical office, elderly Dr. Grasnik recounting how Anna Morgan suffered terrible visions planted directly into her mind by young Samara.' },
+    { id: 42, title: 'The Barn Loft Room', promptPayload: 'Rachel climbing wooden ladder into isolated hayloft of the Morgan horse barn, finding a tiny cot, an old television set, and a scorching burn mark of a tree on the wall.' },
+    { id: 43, title: 'Scorched Tree Imprint on the Barn Wall', promptPayload: 'Rachel peeling back dusty wallpaper in the barn loft to uncover a charred silhouette of the Japanese maple tree burned directly into the cedar planks by psychic fury.' },
+    { id: 44, title: 'Eola Psychiatric Hospital Records', promptPayload: 'Noah breaking into the subterranean file vault of Eola County Psychiatric Hospital, pulling thick medical dossier labeled Samara Morgan from rusty metal shelves.' },
+    { id: 45, title: 'Samara\'s Psychiatric Interview Tape', promptPayload: 'Grainy black-and-white clinical video recording of young Samara sitting in a metal chair with dark hair over her face, telling the doctor "I don\'t make them, I just see them."' },
+    { id: 46, title: 'Richard Morgan\'s Bathtub Electrocution', promptPayload: 'Bathroom inside the Morgan house flooded with electrified water, television cords trailing into the porcelain bathtub where Richard Morgan has ended his life, blue sparks arcing.' },
+    { id: 47, title: 'Cradling Samara\'s Remains in the Well', promptPayload: 'Deep at the bottom of the dark stone well, Rachel holding the decaying remains of Samara tenderly in her arms as dark hair floats across the water surface.' },
+    { id: 48, title: 'Aidan\'s Bleeding Nose at the Table', promptPayload: 'Aidan sitting at the kitchen table with dark circles under his eyes and blood trickling from his nostril after watching the tape, Rachel gasping in maternal horror.' },
+    { id: 49, title: 'Smashing the Original Tape in Noah\'s Loft', promptPayload: 'Rachel discovering Noah\'s contorted body in his ruined apartment, screaming in anguish and smashing the original VHS cassette to pieces against the floor.' },
+    { id: 50, title: 'Aidan Presses Record on the Copy', promptPayload: 'Rachel guiding Aidan\'s small hand to press the red record button on the VCR to make a new copy of the cursed tape, asking "What happens to the person we show it to?"' }
 ];
 
 // ==========================================
-// 2. Rosemary's Baby (1968) - 25 Scenes
+// 2. Rosemary's Baby (1968) - 50 Scenes
 // ==========================================
 export const rosemarysBabyScenes: Scene[] = [
     { id: 1, title: 'The Bramford Gothic Facade', promptPayload: 'Low angle shot of the ominous Dakota apartment building in Manhattan, dark Victorian gothic gargoyles, wrought iron gates, gloomy autumn afternoon, Roman Polanski psychological framing.' },
@@ -59,11 +84,36 @@ export const rosemarysBabyScenes: Scene[] = [
     { id: 22, title: 'The Black Bassinet and Upside-Down Crucifix', promptPayload: 'Victorian parlor filled with coven elders drinking champagne, black draped bassinet in center beneath hanging upside-down silver crucifix, black lace ribbons, macabre celebration.' },
     { id: 23, title: 'What Have You Done to His Eyes?', promptPayload: 'Rosemary looking into bassinet, dropping knife in overwhelming horror, gasping "What have you done to his eyes?!", Roman whispering "He has his father\'s eyes", unspeakable off-screen terror.' },
     { id: 24, title: 'Hail Adrian Celebration', promptPayload: 'Coven elders raising wine goblets chanting "Hail Adrian! Hail Satan!", Guy sitting sheepishly in velvet armchair avoiding Rosemary\'s eyes, chilling normalization of cosmic evil.' },
-    { id: 25, title: 'Maternal Instinct at the Bassinet', promptPayload: 'Rosemary slowly stepping forward, placing gentle trembling hand on black bassinet, beginning to softly rock baby to sleep, faint complex smile appearing through tragedy.' }
+    { id: 25, title: 'Maternal Instinct at the Bassinet', promptPayload: 'Rosemary slowly stepping forward, placing gentle trembling hand on black bassinet, beginning to softly rock baby to sleep, faint complex smile appearing through tragedy.' },
+    { id: 26, title: 'Mr. Micklas Shows the Apartment', promptPayload: 'Polite building manager Mr. Micklas guiding young couple Rosemary and Guy Woodhouse through dusty Victorian rooms of the Bramford, pointing out where old Mrs. Gardenia died.' },
+    { id: 27, title: 'The Heavy Mahogany Secretary Desk', promptPayload: 'Rosemary and Mr. Micklas examining the massive antique mahogany secretary desk left blocking the hallway linen closet, deep scratch marks gouged into the dark parquet floor.' },
+    { id: 28, title: 'Hutch\'s Dinner Warning About the Bramford', promptPayload: 'Cozy Manhattan dinner with scholarly friend Hutch, warning Rosemary and Guy about the Bramford\'s sinister history of cannibalism, witchcraft, and Adrian Marcato in the 1890s.' },
+    { id: 29, title: 'Picnic on the Bare Parquet Floor', promptPayload: 'Rosemary and Guy eating dinner on a mattress on the bare wooden floor of their newly rented apartment, warm lamplight surrounded by dark cavernous Victorian shadows.' },
+    { id: 30, title: 'Meeting Terry Gionoffrio in the Basement', promptPayload: 'Rosemary chatting with troubled young neighbor Terry Gionoffrio in the sterile white tiled basement laundry room, admiring Terry\'s strange silver filigree good-luck charm.' },
+    { id: 31, title: 'Terry\'s Sidewalk Death Below the Bramford', promptPayload: 'Flashing red police car lights illuminating the Manhattan sidewalk outside the Bramford at night, crowd gathered around Terry Gionoffrio\'s body on the pavement seven stories below.' },
+    { id: 32, title: 'Guy Bonds with Roman Over Scotch', promptPayload: 'Guy returning from the Castevet apartment flushed with excitement, telling Rosemary about Roman\'s theatrical stories while subtly falling under the elderly couple\'s sway.' },
+    { id: 33, title: 'Donald Baumgart\'s Sudden Blindness', promptPayload: 'Guy receiving phone call in the hallway that rival actor Donald Baumgart has mysteriously gone blind, handing Guy the coveted leading Broadway stage role.' },
+    { id: 34, title: 'Guy\'s Missing Tie in the Closet', promptPayload: 'Guy searching his wardrobe for one of his ties before realizing he gave it to Roman Castevet, subtle clue of sympathetic magic used against rival actor Donald Baumgart.' },
+    { id: 35, title: 'The Pope in the Sistine Chapel Dream', promptPayload: 'Feverish Catholic guilt hallucination in Rosemary\'s dream, the Pope standing inside the Sistine Chapel wearing a giant silver tannis root pendant and offering forgiveness.' },
+    { id: 36, title: 'Painting the Nursery Yellow and White', promptPayload: 'Rosemary joyfully hanging bright sunny yellow and white wallpaper in the baby nursery, contrasting with the dark oppressive wood paneling of the rest of the Bramford.' },
+    { id: 37, title: 'Throwing the Young Friends\' Party', promptPayload: 'Apartment packed with young 1960s Manhattan friends drinking cocktails, Rosemary crying in the kitchen in agonizing pregnancy pain while her friends lock Guy out to comfort her.' },
+    { id: 38, title: 'Reading All of Them Witches by Lamplight', promptPayload: 'Pale frail Rosemary curled in armchair late at night reading Hutch\'s occult book, staring at historical engravings of coven leader Adrian Marcato and his son.' },
+    { id: 39, title: 'Spotting Dr. Sapirstein\'s Tannis Root Smell', promptPayload: 'Rosemary leaning close to Dr. Sapirstein in his Park Avenue examination room, suddenly catching the unmistakable pungent scent of tannis root on his cologne.' },
+    { id: 40, title: 'Guy Throws the Witchcraft Book Away', promptPayload: 'Guy pretending to search behind the living room bookshelf for Rosemary\'s occult book after secretly throwing it into the apartment incinerator chute.' },
+    { id: 41, title: 'Dumping the Herbal Drink Down the Sink', promptPayload: 'Rosemary covertly pouring Minnie\'s green herbal concoction down the kitchen drain behind the curtains while pretending to drink every drop with a polite smile.' },
+    { id: 42, title: 'The Phone Booth Panic in the City', promptPayload: 'Terrified pregnant Rosemary locked inside a glass Manhattan street telephone booth, clutching coins and pleading with a new doctor as pedestrians walk past like potential coven spies.' },
+    { id: 43, title: 'Hiding from the Coven in the Elevator', promptPayload: 'Rosemary rushing past the ornate brass cage elevator of the Bramford, locking the double bolts on her front door as Minnie and Dr. Sapirstein ring the bell incessantly.' },
+    { id: 44, title: 'The Coven Enters Through the Secret Closet', promptPayload: 'Rosemary sitting trapped inside her locked bedroom, watching in horror as Guy, Dr. Sapirstein, and the Castevets walk straight into the apartment through the hidden closet passage.' },
+    { id: 45, title: 'The Breast Pump and Missing Milk', promptPayload: 'Recovering in bed after being told her baby died, Rosemary noticing her breast milk is being carefully saved by Minnie in glass bottles rather than discarded.' },
+    { id: 46, title: 'Hiding the Sedative Pill Under Her Tongue', promptPayload: 'Rosemary feigning sleep as Minnie leaves the bedroom, spitting the blue sedative capsule out from under her tongue and taping it beneath the mattress.' },
+    { id: 47, title: 'Opening the Back of the Linen Closet', promptPayload: 'Rosemary unscrewing the wooden backing panels inside the hallway closet, swinging the secret door open into the dim wallpapered Castevet pantry.' },
+    { id: 48, title: 'Guy\'s Pathetic Justification', promptPayload: 'Rosemary spitting in Guy\'s face in the Castevets\' parlor as he whispers that they promised she wouldn\'t be hurt and he got his acting career in exchange.' },
+    { id: 49, title: 'The Japanese Coven Photographer', promptPayload: 'Polite Japanese coven member Mr. Ikawa snapping flash photographs with his 35mm camera around the black bassinet in the Castevets\' Victorian living room.' },
+    { id: 50, title: 'Closing Exterior of the Bramford', promptPayload: 'Slow crane camera pulling back out the apartment window over the courtyard and rooftop gargoyles of the Dakota building as eerie lullaby vocals echo over Manhattan.' }
 ];
 
 // ==========================================
-// 3. A Quiet Place (2018) - 25 Scenes
+// 3. A Quiet Place (2018) - 50 Scenes
 // ==========================================
 export const aQuietPlaceScenes: Scene[] = [
     { id: 1, title: 'The Abandoned Pharmacy', promptPayload: 'Sunlight filtering through dust motes in looted small-town pharmacy, family walking barefoot on painted white sand path, whispering in American Sign Language, absolute silence.' },
@@ -90,11 +140,36 @@ export const aQuietPlaceScenes: Scene[] = [
     { id: 22, title: 'The Shotgun Blast', promptPayload: 'Evelyn racking pump-action shotgun, aiming directly at exposed monster brain, muzzle flash lighting dark basement, deafening gunshot blast dropping creature.' },
     { id: 23, title: 'Security Monitors Alert', promptPayload: 'Bank of CCTV monitors showing three more alien creatures sprinting across fields toward farmhouse drawn by the gunshot sound, perimeter compromised.' },
     { id: 24, title: 'Evelyn\'s Fierce Cocking of the Gun', promptPayload: 'Close-up of Evelyn\'s determined face, smiling grimly through tears, pumping another shell into shotgun chamber, prepared to defend family to the death.' },
-    { id: 25, title: 'The Cut to Black', promptPayload: 'Regan turning up amplifier volume, Evelyn aiming shotgun at basement doorway, instant cut to black with thunderous soundtrack swell.' }
+    { id: 25, title: 'The Cut to Black', promptPayload: 'Regan turning up amplifier volume, Evelyn aiming shotgun at basement doorway, instant cut to black with thunderous soundtrack swell.' },
+    { id: 26, title: 'The Empty Main Street Crossing', promptPayload: 'Wide shot of deserted small-town Main Street at dusk, faded traffic lights swinging in the breeze, newspaper vending machines toppled over on concrete.' },
+    { id: 27, title: 'Evelyn Searching the Prescription Shelves', promptPayload: 'Evelyn carefully sliding glass medicine bottles across dusty pharmacy shelves without making a click, checking antibiotics for sick son Marcus.' },
+    { id: 28, title: 'Painting Floorboards Yellow', promptPayload: 'Top-down shot of farmhouse hardwood floor with bright yellow paint dabbed on the non-creaking spots where family members can safely step barefoot.' },
+    { id: 29, title: 'Monopoly with Woolen Game Pieces', promptPayload: 'Marcus and Regan playing Monopoly on living room rug by lantern light using soft knitted wool balls and felt cloth instead of plastic tokens and dice.' },
+    { id: 30, title: 'The Falling Lantern Fire', promptPayload: 'Kerosene lantern knocked over during board game, sudden whoosh of orange flame on rug, Lee smothering fire instantly with wool blanket while listening toward the dark window.' },
+    { id: 31, title: 'Raccoons on the Roof', promptPayload: 'Heavy scratching and thudding on tin porch roof, family frozen in terror until two raccoons scamper off the eaves into the cornfield.' },
+    { id: 32, title: 'The Raccoon Killed in the Cornfield', promptPayload: 'Raccoon trotting down sand path at twilight, blurred armored alien predator striking from the corn stalks in a split-second spray of blood.' },
+    { id: 33, title: 'Soldering the Cochlear Implant', promptPayload: 'Extreme close-up of Lee\'s hands using a small soldering iron and magnifying lens at his basement workbench, attempting to upgrade Regan\'s hearing aid.' },
+    { id: 34, title: 'Soundproofing the Baby Nursery', promptPayload: 'Underground barn cellar lined wall-to-wall with thick recycled mattresses and newspaper insulation to create an airtight soundproof room for the upcoming baby.' },
+    { id: 35, title: 'Evelyn Checking Blood Pressure in the Barn', promptPayload: 'Pregnant Evelyn sitting quietly on mattress in the hidden barn cellar, squeezing rubber bulb of manual blood pressure cuff and recording numbers in notebook.' },
+    { id: 36, title: 'Slow Dance with Shared Earphone', promptPayload: 'Warm candlelit living room, Lee placing a single white earbud into Evelyn\'s ear as they slow dance in total room silence to Neil Young\'s "Harvest Moon".' },
+    { id: 37, title: 'Lighting the Signal Bonfire on the Silo', promptPayload: 'Lee standing atop the towering metal grain silo at dusk, lighting signal fire and spotting dozens of distant survivor bonfires flickering across the Hudson Valley.' },
+    { id: 38, title: 'Catching Trout in the River Trap', promptPayload: 'Lee and Marcus wading in rushing mountain stream, pulling wooden fish basket filled with silver trout from the rapids.' },
+    { id: 39, title: 'The Old Man in the Woods', promptPayload: 'Lee and Marcus encountering an emaciated, grief-crazed elderly survivor standing beside the body of his dead wife in the silent forest.' },
+    { id: 40, title: 'The Old Man\'s Suicide Scream', promptPayload: 'The old man in the forest taking a deep breath despite Lee\'s frantic silent gesture, screaming at the top of his lungs as a Death Angel hurtles through the trees.' },
+    { id: 41, title: 'Regan at Beau\'s Bridge Memorial', promptPayload: 'Regan kneeling alone at the railroad bridge memorial adorned with wooden crosses and the toy space shuttle, wiring the shuttle lights to glow silently.' },
+    { id: 42, title: 'The Egg Timer Counting Down in the Kitchen', promptPayload: 'Mechanical kitchen egg timer ticking louder and louder on the wooden counter as an alien creature prowls inches away in the hallway.' },
+    { id: 43, title: 'Blood Footprints on the Stairs', promptPayload: 'Creature descending the basement staircase, sniffing crimson barefoot bloodprints left on the wooden steps by injured Evelyn.' },
+    { id: 44, title: 'Evelyn Trapped Behind the Waterfall Curtain', promptPayload: 'Evelyn pressing her back against the flooded basement wall behind a cascade of water pouring from a broken pipe, creature\'s armored head clicking inches from her face.' },
+    { id: 45, title: 'Sinking into the Corn Silo', promptPayload: 'Marcus sinking up to his chin in golden corn kernels inside the dark metal silo, Regan diving under the grain to pull him up.' },
+    { id: 46, title: 'Using the Silo Door as a Shield', promptPayload: 'Regan and Marcus huddling beneath a heavy corrugated steel hatch that fell into the grain silo as the alien predator slashes at the metal overhead.' },
+    { id: 47, title: 'Lee Discovers the Bloody Bathtub', promptPayload: 'Lee sprinting into the upstairs bathroom with shotgun raised, freezing in horror at the empty clawfoot bathtub smeared with bright red blood.' },
+    { id: 48, title: 'Reunion in the Soundproof Cellar', promptPayload: 'Lee opening the mattress-lined barn trapdoor to find Evelyn alive holding their newborn baby boy, weeping silently in overwhelming relief.' },
+    { id: 49, title: 'The Whiteboard of Weakness', promptPayload: 'Camera panning across Lee\'s basement whiteboard covered in newspaper clippings of the Mexico meteor strike and the circled words "ARMOR - WEAKNESS: HIGH FREQUENCY".' },
+    { id: 50, title: 'Mother and Daughter Ready for War', promptPayload: 'Heroic low-angle two-shot of Evelyn holding the pump-action shotgun beside Regan holding her glowing cochlear implant against the humming speaker.' }
 ];
 
 // ==========================================
-// 4. The Descent (2005) - 25 Scenes
+// 4. The Descent (2005) - 50 Scenes
 // ==========================================
 export const theDescentScenes: Scene[] = [
     { id: 1, title: 'The Whitewater Rafting Rush', promptPayload: 'Dynamic action shot of six women navigating wild white-water rapids in red inflatable raft, roaring turquoise river, pine-covered Appalachian gorge, golden sunlight.' },
@@ -121,11 +196,36 @@ export const theDescentScenes: Scene[] = [
     { id: 22, title: 'The Confrontation with Juno', promptPayload: 'Sarah and Juno fighting back-to-back killing wave of crawlers, Sarah holding up the silver pendant, silent accusation, striking Juno in leg and leaving her.' },
     { id: 23, title: 'Juno Surrounded in the Dark', promptPayload: 'Juno left crippled on cave floor, listening to dozens of crawlers clicking in the darkness closing in from all directions, raising ice axe for last stand.' },
     { id: 24, title: 'Scrambling into the Daylight', promptPayload: 'Sarah climbing frantic mountain of bones and mud, bursting out into blinding midday Appalachian sunlight, gasping sweet fresh air, racing to car.' },
-    { id: 25, title: 'The Birthday Cake Hallucination', promptPayload: 'Sarah snapping awake still trapped inside pitch-black cave, staring at solitary flickering candle on child birthday cake, crawlers screeching around her in darkness.' }
+    { id: 25, title: 'The Birthday Cake Hallucination', promptPayload: 'Sarah snapping awake still trapped inside pitch-black cave, staring at solitary flickering candle on child birthday cake, crawlers screeching around her in darkness.' },
+    { id: 26, title: 'Paul\'s Distracted Glance on the Riverbank', promptPayload: 'Golden afternoon by the Scottish river after rafting, Sarah noticing her husband Paul exchanging a lingering, secretive look with Juno before driving away.' },
+    { id: 27, title: 'The Hospital Corridor Blackout', promptPayload: 'Dazed Sarah sprinting down an endless white hospital corridor as overhead fluorescent tubes snap off one by one behind her into pitch blackness.' },
+    { id: 28, title: 'Driving into the Blue Ridge Mountains', promptPayload: 'Two SUVs winding along a misty tree-lined highway deep into the Appalachian Mountains of North Carolina, autumn foliage glowing under overcast skies.' },
+    { id: 29, title: 'Flight of the Bats at the Sinkhole', promptPayload: 'The six women standing at the rim of the forest sinkhole as a massive black cloud of thousands of bats erupts screeching from the cave mouth into the sky.' },
+    { id: 30, title: 'Illuminating the First Cathedral Cavern', promptPayload: 'Juno striking a magnesium flare inside the first underground chamber, dazzling white-and-blue light revealing towering wet stalagmites and glittering mineral walls.' },
+    { id: 31, title: 'Finding the Rusted 19th-Century Piton', promptPayload: 'Rebecca shining her headlamp onto a rock ledge and discovering a rusted antique iron climbing spike driven into the limestone over a hundred years ago.' },
+    { id: 32, title: 'Beth Calms Sarah in the Crawlspace', promptPayload: 'Sarah hyperventilating when her equipment bag snags in the narrow rock fissure, Beth crawling back to talk her through the panic as stone creaks overhead.' },
+    { id: 33, title: 'Holly\'s Compound Leg Fracture', promptPayload: 'Impatient Holly rushing ahead down a rocky chute, plunging through a false floor and snapping her shinbone cleanly through her climbing suit.' },
+    { id: 34, title: 'Sam Splints Holly\'s Broken Leg', promptPayload: 'Medical student Sam gritting her teeth in green glow-stick light, pushing Holly\'s fractured tibia back into place and binding it with a metal climbing splint.' },
+    { id: 35, title: 'The Rusted Conquistador Helmet', promptPayload: 'Flashlight beam catching a corroded 16th-century Spanish conquistador steel morion helmet half-buried in cave silt, proving no one ever escaped the cave.' },
+    { id: 36, title: 'Sarah Falls into the Lair', promptPayload: 'After the first crawler ambush, Sarah tumbling down a vertical shaft and waking up bruised beneath a pile of fresh deer carcasses.' },
+    { id: 37, title: 'Watching Holly Carried into the Feeding Pit', promptPayload: 'Sarah hiding behind a rock rib in crimson darkness, watching crawlers drag Holly\'s body into a communal feeding hollow and tear at the flesh.' },
+    { id: 38, title: 'Sam and Rebecca Cornered at the Chasm', promptPayload: 'Sisters Sam and Rebecca dangling from a climbing rope over a subterranean precipice while a crawler crawls upside-down across the rock ceiling toward them.' },
+    { id: 39, title: 'Sam\'s Desperate Rope Leap', promptPayload: 'Sam swinging across the chasm on the climbing rope, stabbing a crawler in the throat with her knife only for the creature to rip her neck open before falling.' },
+    { id: 40, title: 'Rebecca Dragged into the Shadows', promptPayload: 'Weeping Rebecca dragged backward across slick stone by a pack of crawlers as Juno watches from a ledge above, unable to save her.' },
+    { id: 41, title: 'Juno Marks the Cave Wall Arrows', promptPayload: 'Blood-streaked Juno carving directional arrows into the limestone wall with her climbing pick, hunting for a draft of surface air.' },
+    { id: 42, title: 'Beth Pleads for Mercy', promptPayload: 'Dying Beth lying among animal bones in the dark, begging Sarah to end her suffering with a jagged rock before the crawlers return to feed on her.' },
+    { id: 43, title: 'The Crawler Child Attack', promptPayload: 'A juvenile crawler leaping onto Sarah\'s back in the bone pit, Sarah slamming herself backward against a stalagmite to crush the creature.' },
+    { id: 44, title: 'Crushing the Crawler with a Skull', promptPayload: 'Blood-drenched Sarah straddling a thrashing male crawler in the shallow crimson pool and caving its head in with a heavy horned deer skull.' },
+    { id: 45, title: 'Juno Emerges from the Underground River', promptPayload: 'Juno gasping as she surfaces from the black subterranean pool, face smeared with mud and blood, gripping her climbing axe.' },
+    { id: 46, title: 'The Ice Axe Through the Jaw', promptPayload: 'Sarah and Juno ambushed in a narrow stone gallery, driving a climbing pick directly up through a crawler\'s lower jaw in visceral survival combat.' },
+    { id: 47, title: 'Sarah Leaves Juno to the Horde', promptPayload: 'Sarah hacking the climbing pick into Juno\'s thigh, dropping the "Love Each Day" pendant at her feet, and walking away into the dark tunnel as Juno screams.' },
+    { id: 48, title: 'Falling Down the Bone Chute', promptPayload: 'Sarah slipping in the darkness while fleeing Juno\'s screams, tumbling unconscious down a steep limestone funnel onto a mound of skulls.' },
+    { id: 49, title: 'The Ghost of Juno in the Passenger Seat', promptPayload: 'Inside the SUV parked on the dark forest road after her imagined escape, Sarah vomiting out the window and turning to see bloody Juno sitting beside her.' },
+    { id: 50, title: 'The Camera Pullback into the Dark Earth', promptPayload: 'Final haunting wide shot pulling slowly upward away from Sarah and her hallucinatory torch, revealing she is still buried miles deep in the pitch-black cavern.' }
 ];
 
 // ==========================================
-// 5. 28 Days Later (2002) - 25 Scenes
+// 5. 28 Days Later (2002) - 50 Scenes
 // ==========================================
 export const twentyEightDaysLaterScenes: Scene[] = [
     { id: 1, title: 'The Cambridge Primate Lab Raid', promptPayload: 'Animal rights activists breaking into shadowy biomedical research lab, chimp strapped to gurney watching bank of television screens playing violent riots, flashing red alarms.' },
@@ -152,11 +252,36 @@ export const twentyEightDaysLaterScenes: Scene[] = [
     { id: 22, title: 'The Dark Motive of Major West', promptPayload: 'Major West revealing to Jim his soldiers\' desperate demand for female survivors to rebuild civilization, realization that the military is more dangerous than the infected.' },
     { id: 23, title: 'Jim Unleashed in the Rain', promptPayload: 'Torrential downpour at night, Jim stripped to singlet hunting soldiers through mansion grounds like a creature, gouging eyes, releasing chained infected soldier Mailer.' },
     { id: 24, title: 'Massacre at the Country Manor', promptPayload: 'Mailer and Jim tearing through mansion rooms, chandeliers swinging, gunfire flashing in corridors, soldiers terrified as their fortress collapses from within.' },
-    { id: 25, title: 'The HELLO Banner in the Meadow', promptPayload: 'Cottage in sunny Scottish highlands, Jim, Selena, and Hannah sewing giant white fabric letters spelling "HELLO" across green grass, Finnish jet fighter flying overhead.' }
+    { id: 25, title: 'The HELLO Banner in the Meadow', promptPayload: 'Cottage in sunny Scottish highlands, Jim, Selena, and Hannah sewing giant white fabric letters spelling "HELLO" across green grass, Finnish jet fighter flying overhead.' },
+    { id: 26, title: 'The Scientist\'s Desperate Warning', promptPayload: 'Terrified Cambridge lab researcher pleading with masked animal rights activists not to open the primate cages, shouting that the chimpanzees are infected with pure Inhibitor-free Rage.' },
+    { id: 27, title: 'Picking Up the Key Inside the Hospital Door', promptPayload: 'Jim kneeling in green hospital scrubs on the tiled corridor floor of St. Thomas\' Hospital, picking up a single brass key beside a shattered glass security door.' },
+    { id: 28, title: 'The Silent Payphones of London', promptPayload: 'Jim standing inside a red London telephone box picking up the dead receiver, scattered pound notes blowing like autumn leaves across empty Whitehall asphalt.' },
+    { id: 29, title: 'Spilled Bags of Cash Near Horse Guards Parade', promptPayload: 'Jim bending down on deserted London street to scoop up bundles of twenty-pound bank notes spilling from an abandoned suitcase, realizing money is now worthless.' },
+    { id: 30, title: 'Scavenging Soda Cans in the Corner Shop', promptPayload: 'Jim filling a plastic carrier bag with cans of tango soda and snacks inside a looted London newsagent before wandering toward the church.' },
+    { id: 31, title: 'The Gas Station Explosion', promptPayload: 'Selena and Mark throwing a Molotov cocktail into a petrol station forecourt, massive fireball mushrooming into the London night sky and incinerating pursuing infected.' },
+    { id: 32, title: 'Mark\'s Story of Paddington Station', promptPayload: 'In the dim kiosk hideout, Mark recounting the horrific final crush of panicked crowds trying to board the last trains out of Paddington Station.' },
+    { id: 33, title: 'Crossing the Railway Viaduct at Dawn', promptPayload: 'Jim, Selena, and Mark walking along elevated brick railway tracks above silent row houses of South London as pale morning mist rises over the Thames.' },
+    { id: 34, title: 'The Candle in the Deptford Window', promptPayload: 'Jim lighting a single candle at his parents\' kitchen table at night, the tiny flame visible from the dark street outside and drawing two sprinting infected.' },
+    { id: 35, title: 'Shopping Trolleys Blocking the Tower Stairwell', promptPayload: 'Base of the Balfron Tower stairwell barricaded with a towering wall of tangled metal supermarket shopping carts to slow down the infected.' },
+    { id: 36, title: 'Frank Beats the Infected with a Riot Shield', promptPayload: 'Towering father Frank in full black police riot armor and helmet charging down the concrete landing, bashing two infected backward with a heavy polycarbonate shield.' },
+    { id: 37, title: 'Collecting Rainwater on the Tower Roof', promptPayload: 'Rooftop of the high-rise apartment block covered in dozens of colorful plastic buckets, laundry tubs, and bowls waiting in the hot sun for rain.' },
+    { id: 38, title: 'The Flat Tire in the Dark Tunnel', promptPayload: 'Black London cab driving over mounds of rotting garbage and abandoned cars inside a pitch-black highway tunnel, blowing a tire as thousands of rats scurry toward them.' },
+    { id: 39, title: 'Frenzied Tire Change as Infected Approach', promptPayload: 'Jim and Frank frantically jacking up the black taxi in the dark tunnel while silhouettes of sprinting infected howl and bound over car roofs behind them.' },
+    { id: 40, title: 'Cheeseburgers at the Ruined Service Station', promptPayload: 'Jim walking alone through a burned-out roadside diner, finding a child\'s corpse in the back seat of a car and bashfully clubbing an infected child with a baseball bat.' },
+    { id: 41, title: 'Valium and Irradiated Apples in the Meadow', promptPayload: 'Hannah playfully tossing prescription sedatives to Selena while the group lounges on a checkered blanket beneath an ancient English ruin.' },
+    { id: 42, title: 'Burning Manchester on the Horizon', promptPayload: 'Black taxi cresting a hill at night to find the entire city of Manchester engulfed in an apocalyptic sea of orange fire and black smoke miles wide.' },
+    { id: 43, title: 'Private Mailer Chained in the Courtyard', promptPayload: 'Infected soldier Private Mailer kept on a heavy iron dog chain in the manor courtyard by Major West to study how long it takes the infected to starve to death.' },
+    { id: 44, title: 'The Rotten Omelette Dinner', promptPayload: 'Soldiers gathered around the grand mahogany dining table of Wychwood Manor eating a salty omelette, interrupted by an infected rush against the perimeter landmines.' },
+    { id: 45, title: 'Execution of Sergeant Farrell in the Woods', promptPayload: 'Jim and idealist Sergeant Farrell led at gunpoint into a wet pine forest pit piled with rotting bodies, Farrell executed while Jim plays dead to escape over the wall.' },
+    { id: 46, title: 'The Jet Contrail in the Blue Sky', promptPayload: 'Jim lying in the muddy forest ditch looking up through pine branches to see the white vapor trail of a high-altitude commercial jet, realizing the rest of the world is still alive.' },
+    { id: 47, title: 'Selena Forced into the Red Dress', promptPayload: 'Selena and Hannah forced at gunpoint by Major West\'s soldiers to put on ornate red silk evening gowns from the manor wardrobes while waiting for the storm.' },
+    { id: 48, title: 'Luring Major West with the Siren', promptPayload: 'Jim cranking the hand-turned air-raid siren outside the manor gates in the pouring rain, bayoneting a soldier from atop the stone wall.' },
+    { id: 49, title: 'Hannah Rams the Black Cab Into Major West', promptPayload: 'Hannah reversing the black London taxi straight into the manor entrance hall, allowing chained infected Mailer to drag Major West through the rear window.' },
+    { id: 50, title: 'Smashing Through the Estate Iron Gates', promptPayload: 'The black London taxi accelerating down the muddy estate driveway and crashing straight through the chained wrought-iron gates into freedom.' }
 ];
 
 // ==========================================
-// 6. Paranormal Activity (2007) - 25 Scenes
+// 6. Paranormal Activity (2007) - 50 Scenes
 // ==========================================
 export const paranormalActivityScenes: Scene[] = [
     { id: 1, title: 'Setting Up the Camcorder', promptPayload: 'Fixed tripod camera angle in spacious master bedroom, blue digital timecode 01:15:32 AM in corner, suburban San Diego home, serene mundane stillness.' },
@@ -172,7 +297,7 @@ export const paranormalActivityScenes: Scene[] = [
     { id: 11, title: 'Night 17: The Banging on the Wall', promptPayload: 'Tremendous violent hammering pounding against master bedroom walls from outside, pictures shaking off nails, couple bolting upright in sheer terror.' },
     { id: 12, title: 'The Shattered Chandelier', promptPayload: 'Daylight living room, sudden explosive shattering of glass chandelier crashing onto dining table with zero physical contact, escalating demonic aggression.' },
     { id: 13, title: 'Night 18: The Sheet Levitation', promptPayload: 'Night vision camera, bedsheets slowly tenting upward in mid-air over sleeping Katie as if an invisible figure is standing under the covers, dropping abruptly.' },
-    { id: 14, title: 'The Bite Mark on the Back', promptPayload: 'Morning bathroom mirror, Katie discovering severe deep human-like teeth bite mark on her lower back, bruising, Micah in angry denial.' },
+    { id: 14, title: 'The Bite Mark on the Back', promptPayload: 'Morning bathroom mirror, Katie discovering deep human-like teeth bite mark on her lower back, bruising, Micah in angry denial.' },
     { id: 15, title: 'The Psychic Refuses to Enter', promptPayload: 'Dr. Fredrichs returning to front porch, taking one step inside, immediately backing out in sheer panic, apologizing that the demon is too hostile and fleeing in car.' },
     { id: 16, title: 'Night 19: The Basement Door Slam', promptPayload: 'Handheld camera running downstairs into dark basement, loud metallic bang slamming door shut behind Micah, whispering voices in furnace shadows.' },
     { id: 17, title: 'Night 20: Dragged Out of Bed', promptPayload: 'Unseen force grabbing Katie by feet while asleep, yanking her violently off mattress and dragging her screaming down dark hallway carpet as Micah chases.' },
@@ -183,11 +308,36 @@ export const paranormalActivityScenes: Scene[] = [
     { id: 22, title: 'The Silent House Below', promptPayload: 'Fixed bedroom camera capturing empty doorway, sounds of shouting downstairs, sudden sickening thud, then absolute chilling silence for sixty seconds.' },
     { id: 23, title: 'Heavy Footsteps Ascending', promptPayload: 'Heavy deliberate footsteps walking slowly back up the wooden staircase, shadow lengthening across hallway floor toward bedroom threshold.' },
     { id: 24, title: 'Micah\'s Body Hurled at Camera', promptPayload: 'Micah\'s lifeless body violently hurled across hallway directly into camera tripod, shattering lens, knocking camera onto floor angled up at doorway.' },
-    { id: 25, title: 'The Demonic Lunge', promptPayload: 'Katie stepping into frame covered in blood, dropping on all fours, sniffing Micah\'s corpse, then crawling at lightning speed directly into camera with demonic face.' }
+    { id: 25, title: 'The Demonic Lunge', promptPayload: 'Katie stepping into frame covered in blood, dropping on all fours, sniffing Micah\'s corpse, then crawling at lightning speed directly into camera with demonic face.' },
+    { id: 26, title: 'Unpacking the HD Camcorder in the Driveway', promptPayload: 'Sunny suburban San Diego afternoon, Micah enthusiastically filming Katie with his brand-new high-definition handheld video camera as she pulls into the garage.' },
+    { id: 27, title: 'Testing the Directional Shotgun Microphone', promptPayload: 'Micah sitting at his home office desk testing a professional directional boom microphone and headphones to capture sub-audible frequencies in the bedroom.' },
+    { id: 28, title: 'Keys Dropped on the Living Room Floor', promptPayload: 'Morning after Night 1, Katie finding her house keys lying in the center of the hallway floor despite having placed them on the kitchen counter the night before.' },
+    { id: 29, title: 'Flickering Bathroom Vanity Lights', promptPayload: 'Micah brushing his teeth in the master bathroom while filming in the mirror, the overhead vanity lights suddenly flickering and dimming on their own.' },
+    { id: 30, title: 'Katie Confesses Her Childhood Haunting', promptPayload: 'Sitting on the edge of the bed in afternoon light, Katie telling Dr. Fredrichs about the shadowy figure that stood at the foot of her bed when she was eight years old.' },
+    { id: 31, title: 'Dr. Fredrichs Gives the Demonologist\'s Card', promptPayload: 'Dr. Fredrichs handing Katie the business card of demonologist Dr. Johann Averies, warning Micah never to buy a Ouija board or provoke the entity.' },
+    { id: 32, title: 'Micah Taunts the Entity in the Empty Room', promptPayload: 'Micah holding the camcorder and shouting provocations into the empty dark hallway: "Hey! What do you want with my girlfriend? Show yourself!"' },
+    { id: 33, title: 'Decoding the Demonic Grunt on the Laptop', promptPayload: 'Micah and Katie hunched over a laptop computer playing back the night\'s audio waveform, isolating a guttural inhuman growl speaking a foreign name.' },
+    { id: 34, title: 'Running Water in the Empty Bathroom', promptPayload: 'Micah walking down the dark upstairs hallway at 3:00 AM following the sound of a faucet running at full blast inside the empty guest bathroom.' },
+    { id: 35, title: 'Katie On the Backyard Swing in a Trance', promptPayload: 'Night vision camcorder shot looking out the sliding glass door at Katie sitting motionless on the wooden garden swing in her nightgown in the freezing wind.' },
+    { id: 36, title: 'Bringing the Television into the Bedroom', promptPayload: 'Trance-like Katie insisting on sitting in bed watching snowy television static in the dark while Micah begs her to come back to sleep.' },
+    { id: 37, title: 'Argument Over the Borrowed Ouija Board', promptPayload: 'Fierce daytime argument in the kitchen as Micah arrives home carrying a vintage cardboard Ouija board and Katie screams that he broke his promise.' },
+    { id: 38, title: 'Time-Lapse of the Moving Planchette', promptPayload: 'Tripod camera aimed at the empty living room coffee table while the couple is out for dinner, wind ruffling the curtains before the Ouija pointer glides across the letters.' },
+    { id: 39, title: 'Scratching the Picture Frame Glass', promptPayload: 'Morning sunlight revealing a framed couple photograph above the bed with the glass violently spiderwebbed and scratched exclusively over Micah\'s face.' },
+    { id: 40, title: 'Following Footprints to the Attic Hatch', promptPayload: 'Micah aiming the camcorder up at the hallway ceiling where the three-toed demonic footprints in the baby powder end directly beneath the square attic trapdoor.' },
+    { id: 41, title: 'Dead Bird on the Patio Deck', promptPayload: 'Katie stepping onto the sunlit backyard patio and gasping at a dead bird lying on the concrete after slamming into the sliding glass door.' },
+    { id: 42, title: 'Researching Diane\'s Exorcism Online', promptPayload: 'Micah browsing archival newspaper articles on his desktop monitors showing 1960s footage of a possessed woman named Diane who died during an exorcism after experiencing identical footprints.' },
+    { id: 43, title: 'Katie Clutches the Wooden Cross Until She Bleeds', promptPayload: 'Terrified Katie sitting in bed gripping a small wooden crucifix so tightly in her palm that the sharp edges cut into her skin and draw blood.' },
+    { id: 44, title: 'Packing Suitcases to Go to a Hotel', promptPayload: 'Exhausted, tearful Katie packing clothes into a suitcase on Day 20, begging Micah to leave the house immediately and stay at a hotel.' },
+    { id: 45, title: 'Katie\'s Sudden Calm Reversal', promptPayload: 'Just as Micah agrees to leave for the hotel, Katie abruptly stops crying, smiles with a cold eerie calm, and says "I think we\'ll be okay staying here tonight."' },
+    { id: 46, title: 'Watching the Tape of Her Own Dragging', promptPayload: 'Micah showing Katie the green night-vision footage on the laptop of her being dragged down the hallway by an invisible force, Katie weeping in disbelief.' },
+    { id: 47, title: 'The Shadow Lingering Behind the Frosted Door', promptPayload: 'Night 16 night-vision shot, bedroom door half-closed with a tall black silhouette looming motionless in the hallway gap before vanishing.' },
+    { id: 48, title: 'Micah Burning the Cursed Photograph', promptPayload: 'Micah holding the scorched childhood photograph from the attic over the outdoor grill and lighting it on fire while Katie begs him to stop provoking it.' },
+    { id: 49, title: 'The Kitchen Knife Rack Rattling', promptPayload: 'Daytime handheld footage in the kitchen, butcher knives inside the wooden counter block suddenly vibrating and clattering by themselves.' },
+    { id: 50, title: 'The Final Epilogue Title Card', promptPayload: 'Pitch-black screen after the camera falls sideways onto the bedroom carpet, stark white police report text stating Micah\'s body was discovered and Katie\'s whereabouts remain unknown.' }
 ];
 
 // ==========================================
-// 7. The Babadook (2014) - 25 Scenes
+// 7. The Babadook (2014) - 50 Scenes
 // ==========================================
 export const theBabadookScenes: Scene[] = [
     { id: 1, title: 'The Recurring Car Crash Nightmare', promptPayload: 'Amelia falling in slow motion through midnight sky in formal gown, sound of shattering car glass and sirens, waking gasping in dreary Australian suburban bedroom.' },
@@ -214,11 +364,36 @@ export const theBabadookScenes: Scene[] = [
     { id: 22, title: 'You Are Nothing in My House!', promptPayload: 'Amelia screaming defiantly at the monster: "This is my house! If you touch my son again, I will kill you!", roaring back with maternal fury.' },
     { id: 23, title: 'The Creature Retreats to the Cellar', promptPayload: 'Towering Babadook shrinking under her defiance, screeching in defeat, retreating backward down dark cellar stairs, cellar door slamming shut.' },
     { id: 24, title: 'Feeding the Monster in the Basement', promptPayload: 'Sunlit morning, Amelia carrying bowl of garden earthworms down cellar stairs, setting bowl on floor as creature growls in darkness, learning to live with grief.' },
-    { id: 25, title: 'The Birthday Magic Show', promptPayload: 'Sunny green backyard, Samuel performing innocent magic tricks for friends, Amelia smiling with genuine warmth, grief contained and acknowledged.' }
+    { id: 25, title: 'The Birthday Magic Show', promptPayload: 'Sunny green backyard, Samuel performing innocent magic tricks for friends, Amelia smiling with genuine warmth, grief contained and acknowledged.' },
+    { id: 26, title: 'Checking Under the Bed Every Night', promptPayload: 'Weary Amelia kneeling beside Samuel\'s bed in the blue-gray twilight, shining a flashlight under the mattress and inside the wardrobe to prove there are no monsters.' },
+    { id: 27, title: 'Working at the Elderly Care Home', promptPayload: 'Amelia dressed in pale blue nursing scrubs serving soup in a dreary institutional retirement home, surrounded by senile elderly patients and fluorescent monotony.' },
+    { id: 28, title: 'Oskar\'s Untouchable Basement Shrine', promptPayload: 'Locked cellar room filled with boxes of late husband Oskar\'s clothes, violin case, and photographs, dust motes hanging in the dim light of forbidden grief.' },
+    { id: 29, title: 'The Principal\'s Office Weapon Suspension', promptPayload: 'Stern school principal displaying Samuel\'s homemade wooden dart gun on the desk, lecturing exhausted Amelia about her son\'s disruptive obsession with protecting her.' },
+    { id: 30, title: 'Ruby\'s Cruel Birthday Party', promptPayload: 'Pretentious suburban garden party, Amelia\'s sister Claire and snobbish mothers judging Samuel as her spoiled niece Ruby taunts him about not having a father.' },
+    { id: 31, title: 'Samuel\'s Treehouse Fall', promptPayload: 'Samuel screaming in panic atop a backyard wooden treehouse claiming he sees the Babadook in the bushes, pushing cousin Ruby off the ledge and breaking her nose.' },
+    { id: 32, title: 'Seizure in the Backseat of the Car', promptPayload: 'Driving home from the ruined party, Samuel thrashing in a violent febrile convulsion in the backseat while screaming "Let me out! He\'s in the car!"' },
+    { id: 33, title: 'Glass Shards in the Vegetable Soup', promptPayload: 'Amelia eating dinner in a sleep-deprived daze, suddenly crunching down on sharp broken glass shards mixed inside her bowl of homemade soup.' },
+    { id: 34, title: 'Burning the Pop-Up Book on the Grill', promptPayload: 'Amelia dousing the reassembled crimson pop-up book in charcoal lighter fluid on the backyard barbecue grill, flames roaring up as a guttural shriek echoes in the wind.' },
+    { id: 35, title: 'Kind Neighbor Mrs. Roach\'s Concern', promptPayload: 'Elderly neighbor Mrs. Roach with Parkinson\'s tremor standing on the front porch offering comfort to hollow-eyed Amelia, sensing the crushing weight of her loneliness.' },
+    { id: 36, title: 'George Meliès Magic Tricks on the TV', promptPayload: 'Late night CRT television flickering with early 1900s silent trick films of Georges Méliès, phantom magician silhouettes morphing into the top-hatted Babadook.' },
+    { id: 37, title: 'The Babadook Gliding Across the Bedroom Ceiling', promptPayload: 'Terrifying wide shot of the dark master bedroom as the pale, wide-grinned Babadook crawls weightlessly across the plaster ceiling directly above Amelia\'s bed.' },
+    { id: 38, title: 'Social Services Inspection in the Parlor', promptPayload: 'Two stern Department of Human Services social workers sitting in the dim living room questioning Amelia while she hides her bleeding palms and manic exhaustion.' },
+    { id: 39, title: 'The Car Rear-End Collision', promptPayload: 'Amelia driving in a trance at dusk, glimpsing the top-hatted silhouette in the passenger window and slamming her hatchback into the rear of a truck.' },
+    { id: 40, title: 'Bathtub Submersion in Clothes', promptPayload: 'Fully clothed Amelia sinking beneath the water of the porcelain bathtub in a stupor while the Babadook\'s shadow looms across the white bathroom tiles.' },
+    { id: 41, title: 'The Ghost of Oskar in the Cellar', promptPayload: 'Gentle spectral apparition of late husband Oskar embracing weeping Amelia in the dark basement, suddenly twisting into a grotesque mockery demanding "Bring me the boy!"' },
+    { id: 42, title: 'Slashing the Telephone Cord', promptPayload: 'Possessed Amelia using the heavy kitchen chef knife to slice cleanly through the wall telephone cord so Samuel cannot call Mrs. Roach for help.' },
+    { id: 43, title: 'Samuel\'s Crossbow Shot to the Leg', promptPayload: 'Cornered on the staircase landing, Samuel firing his homemade wooden dart launcher into charging Amelia\'s thigh before bolting into the cellar.' },
+    { id: 44, title: 'Pulling Her Own Tooth in the Mirror', promptPayload: 'Unsettling close-up of possessed Amelia standing at the bathroom sink, wrenching a loose bloodied molar from her jaw with bare fingers.' },
+    { id: 45, title: 'Tearing Off the Babadook\'s Coat and Hat', promptPayload: 'In the final bedroom confrontation, Amelia stepping forward to lift the hollow black top hat and trench coat, finding only empty air and shadow underneath.' },
+    { id: 46, title: 'The Bedroom Walls Shaking in the Gale', promptPayload: 'Supernatural indoor hurricane blasting through the bedroom as the Babadook roars, white curtains whipping violently and plaster cracking overhead.' },
+    { id: 47, title: 'Touching Her Mother\'s Face in the Dark', promptPayload: 'Bound Amelia pinning Samuel to the floor to strangle him, stopping as Samuel gently strokes her cheek and whispers "You\'re not my mother, I\'m not scared of you."' },
+    { id: 48, title: 'Digging Up Worms in the Garden Soil', promptPayload: 'Sunlit morning after the storm, Amelia and Samuel kneeling together in the damp flowerbed digging wriggling earthworms into a ceramic bowl.' },
+    { id: 49, title: 'Soothing the Creature in the Shadows', promptPayload: 'Amelia standing bravely inside the dark basement as the unseen Babadook lunges from the blackness, calming it softly like a wounded animal.' },
+    { id: 50, title: 'Producing the White Dove in the Sunlight', promptPayload: 'Final joyous garden shot, Samuel waving a magic wand at his first real birthday party and revealing a live white dove to his cheering mother.' }
 ];
 
 // ==========================================
-// 8. Insidious (2010) - 25 Scenes
+// 8. Insidious (2010) - 50 Scenes
 // ==========================================
 export const insidiousScenes: Scene[] = [
     { id: 1, title: 'The Attic Hallway Creak', promptPayload: 'Renai unpacking boxes in new two-story suburban home, hearing floorboards creaking overhead, looking up at closed attic hatch with rising dread, atmospheric 70s horror tone.' },
@@ -245,11 +420,36 @@ export const insidiousScenes: Scene[] = [
     { id: 22, title: 'Chase Through The Further', promptPayload: 'Horde of dead spirits and shrieking ghosts pursuing Josh and Dalton through twisting corridors of The Further, lantern light swinging wildly.' },
     { id: 23, title: 'The Old Woman on the Threshold', promptPayload: 'Josh confronting the Bride in Black veil at doorway back to the living world, screaming "Leave me alone!" as she cackles into darkness.' },
     { id: 24, title: 'Dalton Awakes', promptPayload: 'Dalton snapping awake in real-world bedroom, hugging parents, joy and relief flooding sunlit kitchen, family reunion.' },
-    { id: 25, title: 'The Camera Reveal Climax', promptPayload: 'Elise taking photo of Josh, noticing his hands are aged and clawed, Josh strangling Elise, Renai picking up camera to see photo of Bride in Black instead of Josh.' }
+    { id: 25, title: 'The Camera Reveal Climax', promptPayload: 'Elise taking photo of Josh, noticing his hands are aged and clawed, Josh strangling Elise, Renai picking up camera to see photo of Bride in Black instead of Josh.' },
+    { id: 26, title: 'Opening Monochrome Candle Walk', promptPayload: 'Atmospheric black-and-white title sequence gliding through a silent darkened house, revealing the grinning Bride in Black holding a flickering taper candle by the window.' },
+    { id: 27, title: 'Renai\'s Sheet Music Book Moves', promptPayload: 'Renai composing a melancholy melody at the upright piano, returning with coffee to find her sheet music book mysteriously moved onto the attic floor.' },
+    { id: 28, title: 'Dalton\'s Drawings of the Red-Faced Visitor', promptPayload: 'Renai and Elise examining the colorful crayon drawings taped to Dalton\'s bedroom wall depicting his own astral body flying on a silver cord and a red-faced demon.' },
+    { id: 29, title: 'Foster Begging to Change Bedrooms', promptPayload: 'Younger brother Foster sitting in bed trembling in the dark, begging his mother to let him move rooms because comatose Dalton gets up and walks around at night.' },
+    { id: 30, title: 'The Long-Haired Man Pacing Outside the Window', promptPayload: 'Renai taking the garbage bags out to the side alley at night, freezing as a gaunt Victorian man with long greasy hair paces slowly inside the front parlor window.' },
+    { id: 31, title: 'The House Alarm Triggered at Midnight', promptPayload: 'Piercing electronic burglar alarm blaring red across the darkened hallway, Josh running downstairs to find the heavy front door standing wide open to the street.' },
+    { id: 32, title: 'Ghost Boy Hiding in the Coats', promptPayload: 'Renai opening the wooden hallway coat closet and coming face-to-face with the pale 1950s ghost boy grinning from inside the hanging winter jackets.' },
+    { id: 33, title: 'Specs Sketching the Lipstick-Face Demon', promptPayload: 'Elise whispering a description in Dalton\'s bedroom while Specs rapidly sketches a towering charcoal portrait of the cloven-hoofed Lipstick-Face Demon on his pad.' },
+    { id: 34, title: 'Red Hoofprints on the Bedroom Ceiling', promptPayload: 'Tucker shining a tri-field UV light upward in Dalton\'s bedroom, revealing glowing spectral hoofprints leading straight up the wall and across the ceiling.' },
+    { id: 35, title: 'Writing in Trance During the Seance', promptPayload: 'Specs scribbling furiously across a legal pad as Elise translates the spirit\'s gas-mask whispers, tearing pages off as the voice turns into a demonic roar.' },
+    { id: 36, title: 'The Demon Pointing at Dalton in Bed', promptPayload: 'In Lorraine\'s flashback nightmare, the towering dark figure in the corner of Dalton\'s bedroom raising a long skeletal claw to point directly at the sleeping boy.' },
+    { id: 37, title: 'Josh Grading Papers Late at School', promptPayload: 'Exhausted father Josh sitting alone in his empty middle-school classroom at night avoiding going home, looking at a child\'s drawing that mirrors Dalton\'s coma.' },
+    { id: 38, title: 'The Metronome Hypnosis Induction', promptPayload: 'Antique wooden metronome ticking steadily on the table between Josh and Elise as she guides him to project his astral spirit out of his physical body.' },
+    { id: 39, title: 'Stepping Out of His Own Body', promptPayload: 'Josh standing up from the living room armchair in blue-tinted astral light and turning around in shock to see his own physical body still sitting asleep in the chair.' },
+    { id: 40, title: 'Wading Through the Ankle-Deep Fog', promptPayload: 'Josh walking down the pitch-black street of The Further with a heavy lantern, lost souls standing motionless like mannequins on the mist-shrouded lawn.' },
+    { id: 41, title: 'The Long-Haired Man Attacks in the Attic', promptPayload: 'Inside the shadowy attic of The Further, the feral Long-Haired Man lunging at Josh before Josh forces him back by shouting that he is still alive.' },
+    { id: 42, title: 'Antique Wooden Marionettes in the Lair', promptPayload: 'Creepy life-sized wooden puppets and theatrical masks hanging from red strings in the Lipstick-Face Demon\'s subterranean chamber.' },
+    { id: 43, title: 'The Demon Crawling Down the Wall Behind Josh', promptPayload: 'Lipstick-Face Demon perched like a giant spider high on the crimson wall above Dalton, dropping silently down behind Josh with forked tongue flicking.' },
+    { id: 44, title: 'Ghosts Invading the Living World Living Room', promptPayload: 'While Josh\'s body sits unguarded during the seance, dozens of pale ghouls press their faces against the living room windows and reach for Elise and Renai.' },
+    { id: 45, title: 'Renai Attacked by the Ghostly Intruder', promptPayload: 'The Long-Haired Man manifesting physically in the house to choke Renai against the wall until Josh and Dalton break through from The Further.' },
+    { id: 46, title: 'Following Renai\'s Voice Back to the Light', promptPayload: 'Lost in the dark fog of The Further, Dalton and Josh hearing Renai\'s distant voice calling them home and sprinting toward the warm glow of the house.' },
+    { id: 47, title: 'Blowing Out the Bride\'s Candle', promptPayload: 'Josh standing face-to-face with the rotting Bride in Black in the dark hallway, shouting "You\'re not real!" as her candle flame sputters out.' },
+    { id: 48, title: 'Packing Up the Ghost-Hunting Gear', promptPayload: 'Afternoon sunlight streaming through the windows as Specs and Tucker cheerfully pack their tripods and cables into aluminum cases while Elise lingers uneasily.' },
+    { id: 49, title: 'Elise\'s Chilling Premonition', promptPayload: 'Elise freezing as Josh touches her shoulder, noticing the cold dead texture of his skin and impulsively raising her digital camera to snap his picture.' },
+    { id: 50, title: 'Possessed Josh Looming Over Renai', promptPayload: 'Final spine-chilling shot of Josh stepping silently behind terrified Renai as she looks at the camera screen, his face twisted into the sinister smirk of the Bride in Black.' }
 ];
 
 // ==========================================
-// 9. Sinister (2012) - 25 Scenes
+// 9. Sinister (2012) - 50 Scenes
 // ==========================================
 export const sinisterScenes: Scene[] = [
     { id: 1, title: 'The Super 8 Hanging Tree', promptPayload: 'Grainy Super 8 film footage, four family members standing on limb of giant oak tree with burlap sacks over heads and nooses around necks, branch sawed off in silence.' },
@@ -276,11 +476,36 @@ export const sinisterScenes: Scene[] = [
     { id: 22, title: 'The Extended Cuts Reveal', promptPayload: 'Watching extended endings, discovering the missing child from each family was the one holding the camera and executing the family under Bughuul\'s spell.' },
     { id: 23, title: 'The Poisoned Coffee', promptPayload: 'Ellison taking sip of coffee, vision blurring, collapsing onto floor, discovering daughter Ashley holding pitcher of green painted liquid with sinister smile.' },
     { id: 24, title: 'The Axe Murder in the Hallway', promptPayload: 'Paralyzed Ellison watching daughter Ashley dragging heavy woodsman axe down hallway, singing cheerfully while painting walls with family blood.' },
-    { id: 25, title: 'Bughuul Carries Ashley Away', promptPayload: 'Ashley finishing painting Bughuul symbol on wall, Bughuul appearing in room, picking up girl in arms, stepping into projector screen into the netherworld.' }
+    { id: 25, title: 'Bughuul Carries Ashley Away', promptPayload: 'Ashley finishing painting Bughuul symbol on wall, Bughuul appearing in room, picking up girl in arms, stepping into projector screen into the netherworld.' },
+    { id: 26, title: 'The Hostile Sheriff at the Unloading Van', promptPayload: 'Local small-town sheriff confronting Ellison in the driveway as moving boxes are unloaded, expressing cold disgust at Ellison\'s past book that ruined a police investigation.' },
+    { id: 27, title: 'The Scorpion Inside the Attic Box', promptPayload: 'Ellison lifting the lid off the dusty Super 8 projector box in the attic, recoiling as a large black scorpion crawls across the cardboard reels.' },
+    { id: 28, title: 'Inspecting the Sawed Oak Branch in the Backyard', promptPayload: 'Ellison standing alone beneath the massive backyard oak tree in gray afternoon light, looking up at the fresh saw mark where the Stevenson family was hanged.' },
+    { id: 29, title: 'Ashley Painting on her Bedroom Wall', promptPayload: 'Young daughter Ashley kneeling in her bedroom with her "special painting wall" covered in bright childlike acrylic murals that gradually turn darker.' },
+    { id: 30, title: 'Watching His Old Talk Show Glory', promptPayload: 'Ellison playing a worn VHS tape of his 1990s television interview for his bestseller "Kentucky Blood", yearning desperately for one last literary masterpiece.' },
+    { id: 31, title: 'Deputy So-and-So\'s Eager Fanboy Visit', promptPayload: 'Awkward, earnest local Deputy So-and-So arriving at the front door with case files, offering to help Ellison research the Stevenson murders in exchange for a book dedication.' },
+    { id: 32, title: 'Splicing Torn 8mm Celluloid with Tape', promptPayload: 'Extreme close-up of Ellison\'s trembling fingers using a vintage metal film splicer and clear tape to repair a snapped Super 8 reel under his desk lamp.' },
+    { id: 33, title: 'The King Giallo Snake in the Attic', promptPayload: 'Ellison shining his flashlight into the rafters of the dark attic, freezing as a venomous snake coils around the wooden beams beside child-sized footprints in the dust.' },
+    { id: 34, title: 'Black Rottweiler Outside the Sliding Glass Door', promptPayload: 'Ellison stepping into the dark kitchen at night, startled by a massive snarling black dog standing motionless on the patio deck outside the glass.' },
+    { id: 35, title: 'Stephanie\'s Picture Drawn Inside the Hallway', promptPayload: 'Ellison discovering a crude crayon drawing of missing girl Stephanie Stevenson sleeping in her bed, painted by Ashley on the inside of her bedroom wall.' },
+    { id: 36, title: 'Tracing the Chain of Houses Across America', promptPayload: 'Deputy So-and-So laying out a map of the United States connecting St. Louis, Sacramento, and King County, showing each murdered family previously lived in the last victim\'s house.' },
+    { id: 37, title: 'The Projector Turns On by Itself at 3:00 AM', promptPayload: 'Ellison waking to the rhythmic clicking whir of the 8mm projector running by itself down the dark hallway, green and amber light flickering on the stairs.' },
+    { id: 38, title: 'Dead Children Sitting in the Projector Light', promptPayload: 'Ellison peeking into his dark study to see five pale, decaying ghost children sitting in a row on the floor watching the Super 8 screen before vanishing as he opens the door.' },
+    { id: 39, title: 'Medieval Woodcut of the Soul Eater', promptPayload: 'Laptop screen displaying a 16th-century German woodcut engraving of Bughuul luring children through a portal inside a painted fresco while devouring their souls.' },
+    { id: 40, title: 'Fierce Marital Fight in the Kitchen', promptPayload: 'Wife Tracy screaming at Ellison in the kitchen after learning the house they moved into is the exact crime scene where the Stevenson family was murdered.' },
+    { id: 41, title: 'Bughuul\'s Face in the Printed Photograph', promptPayload: 'Ellison holding up a printed frame of the backyard hanging tree against the real window, seeing Bughuul\'s shadowy face standing in the leaves.' },
+    { id: 42, title: 'Deputy So-and-So\'s Urgent Final Phone Call', promptPayload: 'At the new house, Deputy So-and-So calling Ellison in a panic to warn him that moving out of the house is what triggers the final murder in every single case.' },
+    { id: 43, title: 'Written Note: Good Night Daddy', promptPayload: 'Drugged Ellison squinting at a green-crayon note stuck to his coffee mug reading "Good Night Daddy" with a smiley face.' },
+    { id: 44, title: 'Waking Up Gagged on the Study Floor', promptPayload: 'Ellison regaining consciousness bound with duct tape on the wooden floor alongside his tied-up wife Tracy and son Trevor.' },
+    { id: 45, title: 'Ashley Filming with the Super 8 Camera', promptPayload: 'Young Ashley holding the vintage 8mm hand-cranked camera to her eye, calmly filming her bound family just like the previous possessed children.' },
+    { id: 46, title: 'Finger-Painting Murals in Blood', promptPayload: 'Hallway walls of the house covered in macabre childlike paintings of cats, unicorns, and trees drawn in dark crimson blood.' },
+    { id: 47, title: 'The Ghost Children Watching the Edit', promptPayload: 'The five pale ghost children standing in a semicircle in the doorway of the study, watching Ashley complete her "House Painting \'12" film reel.' },
+    { id: 48, title: 'Ashley Touches the Projector Screen', promptPayload: 'Ashley walking up to the glowing white wall projection where the ghostly children beckon her inside the grainy celluloid world.' },
+    { id: 49, title: 'The Box Labeled House Painting \'12', promptPayload: 'Close-up of the cardboard box in the attic with a newly added sixth Super 8 film reel labeled "House Painting \'12" in childlike handwriting.' },
+    { id: 50, title: 'Final Bughuul Jump Scare from the Box', promptPayload: 'Camera lingering on the open cardboard box of film reels before Bughuul\'s pale rotting face lunges directly into the lens with a deafening orchestral sting.' }
 ];
 
 // ==========================================
-// 10. The Cabin in the Woods (2011) - 25 Scenes
+// 10. The Cabin in the Woods (2011) - 50 Scenes
 // ==========================================
 export const theCabinInTheWoodsScenes: Scene[] = [
     { id: 1, title: 'The Undercover Facility Watercooler', promptPayload: 'Underground high-tech military lab, technicians Sitterson and Hadley chatting about coffee and childproofing in fluorescent breakroom, mundane bureaucratic contrast.' },
@@ -307,11 +532,36 @@ export const theCabinInTheWoodsScenes: Scene[] = [
     { id: 22, title: 'The Monster Elevator Massacre', promptPayload: 'Elevator doors opening into facility lobby, hundreds of grotesque nightmare creatures pouring out, slaughtering swat teams and scientists in glorious chaotic bloodbath.' },
     { id: 23, title: 'The Merman Reveal', promptPayload: 'Hadley lying wounded on floor, dying wish fulfilled as colossal carnivorous Merman flops out of elevator and devours him with razor teeth.' },
     { id: 24, title: 'The Temple of the Ancient Ones', promptPayload: 'Dana and Marty descending into subterranean stone temple, Sigourney Weaver as Director explaining human sacrifice ritual to appease subterranean gods.' },
-    { id: 25, title: 'The Colossal Hand of the Ancient One', promptPayload: 'Dana and Marty sharing a joint sitting on temple ruins refusing to kill each other, colossal hand of titan Ancient God bursting through Earth\'s crust into sunlight.' }
+    { id: 25, title: 'The Colossal Hand of the Ancient One', promptPayload: 'Dana and Marty sharing a joint sitting on temple ruins refusing to kill each other, colossal hand of titan Ancient God bursting through Earth\'s crust into sunlight.' },
+    { id: 26, title: 'Marty\'s Collapsible Coffee Mug Bong', promptPayload: 'Stoner Marty pulling up to the curb in his car, casually taking a hit from an elaborate telescoping plastic travel coffee mug that converts into a water bong.' },
+    { id: 27, title: 'The Stockholm Ritual Failure on Monitors', promptPayload: 'Control room monitors showing a burning ruined castle in Sweden as Sitterson laments that Stockholm failed and only America and Japan remain to save the world.' },
+    { id: 28, title: 'Diving into the Mountain Lake', promptPayload: 'The five college students leaping off the wooden dock into the crystal-clear emerald mountain lake while underwater facility cameras track them from below.' },
+    { id: 29, title: 'Holden Discovers the Two-Way Bedroom Mirror', promptPayload: 'Scholarly Holden taking down a creepy painting of a violent hunting massacre in his bedroom, discovering a two-way mirror looking directly into Dana\'s room.' },
+    { id: 30, title: 'Hair Dye Seeping into Jules\'s Brain', promptPayload: 'Lab technician Lin explaining on a biological scan monitor how chemical additives in Jules\'s blonde hair dye are reducing her cognition and increasing impulsivity.' },
+    { id: 31, title: 'Curt Blows the Conch Shell', promptPayload: 'Down in the artifact cellar, Curt picking up an ornate pearl conch shell and nearly blowing it while Hadley in the bunker prays internally for the Merman.' },
+    { id: 32, title: 'Holden Inspects the Lament Puzzle Sphere', promptPayload: 'Holden turning the brass gears of a Hellraiser-style spiked mechanical puzzle orb in the cellar before putting it down for Dana\'s diary.' },
+    { id: 33, title: 'Jules\'s Decapitation in the Woods', promptPayload: 'Father Buckner emerging from the artificial ground fog and decapitating Jules with a rusted giant saw blade while red ritual blood flows into the underground stone relief.' },
+    { id: 34, title: 'Mordecai on Speakerphone', promptPayload: 'Technicians Sitterson and Hadley rolling their eyes in the control room as the creepy gas station harbinger Mordecai rants on speakerphone before mocking him.' },
+    { id: 35, title: 'Locking the Bedroom Shutters Remotely', promptPayload: 'When Curt insists on keeping the group together in one room, Sitterson flips a switch that releases knockout gas and electronically unlocks their doors to split them up.' },
+    { id: 36, title: 'Matthew Buckner Breaks Through the Window', promptPayload: 'Hulking zombie Matthew Buckner smashing through the cabin bedroom window with a heavy iron chain, dragging Holden to the floor.' },
+    { id: 37, title: 'Holden Stabbed in the Neck inside the Moving RV', promptPayload: 'As the survivors flee in the RV, Father Buckner rises from the back seat and drives a butcher knife straight through Holden\'s neck, sending the RV plunging into the lake.' },
+    { id: 38, title: 'Japanese Schoolgirls Turn the Evil Spirit Into a Frog', promptPayload: 'On the international satellite feed, a circle of nine-year-old Japanese schoolgirls chanting in harmony and turning a terrifying long-haired grudge spirit into a happy green frog.' },
+    { id: 39, title: 'Tequila and REO Speedwagon Celebration', promptPayload: 'Believing four of five sacrifices are complete, underground staff pop champagne, drink tequila, and dance beneath red party lights while Dana is beaten on the monitor.' },
+    { id: 40, title: 'The Red-Ringing Phone from Below', promptPayload: 'Right in the middle of the victory party, the emergency red telephone on the control console rings with word from Downstairs that Marty is still alive.' },
+    { id: 41, title: 'Hacking the Elevator Inside the Grave', promptPayload: 'Inside the subterranean zombie maintenance shaft, Marty using a rewired control box and his collapsible bong to summon the monster cube elevator.' },
+    { id: 42, title: 'The Angry Molesting Tree and Giant Bat', promptPayload: 'Dana and Marty pressing their faces against the glass elevator wall as they pass cubes containing a murderous living tree, a giant bat, and a weeping ballerina with a mouth of teeth.' },
+    { id: 43, title: 'Security Guard Impaled by the Unicorn', promptPayload: 'Chaos in the underground facility corridors as a majestic white unicorn gallops past and violently impales a fleeing technician against the concrete wall with its horn.' },
+    { id: 44, title: 'The Hell Lord and Giant Cobra in the Corridors', promptPayload: 'Surreal wide shot of CCTV monitors showing all fifty security feeds filled with werewolves, giant cobras, killer robots, and wraiths slaughtering tactical guards.' },
+    { id: 45, title: 'Sitterson Accidentally Stabbed by Dana', promptPayload: 'Fleeing down the maintenance tunnel into the ancient stone ritual chamber, Sitterson runs directly onto Dana\'s outstretched knife and gasps "Kill him!"' },
+    { id: 46, title: 'The Stone Relief Slabs of the Five Archetypes', promptPayload: 'Glowing red human blood filling the carved stone channels of the Whore, the Athlete, the Scholar, and the Fool in the subterranean temple floor.' },
+    { id: 47, title: 'Dana Aiming the Gun at Marty', promptPayload: 'Under the Director\'s desperate persuasion to save humanity, battered Dana raises a pistol and points it at her best friend Marty\'s chest.' },
+    { id: 48, title: 'Patience Buckner Kills the Director', promptPayload: 'Zombie girl Patience Buckner emerging from the shadows behind the Director, driving an axe into her head and sending both tumbling into the sacrificial chasm.' },
+    { id: 49, title: 'Sitting on the Temple Steps as the World Ends', promptPayload: 'Dana and Marty sitting side-by-side on the crumbling stone steps holding hands as the cavern ceiling collapses and lava glows beneath the floor.' },
+    { id: 50, title: 'The Cabin Crushed from Below', promptPayload: 'Exterior shot of the idyllic lakeside cabin violently exploding upward as the titanic fist of an awakened Ancient One smashes through the mountain.' }
 ];
 
 // ==========================================
-// 11. Carrie (1976) - 25 Scenes
+// 11. Carrie (1976) - 50 Scenes
 // ==========================================
 export const carrieScenes: Scene[] = [
     { id: 1, title: 'The Shower Room Shock', promptPayload: 'High school girls locker room filled with steamy mist, soft focus 70s cinematography, Carrie White discovering menstrual blood for first time in sheer innocent panic.' },
@@ -338,11 +588,36 @@ export const carrieScenes: Scene[] = [
     { id: 22, title: 'Fire and Water in the Gym', promptPayload: 'High-voltage stage spotlight cables tearing loose, electrocuting teachers, fire hose spraying students like a living serpent, gym erupting into blazing inferno.' },
     { id: 23, title: 'The Car Crash on the Road', promptPayload: 'Chris and Billy attempting to run down blood-drenched Carrie with their car on dark road, Carrie flipping the speeding vehicle through the air in fireball.' },
     { id: 24, title: 'The Kitchen Knives Matrix', promptPayload: 'Carrie returning home to take bath, Margaret White stabbing Carrie in back with kitchen knife, Carrie telekinetically hurling dozen knives into mother.' },
-    { id: 25, title: 'The Bloody Hand from the Grave', promptPayload: 'Sue Snell visiting burned-down White house ruins in dream, kneeling at makeshift grave, bloody hand suddenly bursting through soil grabbing Sue\'s wrist.' }
+    { id: 25, title: 'The Bloody Hand from the Grave', promptPayload: 'Sue Snell visiting burned-down White house ruins in dream, kneeling at makeshift grave, bloody hand suddenly bursting through soil grabbing Sue\'s wrist.' },
+    { id: 26, title: 'Opening Volleyball Game Drop', promptPayload: 'Sunny high school athletic field, shy awkward Carrie White missing the ball at the net while classmates groan and berate her.' },
+    { id: 27, title: 'Principal Morton\'s Ashtray Flip', promptPayload: 'In the principal\'s office after the shower incident, Mr. Morton repeatedly calling her "Cassie" until enraged Carrie telekinetically flips his crystal ashtray off the desk.' },
+    { id: 28, title: 'Margaret White Proselytizing at the Neighbor\'s Door', promptPayload: 'Fanatical mother Margaret White dressed in austere black, pressing religious pamphlets onto Mrs. Snell while gothic organ music plays inside her dark house.' },
+    { id: 29, title: 'Struck with the Bible for Womanhood', promptPayload: 'Margaret White flying into a religious frenzy in the gothic parlor, striking sobbing Carrie across the forehead with a heavy leather-bound Bible for having her first period.' },
+    { id: 30, title: 'Miss Collins Slaps Chris Hargensen', promptPayload: 'On the athletic field, gym teacher Miss Collins slapping defiant rich bully Chris Hargensen across the face and banning her from the senior prom.' },
+    { id: 31, title: 'Reading Tommy\'s Poem in English Class', promptPayload: 'Carrie standing nervously at her desk reading Tommy Ross\'s romantic poem aloud while the English teacher and classmates mock her sincere compliment.' },
+    { id: 32, title: 'Researching Telekinesis in the Library', promptPayload: 'Carrie flipping through card catalog drawers and parapsychology books in the school library, discovering the scientific term for moving objects with the mind.' },
+    { id: 33, title: 'Shopping for Lip Gloss at the Drugstore', promptPayload: 'Carrie standing shyly at a bright pharmacy cosmetics counter testing pink lipstick on her hand while Miss Collins encourages her from the mirror.' },
+    { id: 34, title: 'Tommy Asks Carrie in the Rain', promptPayload: 'Tommy Ross approaching Carrie on the rain-slicked sidewalk outside her house, earnestly begging her to go to the senior prom with him until she runs inside.' },
+    { id: 35, title: 'Tuxedo Fitting High-Speed Montage', promptPayload: 'Comedic fast-motion 1970s sequence of Tommy and his two friends getting measured for powder-blue ruffled tuxedos at the formal wear shop.' },
+    { id: 36, title: 'Margaret Throws the Tea Cup at the Pink Dress', promptPayload: 'Margaret entering Carrie\'s bedroom and splashing hot tea across her handmade pink prom dress, screaming that red and pink are the colors of harlots.' },
+    { id: 37, title: 'Pinning the Corsage on Carrie', promptPayload: 'In the candlelit foyer of the White house, Tommy gently pinning a white orchid corsage onto Carrie\'s shoulder while Margaret glares from the shadows.' },
+    { id: 38, title: 'Miss Collins Pep Talk in the Powder Room', promptPayload: 'Kind gym teacher Miss Collins sitting with nervous Carrie on the pink velvet sofa of the girls\' powder room at prom, telling her she looks like a princess.' },
+    { id: 39, title: 'Norma Watson Distributing the Fake Ballots', promptPayload: 'Red-capped Norma Watson hurrying from table to table at the prom handing out rigged voting slips to unsuspecting couples.' },
+    { id: 40, title: 'Sue Snell Sneaks Into the Back of the Gym', promptPayload: 'Concerned Sue Snell slipping quietly through the rear service door of the gymnasium, spotting the rope leading under the stage to the bucket overhead.' },
+    { id: 41, title: 'Miss Collins Ejects Sue Before She Can Warn Them', promptPayload: 'Believing Sue is there to ruin Carrie\'s night, Miss Collins physically pushes frantic Sue out the gymnasium doors just seconds before the rope is pulled.' },
+    { id: 42, title: 'Red Kaleidoscope Lens of Fury', promptPayload: 'Brian De Palma crimson color-filter shot of blood-drenched Carrie standing on stage, her wide unblinking eyes locking onto each exit door.' },
+    { id: 43, title: 'The Basketball Backboard Crushes Miss Collins', promptPayload: 'During the prom massacre, a heavy steel-and-glass basketball backboard tears from the gymnasium wall and swings down to crush Miss Collins.' },
+    { id: 44, title: 'Carrie Walking Through the Wall of Flame', promptPayload: 'Iconic wide shot of Carrie in her blood-soaked gown walking slowly and serenely down the center aisle of the burning gymnasium as students scream behind barred doors.' },
+    { id: 45, title: 'Locking the Gymnasium Doors from the Outside', promptPayload: 'Carrie stepping out into the cool night air and telekinetically slamming the exterior fire doors shut while flames burst through the high windows.' },
+    { id: 46, title: 'Washing Away the Blood in the Bathtub', promptPayload: 'Exhausted Carrie weeping alone in the white porcelain bathtub at home, scrubbing the dried pig blood from her skin and hair.' },
+    { id: 47, title: 'House Lit with Hundreds of Votive Candles', promptPayload: 'Carrie descending the stairs in a white nightgown to find Margaret has lit hundreds of white church candles across every table and step of the dark house.' },
+    { id: 48, title: 'Margaret Pinned in the St. Sebastian Pose', promptPayload: 'Margaret White pinned against the kitchen doorway by flying carving knives and sewing shears in the exact crucified pose of her Saint Sebastian statue.' },
+    { id: 49, title: 'Stones Raining Down on the White House', promptPayload: 'Carrie cradling her dead mother in the prayer closet while calling down a supernatural storm of boulders and fire that collapses the entire house into the earth.' },
+    { id: 50, title: 'For Sale Sign Marked in Red Paint', promptPayload: 'Dreamlike slow-motion walk as Sue Snell approaches the charred vacant lot where a wooden For Sale sign has been spray-painted with "CARRIE WHITE BURNS IN HELL".' }
 ];
 
 // ==========================================
-// 12. The Mist (2007) - 25 Scenes
+// 12. The Mist (2007) - 50 Scenes
 // ==========================================
 export const theMistScenes: Scene[] = [
     { id: 1, title: 'The Storm Over Long Lake', promptPayload: 'Violent summer thunder storm lashing lakeside cabin in Maine, giant pine tree crushing artist studio window, ominous white mist rolling over lake surface.' },
@@ -369,5 +644,30 @@ export const theMistScenes: Scene[] = [
     { id: 22, title: 'Driving Past Drayton House', promptPayload: 'David driving SUV slowly through mist to his lakeside home, finding house destroyed and wife dead wrapped in spider webbing, silent heartbreak.' },
     { id: 23, title: 'The Behemoth in the Mist', promptPayload: 'Massive hundred-foot-tall six-legged cosmic behemoth with tentacles walking slowly over SUV through mist, ground shaking violently, awe-inspiring cosmic dread.' },
     { id: 24, title: 'Running Out of Gas', promptPayload: 'Land Cruiser engine sputtering and dying on deserted Maine highway, absolute silence in white mist, David checking revolver and counting only four bullets for five people.' },
-    { id: 25, title: 'The Devastating Climax and Tank Emergence', promptPayload: 'David shooting companions to save them from horrific death, stepping out into mist to be killed, mist suddenly clearing to reveal US military tanks and rescue trucks.' }
+    { id: 25, title: 'The Devastating Climax and Tank Emergence', promptPayload: 'David shooting companions to save them from horrific death, stepping out into mist to be killed, mist suddenly clearing to reveal US military tanks and rescue trucks.' },
+    { id: 26, title: 'Painting the Dark Tower Poster in the Studio', promptPayload: 'Movie poster artist David Drayton standing at his easel painting Roland the Gunslinger in his lakeside studio as thunder rumbles across the Maine mountains.' },
+    { id: 27, title: 'Reconciling with Neighbor Brent Norton', promptPayload: 'David and pompous city lawyer neighbor Brent Norton surveying the fallen pine trees that smashed Norton\'s red sports car and Drayton\'s boathouse, agreeing to drive to town together.' },
+    { id: 28, title: 'Military Convoy Racing Down the Mountain', promptPayload: 'Driving along the lakeshore road, David and Billy watching dozens of olive-drab Army trucks and MP humvees speeding away from the secret Arrowhead base in the mountains.' },
+    { id: 29, title: 'MPs Summoning the Young Soldiers Back to Base', promptPayload: 'Inside the crowded supermarket checkout line, military police urgently ordering Private Jessup and his two buddies to report back to the base immediately as all leaves are cancelled.' },
+    { id: 30, title: 'Mother Leaving into the Mist for Her Children', promptPayload: 'Desperate mother begging someone in the supermarket to escort her home to her two young kids, walking out alone into the white wall of fog as the crowd refuses to help.' },
+    { id: 31, title: 'Clogged Exhaust Vent in the Generator Room', promptPayload: 'David and mechanics Jim and Myron in the dark concrete loading bay examining the backup diesel generator as something heavy blocks the exterior metal exhaust flap.' },
+    { id: 32, title: 'Severing the Tentacle with the Fire Axe', promptPayload: 'Jim and Myron swinging a heavy red fire axe and wooden pallet against the barbed crimson tentacle wrapped around young bag-boy Norm\'s leg.' },
+    { id: 33, title: 'Brent Norton Leads His Group into the Fog', promptPayload: 'Arrogant lawyer Brent Norton tying a nylon clothesline around a volunteer\'s waist and marching five skeptics out the front doors into the impenetrable white mist.' },
+    { id: 34, title: 'The Blood-Soaked Rope Pulled Back', promptPayload: 'David hauling the taut white nylon rope back under the supermarket doors after ear-splitting screams, pulling in only the severed bloody lower torso of the biker.' },
+    { id: 35, title: 'Taping Up the Plate-Glass Windows', promptPayload: 'Survivors stacking 50-pound bags of fertilizer against the front windows and taping brown kraft paper over the glass so they don\'t have to see what is outside.' },
+    { id: 36, title: 'The Scorpion-Fly Lands on Mrs. Carmody', promptPayload: 'A hideous two-foot winged insect with a human-like skull face landing directly on praying Mrs. Carmody\'s chest, crawling across her throat before flying away without stinging her.' },
+    { id: 37, title: 'Biker Burned Alive in the Aisles', promptPayload: 'During the night insect breach, a survivor accidentally sprays flaming lighter fluid onto a fellow shopper while trying to torch a flying creature.' },
+    { id: 38, title: 'Hattie\'s Quiet Suicide in the Booth', promptPayload: 'Middle-aged woman Hattie found slumped dead in the supermarket breakroom booth after swallowing an entire bottle of sleeping pills rather than face the monsters.' },
+    { id: 39, title: 'Burn Victim Agony in the Back Office', promptPayload: 'David and Amanda tending to the horribly burned survivor groaning on a cot in the office, motivating the desperate expedition to the pharmacy next door.' },
+    { id: 40, title: 'The Gray Widowers Spinning Acid Webs', promptPayload: 'Inside the dark pharmacy aisles, dog-sized gray spider creatures with human-like teeth shooting corrosive silk strands that burn right through a man\'s leg.' },
+    { id: 41, title: 'Irene Reppler Hits Carmody with a Canned Pea Tin', promptPayload: 'Feisty elderly schoolteacher Irene Reppler hurling a tin of canned peas at preaching Mrs. Carmody and spraying her in the face with bug spray.' },
+    { id: 42, title: 'Jim and Myron Join Carmody\'s Cult', promptPayload: 'Broken by fear after the pharmacy horror, formerly rational mechanics Jim and Myron standing beside Mrs. Carmody as her enforcers against David.' },
+    { id: 43, title: 'Billy\'s Promise Not to Let the Monsters Get Him', promptPayload: 'Young Billy waking from a nightmare under a blanket in the stockroom, making his father David swear he won\'t let the monsters take him.' },
+    { id: 44, title: 'Storing Food Behind the Dog Food Bags', promptPayload: 'At dawn, David and Ollie sneaking packages of bologna and bread toward the front door only to find Mrs. Carmody blocking the exit with the entire store congregation behind her.' },
+    { id: 45, title: 'Butcher Steffan Raises the Cleaver', promptPayload: 'Store butcher Steffan advancing on young Billy and Amanda with a heavy meat cleaver at Mrs. Carmody\'s command before Ollie\'s revolver shot rings out.' },
+    { id: 46, title: 'Myron Crushed on the Car Hood', promptPayload: 'In the fog-choked parking lot, mechanic Myron panicking and firing wildly before a giant arachnid leg impales him from above onto the hood of a car.' },
+    { id: 47, title: 'Driving Past the Ruined Gas Station', promptPayload: 'David\'s Land Cruiser creeping slowly down the mist-shrouded highway past toppled power lines, crushed police cruisers, and giant webs spanning entire bridges.' },
+    { id: 48, title: 'Four Bullets in the Revolver Cylinder', promptPayload: 'Extreme close-up of David swinging open the cylinder of Ollie\'s stainless-steel revolver inside the silent stalled SUV, revealing four brass cartridges for five survivors.' },
+    { id: 49, title: 'Four Muzzle Flashes in the Fog', promptPayload: 'Exterior wide shot of the stalled Land Cruiser swallowed by thick white mist, four blinding orange muzzle flashes illuminating the windows from within followed by David\'s anguished roar.' },
+    { id: 50, title: 'The Mother Saved on the Army Truck', promptPayload: 'As US Army flamethrower troops burn away the mist, the woman who left the store on Day 1 rides past kneeling David inside a rescue truck with her two safe children.' }
 ];
